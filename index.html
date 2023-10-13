@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html data-bs-theme="dark">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<link rel="stylesheet" href="https://unpkg.com/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://unpkg.com/tabulator-tables@5.2.3/dist/css/tabulator_bootstrap5.min.css">
+	<link rel="stylesheet" href="https://unpkg.com/select2@4.0.13/dist/css/select2.min.css">
+	<link rel="icon" type="image/x-icon" href="favicon.ico">
+	<script type="module" src="tool.js"></script>
+	<base target="_blank">
+	<meta name="description" content="An Unofficial fansite about 苺咲べりぃ(Maisaki Berry).Main content are singing data.">
+	<style>
+		.select2-results__option , .select2-selection__choice, .select2-selection__clear {
+			color:black
+		}
+	</style>
+</head>
+ 
+<header id="nav"><!-- navbar --></header>
+
+<body>
+
+	<div id='content' class="container my-5 pt-5"></div>
+
+	<!-- Modal for message -->
+	<div class="modal fade" id="modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="modalTitle" aria-hidden="true">
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h1 class="modal-title fs-5" id="modalTitle">Notice</h1>
+				</div>
+				<div class="modal-body" id='modalMsg'></div>
+				<div class="modal-footer" id="modalFooter">
+					<!--<button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id=""></button>-->
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Modal for add setlist row -->
+	<div class="modal fade" id="modalAddRow" data-bs-keyboard="false" tabindex="-1" aria-labelledby="modalTitleAddRow" aria-hidden="true">
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h1 class="modal-title fs-5" id="modalTitleAddRow">Add Row</h1>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body" id='addRowInfo'>
+					<form>
+						<div class="form-group row my-2">
+							<label for="YTLink" class="col-sm-3 col-form-label">YTLink</label>
+							<div class="col-sm-8">
+							  <input type="text" class="form-control" id="YTLink" placeholder="https://www.youtube.com/watch?v=OOO">
+							</div>
+						</div>
+						<div class="form-group row my-2">
+						  <label for="date" class="col-sm-3 col-form-label">Date</label>
+						  <div class="col-sm-5">
+						  	<input type="input" class="form-control" id="date" placeholder="YYYY/MM/DD">
+						  </div>
+						  <div class="col-sm-3">
+							<span id="dateCheck" class="text-danger"></span>
+						  </div>
+						</div>
+						<div class="form-group row my-2">
+						  <label for="songs" class="col-sm-3 col-form-label">How many songs</label>
+						  <div class="col-sm-8">
+							<input type="text" class="form-control" id="songs" value="20">
+						  </div>
+						</div>
+					</form>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="addRowData">Add</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Modal for add streamlist row -->
+	<div class="modal fade" id="modalAddStreamRow" data-bs-keyboard="false" tabindex="-1" aria-labelledby="modalTitleAddStreamRow" aria-hidden="true">
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h1 class="modal-title fs-5" id="modalTitleAddStreamRow">Add Row</h1>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body" id='addStreamRowInfo'>
+					<form>
+						<div class="form-group row my-2">
+							<label for="YTID" class="col-sm-3 col-form-label">YTLink</label>
+							<div class="col-sm-8">
+							  <input type="text" class="form-control" id="YTID" placeholder="https://www.youtube.com/watch?v=OOO">
+							</div>
+							<input type="text" class="form-control" id="videoID" hidden>
+						</div>
+						<div class="form-group row my-2">
+							<div class="col-sm-3"></div>
+							<div class="col-sm-8">
+							  <div id="streamMsg"  class="text-danger">　</div>
+							</div>
+						</div>
+						<div class="form-group row my-2">
+							<label for="streamTitle" class="col-sm-3 col-form-label">Title</label>
+							<div class="col-sm-8">
+							  <input type="text" class="form-control" id="streamTitle" disabled>
+							</div>
+						</div>
+						<div class="form-group row my-2">
+							<label for="streamTime" class="col-sm-3 col-form-label">local time</label>
+							<div class="col-sm-5">
+							  <input type="text" class="form-control" id="streamTime" placeholder="YYYY/MM/DD HH:mm"  disabled>
+							</div>
+						</div>
+						<div class="form-group row my-2">
+							<label for="category" class="col-sm-3 col-form-label">category</label>
+							<div class="col-sm-5">
+								<select name="category" id="category"></select>
+							</div>
+						</div>
+						<div class="form-group row my-2">
+							<div class="col-sm-3"></div>
+							<div class="col-sm-8">
+								<span>You can type in search bar and hit enter to create new category.</span>
+							</div>
+						</div>
+					</form>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="addStreamRowData">Add</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+</body>
+</html>
