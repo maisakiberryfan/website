@@ -24,7 +24,7 @@
     ```
 
 ### 如何編輯setlist表格
-#### <p class='text-danger'>操作後***務必***上傳setlist.json到github上，不然就是改爽的</p>
+#### <p class='text-danger'>操作後***務必***上傳setlist.json到[github](https://github.com/maisakiberryfan/website)上，不然就是改爽的</p>
 ##### 刪除
 * 直接點選table上要刪的資料(可用shift及ctrl多選)，再按下Delete Row
 * 在編輯模式下避免干擾不給刪
