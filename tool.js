@@ -112,7 +112,7 @@ $(()=>{
 
     var url='', title='', process=''
 
-    if(path === undefined || path.length < 2 || !path.includes('/')){
+    if(path === undefined || path.length < 2 || !path.includes('/') || path === '/index.html'){
       url = 'main.md'
     }
     else{
