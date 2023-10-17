@@ -1,5 +1,145 @@
 [
 	{
+		"date": "2023/10/17",
+		"track": 1,
+		"song": "亜麻色の髪の乙女",
+		"singer": "島谷ひとみ",
+		"YTLink": "https://www.youtube.com/watch?v=85oHILnF2i4"
+	},
+	{
+		"date": "2023/10/17",
+		"track": 2,
+		"song": "フリージア",
+		"singer": "Uru",
+		"YTLink": "https://www.youtube.com/watch?v=85oHILnF2i4"
+	},
+	{
+		"date": "2023/10/17",
+		"track": 3,
+		"song": "HAPPY BIRTHDAY",
+		"singer": "back number",
+		"YTLink": "https://www.youtube.com/watch?v=85oHILnF2i4"
+	},
+	{
+		"date": "2023/10/17",
+		"track": 4,
+		"song": "蕾",
+		"singer": "コブクロ",
+		"YTLink": "https://www.youtube.com/watch?v=85oHILnF2i4"
+	},
+	{
+		"date": "2023/10/17",
+		"track": 5,
+		"song": "AXIA～ダイスキでダイキライ～",
+		"singer": "ワルキューレ",
+		"YTLink": "https://www.youtube.com/watch?v=85oHILnF2i4"
+	},
+	{
+		"date": "2023/10/17",
+		"track": 6,
+		"song": "瞳をとじて",
+		"singer": "平井堅",
+		"YTLink": "https://www.youtube.com/watch?v=85oHILnF2i4"
+	},
+	{
+		"date": "2023/10/17",
+		"track": 7,
+		"song": "ヒッチコック",
+		"singer": "ヨルシカ",
+		"YTLink": "https://www.youtube.com/watch?v=85oHILnF2i4"
+	},
+	{
+		"date": "2023/10/17",
+		"track": 8,
+		"song": "春泥棒",
+		"singer": "ヨルシカ",
+		"YTLink": "https://www.youtube.com/watch?v=85oHILnF2i4"
+	},
+	{
+		"date": "2023/10/17",
+		"track": 9,
+		"song": "アイノカタチ",
+		"singer": "MISIA",
+		"YTLink": "https://www.youtube.com/watch?v=85oHILnF2i4"
+	},
+	{
+		"date": "2023/10/17",
+		"track": 10,
+		"song": "向日葵",
+		"singer": "Ado",
+		"YTLink": "https://www.youtube.com/watch?v=85oHILnF2i4"
+	},
+	{
+		"date": "2023/10/17",
+		"track": 11,
+		"song": "未来予想図Ⅱ",
+		"singer": "DREAMS COME TRUE",
+		"YTLink": "https://www.youtube.com/watch?v=85oHILnF2i4"
+	},
+	{
+		"date": "2023/10/17",
+		"track": 12,
+		"song": "未来へ",
+		"singer": "Kiroro",
+		"YTLink": "https://www.youtube.com/watch?v=85oHILnF2i4"
+	},
+	{
+		"date": "2023/10/17",
+		"track": 13,
+		"song": "Catch the Moment",
+		"singer": "LiSA",
+		"YTLink": "https://www.youtube.com/watch?v=85oHILnF2i4"
+	},
+	{
+		"date": "2023/10/17",
+		"track": 14,
+		"song": "コレカラ",
+		"singer": "Machico",
+		"YTLink": "https://www.youtube.com/watch?v=85oHILnF2i4"
+	},
+	{
+		"date": "2023/10/17",
+		"track": 15,
+		"song": "奈落の花",
+		"singer": "島みやえい子",
+		"YTLink": "https://www.youtube.com/watch?v=85oHILnF2i4"
+	},
+	{
+		"date": "2023/10/17",
+		"track": 16,
+		"song": "それを愛と呼ぶなら",
+		"singer": "Uru",
+		"YTLink": "https://www.youtube.com/watch?v=85oHILnF2i4"
+	},
+	{
+		"date": "2023/10/17",
+		"track": 17,
+		"song": "可愛くてごめん",
+		"singer": "HoneyWorks",
+		"YTLink": "https://www.youtube.com/watch?v=85oHILnF2i4"
+	},
+	{
+		"date": "2023/10/17",
+		"track": 18,
+		"song": "Blessing",
+		"singer": "halyosy",
+		"YTLink": "https://www.youtube.com/watch?v=85oHILnF2i4"
+	},
+	{
+		"date": "2023/10/17",
+		"track": 19,
+		"song": "アムリタ",
+		"singer": "牧野由依",
+		"YTLink": "https://www.youtube.com/watch?v=85oHILnF2i4"
+	},
+	{
+		"date": "2023/10/17",
+		"track": 20,
+		"song": "You",
+		"singer": "癒月",
+		"YTLink": "https://www.youtube.com/watch?v=85oHILnF2i4"
+	},
+	{
 		"date": "2023/10/11",
 		"track": 1,
 		"song": "キラキラ",
@@ -1380,7 +1520,7 @@
 		"date": "2023/09/30",
 		"track": "3",
 		"song": "ハッピーエンド",
-		"singer": "Back number",
+		"singer": "back number",
 		"note": "",
 		"YTLink": "https://www.youtube.com/watch?v=HYLbGe6lXjg"
 	},
@@ -4172,7 +4312,7 @@
 		"date": "2023/08/17",
 		"track": "28",
 		"song": "ハッピーエンド",
-		"singer": "Back number",
+		"singer": "back number",
 		"note": "",
 		"YTLink": "https://www.youtube.com/watch?v=G-91jzmVyiM"
 	},
@@ -4420,7 +4560,7 @@
 		"date": "2023/08/14",
 		"track": "3",
 		"song": "Happy Birthday",
-		"singer": "Back number",
+		"singer": "back number",
 		"note": "",
 		"YTLink": "https://www.youtube.com/watch?v=hdviGOIYb2w"
 	},
@@ -6220,7 +6360,7 @@
 		"date": "2023/07/27",
 		"track": "18",
 		"song": "オールドファッション",
-		"singer": "Back number",
+		"singer": "back number",
 		"note": "",
 		"YTLink": "https://www.youtube.com/watch?v=svCuFVnFFmc"
 	},
@@ -6820,7 +6960,7 @@
 		"date": "2023/07/17",
 		"track": "17",
 		"song": "オールドファッション",
-		"singer": "Back number",
+		"singer": "back number",
 		"note": "",
 		"YTLink": "https://www.youtube.com/watch?v=SqzpzkrM1n8"
 	},
@@ -6828,7 +6968,7 @@
 		"date": "2023/07/17",
 		"track": "18",
 		"song": "ハッピーエンド",
-		"singer": "Back number",
+		"singer": "back number",
 		"note": "",
 		"YTLink": "https://www.youtube.com/watch?v=SqzpzkrM1n8"
 	},
@@ -8332,7 +8472,7 @@
 		"date": "2023/06/24",
 		"track": "96",
 		"song": "オールドファッション",
-		"singer": "Back number",
+		"singer": "back number",
 		"note": "",
 		"YTLink": "https://www.youtube.com/watch?v=ZyQZagrDY_Q"
 	},
@@ -8700,7 +8840,7 @@
 		"date": "2023/06/22",
 		"track": "21",
 		"song": "オールドファッション",
-		"singer": "Back number",
+		"singer": "back number",
 		"note": "",
 		"YTLink": "https://www.youtube.com/watch?v=n2wN4ZrzX4c"
 	},
@@ -8708,7 +8848,7 @@
 		"date": "2023/06/22",
 		"track": "22",
 		"song": "ハッピーエンド",
-		"singer": "Back number",
+		"singer": "back number",
 		"note": "",
 		"YTLink": "https://www.youtube.com/watch?v=n2wN4ZrzX4c"
 	},
