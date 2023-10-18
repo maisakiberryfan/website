@@ -1,5 +1,145 @@
 [
 	{
+		"date": "2023/10/18",
+		"track": 1,
+		"song": "アイドル",
+		"singer": "YOASOBI",
+		"YTLink": "https://www.youtube.com/watch?v=vTZNPLcYkdc"
+	},
+	{
+		"date": "2023/10/18",
+		"track": 2,
+		"song": "おジャ魔女カーニバル！！",
+		"singer": "MAHO堂",
+		"YTLink": "https://www.youtube.com/watch?v=vTZNPLcYkdc"
+	},
+	{
+		"date": "2023/10/18",
+		"track": 3,
+		"song": "STEP",
+		"singer": "ClariS",
+		"YTLink": "https://www.youtube.com/watch?v=vTZNPLcYkdc"
+	},
+	{
+		"date": "2023/10/18",
+		"track": 4,
+		"song": "心得",
+		"singer": "Uru",
+		"YTLink": "https://www.youtube.com/watch?v=vTZNPLcYkdc"
+	},
+	{
+		"date": "2023/10/18",
+		"track": 5,
+		"song": "変わらないもの",
+		"singer": "奥華子",
+		"YTLink": "https://www.youtube.com/watch?v=vTZNPLcYkdc"
+	},
+	{
+		"date": "2023/10/18",
+		"track": 6,
+		"song": "ベテルギウス",
+		"singer": "優里",
+		"YTLink": "https://www.youtube.com/watch?v=vTZNPLcYkdc"
+	},
+	{
+		"date": "2023/10/18",
+		"track": 7,
+		"song": "水平線",
+		"singer": "back number",
+		"YTLink": "https://www.youtube.com/watch?v=vTZNPLcYkdc"
+	},
+	{
+		"date": "2023/10/18",
+		"track": 8,
+		"song": "カラフル",
+		"singer": "ClariS",
+		"YTLink": "https://www.youtube.com/watch?v=vTZNPLcYkdc"
+	},
+	{
+		"date": "2023/10/18",
+		"track": 9,
+		"song": "オールドファッション",
+		"singer": "back number",
+		"YTLink": "https://www.youtube.com/watch?v=vTZNPLcYkdc"
+	},
+	{
+		"date": "2023/10/18",
+		"track": 10,
+		"song": "letter song",
+		"singer": "きりたんP(doriko)",
+		"YTLink": "https://www.youtube.com/watch?v=vTZNPLcYkdc"
+	},
+	{
+		"date": "2023/10/18",
+		"track": 11,
+		"song": "CLEAR",
+		"singer": "坂本真綾",
+		"YTLink": "https://www.youtube.com/watch?v=vTZNPLcYkdc"
+	},
+	{
+		"date": "2023/10/18",
+		"track": 12,
+		"song": "Catch You Catch Me",
+		"singer": "日向めぐみ",
+		"YTLink": "https://www.youtube.com/watch?v=vTZNPLcYkdc"
+	},
+	{
+		"date": "2023/10/18",
+		"track": 13,
+		"song": "同担☆拒否",
+		"singer": "HoneyWorks",
+		"YTLink": "https://www.youtube.com/watch?v=vTZNPLcYkdc"
+	},
+	{
+		"date": "2023/10/18",
+		"track": 14,
+		"song": "呪文降臨～マジカル・フォース",
+		"singer": "Sister MAYO",
+		"YTLink": "https://www.youtube.com/watch?v=vTZNPLcYkdc"
+	},
+	{
+		"date": "2023/10/18",
+		"track": 15,
+		"song": "森のくまさん",
+		"singer": "アメリカ民謡",
+		"YTLink": "https://www.youtube.com/watch?v=vTZNPLcYkdc"
+	},
+	{
+		"date": "2023/10/18",
+		"track": 16,
+		"song": "恋愛裁判",
+		"singer": "40mP",
+		"YTLink": "https://www.youtube.com/watch?v=vTZNPLcYkdc"
+	},
+	{
+		"date": "2023/10/18",
+		"track": 17,
+		"song": "ウラオモテ・フォーチュン",
+		"singer": "小澤亜李",
+		"YTLink": "https://www.youtube.com/watch?v=vTZNPLcYkdc"
+	},
+	{
+		"date": "2023/10/18",
+		"track": 18,
+		"song": "アイマイモコ",
+		"singer": "水瀬いのり",
+		"YTLink": "https://www.youtube.com/watch?v=vTZNPLcYkdc"
+	},
+	{
+		"date": "2023/10/18",
+		"track": 19,
+		"song": "おじゃま虫",
+		"singer": "DECO*27",
+		"YTLink": "https://www.youtube.com/watch?v=vTZNPLcYkdc"
+	},
+	{
+		"date": "2023/10/18",
+		"track": 20,
+		"song": "愛してる",
+		"singer": "ワルキューレ",
+		"YTLink": "https://www.youtube.com/watch?v=vTZNPLcYkdc"
+	},
+	{
 		"date": "2023/10/17",
 		"track": 1,
 		"song": "亜麻色の髪の乙女",
@@ -38703,7 +38843,7 @@
 	{
 		"date": "2022/06/01",
 		"track": "15",
-		"song": "おじゃま虫",
+		"song": "おじゃま虫Ⅱ",
 		"singer": "",
 		"note": "ボカロ",
 		"YTLink": "https://www.youtube.com/watch?v=YPBBenOXR04"
