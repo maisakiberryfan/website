@@ -112,7 +112,7 @@ $(()=>{
 
     var url='', title='', process=''
 
-    if(path === undefined || path.length < 2 || !path.includes('/') || path === '/index.html'){
+    if(path === undefined || path.length < 2 || !path.includes('/')){
       url = 'main.md'
     }
     else{
@@ -208,6 +208,7 @@ $(()=>{
         },
         height:700,
         persistence:true,
+        downloadRowRange:'all'
       })
     })
   }
@@ -372,6 +373,7 @@ $(()=>{
       selectableRangeMode:"click",
       clipboard:true,
       addRowPos:"top",
+      downloadRowRange:'all'
     })
   }
 
@@ -506,6 +508,7 @@ $(()=>{
     // You can use your API key to query the info
     // https://developers.google.com/youtube/v3/getting-started
     // if you have api key then decomment the following code
+    // and comment url:'https://getyoutubevideoid.katani.workers.dev/?id='+id, decomment url:url
 
     /* const YOUTUBEAPIKEY = 'YOUR_YOUTUBE_API_KEY'
      let url = https://www.googleapis.com/youtube/v3/videos?key=' + YOUTUBEAPIKEY 
@@ -515,21 +518,21 @@ $(()=>{
     */
     
 
-      const BERRYCHANNEL = 'UC7A7bGRVdIwo93nqnA3x-OQ'
+      const BERRYCHANNEL = ['UC7A7bGRVdIwo93nqnA3x-OQ', 'UCBOGwPeBtaPRU59j8jshdjQ']
 
       let id = getYoutubeVideoId($('#YTID').val())
-
       if(id === undefined) return
 
       //load content
       $.ajax({
         url:'https://getyoutubevideoid.katani.workers.dev/?id='+id,
+        //url:url
         })
         .done((d, textStatus, request)=>{
           let info = d.items[0]
-          
+          let isBerryChannel = BERRYCHANNEL.filter(e=>info.snippet.channelId.includes(e))
           //berry's video?
-          if(info.snippet.channelId == BERRYCHANNEL){
+          if( isBerryChannel.length > 0 ){
             let title = info.snippet.title
             $('#streamMsg').html("　")
             $('#streamTitle').val(title)
