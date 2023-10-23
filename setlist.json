@@ -1,5 +1,145 @@
 [
 	{
+		"date": "2023/10/23",
+		"track": 1,
+		"song": "言って。",
+		"singer": "ヨルシカ",
+		"YTLink": "https://www.youtube.com/watch?v=nAQ5VRlIIxw"
+	},
+	{
+		"date": "2023/10/23",
+		"track": 2,
+		"song": "Mela!",
+		"singer": "緑黄色社会",
+		"YTLink": "https://www.youtube.com/watch?v=nAQ5VRlIIxw"
+	},
+	{
+		"date": "2023/10/23",
+		"track": 3,
+		"song": "魂のルフラン",
+		"singer": "高橋洋子",
+		"YTLink": "https://www.youtube.com/watch?v=nAQ5VRlIIxw"
+	},
+	{
+		"date": "2023/10/23",
+		"track": 4,
+		"song": "ネコに風船",
+		"singer": "大塚愛",
+		"YTLink": "https://www.youtube.com/watch?v=nAQ5VRlIIxw"
+	},
+	{
+		"date": "2023/10/23",
+		"track": 5,
+		"song": "猫",
+		"singer": "DISH//",
+		"YTLink": "https://www.youtube.com/watch?v=nAQ5VRlIIxw"
+	},
+	{
+		"date": "2023/10/23",
+		"track": 6,
+		"song": "可愛くてごめん",
+		"singer": "HoneyWorks",
+		"YTLink": "https://www.youtube.com/watch?v=nAQ5VRlIIxw"
+	},
+	{
+		"date": "2023/10/23",
+		"track": 7,
+		"song": "lull~そして僕らは~",
+		"singer": "Ray",
+		"YTLink": "https://www.youtube.com/watch?v=nAQ5VRlIIxw"
+	},
+	{
+		"date": "2023/10/23",
+		"track": 8,
+		"song": "Dreamer",
+		"singer": "AiRI",
+		"YTLink": "https://www.youtube.com/watch?v=nAQ5VRlIIxw"
+	},
+	{
+		"date": "2023/10/23",
+		"track": 9,
+		"song": "大正浪漫",
+		"singer": "YOASOBI",
+		"YTLink": "https://www.youtube.com/watch?v=nAQ5VRlIIxw"
+	},
+	{
+		"date": "2023/10/23",
+		"track": 10,
+		"song": "START:DASH!!",
+		"singer": "μ's",
+		"YTLink": "https://www.youtube.com/watch?v=nAQ5VRlIIxw"
+	},
+	{
+		"date": "2023/10/23",
+		"track": 11,
+		"song": "Snow halation",
+		"singer": "μ's",
+		"YTLink": "https://www.youtube.com/watch?v=nAQ5VRlIIxw"
+	},
+	{
+		"date": "2023/10/23",
+		"track": 12,
+		"song": "サインはB",
+		"singer": "B小町",
+		"YTLink": "https://www.youtube.com/watch?v=nAQ5VRlIIxw"
+	},
+	{
+		"date": "2023/10/23",
+		"track": 13,
+		"song": "GIRAFFE BLUES",
+		"singer": "ワルキューレ",
+		"YTLink": "https://www.youtube.com/watch?v=nAQ5VRlIIxw"
+	},
+	{
+		"date": "2023/10/23",
+		"track": 14,
+		"song": "プロローグ",
+		"singer": "Uru",
+		"YTLink": "https://www.youtube.com/watch?v=nAQ5VRlIIxw"
+	},
+	{
+		"date": "2023/10/23",
+		"track": 15,
+		"song": "Wishing",
+		"singer": "レム (水瀬いのり)",
+		"YTLink": "https://www.youtube.com/watch?v=nAQ5VRlIIxw"
+	},
+	{
+		"date": "2023/10/23",
+		"track": 16,
+		"song": "Precious",
+		"singer": "伊藤由奈",
+		"YTLink": "https://www.youtube.com/watch?v=nAQ5VRlIIxw"
+	},
+	{
+		"date": "2023/10/23",
+		"track": 17,
+		"song": "ヒッチコック",
+		"singer": "ヨルシカ",
+		"YTLink": "https://www.youtube.com/watch?v=nAQ5VRlIIxw"
+	},
+	{
+		"date": "2023/10/23",
+		"track": 18,
+		"song": "渡月橋 〜君 想ふ〜",
+		"singer": "倉木麻衣",
+		"YTLink": "https://www.youtube.com/watch?v=nAQ5VRlIIxw"
+	},
+	{
+		"date": "2023/10/23",
+		"track": 19,
+		"song": "ハルジオン",
+		"singer": "YOASOBI",
+		"YTLink": "https://www.youtube.com/watch?v=nAQ5VRlIIxw"
+	},
+	{
+		"date": "2023/10/23",
+		"track": 20,
+		"song": "アムリタ",
+		"singer": "牧野由依",
+		"YTLink": "https://www.youtube.com/watch?v=nAQ5VRlIIxw"
+	},
+	{
 		"date": "2023/10/22",
 		"track": 1,
 		"song": "おどるポンポコリン",
@@ -1224,7 +1364,7 @@
 		"date": "2023/10/07",
 		"track": "69",
 		"song": "Wishing",
-		"singer": "水瀬いのり",
+		"singer": "レム (水瀬いのり)",
 		"note": "",
 		"YTLink": "https://www.youtube.com/watch?v=haQ7-mFKSio"
 	},
@@ -2336,7 +2476,7 @@
 		"date": "2023/09/21",
 		"track": "20",
 		"song": "Wishing",
-		"singer": "水瀬いのり",
+		"singer": "レム (水瀬いのり)",
 		"note": "",
 		"YTLink": "https://www.youtube.com/watch?v=IPPYjr0iGSU"
 	},
@@ -3128,7 +3268,7 @@
 		"date": "2023/09/04",
 		"track": "8",
 		"song": "Wishing",
-		"singer": "水瀬いのり",
+		"singer": "レム (水瀬いのり)",
 		"note": "",
 		"YTLink": "https://www.youtube.com/watch?v=Zg2Y5Rcnqa8"
 	},
@@ -6608,7 +6748,7 @@
 		"date": "2023/07/27",
 		"track": "14",
 		"song": "Wishing",
-		"singer": "水瀬いのり",
+		"singer": "レム (水瀬いのり)",
 		"note": "",
 		"YTLink": "https://www.youtube.com/watch?v=svCuFVnFFmc"
 	},
@@ -8688,7 +8828,7 @@
 		"date": "2023/06/24",
 		"track": "88",
 		"song": "Wishing",
-		"singer": "水瀬いのり",
+		"singer": "レム (水瀬いのり)",
 		"note": "",
 		"YTLink": "https://www.youtube.com/watch?v=ZyQZagrDY_Q"
 	},
@@ -38031,7 +38171,7 @@
 	{
 		"date": "2022/06/14",
 		"track": "20",
-		"song": "START:DASH！！",
+		"song": "START:DASH!!",
 		"singer": "",
 		"note": "毎日歌枠/アイドルアニメ",
 		"YTLink": "https://www.youtube.com/watch?v=zf3YSNeQITQ"
@@ -59735,7 +59875,7 @@
 	{
 		"date": "2021/02/16",
 		"track": "5",
-		"song": "START:DASH！！",
+		"song": "START:DASH!!",
 		"singer": "",
 		"note": "初回",
 		"YTLink": "https://www.youtube.com/watch?v=rMKGq1x0vGs"
