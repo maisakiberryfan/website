@@ -1,5 +1,146 @@
 [
 	{
+		"date": "2023/10/24",
+		"track": 1,
+		"song": "すきっちゅーの！",
+		"singer": "HoneyWorks",
+		"note": "初回",
+		"YTLink": "https://www.youtube.com/watch?v=szJfwSnhv5c"
+	},
+	{
+		"date": "2023/10/24",
+		"track": 2,
+		"song": "可愛くてごめん",
+		"singer": "HoneyWorks",
+		"YTLink": "https://www.youtube.com/watch?v=szJfwSnhv5c"
+	},
+	{
+		"date": "2023/10/24",
+		"track": 3,
+		"song": "可愛くなりたい",
+		"singer": "HoneyWorks feat.鎖那",
+		"YTLink": "https://www.youtube.com/watch?v=szJfwSnhv5c"
+	},
+	{
+		"date": "2023/10/24",
+		"track": 4,
+		"song": "ベテルギウス",
+		"singer": "優里",
+		"YTLink": "https://www.youtube.com/watch?v=szJfwSnhv5c"
+	},
+	{
+		"date": "2023/10/24",
+		"track": 5,
+		"song": "雪の華",
+		"singer": "中島美嘉",
+		"YTLink": "https://www.youtube.com/watch?v=szJfwSnhv5c"
+	},
+	{
+		"date": "2023/10/24",
+		"track": 6,
+		"song": "天使にふれたよ！",
+		"singer": "放課後ティータイム",
+		"YTLink": "https://www.youtube.com/watch?v=szJfwSnhv5c"
+	},
+	{
+		"date": "2023/10/24",
+		"track": 7,
+		"song": "Subtitle",
+		"singer": "Official髭男dism",
+		"YTLink": "https://www.youtube.com/watch?v=szJfwSnhv5c"
+	},
+	{
+		"date": "2023/10/24",
+		"track": 8,
+		"song": "明日への手紙",
+		"singer": "手嶌葵",
+		"YTLink": "https://www.youtube.com/watch?v=szJfwSnhv5c"
+	},
+	{
+		"date": "2023/10/24",
+		"track": 9,
+		"song": "あなたがいることで",
+		"singer": "Uru",
+		"YTLink": "https://www.youtube.com/watch?v=szJfwSnhv5c"
+	},
+	{
+		"date": "2023/10/24",
+		"track": 10,
+		"song": "ガーネット",
+		"singer": "奥華子",
+		"YTLink": "https://www.youtube.com/watch?v=szJfwSnhv5c"
+	},
+	{
+		"date": "2023/10/24",
+		"track": 11,
+		"song": "God knows…",
+		"singer": "涼宮ハルヒ(平野綾)",
+		"YTLink": "https://www.youtube.com/watch?v=szJfwSnhv5c"
+	},
+	{
+		"date": "2023/10/24",
+		"track": 12,
+		"song": "ノーザンクロス",
+		"singer": "シェリル・ノーム/May'n",
+		"YTLink": "https://www.youtube.com/watch?v=szJfwSnhv5c"
+	},
+	{
+		"date": "2023/10/24",
+		"track": 13,
+		"song": "いけないボーダーライン",
+		"singer": "ワルキューレ",
+		"YTLink": "https://www.youtube.com/watch?v=szJfwSnhv5c"
+	},
+	{
+		"date": "2023/10/24",
+		"track": 14,
+		"song": "最悪な日でもあなたが好き。",
+		"singer": "芹澤優",
+		"YTLink": "https://www.youtube.com/watch?v=szJfwSnhv5c"
+	},
+	{
+		"date": "2023/10/24",
+		"track": 15,
+		"song": "風は予告なく吹く",
+		"singer": "ワルキューレ",
+		"YTLink": "https://www.youtube.com/watch?v=szJfwSnhv5c"
+	},
+	{
+		"date": "2023/10/24",
+		"track": 16,
+		"song": "すきっちゅーの！",
+		"singer": "HoneyWorks",
+		"YTLink": "https://www.youtube.com/watch?v=szJfwSnhv5c"
+	},
+	{
+		"date": "2023/10/24",
+		"track": 17,
+		"song": "ハレ晴レユカイ",
+		"singer": "涼宮ハルヒ(平野綾), 長門有希(茅原実里), 朝比奈みくる(後藤邑子)",
+		"YTLink": "https://www.youtube.com/watch?v=szJfwSnhv5c"
+	},
+	{
+		"date": "2023/10/24",
+		"track": 18,
+		"song": "ロマンスの神様",
+		"singer": "広瀬香美",
+		"YTLink": "https://www.youtube.com/watch?v=szJfwSnhv5c"
+	},
+	{
+		"date": "2023/10/24",
+		"track": 19,
+		"song": "ファンサ",
+		"singer": "mona(夏川椎菜)",
+		"YTLink": "https://www.youtube.com/watch?v=szJfwSnhv5c"
+	},
+	{
+		"date": "2023/10/24",
+		"track": 20,
+		"song": "虹",
+		"singer": "菅田将暉",
+		"YTLink": "https://www.youtube.com/watch?v=szJfwSnhv5c"
+	},
+	{
 		"date": "2023/10/23",
 		"track": 1,
 		"song": "言って。",
@@ -1388,7 +1529,7 @@
 		"date": "2023/10/07",
 		"track": "72",
 		"song": "ファンサ",
-		"singer": "mona/夏川椎菜",
+		"singer": "mona(夏川椎菜)",
 		"note": "",
 		"YTLink": "https://www.youtube.com/watch?v=haQ7-mFKSio"
 	},
@@ -1748,7 +1889,7 @@
 		"date": "2023/10/03",
 		"track": "9",
 		"song": "God knows…",
-		"singer": "平野綾",
+		"singer": "涼宮ハルヒ(平野綾)",
 		"note": "",
 		"YTLink": "https://www.youtube.com/watch?v=nFy7qf7xaoc"
 	},
@@ -3188,7 +3329,7 @@
 		"date": "2023/09/05",
 		"track": "8",
 		"song": "ファンサ",
-		"singer": "mona/夏川椎菜",
+		"singer": "mona(夏川椎菜)",
 		"note": "",
 		"YTLink": "https://www.youtube.com/watch?v=61TdPwpqekc"
 	},
@@ -3484,7 +3625,7 @@
 		"date": "2023/08/30",
 		"track": "8",
 		"song": "God knows…",
-		"singer": "平野綾",
+		"singer": "涼宮ハルヒ(平野綾)",
 		"note": "",
 		"YTLink": "https://www.youtube.com/watch?v=doZzW4pJTjY"
 	},
@@ -3564,7 +3705,7 @@
 		"date": "2023/08/30",
 		"track": "18",
 		"song": "ファンサ",
-		"singer": "mona/夏川椎菜",
+		"singer": "mona(夏川椎菜)",
 		"note": "",
 		"YTLink": "https://www.youtube.com/watch?v=doZzW4pJTjY"
 	},
@@ -4564,7 +4705,7 @@
 		"date": "2023/08/17",
 		"track": "7",
 		"song": "ファンサ",
-		"singer": "mona/夏川椎菜",
+		"singer": "mona(夏川椎菜)",
 		"note": "",
 		"YTLink": "https://www.youtube.com/watch?v=G-91jzmVyiM"
 	},
@@ -4820,7 +4961,7 @@
 		"date": "2023/08/15",
 		"track": "7",
 		"song": "ファンサ",
-		"singer": "mona/夏川椎菜",
+		"singer": "mona(夏川椎菜)",
 		"note": "",
 		"YTLink": "https://www.youtube.com/watch?v=NEfr4c9Lc3s"
 	},
@@ -5012,7 +5153,7 @@
 		"date": "2023/08/14",
 		"track": "7",
 		"song": "ファンサ",
-		"singer": "mona/夏川椎菜",
+		"singer": "mona(夏川椎菜)",
 		"note": "",
 		"YTLink": "https://www.youtube.com/watch?v=hdviGOIYb2w"
 	},
@@ -5356,7 +5497,7 @@
 		"date": "2023/08/10",
 		"track": "10",
 		"song": "ファンサ",
-		"singer": "mona/夏川椎菜",
+		"singer": "mona(夏川椎菜)",
 		"note": "",
 		"YTLink": "https://www.youtube.com/watch?v=joEltch0OPc"
 	},
@@ -5620,7 +5761,7 @@
 		"date": "2023/08/09",
 		"track": "13",
 		"song": "ハレ晴レユカイ",
-		"singer": "平野綾",
+		"singer": "涼宮ハルヒ(平野綾), 長門有希(茅原実里), 朝比奈みくる(後藤邑子)",
 		"note": "",
 		"YTLink": "https://www.youtube.com/watch?v=l9ZapZ4DpIY"
 	},
@@ -5628,7 +5769,7 @@
 		"date": "2023/08/09",
 		"track": "14",
 		"song": "God knows…",
-		"singer": "平野綾",
+		"singer": "涼宮ハルヒ(平野綾)",
 		"note": "",
 		"YTLink": "https://www.youtube.com/watch?v=l9ZapZ4DpIY"
 	},
@@ -6108,7 +6249,7 @@
 		"date": "2023/08/03",
 		"track": "14",
 		"song": "ファンサ",
-		"singer": "mona/夏川椎菜",
+		"singer": "mona(夏川椎菜)",
 		"note": "",
 		"YTLink": "https://www.youtube.com/watch?v=aJojvd3J97A"
 	},
@@ -7244,7 +7385,7 @@
 		"date": "2023/07/18",
 		"track": "16",
 		"song": "ファンサ",
-		"singer": "mona/夏川椎菜",
+		"singer": "mona(夏川椎菜)",
 		"note": "",
 		"YTLink": "https://www.youtube.com/watch?v=tGn3fy0OAsI"
 	},
@@ -7252,7 +7393,7 @@
 		"date": "2023/07/17",
 		"track": "1",
 		"song": "ファンサ",
-		"singer": "mona/夏川椎菜",
+		"singer": "mona(夏川椎菜)",
 		"note": "",
 		"YTLink": "https://www.youtube.com/watch?v=SqzpzkrM1n8"
 	},
@@ -7852,7 +7993,7 @@
 		"date": "2023/06/26",
 		"track": "1",
 		"song": "ファンサ",
-		"singer": "mona/夏川椎菜",
+		"singer": "mona(夏川椎菜)",
 		"note": "",
 		"YTLink": "https://www.youtube.com/watch?v=qdntQum8KoQ"
 	},
@@ -8716,7 +8857,7 @@
 		"date": "2023/06/24",
 		"track": "74",
 		"song": "ハレ晴レユカイ",
-		"singer": "平野綾",
+		"singer": "涼宮ハルヒ(平野綾), 長門有希(茅原実里), 朝比奈みくる(後藤邑子)",
 		"note": "",
 		"YTLink": "https://www.youtube.com/watch?v=ZyQZagrDY_Q"
 	},
@@ -8940,7 +9081,7 @@
 		"date": "2023/06/24",
 		"track": "102",
 		"song": "ファンサ",
-		"singer": "mona/夏川椎菜",
+		"singer": "mona(夏川椎菜)",
 		"note": "",
 		"YTLink": "https://www.youtube.com/watch?v=ZyQZagrDY_Q"
 	},
@@ -9652,7 +9793,7 @@
 		"date": "2023/06/18",
 		"track": "15",
 		"song": "ファンサ",
-		"singer": "mona/夏川椎菜",
+		"singer": "mona(夏川椎菜)",
 		"note": "",
 		"YTLink": "https://www.youtube.com/watch?v=UniA1pxv0VI"
 	},
