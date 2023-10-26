@@ -1,5 +1,75 @@
 [
 	{
+		"date": "2023/10/25",
+		"track": 1,
+		"song": "すきっちゅーの！",
+		"singer": "HoneyWorks",
+		"YTLink": "https://www.youtube.com/watch?v=WHclPvp6PJQ"
+	},
+	{
+		"date": "2023/10/25",
+		"track": 2,
+		"song": "ヒトツボシ",
+		"singer": "KOH+",
+		"YTLink": "https://www.youtube.com/watch?v=WHclPvp6PJQ"
+	},
+	{
+		"date": "2023/10/25",
+		"track": 3,
+		"song": "竈門炭治郎のうた",
+		"singer": "中川奈美",
+		"YTLink": "https://www.youtube.com/watch?v=WHclPvp6PJQ"
+	},
+	{
+		"date": "2023/10/25",
+		"track": 4,
+		"song": "この夜を止めてよ",
+		"singer": "JUJU",
+		"YTLink": "https://www.youtube.com/watch?v=WHclPvp6PJQ"
+	},
+	{
+		"date": "2023/10/25",
+		"track": 5,
+		"song": "ねこ日記",
+		"singer": "ランカ・リー(中島愛)",
+		"YTLink": "https://www.youtube.com/watch?v=WHclPvp6PJQ"
+	},
+	{
+		"date": "2023/10/25",
+		"track": 6,
+		"song": "地上の星",
+		"singer": "中島みゆき",
+		"YTLink": "https://www.youtube.com/watch?v=WHclPvp6PJQ"
+	},
+	{
+		"date": "2023/10/25",
+		"track": 7,
+		"song": "3年目の浮気",
+		"singer": "ヒロシ&キーボー",
+		"YTLink": "https://www.youtube.com/watch?v=WHclPvp6PJQ"
+	},
+	{
+		"date": "2023/10/25",
+		"track": 8,
+		"song": "深愛",
+		"singer": "水樹奈々",
+		"YTLink": "https://www.youtube.com/watch?v=WHclPvp6PJQ"
+	},
+	{
+		"date": "2023/10/25",
+		"track": 9,
+		"song": "Get Over",
+		"singer": "Dream",
+		"YTLink": "https://www.youtube.com/watch?v=WHclPvp6PJQ"
+	},
+	{
+		"date": "2023/10/25",
+		"track": 10,
+		"song": "Crosswalk",
+		"singer": "鈴木みのり",
+		"YTLink": "https://www.youtube.com/watch?v=WHclPvp6PJQ"
+	},
+	{
 		"date": "2023/10/24",
 		"track": 1,
 		"song": "すきっちゅーの！",
@@ -7921,7 +7991,7 @@
 		"date": "2023/06/28",
 		"track": "7",
 		"song": "ねこ日記",
-		"singer": "ランカ・リー/中島愛",
+		"singer": "ランカ・リー(中島愛)",
 		"note": "",
 		"YTLink": "https://www.youtube.com/watch?v=H4lqhcTUGAo"
 	},
