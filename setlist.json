@@ -1,5 +1,111 @@
 [
 	{
+		"date": "2023/10/29",
+		"track": 1,
+		"song": "言って。",
+		"singer": "ヨルシカ",
+		"YTLink": "https://www.youtube.com/watch?v=SS_yKhVadBQ"
+	},
+	{
+		"date": "2023/10/29",
+		"track": 2,
+		"song": "何度でも",
+		"singer": "DREAMS COME TRUE",
+		"note": "初回",
+		"YTLink": "https://www.youtube.com/watch?v=SS_yKhVadBQ"
+	},
+	{
+		"date": "2023/10/29",
+		"track": 3,
+		"song": "明日への手紙",
+		"singer": "手嶌葵",
+		"YTLink": "https://www.youtube.com/watch?v=SS_yKhVadBQ"
+	},
+	{
+		"date": "2023/10/29",
+		"track": 4,
+		"song": "向日葵",
+		"singer": "Ado",
+		"YTLink": "https://www.youtube.com/watch?v=SS_yKhVadBQ"
+	},
+	{
+		"date": "2023/10/29",
+		"track": 5,
+		"song": "ラストシーン",
+		"singer": "いきものがかり",
+		"YTLink": "https://www.youtube.com/watch?v=SS_yKhVadBQ"
+	},
+	{
+		"date": "2023/10/29",
+		"track": 6,
+		"song": "紅蓮華",
+		"singer": "LiSA",
+		"YTLink": "https://www.youtube.com/watch?v=SS_yKhVadBQ"
+	},
+	{
+		"date": "2023/10/29",
+		"track": 7,
+		"song": "すきっちゅーの！",
+		"singer": "HoneyWorks",
+		"YTLink": "https://www.youtube.com/watch?v=SS_yKhVadBQ"
+	},
+	{
+		"date": "2023/10/29",
+		"track": 8,
+		"song": "Mela!",
+		"singer": "緑黄色社会",
+		"YTLink": "https://www.youtube.com/watch?v=SS_yKhVadBQ"
+	},
+	{
+		"date": "2023/10/29",
+		"track": 9,
+		"song": "プラネタリウム",
+		"singer": "プラネタリウム",
+		"YTLink": "https://www.youtube.com/watch?v=SS_yKhVadBQ"
+	},
+	{
+		"date": "2023/10/29",
+		"track": 10,
+		"song": "最高の片想い",
+		"singer": "タイナカサチ",
+		"YTLink": "https://www.youtube.com/watch?v=SS_yKhVadBQ"
+	},
+	{
+		"date": "2023/10/29",
+		"track": 11,
+		"song": "LIFE",
+		"singer": "中島美嘉",
+		"YTLink": "https://www.youtube.com/watch?v=SS_yKhVadBQ"
+	},
+	{
+		"date": "2023/10/29",
+		"track": 12,
+		"song": "水平線",
+		"singer": "back number",
+		"YTLink": "https://www.youtube.com/watch?v=SS_yKhVadBQ"
+	},
+	{
+		"date": "2023/10/29",
+		"track": 13,
+		"song": "Crazy Party Night ～ぱんぷきんの逆襲～",
+		"singer": "きゃりーぱみゅぱみゅ",
+		"YTLink": "https://www.youtube.com/watch?v=SS_yKhVadBQ"
+	},
+	{
+		"date": "2023/10/29",
+		"track": 14,
+		"song": "ムーンライト伝説",
+		"singer": "DALI",
+		"YTLink": "https://www.youtube.com/watch?v=SS_yKhVadBQ"
+	},
+	{
+		"date": "2023/10/29",
+		"track": 15,
+		"song": "to you.",
+		"singer": "苺咲べりぃ",
+		"YTLink": "https://www.youtube.com/watch?v=SS_yKhVadBQ"
+	},
+	{
 		"date": "2023/10/28",
 		"track": 1,
 		"song": "すきっちゅーの！",
@@ -1219,7 +1325,7 @@
 	{
 		"date": "2023/10/09",
 		"track": 8,
-		"song": "crazy party night ～ぱんぷきんの逆襲～",
+		"song": "Crazy Party Night ～ぱんぷきんの逆襲～",
 		"singer": "きゃりーぱみゅぱみゅ",
 		"YTLink": "https://www.youtube.com/watch?v=_JDPWlx4cRc"
 	},
@@ -26777,7 +26883,7 @@
 		"date": "2022/10/31",
 		"track": "1",
 		"song": "Crazy Party Night ～ぱんぷきんの逆襲～",
-		"singer": "",
+		"singer": "きゃりーぱみゅぱみゅ",
 		"note": "ハロウィン",
 		"YTLink": "https://www.youtube.com/watch?v=OcAnUhcxOsM"
 	},
@@ -48665,7 +48771,7 @@
 		"date": "2021/10/31",
 		"track": "3",
 		"song": "Crazy Party Night ～ぱんぷきんの逆襲～",
-		"singer": "",
+		"singer": "きゃりーぱみゅぱみゅ",
 		"note": "ハロウィン",
 		"YTLink": "https://www.youtube.com/watch?v=EP-25Ntat_8"
 	},
@@ -58737,7 +58843,7 @@
 		"date": "2021/03/27",
 		"track": "15",
 		"song": "Crazy Party Night ～ぱんぷきんの逆襲～",
-		"singer": "",
+		"singer": "きゃりーぱみゅぱみゅ",
 		"note": "",
 		"YTLink": "https://www.youtube.com/watch?v=eCohEAIB1-o"
 	},
@@ -63129,7 +63235,7 @@
 		"date": "2020/12/19",
 		"track": "14",
 		"song": "Crazy Party Night ～ぱんぷきんの逆襲～",
-		"singer": "",
+		"singer": "きゃりーぱみゅぱみゅ",
 		"note": "",
 		"YTLink": "https://www.youtube.com/watch?v=NsPoTJoxgYE"
 	},
@@ -64041,7 +64147,7 @@
 		"date": "2020/12/06",
 		"track": "18",
 		"song": "Crazy Party Night ～ぱんぷきんの逆襲～",
-		"singer": "",
+		"singer": "きゃりーぱみゅぱみゅ",
 		"note": "初回",
 		"YTLink": "https://www.youtube.com/watch?v=1qmzGIKMnOY"
 	},
