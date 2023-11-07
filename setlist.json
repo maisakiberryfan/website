@@ -1,5 +1,75 @@
 [
 	{
+		"date": "2023/11/06",
+		"track": 1,
+		"song": "夜に駆ける",
+		"singer": "YOASOBI",
+		"YTLink": "https://www.youtube.com/watch?v=K7p36FH3cEo"
+	},
+	{
+		"date": "2023/11/06",
+		"track": 2,
+		"song": "すきっちゅーの！",
+		"singer": "HoneyWorks",
+		"YTLink": "https://www.youtube.com/watch?v=K7p36FH3cEo"
+	},
+	{
+		"date": "2023/11/06",
+		"track": 3,
+		"song": "大正浪漫",
+		"singer": "YOASOBI",
+		"YTLink": "https://www.youtube.com/watch?v=K7p36FH3cEo"
+	},
+	{
+		"date": "2023/11/06",
+		"track": 4,
+		"song": "祝福",
+		"singer": "YOASOBI",
+		"YTLink": "https://www.youtube.com/watch?v=K7p36FH3cEo"
+	},
+	{
+		"date": "2023/11/06",
+		"track": 5,
+		"song": "Laughter",
+		"singer": "Official髭男dism",
+		"YTLink": "https://www.youtube.com/watch?v=K7p36FH3cEo"
+	},
+	{
+		"date": "2023/11/06",
+		"track": 6,
+		"song": "変わらないもの",
+		"singer": "奥華子",
+		"YTLink": "https://www.youtube.com/watch?v=K7p36FH3cEo"
+	},
+	{
+		"date": "2023/11/06",
+		"track": 7,
+		"song": "オトメロディー",
+		"singer": "高橋美佳子",
+		"YTLink": "https://www.youtube.com/watch?v=K7p36FH3cEo"
+	},
+	{
+		"date": "2023/11/06",
+		"track": 8,
+		"song": "なのです☆",
+		"singer": "羽入(堀江由衣)",
+		"YTLink": "https://www.youtube.com/watch?v=K7p36FH3cEo"
+	},
+	{
+		"date": "2023/11/06",
+		"track": 9,
+		"song": "春泥棒",
+		"singer": "ヨルシカ",
+		"YTLink": "https://www.youtube.com/watch?v=K7p36FH3cEo"
+	},
+	{
+		"date": "2023/11/06",
+		"track": 10,
+		"song": "クリスマスソング",
+		"singer": "back number",
+		"YTLink": "https://www.youtube.com/watch?v=K7p36FH3cEo"
+	},
+	{
 		"date": "2023/10/29",
 		"track": 1,
 		"song": "言って。",
@@ -4475,7 +4545,7 @@
 		"date": "2023/08/22",
 		"track": "8",
 		"song": "なのです☆",
-		"singer": "堀江由衣",
+		"singer": "羽入(堀江由衣)",
 		"note": "",
 		"YTLink": "https://www.youtube.com/watch?v=8i6y-5O30ps"
 	},
@@ -8203,7 +8273,7 @@
 		"date": "2023/07/03",
 		"track": "14",
 		"song": "なのです☆",
-		"singer": "堀江由衣",
+		"singer": "羽入(堀江由衣)",
 		"note": "",
 		"YTLink": "https://www.youtube.com/watch?v=YFx5eJYT_Cs"
 	},
@@ -14187,7 +14257,7 @@
 		"date": "2023/04/25",
 		"track": "12",
 		"song": "なのです☆",
-		"singer": "",
+		"singer": "羽入(堀江由衣)",
 		"note": "毎日歌枠/かわいい",
 		"YTLink": "https://www.youtube.com/watch?v=kbMigoCQeAA"
 	},
@@ -38227,7 +38297,7 @@
 		"date": "2022/06/16",
 		"track": "16",
 		"song": "なのです☆",
-		"singer": "",
+		"singer": "羽入(堀江由衣)",
 		"note": "毎日歌枠/リクエスト",
 		"YTLink": "https://www.youtube.com/watch?v=js0DFgmhojw"
 	},
@@ -43611,7 +43681,7 @@
 		"date": "2022/02/24",
 		"track": "6",
 		"song": "なのです☆",
-		"singer": "",
+		"singer": "羽入(堀江由衣)",
 		"note": "初回",
 		"YTLink": "https://www.youtube.com/watch?v=GjH8M8FLd6I"
 	},
