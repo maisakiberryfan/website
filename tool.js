@@ -590,7 +590,7 @@ function getYoutubeVideoId(url){
   //trim the https://www.youtube.com/watch?v=abcdefg to abcdefg
   // for 2023 the ID length is 11
   
-  let ytPrefix = ['https://www.youtube.com/watch?v=','https://www.youtube.com/live/','https://youtu.be/']
+  let ytPrefix = ['https://www.youtube.com/watch?v=','https://www.youtube.com/live/','https://youtu.be/','https://youtube.com/shorts/']
   let idLength = 11
   let prefix = ytPrefix.filter(e=>url.includes(e))
   let id=''

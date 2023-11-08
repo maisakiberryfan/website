@@ -1,5 +1,111 @@
 [
 	{
+		"date": "2023/11/08",
+		"track": 1,
+		"song": "ヒッチコック",
+		"singer": "ヨルシカ",
+		"YTLink": "https://www.youtube.com/watch?v=X-k9zCrMpzY"
+	},
+	{
+		"date": "2023/11/08",
+		"track": 2,
+		"song": "謎",
+		"singer": "小松未歩",
+		"YTLink": "https://www.youtube.com/watch?v=X-k9zCrMpzY"
+	},
+	{
+		"date": "2023/11/08",
+		"track": 3,
+		"song": "恋はスリル、ショック、サスペンス",
+		"singer": "愛内里菜",
+		"YTLink": "https://www.youtube.com/watch?v=X-k9zCrMpzY"
+	},
+	{
+		"date": "2023/11/08",
+		"track": 4,
+		"song": "クリスマスソング",
+		"singer": "back number",
+		"YTLink": "https://www.youtube.com/watch?v=X-k9zCrMpzY"
+	},
+	{
+		"date": "2023/11/08",
+		"track": 5,
+		"song": "メリクリ",
+		"singer": "BoA",
+		"YTLink": "https://www.youtube.com/watch?v=X-k9zCrMpzY"
+	},
+	{
+		"date": "2023/11/08",
+		"track": 6,
+		"song": "残響散歌",
+		"singer": "Aimer",
+		"YTLink": "https://www.youtube.com/watch?v=X-k9zCrMpzY"
+	},
+	{
+		"date": "2023/11/08",
+		"track": 7,
+		"song": "たばこ",
+		"singer": "コレサワ",
+		"YTLink": "https://www.youtube.com/watch?v=X-k9zCrMpzY"
+	},
+	{
+		"date": "2023/11/08",
+		"track": 8,
+		"song": "Mela!",
+		"singer": "緑黄色社会",
+		"YTLink": "https://www.youtube.com/watch?v=X-k9zCrMpzY"
+	},
+	{
+		"date": "2023/11/08",
+		"track": 9,
+		"song": "ひまわりの約束",
+		"singer": "秦基博",
+		"YTLink": "https://www.youtube.com/watch?v=X-k9zCrMpzY"
+	},
+	{
+		"date": "2023/11/08",
+		"track": 10,
+		"song": "チェリー",
+		"singer": "スピッツ",
+		"YTLink": "https://www.youtube.com/watch?v=X-k9zCrMpzY"
+	},
+	{
+		"date": "2023/11/08",
+		"track": 11,
+		"song": "放課後オーバーフロウ",
+		"singer": "ランカ・リー(中島愛)",
+		"YTLink": "https://www.youtube.com/watch?v=X-k9zCrMpzY"
+	},
+	{
+		"date": "2023/11/08",
+		"track": 12,
+		"song": "SHOOT!",
+		"singer": "RO-KYU-BU!",
+		"YTLink": "https://www.youtube.com/watch?v=X-k9zCrMpzY"
+	},
+	{
+		"date": "2023/11/08",
+		"track": 13,
+		"song": "陽のあたる坂道",
+		"singer": "Do As Infinity",
+		"note": "初回",
+		"YTLink": "https://www.youtube.com/watch?v=X-k9zCrMpzY"
+	},
+	{
+		"date": "2023/11/08",
+		"track": 14,
+		"song": "ブルーバード",
+		"singer": "いきものがかり",
+		"YTLink": "https://www.youtube.com/watch?v=X-k9zCrMpzY"
+	},
+	{
+		"date": "2023/11/08",
+		"track": 15,
+		"song": "エフェメラをあつめて",
+		"singer": "鈴木みのり",
+		"YTLink": "https://www.youtube.com/watch?v=X-k9zCrMpzY"
+	},
+	{
 		"date": "2023/11/06",
 		"track": 1,
 		"song": "夜に駆ける",
@@ -4537,7 +4643,7 @@
 		"date": "2023/08/22",
 		"track": "7",
 		"song": "放課後オーバーフロウ",
-		"singer": "ランカ・リー/中島愛",
+		"singer": "ランカ・リー(中島愛)",
 		"note": "",
 		"YTLink": "https://www.youtube.com/watch?v=8i6y-5O30ps"
 	},
