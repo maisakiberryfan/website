@@ -1,5 +1,75 @@
 [
 	{
+		"date": "2023/11/09",
+		"track": 1,
+		"song": "残酷な天使のテーゼ",
+		"singer": "高橋洋子",
+		"YTLink": "https://www.youtube.com/watch?v=g7ljx2mXAog"
+	},
+	{
+		"date": "2023/11/09",
+		"track": 2,
+		"song": "紅蓮華",
+		"singer": "LiSA",
+		"YTLink": "https://www.youtube.com/watch?v=g7ljx2mXAog"
+	},
+	{
+		"date": "2023/11/09",
+		"track": 3,
+		"song": "ヒトリゴト",
+		"singer": "ClariS",
+		"YTLink": "https://www.youtube.com/watch?v=g7ljx2mXAog"
+	},
+	{
+		"date": "2023/11/09",
+		"track": 4,
+		"song": "五等分の気持ち",
+		"singer": "中野家の五つ子",
+		"YTLink": "https://www.youtube.com/watch?v=g7ljx2mXAog"
+	},
+	{
+		"date": "2023/11/09",
+		"track": 5,
+		"song": "AXIA～ダイスキでダイキライ～",
+		"singer": "ワルキューレ",
+		"YTLink": "https://www.youtube.com/watch?v=g7ljx2mXAog"
+	},
+	{
+		"date": "2023/11/09",
+		"track": 6,
+		"song": "プラチナ",
+		"singer": "坂本真綾",
+		"YTLink": "https://www.youtube.com/watch?v=g7ljx2mXAog"
+	},
+	{
+		"date": "2023/11/09",
+		"track": 7,
+		"song": "Get Over",
+		"singer": "Dream",
+		"YTLink": "https://www.youtube.com/watch?v=g7ljx2mXAog"
+	},
+	{
+		"date": "2023/11/09",
+		"track": 8,
+		"song": "STEP",
+		"singer": "ClariS",
+		"YTLink": "https://www.youtube.com/watch?v=g7ljx2mXAog"
+	},
+	{
+		"date": "2023/11/09",
+		"track": 9,
+		"song": "虹いろ・クマクマ",
+		"singer": "ランカ・リー(中島愛)",
+		"YTLink": "https://www.youtube.com/watch?v=g7ljx2mXAog"
+	},
+	{
+		"date": "2023/11/09",
+		"track": 10,
+		"song": "フリージア",
+		"singer": "Uru",
+		"YTLink": "https://www.youtube.com/watch?v=g7ljx2mXAog"
+	},
+	{
 		"date": "2023/11/08",
 		"track": 1,
 		"song": "ヒッチコック",
@@ -4010,8 +4080,8 @@
 	{
 		"date": "2023/09/04",
 		"track": "13",
-		"song": "虹色クマクマ",
-		"singer": "ランカ・リー/中島愛",
+		"song": "虹いろ・クマクマ",
+		"singer": "ランカ・リー(中島愛)",
 		"note": "",
 		"YTLink": "https://www.youtube.com/watch?v=Zg2Y5Rcnqa8"
 	},
@@ -26259,7 +26329,7 @@
 		"date": "2022/11/08",
 		"track": "11",
 		"song": "虹いろ・クマクマ",
-		"singer": "",
+		"singer": "ランカ・リー(中島愛)",
 		"note": "マクロス",
 		"YTLink": "https://www.youtube.com/watch?v=s_DEQJZ8-yU"
 	},
@@ -37379,7 +37449,7 @@
 		"date": "2022/06/22",
 		"track": "12",
 		"song": "虹いろ・クマクマ",
-		"singer": "",
+		"singer": "ランカ・リー(中島愛)",
 		"note": "",
 		"YTLink": "https://www.youtube.com/watch?v=MGehpLrCba4"
 	},
@@ -48547,7 +48617,7 @@
 		"date": "2021/11/11",
 		"track": "6",
 		"song": "虹いろ・クマクマ",
-		"singer": "",
+		"singer": "ランカ・リー(中島愛)",
 		"note": "",
 		"YTLink": "https://www.youtube.com/watch?v=bkHVu62nKx8"
 	},
@@ -65811,7 +65881,7 @@
 		"date": "2020/11/12",
 		"track": "3",
 		"song": "虹いろ・クマクマ",
-		"singer": "",
+		"singer": "ランカ・リー(中島愛)",
 		"note": "マクロス/初回",
 		"YTLink": "https://www.youtube.com/watch?v=S7nRycQJO_k"
 	},
