@@ -1,4 +1,5 @@
 ﻿## 2023
+* 2023/12/31  [國際 Vtuber Vsinger 紅白歌合戰 2023 参加](https://kouhaku2023.wixsite.com/kouhaku2023)
 * 2023/10/29　5th album 発売
 * 2023/10/28　チャンネル登録96,000人
 * 2023/10/27　[歌枠リレー](https://www.youtube.com/watch?v=S70Y40SBnsw)
