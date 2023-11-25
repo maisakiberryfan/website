@@ -1,5 +1,341 @@
 [
 	{
+		"date": "2023/11/23",
+		"track": 1,
+		"song": "金魚花火",
+		"singer": "大塚愛",
+		"YTLink": "https://www.youtube.com/watch?v=7lT4m5ZEPx4"
+	},
+	{
+		"date": "2023/11/23",
+		"track": 2,
+		"song": "愛・おぼえていますか",
+		"singer": "飯島真理",
+		"YTLink": "https://www.youtube.com/watch?v=7lT4m5ZEPx4"
+	},
+	{
+		"date": "2023/11/23",
+		"track": 3,
+		"song": "恋愛写真",
+		"singer": "大塚愛",
+		"YTLink": "https://www.youtube.com/watch?v=7lT4m5ZEPx4"
+	},
+	{
+		"date": "2023/11/23",
+		"track": 4,
+		"song": "生きてこそ",
+		"singer": "kiroro",
+		"YTLink": "https://www.youtube.com/watch?v=7lT4m5ZEPx4"
+	},
+	{
+		"date": "2023/11/23",
+		"track": 5,
+		"song": "雪の華",
+		"singer": "中島美嘉",
+		"YTLink": "https://www.youtube.com/watch?v=7lT4m5ZEPx4"
+	},
+	{
+		"date": "2023/11/23",
+		"track": 6,
+		"song": "KissHug",
+		"singer": "aiko",
+		"YTLink": "https://www.youtube.com/watch?v=7lT4m5ZEPx4"
+	},
+	{
+		"date": "2023/11/23",
+		"track": 7,
+		"song": "歌に形はないけれど",
+		"singer": "きりたんP(doriko)",
+		"YTLink": "https://www.youtube.com/watch?v=7lT4m5ZEPx4"
+	},
+	{
+		"date": "2023/11/23",
+		"track": 8,
+		"song": "カブトムシ",
+		"singer": "aiko",
+		"YTLink": "https://www.youtube.com/watch?v=7lT4m5ZEPx4"
+	},
+	{
+		"date": "2023/11/23",
+		"track": 9,
+		"song": "それを愛と呼ぶなら",
+		"singer": "Uru",
+		"YTLink": "https://www.youtube.com/watch?v=7lT4m5ZEPx4"
+	},
+	{
+		"date": "2023/11/23",
+		"track": 10,
+		"song": "あなたがいることで",
+		"singer": "Uru",
+		"YTLink": "https://www.youtube.com/watch?v=7lT4m5ZEPx4"
+	},
+	{
+		"date": "2023/11/23",
+		"track": 11,
+		"song": "You",
+		"singer": "癒月",
+		"YTLink": "https://www.youtube.com/watch?v=7lT4m5ZEPx4"
+	},
+	{
+		"date": "2023/11/23",
+		"track": 12,
+		"song": "変わらないもの",
+		"singer": "奥華子",
+		"YTLink": "https://www.youtube.com/watch?v=7lT4m5ZEPx4"
+	},
+	{
+		"date": "2023/11/23",
+		"track": 13,
+		"song": "ガーネット",
+		"singer": "奥華子",
+		"YTLink": "https://www.youtube.com/watch?v=7lT4m5ZEPx4"
+	},
+	{
+		"date": "2023/11/23",
+		"track": 14,
+		"song": "ホシキラ",
+		"singer": "ランカ・リー(中島愛)",
+		"YTLink": "https://www.youtube.com/watch?v=7lT4m5ZEPx4"
+	},
+	{
+		"date": "2023/11/23",
+		"track": 15,
+		"song": "奏",
+		"singer": "スキマスイッチ",
+		"YTLink": "https://www.youtube.com/watch?v=7lT4m5ZEPx4"
+	},
+	{
+		"date": "2023/11/23",
+		"track": 16,
+		"song": "粉雪",
+		"singer": "レミオロメン",
+		"YTLink": "https://www.youtube.com/watch?v=7lT4m5ZEPx4"
+	},
+	{
+		"date": "2023/11/23",
+		"track": 17,
+		"song": "ドライフラワー",
+		"singer": "優里",
+		"YTLink": "https://www.youtube.com/watch?v=7lT4m5ZEPx4"
+	},
+	{
+		"date": "2023/11/23",
+		"track": 18,
+		"song": "水平線",
+		"singer": "back number",
+		"YTLink": "https://www.youtube.com/watch?v=7lT4m5ZEPx4"
+	},
+	{
+		"date": "2023/11/23",
+		"track": 19,
+		"song": "明日への手紙",
+		"singer": "手嶌葵",
+		"YTLink": "https://www.youtube.com/watch?v=7lT4m5ZEPx4"
+	},
+	{
+		"date": "2023/11/23",
+		"track": 20,
+		"song": "Everything",
+		"singer": "MISIA",
+		"YTLink": "https://www.youtube.com/watch?v=7lT4m5ZEPx4"
+	},
+	{
+		"date": "2023/11/23",
+		"track": 21,
+		"song": "メリクリ",
+		"singer": "BoA",
+		"YTLink": "https://www.youtube.com/watch?v=7lT4m5ZEPx4"
+	},
+	{
+		"date": "2023/11/23",
+		"track": 22,
+		"song": "Precious",
+		"singer": "伊藤由奈",
+		"YTLink": "https://www.youtube.com/watch?v=7lT4m5ZEPx4"
+	},
+	{
+		"date": "2023/11/23",
+		"track": 23,
+		"song": "プロローグ",
+		"singer": "Uru",
+		"YTLink": "https://www.youtube.com/watch?v=7lT4m5ZEPx4"
+	},
+	{
+		"date": "2023/11/23",
+		"track": 24,
+		"song": "366日",
+		"singer": "HY",
+		"YTLink": "https://www.youtube.com/watch?v=7lT4m5ZEPx4"
+	},
+	{
+		"date": "2023/11/23",
+		"track": 25,
+		"song": "アイノカタチ",
+		"singer": "MISIA",
+		"YTLink": "https://www.youtube.com/watch?v=7lT4m5ZEPx4"
+	},
+	{
+		"date": "2023/11/23",
+		"track": 26,
+		"song": "ORION",
+		"singer": "中島美嘉",
+		"YTLink": "https://www.youtube.com/watch?v=7lT4m5ZEPx4"
+	},
+	{
+		"date": "2023/11/23",
+		"track": 27,
+		"song": "ねぇ",
+		"singer": "藤田麻衣子",
+		"YTLink": "https://www.youtube.com/watch?v=7lT4m5ZEPx4"
+	},
+	{
+		"date": "2023/11/23",
+		"track": 28,
+		"song": "アナタノオト",
+		"singer": "ランカ・リー(中島愛)",
+		"YTLink": "https://www.youtube.com/watch?v=7lT4m5ZEPx4"
+	},
+	{
+		"date": "2023/11/23",
+		"track": 29,
+		"song": "God Bless You",
+		"singer": "ワルキューレ",
+		"YTLink": "https://www.youtube.com/watch?v=7lT4m5ZEPx4"
+	},
+	{
+		"date": "2023/11/23",
+		"track": 30,
+		"song": "to you.",
+		"singer": "苺咲べりぃ",
+		"YTLink": "https://www.youtube.com/watch?v=7lT4m5ZEPx4"
+	},
+	{
+		"date": "2023/11/22",
+		"track": 1,
+		"song": "Crosswalk",
+		"singer": "鈴木みのり",
+		"YTLink": "https://www.youtube.com/watch?v=Tkdomvmg3z4"
+	},
+	{
+		"date": "2023/11/22",
+		"track": 2,
+		"song": "Wishing",
+		"singer": "レム (水瀬いのり)",
+		"YTLink": "https://www.youtube.com/watch?v=Tkdomvmg3z4"
+	},
+	{
+		"date": "2023/11/22",
+		"track": 3,
+		"song": "ビードロ模様",
+		"singer": "やなぎなぎ",
+		"YTLink": "https://www.youtube.com/watch?v=Tkdomvmg3z4"
+	},
+	{
+		"date": "2023/11/22",
+		"track": 4,
+		"song": "ライオン",
+		"singer": "シェリル・ノーム(May'n),ランカ・リー(中島愛)",
+		"YTLink": "https://www.youtube.com/watch?v=Tkdomvmg3z4"
+	},
+	{
+		"date": "2023/11/22",
+		"track": 5,
+		"song": "高鳴る",
+		"singer": "藤田麻衣子",
+		"YTLink": "https://www.youtube.com/watch?v=Tkdomvmg3z4"
+	},
+	{
+		"date": "2023/11/22",
+		"track": 6,
+		"song": "地球最後の告白を",
+		"singer": "Kemu",
+		"YTLink": "https://www.youtube.com/watch?v=Tkdomvmg3z4"
+	},
+	{
+		"date": "2023/11/22",
+		"track": 7,
+		"song": "津軽海峡・冬景色",
+		"singer": "石川さゆり",
+		"YTLink": "https://www.youtube.com/watch?v=Tkdomvmg3z4"
+	},
+	{
+		"date": "2023/11/22",
+		"track": 8,
+		"song": "未来へ",
+		"singer": "Kiroro",
+		"YTLink": "https://www.youtube.com/watch?v=Tkdomvmg3z4"
+	},
+	{
+		"date": "2023/11/22",
+		"track": 9,
+		"song": "フリージア",
+		"singer": "Uru",
+		"YTLink": "https://www.youtube.com/watch?v=Tkdomvmg3z4"
+	},
+	{
+		"date": "2023/11/22",
+		"track": 10,
+		"song": "プラネタリウム",
+		"singer": "大塚愛",
+		"YTLink": "https://www.youtube.com/watch?v=Tkdomvmg3z4"
+	},
+	{
+		"date": "2023/11/22",
+		"track": 11,
+		"song": "アムリタ",
+		"singer": "牧野由依",
+		"YTLink": "https://www.youtube.com/watch?v=Tkdomvmg3z4"
+	},
+	{
+		"date": "2023/11/22",
+		"track": 12,
+		"song": "GIRAFFE BLUES",
+		"singer": "ワルキューレ",
+		"YTLink": "https://www.youtube.com/watch?v=Tkdomvmg3z4"
+	},
+	{
+		"date": "2023/11/22",
+		"track": 13,
+		"song": "いけないボーダーライン",
+		"singer": "ワルキューレ",
+		"YTLink": "https://www.youtube.com/watch?v=Tkdomvmg3z4"
+	},
+	{
+		"date": "2023/11/22",
+		"track": 14,
+		"song": "愛してる",
+		"singer": "ワルキューレ",
+		"YTLink": "https://www.youtube.com/watch?v=Tkdomvmg3z4"
+	},
+	{
+		"date": "2023/11/22",
+		"track": 15,
+		"song": "星へ伸ばす手",
+		"singer": "苺咲べりぃ",
+		"YTLink": "https://www.youtube.com/watch?v=Tkdomvmg3z4"
+	},
+	{
+		"date": "2023/11/22",
+		"track": 16,
+		"song": "虹",
+		"singer": "菅田将暉",
+		"YTLink": "https://www.youtube.com/watch?v=Tkdomvmg3z4"
+	},
+	{
+		"date": "2023/11/22",
+		"track": 17,
+		"song": "Subtitle",
+		"singer": "Official髭男dism",
+		"YTLink": "https://www.youtube.com/watch?v=Tkdomvmg3z4"
+	},
+	{
+		"date": "2023/11/22",
+		"track": 18,
+		"song": "夜空",
+		"singer": "鈴木みのり",
+		"YTLink": "https://www.youtube.com/watch?v=Tkdomvmg3z4"
+	},
+	{
 		"date": "2023/11/13",
 		"track": 1,
 		"song": "すきっちゅーの！",
@@ -1569,7 +1905,7 @@
 		"date": "2023/10/11",
 		"track": 14,
 		"song": "アナタノオト",
-		"singer": "ランカ・リー/中島愛",
+		"singer": "ランカ・リー(中島愛)",
 		"YTLink": "https://www.youtube.com/watch?v=DiOora8k61I"
 	},
 	{
@@ -2629,7 +2965,7 @@
 		"date": "2023/10/03",
 		"track": "5",
 		"song": "ライオン",
-		"singer": "シェリル・ノーム/May'n & ランカ・リー/中島愛",
+		"singer": "シェリル・ノーム(May'n),ランカ・リー(中島愛)",
 		"note": "",
 		"YTLink": "https://www.youtube.com/watch?v=nFy7qf7xaoc"
 	},
@@ -3045,7 +3381,7 @@
 		"date": "2023/09/26",
 		"track": "7",
 		"song": "ライオン",
-		"singer": "シェリル・ノーム/May'n & ランカ・リー/中島愛",
+		"singer": "シェリル・ノーム(May'n),ランカ・リー(中島愛)",
 		"note": "",
 		"YTLink": "https://www.youtube.com/watch?v=XknT3yUTVaM"
 	},
@@ -3853,7 +4189,7 @@
 		"date": "2023/09/13",
 		"track": "8",
 		"song": "ホシキラ",
-		"singer": "ランカ・リー/中島愛",
+		"singer": "ランカ・リー(中島愛)",
 		"note": "",
 		"YTLink": "https://www.youtube.com/watch?v=gJI_9nZ1bV4"
 	},
@@ -4165,7 +4501,7 @@
 		"date": "2023/09/04",
 		"track": "6",
 		"song": "ライオン",
-		"singer": "シェリル・ノーム/May'n & ランカ・リー/中島愛",
+		"singer": "シェリル・ノーム(May'n),ランカ・リー(中島愛)",
 		"note": "",
 		"YTLink": "https://www.youtube.com/watch?v=Zg2Y5Rcnqa8"
 	},
@@ -4333,7 +4669,7 @@
 		"date": "2023/09/01",
 		"track": "6",
 		"song": "ライオン",
-		"singer": "シェリル・ノーム/May'n & ランカ・リー/中島愛",
+		"singer": "シェリル・ノーム(May'n),ランカ・リー(中島愛)",
 		"note": "",
 		"YTLink": "https://www.youtube.com/watch?v=jkQ-TxWPBMQ"
 	},
@@ -6397,7 +6733,7 @@
 		"date": "2023/08/10",
 		"track": "26",
 		"song": "アナタノオト",
-		"singer": "ランカ・リー/中島愛",
+		"singer": "ランカ・リー(中島愛)",
 		"note": "",
 		"YTLink": "https://www.youtube.com/watch?v=joEltch0OPc"
 	},
@@ -7933,7 +8269,7 @@
 		"date": "2023/07/20",
 		"track": "8",
 		"song": "アナタノオト",
-		"singer": "ランカ・リー/中島愛",
+		"singer": "ランカ・リー(中島愛)",
 		"note": "",
 		"YTLink": "https://www.youtube.com/watch?v=b38bo0wapGo"
 	},
@@ -9669,7 +10005,7 @@
 		"date": "2023/06/24",
 		"track": "79",
 		"song": "アナタノオト",
-		"singer": "ランカ・リー/中島愛",
+		"singer": "ランカ・リー(中島愛)",
 		"note": "",
 		"YTLink": "https://www.youtube.com/watch?v=ZyQZagrDY_Q"
 	},
@@ -9677,7 +10013,7 @@
 		"date": "2023/06/24",
 		"track": "80",
 		"song": "ライオン",
-		"singer": "シェリル・ノーム/May'n & ランカ・リー/中島愛",
+		"singer": "シェリル・ノーム(May'n),ランカ・リー(中島愛)",
 		"note": "",
 		"YTLink": "https://www.youtube.com/watch?v=ZyQZagrDY_Q"
 	},
@@ -10141,7 +10477,7 @@
 		"date": "2023/06/22",
 		"track": "17",
 		"song": "ホシキラ",
-		"singer": "ランカ・リー/中島愛",
+		"singer": "ランカ・リー(中島愛)",
 		"note": "",
 		"YTLink": "https://www.youtube.com/watch?v=n2wN4ZrzX4c"
 	},
@@ -10189,7 +10525,7 @@
 		"date": "2023/06/22",
 		"track": "23",
 		"song": "Wishing",
-		"singer": "水瀬いのり",
+		"singer": "レム (水瀬いのり)",
 		"note": "",
 		"YTLink": "https://www.youtube.com/watch?v=n2wN4ZrzX4c"
 	},
