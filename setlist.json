@@ -1,5 +1,112 @@
 [
 	{
+		"date": "2023/11/25",
+		"track": 1,
+		"song": "勇者",
+		"singer": "YOASOBI",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=S6pt90eDpdk"
+	},
+	{
+		"date": "2023/11/25",
+		"track": 2,
+		"song": "ゲレンデがとけるほど恋したい",
+		"singer": "広瀬香美",
+		"YTLink": "https://www.youtube.com/watch?v=S6pt90eDpdk"
+	},
+	{
+		"date": "2023/11/25",
+		"track": 3,
+		"song": "瞳をとじて",
+		"singer": "平井堅",
+		"YTLink": "https://www.youtube.com/watch?v=S6pt90eDpdk"
+	},
+	{
+		"date": "2023/11/25",
+		"track": 4,
+		"song": "僕らの戦場",
+		"singer": "ワルキューレ",
+		"YTLink": "https://www.youtube.com/watch?v=S6pt90eDpdk"
+	},
+	{
+		"date": "2023/11/25",
+		"track": 5,
+		"song": "奈落の花",
+		"singer": "島みやえい子",
+		"YTLink": "https://www.youtube.com/watch?v=S6pt90eDpdk"
+	},
+	{
+		"date": "2023/11/25",
+		"track": 6,
+		"song": "Missing Promise",
+		"singer": "鈴木このみ",
+		"YTLink": "https://www.youtube.com/watch?v=S6pt90eDpdk"
+	},
+	{
+		"date": "2023/11/25",
+		"track": 7,
+		"song": "Wherever",
+		"singer": "鈴木このみ",
+		"note": "初回",
+		"YTLink": "https://www.youtube.com/watch?v=S6pt90eDpdk"
+	},
+	{
+		"date": "2023/11/25",
+		"track": 8,
+		"song": "CLEAR",
+		"singer": "坂本真綾",
+		"YTLink": "https://www.youtube.com/watch?v=S6pt90eDpdk"
+	},
+	{
+		"date": "2023/11/25",
+		"track": 9,
+		"song": "Let It Go～ありのままで～",
+		"singer": "松たか子",
+		"YTLink": "https://www.youtube.com/watch?v=S6pt90eDpdk"
+	},
+	{
+		"date": "2023/11/25",
+		"track": 10,
+		"song": "生まれてはじめて",
+		"singer": "神田沙也加,松たか子",
+		"YTLink": "https://www.youtube.com/watch?v=S6pt90eDpdk"
+	},
+	{
+		"date": "2023/11/25",
+		"track": 11,
+		"song": "Snow halation",
+		"singer": "μ's",
+		"YTLink": "https://www.youtube.com/watch?v=S6pt90eDpdk"
+	},
+	{
+		"date": "2023/11/25",
+		"track": 12,
+		"song": "冬がくれた予感",
+		"singer": "BiBi",
+		"YTLink": "https://www.youtube.com/watch?v=S6pt90eDpdk"
+	},
+	{
+		"date": "2023/11/25",
+		"track": 13,
+		"song": "SHOOT!",
+		"singer": "RO-KYU-BU!",
+		"YTLink": "https://www.youtube.com/watch?v=S6pt90eDpdk"
+	},
+	{
+		"date": "2023/11/25",
+		"track": 14,
+		"song": "歩いていこう",
+		"singer": "いきものがかり",
+		"YTLink": "https://www.youtube.com/watch?v=S6pt90eDpdk"
+	},
+	{
+		"date": "2023/11/25",
+		"track": 15,
+		"song": "夜空",
+		"singer": "鈴木みのり",
+		"YTLink": "https://www.youtube.com/watch?v=S6pt90eDpdk"
+	},
+	{
 		"date": "2023/11/23",
 		"track": 1,
 		"song": "金魚花火",
@@ -334,6 +441,147 @@
 		"song": "夜空",
 		"singer": "鈴木みのり",
 		"YTLink": "https://www.youtube.com/watch?v=Tkdomvmg3z4"
+	},
+		{
+		"date": "2023/11/20",
+		"track": 1,
+		"song": "RUN! RUN! RUN!",
+		"singer": "大槻真希",
+		"YTLink": "https://www.youtube.com/watch?v=S6pt90eDpdkhttps://www.youtube.com/watch?v=blbbHiCbS2g"
+	},
+	{
+		"date": "2023/11/20",
+		"track": 2,
+		"song": "ウィーアー!",
+		"singer": "きただにひろし",
+		"YTLink": "https://www.youtube.com/watch?v=S6pt90eDpdkhttps://www.youtube.com/watch?v=blbbHiCbS2g"
+	},
+	{
+		"date": "2023/11/20",
+		"track": 3,
+		"song": "恋(星野源)",
+		"singer": "星野源",
+		"YTLink": "https://www.youtube.com/watch?v=S6pt90eDpdkhttps://www.youtube.com/watch?v=blbbHiCbS2g"
+	},
+	{
+		"date": "2023/11/20",
+		"track": 4,
+		"song": "さくらんぼ",
+		"singer": "大塚愛",
+		"YTLink": "https://www.youtube.com/watch?v=S6pt90eDpdkhttps://www.youtube.com/watch?v=blbbHiCbS2g"
+	},
+	{
+		"date": "2023/11/20",
+		"track": 5,
+		"song": "秘密の扉から会いにきて",
+		"singer": "田村ゆかり",
+		"YTLink": "https://www.youtube.com/watch?v=S6pt90eDpdkhttps://www.youtube.com/watch?v=blbbHiCbS2g"
+	},
+	{
+		"date": "2023/11/20",
+		"track": 6,
+		"song": "U&I",
+		"singer": "放課後ティータイム",
+		"YTLink": "https://www.youtube.com/watch?v=S6pt90eDpdkhttps://www.youtube.com/watch?v=blbbHiCbS2g"
+	},
+	{
+		"date": "2023/11/20",
+		"track": 7,
+		"song": "オレンジ",
+		"singer": "流田Project(釘宮理恵,堀江由衣,喜多村英梨)",
+		"YTLink": "https://www.youtube.com/watch?v=S6pt90eDpdkhttps://www.youtube.com/watch?v=blbbHiCbS2g"
+	},
+	{
+		"date": "2023/11/20",
+		"track": 8,
+		"song": "高鳴る",
+		"singer": "藤田麻衣子",
+		"YTLink": "https://www.youtube.com/watch?v=S6pt90eDpdkhttps://www.youtube.com/watch?v=blbbHiCbS2g"
+	},
+	{
+		"date": "2023/11/20",
+		"track": 9,
+		"song": "水平線",
+		"singer": "back number",
+		"YTLink": "https://www.youtube.com/watch?v=S6pt90eDpdkhttps://www.youtube.com/watch?v=blbbHiCbS2g"
+	},
+	{
+		"date": "2023/11/20",
+		"track": 10,
+		"song": "キラキラ",
+		"singer": "aiko",
+		"YTLink": "https://www.youtube.com/watch?v=S6pt90eDpdkhttps://www.youtube.com/watch?v=blbbHiCbS2g"
+	},
+	{
+		"date": "2023/11/20",
+		"track": 11,
+		"song": "Mela",
+		"singer": "緑黄色社会",
+		"YTLink": "https://www.youtube.com/watch?v=S6pt90eDpdkhttps://www.youtube.com/watch?v=blbbHiCbS2g"
+	},
+	{
+		"date": "2023/11/20",
+		"track": 12,
+		"song": "ブルーバード",
+		"singer": "いきものがかり",
+		"YTLink": "https://www.youtube.com/watch?v=S6pt90eDpdkhttps://www.youtube.com/watch?v=blbbHiCbS2g"
+	},
+	{
+		"date": "2023/11/20",
+		"track": 13,
+		"song": "気まぐれロマンティック",
+		"singer": "いきものがかり",
+		"YTLink": "https://www.youtube.com/watch?v=S6pt90eDpdkhttps://www.youtube.com/watch?v=blbbHiCbS2g"
+	},
+	{
+		"date": "2023/11/20",
+		"track": 14,
+		"song": "創聖のアクエリオン",
+		"singer": "AKINO",
+		"YTLink": "https://www.youtube.com/watch?v=S6pt90eDpdkhttps://www.youtube.com/watch?v=blbbHiCbS2g"
+	},
+	{
+		"date": "2023/11/20",
+		"track": 15,
+		"song": "変わらないもの",
+		"singer": "奥華子",
+		"YTLink": "https://www.youtube.com/watch?v=S6pt90eDpdkhttps://www.youtube.com/watch?v=blbbHiCbS2g"
+	},
+	{
+		"date": "2023/11/20",
+		"track": 16,
+		"song": "アイドル",
+		"singer": "YOASOBI",
+		"YTLink": "https://www.youtube.com/watch?v=S6pt90eDpdkhttps://www.youtube.com/watch?v=blbbHiCbS2g"
+	},
+	{
+		"date": "2023/11/20",
+		"track": 17,
+		"song": "勇者",
+		"singer": "YOASOBI",
+		"note": "初回",
+		"YTLink": "https://www.youtube.com/watch?v=S6pt90eDpdkhttps://www.youtube.com/watch?v=blbbHiCbS2g"
+	},
+	{
+		"date": "2023/11/20",
+		"track": 18,
+		"song": "天使にふれたよ！",
+		"singer": "放課後ティータイム",
+		"YTLink": "https://www.youtube.com/watch?v=S6pt90eDpdkhttps://www.youtube.com/watch?v=blbbHiCbS2g"
+	},
+	{
+		"date": "2023/11/20",
+		"track": 19,
+		"song": "ロマンスの神様",
+		"singer": "広瀬香美",
+		"YTLink": "https://www.youtube.com/watch?v=S6pt90eDpdkhttps://www.youtube.com/watch?v=blbbHiCbS2g"
+	},
+	{
+		"date": "2023/11/20",
+		"track": 20,
+		"song": "春、青く澄みわたり",
+		"singer": "苺咲べりぃ",
+		"YTLink": "https://www.youtube.com/watch?v=S6pt90eDpdkhttps://www.youtube.com/watch?v=blbbHiCbS2g"
 	},
 	{
 		"date": "2023/11/13",
@@ -19596,7 +19844,7 @@
 	{
 		"date": "2023/02/15",
 		"track": "7",
-		"song": "ウィーアー！",
+		"song": "ウィーアー!",
 		"singer": "",
 		"note": "",
 		"YTLink": "https://www.youtube.com/watch?v=bjARObKa00M"
@@ -32844,7 +33092,7 @@
 	{
 		"date": "2022/08/29",
 		"track": "31",
-		"song": "ウィーアー！",
+		"song": "ウィーアー!",
 		"singer": "",
 		"note": "耐久",
 		"YTLink": "https://www.youtube.com/watch?v=nQUfpJIhKUw"
@@ -38420,7 +38668,7 @@
 	{
 		"date": "2022/06/18",
 		"track": "10",
-		"song": "ウィーアー！",
+		"song": "ウィーアー!",
 		"singer": "",
 		"note": "毎日歌枠/年代順アニソン",
 		"YTLink": "https://www.youtube.com/watch?v=nZJCsfmvCkI"
@@ -41092,7 +41340,7 @@
 	{
 		"date": "2022/05/16",
 		"track": "15",
-		"song": "ウィーアー！",
+		"song": "ウィーアー!",
 		"singer": "",
 		"note": "",
 		"YTLink": "https://www.youtube.com/watch?v=CapPuAjbBWU"
@@ -48740,7 +48988,7 @@
 	{
 		"date": "2021/11/21",
 		"track": "17",
-		"song": "ウィーアー！",
+		"song": "ウィーアー!",
 		"singer": "",
 		"note": "",
 		"YTLink": "https://www.youtube.com/watch?v=Jyqn3kMffg4"
@@ -51108,7 +51356,7 @@
 	{
 		"date": "2021/10/09",
 		"track": "3",
-		"song": "ウィーアー！",
+		"song": "ウィーアー!",
 		"singer": "",
 		"note": "",
 		"YTLink": "https://www.youtube.com/watch?v=ZOzLqvfyFtg"
@@ -52020,7 +52268,7 @@
 	{
 		"date": "2021/09/18",
 		"track": "3",
-		"song": "ウィーアー！",
+		"song": "ウィーアー!",
 		"singer": "",
 		"note": "初回",
 		"YTLink": "https://www.youtube.com/watch?v=9gBYc-Sj-3o"
