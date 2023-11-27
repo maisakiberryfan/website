@@ -1,5 +1,146 @@
 [
 	{
+		"date": "2023/11/27",
+		"track": 1,
+		"song": "勇者",
+		"singer": "YOASOBI",
+		"YTLink": "https://www.youtube.com/watch?v=AqlZkpQRSqs"
+	},
+	{
+		"date": "2023/11/27",
+		"track": 2,
+		"song": "すきっちゅーの！",
+		"singer": "HoneyWorks",
+		"YTLink": "https://www.youtube.com/watch?v=AqlZkpQRSqs"
+	},
+	{
+		"date": "2023/11/27",
+		"track": 3,
+		"song": "輝夜の城で踊りたい",
+		"singer": "μ's",
+		"YTLink": "https://www.youtube.com/watch?v=AqlZkpQRSqs"
+	},
+	{
+		"date": "2023/11/27",
+		"track": 4,
+		"song": "僕たちはひとつの光",
+		"singer": "μ's",
+		"YTLink": "https://www.youtube.com/watch?v=AqlZkpQRSqs"
+	},
+	{
+		"date": "2023/11/27",
+		"track": 5,
+		"song": "クリスマスソング",
+		"singer": "back number",
+		"YTLink": "https://www.youtube.com/watch?v=AqlZkpQRSqs"
+	},
+	{
+		"date": "2023/11/27",
+		"track": 6,
+		"song": "Laughter",
+		"singer": "Official髭男dism",
+		"YTLink": "https://www.youtube.com/watch?v=AqlZkpQRSqs"
+	},
+	{
+		"date": "2023/11/27",
+		"track": 7,
+		"song": "INNOCENCE",
+		"singer": "藍井エイル",
+		"YTLink": "https://www.youtube.com/watch?v=AqlZkpQRSqs"
+	},
+	{
+		"date": "2023/11/27",
+		"track": 8,
+		"song": "ALIVE～祈りの唄～",
+		"singer": "ワルキューレ",
+		"YTLink": "https://www.youtube.com/watch?v=AqlZkpQRSqs"
+	},
+	{
+		"date": "2023/11/27",
+		"track": 9,
+		"song": "明け星",
+		"singer": "LiSA",
+		"YTLink": "https://www.youtube.com/watch?v=AqlZkpQRSqs"
+	},
+	{
+		"date": "2023/11/27",
+		"track": 10,
+		"song": "God knows…",
+		"singer": "涼宮ハルヒ(平野綾)",
+		"YTLink": "https://www.youtube.com/watch?v=AqlZkpQRSqs"
+	},
+	{
+		"date": "2023/11/27",
+		"track": 11,
+		"song": "ハッピーエンド",
+		"singer": "back number",
+		"YTLink": "https://www.youtube.com/watch?v=AqlZkpQRSqs"
+	},
+	{
+		"date": "2023/11/27",
+		"track": 12,
+		"song": "Subtitle",
+		"singer": "Official髭男dism",
+		"YTLink": "https://www.youtube.com/watch?v=AqlZkpQRSqs"
+	},
+	{
+		"date": "2023/11/27",
+		"track": 13,
+		"song": "Pretender",
+		"singer": "Official髭男dism",
+		"YTLink": "https://www.youtube.com/watch?v=AqlZkpQRSqs"
+	},
+	{
+		"date": "2023/11/27",
+		"track": 14,
+		"song": "ボクノート",
+		"singer": "スキマスイッチ",
+		"YTLink": "https://www.youtube.com/watch?v=AqlZkpQRSqs"
+	},
+	{
+		"date": "2023/11/27",
+		"track": 15,
+		"song": "恋(星野源)",
+		"singer": "星野源",
+		"YTLink": "https://www.youtube.com/watch?v=AqlZkpQRSqs"
+	},
+	{
+		"date": "2023/11/27",
+		"track": 16,
+		"song": "First Love",
+		"singer": "宇多田ヒカル",
+		"YTLink": "https://www.youtube.com/watch?v=AqlZkpQRSqs"
+	},
+	{
+		"date": "2023/11/27",
+		"track": 17,
+		"song": "メルト",
+		"singer": "ryo",
+		"YTLink": "https://www.youtube.com/watch?v=AqlZkpQRSqs"
+	},
+	{
+		"date": "2023/11/27",
+		"track": 18,
+		"song": "心得",
+		"singer": "Uru",
+		"YTLink": "https://www.youtube.com/watch?v=AqlZkpQRSqs"
+	},
+	{
+		"date": "2023/11/27",
+		"track": 19,
+		"song": "エフェメラをあつめて",
+		"singer": "鈴木みのり",
+		"YTLink": "https://www.youtube.com/watch?v=AqlZkpQRSqs"
+	},
+	{
+		"date": "2023/11/27",
+		"track": 20,
+		"song": "I Love. you love.",
+		"singer": "苺咲べりぃ",
+		"note": "オリソン/初回",
+		"YTLink": "https://www.youtube.com/watch?v=AqlZkpQRSqs"
+	},
+	{
 		"date": "2023/11/25",
 		"track": 1,
 		"song": "勇者",
@@ -442,7 +583,7 @@
 		"singer": "鈴木みのり",
 		"YTLink": "https://www.youtube.com/watch?v=Tkdomvmg3z4"
 	},
-		{
+	{
 		"date": "2023/11/20",
 		"track": 1,
 		"song": "RUN! RUN! RUN!",
