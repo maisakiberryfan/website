@@ -1,5 +1,110 @@
 [
 	{
+		"date": "2023/11/28",
+		"track": 1,
+		"song": "勇者",
+		"singer": "YOASOBI",
+		"YTLink": "https://www.youtube.com/watch?v=paieRVNpSUE"
+	},
+	{
+		"date": "2023/11/28",
+		"track": 2,
+		"song": "おじゃま虫Ⅱ",
+		"singer": "DECO*27",
+		"YTLink": "https://www.youtube.com/watch?v=paieRVNpSUE"
+	},
+	{
+		"date": "2023/11/28",
+		"track": 3,
+		"song": "アニマル",
+		"singer": "DECO*27",
+		"YTLink": "https://www.youtube.com/watch?v=paieRVNpSUE"
+	},
+	{
+		"date": "2023/11/28",
+		"track": 4,
+		"song": "ときめきブローカー",
+		"singer": "P丸様。",
+		"YTLink": "https://www.youtube.com/watch?v=paieRVNpSUE"
+	},
+	{
+		"date": "2023/11/28",
+		"track": 5,
+		"song": "シル・ヴ・プレジデント",
+		"singer": "P丸様。",
+		"YTLink": "https://www.youtube.com/watch?v=paieRVNpSUE"
+	},
+	{
+		"date": "2023/11/28",
+		"track": 6,
+		"song": "可愛くてごめん",
+		"singer": "HoneyWorks",
+		"YTLink": "https://www.youtube.com/watch?v=paieRVNpSUE"
+	},
+	{
+		"date": "2023/11/28",
+		"track": 7,
+		"song": "メルト 10th ANNIVERSARY MIX",
+		"singer": "ryo (supercell) × やなぎなぎ",
+		"YTLink": "https://www.youtube.com/watch?v=paieRVNpSUE"
+	},
+	{
+		"date": "2023/11/28",
+		"track": 8,
+		"song": "シリョクケンサ",
+		"singer": "40mP",
+		"YTLink": "https://www.youtube.com/watch?v=paieRVNpSUE"
+	},
+	{
+		"date": "2023/11/28",
+		"track": 9,
+		"song": "好き!雪!本気マジック",
+		"singer": "Mitchie M",
+		"YTLink": "https://www.youtube.com/watch?v=paieRVNpSUE"
+	},
+	{
+		"date": "2023/11/28",
+		"track": 10,
+		"song": "大正浪漫",
+		"singer": "YOASOBI",
+		"YTLink": "https://www.youtube.com/watch?v=paieRVNpSUE"
+	},
+	{
+		"date": "2023/11/28",
+		"track": 11,
+		"song": "向日葵",
+		"singer": "Ado",
+		"YTLink": "https://www.youtube.com/watch?v=paieRVNpSUE"
+	},
+	{
+		"date": "2023/11/28",
+		"track": 12,
+		"song": "桜ノ雨",
+		"singer": "halyosy",
+		"YTLink": "https://www.youtube.com/watch?v=paieRVNpSUE"
+	},
+	{
+		"date": "2023/11/28",
+		"track": 13,
+		"song": "Happy Halloween",
+		"singer": "Junky",
+		"YTLink": "https://www.youtube.com/watch?v=paieRVNpSUE"
+	},
+	{
+		"date": "2023/11/28",
+		"track": 14,
+		"song": "携帯恋話",
+		"singer": "まふまふ",
+		"YTLink": "https://www.youtube.com/watch?v=paieRVNpSUE"
+	},
+	{
+		"date": "2023/11/28",
+		"track": 15,
+		"song": "ルートスフィア",
+		"singer": "Last Note.",
+		"YTLink": "https://www.youtube.com/watch?v=paieRVNpSUE"
+	},
+	{
 		"date": "2023/11/27",
 		"track": 1,
 		"song": "勇者",
@@ -17369,8 +17474,8 @@
 	{
 		"date": "2023/03/27",
 		"track": "10",
-		"song": "好き！雪！本気マジック",
-		"singer": "",
+		"song": "好き!雪!本気マジック",
+		"singer": "Mitchie M",
 		"note": "ボカロ",
 		"YTLink": "https://www.youtube.com/watch?v=qWShn_n79e8"
 	},
@@ -48113,8 +48218,8 @@
 	{
 		"date": "2021/12/14",
 		"track": "7",
-		"song": "好き！雪！本気マジック",
-		"singer": "",
+		"song": "好き!雪!本気マジック",
+		"singer": "Mitchie M",
 		"note": "ボカロ/初回",
 		"YTLink": "https://www.youtube.com/watch?v=04kftFP5x9E"
 	},
