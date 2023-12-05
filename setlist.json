@@ -1,5 +1,285 @@
 [
 	{
+		"date": "2023/12/04",
+		"track": 1,
+		"song": "勇者",
+		"singer": "YOASOBI",
+		"YTLink": "https://www.youtube.com/watch?v=3brFdKH_rlo"
+	},
+	{
+		"date": "2023/12/04",
+		"track": 2,
+		"song": "雪の華",
+		"singer": "中島美嘉",
+		"YTLink": "https://www.youtube.com/watch?v=3brFdKH_rlo"
+	},
+	{
+		"date": "2023/12/04",
+		"track": 3,
+		"song": "ロマンスの神様",
+		"singer": "広瀬香美",
+		"YTLink": "https://www.youtube.com/watch?v=3brFdKH_rlo"
+	},
+	{
+		"date": "2023/12/04",
+		"track": 4,
+		"song": "アイノカタチ",
+		"singer": "MISIA",
+		"YTLink": "https://www.youtube.com/watch?v=3brFdKH_rlo"
+	},
+	{
+		"date": "2023/12/04",
+		"track": 5,
+		"song": "冬がはじまるよ",
+		"singer": "槇原敬之",
+		"YTLink": "https://www.youtube.com/watch?v=3brFdKH_rlo"
+	},
+	{
+		"date": "2023/12/04",
+		"track": 6,
+		"song": "世界は恋に落ちている",
+		"singer": "CHiCO",
+		"YTLink": "https://www.youtube.com/watch?v=3brFdKH_rlo"
+	},
+	{
+		"date": "2023/12/04",
+		"track": 7,
+		"song": "からくりピエロ",
+		"singer": "40mP",
+		"YTLink": "https://www.youtube.com/watch?v=3brFdKH_rlo"
+	},
+	{
+		"date": "2023/12/04",
+		"track": 8,
+		"song": "ORION",
+		"singer": "中島美嘉",
+		"YTLink": "https://www.youtube.com/watch?v=3brFdKH_rlo"
+	},
+	{
+		"date": "2023/12/04",
+		"track": 9,
+		"song": "メリクリ",
+		"singer": "BoA",
+		"YTLink": "https://www.youtube.com/watch?v=3brFdKH_rlo"
+	},
+	{
+		"date": "2023/12/04",
+		"track": 10,
+		"song": "First Love",
+		"singer": "宇多田ヒカル",
+		"YTLink": "https://www.youtube.com/watch?v=3brFdKH_rlo"
+	},
+	{
+		"date": "2023/12/04",
+		"track": 11,
+		"song": "promise",
+		"singer": "広瀬香美",
+		"YTLink": "https://www.youtube.com/watch?v=3brFdKH_rlo"
+	},
+	{
+		"date": "2023/12/04",
+		"track": 12,
+		"song": "粉雪",
+		"singer": "レミオロメン",
+		"YTLink": "https://www.youtube.com/watch?v=3brFdKH_rlo"
+	},
+	{
+		"date": "2023/12/04",
+		"track": 13,
+		"song": "恋愛写真",
+		"singer": "大塚愛",
+		"YTLink": "https://www.youtube.com/watch?v=3brFdKH_rlo"
+	},
+	{
+		"date": "2023/12/04",
+		"track": 14,
+		"song": "ポケット",
+		"singer": "大塚愛",
+		"YTLink": "https://www.youtube.com/watch?v=3brFdKH_rlo"
+	},
+	{
+		"date": "2023/12/04",
+		"track": 15,
+		"song": "クムリウタ",
+		"singer": "大塚愛",
+		"YTLink": "https://www.youtube.com/watch?v=3brFdKH_rlo"
+	},
+	{
+		"date": "2023/12/04",
+		"track": 16,
+		"song": "rain stops, good-bye",
+		"singer": "におP",
+		"YTLink": "https://www.youtube.com/watch?v=3brFdKH_rlo"
+	},
+	{
+		"date": "2023/12/04",
+		"track": 17,
+		"song": "心做し",
+		"singer": "蝶々P",
+		"YTLink": "https://www.youtube.com/watch?v=3brFdKH_rlo"
+	},
+	{
+		"date": "2023/12/04",
+		"track": 18,
+		"song": "クリスマスソング",
+		"singer": "back number",
+		"YTLink": "https://www.youtube.com/watch?v=3brFdKH_rlo"
+	},
+	{
+		"date": "2023/12/04",
+		"track": 19,
+		"song": "心が、青い。",
+		"singer": "鈴木みのり",
+		"YTLink": "https://www.youtube.com/watch?v=3brFdKH_rlo"
+	},
+	{
+		"date": "2023/12/04",
+		"track": 20,
+		"song": "Complete x Memorial",
+		"singer": "苺咲べりぃ",
+		"YTLink": "https://www.youtube.com/watch?v=3brFdKH_rlo"
+	},
+	{
+		"date": "2023/11/29",
+		"track": 1,
+		"song": "勇者",
+		"singer": "YOASOBI",
+		"YTLink": "https://www.youtube.com/watch?v=cKOFx2FeMXA"
+	},
+	{
+		"date": "2023/11/29",
+		"track": 2,
+		"song": "ヒッチコック",
+		"singer": "ヨルシカ",
+		"YTLink": "https://www.youtube.com/watch?v=cKOFx2FeMXA"
+	},
+	{
+		"date": "2023/11/29",
+		"track": 3,
+		"song": "恋愛裁判",
+		"singer": "40mP",
+		"YTLink": "https://www.youtube.com/watch?v=cKOFx2FeMXA"
+	},
+	{
+		"date": "2023/11/29",
+		"track": 4,
+		"song": "unravel",
+		"singer": "TK from 凛として時雨",
+		"YTLink": "https://www.youtube.com/watch?v=cKOFx2FeMXA"
+	},
+	{
+		"date": "2023/11/29",
+		"track": 5,
+		"song": "炎",
+		"singer": "LiSA",
+		"YTLink": "https://www.youtube.com/watch?v=cKOFx2FeMXA"
+	},
+	{
+		"date": "2023/11/29",
+		"track": 6,
+		"song": "Mela!",
+		"singer": "緑黄色社会",
+		"YTLink": "https://www.youtube.com/watch?v=cKOFx2FeMXA"
+	},
+	{
+		"date": "2023/11/29",
+		"track": 7,
+		"song": "渡月橋 〜君 想ふ〜",
+		"singer": "倉木麻衣",
+		"YTLink": "https://www.youtube.com/watch?v=cKOFx2FeMXA"
+	},
+	{
+		"date": "2023/11/29",
+		"track": 8,
+		"song": "マリーゴールド",
+		"singer": "あいみょん",
+		"YTLink": "https://www.youtube.com/watch?v=cKOFx2FeMXA"
+	},
+	{
+		"date": "2023/11/29",
+		"track": 9,
+		"song": "RUN! RUN! RUN!",
+		"singer": "大槻真希",
+		"YTLink": "https://www.youtube.com/watch?v=cKOFx2FeMXA"
+	},
+	{
+		"date": "2023/11/29",
+		"track": 10,
+		"song": "Dream × Dream",
+		"singer": "愛内里菜",
+		"YTLink": "https://www.youtube.com/watch?v=cKOFx2FeMXA"
+	},
+	{
+		"date": "2023/11/29",
+		"track": 11,
+		"song": "Secret of my heart",
+		"singer": "倉木麻衣",
+		"YTLink": "https://www.youtube.com/watch?v=cKOFx2FeMXA"
+	},
+	{
+		"date": "2023/11/29",
+		"track": 12,
+		"song": "Winter Bells",
+		"singer": "倉木麻衣",
+		"YTLink": "https://www.youtube.com/watch?v=cKOFx2FeMXA"
+	},
+	{
+		"date": "2023/11/29",
+		"track": 13,
+		"song": "シルシ",
+		"singer": "LiSA",
+		"YTLink": "https://www.youtube.com/watch?v=cKOFx2FeMXA"
+	},
+	{
+		"date": "2023/11/29",
+		"track": 14,
+		"song": "楔",
+		"singer": "奥華子",
+		"YTLink": "https://www.youtube.com/watch?v=cKOFx2FeMXA"
+	},
+	{
+		"date": "2023/11/29",
+		"track": 15,
+		"song": "紅一葉",
+		"singer": "黒うさP",
+		"YTLink": "https://www.youtube.com/watch?v=cKOFx2FeMXA"
+	},
+	{
+		"date": "2023/11/29",
+		"track": 16,
+		"song": "カラフル",
+		"singer": "ClariS",
+		"YTLink": "https://www.youtube.com/watch?v=cKOFx2FeMXA"
+	},
+	{
+		"date": "2023/11/29",
+		"track": 17,
+		"song": "クリスマスソング",
+		"singer": "back number",
+		"YTLink": "https://www.youtube.com/watch?v=cKOFx2FeMXA"
+	},
+	{
+		"date": "2023/11/29",
+		"track": 18,
+		"song": "別の人の彼女になったよ",
+		"singer": "Wacci",
+		"YTLink": "https://www.youtube.com/watch?v=cKOFx2FeMXA"
+	},
+	{
+		"date": "2023/11/29",
+		"track": 19,
+		"song": "それを愛と呼ぶなら",
+		"singer": "Uru",
+		"YTLink": "https://www.youtube.com/watch?v=cKOFx2FeMXA"
+	},
+	{
+		"date": "2023/11/29",
+		"track": 20,
+		"song": "あわてんぼうのサンタクロース",
+		"singer": "坂田おさむ,神崎ゆう子",
+		"YTLink": "https://www.youtube.com/watch?v=cKOFx2FeMXA"
+	},
+	{
 		"date": "2023/11/28",
 		"track": 1,
 		"song": "勇者",
@@ -761,7 +1041,7 @@
 	{
 		"date": "2023/11/20",
 		"track": 11,
-		"song": "Mela",
+		"song": "Mela!",
 		"singer": "緑黄色社会",
 		"YTLink": "https://www.youtube.com/watch?v=S6pt90eDpdkhttps://www.youtube.com/watch?v=blbbHiCbS2g"
 	},
@@ -4970,7 +5250,7 @@
 	{
 		"date": "2023/09/04",
 		"track": "3",
-		"song": "Promise",
+		"song": "promise",
 		"singer": "広瀬香美",
 		"note": "",
 		"YTLink": "https://www.youtube.com/watch?v=Zg2Y5Rcnqa8"
@@ -5954,7 +6234,7 @@
 	{
 		"date": "2023/08/21",
 		"track": "3",
-		"song": "Promise",
+		"song": "promise",
 		"singer": "広瀬香美",
 		"note": "",
 		"YTLink": "https://www.youtube.com/watch?v=pJQ6lyXMgwI"
@@ -6378,7 +6658,7 @@
 	{
 		"date": "2023/08/17",
 		"track": "16",
-		"song": "Unravel",
+		"song": "unravel",
 		"singer": "TK from 凛として時雨",
 		"note": "",
 		"YTLink": "https://www.youtube.com/watch?v=G-91jzmVyiM"
@@ -16466,7 +16746,7 @@
 	{
 		"date": "2023/04/17",
 		"track": "15",
-		"song": "心が青い。",
+		"song": "心が、青い。",
 		"singer": "",
 		"note": "毎日歌枠/オールジャンル",
 		"YTLink": "https://www.youtube.com/watch?v=j49-Fd88bt8"
@@ -21778,7 +22058,7 @@
 	{
 		"date": "2023/01/28",
 		"track": "19",
-		"song": "心が青い。",
+		"song": "心が、青い。",
 		"singer": "",
 		"note": "",
 		"YTLink": "https://www.youtube.com/watch?v=v1ZTeas_lao"
