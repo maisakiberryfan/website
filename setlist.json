@@ -1,5 +1,321 @@
 [
 	{
+		"date": "2023/12/08",
+		"track": 1,
+		"song": "勇者",
+		"singer": "YOASOBI",
+		"YTLink": "https://www.youtube.com/watch?v=L-0SOqs47wM"
+	},
+	{
+		"date": "2023/12/08",
+		"track": 2,
+		"song": "亜麻色の髪の乙女",
+		"singer": "島谷ひとみ",
+		"YTLink": "https://www.youtube.com/watch?v=L-0SOqs47wM"
+	},
+	{
+		"date": "2023/12/08",
+		"track": 3,
+		"song": "プロローグ",
+		"singer": "Uru",
+		"YTLink": "https://www.youtube.com/watch?v=L-0SOqs47wM"
+	},
+	{
+		"date": "2023/12/08",
+		"track": 4,
+		"song": "ハルジオン",
+		"singer": "YOASOBI",
+		"YTLink": "https://www.youtube.com/watch?v=L-0SOqs47wM"
+	},
+	{
+		"date": "2023/12/08",
+		"track": 5,
+		"song": "夜に駆ける",
+		"singer": "YOASOBI",
+		"YTLink": "https://www.youtube.com/watch?v=L-0SOqs47wM"
+	},
+	{
+		"date": "2023/12/08",
+		"track": 6,
+		"song": "Mela!",
+		"singer": "緑黄色社会",
+		"YTLink": "https://www.youtube.com/watch?v=L-0SOqs47wM"
+	},
+	{
+		"date": "2023/12/08",
+		"track": 7,
+		"song": "大正浪漫",
+		"singer": "YOASOBI",
+		"YTLink": "https://www.youtube.com/watch?v=L-0SOqs47wM"
+	},
+	{
+		"date": "2023/12/08",
+		"track": 8,
+		"song": "AXIA～ダイスキでダイキライ～",
+		"singer": "ワルキューレ",
+		"YTLink": "https://www.youtube.com/watch?v=L-0SOqs47wM"
+	},
+	{
+		"date": "2023/12/08",
+		"track": 9,
+		"song": "Crosswalk",
+		"singer": "鈴木みのり",
+		"YTLink": "https://www.youtube.com/watch?v=L-0SOqs47wM"
+	},
+	{
+		"date": "2023/12/08",
+		"track": 10,
+		"song": "Pretender",
+		"singer": "Official髭男dism",
+		"YTLink": "https://www.youtube.com/watch?v=L-0SOqs47wM"
+	},
+	{
+		"date": "2023/12/08",
+		"track": 11,
+		"song": "ゲレンデがとけるほど恋したい",
+		"singer": "広瀬香美",
+		"YTLink": "https://www.youtube.com/watch?v=L-0SOqs47wM"
+	},
+	{
+		"date": "2023/12/08",
+		"track": 12,
+		"song": "すきっちゅーの！",
+		"singer": "HoneyWorks",
+		"YTLink": "https://www.youtube.com/watch?v=L-0SOqs47wM"
+	},
+	{
+		"date": "2023/12/08",
+		"track": 13,
+		"song": "HOT LIMIT",
+		"singer": "T.M.Revolution",
+		"YTLink": "https://www.youtube.com/watch?v=L-0SOqs47wM"
+	},
+	{
+		"date": "2023/12/08",
+		"track": 14,
+		"song": "同担☆拒否",
+		"singer": "HoneyWorks",
+		"YTLink": "https://www.youtube.com/watch?v=L-0SOqs47wM"
+	},
+	{
+		"date": "2023/12/08",
+		"track": 15,
+		"song": "ブルーバード",
+		"singer": "いきものがかり",
+		"YTLink": "https://www.youtube.com/watch?v=L-0SOqs47wM"
+	},
+	{
+		"date": "2023/12/08",
+		"track": 16,
+		"song": "ハルノヒ",
+		"singer": "あいみょん",
+		"YTLink": "https://www.youtube.com/watch?v=L-0SOqs47wM"
+	},
+	{
+		"date": "2023/12/08",
+		"track": 17,
+		"song": "チキチキバンバン",
+		"singer": "QUEENDOM",
+		"YTLink": "https://www.youtube.com/watch?v=L-0SOqs47wM"
+	},
+	{
+		"date": "2023/12/08",
+		"track": 18,
+		"song": "気分上々↑↑",
+		"singer": "mihimaru GT",
+		"YTLink": "https://www.youtube.com/watch?v=L-0SOqs47wM"
+	},
+	{
+		"date": "2023/12/08",
+		"track": 19,
+		"song": "カブトムシ",
+		"singer": "aiko",
+		"YTLink": "https://www.youtube.com/watch?v=L-0SOqs47wM"
+	},
+	{
+		"date": "2023/12/08",
+		"track": 20,
+		"song": "エフェメラをあつめて",
+		"singer": "鈴木みのり",
+		"YTLink": "https://www.youtube.com/watch?v=L-0SOqs47wM"
+	},
+	{
+		"date": "2023/12/07",
+		"track": 1,
+		"song": "勇者",
+		"singer": "YOASOBI",
+		"YTLink": "https://www.youtube.com/watch?v=QJg9Xo5FnHA"
+	},
+	{
+		"date": "2023/12/07",
+		"track": 2,
+		"song": "アイドル",
+		"singer": "YOASOBI",
+		"YTLink": "https://www.youtube.com/watch?v=QJg9Xo5FnHA"
+	},
+	{
+		"date": "2023/12/07",
+		"track": 3,
+		"song": "サインはB",
+		"singer": "B小町",
+		"YTLink": "https://www.youtube.com/watch?v=QJg9Xo5FnHA"
+	},
+	{
+		"date": "2023/12/07",
+		"track": 4,
+		"song": "ロミオとシンデレラ",
+		"singer": "きりたんP(doriko)",
+		"YTLink": "https://www.youtube.com/watch?v=QJg9Xo5FnHA"
+	},
+	{
+		"date": "2023/12/07",
+		"track": 5,
+		"song": "Let It Go～ありのままで～",
+		"singer": "松たか子",
+		"YTLink": "https://www.youtube.com/watch?v=QJg9Xo5FnHA"
+	},
+	{
+		"date": "2023/12/07",
+		"track": 6,
+		"song": "雪の華",
+		"singer": "中島美嘉",
+		"YTLink": "https://www.youtube.com/watch?v=QJg9Xo5FnHA"
+	},
+	{
+		"date": "2023/12/07",
+		"track": 7,
+		"song": "メリクリ",
+		"singer": "BoA",
+		"YTLink": "https://www.youtube.com/watch?v=QJg9Xo5FnHA"
+	},
+	{
+		"date": "2023/12/07",
+		"track": 8,
+		"song": "Precious",
+		"singer": "伊藤由奈",
+		"YTLink": "https://www.youtube.com/watch?v=QJg9Xo5FnHA"
+	},
+	{
+		"date": "2023/12/07",
+		"track": 9,
+		"song": "ムーンライト伝説",
+		"singer": "DALI",
+		"YTLink": "https://www.youtube.com/watch?v=QJg9Xo5FnHA"
+	},
+	{
+		"date": "2023/12/07",
+		"track": 10,
+		"song": "Overfly",
+		"singer": "春奈るな",
+		"YTLink": "https://www.youtube.com/watch?v=QJg9Xo5FnHA"
+	},
+	{
+		"date": "2023/12/07",
+		"track": 11,
+		"song": "勇気100%",
+		"singer": "光GENJI",
+		"YTLink": "https://www.youtube.com/watch?v=QJg9Xo5FnHA"
+	},
+	{
+		"date": "2023/12/07",
+		"track": 12,
+		"song": "あわてんぼうのサンタクロース",
+		"singer": "坂田おさむ,神崎ゆう子",
+		"YTLink": "https://www.youtube.com/watch?v=QJg9Xo5FnHA"
+	},
+	{
+		"date": "2023/12/07",
+		"track": 13,
+		"song": "プラネタリウム",
+		"singer": "大塚愛",
+		"YTLink": "https://www.youtube.com/watch?v=QJg9Xo5FnHA"
+	},
+	{
+		"date": "2023/12/07",
+		"track": 14,
+		"song": "星間飛行",
+		"singer": "ランカ・リー(中島愛)",
+		"YTLink": "https://www.youtube.com/watch?v=QJg9Xo5FnHA"
+	},
+	{
+		"date": "2023/12/07",
+		"track": 15,
+		"song": "星座になれたら",
+		"singer": "結束バンド",
+		"YTLink": "https://www.youtube.com/watch?v=QJg9Xo5FnHA"
+	},
+	{
+		"date": "2023/12/07",
+		"track": 16,
+		"song": "マリーゴールド",
+		"singer": "あいみょん",
+		"YTLink": "https://www.youtube.com/watch?v=QJg9Xo5FnHA"
+	},
+	{
+		"date": "2023/12/07",
+		"track": 17,
+		"song": "First Love",
+		"singer": "宇多田ヒカル",
+		"YTLink": "https://www.youtube.com/watch?v=QJg9Xo5FnHA"
+	},
+	{
+		"date": "2023/12/07",
+		"track": 18,
+		"song": "ウィーアー!",
+		"singer": "きただにひろし",
+		"YTLink": "https://www.youtube.com/watch?v=QJg9Xo5FnHA"
+	},
+	{
+		"date": "2023/12/07",
+		"track": 19,
+		"song": "promise",
+		"singer": "広瀬香美",
+		"YTLink": "https://www.youtube.com/watch?v=QJg9Xo5FnHA"
+	},
+	{
+		"date": "2023/12/07",
+		"track": 20,
+		"song": "ロマンスの神様",
+		"singer": "広瀬香美",
+		"YTLink": "https://www.youtube.com/watch?v=QJg9Xo5FnHA"
+	},
+	{
+		"date": "2023/12/07",
+		"track": 21,
+		"song": "美女と野獣",
+		"singer": "昆夏美,山崎育三郎",
+		"note": "初回",
+		"YTLink": "https://www.youtube.com/watch?v=QJg9Xo5FnHA"
+	},
+	{
+		"date": "2023/12/07",
+		"track": 22,
+		"song": "生まれてはじめて",
+		"singer": "神田沙也加,松たか子",
+		"YTLink": "https://www.youtube.com/watch?v=QJg9Xo5FnHA"
+	},
+	{
+		"date": "2023/12/07",
+		"track": 23,
+		"song": "クリスマスソング",
+		"singer": "back number",
+		"YTLink": "https://www.youtube.com/watch?v=QJg9Xo5FnHA"
+	},
+	{
+		"date": "2023/12/07",
+		"track": 24,
+		"song": "ドラえもんのうた",
+		"singer": "山野さと子",
+		"YTLink": "https://www.youtube.com/watch?v=QJg9Xo5FnHA"
+	},
+	{
+		"date": "2023/12/07",
+		"track": 25,
+		"song": "アムリタ",
+		"singer": "牧野由依",
+		"YTLink": "https://www.youtube.com/watch?v=QJg9Xo5FnHA"
+	},
+	{
 		"date": "2023/12/04",
 		"track": 1,
 		"song": "勇者",
@@ -2757,7 +3073,7 @@
 		"date": "2023/10/10",
 		"track": "9",
 		"song": "星間飛行",
-		"singer": "ランカ・リー/中島愛",
+		"singer": "ランカ・リー(中島愛)",
 		"note": "",
 		"YTLink": "https://www.youtube.com/watch?v=XWQ_OB14TfY"
 	},
@@ -4603,7 +4919,7 @@
 		"date": "2023/09/20",
 		"track": "13",
 		"song": "星間飛行",
-		"singer": "ランカ・リー/中島愛",
+		"singer": "ランカ・リー(中島愛)",
 		"note": "",
 		"YTLink": "https://www.youtube.com/watch?v=mETAhqUM7_A"
 	},
@@ -4987,7 +5303,7 @@
 		"date": "2023/09/07",
 		"track": "1",
 		"song": "星間飛行",
-		"singer": "ランカ・リー/中島愛",
+		"singer": "ランカ・リー(中島愛)",
 		"note": "",
 		"YTLink": "https://www.youtube.com/watch?v=GHw1gT1ZMfM"
 	},
@@ -5171,7 +5487,7 @@
 		"date": "2023/09/05",
 		"track": "3",
 		"song": "星間飛行",
-		"singer": "ランカ・リー/中島愛",
+		"singer": "ランカ・リー(中島愛)",
 		"note": "",
 		"YTLink": "https://www.youtube.com/watch?v=61TdPwpqekc"
 	},
@@ -11659,7 +11975,7 @@
 		"date": "2023/06/18",
 		"track": "13",
 		"song": "星間飛行",
-		"singer": "ランカ・リー/中島愛",
+		"singer": "ランカ・リー(中島愛)",
 		"note": "",
 		"YTLink": "https://www.youtube.com/watch?v=UniA1pxv0VI"
 	},
