@@ -1,5 +1,54 @@
 [
 	{
+		"date": "2023/12/09",
+		"track": 1,
+		"song": "星間飛行",
+		"singer": "ランカ・リー(中島愛)",
+		"YTLink": "https://www.youtube.com/watch?v=8nOYm-3JNx0"
+	},
+	{
+		"date": "2023/12/09",
+		"track": 2,
+		"song": "God Bless You",
+		"singer": "ワルキューレ",
+		"YTLink": "https://www.youtube.com/watch?v=8nOYm-3JNx0"
+	},
+	{
+		"date": "2023/12/09",
+		"track": 3,
+		"song": "Subtitle",
+		"singer": "Official髭男dism",
+		"YTLink": "https://www.youtube.com/watch?v=8nOYm-3JNx0"
+	},
+	{
+		"date": "2023/12/09",
+		"track": 4,
+		"song": "雪の華",
+		"singer": "中島美嘉",
+		"YTLink": "https://www.youtube.com/watch?v=8nOYm-3JNx0"
+	},
+	{
+		"date": "2023/12/09",
+		"track": 5,
+		"song": "メリクリ",
+		"singer": "BoA",
+		"YTLink": "https://www.youtube.com/watch?v=8nOYm-3JNx0"
+	},
+	{
+		"date": "2023/12/09",
+		"track": 6,
+		"song": "ロマンスの神様",
+		"singer": "広瀬香美",
+		"YTLink": "https://www.youtube.com/watch?v=8nOYm-3JNx0"
+	},
+	{
+		"date": "2023/12/09",
+		"track": 7,
+		"song": "クリスマスソング",
+		"singer": "back number",
+		"YTLink": "https://www.youtube.com/watch?v=8nOYm-3JNx0"
+	},
+	{
 		"date": "2023/12/08",
 		"track": 1,
 		"song": "勇者",
