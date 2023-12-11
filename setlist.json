@@ -1,6 +1,147 @@
 [
 	{
 		"date": "2023/12/11",
+		"track": "3-1",
+		"song": "勇者",
+		"singer": "YOASOBI",
+		"YTLink": "https://www.youtube.com/watch?v=zOaxhiZ6Xc0"
+	},
+	{
+		"date": "2023/12/11",
+		"track": "3-2",
+		"song": "花になって",
+		"singer": "緑黄色社会",
+		"note": "初回",
+		"YTLink": "https://www.youtube.com/watch?v=zOaxhiZ6Xc0"
+	},
+	{
+		"date": "2023/12/11",
+		"track": "3-3",
+		"song": "ダンシング・ヒーロー",
+		"singer": "荻野目洋子",
+		"YTLink": "https://www.youtube.com/watch?v=zOaxhiZ6Xc0"
+	},
+	{
+		"date": "2023/12/11",
+		"track": "3-4",
+		"song": "輝夜の城で踊りたい",
+		"singer": "μ's",
+		"YTLink": "https://www.youtube.com/watch?v=zOaxhiZ6Xc0"
+	},
+	{
+		"date": "2023/12/11",
+		"track": "3-5",
+		"song": "ヒッチコック",
+		"singer": "ヨルシカ",
+		"YTLink": "https://www.youtube.com/watch?v=zOaxhiZ6Xc0"
+	},
+	{
+		"date": "2023/12/11",
+		"track": "3-6",
+		"song": "言って。",
+		"singer": "ヨルシカ",
+		"YTLink": "https://www.youtube.com/watch?v=zOaxhiZ6Xc0"
+	},
+	{
+		"date": "2023/12/11",
+		"track": "3-7",
+		"song": "春擬き",
+		"singer": "やなぎなぎ",
+		"YTLink": "https://www.youtube.com/watch?v=zOaxhiZ6Xc0"
+	},
+	{
+		"date": "2023/12/11",
+		"track": "3-8",
+		"song": "フリージア",
+		"singer": "Uru",
+		"YTLink": "https://www.youtube.com/watch?v=zOaxhiZ6Xc0"
+	},
+	{
+		"date": "2023/12/11",
+		"track": "3-9",
+		"song": "冬がくれた予感",
+		"singer": "BiBi",
+		"YTLink": "https://www.youtube.com/watch?v=zOaxhiZ6Xc0"
+	},
+	{
+		"date": "2023/12/11",
+		"track": "3-10",
+		"song": "Mela!",
+		"singer": "緑黄色社会",
+		"YTLink": "https://www.youtube.com/watch?v=zOaxhiZ6Xc0"
+	},
+	{
+		"date": "2023/12/11",
+		"track": "3-11",
+		"song": "ロマンスの神様",
+		"singer": "広瀬香美",
+		"YTLink": "https://www.youtube.com/watch?v=zOaxhiZ6Xc0"
+	},
+	{
+		"date": "2023/12/11",
+		"track": "3-12",
+		"song": "ORION",
+		"singer": "中島美嘉",
+		"YTLink": "https://www.youtube.com/watch?v=zOaxhiZ6Xc0"
+	},
+	{
+		"date": "2023/12/11",
+		"track": "3-13",
+		"song": "メリクリ",
+		"singer": "BoA",
+		"YTLink": "https://www.youtube.com/watch?v=zOaxhiZ6Xc0"
+	},
+	{
+		"date": "2023/12/11",
+		"track": "3-14",
+		"song": "Everything",
+		"singer": "MISIA",
+		"YTLink": "https://www.youtube.com/watch?v=zOaxhiZ6Xc0"
+	},
+	{
+		"date": "2023/12/11",
+		"track": "3-15",
+		"song": "夜に駆ける",
+		"singer": "YOASOBI",
+		"YTLink": "https://www.youtube.com/watch?v=zOaxhiZ6Xc0"
+	},
+	{
+		"date": "2023/12/11",
+		"track": "3-16",
+		"song": "ガーネット",
+		"singer": "奥華子",
+		"YTLink": "https://www.youtube.com/watch?v=zOaxhiZ6Xc0"
+	},
+	{
+		"date": "2023/12/11",
+		"track": "3-17",
+		"song": "KissHug",
+		"singer": "aiko",
+		"YTLink": "https://www.youtube.com/watch?v=zOaxhiZ6Xc0"
+	},
+	{
+		"date": "2023/12/11",
+		"track": "3-18",
+		"song": "すきっちゅーの！",
+		"singer": "HoneyWorks",
+		"YTLink": "https://www.youtube.com/watch?v=zOaxhiZ6Xc0"
+	},
+	{
+		"date": "2023/12/11",
+		"track": "3-19",
+		"song": "ミュージカル",
+		"singer": "鈴木みのり",
+		"YTLink": "https://www.youtube.com/watch?v=zOaxhiZ6Xc0"
+	},
+	{
+		"date": "2023/12/11",
+		"track": "3-20",
+		"song": "StartRoll",
+		"singer": "苺咲べりぃ",
+		"YTLink": "https://www.youtube.com/watch?v=zOaxhiZ6Xc0"
+	},
+	{
+		"date": "2023/12/11",
 		"track": "2-1",
 		"song": "勇者",
 		"singer": "YOASOBI",
@@ -100,32 +241,8 @@
 	{
 		"date": "2023/12/11",
 		"track": "2-15",
-		"YTLink": "https://www.youtube.com/watch?v=7SsBzhTa0oA"
-	},
-	{
-		"date": "2023/12/11",
-		"track": "2-16",
-		"YTLink": "https://www.youtube.com/watch?v=7SsBzhTa0oA"
-	},
-	{
-		"date": "2023/12/11",
-		"track": "2-17",
-		"song": "",
-		"YTLink": "https://www.youtube.com/watch?v=7SsBzhTa0oA"
-	},
-	{
-		"date": "2023/12/11",
-		"track": "2-18",
-		"YTLink": "https://www.youtube.com/watch?v=7SsBzhTa0oA"
-	},
-	{
-		"date": "2023/12/11",
-		"track": "2-19",
-		"YTLink": "https://www.youtube.com/watch?v=7SsBzhTa0oA"
-	},
-	{
-		"date": "2023/12/11",
-		"track": "2-20",
+		"song": "帰りたくなったよ",
+		"singer": "いきものがかり",
 		"YTLink": "https://www.youtube.com/watch?v=7SsBzhTa0oA"
 	},
 	{
