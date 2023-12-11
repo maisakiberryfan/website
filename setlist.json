@@ -1,7 +1,119 @@
 [
 	{
+		"date": "2023/12/11",
+		"track": "1-1",
+		"song": "rain stops, good-bye",
+		"singer": "におP",
+		"YTLink": "https://www.youtube.com/watch?v=Xy06FJDZNuc"
+	},
+	{
+		"date": "2023/12/11",
+		"track": "1-2",
+		"song": "letter song",
+		"singer": "きりたんP(doriko)",
+		"YTLink": "https://www.youtube.com/watch?v=Xy06FJDZNuc"
+	},
+	{
+		"date": "2023/12/11",
+		"track": "1-3",
+		"song": "歌に形はないけれど",
+		"singer": "きりたんP(doriko)",
+		"YTLink": "https://www.youtube.com/watch?v=Xy06FJDZNuc"
+	},
+	{
+		"date": "2023/12/11",
+		"track": "1-4",
+		"song": "心拍数#0822",
+		"singer": "蝶々P",
+		"YTLink": "https://www.youtube.com/watch?v=Xy06FJDZNuc"
+	},
+	{
+		"date": "2023/12/11",
+		"track": "1-5",
+		"song": "贖罪",
+		"singer": "傘村トータ",
+		"YTLink": "https://www.youtube.com/watch?v=Xy06FJDZNuc"
+	},
+	{
+		"date": "2023/12/11",
+		"track": "1-6",
+		"song": "アイネクライネ",
+		"singer": "米津玄師",
+		"YTLink": "https://www.youtube.com/watch?v=Xy06FJDZNuc"
+	},
+	{
+		"date": "2023/12/11",
+		"track": "1-7",
+		"song": "雪の華",
+		"singer": "中島美嘉",
+		"YTLink": "https://www.youtube.com/watch?v=Xy06FJDZNuc"
+	},
+	{
+		"date": "2023/12/11",
+		"track": "1-8",
+		"song": "ハナミズキ",
+		"singer": "一青窈",
+		"YTLink": "https://www.youtube.com/watch?v=Xy06FJDZNuc"
+	},
+	{
+		"date": "2023/12/11",
+		"track": "1-9",
+		"song": "そうだよ。",
+		"singer": "ランカ・リー(中島愛)",
+		"YTLink": "https://www.youtube.com/watch?v=Xy06FJDZNuc"
+	},
+	{
+		"date": "2023/12/11",
+		"track": "1-10",
+		"song": "虹",
+		"singer": "菅田将暉",
+		"YTLink": "https://www.youtube.com/watch?v=Xy06FJDZNuc"
+	},
+	{
+		"date": "2023/12/11",
+		"track": "1-11",
+		"song": "未来",
+		"singer": "コブクロ",
+		"YTLink": "https://www.youtube.com/watch?v=Xy06FJDZNuc"
+	},
+	{
+		"date": "2023/12/11",
+		"track": "1-12",
+		"song": "ハッピーエンド",
+		"singer": "back number",
+		"YTLink": "https://www.youtube.com/watch?v=Xy06FJDZNuc"
+	},
+	{
+		"date": "2023/12/11",
+		"track": "1-13",
+		"song": "First Love",
+		"singer": "宇多田ヒカル",
+		"YTLink": "https://www.youtube.com/watch?v=Xy06FJDZNuc"
+	},
+	{
+		"date": "2023/12/11",
+		"track": "1-14",
+		"song": "メリクリ",
+		"singer": "BoA",
+		"YTLink": "https://www.youtube.com/watch?v=Xy06FJDZNuc"
+	},
+	{
+		"date": "2023/12/11",
+		"track": "1-15",
+		"song": "ハロ/ハワユ",
+		"singer": "ほえほえP",
+		"YTLink": "https://www.youtube.com/watch?v=Xy06FJDZNuc"
+	},
+	{
+		"date": "2023/12/11",
+		"track": "1-16",
+		"song": "ホシキラ",
+		"singer": "ランカ・リー(中島愛)",
+		"YTLink": "https://www.youtube.com/watch?v=Xy06FJDZNuc"
+	},
+	{
 		"date": "2023/12/09",
-		"track": 1,
+		"track": "1",
 		"song": "星間飛行",
 		"singer": "ランカ・リー(中島愛)",
 		"YTLink": "https://www.youtube.com/watch?v=8nOYm-3JNx0"
@@ -3030,7 +3142,7 @@
 		"date": "2023/10/11",
 		"track": 12,
 		"song": "そうだよ。",
-		"singer": "ランカ・リー/中島愛",
+		"singer": "ランカ・リー(中島愛)",
 		"YTLink": "https://www.youtube.com/watch?v=DiOora8k61I"
 	},
 	{
@@ -4856,7 +4968,7 @@
 		"date": "2023/09/21",
 		"track": "19",
 		"song": "蒼のエーテル",
-		"singer": "ランカ・リー/中島愛",
+		"singer": "ランカ・リー(中島愛)",
 		"note": "",
 		"YTLink": "https://www.youtube.com/watch?v=IPPYjr0iGSU"
 	},
@@ -6136,7 +6248,7 @@
 		"date": "2023/08/28",
 		"track": "3",
 		"song": "アイモ",
-		"singer": "ランカ・リー/中島愛",
+		"singer": "ランカ・リー(中島愛)",
 		"note": "",
 		"YTLink": "https://www.youtube.com/watch?v=CbEB1sJH9xU"
 	},
@@ -6568,7 +6680,7 @@
 		"date": "2023/08/22",
 		"track": "37",
 		"song": "蒼のエーテル",
-		"singer": "ランカ・リー/中島愛",
+		"singer": "ランカ・リー(中島愛)",
 		"note": "",
 		"YTLink": "https://www.youtube.com/watch?v=8i6y-5O30ps"
 	},
@@ -6856,7 +6968,7 @@
 		"date": "2023/08/19",
 		"track": "15",
 		"song": "アイモ",
-		"singer": "ランカ・リー/中島愛",
+		"singer": "ランカ・リー(中島愛)",
 		"note": "",
 		"YTLink": "https://www.youtube.com/watch?v=qRFGHr4QsOQ"
 	},
@@ -6864,7 +6976,7 @@
 		"date": "2023/08/19",
 		"track": "16",
 		"song": "そうだよ。",
-		"singer": "ランカ・リー/中島愛",
+		"singer": "ランカ・リー(中島愛)",
 		"note": "",
 		"YTLink": "https://www.youtube.com/watch?v=qRFGHr4QsOQ"
 	},
@@ -9280,7 +9392,7 @@
 		"date": "2023/07/26",
 		"track": "12",
 		"song": "蒼のエーテル",
-		"singer": "ランカ・リー/中島愛",
+		"singer": "ランカ・リー(中島愛)",
 		"note": "",
 		"YTLink": "https://www.youtube.com/watch?v=iU3WElTL85Y"
 	},
@@ -10176,7 +10288,7 @@
 		"date": "2023/06/28",
 		"track": "8",
 		"song": "アイモ ～鳥のひと",
-		"singer": "ランカ・リー/中島愛",
+		"singer": "ランカ・リー(中島愛)",
 		"note": "",
 		"YTLink": "https://www.youtube.com/watch?v=H4lqhcTUGAo"
 	},
@@ -12304,7 +12416,7 @@
 		"date": "2023/06/13",
 		"track": "7",
 		"song": "放課後オーバーフロウ",
-		"singer": "ランカ・リー/中島愛",
+		"singer": "ランカ・リー(中島愛)",
 		"note": "",
 		"YTLink": "https://www.youtube.com/watch?v=oWutEoqdhiM"
 	},
