@@ -1,5 +1,145 @@
 [
 	{
+		"date": "2023/12/13",
+		"track": 1,
+		"song": "瑠璃色の地球",
+		"singer": "松田聖子",
+		"YTLink": "https://www.youtube.com/watch?v=mxelTFnDFF4"
+	},
+	{
+		"date": "2023/12/13",
+		"track": 2,
+		"song": "冬がはじまるよ",
+		"singer": "槇原敬之",
+		"YTLink": "https://www.youtube.com/watch?v=mxelTFnDFF4"
+	},
+	{
+		"date": "2023/12/13",
+		"track": 3,
+		"song": "歌に形はないけれど",
+		"singer": "きりたんP(doriko)",
+		"YTLink": "https://www.youtube.com/watch?v=mxelTFnDFF4"
+	},
+	{
+		"date": "2023/12/13",
+		"track": 4,
+		"song": "会いたい",
+		"singer": "シグナルP",
+		"YTLink": "https://www.youtube.com/watch?v=mxelTFnDFF4"
+	},
+	{
+		"date": "2023/12/13",
+		"track": 5,
+		"song": "紅一葉",
+		"singer": "黒うさP",
+		"YTLink": "https://www.youtube.com/watch?v=mxelTFnDFF4"
+	},
+	{
+		"date": "2023/12/13",
+		"track": 6,
+		"song": "楔",
+		"singer": "奥華子",
+		"YTLink": "https://www.youtube.com/watch?v=mxelTFnDFF4"
+	},
+	{
+		"date": "2023/12/13",
+		"track": 7,
+		"song": "ヒッチコック",
+		"singer": "ヨルシカ",
+		"YTLink": "https://www.youtube.com/watch?v=mxelTFnDFF4"
+	},
+	{
+		"date": "2023/12/13",
+		"track": 8,
+		"song": "ピエロ",
+		"singer": "KEI",
+		"YTLink": "https://www.youtube.com/watch?v=mxelTFnDFF4"
+	},
+	{
+		"date": "2023/12/13",
+		"track": 9,
+		"song": "Subtitle",
+		"singer": "Official髭男dism",
+		"YTLink": "https://www.youtube.com/watch?v=mxelTFnDFF4"
+	},
+	{
+		"date": "2023/12/13",
+		"track": 10,
+		"song": "Pretender",
+		"singer": "Official髭男dism",
+		"YTLink": "https://www.youtube.com/watch?v=mxelTFnDFF4"
+	},
+	{
+		"date": "2023/12/13",
+		"track": 11,
+		"song": "猫",
+		"singer": "DISH//",
+		"YTLink": "https://www.youtube.com/watch?v=mxelTFnDFF4"
+	},
+	{
+		"date": "2023/12/13",
+		"track": 12,
+		"song": "HAPPY BIRTHDAY",
+		"singer": "back number",
+		"YTLink": "https://www.youtube.com/watch?v=mxelTFnDFF4"
+	},
+	{
+		"date": "2023/12/13",
+		"track": 13,
+		"song": "ベテルギウス",
+		"singer": "優里",
+		"YTLink": "https://www.youtube.com/watch?v=mxelTFnDFF4"
+	},
+	{
+		"date": "2023/12/13",
+		"track": 14,
+		"song": "ドライフラワー",
+		"singer": "優里",
+		"YTLink": "https://www.youtube.com/watch?v=mxelTFnDFF4"
+	},
+	{
+		"date": "2023/12/13",
+		"track": 15,
+		"song": "君をのせて",
+		"singer": "井上あずみ",
+		"YTLink": "https://www.youtube.com/watch?v=mxelTFnDFF4"
+	},
+	{
+		"date": "2023/12/13",
+		"track": 16,
+		"song": "雪の華",
+		"singer": "中島美嘉",
+		"YTLink": "https://www.youtube.com/watch?v=mxelTFnDFF4"
+	},
+	{
+		"date": "2023/12/13",
+		"track": 17,
+		"song": "アイノカタチ",
+		"singer": "MISIA",
+		"YTLink": "https://www.youtube.com/watch?v=mxelTFnDFF4"
+	},
+	{
+		"date": "2023/12/13",
+		"track": 18,
+		"song": "粉雪",
+		"singer": "レミオロメン",
+		"YTLink": "https://www.youtube.com/watch?v=mxelTFnDFF4"
+	},
+	{
+		"date": "2023/12/13",
+		"track": 19,
+		"song": "水平線",
+		"singer": "back number",
+		"YTLink": "https://www.youtube.com/watch?v=mxelTFnDFF4"
+	},
+	{
+		"date": "2023/12/13",
+		"track": 20,
+		"song": "クリスマスソング",
+		"singer": "back number",
+		"YTLink": "https://www.youtube.com/watch?v=mxelTFnDFF4"
+	},
+	{
 		"date": "2023/12/12",
 		"track": 1,
 		"song": "未来予想図Ⅱ",
@@ -7844,7 +7984,7 @@
 	{
 		"date": "2023/08/14",
 		"track": "3",
-		"song": "Happy Birthday",
+		"song": "HAPPY BIRTHDAY",
 		"singer": "back number",
 		"note": "",
 		"YTLink": "https://www.youtube.com/watch?v=hdviGOIYb2w"
