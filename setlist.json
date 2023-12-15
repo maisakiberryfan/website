@@ -1,5 +1,145 @@
 [
 	{
+		"date": "2023/12/14",
+		"track": 1,
+		"song": "勇者",
+		"singer": "YOASOBI",
+		"YTLink": "https://www.youtube.com/watch?v=nRnw4KuwkJo"
+	},
+	{
+		"date": "2023/12/14",
+		"track": 2,
+		"song": "花になって",
+		"singer": "緑黄色社会",
+		"YTLink": "https://www.youtube.com/watch?v=nRnw4KuwkJo"
+	},
+	{
+		"date": "2023/12/14",
+		"track": 3,
+		"song": "only my railgun",
+		"singer": "fripSide",
+		"YTLink": "https://www.youtube.com/watch?v=nRnw4KuwkJo"
+	},
+	{
+		"date": "2023/12/14",
+		"track": 4,
+		"song": "往け",
+		"singer": "LiSA",
+		"YTLink": "https://www.youtube.com/watch?v=nRnw4KuwkJo"
+	},
+	{
+		"date": "2023/12/14",
+		"track": 5,
+		"song": "瞳はダイアモンド",
+		"singer": "松田聖子",
+		"YTLink": "https://www.youtube.com/watch?v=nRnw4KuwkJo"
+	},
+	{
+		"date": "2023/12/14",
+		"track": 6,
+		"song": "同担☆拒否",
+		"singer": "HoneyWorks",
+		"YTLink": "https://www.youtube.com/watch?v=nRnw4KuwkJo"
+	},
+	{
+		"date": "2023/12/14",
+		"track": 7,
+		"song": "うるわしきひと",
+		"singer": "いきものがかり",
+		"YTLink": "https://www.youtube.com/watch?v=nRnw4KuwkJo"
+	},
+	{
+		"date": "2023/12/14",
+		"track": 8,
+		"song": "ヒッチコック",
+		"singer": "ヨルシカ",
+		"YTLink": "https://www.youtube.com/watch?v=nRnw4KuwkJo"
+	},
+	{
+		"date": "2023/12/14",
+		"track": 9,
+		"song": "ただ君に晴れ",
+		"singer": "ヨルシカ",
+		"YTLink": "https://www.youtube.com/watch?v=nRnw4KuwkJo"
+	},
+	{
+		"date": "2023/12/14",
+		"track": 10,
+		"song": "瞳をとじて",
+		"singer": "平井堅",
+		"YTLink": "https://www.youtube.com/watch?v=nRnw4KuwkJo"
+	},
+	{
+		"date": "2023/12/14",
+		"track": 11,
+		"song": "secret base～君がくれたもの～",
+		"singer": "ZONE",
+		"YTLink": "https://www.youtube.com/watch?v=nRnw4KuwkJo"
+	},
+	{
+		"date": "2023/12/14",
+		"track": 12,
+		"song": "まどろみの約束",
+		"singer": "千反田える(佐藤聡美), 伊原摩耶花(茅野愛衣)",
+		"YTLink": "https://www.youtube.com/watch?v=nRnw4KuwkJo"
+	},
+	{
+		"date": "2023/12/14",
+		"track": 13,
+		"song": "irony",
+		"singer": "ClariS",
+		"YTLink": "https://www.youtube.com/watch?v=nRnw4KuwkJo"
+	},
+	{
+		"date": "2023/12/14",
+		"track": 14,
+		"song": "ハッピークレセント",
+		"singer": "中川かのん(東山奈央)",
+		"YTLink": "https://www.youtube.com/watch?v=nRnw4KuwkJo"
+	},
+	{
+		"date": "2023/12/14",
+		"track": 15,
+		"song": "歩いていこう！",
+		"singer": "東山奈央",
+		"YTLink": "https://www.youtube.com/watch?v=nRnw4KuwkJo"
+	},
+	{
+		"date": "2023/12/14",
+		"track": 16,
+		"song": "ビードロ模様",
+		"singer": "やなぎなぎ",
+		"YTLink": "https://www.youtube.com/watch?v=nRnw4KuwkJo"
+	},
+	{
+		"date": "2023/12/14",
+		"track": 17,
+		"song": "クリスマスソング",
+		"singer": "back number",
+		"YTLink": "https://www.youtube.com/watch?v=nRnw4KuwkJo"
+	},
+	{
+		"date": "2023/12/14",
+		"track": 18,
+		"song": "バラライカ",
+		"singer": "久住小春",
+		"YTLink": "https://www.youtube.com/watch?v=nRnw4KuwkJo"
+	},
+	{
+		"date": "2023/12/14",
+		"track": 19,
+		"song": "God Bless You",
+		"singer": "ワルキューレ",
+		"YTLink": "https://www.youtube.com/watch?v=nRnw4KuwkJo"
+	},
+	{
+		"date": "2023/12/14",
+		"track": 20,
+		"song": "I Love. you love.",
+		"singer": "苺咲べりぃ",
+		"YTLink": "https://www.youtube.com/watch?v=nRnw4KuwkJo"
+	},
+	{
 		"date": "2023/12/13",
 		"track": 1,
 		"song": "瑠璃色の地球",
@@ -1554,7 +1694,7 @@
 		"date": "2023/11/25",
 		"track": 7,
 		"song": "Wherever",
-		"singer": "鈴木このみ",
+		"singer": "鈴木みのり",
 		"note": "初回",
 		"YTLink": "https://www.youtube.com/watch?v=S6pt90eDpdk"
 	},
@@ -1603,8 +1743,8 @@
 	{
 		"date": "2023/11/25",
 		"track": 14,
-		"song": "歩いていこう",
-		"singer": "いきものがかり",
+		"song": "歩いていこう！",
+		"singer": "東山奈央",
 		"YTLink": "https://www.youtube.com/watch?v=S6pt90eDpdk"
 	},
 	{
@@ -5512,7 +5652,7 @@
 	{
 		"date": "2023/09/20",
 		"track": "4",
-		"song": "Secret Base～君がくれたもの～",
+		"song": "secret base～君がくれたもの～",
 		"singer": "ZONE",
 		"note": "",
 		"YTLink": "https://www.youtube.com/watch?v=mETAhqUM7_A"
@@ -6089,7 +6229,7 @@
 		"date": "2023/09/07",
 		"track": "16",
 		"song": "ハッピークレセント",
-		"singer": "東山奈央",
+		"singer": "中川かのん(東山奈央)",
 		"note": "",
 		"YTLink": "https://www.youtube.com/watch?v=GHw1gT1ZMfM"
 	},
@@ -6504,7 +6644,7 @@
 	{
 		"date": "2023/08/30",
 		"track": "10",
-		"song": "Secret Base～君がくれたもの～",
+		"song": "secret base～君がくれたもの～",
 		"singer": "ZONE",
 		"note": "",
 		"YTLink": "https://www.youtube.com/watch?v=doZzW4pJTjY"
@@ -7633,7 +7773,7 @@
 		"date": "2023/08/17",
 		"track": "15",
 		"song": "まどろみの約束",
-		"singer": "佐藤聡美 & 茅野愛衣",
+		"singer": "千反田える(佐藤聡美), 伊原摩耶花(茅野愛衣)",
 		"note": "",
 		"YTLink": "https://www.youtube.com/watch?v=G-91jzmVyiM"
 	},
@@ -8840,7 +8980,7 @@
 	{
 		"date": "2023/08/07",
 		"track": "20",
-		"song": "Secret Base～君がくれたもの～",
+		"song": "secret base～君がくれたもの～",
 		"singer": "ZONE",
 		"note": "",
 		"YTLink": "https://www.youtube.com/watch?v=4SEkMxhjrn4"
@@ -9184,7 +9324,7 @@
 	{
 		"date": "2023/08/02",
 		"track": "3",
-		"song": "Secret Base～君がくれたもの～",
+		"song": "secret base～君がくれたもの～",
 		"singer": "ZONE",
 		"note": "",
 		"YTLink": "https://www.youtube.com/watch?v=mSW8udr7HBU"
@@ -9824,7 +9964,7 @@
 	{
 		"date": "2023/07/26",
 		"track": "3",
-		"song": "Secret Base～君がくれたもの～",
+		"song": "secret base～君がくれたもの～",
 		"singer": "ZONE",
 		"note": "",
 		"YTLink": "https://www.youtube.com/watch?v=iU3WElTL85Y"
@@ -10320,7 +10460,7 @@
 	{
 		"date": "2023/07/17",
 		"track": "9",
-		"song": "Secret Base～君がくれたもの～",
+		"song": "secret base～君がくれたもの～",
 		"singer": "ZONE",
 		"note": "",
 		"YTLink": "https://www.youtube.com/watch?v=SqzpzkrM1n8"
@@ -10945,7 +11085,7 @@
 		"date": "2023/06/26",
 		"track": "12",
 		"song": "まどろみの約束",
-		"singer": "佐藤聡美 & 茅野愛衣",
+		"singer": "千反田える(佐藤聡美), 伊原摩耶花(茅野愛衣)",
 		"note": "",
 		"YTLink": "https://www.youtube.com/watch?v=qdntQum8KoQ"
 	},
@@ -11984,7 +12124,7 @@
 	{
 		"date": "2023/06/24",
 		"track": "107",
-		"song": "Secret Base～君がくれたもの～",
+		"song": "secret base～君がくれたもの～",
 		"singer": "ZONE",
 		"note": "",
 		"YTLink": "https://www.youtube.com/watch?v=ZyQZagrDY_Q"
@@ -12832,7 +12972,7 @@
 	{
 		"date": "2023/06/15",
 		"track": "17",
-		"song": "Secret Base～君がくれたもの～",
+		"song": "secret base～君がくれたもの～",
 		"singer": "ZONE",
 		"note": "",
 		"YTLink": "https://www.youtube.com/watch?v=IUklem2s9MY"
@@ -41817,7 +41957,7 @@
 		"date": "2022/06/04",
 		"track": "12",
 		"song": "まどろみの約束",
-		"singer": "",
+		"singer": "千反田える(佐藤聡美), 伊原摩耶花(茅野愛衣)",
 		"note": "",
 		"YTLink": "https://www.youtube.com/watch?v=MymHcZ6a29o"
 	},
@@ -44961,7 +45101,7 @@
 		"date": "2022/03/17",
 		"track": "7",
 		"song": "まどろみの約束",
-		"singer": "",
+		"singer": "千反田える(佐藤聡美), 伊原摩耶花(茅野愛衣)",
 		"note": "初回",
 		"YTLink": "https://www.youtube.com/watch?v=jEX3RErwNvk"
 	},
