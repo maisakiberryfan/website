@@ -26,8 +26,8 @@ let nav = `
           </button>
           <ul class="dropdown-menu">
             <li><a class="dropdown-item setContent" href='/songlist' data-ext=''>Song List</a></li>
-            <li><a class="dropdown-item setContent" href='/setlist' data-ext='.json'>Set List</a></li>
             <li><a class="dropdown-item setContent" href='/streamlist' data-ext='.json'>Stream List</a></li>
+            <li><a class="dropdown-item setContent" href='/setlist' data-ext='.json'>Set List</a></li>
           </ul>
         </li>
         <li class="nav-item dropdown">
@@ -49,8 +49,8 @@ let nav = `
             <li><a class="dropdown-item" href="https://discord.gg/csQ77FEyTA">English</a></li>
           </ul>
         </li>
-        <li class="nav-item">
-          <a class="nav-link dropdown-item setContent" href='/howTo' data-ext='.md'>How To Edit</a>
+        <li class='nav-item py-2 py-lg-1 col-12 col-lg-auto'>
+          <div class='vr d-none d-lg-flex h-100 mx-lg-2 text-white'></div>
         </li>
         <li class="nav-item">
           <a class="nav-link dropdown-item" href='https://github.com/maisakiberryfan/website'>
@@ -59,6 +59,9 @@ let nav = `
         </li>
         <li class="nav-item">
           <a class="nav-link dropdown-item" href='fileUpload'>fileUpload</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link dropdown-item setContent" href='/howTo' data-ext='.md'>How To Edit</a>
         </li>
       </ul>
 
