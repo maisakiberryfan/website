@@ -1,5 +1,153 @@
 [
 	{
+		"date": "2023/12/25",
+		"track": 1,
+		"song": "勇者",
+		"singer": "YOASOBI",
+		"YTLink": "https://www.youtube.com/watch?v=Zhao4Wc_rIU"
+	},
+	{
+		"date": "2023/12/25",
+		"track": 2,
+		"song": "花になって",
+		"singer": "緑黄色社会",
+		"YTLink": "https://www.youtube.com/watch?v=Zhao4Wc_rIU"
+	},
+	{
+		"date": "2023/12/25",
+		"track": 3,
+		"song": "サインはB",
+		"singer": "B小町",
+		"YTLink": "https://www.youtube.com/watch?v=Zhao4Wc_rIU"
+	},
+	{
+		"date": "2023/12/25",
+		"track": 4,
+		"song": "Mela!",
+		"singer": "緑黄色社会",
+		"YTLink": "https://www.youtube.com/watch?v=Zhao4Wc_rIU"
+	},
+	{
+		"date": "2023/12/25",
+		"track": 5,
+		"song": "fragile",
+		"singer": "Every Little Thing",
+		"YTLink": "https://www.youtube.com/watch?v=Zhao4Wc_rIU"
+	},
+	{
+		"date": "2023/12/25",
+		"track": 6,
+		"song": "長い間",
+		"singer": "Kiroro",
+		"YTLink": "https://www.youtube.com/watch?v=Zhao4Wc_rIU"
+	},
+	{
+		"date": "2023/12/25",
+		"track": 7,
+		"song": "ミュージカル",
+		"singer": "鈴木みのり",
+		"YTLink": "https://www.youtube.com/watch?v=Zhao4Wc_rIU"
+	},
+	{
+		"date": "2023/12/25",
+		"track": 8,
+		"song": "歌に形はないけれど",
+		"singer": "きりたんP(doriko)",
+		"YTLink": "https://www.youtube.com/watch?v=Zhao4Wc_rIU"
+	},
+	{
+		"date": "2023/12/25",
+		"track": 9,
+		"song": "蒼のエーテル",
+		"singer": "ランカ・リー(中島愛)",
+		"YTLink": "https://www.youtube.com/watch?v=Zhao4Wc_rIU"
+	},
+	{
+		"date": "2023/12/25",
+		"track": 10,
+		"song": "プラチナ",
+		"singer": "坂本真綾",
+		"YTLink": "https://www.youtube.com/watch?v=Zhao4Wc_rIU"
+	},
+	{
+		"date": "2023/12/25",
+		"track": 11,
+		"song": "あなたがいることで",
+		"singer": "Uru",
+		"YTLink": "https://www.youtube.com/watch?v=Zhao4Wc_rIU"
+	},
+	{
+		"date": "2023/12/25",
+		"track": 12,
+		"song": "それを愛と呼ぶなら",
+		"singer": "Uru",
+		"YTLink": "https://www.youtube.com/watch?v=Zhao4Wc_rIU"
+	},
+	{
+		"date": "2023/12/25",
+		"track": 13,
+		"song": "フリージア",
+		"singer": "Uru",
+		"YTLink": "https://www.youtube.com/watch?v=Zhao4Wc_rIU"
+	},
+	{
+		"date": "2023/12/25",
+		"track": 14,
+		"song": "Let It Go～ありのままで～",
+		"singer": "松たか子",
+		"YTLink": "https://www.youtube.com/watch?v=Zhao4Wc_rIU"
+	},
+	{
+		"date": "2023/12/25",
+		"track": 15,
+		"song": "オレンジ",
+		"singer": "流田Project(釘宮理恵,堀江由衣,喜多村英梨)",
+		"YTLink": "https://www.youtube.com/watch?v=Zhao4Wc_rIU"
+	},
+	{
+		"date": "2023/12/25",
+		"track": 16,
+		"song": "アイノカタチ",
+		"singer": "MISIA",
+		"YTLink": "https://www.youtube.com/watch?v=Zhao4Wc_rIU"
+	},
+	{
+		"date": "2023/12/25",
+		"track": 17,
+		"song": "クリスマスソング",
+		"singer": "back number",
+		"YTLink": "https://www.youtube.com/watch?v=Zhao4Wc_rIU"
+	},
+	{
+		"date": "2023/12/25",
+		"track": 18,
+		"song": "虹",
+		"singer": "菅田将暉",
+		"YTLink": "https://www.youtube.com/watch?v=Zhao4Wc_rIU"
+	},
+	{
+		"date": "2023/12/25",
+		"track": 19,
+		"song": "ファンサ",
+		"singer": "mona(夏川椎菜)",
+		"YTLink": "https://www.youtube.com/watch?v=Zhao4Wc_rIU"
+	},
+	{
+		"date": "2023/12/25",
+		"track": 20,
+		"song": "夜空",
+		"singer": "鈴木みのり",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=Zhao4Wc_rIU"
+	},
+	{
+		"date": "2023/12/25",
+		"track": 21,
+		"song": "星へ伸ばす手",
+		"singer": "苺咲べりぃ",
+		"YTLink": "https://www.youtube.com/watch?v=Zhao4Wc_rIU"
+	},
+	{
 		"date": "2023/12/23",
 		"track": 1,
 		"song": "サンタと天使が笑う夜",
