@@ -1,5 +1,145 @@
 [
 	{
+		"date": "2024/01/11",
+		"track": 1,
+		"song": "アイドル",
+		"singer": "YOASOBI",
+		"YTLink": "https://www.youtube.com/watch?v=syKiMcF34T0"
+	},
+	{
+		"date": "2024/01/11",
+		"track": 2,
+		"song": "YUME日和",
+		"singer": "島谷ひとみ",
+		"YTLink": "https://www.youtube.com/watch?v=syKiMcF34T0"
+	},
+	{
+		"date": "2024/01/11",
+		"track": 3,
+		"song": "Love marginal",
+		"singer": "Printemps",
+		"YTLink": "https://www.youtube.com/watch?v=syKiMcF34T0"
+	},
+	{
+		"date": "2024/01/11",
+		"track": 4,
+		"song": "気まぐれロマンティック",
+		"singer": "いきものがかり",
+		"YTLink": "https://www.youtube.com/watch?v=syKiMcF34T0"
+	},
+	{
+		"date": "2024/01/11",
+		"track": 5,
+		"song": "M",
+		"singer": "Princess Princess",
+		"YTLink": "https://www.youtube.com/watch?v=syKiMcF34T0"
+	},
+	{
+		"date": "2024/01/11",
+		"track": 6,
+		"song": "すきっちゅーの！",
+		"singer": "HoneyWorks",
+		"YTLink": "https://www.youtube.com/watch?v=syKiMcF34T0"
+	},
+	{
+		"date": "2024/01/11",
+		"track": 7,
+		"song": "あなたに逢いたくて ～Missing You～",
+		"singer": "松田聖子",
+		"YTLink": "https://www.youtube.com/watch?v=syKiMcF34T0"
+	},
+	{
+		"date": "2024/01/11",
+		"track": 8,
+		"song": "Baby Sweet Berry Love",
+		"singer": "小倉唯",
+		"YTLink": "https://www.youtube.com/watch?v=syKiMcF34T0"
+	},
+	{
+		"date": "2024/01/11",
+		"track": 9,
+		"song": "Honey♥Come!!",
+		"singer": "小倉唯",
+		"YTLink": "https://www.youtube.com/watch?v=syKiMcF34T0"
+	},
+	{
+		"date": "2024/01/11",
+		"track": 10,
+		"song": "ハッピークレセント",
+		"singer": "中川かのん(東山奈央)",
+		"YTLink": "https://www.youtube.com/watch?v=syKiMcF34T0"
+	},
+	{
+		"date": "2024/01/11",
+		"track": 11,
+		"song": "Get Over",
+		"singer": "Dream",
+		"YTLink": "https://www.youtube.com/watch?v=syKiMcF34T0"
+	},
+	{
+		"date": "2024/01/11",
+		"track": 12,
+		"song": "ラストシーン",
+		"singer": "いきものがかり",
+		"YTLink": "https://www.youtube.com/watch?v=syKiMcF34T0"
+	},
+	{
+		"date": "2024/01/11",
+		"track": 13,
+		"song": "365日の紙飛行機",
+		"singer": "AKB48",
+		"YTLink": "https://www.youtube.com/watch?v=syKiMcF34T0"
+	},
+	{
+		"date": "2024/01/11",
+		"track": 14,
+		"song": "蕾",
+		"singer": "コブクロ",
+		"YTLink": "https://www.youtube.com/watch?v=syKiMcF34T0"
+	},
+	{
+		"date": "2024/01/11",
+		"track": 15,
+		"song": "瞳をとじて",
+		"singer": "平井堅",
+		"YTLink": "https://www.youtube.com/watch?v=syKiMcF34T0"
+	},
+	{
+		"date": "2024/01/11",
+		"track": 16,
+		"song": "letter song",
+		"singer": "きりたんP(doriko)",
+		"YTLink": "https://www.youtube.com/watch?v=syKiMcF34T0"
+	},
+	{
+		"date": "2024/01/11",
+		"track": 17,
+		"song": "夜空にふたつ",
+		"singer": "koyori(電ポルP)",
+		"YTLink": "https://www.youtube.com/watch?v=syKiMcF34T0"
+	},
+	{
+		"date": "2024/01/11",
+		"track": 18,
+		"song": "可愛くなりたい",
+		"singer": "HoneyWorks feat.鎖那",
+		"YTLink": "https://www.youtube.com/watch?v=syKiMcF34T0"
+	},
+	{
+		"date": "2024/01/11",
+		"track": 19,
+		"song": "ドレミファロンド",
+		"singer": "40mP",
+		"YTLink": "https://www.youtube.com/watch?v=syKiMcF34T0"
+	},
+	{
+		"date": "2024/01/11",
+		"track": 20,
+		"song": "エフェメラをあつめて",
+		"singer": "鈴木みのり",
+		"YTLink": "https://www.youtube.com/watch?v=syKiMcF34T0"
+	},
+	{
 		"date": "2024/01/10",
 		"track": 1,
 		"song": "勇者",
@@ -9899,7 +10039,7 @@
 		"date": "2023/08/07",
 		"track": "12",
 		"song": "夜空にふたつ",
-		"singer": "koyori",
+		"singer": "koyori(電ポルP)",
 		"note": "",
 		"YTLink": "https://www.youtube.com/watch?v=4SEkMxhjrn4"
 	},
@@ -61891,7 +62031,7 @@
 		"date": "2021/04/08",
 		"track": "4",
 		"song": "夜空にふたつ",
-		"singer": "",
+		"singer": "koyori(電ポルP)",
 		"note": "初回",
 		"YTLink": "https://www.youtube.com/watch?v=B5__l4TSafc"
 	},
