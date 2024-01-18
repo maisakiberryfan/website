@@ -1,5 +1,293 @@
 [
 	{
+		"date": "2024/01/18",
+		"track": 1,
+		"song": "晴る",
+		"singer": "ヨルシカ",
+		"YTLink": "https://www.youtube.com/watch?v=JwyQbgWxnrQ"
+	},
+	{
+		"date": "2024/01/18",
+		"track": 2,
+		"song": "長い間",
+		"singer": "Kiroro",
+		"YTLink": "https://www.youtube.com/watch?v=JwyQbgWxnrQ"
+	},
+	{
+		"date": "2024/01/18",
+		"track": 3,
+		"song": "PIECE OF MY WISH",
+		"singer": "今井美樹",
+		"YTLink": "https://www.youtube.com/watch?v=JwyQbgWxnrQ"
+	},
+	{
+		"date": "2024/01/18",
+		"track": 4,
+		"song": "待つわ",
+		"singer": "あみん",
+		"YTLink": "https://www.youtube.com/watch?v=JwyQbgWxnrQ"
+	},
+	{
+		"date": "2024/01/18",
+		"track": 5,
+		"song": "それを愛と呼ぶなら",
+		"singer": "Uru",
+		"YTLink": "https://www.youtube.com/watch?v=JwyQbgWxnrQ"
+	},
+	{
+		"date": "2024/01/18",
+		"track": 6,
+		"song": "心得",
+		"singer": "Uru",
+		"YTLink": "https://www.youtube.com/watch?v=JwyQbgWxnrQ"
+	},
+	{
+		"date": "2024/01/18",
+		"track": 7,
+		"song": "蒼のエーテル",
+		"singer": "ランカ・リー(中島愛)",
+		"YTLink": "https://www.youtube.com/watch?v=JwyQbgWxnrQ"
+	},
+	{
+		"date": "2024/01/18",
+		"track": 8,
+		"song": "アナタノオト",
+		"singer": "ランカ・リー(中島愛)",
+		"YTLink": "https://www.youtube.com/watch?v=JwyQbgWxnrQ"
+	},
+	{
+		"date": "2024/01/18",
+		"track": 9,
+		"song": "春擬き",
+		"singer": "やなぎなぎ",
+		"YTLink": "https://www.youtube.com/watch?v=JwyQbgWxnrQ"
+	},
+	{
+		"date": "2024/01/18",
+		"track": 10,
+		"song": "KissHug",
+		"singer": "aiko",
+		"YTLink": "https://www.youtube.com/watch?v=JwyQbgWxnrQ"
+	},
+	{
+		"date": "2024/01/18",
+		"track": 11,
+		"song": "fragile",
+		"singer": "Every Little Thing",
+		"YTLink": "https://www.youtube.com/watch?v=JwyQbgWxnrQ"
+	},
+	{
+		"date": "2024/01/18",
+		"track": 12,
+		"song": "瞳はダイアモンド",
+		"singer": "松田聖子",
+		"YTLink": "https://www.youtube.com/watch?v=JwyQbgWxnrQ"
+	},
+	{
+		"date": "2024/01/18",
+		"track": 13,
+		"song": "生きてこそ",
+		"singer": "kiroro",
+		"YTLink": "https://www.youtube.com/watch?v=JwyQbgWxnrQ"
+	},
+	{
+		"date": "2024/01/18",
+		"track": 14,
+		"song": "アムリタ",
+		"singer": "牧野由依",
+		"YTLink": "https://www.youtube.com/watch?v=JwyQbgWxnrQ"
+	},
+	{
+		"date": "2024/01/17",
+		"track": 1,
+		"song": "晴る",
+		"singer": "ヨルシカ",
+		"note": "初回",
+		"YTLink": "https://www.youtube.com/watch?v=7X02TjEiEGU"
+	},
+	{
+		"date": "2024/01/17",
+		"track": 2,
+		"song": "ノーザンクロス",
+		"singer": "シェリル・ノーム(May'n)",
+		"YTLink": "https://www.youtube.com/watch?v=7X02TjEiEGU"
+	},
+	{
+		"date": "2024/01/17",
+		"track": 3,
+		"song": "可愛くてごめん",
+		"singer": "HoneyWorks",
+		"YTLink": "https://www.youtube.com/watch?v=7X02TjEiEGU"
+	},
+	{
+		"date": "2024/01/17",
+		"track": 4,
+		"song": "ねぇ",
+		"singer": "藤田麻衣子",
+		"YTLink": "https://www.youtube.com/watch?v=7X02TjEiEGU"
+	},
+	{
+		"date": "2024/01/17",
+		"track": 5,
+		"song": "僕らの戦場",
+		"singer": "ワルキューレ",
+		"YTLink": "https://www.youtube.com/watch?v=7X02TjEiEGU"
+	},
+	{
+		"date": "2024/01/17",
+		"track": 6,
+		"song": "Baby Sweet Berry Love",
+		"singer": "小倉唯",
+		"YTLink": "https://www.youtube.com/watch?v=7X02TjEiEGU"
+	},
+	{
+		"date": "2024/01/17",
+		"track": 7,
+		"song": "ヒトリゴト",
+		"singer": "ClariS",
+		"YTLink": "https://www.youtube.com/watch?v=7X02TjEiEGU"
+	},
+	{
+		"date": "2024/01/17",
+		"track": 8,
+		"song": "adrenaline!!!",
+		"singer": "TrySail",
+		"YTLink": "https://www.youtube.com/watch?v=7X02TjEiEGU"
+	},
+	{
+		"date": "2024/01/17",
+		"track": 9,
+		"song": "明け星",
+		"singer": "LiSA",
+		"YTLink": "https://www.youtube.com/watch?v=7X02TjEiEGU"
+	},
+	{
+		"date": "2024/01/17",
+		"track": 10,
+		"song": "Diamonds",
+		"singer": "PRINCESS PRINCESS",
+		"YTLink": "https://www.youtube.com/watch?v=7X02TjEiEGU"
+	},
+	{
+		"date": "2024/01/17",
+		"track": 11,
+		"song": "空色デイズ",
+		"singer": "中川翔子",
+		"YTLink": "https://www.youtube.com/watch?v=7X02TjEiEGU"
+	},
+	{
+		"date": "2024/01/17",
+		"track": 12,
+		"song": "Stay Alive",
+		"singer": "エミリア(高橋李依)",
+		"YTLink": "https://www.youtube.com/watch?v=7X02TjEiEGU"
+	},
+	{
+		"date": "2024/01/17",
+		"track": 13,
+		"song": "rain stops, good-bye",
+		"singer": "におP",
+		"YTLink": "https://www.youtube.com/watch?v=7X02TjEiEGU"
+	},
+	{
+		"date": "2024/01/17",
+		"track": 14,
+		"song": "ユメノトビラ",
+		"singer": "μ's",
+		"YTLink": "https://www.youtube.com/watch?v=7X02TjEiEGU"
+	},
+	{
+		"date": "2024/01/17",
+		"track": 15,
+		"song": "ダイアモンド クレバス",
+		"singer": "シェリル・ノーム(May'n)",
+		"YTLink": "https://www.youtube.com/watch?v=7X02TjEiEGU"
+	},
+	{
+		"date": "2024/01/17",
+		"track": 16,
+		"song": "ドライフラワー",
+		"singer": "優里",
+		"YTLink": "https://www.youtube.com/watch?v=7X02TjEiEGU"
+	},
+	{
+		"date": "2024/01/17",
+		"track": 17,
+		"song": "YUME日和",
+		"singer": "島谷ひとみ",
+		"YTLink": "https://www.youtube.com/watch?v=7X02TjEiEGU"
+	},
+	{
+		"date": "2024/01/17",
+		"track": 18,
+		"song": "ボクノート",
+		"singer": "スキマスイッチ",
+		"YTLink": "https://www.youtube.com/watch?v=7X02TjEiEGU"
+	},
+	{
+		"date": "2024/01/17",
+		"track": 19,
+		"song": "奏",
+		"singer": "スキマスイッチ",
+		"YTLink": "https://www.youtube.com/watch?v=7X02TjEiEGU"
+	},
+	{
+		"date": "2024/01/17",
+		"track": 20,
+		"song": "I Love. you love.",
+		"singer": "苺咲べりぃ",
+		"YTLink": "https://www.youtube.com/watch?v=7X02TjEiEGU"
+	},
+	{
+		"date": "2024/01/16",
+		"track": 1,
+		"song": "花になって",
+		"singer": "緑黄色社会",
+		"YTLink": "https://www.youtube.com/watch?v=mrOI9Op8Dp0"
+	},
+	{
+		"date": "2024/01/16",
+		"track": 2,
+		"song": "Mela!",
+		"singer": "緑黄色社会",
+		"YTLink": "https://www.youtube.com/watch?v=mrOI9Op8Dp0"
+	},
+	{
+		"date": "2024/01/16",
+		"track": 3,
+		"song": "気まぐれロマンティック",
+		"singer": "いきものがかり",
+		"YTLink": "https://www.youtube.com/watch?v=mrOI9Op8Dp0"
+	},
+	{
+		"date": "2024/01/16",
+		"track": 4,
+		"song": "そばかす",
+		"singer": "JUDY AND MARY",
+		"YTLink": "https://www.youtube.com/watch?v=mrOI9Op8Dp0"
+	},
+	{
+		"date": "2024/01/16",
+		"track": 5,
+		"song": "ガーネット",
+		"singer": "奥華子",
+		"YTLink": "https://www.youtube.com/watch?v=mrOI9Op8Dp0"
+	},
+	{
+		"date": "2024/01/16",
+		"track": 6,
+		"song": "フリージア",
+		"singer": "Uru",
+		"YTLink": "https://www.youtube.com/watch?v=mrOI9Op8Dp0"
+	},
+	{
+		"date": "2024/01/16",
+		"track": 7,
+		"song": "プラチナ",
+		"singer": "坂本真綾",
+		"YTLink": "https://www.youtube.com/watch?v=mrOI9Op8Dp0"
+	},
+	{
 		"date": "2024/01/11",
 		"track": 1,
 		"song": "アイドル",
@@ -4207,7 +4495,7 @@
 		"date": "2023/10/24",
 		"track": 12,
 		"song": "ノーザンクロス",
-		"singer": "シェリル・ノーム/May'n",
+		"singer": "シェリル・ノーム(May'n)",
 		"YTLink": "https://www.youtube.com/watch?v=szJfwSnhv5c"
 	},
 	{
@@ -9111,7 +9399,7 @@
 		"date": "2023/08/15",
 		"track": "10",
 		"song": "ノーザンクロス",
-		"singer": "シェリル・ノーム/May'n",
+		"singer": "シェリル・ノーム(May'n)",
 		"note": "",
 		"YTLink": "https://www.youtube.com/watch?v=NEfr4c9Lc3s"
 	},
@@ -13015,7 +13303,7 @@
 		"date": "2023/06/24",
 		"track": "78",
 		"song": "ノーザンクロス",
-		"singer": "シェリル・ノーム/May'n",
+		"singer": "シェリル・ノーム(May'n)",
 		"note": "",
 		"YTLink": "https://www.youtube.com/watch?v=ZyQZagrDY_Q"
 	},
@@ -13623,7 +13911,7 @@
 		"date": "2023/06/20",
 		"track": "8",
 		"song": "ノーザンクロス",
-		"singer": "シェリル・ノーム/May'n",
+		"singer": "シェリル・ノーム(May'n)",
 		"note": "",
 		"YTLink": "https://www.youtube.com/watch?v=QzBMTAuMovg"
 	},
