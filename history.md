@@ -1,5 +1,5 @@
 ﻿## 2024
-* 2024/01/16　新衣装お披露目
+* 2024/01/16　[新衣装お披露目](https://www.youtube.com/watch?v=_puahGBIXPs)
 
 ## 2023
 * 2023/12/31　[國際 Vtuber Vsinger 紅白歌合戰 2023 参加](https://www.youtube.com/watch?v=qCrihRF4wvM&t=2664s)

@@ -263,7 +263,7 @@ $(()=>{
       urlField:"YTLink",
     }},
     {title:"Track", field:"track", sorter:'number'},
-    {title:"Song", field:"song", topCalc:'count', topCalcFormatter:(c=>'total/小計：'+c.getValue()), headerFilter:select2, headerFilterParams:{field:"song"}, headerSort:false},
+    {title:"Song", field:"song", topCalc:'count', topCalcFormatter:(c=>'subtotal/小計：'+c.getValue()), headerFilter:select2, headerFilterParams:{field:"song"}, headerSort:false},
     {title:"singer", field:"singer", headerFilter:select2, headerFilterParams:{field:"singer"}, headerSort:false},
     {title:"note", field:"note", headerFilter:select2, headerFilterParams:{field:"note"}, headerSort:false},
     {title:"YTLink", field:"YTLink", visible: false, download:true},
@@ -272,7 +272,7 @@ $(()=>{
   var streamlistColDef = [
     {title:"thumbnail", formatter:imageLink, headerFilter:false},
     {title:"id", field:"id", visible: false, download:true},
-    {title:"title", field:"title", width:300, topCalc:'count',topCalcFormatter:(c=>'total/小計：'+c.getValue()), formatter:multiLineLinkFormat},
+    {title:"title", field:"title", width:300, topCalc:'count',topCalcFormatter:(c=>'subtotal/小計：'+c.getValue()), formatter:multiLineLinkFormat},
     {title:`local time(${dayjs().format('Z')})`, field:"time", mutator:((cell)=>dayjs(cell).format('YYYY/MM/DD HH:mm')), accessor:((value)=>dayjs(value).toJSON())},
     {title:"category", field:"category", headerFilter:select2, headerFilterParams:{field:'category'}, headerSort:false, editor:select2, editorParams:{field:'category'}, formatter:(cell=>{
       cell.getElement().style.whiteSpace ='pre-line'

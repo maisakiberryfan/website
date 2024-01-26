@@ -1,5 +1,285 @@
 [
 	{
+		"date": "2024/01/24",
+		"track": 1,
+		"song": "キラキラ",
+		"singer": "aiko",
+		"YTLink": "https://www.youtube.com/watch?v=rcZmY0GCWXQ"
+	},
+	{
+		"date": "2024/01/24",
+		"track": 2,
+		"song": "地球最後の告白を",
+		"singer": "Kemu",
+		"YTLink": "https://www.youtube.com/watch?v=rcZmY0GCWXQ"
+	},
+	{
+		"date": "2024/01/24",
+		"track": 3,
+		"song": "花になって",
+		"singer": "緑黄色社会",
+		"YTLink": "https://www.youtube.com/watch?v=rcZmY0GCWXQ"
+	},
+	{
+		"date": "2024/01/24",
+		"track": 4,
+		"song": "初めての恋が終わる時",
+		"singer": "Ryo",
+		"YTLink": "https://www.youtube.com/watch?v=rcZmY0GCWXQ"
+	},
+	{
+		"date": "2024/01/24",
+		"track": 5,
+		"song": "冬のうた",
+		"singer": "Kiroro",
+		"YTLink": "https://www.youtube.com/watch?v=rcZmY0GCWXQ"
+	},
+	{
+		"date": "2024/01/24",
+		"track": 6,
+		"song": "チェリー",
+		"singer": "スピッツ",
+		"YTLink": "https://www.youtube.com/watch?v=rcZmY0GCWXQ"
+	},
+	{
+		"date": "2024/01/24",
+		"track": 7,
+		"song": "アイネクライネ",
+		"singer": "米津玄師",
+		"YTLink": "https://www.youtube.com/watch?v=rcZmY0GCWXQ"
+	},
+	{
+		"date": "2024/01/24",
+		"track": 8,
+		"song": "ポケット",
+		"singer": "大塚愛",
+		"YTLink": "https://www.youtube.com/watch?v=rcZmY0GCWXQ"
+	},
+	{
+		"date": "2024/01/24",
+		"track": 9,
+		"song": "ノスタルジア",
+		"singer": "いきものがかり",
+		"YTLink": "https://www.youtube.com/watch?v=rcZmY0GCWXQ"
+	},
+	{
+		"date": "2024/01/24",
+		"track": 10,
+		"song": "トリセツ",
+		"singer": "西野カナ",
+		"YTLink": "https://www.youtube.com/watch?v=rcZmY0GCWXQ"
+	},
+	{
+		"date": "2024/01/24",
+		"track": 11,
+		"song": "放課後オーバーフロウ",
+		"singer": "ランカ・リー(中島愛)",
+		"YTLink": "https://www.youtube.com/watch?v=rcZmY0GCWXQ"
+	},
+	{
+		"date": "2024/01/24",
+		"track": 12,
+		"song": "愛をこめて花束を",
+		"singer": "superfly",
+		"YTLink": "https://www.youtube.com/watch?v=rcZmY0GCWXQ"
+	},
+	{
+		"date": "2024/01/24",
+		"track": 13,
+		"song": "BON VOYAGE!",
+		"singer": "Bon-Bon Blanco",
+		"YTLink": "https://www.youtube.com/watch?v=rcZmY0GCWXQ"
+	},
+	{
+		"date": "2024/01/24",
+		"track": 14,
+		"song": "大正浪漫",
+		"singer": "YOASOBI",
+		"YTLink": "https://www.youtube.com/watch?v=rcZmY0GCWXQ"
+	},
+	{
+		"date": "2024/01/24",
+		"track": 15,
+		"song": "勇者",
+		"singer": "YOASOBI",
+		"YTLink": "https://www.youtube.com/watch?v=rcZmY0GCWXQ"
+	},
+	{
+		"date": "2024/01/24",
+		"track": 16,
+		"song": "プラネタリウム",
+		"singer": "大塚愛",
+		"YTLink": "https://www.youtube.com/watch?v=rcZmY0GCWXQ"
+	},
+	{
+		"date": "2024/01/24",
+		"track": 17,
+		"song": "マリーゴールド",
+		"singer": "あいみょん",
+		"YTLink": "https://www.youtube.com/watch?v=rcZmY0GCWXQ"
+	},
+	{
+		"date": "2024/01/24",
+		"track": 18,
+		"song": "甘えんぼ",
+		"singer": "大塚愛",
+		"YTLink": "https://www.youtube.com/watch?v=rcZmY0GCWXQ"
+	},
+	{
+		"date": "2024/01/24",
+		"track": 19,
+		"song": "fragile",
+		"singer": "Every Little Thing",
+		"YTLink": "https://www.youtube.com/watch?v=rcZmY0GCWXQ"
+	},
+	{
+		"date": "2024/01/24",
+		"track": 20,
+		"song": "Crosswalk",
+		"singer": "鈴木みのり",
+		"YTLink": "https://www.youtube.com/watch?v=rcZmY0GCWXQ"
+	},
+	{
+		"date": "2024/01/23",
+		"track": 1,
+		"song": "晴る",
+		"singer": "ヨルシカ",
+		"YTLink": "https://www.youtube.com/watch?v=GQSRYUUx7Cs"
+	},
+	{
+		"date": "2024/01/23",
+		"track": 2,
+		"song": "Time goes by",
+		"singer": "Every Little Thing",
+		"YTLink": "https://www.youtube.com/watch?v=GQSRYUUx7Cs"
+	},
+	{
+		"date": "2024/01/23",
+		"track": 3,
+		"song": "YUME日和",
+		"singer": "島谷ひとみ",
+		"YTLink": "https://www.youtube.com/watch?v=GQSRYUUx7Cs"
+	},
+	{
+		"date": "2024/01/23",
+		"track": 4,
+		"song": "ボクノート",
+		"singer": "スキマスイッチ",
+		"YTLink": "https://www.youtube.com/watch?v=GQSRYUUx7Cs"
+	},
+	{
+		"date": "2024/01/23",
+		"track": 5,
+		"song": "亜麻色の髪の乙女",
+		"singer": "島谷ひとみ",
+		"YTLink": "https://www.youtube.com/watch?v=GQSRYUUx7Cs"
+	},
+	{
+		"date": "2024/01/23",
+		"track": 6,
+		"song": "Mela!",
+		"singer": "緑黄色社会",
+		"YTLink": "https://www.youtube.com/watch?v=GQSRYUUx7Cs"
+	},
+	{
+		"date": "2024/01/23",
+		"track": 7,
+		"song": "カントリー・ロード",
+		"singer": "本名陽子",
+		"YTLink": "https://www.youtube.com/watch?v=GQSRYUUx7Cs"
+	},
+	{
+		"date": "2024/01/23",
+		"track": 8,
+		"song": "アイノカタチ",
+		"singer": "MISIA",
+		"YTLink": "https://www.youtube.com/watch?v=GQSRYUUx7Cs"
+	},
+	{
+		"date": "2024/01/23",
+		"track": 9,
+		"song": "Snow halation",
+		"singer": "μ's",
+		"YTLink": "https://www.youtube.com/watch?v=GQSRYUUx7Cs"
+	},
+	{
+		"date": "2024/01/23",
+		"track": 10,
+		"song": "Pretender",
+		"singer": "Official髭男dism",
+		"YTLink": "https://www.youtube.com/watch?v=GQSRYUUx7Cs"
+	},
+	{
+		"date": "2024/01/23",
+		"track": 11,
+		"song": "ENDLESS STORY",
+		"singer": "伊藤由奈",
+		"YTLink": "https://www.youtube.com/watch?v=GQSRYUUx7Cs"
+	},
+	{
+		"date": "2024/01/23",
+		"track": 12,
+		"song": "ゲレンデがとけるほど恋したい",
+		"singer": "広瀬香美",
+		"YTLink": "https://www.youtube.com/watch?v=GQSRYUUx7Cs"
+	},
+	{
+		"date": "2024/01/23",
+		"track": 13,
+		"song": "フリージア",
+		"singer": "Uru",
+		"YTLink": "https://www.youtube.com/watch?v=GQSRYUUx7Cs"
+	},
+	{
+		"date": "2024/01/23",
+		"track": 14,
+		"song": "AXIA～ダイスキでダイキライ～",
+		"singer": "ワルキューレ",
+		"YTLink": "https://www.youtube.com/watch?v=GQSRYUUx7Cs"
+	},
+	{
+		"date": "2024/01/23",
+		"track": 15,
+		"song": "春泥棒",
+		"singer": "ヨルシカ",
+		"YTLink": "https://www.youtube.com/watch?v=GQSRYUUx7Cs"
+	},
+	{
+		"date": "2024/01/23",
+		"track": 16,
+		"song": "ORION",
+		"singer": "中島美嘉",
+		"YTLink": "https://www.youtube.com/watch?v=GQSRYUUx7Cs"
+	},
+	{
+		"date": "2024/01/23",
+		"track": 17,
+		"song": "クムリウタ",
+		"singer": "大塚愛",
+		"YTLink": "https://www.youtube.com/watch?v=GQSRYUUx7Cs"
+	},
+	{
+		"date": "2024/01/23",
+		"track": 18,
+		"song": "愛してるばんざーい!",
+		"singer": "μ's",
+		"YTLink": "https://www.youtube.com/watch?v=GQSRYUUx7Cs"
+	},
+	{
+		"date": "2024/01/23",
+		"track": 19,
+		"song": "クラゲ、流れ星",
+		"singer": "大塚愛",
+		"YTLink": "https://www.youtube.com/watch?v=GQSRYUUx7Cs"
+	},
+	{
+		"date": "2024/01/23",
+		"track": 20,
+		"song": "心が、青い。",
+		"singer": "鈴木みのり",
+		"YTLink": "https://www.youtube.com/watch?v=GQSRYUUx7Cs"
+	},
+	{
 		"date": "2024/01/18",
 		"track": 1,
 		"song": "晴る",
