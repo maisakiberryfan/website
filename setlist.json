@@ -1,5 +1,145 @@
 [
 	{
+		"date": "2024/01/28",
+		"track": 1,
+		"song": "向日葵",
+		"singer": "Ado",
+		"YTLink": "https://www.youtube.com/watch?v=TSqRfyFzgas"
+	},
+	{
+		"date": "2024/01/28",
+		"track": 2,
+		"song": "アナタノオト",
+		"singer": "ランカ・リー(中島愛)",
+		"YTLink": "https://www.youtube.com/watch?v=TSqRfyFzgas"
+	},
+	{
+		"date": "2024/01/28",
+		"track": 3,
+		"song": "Crosswalk",
+		"singer": "鈴木みのり",
+		"YTLink": "https://www.youtube.com/watch?v=TSqRfyFzgas"
+	},
+	{
+		"date": "2024/01/28",
+		"track": 4,
+		"song": "長い間",
+		"singer": "Kiroro",
+		"YTLink": "https://www.youtube.com/watch?v=TSqRfyFzgas"
+	},
+	{
+		"date": "2024/01/28",
+		"track": 5,
+		"song": "プラネタリウム",
+		"singer": "大塚愛",
+		"YTLink": "https://www.youtube.com/watch?v=TSqRfyFzgas"
+	},
+	{
+		"date": "2024/01/28",
+		"track": 6,
+		"song": "大好きだよ。",
+		"singer": "大塚愛",
+		"YTLink": "https://www.youtube.com/watch?v=TSqRfyFzgas"
+	},
+	{
+		"date": "2024/01/28",
+		"track": 7,
+		"song": "ラストシーン",
+		"singer": "いきものがかり",
+		"YTLink": "https://www.youtube.com/watch?v=TSqRfyFzgas"
+	},
+	{
+		"date": "2024/01/28",
+		"track": 8,
+		"song": "たばこ",
+		"singer": "コレサワ",
+		"YTLink": "https://www.youtube.com/watch?v=TSqRfyFzgas"
+	},
+	{
+		"date": "2024/01/28",
+		"track": 9,
+		"song": "ただ君に晴れ",
+		"singer": "ヨルシカ",
+		"YTLink": "https://www.youtube.com/watch?v=TSqRfyFzgas"
+	},
+	{
+		"date": "2024/01/28",
+		"track": 10,
+		"song": "カブトムシ",
+		"singer": "aiko",
+		"YTLink": "https://www.youtube.com/watch?v=TSqRfyFzgas"
+	},
+	{
+		"date": "2024/01/28",
+		"track": 11,
+		"song": "裸の心",
+		"singer": "あいみょん",
+		"YTLink": "https://www.youtube.com/watch?v=TSqRfyFzgas"
+	},
+	{
+		"date": "2024/01/28",
+		"track": 12,
+		"song": "蕾",
+		"singer": "コブクロ",
+		"YTLink": "https://www.youtube.com/watch?v=TSqRfyFzgas"
+	},
+	{
+		"date": "2024/01/28",
+		"track": 13,
+		"song": "歌に形はないけれど",
+		"singer": "きりたんP(doriko)",
+		"YTLink": "https://www.youtube.com/watch?v=TSqRfyFzgas"
+	},
+	{
+		"date": "2024/01/28",
+		"track": 14,
+		"song": "letter song",
+		"singer": "きりたんP(doriko)",
+		"YTLink": "https://www.youtube.com/watch?v=TSqRfyFzgas"
+	},
+	{
+		"date": "2024/01/28",
+		"track": 15,
+		"song": "あんなに一緒だったのに",
+		"singer": "See-Saw",
+		"YTLink": "https://www.youtube.com/watch?v=TSqRfyFzgas"
+	},
+	{
+		"date": "2024/01/28",
+		"track": 16,
+		"song": "ダイアモンド クレバス",
+		"singer": "シェリル・ノーム(May'n)",
+		"YTLink": "https://www.youtube.com/watch?v=TSqRfyFzgas"
+	},
+	{
+		"date": "2024/01/28",
+		"track": 17,
+		"song": "瑠璃色の地球",
+		"singer": "松田聖子",
+		"YTLink": "https://www.youtube.com/watch?v=TSqRfyFzgas"
+	},
+	{
+		"date": "2024/01/28",
+		"track": 18,
+		"song": "それを愛と呼ぶなら",
+		"singer": "Uru",
+		"YTLink": "https://www.youtube.com/watch?v=TSqRfyFzgas"
+	},
+	{
+		"date": "2024/01/28",
+		"track": 19,
+		"song": "アムリタ",
+		"singer": "牧野由依",
+		"YTLink": "https://www.youtube.com/watch?v=TSqRfyFzgas"
+	},
+	{
+		"date": "2024/01/28",
+		"track": 20,
+		"song": "silhouette",
+		"singer": "苺咲べりぃ",
+		"YTLink": "https://www.youtube.com/watch?v=TSqRfyFzgas"
+	},
+	{
 		"date": "2024/01/24",
 		"track": 1,
 		"song": "キラキラ",
@@ -27127,7 +27267,7 @@
 		"date": "2022/12/11",
 		"track": "25",
 		"song": "silhouette",
-		"singer": "",
+		"singer": "苺咲べりぃ",
 		"note": "オリソン",
 		"YTLink": "https://www.youtube.com/watch?v=B_ZtDyoJ9vs"
 	},
@@ -28047,7 +28187,7 @@
 		"date": "2022/12/01",
 		"track": "20",
 		"song": "silhouette",
-		"singer": "",
+		"singer": "苺咲べりぃ",
 		"note": "オリソン",
 		"YTLink": "https://www.youtube.com/watch?v=ylaNxFX9leE"
 	},
@@ -29143,7 +29283,7 @@
 		"date": "2022/11/19",
 		"track": "20",
 		"song": "silhouette",
-		"singer": "",
+		"singer": "苺咲べりぃ",
 		"note": "オリソン",
 		"YTLink": "https://www.youtube.com/watch?v=N0xuiHyr25Q"
 	},
@@ -30663,7 +30803,7 @@
 		"date": "2022/11/07",
 		"track": "25",
 		"song": "silhouette",
-		"singer": "",
+		"singer": "苺咲べりぃ",
 		"note": "オリソン",
 		"YTLink": "https://www.youtube.com/watch?v=szGKVd89H90"
 	},
@@ -32023,7 +32163,7 @@
 		"date": "2022/10/26",
 		"track": "40",
 		"song": "silhouette",
-		"singer": "",
+		"singer": "苺咲べりぃ",
 		"note": "耐久/オリソン",
 		"YTLink": "https://www.youtube.com/watch?v=SWzFHtvZu48"
 	},
@@ -32511,7 +32651,7 @@
 		"date": "2022/10/22",
 		"track": "61",
 		"song": "silhouette",
-		"singer": "",
+		"singer": "苺咲べりぃ",
 		"note": "耐久/オリソン",
 		"YTLink": "https://www.youtube.com/watch?v=NNZErosM_zg"
 	},
@@ -34303,7 +34443,7 @@
 		"date": "2022/09/27",
 		"track": "25",
 		"song": "silhouette",
-		"singer": "",
+		"singer": "苺咲べりぃ",
 		"note": "オリソン",
 		"YTLink": "https://www.youtube.com/watch?v=QF4UZV5VA4Q"
 	},
@@ -34743,7 +34883,7 @@
 		"date": "2022/09/20",
 		"track": "25",
 		"song": "silhouette",
-		"singer": "",
+		"singer": "苺咲べりぃ",
 		"note": "バラード/オリソン/初回",
 		"YTLink": "https://www.youtube.com/watch?v=Jd1-YX1wGdg"
 	},
