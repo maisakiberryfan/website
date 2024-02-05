@@ -1,5 +1,145 @@
 [
 	{
+		"date": "2024/02/05",
+		"track": 1,
+		"song": "雪の華",
+		"singer": "中島美嘉",
+		"YTLink": "https://www.youtube.com/watch?v=1M70ksVbjAM"
+	},
+	{
+		"date": "2024/02/05",
+		"track": 2,
+		"song": "Let It Go～ありのままで～",
+		"singer": "松たか子",
+		"YTLink": "https://www.youtube.com/watch?v=1M70ksVbjAM"
+	},
+	{
+		"date": "2024/02/05",
+		"track": 3,
+		"song": "ゲレンデがとけるほど恋したい",
+		"singer": "広瀬香美",
+		"YTLink": "https://www.youtube.com/watch?v=1M70ksVbjAM"
+	},
+	{
+		"date": "2024/02/05",
+		"track": 4,
+		"song": "甘えんぼ",
+		"singer": "大塚愛",
+		"YTLink": "https://www.youtube.com/watch?v=1M70ksVbjAM"
+	},
+	{
+		"date": "2024/02/05",
+		"track": 5,
+		"song": "愛のうた",
+		"singer": "倖田來未",
+		"YTLink": "https://www.youtube.com/watch?v=1M70ksVbjAM"
+	},
+	{
+		"date": "2024/02/05",
+		"track": 6,
+		"song": "ORION",
+		"singer": "中島美嘉",
+		"YTLink": "https://www.youtube.com/watch?v=1M70ksVbjAM"
+	},
+	{
+		"date": "2024/02/05",
+		"track": 7,
+		"song": "ありがとう",
+		"singer": "いきものがかり",
+		"YTLink": "https://www.youtube.com/watch?v=1M70ksVbjAM"
+	},
+	{
+		"date": "2024/02/05",
+		"track": 8,
+		"song": "プラネタリウム",
+		"singer": "大塚愛",
+		"YTLink": "https://www.youtube.com/watch?v=1M70ksVbjAM"
+	},
+	{
+		"date": "2024/02/05",
+		"track": 9,
+		"song": "粉雪",
+		"singer": "レミオロメン",
+		"YTLink": "https://www.youtube.com/watch?v=1M70ksVbjAM"
+	},
+	{
+		"date": "2024/02/05",
+		"track": 10,
+		"song": "プロローグ",
+		"singer": "Uru",
+		"YTLink": "https://www.youtube.com/watch?v=1M70ksVbjAM"
+	},
+	{
+		"date": "2024/02/05",
+		"track": 11,
+		"song": "White Love",
+		"singer": "SPEED",
+		"YTLink": "https://www.youtube.com/watch?v=1M70ksVbjAM"
+	},
+	{
+		"date": "2024/02/05",
+		"track": 12,
+		"song": "炎",
+		"singer": "LiSA",
+		"YTLink": "https://www.youtube.com/watch?v=1M70ksVbjAM"
+	},
+	{
+		"date": "2024/02/05",
+		"track": 13,
+		"song": "Snow halation",
+		"singer": "μ's",
+		"YTLink": "https://www.youtube.com/watch?v=1M70ksVbjAM"
+	},
+	{
+		"date": "2024/02/05",
+		"track": 14,
+		"song": "深愛",
+		"singer": "水樹奈々",
+		"YTLink": "https://www.youtube.com/watch?v=1M70ksVbjAM"
+	},
+	{
+		"date": "2024/02/05",
+		"track": 15,
+		"song": "冬のうた",
+		"singer": "Kiroro",
+		"YTLink": "https://www.youtube.com/watch?v=1M70ksVbjAM"
+	},
+	{
+		"date": "2024/02/05",
+		"track": 16,
+		"song": "Winter Love",
+		"singer": "BoA",
+		"YTLink": "https://www.youtube.com/watch?v=1M70ksVbjAM"
+	},
+	{
+		"date": "2024/02/05",
+		"track": 17,
+		"song": "ベテルギウス",
+		"singer": "優里",
+		"YTLink": "https://www.youtube.com/watch?v=1M70ksVbjAM"
+	},
+	{
+		"date": "2024/02/05",
+		"track": 18,
+		"song": "初めての恋が終わる時",
+		"singer": "Ryo",
+		"YTLink": "https://www.youtube.com/watch?v=1M70ksVbjAM"
+	},
+	{
+		"date": "2024/02/05",
+		"track": 19,
+		"song": "God Bless You",
+		"singer": "ワルキューレ",
+		"YTLink": "https://www.youtube.com/watch?v=1M70ksVbjAM"
+	},
+	{
+		"date": "2024/02/05",
+		"track": 20,
+		"song": "春、青く澄みわたり",
+		"singer": "苺咲べりぃ",
+		"YTLink": "https://www.youtube.com/watch?v=1M70ksVbjAM"
+	},
+	{
 		"date": "2024/02/01",
 		"track": 1,
 		"song": "タッチ",
