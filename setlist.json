@@ -1,5 +1,286 @@
 [
 	{
+		"date": "2024/02/15",
+		"track": 1,
+		"song": "晴る",
+		"singer": "ヨルシカ",
+		"YTLink": "https://www.youtube.com/watch?v=APsWa17nmiA"
+	},
+	{
+		"date": "2024/02/15",
+		"track": 2,
+		"song": "気まぐれロマンティック",
+		"singer": "いきものがかり",
+		"YTLink": "https://www.youtube.com/watch?v=APsWa17nmiA"
+	},
+	{
+		"date": "2024/02/15",
+		"track": 3,
+		"song": "夏祭り",
+		"singer": "whiteberry",
+		"YTLink": "https://www.youtube.com/watch?v=APsWa17nmiA"
+	},
+	{
+		"date": "2024/02/15",
+		"track": 4,
+		"song": "Mela!",
+		"singer": "緑黄色社会",
+		"YTLink": "https://www.youtube.com/watch?v=APsWa17nmiA"
+	},
+	{
+		"date": "2024/02/15",
+		"track": 5,
+		"song": "花になって",
+		"singer": "緑黄色社会",
+		"YTLink": "https://www.youtube.com/watch?v=APsWa17nmiA"
+	},
+	{
+		"date": "2024/02/15",
+		"track": 6,
+		"song": "ユメクイ",
+		"singer": "大塚愛",
+		"YTLink": "https://www.youtube.com/watch?v=APsWa17nmiA"
+	},
+	{
+		"date": "2024/02/15",
+		"track": 7,
+		"song": "KissHug",
+		"singer": "aiko",
+		"YTLink": "https://www.youtube.com/watch?v=APsWa17nmiA"
+	},
+	{
+		"date": "2024/02/15",
+		"track": 8,
+		"song": "プラチナ",
+		"singer": "坂本真綾",
+		"YTLink": "https://www.youtube.com/watch?v=APsWa17nmiA"
+	},
+	{
+		"date": "2024/02/15",
+		"track": 9,
+		"song": "YUME日和",
+		"singer": "島谷ひとみ",
+		"YTLink": "https://www.youtube.com/watch?v=APsWa17nmiA"
+	},
+	{
+		"date": "2024/02/15",
+		"track": 10,
+		"song": "ハルノヒ",
+		"singer": "あいみょん",
+		"YTLink": "https://www.youtube.com/watch?v=APsWa17nmiA"
+	},
+	{
+		"date": "2024/02/15",
+		"track": 11,
+		"song": "First Love",
+		"singer": "宇多田ヒカル",
+		"YTLink": "https://www.youtube.com/watch?v=APsWa17nmiA"
+	},
+	{
+		"date": "2024/02/15",
+		"track": 12,
+		"song": "うるわしきひと",
+		"singer": "いきものがかり",
+		"YTLink": "https://www.youtube.com/watch?v=APsWa17nmiA"
+	},
+	{
+		"date": "2024/02/15",
+		"track": 13,
+		"song": "SAKURA",
+		"singer": "いきものがかり",
+		"YTLink": "https://www.youtube.com/watch?v=APsWa17nmiA"
+	},
+	{
+		"date": "2024/02/15",
+		"track": 14,
+		"song": "桜色舞うころ",
+		"singer": "中島美嘉",
+		"YTLink": "https://www.youtube.com/watch?v=APsWa17nmiA"
+	},
+	{
+		"date": "2024/02/15",
+		"track": 15,
+		"song": "桜の時",
+		"singer": "aiko",
+		"YTLink": "https://www.youtube.com/watch?v=APsWa17nmiA"
+	},
+	{
+		"date": "2024/02/15",
+		"track": 16,
+		"song": "世界は恋に落ちている",
+		"singer": "CHiCO",
+		"YTLink": "https://www.youtube.com/watch?v=APsWa17nmiA"
+	},
+	{
+		"date": "2024/02/15",
+		"track": 17,
+		"song": "オトメロディー",
+		"singer": "高橋美佳子",
+		"YTLink": "https://www.youtube.com/watch?v=APsWa17nmiA"
+	},
+	{
+		"date": "2024/02/15",
+		"track": 18,
+		"song": "はっぴぃ にゅう にゃあ",
+		"singer": "芹沢文乃(伊藤かな恵),梅ノ森千世(井口裕香),霧谷希(竹達彩奈)",
+		"note": "初回",
+		"YTLink": "https://www.youtube.com/watch?v=APsWa17nmiA"
+	},
+	{
+		"date": "2024/02/15",
+		"track": 19,
+		"song": "虹が架かるまでの話",
+		"singer": "堀江由衣",
+		"YTLink": "https://www.youtube.com/watch?v=APsWa17nmiA"
+	},
+	{
+		"date": "2024/02/15",
+		"track": 20,
+		"song": "桜色√END",
+		"singer": "苺咲べりぃ",
+		"YTLink": "https://www.youtube.com/watch?v=APsWa17nmiA"
+	},
+	{
+		"date": "2024/02/14",
+		"track": 1,
+		"song": "バレンタイン・キッス",
+		"singer": "国生さゆり",
+		"YTLink": "https://www.youtube.com/watch?v=gKnBFgsurAI"
+	},
+	{
+		"date": "2024/02/14",
+		"track": 2,
+		"song": "恋愛サーキュレーション",
+		"singer": "千石撫子(花澤香菜)",
+		"YTLink": "https://www.youtube.com/watch?v=gKnBFgsurAI"
+	},
+	{
+		"date": "2024/02/14",
+		"track": 3,
+		"song": "Honey♥Come!!",
+		"singer": "小倉唯",
+		"YTLink": "https://www.youtube.com/watch?v=gKnBFgsurAI"
+	},
+	{
+		"date": "2024/02/14",
+		"track": 4,
+		"song": "秘密の扉から会いにきて",
+		"singer": "田村ゆかり",
+		"YTLink": "https://www.youtube.com/watch?v=gKnBFgsurAI"
+	},
+	{
+		"date": "2024/02/14",
+		"track": 5,
+		"song": "ヘビーローテーション",
+		"singer": "AKB48",
+		"YTLink": "https://www.youtube.com/watch?v=gKnBFgsurAI"
+	},
+	{
+		"date": "2024/02/14",
+		"track": 6,
+		"song": "大声ダイヤモンド",
+		"singer": "AKB48",
+		"YTLink": "https://www.youtube.com/watch?v=gKnBFgsurAI"
+	},
+	{
+		"date": "2024/02/14",
+		"track": 7,
+		"song": "可愛くてごめん",
+		"singer": "HoneyWorks",
+		"YTLink": "https://www.youtube.com/watch?v=gKnBFgsurAI"
+	},
+	{
+		"date": "2024/02/14",
+		"track": 8,
+		"song": "さくらんぼ",
+		"singer": "大塚愛",
+		"YTLink": "https://www.youtube.com/watch?v=gKnBFgsurAI"
+	},
+	{
+		"date": "2024/02/14",
+		"track": 9,
+		"song": "虹いろ・クマクマ",
+		"singer": "ランカ・リー(中島愛)",
+		"YTLink": "https://www.youtube.com/watch?v=gKnBFgsurAI"
+	},
+	{
+		"date": "2024/02/14",
+		"track": 10,
+		"song": "シル・ヴ・プレジデント",
+		"singer": "P丸様。",
+		"YTLink": "https://www.youtube.com/watch?v=gKnBFgsurAI"
+	},
+	{
+		"date": "2024/02/14",
+		"track": 11,
+		"song": "同担☆拒否",
+		"singer": "HoneyWorks",
+		"YTLink": "https://www.youtube.com/watch?v=gKnBFgsurAI"
+	},
+	{
+		"date": "2024/02/14",
+		"track": 12,
+		"song": "恋するフォーチュンクッキー",
+		"singer": "AKB48",
+		"YTLink": "https://www.youtube.com/watch?v=gKnBFgsurAI"
+	},
+	{
+		"date": "2024/02/14",
+		"track": 13,
+		"song": "オレンジ",
+		"singer": "流田Project(釘宮理恵,堀江由衣,喜多村英梨)",
+		"YTLink": "https://www.youtube.com/watch?v=gKnBFgsurAI"
+	},
+	{
+		"date": "2024/02/14",
+		"track": 14,
+		"song": "ようこそジャパリパークへ",
+		"singer": "どうぶつビスケッツ",
+		"YTLink": "https://www.youtube.com/watch?v=gKnBFgsurAI"
+	},
+	{
+		"date": "2024/02/14",
+		"track": 15,
+		"song": "ふわふわ時間",
+		"singer": "放課後ティータイム",
+		"YTLink": "https://www.youtube.com/watch?v=gKnBFgsurAI"
+	},
+	{
+		"date": "2024/02/14",
+		"track": 16,
+		"song": "コイノシルシ",
+		"singer": "神のみぞ知り隊",
+		"YTLink": "https://www.youtube.com/watch?v=gKnBFgsurAI"
+	},
+	{
+		"date": "2024/02/14",
+		"track": 17,
+		"song": "アイノヨカン",
+		"singer": "神のみぞ知り隊",
+		"YTLink": "https://www.youtube.com/watch?v=gKnBFgsurAI"
+	},
+	{
+		"date": "2024/02/14",
+		"track": 18,
+		"song": "ハッピークレセント",
+		"singer": "中川かのん(東山奈央)",
+		"YTLink": "https://www.youtube.com/watch?v=gKnBFgsurAI"
+	},
+	{
+		"date": "2024/02/14",
+		"track": 19,
+		"song": "桃色片想い",
+		"singer": "松浦亜弥",
+		"YTLink": "https://www.youtube.com/watch?v=gKnBFgsurAI"
+	},
+	{
+		"date": "2024/02/14",
+		"track": 20,
+		"song": "Baby Sweet Berry Love",
+		"singer": "小倉唯",
+		"YTLink": "https://www.youtube.com/watch?v=gKnBFgsurAI"
+	},
+	{
 		"date": "2024/02/10",
 		"track": 1,
 		"song": "ALIVE",
@@ -746,7 +1027,7 @@
 		"date": "2024/02/01",
 		"track": 3,
 		"song": "バレンタイン・キッス",
-		"singer": "渡り廊下走り隊7",
+		"singer": "国生さゆり",
 		"YTLink": "https://www.youtube.com/watch?v=r_ukkgxjwrE"
 	},
 	{
