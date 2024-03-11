@@ -1,5 +1,435 @@
 [
 	{
+		"date": "2024/03/11",
+		"track": 1,
+		"song": "晴る",
+		"singer": "ヨルシカ",
+		"YTLink": "https://www.youtube.com/watch?v=_phoJs-eRWA"
+	},
+	{
+		"date": "2024/03/11",
+		"track": 2,
+		"song": "最高の片想い",
+		"singer": "タイナカサチ",
+		"YTLink": "https://www.youtube.com/watch?v=_phoJs-eRWA"
+	},
+	{
+		"date": "2024/03/11",
+		"track": 3,
+		"song": "ダ・カーポIII 〜キミにささげる あいのマホウ〜",
+		"singer": "yozuca*",
+		"YTLink": "https://www.youtube.com/watch?v=_phoJs-eRWA"
+	},
+	{
+		"date": "2024/03/11",
+		"track": 4,
+		"song": "アイモ ～鳥のひと",
+		"singer": "ランカ・リー(中島愛)",
+		"YTLink": "https://www.youtube.com/watch?v=_phoJs-eRWA"
+	},
+	{
+		"date": "2024/03/11",
+		"track": 5,
+		"song": "ねぇ",
+		"singer": "藤田麻衣子",
+		"YTLink": "https://www.youtube.com/watch?v=_phoJs-eRWA"
+	},
+	{
+		"date": "2024/03/11",
+		"track": 6,
+		"song": "高鳴る",
+		"singer": "藤田麻衣子",
+		"YTLink": "https://www.youtube.com/watch?v=_phoJs-eRWA"
+	},
+	{
+		"date": "2024/03/11",
+		"track": 7,
+		"song": "ギターと孤独と蒼い惑星",
+		"singer": "結束バンド",
+		"YTLink": "https://www.youtube.com/watch?v=_phoJs-eRWA"
+	},
+	{
+		"date": "2024/03/11",
+		"track": 8,
+		"song": "青春コンプレックス",
+		"singer": "結束バンド",
+		"YTLink": "https://www.youtube.com/watch?v=_phoJs-eRWA"
+	},
+	{
+		"date": "2024/03/11",
+		"track": 9,
+		"song": "星座になれたら",
+		"singer": "結束バンド",
+		"YTLink": "https://www.youtube.com/watch?v=_phoJs-eRWA"
+	},
+	{
+		"date": "2024/03/11",
+		"track": 10,
+		"song": "星間飛行",
+		"singer": "ランカ・リー(中島愛)",
+		"YTLink": "https://www.youtube.com/watch?v=_phoJs-eRWA"
+	},
+	{
+		"date": "2024/03/11",
+		"track": 11,
+		"song": "ライオン",
+		"singer": "シェリル・ノーム(May'n),ランカ・リー(中島愛)",
+		"YTLink": "https://www.youtube.com/watch?v=_phoJs-eRWA"
+	},
+	{
+		"date": "2024/03/11",
+		"track": 12,
+		"song": "いけないボーダーライン",
+		"singer": "ワルキューレ",
+		"YTLink": "https://www.youtube.com/watch?v=_phoJs-eRWA"
+	},
+	{
+		"date": "2024/03/11",
+		"track": 13,
+		"song": "すきっちゅーの！",
+		"singer": "HoneyWorks",
+		"YTLink": "https://www.youtube.com/watch?v=_phoJs-eRWA"
+	},
+	{
+		"date": "2024/03/11",
+		"track": 14,
+		"song": "可愛くてごめん",
+		"singer": "HoneyWorks",
+		"YTLink": "https://www.youtube.com/watch?v=_phoJs-eRWA"
+	},
+	{
+		"date": "2024/03/11",
+		"track": 15,
+		"song": "花になって",
+		"singer": "緑黄色社会",
+		"YTLink": "https://www.youtube.com/watch?v=_phoJs-eRWA"
+	},
+	{
+		"date": "2024/03/11",
+		"track": 16,
+		"song": "Mela!",
+		"singer": "緑黄色社会",
+		"YTLink": "https://www.youtube.com/watch?v=_phoJs-eRWA"
+	},
+	{
+		"date": "2024/03/11",
+		"track": 17,
+		"song": "サインはB",
+		"singer": "B小町",
+		"YTLink": "https://www.youtube.com/watch?v=_phoJs-eRWA"
+	},
+	{
+		"date": "2024/03/11",
+		"track": 18,
+		"song": "ファンサ",
+		"singer": "mona(夏川椎菜)",
+		"YTLink": "https://www.youtube.com/watch?v=_phoJs-eRWA"
+	},
+	{
+		"date": "2024/03/11",
+		"track": 19,
+		"song": "アムリタ",
+		"singer": "牧野由依",
+		"YTLink": "https://www.youtube.com/watch?v=_phoJs-eRWA"
+	},
+	{
+		"date": "2024/03/11",
+		"track": 20,
+		"song": "ガーネット",
+		"singer": "奥華子",
+		"YTLink": "https://www.youtube.com/watch?v=_phoJs-eRWA"
+	},
+	{
+		"date": "2024/03/10",
+		"track": 1,
+		"song": "虹のかけら",
+		"singer": "昆夏美",
+		"note": "初回",
+		"YTLink": "https://www.youtube.com/watch?v=-JltjCBfPr4"
+	},
+	{
+		"date": "2024/03/10",
+		"track": 2,
+		"song": "SAKURA",
+		"singer": "いきものがかり",
+		"YTLink": "https://www.youtube.com/watch?v=-JltjCBfPr4"
+	},
+	{
+		"date": "2024/03/10",
+		"track": 3,
+		"song": "ダ・カーポIII 〜キミにささげる あいのマホウ〜",
+		"singer": "yozuca*",
+		"note": "初回",
+		"YTLink": "https://www.youtube.com/watch?v=-JltjCBfPr4"
+	},
+	{
+		"date": "2024/03/10",
+		"track": 4,
+		"song": "コイノシルシ",
+		"singer": "神のみぞ知り隊",
+		"YTLink": "https://www.youtube.com/watch?v=-JltjCBfPr4"
+	},
+	{
+		"date": "2024/03/10",
+		"track": 5,
+		"song": "U&I",
+		"singer": "放課後ティータイム",
+		"YTLink": "https://www.youtube.com/watch?v=-JltjCBfPr4"
+	},
+	{
+		"date": "2024/03/10",
+		"track": 6,
+		"song": "adrenaline!!!",
+		"singer": "TrySail",
+		"YTLink": "https://www.youtube.com/watch?v=-JltjCBfPr4"
+	},
+	{
+		"date": "2024/03/10",
+		"track": 7,
+		"song": "青空のラプソディ",
+		"singer": "fhana",
+		"YTLink": "https://www.youtube.com/watch?v=-JltjCBfPr4"
+	},
+	{
+		"date": "2024/03/10",
+		"track": 8,
+		"song": "うまぴょい伝説",
+		"singer": "ウマ娘",
+		"YTLink": "https://www.youtube.com/watch?v=-JltjCBfPr4"
+	},
+	{
+		"date": "2024/03/10",
+		"track": 9,
+		"song": "高鳴る",
+		"singer": "藤田麻衣子",
+		"YTLink": "https://www.youtube.com/watch?v=-JltjCBfPr4"
+	},
+	{
+		"date": "2024/03/10",
+		"track": 10,
+		"song": "アイモ ～鳥のひと",
+		"singer": "ランカ・リー(中島愛)",
+		"YTLink": "https://www.youtube.com/watch?v=-JltjCBfPr4"
+	},
+	{
+		"date": "2024/03/10",
+		"track": 11,
+		"song": "何度でも",
+		"singer": "DREAMS COME TRUE",
+		"YTLink": "https://www.youtube.com/watch?v=-JltjCBfPr4"
+	},
+	{
+		"date": "2024/03/10",
+		"track": 12,
+		"song": "往け",
+		"singer": "LiSA",
+		"YTLink": "https://www.youtube.com/watch?v=-JltjCBfPr4"
+	},
+	{
+		"date": "2024/03/10",
+		"track": 13,
+		"song": "SMILY",
+		"singer": "大塚愛",
+		"YTLink": "https://www.youtube.com/watch?v=-JltjCBfPr4"
+	},
+	{
+		"date": "2024/03/10",
+		"track": 14,
+		"song": "Only Human",
+		"singer": "K",
+		"YTLink": "https://www.youtube.com/watch?v=-JltjCBfPr4"
+	},
+	{
+		"date": "2024/03/10",
+		"track": 15,
+		"song": "3月9日",
+		"singer": "レミオロメン",
+		"YTLink": "https://www.youtube.com/watch?v=-JltjCBfPr4"
+	},
+	{
+		"date": "2024/03/10",
+		"track": 16,
+		"song": "タイヨウのうた",
+		"singer": "沢尻エリカ",
+		"YTLink": "https://www.youtube.com/watch?v=-JltjCBfPr4"
+	},
+	{
+		"date": "2024/03/10",
+		"track": 17,
+		"song": "粉雪",
+		"singer": "レミオロメン",
+		"YTLink": "https://www.youtube.com/watch?v=-JltjCBfPr4"
+	},
+	{
+		"date": "2024/03/10",
+		"track": 18,
+		"song": "深海少女",
+		"singer": "ゆうゆ",
+		"YTLink": "https://www.youtube.com/watch?v=-JltjCBfPr4"
+	},
+	{
+		"date": "2024/03/10",
+		"track": 19,
+		"song": "パート・オブ・ユア・ワールド",
+		"singer": "豊原江理佳",
+		"note": "初回",
+		"YTLink": "https://www.youtube.com/watch?v=-JltjCBfPr4"
+	},
+	{
+		"date": "2024/03/10",
+		"track": 20,
+		"song": "Let It Go～ありのままで～",
+		"singer": "松たか子",
+		"YTLink": "https://www.youtube.com/watch?v=-JltjCBfPr4"
+	},
+	{
+		"date": "2024/03/10",
+		"track": 21,
+		"song": "生まれてはじめて",
+		"singer": "神田沙也加,松たか子",
+		"YTLink": "https://www.youtube.com/watch?v=-JltjCBfPr4"
+	},
+	{
+		"date": "2024/03/05",
+		"track": 1,
+		"song": "さくらんぼ",
+		"singer": "大塚愛",
+		"YTLink": "https://www.youtube.com/watch?v=-JltjCBfPr4"
+	},
+	{
+		"date": "2024/03/05",
+		"track": 2,
+		"song": "ふわふわ時間",
+		"singer": "放課後ティータイム",
+		"YTLink": "https://www.youtube.com/watch?v=-JltjCBfPr4"
+	},
+	{
+		"date": "2024/03/05",
+		"track": 3,
+		"song": "コネクト",
+		"singer": "ClariS",
+		"YTLink": "https://www.youtube.com/watch?v=-JltjCBfPr4"
+	},
+	{
+		"date": "2024/03/05",
+		"track": 4,
+		"song": "夜空",
+		"singer": "鈴木みのり",
+		"YTLink": "https://www.youtube.com/watch?v=-JltjCBfPr4"
+	},
+	{
+		"date": "2024/03/05",
+		"track": 5,
+		"song": "プラチナ",
+		"singer": "坂本真綾",
+		"YTLink": "https://www.youtube.com/watch?v=-JltjCBfPr4"
+	},
+	{
+		"date": "2024/03/05",
+		"track": 6,
+		"song": "青空 Jumping Heart",
+		"singer": "Aqours",
+		"YTLink": "https://www.youtube.com/watch?v=-JltjCBfPr4"
+	},
+	{
+		"date": "2024/03/05",
+		"track": 7,
+		"song": "白い雪のプリンセスは",
+		"singer": "のぼる↑P",
+		"YTLink": "https://www.youtube.com/watch?v=-JltjCBfPr4"
+	},
+	{
+		"date": "2024/03/05",
+		"track": 8,
+		"song": "マジックナンバー",
+		"singer": "坂本真綾",
+		"YTLink": "https://www.youtube.com/watch?v=-JltjCBfPr4"
+	},
+	{
+		"date": "2024/03/05",
+		"track": 9,
+		"song": "ビードロ模様",
+		"singer": "やなぎなぎ",
+		"YTLink": "https://www.youtube.com/watch?v=-JltjCBfPr4"
+	},
+	{
+		"date": "2024/03/05",
+		"track": 10,
+		"song": "いけないボーダーライン",
+		"singer": "ワルキューレ",
+		"YTLink": "https://www.youtube.com/watch?v=-JltjCBfPr4"
+	},
+	{
+		"date": "2024/03/05",
+		"track": 11,
+		"song": "君の知らない物語",
+		"singer": "Supercell",
+		"YTLink": "https://www.youtube.com/watch?v=-JltjCBfPr4"
+	},
+	{
+		"date": "2024/03/05",
+		"track": 12,
+		"song": "プロローグ",
+		"singer": "Uru",
+		"YTLink": "https://www.youtube.com/watch?v=-JltjCBfPr4"
+	},
+	{
+		"date": "2024/03/05",
+		"track": 13,
+		"song": "星座になれたら",
+		"singer": "結束バンド",
+		"YTLink": "https://www.youtube.com/watch?v=-JltjCBfPr4"
+	},
+	{
+		"date": "2024/03/05",
+		"track": 14,
+		"song": "流星",
+		"singer": "藍井エイル",
+		"YTLink": "https://www.youtube.com/watch?v=-JltjCBfPr4"
+	},
+	{
+		"date": "2024/03/05",
+		"track": 15,
+		"song": "アムリタ",
+		"singer": "牧野由依",
+		"YTLink": "https://www.youtube.com/watch?v=-JltjCBfPr4"
+	},
+	{
+		"date": "2024/03/05",
+		"track": 16,
+		"song": "前前前世",
+		"singer": "RADWIMPS",
+		"YTLink": "https://www.youtube.com/watch?v=-JltjCBfPr4"
+	},
+	{
+		"date": "2024/03/05",
+		"track": 17,
+		"song": "虹",
+		"singer": "菅田将暉",
+		"YTLink": "https://www.youtube.com/watch?v=-JltjCBfPr4"
+	},
+	{
+		"date": "2024/03/05",
+		"track": 18,
+		"song": "ライオン",
+		"singer": "シェリル・ノーム(May'n),ランカ・リー(中島愛)",
+		"YTLink": "https://www.youtube.com/watch?v=-JltjCBfPr4"
+	},
+	{
+		"date": "2024/03/05",
+		"track": 19,
+		"song": "ファンサ",
+		"singer": "mona(夏川椎菜)",
+		"YTLink": "https://www.youtube.com/watch?v=-JltjCBfPr4"
+	},
+	{
+		"date": "2024/03/05",
+		"track": 20,
+		"song": "星へ伸ばす手",
+		"singer": "苺咲べりぃ",
+		"YTLink": "https://www.youtube.com/watch?v=-JltjCBfPr4"
+	},
+	{
 		"date": "2024/03/04",
 		"track": 1,
 		"song": "Mela!",
