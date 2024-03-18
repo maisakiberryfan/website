@@ -1,4 +1,5 @@
 ﻿## 2024
+* 2024/02/16　チャンネル登録120,000人
 * 2024/02/06　チャンネル登録110,000人
 * 2024/02/02　[『avex creators labo "muchoo"』に所属](https://twitter.com/MaisakiBerry/status/1753445877644140803)
 * 2024/01/16　[新衣装お披露目](https://www.youtube.com/watch?v=_puahGBIXPs)

@@ -1,5 +1,355 @@
 [
 	{
+		"date": "2024/03/16",
+		"track": 1,
+		"song": "勇者",
+		"singer": "YOASOBI",
+		"YTLink": "https://www.youtube.com/watch?v=ksOXpzMdD7Q"
+	},
+	{
+		"date": "2024/03/16",
+		"track": 2,
+		"song": "コネクト",
+		"singer": "ClariS",
+		"YTLink": "https://www.youtube.com/watch?v=ksOXpzMdD7Q"
+	},
+	{
+		"date": "2024/03/16",
+		"track": 3,
+		"song": "ハルノヒ",
+		"singer": "あいみょん",
+		"YTLink": "https://www.youtube.com/watch?v=ksOXpzMdD7Q"
+	},
+	{
+		"date": "2024/03/16",
+		"track": 4,
+		"song": "歌に形はないけれど",
+		"singer": "きりたんP(doriko)",
+		"YTLink": "https://www.youtube.com/watch?v=ksOXpzMdD7Q"
+	},
+	{
+		"date": "2024/03/16",
+		"track": 5,
+		"song": "letter song",
+		"singer": "きりたんP(doriko)",
+		"YTLink": "https://www.youtube.com/watch?v=ksOXpzMdD7Q"
+	},
+	{
+		"date": "2024/03/16",
+		"track": 6,
+		"song": "rain stops, good-bye",
+		"singer": "におP",
+		"YTLink": "https://www.youtube.com/watch?v=ksOXpzMdD7Q"
+	},
+	{
+		"date": "2024/03/16",
+		"track": 7,
+		"song": "晴る",
+		"singer": "ヨルシカ",
+		"YTLink": "https://www.youtube.com/watch?v=ksOXpzMdD7Q"
+	},
+	{
+		"date": "2024/03/16",
+		"track": 8,
+		"song": "水平線",
+		"singer": "back number",
+		"YTLink": "https://www.youtube.com/watch?v=ksOXpzMdD7Q"
+	},
+	{
+		"date": "2024/03/16",
+		"track": 9,
+		"song": "ボクノート",
+		"singer": "スキマスイッチ",
+		"YTLink": "https://www.youtube.com/watch?v=ksOXpzMdD7Q"
+	},
+	{
+		"date": "2024/03/16",
+		"track": 10,
+		"song": "チェリー",
+		"singer": "スピッツ",
+		"YTLink": "https://www.youtube.com/watch?v=ksOXpzMdD7Q"
+	},
+	{
+		"date": "2024/03/16",
+		"track": 11,
+		"song": "CHE.R.RY",
+		"singer": "Yui",
+		"YTLink": "https://www.youtube.com/watch?v=ksOXpzMdD7Q"
+	},
+	{
+		"date": "2024/03/16",
+		"track": 12,
+		"song": "ウラオモテ・フォーチュン",
+		"singer": "小澤亜李",
+		"YTLink": "https://www.youtube.com/watch?v=ksOXpzMdD7Q"
+	},
+	{
+		"date": "2024/03/16",
+		"track": 13,
+		"song": "プラネタリウム",
+		"singer": "大塚愛",
+		"YTLink": "https://www.youtube.com/watch?v=ksOXpzMdD7Q"
+	},
+	{
+		"date": "2024/03/16",
+		"track": 14,
+		"song": "花ハ踊レヤいろはにほ",
+		"singer": "チーム\"ハナヤマタ\"",
+		"YTLink": "https://www.youtube.com/watch?v=ksOXpzMdD7Q"
+	},
+	{
+		"date": "2024/03/16",
+		"track": 15,
+		"song": "空色デイズ",
+		"singer": "中川翔子",
+		"YTLink": "https://www.youtube.com/watch?v=ksOXpzMdD7Q"
+	},
+	{
+		"date": "2024/03/16",
+		"track": 16,
+		"song": "Startear",
+		"singer": "春奈るな",
+		"YTLink": "https://www.youtube.com/watch?v=ksOXpzMdD7Q"
+	},
+	{
+		"date": "2024/03/16",
+		"track": 17,
+		"song": "シルシ",
+		"singer": "LiSA",
+		"YTLink": "https://www.youtube.com/watch?v=ksOXpzMdD7Q"
+	},
+	{
+		"date": "2024/03/16",
+		"track": 18,
+		"song": "心拍数#0822",
+		"singer": "蝶々P",
+		"YTLink": "https://www.youtube.com/watch?v=ksOXpzMdD7Q"
+	},
+	{
+		"date": "2024/03/16",
+		"track": 19,
+		"song": "アムリタ",
+		"singer": "牧野由依",
+		"YTLink": "https://www.youtube.com/watch?v=ksOXpzMdD7Q"
+	},
+	{
+		"date": "2024/03/16",
+		"track": 20,
+		"song": "星へ伸ばす手",
+		"singer": "苺咲べりぃ",
+		"YTLink": "https://www.youtube.com/watch?v=ksOXpzMdD7Q"
+	},
+	{
+		"date": "2024/03/14",
+		"track": 1,
+		"song": "アイネクライネ",
+		"singer": "米津玄師",
+		"YTLink": "https://www.youtube.com/watch?v=7Av32tZ0C9I"
+	},
+	{
+		"date": "2024/03/14",
+		"track": 2,
+		"song": "水平線",
+		"singer": "back number",
+		"YTLink": "https://www.youtube.com/watch?v=7Av32tZ0C9I"
+	},
+	{
+		"date": "2024/03/14",
+		"track": 3,
+		"song": "未来",
+		"singer": "コブクロ",
+		"YTLink": "https://www.youtube.com/watch?v=7Av32tZ0C9I"
+	},
+	{
+		"date": "2024/03/14",
+		"track": 4,
+		"song": "たばこ",
+		"singer": "コレサワ",
+		"YTLink": "https://www.youtube.com/watch?v=7Av32tZ0C9I"
+	},
+	{
+		"date": "2024/03/14",
+		"track": 5,
+		"song": "贖罪",
+		"singer": "傘村トータ",
+		"YTLink": "https://www.youtube.com/watch?v=7Av32tZ0C9I"
+	},
+	{
+		"date": "2024/03/14",
+		"track": 6,
+		"song": "First Love",
+		"singer": "宇多田ヒカル",
+		"YTLink": "https://www.youtube.com/watch?v=7Av32tZ0C9I"
+	},
+	{
+		"date": "2024/03/14",
+		"track": 7,
+		"song": "蒼のエーテル",
+		"singer": "ランカ・リー(中島愛)",
+		"YTLink": "https://www.youtube.com/watch?v=7Av32tZ0C9I"
+	},
+	{
+		"date": "2024/03/14",
+		"track": 8,
+		"song": "歌に形はないけれど",
+		"singer": "きりたんP(doriko)",
+		"YTLink": "https://www.youtube.com/watch?v=7Av32tZ0C9I"
+	},
+	{
+		"date": "2024/03/14",
+		"track": 9,
+		"song": "Everything",
+		"singer": "MISIA",
+		"YTLink": "https://www.youtube.com/watch?v=7Av32tZ0C9I"
+	},
+	{
+		"date": "2024/03/14",
+		"track": 10,
+		"song": "心が、青い。",
+		"singer": "鈴木みのり",
+		"YTLink": "https://www.youtube.com/watch?v=7Av32tZ0C9I"
+	},
+	{
+		"date": "2024/03/12",
+		"track": 1,
+		"song": "プラチナ",
+		"singer": "坂本真綾",
+		"YTLink": "https://www.youtube.com/watch?v=mDkaLJ852kA"
+	},
+	{
+		"date": "2024/03/12",
+		"track": 2,
+		"song": "君色シグナル",
+		"singer": "春奈るな",
+		"YTLink": "https://www.youtube.com/watch?v=mDkaLJ852kA"
+	},
+	{
+		"date": "2024/03/12",
+		"track": 3,
+		"song": "ロケットビート",
+		"singer": "安野希世乃",
+		"YTLink": "https://www.youtube.com/watch?v=mDkaLJ852kA"
+	},
+	{
+		"date": "2024/03/12",
+		"track": 4,
+		"song": "コレカラ",
+		"singer": "Machico",
+		"YTLink": "https://www.youtube.com/watch?v=mDkaLJ852kA"
+	},
+	{
+		"date": "2024/03/12",
+		"track": 5,
+		"song": "YUME日和",
+		"singer": "島谷ひとみ",
+		"YTLink": "https://www.youtube.com/watch?v=mDkaLJ852kA"
+	},
+	{
+		"date": "2024/03/12",
+		"track": 6,
+		"song": "ユメクイ",
+		"singer": "大塚愛",
+		"YTLink": "https://www.youtube.com/watch?v=mDkaLJ852kA"
+	},
+	{
+		"date": "2024/03/12",
+		"track": 7,
+		"song": "プラネタリウム",
+		"singer": "大塚愛",
+		"YTLink": "https://www.youtube.com/watch?v=mDkaLJ852kA"
+	},
+	{
+		"date": "2024/03/12",
+		"track": 8,
+		"song": "桜色舞うころ",
+		"singer": "中島美嘉",
+		"YTLink": "https://www.youtube.com/watch?v=mDkaLJ852kA"
+	},
+	{
+		"date": "2024/03/12",
+		"track": 9,
+		"song": "桜の時",
+		"singer": "aiko",
+		"YTLink": "https://www.youtube.com/watch?v=mDkaLJ852kA"
+	},
+	{
+		"date": "2024/03/12",
+		"track": 10,
+		"song": "STEP",
+		"singer": "ClariS",
+		"YTLink": "https://www.youtube.com/watch?v=mDkaLJ852kA"
+	},
+	{
+		"date": "2024/03/12",
+		"track": 11,
+		"song": "ループ",
+		"singer": "坂本真綾",
+		"YTLink": "https://www.youtube.com/watch?v=mDkaLJ852kA"
+	},
+	{
+		"date": "2024/03/12",
+		"track": 12,
+		"song": "ただ君に晴れ",
+		"singer": "ヨルシカ",
+		"YTLink": "https://www.youtube.com/watch?v=mDkaLJ852kA"
+	},
+	{
+		"date": "2024/03/12",
+		"track": 13,
+		"song": "言って。",
+		"singer": "ヨルシカ",
+		"YTLink": "https://www.youtube.com/watch?v=mDkaLJ852kA"
+	},
+	{
+		"date": "2024/03/12",
+		"track": 14,
+		"song": "水平線",
+		"singer": "back number",
+		"YTLink": "https://www.youtube.com/watch?v=mDkaLJ852kA"
+	},
+	{
+		"date": "2024/03/12",
+		"track": 15,
+		"song": "ハッピーエンド",
+		"singer": "back number",
+		"YTLink": "https://www.youtube.com/watch?v=mDkaLJ852kA"
+	},
+	{
+		"date": "2024/03/12",
+		"track": 16,
+		"song": "ハナミズキ",
+		"singer": "一青窈",
+		"YTLink": "https://www.youtube.com/watch?v=mDkaLJ852kA"
+	},
+	{
+		"date": "2024/03/12",
+		"track": 17,
+		"song": "アイノカタチ",
+		"singer": "MISIA",
+		"YTLink": "https://www.youtube.com/watch?v=mDkaLJ852kA"
+	},
+	{
+		"date": "2024/03/12",
+		"track": 18,
+		"song": "裸の心",
+		"singer": "あいみょん",
+		"YTLink": "https://www.youtube.com/watch?v=mDkaLJ852kA"
+	},
+	{
+		"date": "2024/03/12",
+		"track": 19,
+		"song": "花は桜 君は美し",
+		"singer": "いきものがかり",
+		"YTLink": "https://www.youtube.com/watch?v=mDkaLJ852kA"
+	},
+	{
+		"date": "2024/03/12",
+		"track": 20,
+		"song": "Crosswalk",
+		"singer": "鈴木みのり",
+		"YTLink": "https://www.youtube.com/watch?v=mDkaLJ852kA"
+	},
+	{
 		"date": "2024/03/11",
 		"track": 1,
 		"song": "晴る",
