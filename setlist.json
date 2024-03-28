@@ -1,5 +1,215 @@
 [
 	{
+		"date": "2024/03/28",
+		"track": 1,
+		"song": "アイノカタチ",
+		"singer": "MISIA",
+		"YTLink": "https://www.youtube.com/watch?v=gqewO0F-aGw"
+	},
+	{
+		"date": "2024/03/28",
+		"track": 2,
+		"song": "三日月",
+		"singer": "絢香",
+		"YTLink": "https://www.youtube.com/watch?v=gqewO0F-aGw"
+	},
+	{
+		"date": "2024/03/28",
+		"track": 3,
+		"song": "明け星",
+		"singer": "LiSA",
+		"YTLink": "https://www.youtube.com/watch?v=gqewO0F-aGw"
+	},
+	{
+		"date": "2024/03/28",
+		"track": 4,
+		"song": "ホシキラ",
+		"singer": "ランカ・リー(中島愛)",
+		"YTLink": "https://www.youtube.com/watch?v=gqewO0F-aGw"
+	},
+	{
+		"date": "2024/03/28",
+		"track": 5,
+		"song": "夏空グラフィティ",
+		"singer": "いきものがかり",
+		"YTLink": "https://www.youtube.com/watch?v=gqewO0F-aGw"
+	},
+	{
+		"date": "2024/03/28",
+		"track": 6,
+		"song": "Catch the Moment",
+		"singer": "LiSA",
+		"YTLink": "https://www.youtube.com/watch?v=gqewO0F-aGw"
+	},
+	{
+		"date": "2024/03/28",
+		"track": 7,
+		"song": "Rising Hope",
+		"singer": "LiSA",
+		"YTLink": "https://www.youtube.com/watch?v=gqewO0F-aGw"
+	},
+	{
+		"date": "2024/03/28",
+		"track": 8,
+		"song": "茜色の約束",
+		"singer": "いきものがかり",
+		"YTLink": "https://www.youtube.com/watch?v=gqewO0F-aGw"
+	},
+	{
+		"date": "2024/03/28",
+		"track": 9,
+		"song": "ハルジオン",
+		"singer": "YOASOBI",
+		"YTLink": "https://www.youtube.com/watch?v=gqewO0F-aGw"
+	},
+	{
+		"date": "2024/03/28",
+		"track": 10,
+		"song": "三原色",
+		"singer": "YOASOBI",
+		"YTLink": "https://www.youtube.com/watch?v=gqewO0F-aGw"
+	},
+	{
+		"date": "2024/03/28",
+		"track": 11,
+		"song": "踊",
+		"singer": "Ado",
+		"YTLink": "https://www.youtube.com/watch?v=gqewO0F-aGw"
+	},
+	{
+		"date": "2024/03/28",
+		"track": 12,
+		"song": "大正浪漫",
+		"singer": "YOASOBI",
+		"YTLink": "https://www.youtube.com/watch?v=gqewO0F-aGw"
+	},
+	{
+		"date": "2024/03/28",
+		"track": 13,
+		"song": "瞳はダイアモンド",
+		"singer": "松田聖子",
+		"YTLink": "https://www.youtube.com/watch?v=gqewO0F-aGw"
+	},
+	{
+		"date": "2024/03/28",
+		"track": 14,
+		"song": "生きてこそ",
+		"singer": "Kiroro",
+		"YTLink": "https://www.youtube.com/watch?v=gqewO0F-aGw"
+	},
+	{
+		"date": "2024/03/28",
+		"track": 15,
+		"song": "涙そうそう",
+		"singer": "夏川りみ",
+		"YTLink": "https://www.youtube.com/watch?v=gqewO0F-aGw"
+	},
+	{
+		"date": "2024/03/28",
+		"track": 16,
+		"song": "そばかす",
+		"singer": "JUDY AND MARY",
+		"YTLink": "https://www.youtube.com/watch?v=gqewO0F-aGw"
+	},
+	{
+		"date": "2024/03/28",
+		"track": 17,
+		"song": "コネクト",
+		"singer": "ClariS",
+		"YTLink": "https://www.youtube.com/watch?v=gqewO0F-aGw"
+	},
+	{
+		"date": "2024/03/28",
+		"track": 18,
+		"song": "カラフル",
+		"singer": "ClariS",
+		"YTLink": "https://www.youtube.com/watch?v=gqewO0F-aGw"
+	},
+	{
+		"date": "2024/03/28",
+		"track": 19,
+		"song": "会いたくて 会いたくて",
+		"singer": "西野カナ",
+		"YTLink": "https://www.youtube.com/watch?v=gqewO0F-aGw"
+	},
+	{
+		"date": "2024/03/28",
+		"track": 20,
+		"song": "You",
+		"singer": "癒月",
+		"YTLink": "https://www.youtube.com/watch?v=gqewO0F-aGw"
+	},
+	{
+		"date": "2024/03/27",
+		"track": 1,
+		"song": "KING",
+		"singer": "Kanaria",
+		"YTLink": "https://www.youtube.com/watch?v=YilBr7WT4DY"
+	},
+	{
+		"date": "2024/03/27",
+		"track": 2,
+		"song": "ヴァンパイア",
+		"singer": "DECO*27",
+		"YTLink": "https://www.youtube.com/watch?v=YilBr7WT4DY"
+	},
+	{
+		"date": "2024/03/27",
+		"track": 3,
+		"song": "Laughter",
+		"singer": "Official髭男dism",
+		"YTLink": "https://www.youtube.com/watch?v=YilBr7WT4DY"
+	},
+	{
+		"date": "2024/03/27",
+		"track": 4,
+		"song": "115万キロのフィルム",
+		"singer": "Official髭男dism",
+		"YTLink": "https://www.youtube.com/watch?v=YilBr7WT4DY"
+	},
+	{
+		"date": "2024/03/27",
+		"track": 5,
+		"song": "Love So Sweet",
+		"singer": "嵐",
+		"YTLink": "https://www.youtube.com/watch?v=YilBr7WT4DY"
+	},
+	{
+		"date": "2024/03/27",
+		"track": 6,
+		"song": "ネコに風船",
+		"singer": "大塚愛",
+		"YTLink": "https://www.youtube.com/watch?v=YilBr7WT4DY"
+	},
+	{
+		"date": "2024/03/27",
+		"track": 7,
+		"song": "カブトムシ",
+		"singer": "aiko",
+		"YTLink": "https://www.youtube.com/watch?v=YilBr7WT4DY"
+	},
+	{
+		"date": "2024/03/27",
+		"track": 8,
+		"song": "夢をかなえてドラえもん",
+		"singer": "mao",
+		"YTLink": "https://www.youtube.com/watch?v=YilBr7WT4DY"
+	},
+	{
+		"date": "2024/03/27",
+		"track": 9,
+		"song": "恋(星野源)",
+		"singer": "星野源",
+		"YTLink": "https://www.youtube.com/watch?v=YilBr7WT4DY"
+	},
+	{
+		"date": "2024/03/27",
+		"track": 10,
+		"song": "アムリタ",
+		"singer": "牧野由依",
+		"YTLink": "https://www.youtube.com/watch?v=YilBr7WT4DY"
+	},
+	{
 		"date": "2024/03/25",
 		"track": 1,
 		"song": "風が吹いている",
