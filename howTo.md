@@ -38,4 +38,4 @@
 * 或想直接產出json檔也可，表格轉換可參考[表格轉換工具](https://tableconvert.com/zh-tw/)
 
 ### 如何編輯setlist頁面外之表格
-* 除songlist是直接抓取ahckmd後再處理，不提供編輯外，其他的跟setlist差不多
+* 除songlist是直接抓取hackmd後再處理，不提供編輯外，其他的跟setlist差不多

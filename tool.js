@@ -1,10 +1,10 @@
 //from cdn
-import 'https://unpkg.com/jquery@3.7.0/dist/jquery.min.js'
+import 'https://unpkg.com/jquery@3.7.1/dist/jquery.min.js'
 import 'https://unpkg.com/@popperjs/core@2.11.8/dist/umd/popper.min.js'
-import 'https://unpkg.com/bootstrap@5.3.0/dist/js/bootstrap.min.js'
+import 'https://unpkg.com/bootstrap@5.3.3/dist/js/bootstrap.min.js'
 import "https://unpkg.com/tabulator-tables@5.5.0/dist/js/tabulator.min.js"
-import "https://unpkg.com/marked@5.1.1/marked.min.js"
-import "https://unpkg.com/dayjs@1.11.9/dayjs.min.js"
+import "https://unpkg.com/marked@12.0.1/marked.min.js"
+import "https://unpkg.com/dayjs@1.11.10/dayjs.min.js"
 import "https://unpkg.com/select2@4.0.13/dist/js/select2.full.min.js"
 
 //------  coding by hand  ------
@@ -91,10 +91,7 @@ let nav = `
 $(()=>{
   
   // Set marked options
-  marked.use({
-    mangle: false,
-    headerIds: false,
-  })
+  marked.use()
 
   //message modal 
   var msgModal = new bootstrap.Modal(document.getElementById('modal'))
