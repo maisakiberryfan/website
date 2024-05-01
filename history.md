@@ -1,5 +1,7 @@
 ﻿## 2024
-* 2024/04/30　6th Album 『EEE!!』 発売
+* 2024/04/28　6th Album 『EEE!!』 発売
+* 2024/04/28　[Xサブ垢2号店開店](https://twitter.com/m_berrychannnn)
+* 2024/04/26　[『#カクリヨ・トーキョー』にて太郎坊ちゃんのCVが発表されました。](https://twitter.com/MaisakiBerry/status/1783701568329801780)
 * 2024/03/16　チャンネル登録120,000人
 * 2024/02/22～03/06　[PLAZY シャニソンNo1配信者決定戦](https://twitter.com/MaisakiBerry/status/1760606375187779610)
 * 2024/02/06　チャンネル登録110,000人
