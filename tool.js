@@ -521,7 +521,7 @@ $(()=>{
     */
     
 
-      const BERRYCHANNEL = ['UC7A7bGRVdIwo93nqnA3x-OQ', 'UCBOGwPeBtaPRU59j8jshdjQ']
+      const BERRYCHANNEL = ['UC7A7bGRVdIwo93nqnA3x-OQ', 'UCBOGwPeBtaPRU59j8jshdjQ', 'UC2cgr_UtYukapRUt404In-A']
 
       let id = getYoutubeVideoId($('#YTID').val())
       if(id === undefined) return
