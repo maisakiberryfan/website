@@ -1,5 +1,483 @@
 [
 	{
+		"date": "2024/05/20",
+		"track": 1,
+		"song": "コネクト",
+		"singer": "ClariS",
+		"YTLink": "https://www.youtube.com/watch?v=nuw0iyrN-8I"
+	},
+	{
+		"date": "2024/05/20",
+		"track": 2,
+		"song": "CHE.R.RY",
+		"singer": "Yui",
+		"YTLink": "https://www.youtube.com/watch?v=nuw0iyrN-8I"
+	},
+	{
+		"date": "2024/05/20",
+		"track": 3,
+		"song": "secret base～君がくれたもの～",
+		"singer": "ZONE",
+		"YTLink": "https://www.youtube.com/watch?v=nuw0iyrN-8I"
+	},
+	{
+		"date": "2024/05/20",
+		"track": 4,
+		"song": "さくらんぼ",
+		"singer": "大塚愛",
+		"YTLink": "https://www.youtube.com/watch?v=nuw0iyrN-8I"
+	},
+	{
+		"date": "2024/05/20",
+		"track": 5,
+		"song": "晴る",
+		"singer": "ヨルシカ",
+		"YTLink": "https://www.youtube.com/watch?v=nuw0iyrN-8I"
+	},
+	{
+		"date": "2024/05/20",
+		"track": 6,
+		"song": "ただ君に晴れ",
+		"singer": "ヨルシカ",
+		"YTLink": "https://www.youtube.com/watch?v=nuw0iyrN-8I"
+	},
+	{
+		"date": "2024/05/20",
+		"track": 7,
+		"song": "水平線",
+		"singer": "back number",
+		"YTLink": "https://www.youtube.com/watch?v=nuw0iyrN-8I"
+	},
+	{
+		"date": "2024/05/20",
+		"track": 8,
+		"song": "コイスルオトメ",
+		"singer": "いきものがかり",
+		"YTLink": "https://www.youtube.com/watch?v=nuw0iyrN-8I"
+	},
+	{
+		"date": "2024/05/20",
+		"track": 9,
+		"song": "最悪な日でもあなたが好き。",
+		"singer": "芹澤優",
+		"YTLink": "https://www.youtube.com/watch?v=nuw0iyrN-8I"
+	},
+	{
+		"date": "2024/05/20",
+		"track": 10,
+		"song": "君色に染まる",
+		"singer": "TOKOTOKO(西沢さんP)",
+		"YTLink": "https://www.youtube.com/watch?v=nuw0iyrN-8I"
+	},
+	{
+		"date": "2024/05/20",
+		"track": 11,
+		"song": "パート・オブ・ユア・ワールド",
+		"singer": "豊原江理佳",
+		"YTLink": "https://www.youtube.com/watch?v=nuw0iyrN-8I"
+	},
+	{
+		"date": "2024/05/20",
+		"track": 12,
+		"song": "雪だるま作ろう",
+		"singer": "稲葉菜月,神田沙也加,諸星すみれ",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=nuw0iyrN-8I"
+	},
+	{
+		"date": "2024/05/20",
+		"track": 13,
+		"song": "Let It Go～ありのままで～",
+		"singer": "松たか子",
+		"YTLink": "https://www.youtube.com/watch?v=nuw0iyrN-8I"
+	},
+	{
+		"date": "2024/05/20",
+		"track": 14,
+		"song": "Dream × Dream",
+		"singer": "愛内里菜",
+		"YTLink": "https://www.youtube.com/watch?v=nuw0iyrN-8I"
+	},
+	{
+		"date": "2024/05/20",
+		"track": 15,
+		"song": "Get Over",
+		"singer": "Dream",
+		"YTLink": "https://www.youtube.com/watch?v=nuw0iyrN-8I"
+	},
+	{
+		"date": "2024/05/20",
+		"track": 16,
+		"song": "Grip!",
+		"singer": "Every Little Thing",
+		"YTLink": "https://www.youtube.com/watch?v=nuw0iyrN-8I"
+	},
+	{
+		"date": "2024/05/20",
+		"track": 17,
+		"song": "勇気100%",
+		"singer": "光GENJI",
+		"YTLink": "https://www.youtube.com/watch?v=nuw0iyrN-8I"
+	},
+	{
+		"date": "2024/05/20",
+		"track": 18,
+		"song": "夢をかなえてドラえもん",
+		"singer": "mao",
+		"YTLink": "https://www.youtube.com/watch?v=nuw0iyrN-8I"
+	},
+	{
+		"date": "2024/05/20",
+		"track": 19,
+		"song": "ドラえもんのうた",
+		"singer": "山野さと子",
+		"YTLink": "https://www.youtube.com/watch?v=nuw0iyrN-8I"
+	},
+	{
+		"date": "2024/05/20",
+		"track": 20,
+		"song": "残酷な天使のテーゼ",
+		"singer": "高橋洋子",
+		"YTLink": "https://www.youtube.com/watch?v=nuw0iyrN-8I"
+	},
+	{
+		"date": "2024/05/20",
+		"track": 21,
+		"song": "魂のルフラン",
+		"singer": "高橋洋子",
+		"YTLink": "https://www.youtube.com/watch?v=nuw0iyrN-8I"
+	},
+	{
+		"date": "2024/05/20",
+		"track": 22,
+		"song": "おちゃめ機能",
+		"singer": "ラマーズP",
+		"YTLink": "https://www.youtube.com/watch?v=nuw0iyrN-8I"
+	},
+	{
+		"date": "2024/05/20",
+		"track": 23,
+		"song": "夜もすがら君想ふ",
+		"singer": "TOKOTOKO(西沢さんP)",
+		"YTLink": "https://www.youtube.com/watch?v=nuw0iyrN-8I"
+	},
+	{
+		"date": "2024/05/20",
+		"track": 24,
+		"song": "Booo!",
+		"singer": "TOKOTOKO(西沢さんP)",
+		"YTLink": "https://www.youtube.com/watch?v=nuw0iyrN-8I"
+	},
+	{
+		"date": "2024/05/20",
+		"track": 25,
+		"song": "アイドル",
+		"singer": "YOASOBI",
+		"YTLink": "https://www.youtube.com/watch?v=nuw0iyrN-8I"
+	},
+	{
+		"date": "2024/05/20",
+		"track": 26,
+		"song": "ウラオモテ・フォーチュン",
+		"singer": "小澤亜李",
+		"YTLink": "https://www.youtube.com/watch?v=nuw0iyrN-8I"
+	},
+	{
+		"date": "2024/05/20",
+		"track": 27,
+		"song": "アイマイモコ",
+		"singer": "水瀬いのり",
+		"YTLink": "https://www.youtube.com/watch?v=nuw0iyrN-8I"
+	},
+	{
+		"date": "2024/05/20",
+		"track": 28,
+		"song": "GoodMorning",
+		"singer": "苺咲べりぃ",
+		"YTLink": "https://www.youtube.com/watch?v=nuw0iyrN-8I"
+	},
+	{
+		"date": "2024/05/17",
+		"track": 1,
+		"song": "いつも何度でも",
+		"singer": "木村弓",
+		"YTLink": "https://www.youtube.com/watch?v=ZBZKwp8h7Ak"
+	},
+	{
+		"date": "2024/05/17",
+		"track": 2,
+		"song": "カントリー・ロード",
+		"singer": "本名陽子",
+		"YTLink": "https://www.youtube.com/watch?v=ZBZKwp8h7Ak"
+	},
+	{
+		"date": "2024/05/17",
+		"track": 3,
+		"song": "ホール・ニュー・ワールド",
+		"singer": "石井一孝,麻生かほ里",
+		"note": "初回",
+		"YTLink": "https://www.youtube.com/watch?v=ZBZKwp8h7Ak"
+	},
+	{
+		"date": "2024/05/17",
+		"track": 4,
+		"song": "美女と野獣",
+		"singer": "昆夏美,山崎育三郎",
+		"YTLink": "https://www.youtube.com/watch?v=ZBZKwp8h7Ak"
+	},
+	{
+		"date": "2024/05/17",
+		"track": 5,
+		"song": "対象a",
+		"singer": "anNina",
+		"YTLink": "https://www.youtube.com/watch?v=ZBZKwp8h7Ak"
+	},
+	{
+		"date": "2024/05/17",
+		"track": 6,
+		"song": "君をのせて",
+		"singer": "井上あずみ",
+		"YTLink": "https://www.youtube.com/watch?v=ZBZKwp8h7Ak"
+	},
+	{
+		"date": "2024/05/17",
+		"track": 7,
+		"song": "瑠璃色の地球",
+		"singer": "松田聖子",
+		"YTLink": "https://www.youtube.com/watch?v=ZBZKwp8h7Ak"
+	},
+	{
+		"date": "2024/05/17",
+		"track": 8,
+		"song": "赤いスイートピー",
+		"singer": "松田聖子",
+		"YTLink": "https://www.youtube.com/watch?v=ZBZKwp8h7Ak"
+	},
+	{
+		"date": "2024/05/17",
+		"track": 9,
+		"song": "からくりピエロ",
+		"singer": "40mP",
+		"YTLink": "https://www.youtube.com/watch?v=ZBZKwp8h7Ak"
+	},
+	{
+		"date": "2024/05/17",
+		"track": 10,
+		"song": "桜ノ雨",
+		"singer": "halyosy",
+		"YTLink": "https://www.youtube.com/watch?v=ZBZKwp8h7Ak"
+	},
+	{
+		"date": "2024/05/17",
+		"track": 11,
+		"song": "となりのトトロ",
+		"singer": "井上あずみ",
+		"YTLink": "https://www.youtube.com/watch?v=ZBZKwp8h7Ak"
+	},
+	{
+		"date": "2024/05/17",
+		"track": 12,
+		"song": "さんぽ",
+		"singer": "井上あずみ",
+		"YTLink": "https://www.youtube.com/watch?v=ZBZKwp8h7Ak"
+	},
+	{
+		"date": "2024/05/17",
+		"track": 13,
+		"song": "ドライフラワー",
+		"singer": "優里",
+		"YTLink": "https://www.youtube.com/watch?v=ZBZKwp8h7Ak"
+	},
+	{
+		"date": "2024/05/17",
+		"track": 14,
+		"song": "虹",
+		"singer": "菅田将暉",
+		"YTLink": "https://www.youtube.com/watch?v=ZBZKwp8h7Ak"
+	},
+	{
+		"date": "2024/05/17",
+		"track": 15,
+		"song": "115万キロのフィルム",
+		"singer": "Official髭男dism",
+		"YTLink": "https://www.youtube.com/watch?v=ZBZKwp8h7Ak"
+	},
+	{
+		"date": "2024/05/17",
+		"track": 16,
+		"song": "Pretender",
+		"singer": "Official髭男dism",
+		"YTLink": "https://www.youtube.com/watch?v=ZBZKwp8h7Ak"
+	},
+	{
+		"date": "2024/05/17",
+		"track": 17,
+		"song": "アイネクライネ",
+		"singer": "米津玄師",
+		"YTLink": "https://www.youtube.com/watch?v=ZBZKwp8h7Ak"
+	},
+	{
+		"date": "2024/05/17",
+		"track": 18,
+		"song": "Lemon",
+		"singer": "米津玄師",
+		"YTLink": "https://www.youtube.com/watch?v=ZBZKwp8h7Ak"
+	},
+	{
+		"date": "2024/05/17",
+		"track": 19,
+		"song": "マリーゴールド",
+		"singer": "あいみょん",
+		"YTLink": "https://www.youtube.com/watch?v=ZBZKwp8h7Ak"
+	},
+	{
+		"date": "2024/05/17",
+		"track": 20,
+		"song": "プラネタリウム",
+		"singer": "大塚愛",
+		"YTLink": "https://www.youtube.com/watch?v=ZBZKwp8h7Ak"
+	},
+	{
+		"date": "2024/05/15",
+		"track": 1,
+		"song": "花になって",
+		"singer": "緑黄色社会",
+		"YTLink": "https://www.youtube.com/watch?v=IchCmMl04Lo"
+	},
+	{
+		"date": "2024/05/15",
+		"track": 2,
+		"song": "プラネタリウム",
+		"singer": "大塚愛",
+		"YTLink": "https://www.youtube.com/watch?v=IchCmMl04Lo"
+	},
+	{
+		"date": "2024/05/15",
+		"track": 3,
+		"song": "adrenaline!!!",
+		"singer": "TrySail",
+		"YTLink": "https://www.youtube.com/watch?v=IchCmMl04Lo"
+	},
+	{
+		"date": "2024/05/15",
+		"track": 4,
+		"song": "ヒトリゴト",
+		"singer": "ClariS",
+		"YTLink": "https://www.youtube.com/watch?v=IchCmMl04Lo"
+	},
+	{
+		"date": "2024/05/15",
+		"track": 5,
+		"song": "ユメノトビラ",
+		"singer": "μ's",
+		"YTLink": "https://www.youtube.com/watch?v=IchCmMl04Lo"
+	},
+	{
+		"date": "2024/05/15",
+		"track": 6,
+		"song": "空色デイズ",
+		"singer": "中川翔子",
+		"YTLink": "https://www.youtube.com/watch?v=IchCmMl04Lo"
+	},
+	{
+		"date": "2024/05/15",
+		"track": 7,
+		"song": "可愛くてごめん",
+		"singer": "HoneyWorks",
+		"YTLink": "https://www.youtube.com/watch?v=IchCmMl04Lo"
+	},
+	{
+		"date": "2024/05/15",
+		"track": 8,
+		"song": "チキチキバンバン",
+		"singer": "QUEENDOM",
+		"YTLink": "https://www.youtube.com/watch?v=IchCmMl04Lo"
+	},
+	{
+		"date": "2024/05/15",
+		"track": 9,
+		"song": "恋はスリル、ショック、サスペンス",
+		"singer": "愛内里菜",
+		"YTLink": "https://www.youtube.com/watch?v=IchCmMl04Lo"
+	},
+	{
+		"date": "2024/05/15",
+		"track": 10,
+		"song": "ムーンライト伝説",
+		"singer": "DALI",
+		"YTLink": "https://www.youtube.com/watch?v=IchCmMl04Lo"
+	},
+	{
+		"date": "2024/05/15",
+		"track": 11,
+		"song": "secret base～君がくれたもの～",
+		"singer": "ZONE",
+		"YTLink": "https://www.youtube.com/watch?v=IchCmMl04Lo"
+	},
+	{
+		"date": "2024/05/15",
+		"track": 12,
+		"song": "ステラブリーズ",
+		"singer": "春奈るな",
+		"YTLink": "https://www.youtube.com/watch?v=IchCmMl04Lo"
+	},
+	{
+		"date": "2024/05/15",
+		"track": 13,
+		"song": "CHE.R.RY",
+		"singer": "Yui",
+		"YTLink": "https://www.youtube.com/watch?v=IchCmMl04Lo"
+	},
+	{
+		"date": "2024/05/15",
+		"track": 14,
+		"song": "コレカラ",
+		"singer": "Machico",
+		"YTLink": "https://www.youtube.com/watch?v=IchCmMl04Lo"
+	},
+	{
+		"date": "2024/05/15",
+		"track": 15,
+		"song": "センパイ。",
+		"singer": "HoneyWorks meets TrySail",
+		"YTLink": "https://www.youtube.com/watch?v=IchCmMl04Lo"
+	},
+	{
+		"date": "2024/05/15",
+		"track": 16,
+		"song": "吉原ラメント",
+		"singer": "亜沙",
+		"YTLink": "https://www.youtube.com/watch?v=IchCmMl04Lo"
+	},
+	{
+		"date": "2024/05/15",
+		"track": 17,
+		"song": "虹",
+		"singer": "菅田将暉",
+		"YTLink": "https://www.youtube.com/watch?v=IchCmMl04Lo"
+	},
+	{
+		"date": "2024/05/15",
+		"track": 18,
+		"song": "アムリタ",
+		"singer": "牧野由依",
+		"YTLink": "https://www.youtube.com/watch?v=IchCmMl04Lo"
+	},
+	{
+		"date": "2024/05/15",
+		"track": 19,
+		"song": "マジックナンバー",
+		"singer": "坂本真綾",
+		"YTLink": "https://www.youtube.com/watch?v=IchCmMl04Lo"
+	},
+	{
+		"date": "2024/05/15",
+		"track": 20,
+		"song": "相思相愛",
+		"singer": "aiko",
+		"YTLink": "https://www.youtube.com/watch?v=IchCmMl04Lo"
+	},
+	{
 		"date": "2024/05/13",
 		"track": 1,
 		"song": "CHE.R.RY",
@@ -591,7 +1069,7 @@
 		"date": "2024/05/02",
 		"track": 5,
 		"song": "夜もすがら君想ふ",
-		"singer": "西沢さんP",
+		"singer": "TOKOTOKO(西沢さんP)",
 		"YTLink": "https://www.youtube.com/watch?v=0uTZRBZsXZI"
 	},
 	{
@@ -2471,7 +2949,7 @@
 		"date": "2024/04/03",
 		"track": 11,
 		"song": "夜もすがら君想ふ",
-		"singer": "西沢さんP",
+		"singer": "TOKOTOKO(西沢さんP)",
 		"YTLink": "https://www.youtube.com/watch?v=S09zBvUr2kE"
 	},
 	{
@@ -26779,7 +27257,7 @@
 	{
 		"date": "2023/04/04",
 		"track": "15",
-		"song": "Booo！",
+		"song": "Booo!",
 		"singer": "",
 		"note": "",
 		"YTLink": "https://www.youtube.com/watch?v=xh8Oug6klGY"
@@ -28004,7 +28482,7 @@
 		"date": "2023/03/14",
 		"track": "8",
 		"song": "いつも何度でも",
-		"singer": "",
+		"singer": "木村弓",
 		"note": "リクエスト",
 		"YTLink": "https://www.youtube.com/watch?v=DisKVQ5v-1Y"
 	},
@@ -41172,7 +41650,7 @@
 		"date": "2022/09/20",
 		"track": "2",
 		"song": "いつも何度でも",
-		"singer": "",
+		"singer": "木村弓",
 		"note": "バラード/ピアノ",
 		"YTLink": "https://www.youtube.com/watch?v=Jd1-YX1wGdg"
 	},
@@ -43467,7 +43945,7 @@
 	{
 		"date": "2022/08/25",
 		"track": "34",
-		"song": "Booo！",
+		"song": "Booo!",
 		"singer": "",
 		"note": "ボカロ",
 		"YTLink": "https://www.youtube.com/watch?v=MJltx5YOeXU"
@@ -63019,7 +63497,7 @@
 	{
 		"date": "2021/08/28",
 		"track": "15",
-		"song": "Booo！",
+		"song": "Booo!",
 		"singer": "",
 		"note": "",
 		"YTLink": "https://www.youtube.com/watch?v=buA7TCzdMdA"
@@ -63555,7 +64033,7 @@
 	{
 		"date": "2021/08/15",
 		"track": "11",
-		"song": "Booo！",
+		"song": "Booo!",
 		"singer": "",
 		"note": "",
 		"YTLink": "https://www.youtube.com/watch?v=OZNIIQ-0PAk"
@@ -68515,7 +68993,7 @@
 	{
 		"date": "2021/04/27",
 		"track": "18",
-		"song": "Booo！",
+		"song": "Booo!",
 		"singer": "",
 		"note": "",
 		"YTLink": "https://www.youtube.com/watch?v=N7u0NgpvbIQ"
@@ -75171,7 +75649,7 @@
 	{
 		"date": "2020/12/03",
 		"track": "11",
-		"song": "Booo！",
+		"song": "Booo!",
 		"singer": "",
 		"note": "",
 		"YTLink": "https://www.youtube.com/watch?v=3jZoQgHKS2A"
@@ -77020,7 +77498,7 @@
 		"date": "2020/11/05",
 		"track": "13",
 		"song": "いつも何度でも",
-		"singer": "",
+		"singer": "木村弓",
 		"note": "初回",
 		"YTLink": "https://www.youtube.com/watch?v=ukr1Imc6JB8"
 	},
@@ -77419,7 +77897,7 @@
 	{
 		"date": "2020/10/22",
 		"track": "9",
-		"song": "Booo！",
+		"song": "Booo!",
 		"singer": "",
 		"note": "初回",
 		"YTLink": "https://www.youtube.com/watch?v=mdB3NZYs1lo"

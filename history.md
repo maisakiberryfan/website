@@ -1,5 +1,5 @@
 ﻿## 2024
-* 2024/05/15　1万曲歌ったを達成
+* 2024/05/15　[1万曲歌ったを達成 / 初のmocopi配信](https://www.youtube.com/watch?v=IchCmMl04Lo)
 * 2024/04/28　6th Album 『EEE!!』 発売
 * 2024/04/28　[Xサブ垢2号店開店](https://twitter.com/m_berrychannnn)
 * 2024/04/26　[『#カクリヨ・トーキョー』にて太郎坊ちゃんのCVが発表されました。](https://twitter.com/MaisakiBerry/status/1783701568329801780)
