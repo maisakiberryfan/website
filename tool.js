@@ -11,7 +11,7 @@ import "https://unpkg.com/select2@4.0.13/dist/js/select2.full.min.js"
 let nav = `
 <nav class="navbar fixed-top navbar-expand-lg bg-body-tertiary px-5">
   <div class="container-fluid">
-    <a class="navbar-brand" href='/' target='_self'>苺咲べりぃ非公式wiki</a>
+    <a class="navbar-brand" href='/' target='_self'>苺咲べりぃ非公式倉庫</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -150,7 +150,7 @@ $(()=>{
     url:url,
     //cache:false
     }).done((d, textStatus, request)=>{
-      document.title = title + '苺咲べりぃ非公式wiki'
+      document.title = title + '苺咲べりぃ非公式倉庫'
       //check if there are some exception page
       if(process=='setlist' || process=='streamlist'){
         let c = `
