@@ -1,4 +1,5 @@
 ﻿## 2024
+* 2024/05/23　[LSCM Records新曲「Silk」ボーカル＆MV公開 ](https://x.com/LSmusicopyright/status/1793208513164157138)
 * 2024/05/15　[1万曲歌ったを達成 / 初のmocopi配信](https://www.youtube.com/watch?v=IchCmMl04Lo)
 * 2024/04/28　6th Album 『EEE!!』 発売
 * 2024/04/28　[Xサブ垢2号店開店](https://twitter.com/m_berrychannnn)
