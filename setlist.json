@@ -1,5 +1,146 @@
 [
 	{
+		"date": "2024/06/06",
+		"track": 1,
+		"song": "吉原ラメント",
+		"singer": "亜沙",
+		"YTLink": "https://www.youtube.com/watch?v=y6qrCf0n9ds"
+	},
+	{
+		"date": "2024/06/06",
+		"track": 2,
+		"song": "CHE.R.RY",
+		"singer": "Yui",
+		"YTLink": "https://www.youtube.com/watch?v=y6qrCf0n9ds"
+	},
+	{
+		"date": "2024/06/06",
+		"track": 3,
+		"song": "Love So Sweet",
+		"singer": "嵐",
+		"YTLink": "https://www.youtube.com/watch?v=y6qrCf0n9ds"
+	},
+	{
+		"date": "2024/06/06",
+		"track": 4,
+		"song": "ありがとう",
+		"singer": "いきものがかり",
+		"YTLink": "https://www.youtube.com/watch?v=y6qrCf0n9ds"
+	},
+	{
+		"date": "2024/06/06",
+		"track": 5,
+		"song": "陽のあたる坂道",
+		"singer": "Do As Infinity",
+		"YTLink": "https://www.youtube.com/watch?v=y6qrCf0n9ds"
+	},
+	{
+		"date": "2024/06/06",
+		"track": 6,
+		"song": "私がオバさんになっても",
+		"singer": "森高千里",
+		"YTLink": "https://www.youtube.com/watch?v=y6qrCf0n9ds"
+	},
+	{
+		"date": "2024/06/06",
+		"track": 7,
+		"song": "生まれてはじめて",
+		"singer": "神田沙也加,松たか子",
+		"YTLink": "https://www.youtube.com/watch?v=y6qrCf0n9ds"
+	},
+	{
+		"date": "2024/06/06",
+		"track": 8,
+		"song": "春泥棒",
+		"singer": "ヨルシカ",
+		"YTLink": "https://www.youtube.com/watch?v=y6qrCf0n9ds"
+	},
+	{
+		"date": "2024/06/06",
+		"track": 9,
+		"song": "未来へ",
+		"singer": "Kiroro",
+		"YTLink": "https://www.youtube.com/watch?v=y6qrCf0n9ds"
+	},
+	{
+		"date": "2024/06/06",
+		"track": 10,
+		"song": "射手座☆午後九時 Don't be late",
+		"singer": "シェリル・ノーム(May'n)",
+		"YTLink": "https://www.youtube.com/watch?v=y6qrCf0n9ds"
+	},
+	{
+		"date": "2024/06/06",
+		"track": 11,
+		"song": "放課後オーバーフロウ",
+		"singer": "ランカ・リー(中島愛)",
+		"YTLink": "https://www.youtube.com/watch?v=y6qrCf0n9ds"
+	},
+	{
+		"date": "2024/06/06",
+		"track": 12,
+		"song": "アナタノオト",
+		"singer": "ランカ・リー(中島愛)",
+		"YTLink": "https://www.youtube.com/watch?v=y6qrCf0n9ds"
+	},
+	{
+		"date": "2024/06/06",
+		"track": 13,
+		"song": "ルンがピカッと光ったら",
+		"singer": "ワルキューレ",
+		"YTLink": "https://www.youtube.com/watch?v=y6qrCf0n9ds"
+	},
+	{
+		"date": "2024/06/06",
+		"track": 14,
+		"song": "Don't say \"lazy\"",
+		"singer": "放課後ティータイム",
+		"YTLink": "https://www.youtube.com/watch?v=y6qrCf0n9ds"
+	},
+	{
+		"date": "2024/06/06",
+		"track": 15,
+		"song": "乙女のポリシー",
+		"singer": "石田燿子",
+		"YTLink": "https://www.youtube.com/watch?v=y6qrCf0n9ds"
+	},
+	{
+		"date": "2024/06/06",
+		"track": 16,
+		"song": "my sweet heart",
+		"singer": "小松里歌",
+		"note": "初回",
+		"YTLink": "https://www.youtube.com/watch?v=y6qrCf0n9ds"
+	},
+	{
+		"date": "2024/06/06",
+		"track": 17,
+		"song": "Rainbow Notes♪",
+		"singer": "神戸みゆきの",
+		"YTLink": "https://www.youtube.com/watch?v=y6qrCf0n9ds"
+	},
+	{
+		"date": "2024/06/06",
+		"track": 18,
+		"song": "オレンジ",
+		"singer": "流田Project(釘宮理恵,堀江由衣,喜多村英梨)",
+		"YTLink": "https://www.youtube.com/watch?v=y6qrCf0n9ds"
+	},
+	{
+		"date": "2024/06/06",
+		"track": 19,
+		"song": "たばこ",
+		"singer": "コレサワ",
+		"YTLink": "https://www.youtube.com/watch?v=y6qrCf0n9ds"
+	},
+	{
+		"date": "2024/06/06",
+		"track": 20,
+		"song": "夜空",
+		"singer": "鈴木みのり",
+		"YTLink": "https://www.youtube.com/watch?v=y6qrCf0n9ds"
+	},
+	{
 		"date": "2024/06/04",
 		"track": 1,
 		"song": "I can't stop my love for you♥",
@@ -28904,7 +29045,7 @@
 		"date": "2023/03/16",
 		"track": "3",
 		"song": "射手座☆午後九時 Don't be late",
-		"singer": "",
+		"singer": "シェリル・ノーム(May'n)",
 		"note": "",
 		"YTLink": "https://www.youtube.com/watch?v=Yab-69V1bo8"
 	},
@@ -38032,7 +38173,7 @@
 		"date": "2022/11/09",
 		"track": "7",
 		"song": "射手座☆午後九時 Don't be late",
-		"singer": "",
+		"singer": "シェリル・ノーム(May'n)",
 		"note": "",
 		"YTLink": "https://www.youtube.com/watch?v=cnMMTnmQXd0"
 	},
@@ -50328,7 +50469,7 @@
 		"date": "2022/06/16",
 		"track": "11",
 		"song": "Rainbow Notes♪",
-		"singer": "",
+		"singer": "神戸みゆきの",
 		"note": "毎日歌枠/リクエスト",
 		"YTLink": "https://www.youtube.com/watch?v=js0DFgmhojw"
 	},
@@ -50544,7 +50685,7 @@
 		"date": "2022/06/15",
 		"track": "11",
 		"song": "射手座☆午後九時 Don't be late",
-		"singer": "",
+		"singer": "シェリル・ノーム(May'n)",
 		"note": "毎日歌枠/マクロス",
 		"YTLink": "https://www.youtube.com/watch?v=jSf7vIaP3jE"
 	},
@@ -58008,7 +58149,7 @@
 		"date": "2022/01/25",
 		"track": "13",
 		"song": "射手座☆午後九時 Don't be late",
-		"singer": "",
+		"singer": "シェリル・ノーム(May'n)",
 		"note": "かっこいい",
 		"YTLink": "https://www.youtube.com/watch?v=DnwrdqRIXxM"
 	},
@@ -59992,7 +60133,7 @@
 		"date": "2021/11/26",
 		"track": "12",
 		"song": "射手座☆午後九時 Don't be late",
-		"singer": "",
+		"singer": "シェリル・ノーム(May'n)",
 		"note": "",
 		"YTLink": "https://www.youtube.com/watch?v=WBtaUHonl_4"
 	},
@@ -60552,7 +60693,7 @@
 		"date": "2021/11/11",
 		"track": "11",
 		"song": "射手座☆午後九時 Don't be late",
-		"singer": "",
+		"singer": "シェリル・ノーム(May'n)",
 		"note": "",
 		"YTLink": "https://www.youtube.com/watch?v=bkHVu62nKx8"
 	},
@@ -61304,7 +61445,7 @@
 		"date": "2021/10/24",
 		"track": "14",
 		"song": "射手座☆午後九時 Don't be late",
-		"singer": "",
+		"singer": "シェリル・ノーム(May'n)",
 		"note": "毎日歌枠/リクエスト",
 		"YTLink": "https://www.youtube.com/watch?v=jlOceMeeWsY"
 	},
@@ -63712,7 +63853,7 @@
 		"date": "2021/09/16",
 		"track": "10",
 		"song": "射手座☆午後九時 Don't be late",
-		"singer": "",
+		"singer": "シェリル・ノーム(May'n)",
 		"note": "耐久",
 		"YTLink": "https://www.youtube.com/watch?v=iVdgUTYiN7Y"
 	},
@@ -68384,7 +68525,7 @@
 		"date": "2021/06/03",
 		"track": "5",
 		"song": "射手座☆午後九時 Don't be late",
-		"singer": "",
+		"singer": "シェリル・ノーム(May'n)",
 		"note": "マクロス/初回",
 		"YTLink": "https://www.youtube.com/watch?v=ynoPRl9zBTk"
 	},
@@ -75352,7 +75493,7 @@
 		"date": "2020/12/19",
 		"track": "11",
 		"song": "Rainbow Notes♪",
-		"singer": "",
+		"singer": "神戸みゆきの",
 		"note": "初回",
 		"YTLink": "https://www.youtube.com/watch?v=NsPoTJoxgYE"
 	},
