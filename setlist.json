@@ -1,5 +1,145 @@
 [
 	{
+		"date": "2024/06/21",
+		"track": 1,
+		"song": "ヒッチコック",
+		"singer": "ヨルシカ",
+		"YTLink": "https://www.youtube.com/watch?v=HzUpaspi7E8"
+	},
+	{
+		"date": "2024/06/21",
+		"track": 2,
+		"song": "夜もすがら君想ふ",
+		"singer": "TOKOTOKO(西沢さんP)",
+		"YTLink": "https://www.youtube.com/watch?v=HzUpaspi7E8"
+	},
+	{
+		"date": "2024/06/21",
+		"track": 3,
+		"song": "相思相愛",
+		"singer": "aiko",
+		"YTLink": "https://www.youtube.com/watch?v=HzUpaspi7E8"
+	},
+	{
+		"date": "2024/06/21",
+		"track": 4,
+		"song": "Dream × Dream",
+		"singer": "愛内里菜",
+		"YTLink": "https://www.youtube.com/watch?v=HzUpaspi7E8"
+	},
+	{
+		"date": "2024/06/21",
+		"track": 5,
+		"song": "ハロ/ハワユ",
+		"singer": "ほえほえP",
+		"YTLink": "https://www.youtube.com/watch?v=HzUpaspi7E8"
+	},
+	{
+		"date": "2024/06/21",
+		"track": 6,
+		"song": "メルト",
+		"singer": "ryo",
+		"YTLink": "https://www.youtube.com/watch?v=HzUpaspi7E8"
+	},
+	{
+		"date": "2024/06/21",
+		"track": 7,
+		"song": "白い雪のプリンセスは",
+		"singer": "のぼる↑P",
+		"YTLink": "https://www.youtube.com/watch?v=HzUpaspi7E8"
+	},
+	{
+		"date": "2024/06/21",
+		"track": 8,
+		"song": "歌に形はないけれど",
+		"singer": "きりたんP(doriko)",
+		"YTLink": "https://www.youtube.com/watch?v=HzUpaspi7E8"
+	},
+	{
+		"date": "2024/06/21",
+		"track": 9,
+		"song": "ドレミファロンド",
+		"singer": "40mP",
+		"YTLink": "https://www.youtube.com/watch?v=HzUpaspi7E8"
+	},
+	{
+		"date": "2024/06/21",
+		"track": 10,
+		"song": "おじゃま虫",
+		"singer": "DECO*27",
+		"YTLink": "https://www.youtube.com/watch?v=HzUpaspi7E8"
+	},
+	{
+		"date": "2024/06/21",
+		"track": 11,
+		"song": "新時代",
+		"singer": "Ado",
+		"YTLink": "https://www.youtube.com/watch?v=HzUpaspi7E8"
+	},
+	{
+		"date": "2024/06/21",
+		"track": 12,
+		"song": "群青",
+		"singer": "YOASOBI",
+		"YTLink": "https://www.youtube.com/watch?v=HzUpaspi7E8"
+	},
+	{
+		"date": "2024/06/21",
+		"track": 13,
+		"song": "そばかす",
+		"singer": "JUDY AND MARY",
+		"YTLink": "https://www.youtube.com/watch?v=HzUpaspi7E8"
+	},
+	{
+		"date": "2024/06/21",
+		"track": 14,
+		"song": "アイドル",
+		"singer": "YOASOBI",
+		"YTLink": "https://www.youtube.com/watch?v=HzUpaspi7E8"
+	},
+	{
+		"date": "2024/06/21",
+		"track": 15,
+		"song": "可愛くなりたい",
+		"singer": "HoneyWorks feat.鎖那",
+		"YTLink": "https://www.youtube.com/watch?v=HzUpaspi7E8"
+	},
+	{
+		"date": "2024/06/21",
+		"track": 16,
+		"song": "可愛くてごめん",
+		"singer": "HoneyWorks",
+		"YTLink": "https://www.youtube.com/watch?v=HzUpaspi7E8"
+	},
+	{
+		"date": "2024/06/21",
+		"track": 17,
+		"song": "勇者",
+		"singer": "YOASOBI",
+		"YTLink": "https://www.youtube.com/watch?v=HzUpaspi7E8"
+	},
+	{
+		"date": "2024/06/21",
+		"track": 18,
+		"song": "たぶん",
+		"singer": "YOASOBI",
+		"YTLink": "https://www.youtube.com/watch?v=HzUpaspi7E8"
+	},
+	{
+		"date": "2024/06/21",
+		"track": 19,
+		"song": "ヘビーローテーション",
+		"singer": "AKB48",
+		"YTLink": "https://www.youtube.com/watch?v=HzUpaspi7E8"
+	},
+	{
+		"date": "2024/06/21",
+		"track": 20,
+		"song": "ビードロ模様",
+		"singer": "やなぎなぎ",
+		"YTLink": "https://www.youtube.com/watch?v=HzUpaspi7E8"
+	},
+	{
 		"date": "2024/06/18",
 		"track": 1,
 		"song": "旦那様とのラブラブ・ラブソング",
