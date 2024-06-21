@@ -1,5 +1,147 @@
 [
 	{
+		"date": "2024/06/18",
+		"track": 1,
+		"song": "旦那様とのラブラブ・ラブソング",
+		"singer": "フェンリース(CV:釘宮理恵)",
+		"note": "初回",
+		"YTLink": "https://www.youtube.com/watch?v=JDzXUCYx5w4"
+	},
+	{
+		"date": "2024/06/18",
+		"track": 2,
+		"song": "吉原ラメント",
+		"singer": "亜沙",
+		"YTLink": "https://www.youtube.com/watch?v=JDzXUCYx5w4"
+	},
+	{
+		"date": "2024/06/18",
+		"track": 3,
+		"song": "少女レイ",
+		"singer": "みきとP",
+		"YTLink": "https://www.youtube.com/watch?v=JDzXUCYx5w4"
+	},
+	{
+		"date": "2024/06/18",
+		"track": 4,
+		"song": "水平線",
+		"singer": "back number",
+		"YTLink": "https://www.youtube.com/watch?v=JDzXUCYx5w4"
+	},
+	{
+		"date": "2024/06/18",
+		"track": 5,
+		"song": "夜もすがら君想ふ",
+		"singer": "TOKOTOKO(西沢さんP)",
+		"YTLink": "https://www.youtube.com/watch?v=JDzXUCYx5w4"
+	},
+	{
+		"date": "2024/06/18",
+		"track": 6,
+		"song": "甘えんぼ",
+		"singer": "大塚愛",
+		"YTLink": "https://www.youtube.com/watch?v=JDzXUCYx5w4"
+	},
+	{
+		"date": "2024/06/18",
+		"track": 7,
+		"song": "クラゲ、流れ星",
+		"singer": "大塚愛",
+		"YTLink": "https://www.youtube.com/watch?v=JDzXUCYx5w4"
+	},
+	{
+		"date": "2024/06/18",
+		"track": 8,
+		"song": "ドライフラワー",
+		"singer": "優里",
+		"YTLink": "https://www.youtube.com/watch?v=JDzXUCYx5w4"
+	},
+	{
+		"date": "2024/06/18",
+		"track": 9,
+		"song": "かくれんぼ",
+		"singer": "優里",
+		"YTLink": "https://www.youtube.com/watch?v=JDzXUCYx5w4"
+	},
+	{
+		"date": "2024/06/18",
+		"track": 10,
+		"song": "蕾",
+		"singer": "コブクロ",
+		"YTLink": "https://www.youtube.com/watch?v=JDzXUCYx5w4"
+	},
+	{
+		"date": "2024/06/18",
+		"track": 11,
+		"song": "君色シグナル",
+		"singer": "春奈るな",
+		"YTLink": "https://www.youtube.com/watch?v=JDzXUCYx5w4"
+	},
+	{
+		"date": "2024/06/18",
+		"track": 12,
+		"song": "ステラブリーズ",
+		"singer": "春奈るな",
+		"YTLink": "https://www.youtube.com/watch?v=JDzXUCYx5w4"
+	},
+	{
+		"date": "2024/06/18",
+		"track": 13,
+		"song": "ヒッチコック",
+		"singer": "ヨルシカ",
+		"YTLink": "https://www.youtube.com/watch?v=JDzXUCYx5w4"
+	},
+	{
+		"date": "2024/06/18",
+		"track": 14,
+		"song": "紅一葉",
+		"singer": "黒うさP",
+		"YTLink": "https://www.youtube.com/watch?v=JDzXUCYx5w4"
+	},
+	{
+		"date": "2024/06/18",
+		"track": 15,
+		"song": "楔",
+		"singer": "奥華子",
+		"YTLink": "https://www.youtube.com/watch?v=JDzXUCYx5w4"
+	},
+	{
+		"date": "2024/06/18",
+		"track": 16,
+		"song": "プラネタリウム",
+		"singer": "大塚愛",
+		"YTLink": "https://www.youtube.com/watch?v=JDzXUCYx5w4"
+	},
+	{
+		"date": "2024/06/18",
+		"track": 17,
+		"song": "lull~そして僕らは~",
+		"singer": "Ray",
+		"YTLink": "https://www.youtube.com/watch?v=JDzXUCYx5w4"
+	},
+	{
+		"date": "2024/06/18",
+		"track": 18,
+		"song": "Hello Alone -Yui Ballade-",
+		"singer": "由比ヶ浜結衣(東山奈央)",
+		"note": "初回",
+		"YTLink": "https://www.youtube.com/watch?v=JDzXUCYx5w4"
+	},
+	{
+		"date": "2024/06/18",
+		"track": 19,
+		"song": "最悪な日でもあなたが好き。",
+		"singer": "芹澤優",
+		"YTLink": "https://www.youtube.com/watch?v=JDzXUCYx5w4"
+	},
+	{
+		"date": "2024/06/18",
+		"track": 20,
+		"song": "大正浪漫",
+		"singer": "YOASOBI",
+		"YTLink": "https://www.youtube.com/watch?v=JDzXUCYx5w4"
+	},
+	{
 		"date": "2024/06/06",
 		"track": 1,
 		"song": "吉原ラメント",
