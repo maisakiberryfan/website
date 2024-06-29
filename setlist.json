@@ -1,5 +1,428 @@
 [
 	{
+		"date": "2024/06/27",
+		"track": 1,
+		"song": "わたしの一番かわいいところ",
+		"singer": "FRUITS ZIPPER",
+		"note": "初回",
+		"YTLink": "https://www.youtube.com/watch?v=mPcWlLf7_Ts"
+	},
+	{
+		"date": "2024/06/27",
+		"track": 2,
+		"song": "Lemon",
+		"singer": "米津玄師",
+		"YTLink": "https://www.youtube.com/watch?v=mPcWlLf7_Ts"
+	},
+	{
+		"date": "2024/06/27",
+		"track": 3,
+		"song": "旦那様とのラブラブ・ラブソング",
+		"singer": "フェンリース(CV:釘宮理恵)",
+		"YTLink": "https://www.youtube.com/watch?v=mPcWlLf7_Ts"
+	},
+	{
+		"date": "2024/06/27",
+		"track": 4,
+		"song": "風が吹いている",
+		"singer": "いきものがかり",
+		"YTLink": "https://www.youtube.com/watch?v=mPcWlLf7_Ts"
+	},
+	{
+		"date": "2024/06/27",
+		"track": 5,
+		"song": "ありがとう",
+		"singer": "いきものがかり",
+		"YTLink": "https://www.youtube.com/watch?v=mPcWlLf7_Ts"
+	},
+	{
+		"date": "2024/06/27",
+		"track": 6,
+		"song": "愛をこめて花束を",
+		"singer": "superfly",
+		"YTLink": "https://www.youtube.com/watch?v=mPcWlLf7_Ts"
+	},
+	{
+		"date": "2024/06/27",
+		"track": 7,
+		"song": "涙そうそう",
+		"singer": "夏川りみ",
+		"YTLink": "https://www.youtube.com/watch?v=mPcWlLf7_Ts"
+	},
+	{
+		"date": "2024/06/27",
+		"track": 8,
+		"song": "高鳴る",
+		"singer": "藤田麻衣子",
+		"YTLink": "https://www.youtube.com/watch?v=mPcWlLf7_Ts"
+	},
+	{
+		"date": "2024/06/27",
+		"track": 9,
+		"song": "DANZEN！ふたりはプリキュア(Ver.Max Heart)",
+		"YTLink": "https://www.youtube.com/watch?v=mPcWlLf7_Ts"
+	},
+	{
+		"date": "2024/06/27",
+		"track": 10,
+		"song": "ようこそジャパリパークへ",
+		"singer": "どうぶつビスケッツ",
+		"YTLink": "https://www.youtube.com/watch?v=mPcWlLf7_Ts"
+	},
+	{
+		"date": "2024/06/27",
+		"track": 11,
+		"song": "おジャ魔女カーニバル！！",
+		"singer": "MAHO堂",
+		"YTLink": "https://www.youtube.com/watch?v=mPcWlLf7_Ts"
+	},
+	{
+		"date": "2024/06/27",
+		"track": 12,
+		"song": "366日",
+		"singer": "HY",
+		"YTLink": "https://www.youtube.com/watch?v=mPcWlLf7_Ts"
+	},
+	{
+		"date": "2024/06/27",
+		"track": 13,
+		"song": "タイヨウのうた",
+		"singer": "沢尻エリカ",
+		"YTLink": "https://www.youtube.com/watch?v=mPcWlLf7_Ts"
+	},
+	{
+		"date": "2024/06/27",
+		"track": 14,
+		"song": "赤い糸",
+		"singer": "コブクロ",
+		"YTLink": "https://www.youtube.com/watch?v=mPcWlLf7_Ts"
+	},
+	{
+		"date": "2024/06/27",
+		"track": 15,
+		"song": "heavenly days",
+		"singer": "新垣結衣",
+		"YTLink": "https://www.youtube.com/watch?v=mPcWlLf7_Ts"
+	},
+	{
+		"date": "2024/06/27",
+		"track": 16,
+		"song": "ネコに風船",
+		"singer": "大塚愛",
+		"YTLink": "https://www.youtube.com/watch?v=mPcWlLf7_Ts"
+	},
+	{
+		"date": "2024/06/27",
+		"track": 17,
+		"song": "黒毛和牛上塩タン焼680円",
+		"singer": "大塚愛",
+		"YTLink": "https://www.youtube.com/watch?v=mPcWlLf7_Ts"
+	},
+	{
+		"date": "2024/06/27",
+		"track": 18,
+		"song": "Subtitle",
+		"singer": "Official髭男dism",
+		"YTLink": "https://www.youtube.com/watch?v=mPcWlLf7_Ts"
+	},
+	{
+		"date": "2024/06/27",
+		"track": 19,
+		"song": "水平線",
+		"singer": "back number",
+		"YTLink": "https://www.youtube.com/watch?v=mPcWlLf7_Ts"
+	},
+	{
+		"date": "2024/06/27",
+		"track": 20,
+		"song": "プロローグ",
+		"singer": "Uru",
+		"YTLink": "https://www.youtube.com/watch?v=mPcWlLf7_Ts"
+	},
+	{
+		"date": "2024/06/25",
+		"track": 1,
+		"song": "最上級にかわいいの！",
+		"singer": "超ときめき宣伝部",
+		"YTLink": "https://www.youtube.com/watch?v=G5tcTMymrlI"
+	},
+	{
+		"date": "2024/06/25",
+		"track": 2,
+		"song": "恋人失格",
+		"singer": "コレサワ",
+		"YTLink": "https://www.youtube.com/watch?v=G5tcTMymrlI"
+	},
+	{
+		"date": "2024/06/25",
+		"track": 3,
+		"song": "たばこ",
+		"singer": "コレサワ",
+		"YTLink": "https://www.youtube.com/watch?v=G5tcTMymrlI"
+	},
+	{
+		"date": "2024/06/25",
+		"track": 4,
+		"song": "ドライフラワー",
+		"singer": "優里",
+		"YTLink": "https://www.youtube.com/watch?v=G5tcTMymrlI"
+	},
+	{
+		"date": "2024/06/25",
+		"track": 5,
+		"song": "Pretender",
+		"singer": "Official髭男dism",
+		"YTLink": "https://www.youtube.com/watch?v=G5tcTMymrlI"
+	},
+	{
+		"date": "2024/06/25",
+		"track": 6,
+		"song": "PIECE OF MY WISH",
+		"singer": "今井美樹",
+		"YTLink": "https://www.youtube.com/watch?v=G5tcTMymrlI"
+	},
+	{
+		"date": "2024/06/25",
+		"track": 7,
+		"song": "Everything",
+		"singer": "MISIA",
+		"YTLink": "https://www.youtube.com/watch?v=G5tcTMymrlI"
+	},
+	{
+		"date": "2024/06/25",
+		"track": 8,
+		"song": "First Love",
+		"singer": "宇多田ヒカル",
+		"YTLink": "https://www.youtube.com/watch?v=G5tcTMymrlI"
+	},
+	{
+		"date": "2024/06/25",
+		"track": 9,
+		"song": "打上花火",
+		"singer": "DAOKO × 米津玄師",
+		"YTLink": "https://www.youtube.com/watch?v=G5tcTMymrlI"
+	},
+	{
+		"date": "2024/06/25",
+		"track": 10,
+		"song": "青いベンチ",
+		"singer": "サスケ",
+		"YTLink": "https://www.youtube.com/watch?v=G5tcTMymrlI"
+	},
+	{
+		"date": "2024/06/25",
+		"track": 11,
+		"song": "アイネクライネ",
+		"singer": "米津玄師",
+		"YTLink": "https://www.youtube.com/watch?v=G5tcTMymrlI"
+	},
+	{
+		"date": "2024/06/25",
+		"track": 12,
+		"song": "ハッピーエンド",
+		"singer": "back number",
+		"YTLink": "https://www.youtube.com/watch?v=G5tcTMymrlI"
+	},
+	{
+		"date": "2024/06/25",
+		"track": 13,
+		"song": "115万キロのフィルム",
+		"singer": "Official髭男dism",
+		"YTLink": "https://www.youtube.com/watch?v=G5tcTMymrlI"
+	},
+	{
+		"date": "2024/06/25",
+		"track": 14,
+		"song": "最高の片想い",
+		"singer": "タイナカサチ",
+		"YTLink": "https://www.youtube.com/watch?v=G5tcTMymrlI"
+	},
+	{
+		"date": "2024/06/25",
+		"track": 15,
+		"song": "Laughter",
+		"singer": "Official髭男dism",
+		"YTLink": "https://www.youtube.com/watch?v=G5tcTMymrlI"
+	},
+	{
+		"date": "2024/06/25",
+		"track": 16,
+		"song": "可愛くてごめん",
+		"singer": "HoneyWorks",
+		"YTLink": "https://www.youtube.com/watch?v=G5tcTMymrlI"
+	},
+	{
+		"date": "2024/06/25",
+		"track": 17,
+		"song": "ロマンスの神様",
+		"singer": "広瀬香美",
+		"YTLink": "https://www.youtube.com/watch?v=G5tcTMymrlI"
+	},
+	{
+		"date": "2024/06/25",
+		"track": 18,
+		"song": "STEP",
+		"singer": "ClariS",
+		"YTLink": "https://www.youtube.com/watch?v=G5tcTMymrlI"
+	},
+	{
+		"date": "2024/06/25",
+		"track": 19,
+		"song": "三日月",
+		"singer": "絢香",
+		"YTLink": "https://www.youtube.com/watch?v=G5tcTMymrlI"
+	},
+	{
+		"date": "2024/06/25",
+		"track": 20,
+		"song": "ミュージカル",
+		"singer": "鈴木みのり",
+		"YTLink": "https://www.youtube.com/watch?v=G5tcTMymrlI"
+	},
+	{
+		"date": "2024/06/24",
+		"track": 1,
+		"song": "最上級にかわいいの！",
+		"singer": "超ときめき宣伝部",
+		"note": "初回",
+		"YTLink": "https://www.youtube.com/watch?v=HRgBLXAqFag"
+	},
+	{
+		"date": "2024/06/24",
+		"track": 2,
+		"song": "陽のあたる坂道",
+		"singer": "Do As Infinity",
+		"YTLink": "https://www.youtube.com/watch?v=HRgBLXAqFag"
+	},
+	{
+		"date": "2024/06/24",
+		"track": 3,
+		"song": "出逢った頃のように",
+		"singer": "Every Little Thing",
+		"YTLink": "https://www.youtube.com/watch?v=HRgBLXAqFag"
+	},
+	{
+		"date": "2024/06/24",
+		"track": 4,
+		"song": "Grip!",
+		"singer": "Every Little Thing",
+		"YTLink": "https://www.youtube.com/watch?v=HRgBLXAqFag"
+	},
+	{
+		"date": "2024/06/24",
+		"track": 5,
+		"song": "大正浪漫",
+		"singer": "YOASOBI",
+		"YTLink": "https://www.youtube.com/watch?v=HRgBLXAqFag"
+	},
+	{
+		"date": "2024/06/24",
+		"track": 6,
+		"song": "CHE.R.RY",
+		"singer": "Yui",
+		"YTLink": "https://www.youtube.com/watch?v=HRgBLXAqFag"
+	},
+	{
+		"date": "2024/06/24",
+		"track": 7,
+		"song": "ドラえもんのうた",
+		"singer": "山野さと子",
+		"YTLink": "https://www.youtube.com/watch?v=HRgBLXAqFag"
+	},
+	{
+		"date": "2024/06/24",
+		"track": 8,
+		"song": "シルシ",
+		"singer": "LiSA",
+		"YTLink": "https://www.youtube.com/watch?v=HRgBLXAqFag"
+	},
+	{
+		"date": "2024/06/24",
+		"track": 9,
+		"song": "蕾",
+		"singer": "コブクロ",
+		"YTLink": "https://www.youtube.com/watch?v=HRgBLXAqFag"
+	},
+	{
+		"date": "2024/06/24",
+		"track": 10,
+		"song": "帰りたくなったよ",
+		"singer": "いきものがかり",
+		"YTLink": "https://www.youtube.com/watch?v=HRgBLXAqFag"
+	},
+	{
+		"date": "2024/06/24",
+		"track": 11,
+		"song": "ふたり",
+		"singer": "いきものがかり",
+		"YTLink": "https://www.youtube.com/watch?v=HRgBLXAqFag"
+	},
+	{
+		"date": "2024/06/24",
+		"track": 12,
+		"song": "ハルジオン",
+		"singer": "YOASOBI",
+		"YTLink": "https://www.youtube.com/watch?v=HRgBLXAqFag"
+	},
+	{
+		"date": "2024/06/24",
+		"track": 13,
+		"song": "瞳をとじて",
+		"singer": "平井堅",
+		"YTLink": "https://www.youtube.com/watch?v=HRgBLXAqFag"
+	},
+	{
+		"date": "2024/06/24",
+		"track": 14,
+		"song": "別の人の彼女になったよ",
+		"singer": "Wacci",
+		"YTLink": "https://www.youtube.com/watch?v=HRgBLXAqFag"
+	},
+	{
+		"date": "2024/06/24",
+		"track": 15,
+		"song": "ハルノヒ",
+		"singer": "あいみょん",
+		"YTLink": "https://www.youtube.com/watch?v=HRgBLXAqFag"
+	},
+	{
+		"date": "2024/06/24",
+		"track": 16,
+		"song": "恋はスリル、ショック、サスペンス",
+		"singer": "愛内里菜",
+		"YTLink": "https://www.youtube.com/watch?v=HRgBLXAqFag"
+	},
+	{
+		"date": "2024/06/24",
+		"track": 17,
+		"song": "ボクノート",
+		"singer": "スキマスイッチ",
+		"YTLink": "https://www.youtube.com/watch?v=HRgBLXAqFag"
+	},
+	{
+		"date": "2024/06/24",
+		"track": 18,
+		"song": "わたしの恋はホッチキス",
+		"singer": "放課後ティータイム",
+		"note": "初回",
+		"YTLink": "https://www.youtube.com/watch?v=HRgBLXAqFag"
+	},
+	{
+		"date": "2024/06/24",
+		"track": 19,
+		"song": "ふでペン ～ボールペン～",
+		"singer": "放課後ティータイム",
+		"note": "初回",
+		"YTLink": "https://www.youtube.com/watch?v=HRgBLXAqFag"
+	},
+	{
+		"date": "2024/06/24",
+		"track": 20,
+		"song": "HAPPY BIRTHDAY",
+		"singer": "back number",
+		"YTLink": "https://www.youtube.com/watch?v=HRgBLXAqFag"
+	},
+	{
 		"date": "2024/06/21",
 		"track": 1,
 		"song": "ヒッチコック",
