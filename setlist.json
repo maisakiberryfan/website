@@ -1,5 +1,427 @@
 [
 	{
+		"date": "2024/07/04",
+		"track": 1,
+		"song": "emotion",
+		"singer": "苺咲べりぃ",
+		"YTLink": "https://www.youtube.com/watch?v=HAGkISR9tok"
+	},
+	{
+		"date": "2024/07/04",
+		"track": 2,
+		"song": "若者のすべて",
+		"singer": "フジファブリック",
+		"YTLink": "https://www.youtube.com/watch?v=HAGkISR9tok"
+	},
+	{
+		"date": "2024/07/04",
+		"track": 3,
+		"song": "会いに行くのに",
+		"singer": "あいみょん",
+		"YTLink": "https://www.youtube.com/watch?v=HAGkISR9tok"
+	},
+	{
+		"date": "2024/07/04",
+		"track": 4,
+		"song": "ヒッチコック",
+		"singer": "ヨルシカ",
+		"YTLink": "https://www.youtube.com/watch?v=HAGkISR9tok"
+	},
+	{
+		"date": "2024/07/04",
+		"track": 5,
+		"song": "雨とカプチーノ",
+		"singer": "ヨルシカ",
+		"YTLink": "https://www.youtube.com/watch?v=HAGkISR9tok"
+	},
+	{
+		"date": "2024/07/04",
+		"track": 6,
+		"song": "わたしの一番かわいいところ",
+		"singer": "FRUITS ZIPPER",
+		"YTLink": "https://www.youtube.com/watch?v=HAGkISR9tok"
+	},
+	{
+		"date": "2024/07/04",
+		"track": 7,
+		"song": "恋愛サーキュレーション",
+		"singer": "千石撫子(花澤香菜)",
+		"YTLink": "https://www.youtube.com/watch?v=HAGkISR9tok"
+	},
+	{
+		"date": "2024/07/04",
+		"track": 8,
+		"song": "最上級にかわいいの！",
+		"singer": "超ときめき宣伝部",
+		"YTLink": "https://www.youtube.com/watch?v=HAGkISR9tok"
+	},
+	{
+		"date": "2024/07/04",
+		"track": 9,
+		"song": "可愛くてごめん",
+		"singer": "HoneyWorks",
+		"YTLink": "https://www.youtube.com/watch?v=HAGkISR9tok"
+	},
+	{
+		"date": "2024/07/04",
+		"track": 10,
+		"song": "少年時代",
+		"singer": "井上陽水",
+		"YTLink": "https://www.youtube.com/watch?v=HAGkISR9tok"
+	},
+	{
+		"date": "2024/07/04",
+		"track": 11,
+		"song": "ボクノート",
+		"singer": "スキマスイッチ",
+		"YTLink": "https://www.youtube.com/watch?v=HAGkISR9tok"
+	},
+	{
+		"date": "2024/07/04",
+		"track": 12,
+		"song": "夏祭り",
+		"singer": "whiteberry",
+		"YTLink": "https://www.youtube.com/watch?v=HAGkISR9tok"
+	},
+	{
+		"date": "2024/07/04",
+		"track": 13,
+		"song": "secret base～君がくれたもの～",
+		"singer": "ZONE",
+		"YTLink": "https://www.youtube.com/watch?v=HAGkISR9tok"
+	},
+	{
+		"date": "2024/07/04",
+		"track": 14,
+		"song": "ゲレンデがとけるほど恋したい",
+		"singer": "広瀬香美",
+		"YTLink": "https://www.youtube.com/watch?v=HAGkISR9tok"
+	},
+	{
+		"date": "2024/07/04",
+		"track": 15,
+		"song": "Yeah! めっちゃホリディ",
+		"singer": "松浦亜弥",
+		"YTLink": "https://www.youtube.com/watch?v=HAGkISR9tok"
+	},
+	{
+		"date": "2024/07/04",
+		"track": 16,
+		"song": "渚のシンドバッド",
+		"singer": "ピンク・レディー",
+		"YTLink": "https://www.youtube.com/watch?v=HAGkISR9tok"
+	},
+	{
+		"date": "2024/07/04",
+		"track": 17,
+		"song": "世界でいちばん熱い夏",
+		"singer": "プリンセスプリンセス",
+		"YTLink": "https://www.youtube.com/watch?v=HAGkISR9tok"
+	},
+	{
+		"date": "2024/07/04",
+		"track": 18,
+		"song": "愛・おぼえていますか",
+		"singer": "飯島真理",
+		"YTLink": "https://www.youtube.com/watch?v=HAGkISR9tok"
+	},
+	{
+		"date": "2024/07/04",
+		"track": 19,
+		"song": "夏空グラフィティ",
+		"singer": "いきものがかり",
+		"YTLink": "https://www.youtube.com/watch?v=HAGkISR9tok"
+	},
+	{
+		"date": "2024/07/04",
+		"track": 20,
+		"song": "ひまわりの約束",
+		"singer": "秦基博",
+		"YTLink": "https://www.youtube.com/watch?v=HAGkISR9tok"
+	},
+	{
+		"date": "2024/07/02",
+		"track": 1,
+		"song": "Spring Rain",
+		"singer": "苺咲べりぃ",
+		"YTLink": "https://www.youtube.com/watch?v=-l-hl37zf50"
+	},
+	{
+		"date": "2024/07/02",
+		"track": 2,
+		"song": "会いに行くのに",
+		"singer": "あいみょん",
+		"note": "初回",
+		"YTLink": "https://www.youtube.com/watch?v=-l-hl37zf50"
+	},
+	{
+		"date": "2024/07/02",
+		"track": 3,
+		"song": "わたしの一番かわいいところ",
+		"singer": "FRUITS ZIPPER",
+		"YTLink": "https://www.youtube.com/watch?v=-l-hl37zf50"
+	},
+	{
+		"date": "2024/07/02",
+		"track": 4,
+		"song": "最上級にかわいいの！",
+		"singer": "超ときめき宣伝部",
+		"YTLink": "https://www.youtube.com/watch?v=-l-hl37zf50"
+	},
+	{
+		"date": "2024/07/02",
+		"track": 5,
+		"song": "Catch You Catch Me",
+		"singer": "日向めぐみ",
+		"YTLink": "https://www.youtube.com/watch?v=-l-hl37zf50"
+	},
+	{
+		"date": "2024/07/02",
+		"track": 6,
+		"song": "ロマンスの神様",
+		"singer": "広瀬香美",
+		"YTLink": "https://www.youtube.com/watch?v=-l-hl37zf50"
+	},
+	{
+		"date": "2024/07/02",
+		"track": 7,
+		"song": "花火",
+		"singer": "aiko",
+		"YTLink": "https://www.youtube.com/watch?v=-l-hl37zf50"
+	},
+	{
+		"date": "2024/07/02",
+		"track": 8,
+		"song": "ブルーバード",
+		"singer": "いきものがかり",
+		"YTLink": "https://www.youtube.com/watch?v=-l-hl37zf50"
+	},
+	{
+		"date": "2024/07/02",
+		"track": 9,
+		"song": "Mela!",
+		"singer": "緑黄色社会",
+		"YTLink": "https://www.youtube.com/watch?v=-l-hl37zf50"
+	},
+	{
+		"date": "2024/07/02",
+		"track": 10,
+		"song": "僕たちはひとつの光",
+		"singer": "μ's",
+		"YTLink": "https://www.youtube.com/watch?v=-l-hl37zf50"
+	},
+	{
+		"date": "2024/07/02",
+		"track": 11,
+		"song": "ただ君に晴れ",
+		"singer": "ヨルシカ",
+		"YTLink": "https://www.youtube.com/watch?v=-l-hl37zf50"
+	},
+	{
+		"date": "2024/07/02",
+		"track": 12,
+		"song": "おちゃめ機能",
+		"singer": "ラマーズP",
+		"YTLink": "https://www.youtube.com/watch?v=-l-hl37zf50"
+	},
+	{
+		"date": "2024/07/02",
+		"track": 13,
+		"song": "ルカルカ★ナイトフィーバー",
+		"singer": "samfree",
+		"YTLink": "https://www.youtube.com/watch?v=-l-hl37zf50"
+	},
+	{
+		"date": "2024/07/02",
+		"track": 14,
+		"song": "Always",
+		"singer": "西野カナ",
+		"YTLink": "https://www.youtube.com/watch?v=-l-hl37zf50"
+	},
+	{
+		"date": "2024/07/02",
+		"track": 15,
+		"song": "相思相愛",
+		"singer": "aiko",
+		"YTLink": "https://www.youtube.com/watch?v=-l-hl37zf50"
+	},
+	{
+		"date": "2024/07/02",
+		"track": 16,
+		"song": "あんなに一緒だったのに",
+		"singer": "See-Saw",
+		"YTLink": "https://www.youtube.com/watch?v=-l-hl37zf50"
+	},
+	{
+		"date": "2024/07/02",
+		"track": 17,
+		"song": "Subtitle",
+		"singer": "Official髭男dism",
+		"YTLink": "https://www.youtube.com/watch?v=-l-hl37zf50"
+	},
+	{
+		"date": "2024/07/02",
+		"track": 18,
+		"song": "Catch the Moment",
+		"singer": "LiSA",
+		"YTLink": "https://www.youtube.com/watch?v=-l-hl37zf50"
+	},
+	{
+		"date": "2024/07/02",
+		"track": 19,
+		"song": "ANIMA",
+		"singer": "ReoNa",
+		"YTLink": "https://www.youtube.com/watch?v=-l-hl37zf50"
+	},
+	{
+		"date": "2024/07/02",
+		"track": 20,
+		"song": "ファンサ",
+		"singer": "mona(夏川椎菜)",
+		"YTLink": "https://www.youtube.com/watch?v=-l-hl37zf50"
+	},
+	{
+		"date": "2024/07/01",
+		"track": 1,
+		"song": "Starry",
+		"singer": "苺咲べりぃ",
+		"note": "初回",
+		"YTLink": "https://www.youtube.com/watch?v=WczisdA6zoA"
+	},
+	{
+		"date": "2024/07/01",
+		"track": 2,
+		"song": "わたしの一番かわいいところ",
+		"singer": "FRUITS ZIPPER",
+		"YTLink": "https://www.youtube.com/watch?v=WczisdA6zoA"
+	},
+	{
+		"date": "2024/07/01",
+		"track": 3,
+		"song": "最上級にかわいいの！",
+		"singer": "超ときめき宣伝部",
+		"YTLink": "https://www.youtube.com/watch?v=WczisdA6zoA"
+	},
+	{
+		"date": "2024/07/01",
+		"track": 4,
+		"song": "うたかた花火",
+		"singer": "Supercell",
+		"YTLink": "https://www.youtube.com/watch?v=WczisdA6zoA"
+	},
+	{
+		"date": "2024/07/01",
+		"track": 5,
+		"song": "君の知らない物語",
+		"singer": "Supercell",
+		"YTLink": "https://www.youtube.com/watch?v=WczisdA6zoA"
+	},
+	{
+		"date": "2024/07/01",
+		"track": 6,
+		"song": "Legend of Mermaid",
+		"singer": "七海るちあ(中田あすみ)・宝生波音(寺門仁美)・洞院リナ(浅野まゆみ)",
+		"YTLink": "https://www.youtube.com/watch?v=WczisdA6zoA"
+	},
+	{
+		"date": "2024/07/01",
+		"track": 7,
+		"song": "祝福",
+		"singer": "YOASOBI",
+		"YTLink": "https://www.youtube.com/watch?v=WczisdA6zoA"
+	},
+	{
+		"date": "2024/07/01",
+		"track": 8,
+		"song": "ココロのちず",
+		"singer": "BOYSTYLE",
+		"YTLink": "https://www.youtube.com/watch?v=WczisdA6zoA"
+	},
+	{
+		"date": "2024/07/01",
+		"track": 9,
+		"song": "RUN! RUN! RUN!",
+		"singer": "大槻真希",
+		"YTLink": "https://www.youtube.com/watch?v=WczisdA6zoA"
+	},
+	{
+		"date": "2024/07/01",
+		"track": 10,
+		"song": "ジッパー",
+		"singer": "Team N(NMB48)",
+		"YTLink": "https://www.youtube.com/watch?v=WczisdA6zoA"
+	},
+	{
+		"date": "2024/07/01",
+		"track": 11,
+		"song": "夏色えがおで1,2,Jump!",
+		"singer": "μ's",
+		"YTLink": "https://www.youtube.com/watch?v=WczisdA6zoA"
+	},
+	{
+		"date": "2024/07/01",
+		"track": 12,
+		"song": "風になる",
+		"singer": "つじあやの",
+		"YTLink": "https://www.youtube.com/watch?v=WczisdA6zoA"
+	},
+	{
+		"date": "2024/07/01",
+		"track": 13,
+		"song": "サインはB",
+		"singer": "B小町",
+		"YTLink": "https://www.youtube.com/watch?v=WczisdA6zoA"
+	},
+	{
+		"date": "2024/07/01",
+		"track": 14,
+		"song": "チュッ! 夏パーティ",
+		"singer": "三人祭",
+		"YTLink": "https://www.youtube.com/watch?v=WczisdA6zoA"
+	},
+	{
+		"date": "2024/07/01",
+		"track": 15,
+		"song": "桃色片想い",
+		"singer": "松浦亜弥",
+		"YTLink": "https://www.youtube.com/watch?v=WczisdA6zoA"
+	},
+	{
+		"date": "2024/07/01",
+		"track": 16,
+		"song": "夏恋花火",
+		"singer": "40mP",
+		"YTLink": "https://www.youtube.com/watch?v=WczisdA6zoA"
+	},
+	{
+		"date": "2024/07/01",
+		"track": 17,
+		"song": "ハッピーサマーウェディング",
+		"singer": "モーニング娘",
+		"YTLink": "https://www.youtube.com/watch?v=WczisdA6zoA"
+	},
+	{
+		"date": "2024/07/01",
+		"track": 18,
+		"song": "愛のうた",
+		"singer": "倖田來未",
+		"YTLink": "https://www.youtube.com/watch?v=WczisdA6zoA"
+	},
+	{
+		"date": "2024/07/01",
+		"track": 19,
+		"song": "fragile",
+		"singer": "Every Little Thing",
+		"YTLink": "https://www.youtube.com/watch?v=WczisdA6zoA"
+	},
+	{
+		"date": "2024/07/01",
+		"track": 20,
+		"song": "ライオン",
+		"singer": "シェリル・ノーム(May'n),ランカ・リー(中島愛)",
+		"YTLink": "https://www.youtube.com/watch?v=WczisdA6zoA"
+	},
+	{
 		"date": "2024/06/27",
 		"track": 1,
 		"song": "わたしの一番かわいいところ",
@@ -7463,7 +7885,7 @@
 	{
 		"date": "2024/02/10",
 		"track": 11,
-		"song": "Fragile",
+		"song": "fragile",
 		"singer": "Every Little Thing",
 		"YTLink": "https://www.youtube.com/watch?v=A2zN2Ir4Ew8"
 	},
