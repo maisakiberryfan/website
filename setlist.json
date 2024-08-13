@@ -1,5 +1,40 @@
 [
 	{
+		"date": "2024/08/12",
+		"track": 1,
+		"song": "コネクト",
+		"singer": "ClariS",
+		"YTLink": "https://www.youtube.com/watch?v=p0mNIrHhVGI"
+	},
+	{
+		"date": "2024/08/12",
+		"track": 2,
+		"song": "わたしの一番かわいいところ",
+		"singer": "FRUITS ZIPPER",
+		"YTLink": "https://www.youtube.com/watch?v=p0mNIrHhVGI"
+	},
+	{
+		"date": "2024/08/12",
+		"track": 3,
+		"song": "ガーネット",
+		"singer": "奥華子",
+		"YTLink": "https://www.youtube.com/watch?v=p0mNIrHhVGI"
+	},
+	{
+		"date": "2024/08/12",
+		"track": 4,
+		"song": "Shoot!",
+		"singer": "苺咲べりぃ",
+		"YTLink": "https://www.youtube.com/watch?v=p0mNIrHhVGI"
+	},
+	{
+		"date": "2024/08/12",
+		"track": 5,
+		"song": "secret base～君がくれたもの～",
+		"singer": "ZONE",
+		"YTLink": "https://www.youtube.com/watch?v=p0mNIrHhVGI"
+	},
+	{
 		"date": "2024/08/09",
 		"track": 1,
 		"song": "MiraiPrecious",
