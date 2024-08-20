@@ -4,7 +4,7 @@
 * 2024/06/15　[【 #Molz 】コラボステッカー発売](https://x.com/MaisakiBerry/status/1801962725251383668)
 * 2024/05/23　[LSCM Records新曲「Silk」ボーカル＆MV公開 ](https://x.com/LSmusicopyright/status/1793208513164157138)
 * 2024/05/15　[1万曲歌ったを達成 / 初のmocopi配信](https://www.youtube.com/watch?v=IchCmMl04Lo)
-* 2024/04/28　6th Album 『EEE!!』 発売
+* 2024/04/28　[6th Album 『EEE!!』 発売](https://maisakiberry.booth.pm/items/5653892)
 * 2024/04/28　[Xサブ垢2号店開店](https://twitter.com/m_berrychannnn)
 * 2024/04/26　[『#カクリヨ・トーキョー』にて太郎坊ちゃんのCVが発表されました。](https://twitter.com/MaisakiBerry/status/1783701568329801780)
 * 2024/03/16　チャンネル登録120,000人
@@ -21,7 +21,7 @@
 * 2023/12/09　第2回 [輝け最強歌うまVリレー](https://www.youtube.com/watch?v=8nOYm-3JNx0) 参加
 * 2023/12/07　チャンネル登録97,000人
 * 2023/11/20　ライン800にしてオリソン歌唱変更
-* 2023/10/29　5th album『Peace!』発売
+* 2023/10/29　[5th album『Peace!』発売](https://maisakiberry.booth.pm/items/5164179)
 * 2023/10/28　チャンネル登録96,000人
 * 2023/10/27　[歌枠リレー](https://www.youtube.com/watch?v=S70Y40SBnsw)
 * 2023/10/07　チャンネル登録95,000人
@@ -40,7 +40,7 @@
 * 2023/05/10　サブチャンネルの登録者が2000人を超え、メンバーシップが開設出来るようになる
 * 2023/05/07　夜に駆ける50万再生  高評価1000でオリソンを新しい目標に設定
 * 2023/05/04　Twitterフォロワー7,000人
-* 2023/04/30　4th album『BBB!』発売
+* 2023/04/30　[4th album『BBB!』発売](https://maisakiberry.booth.pm/items/4667754)
 * 2023/04/17～30　毎日歌枠
 * 2023/03/22　チャンネル登録85,000人
 * 2023/03/14　サブチャンネル収益化記念配信
