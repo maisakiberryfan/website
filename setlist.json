@@ -1,5 +1,285 @@
 [
 	{
+		"date": "2024/08/30",
+		"track": 1,
+		"song": "Shoot!",
+		"singer": "苺咲べりぃ",
+		"YTLink": "https://www.youtube.com/watch?v=tlsqp454msE"
+	},
+	{
+		"date": "2024/08/30",
+		"track": 2,
+		"song": "ヒッチコック",
+		"singer": "ヨルシカ",
+		"YTLink": "https://www.youtube.com/watch?v=tlsqp454msE"
+	},
+	{
+		"date": "2024/08/30",
+		"track": 3,
+		"song": "夜もすがら君想ふ",
+		"singer": "TOKOTOKO(西沢さんP)",
+		"YTLink": "https://www.youtube.com/watch?v=tlsqp454msE"
+	},
+	{
+		"date": "2024/08/30",
+		"track": 4,
+		"song": "白日",
+		"singer": "King Gnu",
+		"YTLink": "https://www.youtube.com/watch?v=tlsqp454msE"
+	},
+	{
+		"date": "2024/08/30",
+		"track": 5,
+		"song": "ヒロイン",
+		"singer": "back number",
+		"YTLink": "https://www.youtube.com/watch?v=tlsqp454msE"
+	},
+	{
+		"date": "2024/08/30",
+		"track": 6,
+		"song": "晴る",
+		"singer": "ヨルシカ",
+		"YTLink": "https://www.youtube.com/watch?v=tlsqp454msE"
+	},
+	{
+		"date": "2024/08/30",
+		"track": 7,
+		"song": "少女レイ",
+		"singer": "みきとP",
+		"YTLink": "https://www.youtube.com/watch?v=tlsqp454msE"
+	},
+	{
+		"date": "2024/08/30",
+		"track": 8,
+		"song": "YUME日和",
+		"singer": "島谷ひとみ",
+		"YTLink": "https://www.youtube.com/watch?v=tlsqp454msE"
+	},
+	{
+		"date": "2024/08/30",
+		"track": 9,
+		"song": "君をのせて",
+		"singer": "井上あずみ",
+		"YTLink": "https://www.youtube.com/watch?v=tlsqp454msE"
+	},
+	{
+		"date": "2024/08/30",
+		"track": 10,
+		"song": "涙そうそう",
+		"singer": "夏川りみ",
+		"YTLink": "https://www.youtube.com/watch?v=tlsqp454msE"
+	},
+	{
+		"date": "2024/08/30",
+		"track": 11,
+		"song": "カブトムシ",
+		"singer": "aiko",
+		"YTLink": "https://www.youtube.com/watch?v=tlsqp454msE"
+	},
+	{
+		"date": "2024/08/30",
+		"track": 12,
+		"song": "最高の片想い",
+		"singer": "タイナカサチ",
+		"YTLink": "https://www.youtube.com/watch?v=tlsqp454msE"
+	},
+	{
+		"date": "2024/08/30",
+		"track": 13,
+		"song": "アナタノオト",
+		"singer": "ランカ・リー(中島愛)",
+		"YTLink": "https://www.youtube.com/watch?v=tlsqp454msE"
+	},
+	{
+		"date": "2024/08/30",
+		"track": 14,
+		"song": "Catch You Catch Me",
+		"singer": "日向めぐみ",
+		"YTLink": "https://www.youtube.com/watch?v=tlsqp454msE"
+	},
+	{
+		"date": "2024/08/30",
+		"track": 15,
+		"song": "夢をかなえてドラえもん",
+		"singer": "mao",
+		"YTLink": "https://www.youtube.com/watch?v=tlsqp454msE"
+	},
+	{
+		"date": "2024/08/30",
+		"track": 16,
+		"song": "Catch the Moment",
+		"singer": "LiSA",
+		"YTLink": "https://www.youtube.com/watch?v=tlsqp454msE"
+	},
+	{
+		"date": "2024/08/30",
+		"track": 17,
+		"song": "Startear",
+		"singer": "春奈るな",
+		"YTLink": "https://www.youtube.com/watch?v=tlsqp454msE"
+	},
+	{
+		"date": "2024/08/30",
+		"track": 18,
+		"song": "うっせぇわ",
+		"singer": "Ado",
+		"YTLink": "https://www.youtube.com/watch?v=tlsqp454msE"
+	},
+	{
+		"date": "2024/08/30",
+		"track": 19,
+		"song": "シル・ヴ・プレジデント",
+		"singer": "P丸様。",
+		"YTLink": "https://www.youtube.com/watch?v=tlsqp454msE"
+	},
+	{
+		"date": "2024/08/30",
+		"track": 20,
+		"song": "Sweets Parade",
+		"singer": "花澤香菜",
+		"YTLink": "https://www.youtube.com/watch?v=tlsqp454msE"
+	},
+	{
+		"date": "2024/08/27",
+		"track": 1,
+		"song": "ツナガリ",
+		"singer": "苺咲べりぃ",
+		"YTLink": "https://www.youtube.com/watch?v=XNA7AIbzsVc"
+	},
+	{
+		"date": "2024/08/27",
+		"track": 2,
+		"song": "ウィーアー!",
+		"singer": "きただにひろし",
+		"YTLink": "https://www.youtube.com/watch?v=XNA7AIbzsVc"
+	},
+	{
+		"date": "2024/08/27",
+		"track": 3,
+		"song": "Believe",
+		"singer": "Folder5",
+		"YTLink": "https://www.youtube.com/watch?v=XNA7AIbzsVc"
+	},
+	{
+		"date": "2024/08/27",
+		"track": 4,
+		"song": "ウラオモテ・フォーチュン",
+		"singer": "小澤亜李",
+		"YTLink": "https://www.youtube.com/watch?v=XNA7AIbzsVc"
+	},
+	{
+		"date": "2024/08/27",
+		"track": 5,
+		"song": "アイマイモコ",
+		"singer": "水瀬いのり",
+		"YTLink": "https://www.youtube.com/watch?v=XNA7AIbzsVc"
+	},
+	{
+		"date": "2024/08/27",
+		"track": 6,
+		"song": "マジックナンバー",
+		"singer": "坂本真綾",
+		"YTLink": "https://www.youtube.com/watch?v=XNA7AIbzsVc"
+	},
+	{
+		"date": "2024/08/27",
+		"track": 7,
+		"song": "十六夜涙",
+		"singer": "吉岡亜衣加",
+		"YTLink": "https://www.youtube.com/watch?v=XNA7AIbzsVc"
+	},
+	{
+		"date": "2024/08/27",
+		"track": 8,
+		"song": "ハルジオン",
+		"singer": "YOASOBI",
+		"YTLink": "https://www.youtube.com/watch?v=XNA7AIbzsVc"
+	},
+	{
+		"date": "2024/08/27",
+		"track": 9,
+		"song": "若者のすべて",
+		"singer": "フジファブリック",
+		"YTLink": "https://www.youtube.com/watch?v=XNA7AIbzsVc"
+	},
+	{
+		"date": "2024/08/27",
+		"track": 10,
+		"song": "コレカラ",
+		"singer": "Machico",
+		"YTLink": "https://www.youtube.com/watch?v=XNA7AIbzsVc"
+	},
+	{
+		"date": "2024/08/27",
+		"track": 11,
+		"song": "ALIVE",
+		"singer": "ClariS",
+		"YTLink": "https://www.youtube.com/watch?v=XNA7AIbzsVc"
+	},
+	{
+		"date": "2024/08/27",
+		"track": 12,
+		"song": "ボクノート",
+		"singer": "スキマスイッチ",
+		"YTLink": "https://www.youtube.com/watch?v=XNA7AIbzsVc"
+	},
+	{
+		"date": "2024/08/27",
+		"track": 13,
+		"song": "天体観測",
+		"singer": "BUMP OF CHICKEN",
+		"YTLink": "https://www.youtube.com/watch?v=XNA7AIbzsVc"
+	},
+	{
+		"date": "2024/08/27",
+		"track": 14,
+		"song": "青いベンチ",
+		"singer": "サスケ",
+		"YTLink": "https://www.youtube.com/watch?v=XNA7AIbzsVc"
+	},
+	{
+		"date": "2024/08/27",
+		"track": 15,
+		"song": "金魚花火",
+		"singer": "大塚愛",
+		"YTLink": "https://www.youtube.com/watch?v=XNA7AIbzsVc"
+	},
+	{
+		"date": "2024/08/27",
+		"track": 16,
+		"song": "Love marginal",
+		"singer": "Printemps",
+		"YTLink": "https://www.youtube.com/watch?v=XNA7AIbzsVc"
+	},
+	{
+		"date": "2024/08/27",
+		"track": 17,
+		"song": "僕らのLIVE 君とのLIFE",
+		"singer": "μ's",
+		"YTLink": "https://www.youtube.com/watch?v=XNA7AIbzsVc"
+	},
+	{
+		"date": "2024/08/27",
+		"track": 18,
+		"song": "生きてこそ",
+		"singer": "Kiroro",
+		"YTLink": "https://www.youtube.com/watch?v=XNA7AIbzsVc"
+	},
+	{
+		"date": "2024/08/27",
+		"track": 19,
+		"song": "涙目爆発音",
+		"singer": "ワルキューレ",
+		"YTLink": "https://www.youtube.com/watch?v=XNA7AIbzsVc"
+	},
+	{
+		"date": "2024/08/27",
+		"track": 20,
+		"song": "Crosswalk",
+		"singer": "鈴木みのり",
+		"YTLink": "https://www.youtube.com/watch?v=XNA7AIbzsVc"
+	},
+	{
 		"date": "2024/08/21",
 		"track": 1,
 		"song": "アイオライト",
