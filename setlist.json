@@ -1,5 +1,286 @@
 [
 	{
+		"date": "2024/09/21",
+		"track": 1,
+		"song": "GoodMorning,GoodNight",
+		"singer": "苺咲べりぃ",
+		"YTLink": "https://www.youtube.com/watch?v=M8LDLfP9wCo"
+	},
+	{
+		"date": "2024/09/21",
+		"track": 2,
+		"song": "絶対アイドル辞めないで",
+		"singer": "=LOVE",
+		"note": "初回",
+		"YTLink": "https://www.youtube.com/watch?v=M8LDLfP9wCo"
+	},
+	{
+		"date": "2024/09/21",
+		"track": 3,
+		"song": "#あくあ色ぱれっと",
+		"singer": "湊あくあ",
+		"YTLink": "https://www.youtube.com/watch?v=M8LDLfP9wCo"
+	},
+	{
+		"date": "2024/09/21",
+		"track": 4,
+		"song": "とまどい→レシピ",
+		"singer": "みかくにんぐッ!",
+		"YTLink": "https://www.youtube.com/watch?v=M8LDLfP9wCo"
+	},
+	{
+		"date": "2024/09/21",
+		"track": 5,
+		"song": "夢路らびりんす",
+		"singer": "らびりんず",
+		"YTLink": "https://www.youtube.com/watch?v=M8LDLfP9wCo"
+	},
+	{
+		"date": "2024/09/21",
+		"track": 6,
+		"song": "ニッポン笑顔百景",
+		"singer": "桃黒亭一門",
+		"YTLink": "https://www.youtube.com/watch?v=M8LDLfP9wCo"
+	},
+	{
+		"date": "2024/09/21",
+		"track": 7,
+		"song": "往け",
+		"singer": "LiSA",
+		"YTLink": "https://www.youtube.com/watch?v=M8LDLfP9wCo"
+	},
+	{
+		"date": "2024/09/21",
+		"track": 8,
+		"song": "いつかの、いくつかのきみとのせかい",
+		"singer": "fhána",
+		"YTLink": "https://www.youtube.com/watch?v=M8LDLfP9wCo"
+	},
+	{
+		"date": "2024/09/21",
+		"track": 9,
+		"song": "ユキトキ",
+		"singer": "やなぎなぎ",
+		"YTLink": "https://www.youtube.com/watch?v=M8LDLfP9wCo"
+	},
+	{
+		"date": "2024/09/21",
+		"track": 10,
+		"song": "春擬き",
+		"singer": "やなぎなぎ",
+		"YTLink": "https://www.youtube.com/watch?v=M8LDLfP9wCo"
+	},
+	{
+		"date": "2024/09/21",
+		"track": 11,
+		"song": "ステラブリーズ",
+		"singer": "春奈るな",
+		"YTLink": "https://www.youtube.com/watch?v=M8LDLfP9wCo"
+	},
+	{
+		"date": "2024/09/21",
+		"track": 12,
+		"song": "Startear",
+		"singer": "春奈るな",
+		"YTLink": "https://www.youtube.com/watch?v=M8LDLfP9wCo"
+	},
+	{
+		"date": "2024/09/21",
+		"track": 13,
+		"song": "Rising Hope",
+		"singer": "LiSA",
+		"YTLink": "https://www.youtube.com/watch?v=M8LDLfP9wCo"
+	},
+	{
+		"date": "2024/09/21",
+		"track": 14,
+		"song": "Love marginal",
+		"singer": "Printemps",
+		"YTLink": "https://www.youtube.com/watch?v=M8LDLfP9wCo"
+	},
+	{
+		"date": "2024/09/21",
+		"track": 15,
+		"song": "Dancing stars on me!",
+		"singer": "μ's",
+		"YTLink": "https://www.youtube.com/watch?v=M8LDLfP9wCo"
+	},
+	{
+		"date": "2024/09/21",
+		"track": 16,
+		"song": "Wishing",
+		"singer": "レム (水瀬いのり)",
+		"YTLink": "https://www.youtube.com/watch?v=M8LDLfP9wCo"
+	},
+	{
+		"date": "2024/09/21",
+		"track": 17,
+		"song": "優しい彗星",
+		"singer": "YOASOBI",
+		"YTLink": "https://www.youtube.com/watch?v=M8LDLfP9wCo"
+	},
+	{
+		"date": "2024/09/21",
+		"track": 18,
+		"song": "たぶん",
+		"singer": "YOASOBI",
+		"YTLink": "https://www.youtube.com/watch?v=M8LDLfP9wCo"
+	},
+	{
+		"date": "2024/09/21",
+		"track": 19,
+		"song": "クムリウタ",
+		"singer": "大塚愛",
+		"YTLink": "https://www.youtube.com/watch?v=M8LDLfP9wCo"
+	},
+	{
+		"date": "2024/09/21",
+		"track": 20,
+		"song": "Crosswalk",
+		"singer": "鈴木みのり",
+		"YTLink": "https://www.youtube.com/watch?v=M8LDLfP9wCo"
+	},
+	{
+		"date": "2024/09/18",
+		"track": 1,
+		"song": "Starry",
+		"singer": "苺咲べりぃ",
+		"YTLink": "https://www.youtube.com/watch?v=FPNYnAC0aLk"
+	},
+	{
+		"date": "2024/09/18",
+		"track": 2,
+		"song": "letter song",
+		"singer": "きりたんP(doriko)",
+		"YTLink": "https://www.youtube.com/watch?v=FPNYnAC0aLk"
+	},
+	{
+		"date": "2024/09/18",
+		"track": 3,
+		"song": "夕日坂",
+		"singer": "きりたんP(doriko)",
+		"YTLink": "https://www.youtube.com/watch?v=FPNYnAC0aLk"
+	},
+	{
+		"date": "2024/09/18",
+		"track": 4,
+		"song": "未来",
+		"singer": "コブクロ",
+		"YTLink": "https://www.youtube.com/watch?v=FPNYnAC0aLk"
+	},
+	{
+		"date": "2024/09/18",
+		"track": 5,
+		"song": "Subtitle",
+		"singer": "Official髭男dism",
+		"YTLink": "https://www.youtube.com/watch?v=FPNYnAC0aLk"
+	},
+	{
+		"date": "2024/09/18",
+		"track": 6,
+		"song": "115万キロのフィルム",
+		"singer": "Official髭男dism",
+		"YTLink": "https://www.youtube.com/watch?v=FPNYnAC0aLk"
+	},
+	{
+		"date": "2024/09/18",
+		"track": 7,
+		"song": "ヒロイン",
+		"singer": "back number",
+		"YTLink": "https://www.youtube.com/watch?v=FPNYnAC0aLk"
+	},
+	{
+		"date": "2024/09/18",
+		"track": 8,
+		"song": "ハッピーエンド",
+		"singer": "back number",
+		"YTLink": "https://www.youtube.com/watch?v=FPNYnAC0aLk"
+	},
+	{
+		"date": "2024/09/18",
+		"track": 9,
+		"song": "それを愛と呼ぶなら",
+		"singer": "Uru",
+		"YTLink": "https://www.youtube.com/watch?v=FPNYnAC0aLk"
+	},
+	{
+		"date": "2024/09/18",
+		"track": 10,
+		"song": "会いたい",
+		"singer": "シグナルP",
+		"YTLink": "https://www.youtube.com/watch?v=FPNYnAC0aLk"
+	},
+	{
+		"date": "2024/09/18",
+		"track": 11,
+		"song": "心拍数#0822",
+		"singer": "蝶々P",
+		"YTLink": "https://www.youtube.com/watch?v=FPNYnAC0aLk"
+	},
+	{
+		"date": "2024/09/18",
+		"track": 12,
+		"song": "カブトムシ",
+		"singer": "aiko",
+		"YTLink": "https://www.youtube.com/watch?v=FPNYnAC0aLk"
+	},
+	{
+		"date": "2024/09/18",
+		"track": 13,
+		"song": "ハナミズキ",
+		"singer": "一青窈",
+		"YTLink": "https://www.youtube.com/watch?v=FPNYnAC0aLk"
+	},
+	{
+		"date": "2024/09/18",
+		"track": 14,
+		"song": "オールドファッション",
+		"singer": "back number",
+		"YTLink": "https://www.youtube.com/watch?v=FPNYnAC0aLk"
+	},
+	{
+		"date": "2024/09/18",
+		"track": 15,
+		"song": "HAPPY BIRTHDAY",
+		"singer": "back number",
+		"YTLink": "https://www.youtube.com/watch?v=FPNYnAC0aLk"
+	},
+	{
+		"date": "2024/09/18",
+		"track": 16,
+		"song": "明日への手紙",
+		"singer": "手嶌葵",
+		"YTLink": "https://www.youtube.com/watch?v=FPNYnAC0aLk"
+	},
+	{
+		"date": "2024/09/18",
+		"track": 17,
+		"song": "贖罪",
+		"singer": "傘村トータ",
+		"YTLink": "https://www.youtube.com/watch?v=FPNYnAC0aLk"
+	},
+	{
+		"date": "2024/09/18",
+		"track": 18,
+		"song": "相思相愛",
+		"singer": "aiko",
+		"YTLink": "https://www.youtube.com/watch?v=FPNYnAC0aLk"
+	},
+	{
+		"date": "2024/09/18",
+		"track": 19,
+		"song": "雪の華",
+		"singer": "中島美嘉",
+		"YTLink": "https://www.youtube.com/watch?v=FPNYnAC0aLk"
+	},
+	{
+		"date": "2024/09/18",
+		"track": 20,
+		"song": "アムリタ",
+		"singer": "牧野由依",
+		"YTLink": "https://www.youtube.com/watch?v=FPNYnAC0aLk"
+	},
+	{
 		"date": "2024/09/17",
 		"track": 1,
 		"song": "silhouette",
