@@ -1,4 +1,5 @@
 ﻿## 2024
+* 2024/10/27　7th Album 発売予定
 * 2024/08/12　[#NewOutfits歌枠リレー](https://www.youtube.com/watch?v=p0mNIrHhVGI)
 * 2024/06/17　[新衣装お披露目](https://www.youtube.com/watch?v=x4_vih6njco)
 * 2024/06/15　[【 #Molz 】コラボステッカー発売](https://x.com/MaisakiBerry/status/1801962725251383668)
