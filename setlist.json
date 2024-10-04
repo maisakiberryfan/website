@@ -1,5 +1,286 @@
 [
 	{
+		"date": "2024/10/03",
+		"track": 1,
+		"song": "Shoot!",
+		"singer": "苺咲べりぃ",
+		"YTLink": "https://www.youtube.com/watch?v=yhA3tGc7EbQ"
+	},
+	{
+		"date": "2024/10/03",
+		"track": 2,
+		"song": "HAPPY BIRTHDAY",
+		"singer": "back number",
+		"YTLink": "https://www.youtube.com/watch?v=yhA3tGc7EbQ"
+	},
+	{
+		"date": "2024/10/03",
+		"track": 3,
+		"song": "ヒロイン",
+		"singer": "back number",
+		"YTLink": "https://www.youtube.com/watch?v=yhA3tGc7EbQ"
+	},
+	{
+		"date": "2024/10/03",
+		"track": 4,
+		"song": "ORION",
+		"singer": "中島美嘉",
+		"YTLink": "https://www.youtube.com/watch?v=yhA3tGc7EbQ"
+	},
+	{
+		"date": "2024/10/03",
+		"track": 5,
+		"song": "雪の華",
+		"singer": "中島美嘉",
+		"YTLink": "https://www.youtube.com/watch?v=yhA3tGc7EbQ"
+	},
+	{
+		"date": "2024/10/03",
+		"track": 6,
+		"song": "おかえり",
+		"singer": "絢香",
+		"note": "初回",
+		"YTLink": "https://www.youtube.com/watch?v=yhA3tGc7EbQ"
+	},
+	{
+		"date": "2024/10/03",
+		"track": 7,
+		"song": "生きてこそ",
+		"singer": "Kiroro",
+		"YTLink": "https://www.youtube.com/watch?v=yhA3tGc7EbQ"
+	},
+	{
+		"date": "2024/10/03",
+		"track": 8,
+		"song": "メリクリ",
+		"singer": "BoA",
+		"YTLink": "https://www.youtube.com/watch?v=yhA3tGc7EbQ"
+	},
+	{
+		"date": "2024/10/03",
+		"track": 9,
+		"song": "クリスマスソング",
+		"singer": "back number",
+		"YTLink": "https://www.youtube.com/watch?v=yhA3tGc7EbQ"
+	},
+	{
+		"date": "2024/10/03",
+		"track": 10,
+		"song": "瞳をとじて",
+		"singer": "平井堅",
+		"YTLink": "https://www.youtube.com/watch?v=yhA3tGc7EbQ"
+	},
+	{
+		"date": "2024/10/03",
+		"track": 11,
+		"song": "ボクノート",
+		"singer": "スキマスイッチ",
+		"YTLink": "https://www.youtube.com/watch?v=yhA3tGc7EbQ"
+	},
+	{
+		"date": "2024/10/03",
+		"track": 12,
+		"song": "恋(星野源)",
+		"singer": "星野源",
+		"YTLink": "https://www.youtube.com/watch?v=yhA3tGc7EbQ"
+	},
+	{
+		"date": "2024/10/03",
+		"track": 13,
+		"song": "Love marginal",
+		"singer": "Printemps",
+		"YTLink": "https://www.youtube.com/watch?v=yhA3tGc7EbQ"
+	},
+	{
+		"date": "2024/10/03",
+		"track": 14,
+		"song": "Dancing stars on me!",
+		"singer": "μ's",
+		"YTLink": "https://www.youtube.com/watch?v=yhA3tGc7EbQ"
+	},
+	{
+		"date": "2024/10/03",
+		"track": 15,
+		"song": "CANDY CANDY",
+		"singer": "きゃりーぱみゅぱみゅ",
+		"YTLink": "https://www.youtube.com/watch?v=yhA3tGc7EbQ"
+	},
+	{
+		"date": "2024/10/03",
+		"track": 16,
+		"song": "つけまつける",
+		"singer": "きゃりーぱみゅぱみゅ",
+		"YTLink": "https://www.youtube.com/watch?v=yhA3tGc7EbQ"
+	},
+	{
+		"date": "2024/10/03",
+		"track": 17,
+		"song": "絶対アイドル辞めないで",
+		"singer": "=LOVE",
+		"YTLink": "https://www.youtube.com/watch?v=yhA3tGc7EbQ"
+	},
+	{
+		"date": "2024/10/03",
+		"track": 18,
+		"song": "往け",
+		"singer": "LiSA",
+		"YTLink": "https://www.youtube.com/watch?v=yhA3tGc7EbQ"
+	},
+	{
+		"date": "2024/10/03",
+		"track": 19,
+		"song": "Catch the Moment",
+		"singer": "LiSA",
+		"YTLink": "https://www.youtube.com/watch?v=yhA3tGc7EbQ"
+	},
+	{
+		"date": "2024/10/03",
+		"track": 20,
+		"song": "サインはB",
+		"singer": "B小町",
+		"YTLink": "https://www.youtube.com/watch?v=yhA3tGc7EbQ"
+	},
+	{
+		"date": "2024/10/01",
+		"track": 1,
+		"song": "Starry",
+		"singer": "苺咲べりぃ",
+		"YTLink": "https://www.youtube.com/watch?v=PgOgP_UJYKw"
+	},
+	{
+		"date": "2024/10/01",
+		"track": 2,
+		"song": "会いたくて 会いたくて",
+		"singer": "西野カナ",
+		"YTLink": "https://www.youtube.com/watch?v=PgOgP_UJYKw"
+	},
+	{
+		"date": "2024/10/01",
+		"track": 3,
+		"song": "トリセツ",
+		"singer": "西野カナ",
+		"YTLink": "https://www.youtube.com/watch?v=PgOgP_UJYKw"
+	},
+	{
+		"date": "2024/10/01",
+		"track": 4,
+		"song": "SHINY DAYS",
+		"singer": "亜咲花",
+		"YTLink": "https://www.youtube.com/watch?v=PgOgP_UJYKw"
+	},
+	{
+		"date": "2024/10/01",
+		"track": 5,
+		"song": "ALIVE",
+		"singer": "ClariS",
+		"YTLink": "https://www.youtube.com/watch?v=PgOgP_UJYKw"
+	},
+	{
+		"date": "2024/10/01",
+		"track": 6,
+		"song": "名前のない怪物",
+		"singer": "EGOIST",
+		"YTLink": "https://www.youtube.com/watch?v=PgOgP_UJYKw"
+	},
+	{
+		"date": "2024/10/01",
+		"track": 7,
+		"song": "地球最後の告白を",
+		"singer": "Kemu",
+		"YTLink": "https://www.youtube.com/watch?v=PgOgP_UJYKw"
+	},
+	{
+		"date": "2024/10/01",
+		"track": 8,
+		"song": "ベテルギウス",
+		"singer": "優里",
+		"YTLink": "https://www.youtube.com/watch?v=PgOgP_UJYKw"
+	},
+	{
+		"date": "2024/10/01",
+		"track": 9,
+		"song": "晴る",
+		"singer": "ヨルシカ",
+		"YTLink": "https://www.youtube.com/watch?v=PgOgP_UJYKw"
+	},
+	{
+		"date": "2024/10/01",
+		"track": 10,
+		"song": "ただ君に晴れ",
+		"singer": "ヨルシカ",
+		"YTLink": "https://www.youtube.com/watch?v=PgOgP_UJYKw"
+	},
+	{
+		"date": "2024/10/01",
+		"track": 11,
+		"song": "春泥棒",
+		"singer": "ヨルシカ",
+		"YTLink": "https://www.youtube.com/watch?v=PgOgP_UJYKw"
+	},
+	{
+		"date": "2024/10/01",
+		"track": 12,
+		"song": "プラチナ",
+		"singer": "坂本真綾",
+		"YTLink": "https://www.youtube.com/watch?v=PgOgP_UJYKw"
+	},
+	{
+		"date": "2024/10/01",
+		"track": 13,
+		"song": "カブトムシ",
+		"singer": "aiko",
+		"YTLink": "https://www.youtube.com/watch?v=PgOgP_UJYKw"
+	},
+	{
+		"date": "2024/10/01",
+		"track": 14,
+		"song": "Everything",
+		"singer": "MISIA",
+		"YTLink": "https://www.youtube.com/watch?v=PgOgP_UJYKw"
+	},
+	{
+		"date": "2024/10/01",
+		"track": 15,
+		"song": "アイノカタチ",
+		"singer": "MISIA",
+		"YTLink": "https://www.youtube.com/watch?v=PgOgP_UJYKw"
+	},
+	{
+		"date": "2024/10/01",
+		"track": 16,
+		"song": "涙そうそう",
+		"singer": "夏川りみ",
+		"YTLink": "https://www.youtube.com/watch?v=PgOgP_UJYKw"
+	},
+	{
+		"date": "2024/10/01",
+		"track": 17,
+		"song": "Precious",
+		"singer": "伊藤由奈",
+		"YTLink": "https://www.youtube.com/watch?v=PgOgP_UJYKw"
+	},
+	{
+		"date": "2024/10/01",
+		"track": 18,
+		"song": "会いに行くのに",
+		"singer": "あいみょん",
+		"YTLink": "https://www.youtube.com/watch?v=PgOgP_UJYKw"
+	},
+	{
+		"date": "2024/10/01",
+		"track": 19,
+		"song": "瞳をとじて",
+		"singer": "平井堅",
+		"YTLink": "https://www.youtube.com/watch?v=PgOgP_UJYKw"
+	},
+	{
+		"date": "2024/10/01",
+		"track": 20,
+		"song": "夜空",
+		"singer": "鈴木みのり",
+		"YTLink": "https://www.youtube.com/watch?v=PgOgP_UJYKw"
+	},
+	{
 		"date": "2024/09/26",
 		"track": 1,
 		"song": "ツナガリ",
