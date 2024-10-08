@@ -1,5 +1,145 @@
 [
 	{
+		"date": "2024/10/07",
+		"track": 1,
+		"song": "emotion",
+		"singer": "苺咲べりぃ",
+		"YTLink": "https://www.youtube.com/watch?v=FtyoyNJ2EY4"
+	},
+	{
+		"date": "2024/10/07",
+		"track": 2,
+		"song": "アイマイモコ",
+		"singer": "水瀬いのり",
+		"YTLink": "https://www.youtube.com/watch?v=FtyoyNJ2EY4"
+	},
+	{
+		"date": "2024/10/07",
+		"track": 3,
+		"song": "マジックナンバー",
+		"singer": "坂本真綾",
+		"YTLink": "https://www.youtube.com/watch?v=FtyoyNJ2EY4"
+	},
+	{
+		"date": "2024/10/07",
+		"track": 4,
+		"song": "コレカラ",
+		"singer": "Machico",
+		"YTLink": "https://www.youtube.com/watch?v=FtyoyNJ2EY4"
+	},
+	{
+		"date": "2024/10/07",
+		"track": 5,
+		"song": "adrenaline!!!",
+		"singer": "TrySail",
+		"YTLink": "https://www.youtube.com/watch?v=FtyoyNJ2EY4"
+	},
+	{
+		"date": "2024/10/07",
+		"track": 6,
+		"song": "ぼなぺてぃーと♡S",
+		"singer": "ブレンド・A",
+		"YTLink": "https://www.youtube.com/watch?v=FtyoyNJ2EY4"
+	},
+	{
+		"date": "2024/10/07",
+		"track": 7,
+		"song": "花になって",
+		"singer": "緑黄色社会",
+		"YTLink": "https://www.youtube.com/watch?v=FtyoyNJ2EY4"
+	},
+	{
+		"date": "2024/10/07",
+		"track": 8,
+		"song": "世界に一つだけの花",
+		"singer": "SMAP",
+		"YTLink": "https://www.youtube.com/watch?v=FtyoyNJ2EY4"
+	},
+	{
+		"date": "2024/10/07",
+		"track": 9,
+		"song": "若者のすべて",
+		"singer": "フジファブリック",
+		"YTLink": "https://www.youtube.com/watch?v=FtyoyNJ2EY4"
+	},
+	{
+		"date": "2024/10/07",
+		"track": 10,
+		"song": "Stay Alive",
+		"singer": "エミリア(高橋李依)",
+		"YTLink": "https://www.youtube.com/watch?v=FtyoyNJ2EY4"
+	},
+	{
+		"date": "2024/10/07",
+		"track": 11,
+		"song": "Wishing",
+		"singer": "レム (水瀬いのり)",
+		"YTLink": "https://www.youtube.com/watch?v=FtyoyNJ2EY4"
+	},
+	{
+		"date": "2024/10/07",
+		"track": 12,
+		"song": "ヒトリゴト",
+		"singer": "ClariS",
+		"YTLink": "https://www.youtube.com/watch?v=FtyoyNJ2EY4"
+	},
+	{
+		"date": "2024/10/07",
+		"track": 13,
+		"song": "白金ディスコ",
+		"singer": "阿良々木月火(井口裕香)",
+		"YTLink": "https://www.youtube.com/watch?v=FtyoyNJ2EY4"
+	},
+	{
+		"date": "2024/10/07",
+		"track": 14,
+		"song": "旦那様とのラブラブ・ラブソング",
+		"singer": "フェンリース(CV:釘宮理恵)",
+		"YTLink": "https://www.youtube.com/watch?v=FtyoyNJ2EY4"
+	},
+	{
+		"date": "2024/10/07",
+		"track": 15,
+		"song": "サイハテ",
+		"singer": "鈴木みのり",
+		"YTLink": "https://www.youtube.com/watch?v=FtyoyNJ2EY4"
+	},
+	{
+		"date": "2024/10/07",
+		"track": 16,
+		"song": "ヒロイン",
+		"singer": "back number",
+		"YTLink": "https://www.youtube.com/watch?v=FtyoyNJ2EY4"
+	},
+	{
+		"date": "2024/10/07",
+		"track": 17,
+		"song": "別の人の彼女になったよ",
+		"singer": "Wacci",
+		"YTLink": "https://www.youtube.com/watch?v=FtyoyNJ2EY4"
+	},
+	{
+		"date": "2024/10/07",
+		"track": 18,
+		"song": "NEW KAWAII",
+		"singer": "FRUITS ZIPPER",
+		"YTLink": "https://www.youtube.com/watch?v=FtyoyNJ2EY4"
+	},
+	{
+		"date": "2024/10/07",
+		"track": 19,
+		"song": "Dancing stars on me!",
+		"singer": "μ's",
+		"YTLink": "https://www.youtube.com/watch?v=FtyoyNJ2EY4"
+	},
+	{
+		"date": "2024/10/07",
+		"track": 20,
+		"song": "Crosswalk",
+		"singer": "鈴木みのり",
+		"YTLink": "https://www.youtube.com/watch?v=FtyoyNJ2EY4"
+	},
+	{
 		"date": "2024/10/03",
 		"track": 1,
 		"song": "Shoot!",
