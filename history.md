@@ -1,11 +1,11 @@
 ﻿## 2024
-* 2024/10/27　7th Album 発売予定
+* 2024/10/27　[7th Album 『Animania』 発売](https://www.maisakiberry.com/7th-animania)
 * 2024/08/12　[#NewOutfits歌枠リレー](https://www.youtube.com/watch?v=p0mNIrHhVGI)
 * 2024/06/17　[新衣装お披露目](https://www.youtube.com/watch?v=x4_vih6njco)
 * 2024/06/15　[【 #Molz 】コラボステッカー発売](https://x.com/MaisakiBerry/status/1801962725251383668)
 * 2024/05/23　[LSCM Records新曲「Silk」ボーカル＆MV公開 ](https://x.com/LSmusicopyright/status/1793208513164157138)
 * 2024/05/15　[1万曲歌ったを達成 / 初のmocopi配信](https://www.youtube.com/watch?v=IchCmMl04Lo)
-* 2024/04/28　[6th Album 『EEE!!』 発売](https://maisakiberry.booth.pm/items/5653892)
+* 2024/04/28　[6th Album 『EEE!!』 発売](https://www.maisakiberry.com/6th-eee)
 * 2024/04/28　[Xサブ垢2号店開店](https://twitter.com/m_berrychannnn)
 * 2024/04/26　[『#カクリヨ・トーキョー』にて太郎坊ちゃんのCVが発表されました。](https://twitter.com/MaisakiBerry/status/1783701568329801780)
 * 2024/03/16　チャンネル登録120,000人
@@ -22,7 +22,7 @@
 * 2023/12/09　第2回 [輝け最強歌うまVリレー](https://www.youtube.com/watch?v=8nOYm-3JNx0) 参加
 * 2023/12/07　チャンネル登録97,000人
 * 2023/11/20　ライン800にしてオリソン歌唱変更
-* 2023/10/29　[5th album『Peace!』発売](https://maisakiberry.booth.pm/items/5164179)
+* 2023/10/29　[5th album『Peace!』発売](https://www.maisakiberry.com/5th-peace)
 * 2023/10/28　チャンネル登録96,000人
 * 2023/10/27　[歌枠リレー](https://www.youtube.com/watch?v=S70Y40SBnsw)
 * 2023/10/07　チャンネル登録95,000人
@@ -41,7 +41,7 @@
 * 2023/05/10　サブチャンネルの登録者が2000人を超え、メンバーシップが開設出来るようになる
 * 2023/05/07　夜に駆ける50万再生  高評価1000でオリソンを新しい目標に設定
 * 2023/05/04　Twitterフォロワー7,000人
-* 2023/04/30　[4th album『BBB!』発売](https://maisakiberry.booth.pm/items/4667754)
+* 2023/04/30　[4th album『BBB!』発売](https://www.maisakiberry.com/4th-bbb)
 * 2023/04/17～30　毎日歌枠
 * 2023/03/22　チャンネル登録85,000人
 * 2023/03/14　サブチャンネル収益化記念配信
@@ -52,7 +52,7 @@
 ## 2022
 * 2022/12/19　チャンネル登録80,000人
 * 2022/11/01　オリソンを歌うラインを1000に
-* 2022/10/30　3rd album『Serve!』発売
+* 2022/10/30　[3rd album『Serve!』発売](https://www.maisakiberry.com/3rd-serve)
 * 2022/10/26　チャンネル登録75,000人/同接1300超え
 * 2022/10/26　Twitterフォロワー6,000人
 * 2022/10/22　115曲耐久　同接1,550　いいね3,000 メンバー1,000
@@ -70,7 +70,7 @@
 * 2022/06/27　チャンネル登録65,000人(同接1150)
 * 2022/05/15　新衣装お披露目
 * 2022/05/10　夜に駆ける30万再生
-* 2022/04/24　2nd album『 Bouquet.』 発売
+* 2022/04/24　[2nd album『 Bouquet.』 発売](https://www.maisakiberry.com/2nd-bouquet)
 * 2022/04/23　チャンネル登録60,000人
 * 2022/04/02　1stアルバム配信開始  配信に伴いchが公式アーティスト認定を受ける(♪が付く)
 * 2022/02/25　チャンネル登録55,000人/歌枠直後
