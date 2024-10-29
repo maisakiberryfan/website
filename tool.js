@@ -17,9 +17,19 @@ let nav = `
     </button>
     <div class="collapse navbar-collapse" id="navbarContent">
       <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link dropdown-item setContent" href='/history' data-ext='.md'>History</a>
+		<li class="nav-item dropdown">
+          <button class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Berry's
+          </button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item setContent" href='/profile' data-ext='.htm'>Profile</a></li>
+            <li><a class="dropdown-item setContent" href='/history' data-ext='.md'>Histiry</a></li>
+            <li><a class="dropdown-item setContent" href='/clothes' data-ext='.htm'>Clothes</a></li>
+          </ul>
         </li>
+        <!--<li class="nav-item">
+          <a class="nav-link dropdown-item setContent" href='/history' data-ext='.md'>History</a>
+        </li>-->
         <li class="nav-item dropdown">
           <button class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             List&nbsp;&nbsp;&nbsp;
@@ -151,6 +161,7 @@ $(()=>{
     //cache:false
     }).done((d, textStatus, request)=>{
       document.title = title + '苺咲べりぃ非公式倉庫'
+      let ext = url.split('.')  //check .html
       //check if there are some exception page
       if(process=='setlist' || process=='streamlist'){
         let c = `
@@ -166,6 +177,9 @@ $(()=>{
         $("#content").empty().append(c)
         extractUniqueData(d, process)
         configJsonTable(url, process)
+      }
+      else if(ext[1] == 'htm'){
+        $("#content").empty().append(d)
       }
       else{
         var c ="<div id='md'>"+marked.parse(d)+"</div>"
