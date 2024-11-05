@@ -1,4 +1,5 @@
 ﻿## 2024
+* 2024/12/05　3Dの新衣装のお披露目Live
 * 2024/10/27　[7th Album 『Animania』 発売](https://www.maisakiberry.com/7th-animania)
 * 2024/08/12　[#NewOutfits歌枠リレー](https://www.youtube.com/watch?v=p0mNIrHhVGI)
 * 2024/06/17　[新衣装お披露目](https://www.youtube.com/watch?v=x4_vih6njco)
