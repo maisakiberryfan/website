@@ -23,7 +23,7 @@ let nav = `
           </button>
           <ul class="dropdown-menu">
             <li><a class="dropdown-item setContent" href='/profile' data-ext='.htm'>Profile</a></li>
-            <li><a class="dropdown-item setContent" href='/history' data-ext='.md'>Histiry</a></li>
+            <li><a class="dropdown-item setContent" href='/history' data-ext='.md'>History</a></li>
             <li><a class="dropdown-item setContent" href='/clothes' data-ext='.htm'>Clothes</a></li>
           </ul>
         </li>
@@ -115,7 +115,7 @@ $(()=>{
     e.preventDefault()
     setContent(e.target.pathname, true)
   })
-  
+
   function setContent(path, clk=false){
     //clk: by click
     /*
@@ -197,6 +197,13 @@ $(()=>{
         }
 
         $("#content").empty().append(c)
+
+        //append latest video info / update info
+        if(url == 'main.md'){
+          getLatest().then(r=>{
+            $("#content").append(r)
+          })
+        }
         
         //if data is remote, tell the source
         if(url.includes('http')){
@@ -214,7 +221,6 @@ $(()=>{
       msgModal.show()
     })
   }
-
   
   function setContentMDTable(){
     let t = [...document.querySelectorAll('table')].forEach(e=>{
@@ -642,6 +648,59 @@ function preCategory(t){
   else if(origin.some(e=>t.toLowerCase().includes(e))){return 'オリジナル曲 / Original Songs'}
   else if(chat.some(e=>t.toLowerCase().includes(e))){return '雑談 / Chatting'}
   else{return 'other'}
+}
+
+async function getLatest(){
+  try {
+    const [ytLatest, gitCommitMsg] = await Promise.all([getYTlatest(), getGitCommitMsg()])
+    return ytLatest + gitCommitMsg
+  }
+  catch (error) {
+    console.error('Error fetching data:', error)
+  }
+}
+
+//get berry latest public video
+function getYTlatest(){
+  return new Promise((resolve, reject)=>{
+    $.ajax({
+      url:'https://getberrylatestytvideo.katani.workers.dev/'
+    })
+    .done((d)=>{
+      let v = d.items[0].snippet
+      let html =`
+      <div id='YTlatest' class='card'>
+        <img src="${v.thumbnails.medium.url}" class="card-img-top">
+        <div class="card-body">
+          <h5 class="card-title">Latest Public Video</h5>
+          <h6 class="card-subtitle mb-2 text-body-secondary">publish @ ${dayjs(v.publishedAt).format('YYYY/MM/DD HH:mmZ')}</h6>
+          <a href="https://www.youtube.com/watch?v=${v.resourceId.videoId}" class="card-link">${v.title}</a>
+        </div>
+      </div>
+      `
+      resolve(html)
+    })
+    .fail((err)=>{reject(err)});
+  })
+}
+
+//get github latest commit
+function getGitCommitMsg(){
+  return new Promise((resolve, reject)=>{
+    $.ajax({
+      url:'https://api.github.com/repos/maisakiberryfan/website/commits?per_page=1',
+    })
+    .done((d)=>{
+      let html = `
+      <div class="container mt-3">
+        <p>Last update：${dayjs(d[0].commit.committer.date).format('YYYY/MM/DD HH:mmZ')}</p>
+        <p>Update content：${marked.parse(d[0].commit.message)}</p>
+      </div>
+      `
+      resolve(html)
+    })
+    .fail((err)=>{reject(err)});
+  })  
 }
 
 })//end ready
