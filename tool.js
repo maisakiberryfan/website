@@ -276,9 +276,7 @@ $(()=>{
 
   //column definition
   var setlistColDef = [
-    {title:"Date", field:"date", validator:dateValid, cellEdited:dateFormatter, width:'150', formatter:"link", formatterParams:{
-      urlField:"YTLink",
-    }},
+    {title:"Date", field:"date", validator:dateValid, accessor:((value)=>dayjs(value).toJSON()), width:'150', formatter:dateWithYTLink},
     {title:"Track", field:"track", sorter:'number'},
     {title:"Song", field:"song", topCalc:'count', topCalcFormatter:(c=>'subtotal/小計：'+c.getValue()), headerFilter:select2, headerFilterParams:{field:"song"}, headerSort:false},
     {title:"singer", field:"singer", headerFilter:select2, headerFilterParams:{field:"singer"}, headerSort:false},
@@ -323,6 +321,11 @@ $(()=>{
   function dateFormatter (cell){
     //Change format to YYYY/MM/DD
     return cell.setValue(dayjs(cell.getValue()).format('YYYY/MM/DD'))
+  }
+
+  function dateWithYTLink(cell){
+    let d = cell.getData()
+    return `<a href=${d.YTLink}>${dayjs(d.date).format('YYYY/MM/DD')}</a>`
   }
 
   function select2 (cell, onRendered, success, cancel, editorParams){
@@ -435,12 +438,12 @@ $(()=>{
     
   $('#content').on('click', '#addRow', ()=>{
 
-    $('#date').val(dayjs().format('YYYY/MM/DD'))
+    //$('#setlistDate').val(dayjs().format('YYYY/MM/DD'))
     addRowModal.show()
   })
 
   $('#addRowData').on('click', ()=>{
-    let info = {d:$('#date').val(), y:$('#YTLink').val(), c:Number($('#songs').val())}
+    let info = {d:$('#setlistDate').val(), y:$('#YTLink').val(), c:Number($('#songs').val())}
 
     jsonTable.blockRedraw()
     for(let i=info.c; i>0 ; i--){
@@ -490,15 +493,15 @@ $(()=>{
     jsonTable.download('json', filename + '.json')
   })
 
-  $('#date').on('blur', (e)=>{
+  $('#setlistDate').on('blur', (e)=>{
     let d = dayjs(e.target.value)
     if(!d.isValid()){
       $('#dateCheck').text('Date not valid')
-      $('#date').trigger( "focus" )
+      $('#setlistDate').trigger( "focus" )
     }
     else{
       $('#dateCheck').text('')
-      e.target.value=d.format('YYYY/MM/DD')
+      //e.target.value=d.format('YYYY/MM/DD HH:mm')
     }
   })
 
@@ -506,7 +509,7 @@ $(()=>{
 
   var addStreamRowModal = new bootstrap.Modal(document.getElementById('modalAddStreamRow'))
   document.getElementById('modalAddStreamRow').addEventListener('shown.bs.modal', () => {
-    $('#YTID').focus()
+    $('.YTInfoQ').focus()
   })
   
 
@@ -526,7 +529,7 @@ $(()=>{
     addStreamRowModal.show()
   })
 
-  $('#YTID').on('blur', async ()=>{
+  $('.YTInfoQ').on('blur', async ()=>{
     // query youtube api get info
     // You can use your API key to query the info
     // https://developers.google.com/youtube/v3/getting-started
@@ -543,7 +546,7 @@ $(()=>{
 
       const BERRYCHANNEL = ['UC7A7bGRVdIwo93nqnA3x-OQ', 'UCBOGwPeBtaPRU59j8jshdjQ', 'UC2cgr_UtYukapRUt404In-A']
 
-      let id = getYoutubeVideoId($('#YTID').val())
+      let id = getYoutubeVideoId($('.YTInfoQ').val())
       if(id === undefined) return
 
       //load content
@@ -562,9 +565,11 @@ $(()=>{
 
             if(info.liveStreamingDetails === undefined){
               $('#streamTime').val(info.snippet.publishedAt)
+              $('#setlistDate').val(info.snippet.publishedAt)
             }
             else{
               $('#streamTime').val(info.liveStreamingDetails.scheduledStartTime)
+              $('#setlistDate').val(info.liveStreamingDetails.scheduledStartTime)
             }
             
             $('#videoID').val(id)
@@ -572,7 +577,7 @@ $(()=>{
           }
           else{
             $('#streamMsg').html("Not berry's video")
-            $('#YTID').val('').focus()
+            $('.YTInfoQ').val('').focus()
           }    
         })
         .fail((jqXHR, textStatus)=>{
@@ -670,7 +675,7 @@ function getYTlatest(){
       let v = d.items[0].snippet
       let html =`
       <div id='YTlatest' class='card'>
-        <img src="${v.thumbnails.medium.url}" class="card-img-top">
+        <a href="https://www.youtube.com/watch?v=${v.resourceId.videoId}" class="card-link"><img src="${v.thumbnails.medium.url}" class="card-img-top"></a>
         <div class="card-body">
           <h5 class="card-title">Latest Public Video</h5>
           <h6 class="card-subtitle mb-2 text-body-secondary">publish @ ${dayjs(v.publishedAt).format('YYYY/MM/DD HH:mmZ')}</h6>
