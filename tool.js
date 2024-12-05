@@ -505,11 +505,15 @@ $(()=>{
     }
   })
 
+  $('#YTLink').on('blur', async ()=>{
+    fillVedioInfo($('#YTLink'))
+  })
+
   //for streamlist (quick solution)
 
   var addStreamRowModal = new bootstrap.Modal(document.getElementById('modalAddStreamRow'))
   document.getElementById('modalAddStreamRow').addEventListener('shown.bs.modal', () => {
-    $('.YTInfoQ').focus()
+    $('#YTID').focus()
   })
   
 
@@ -529,7 +533,11 @@ $(()=>{
     addStreamRowModal.show()
   })
 
-  $('.YTInfoQ').on('blur', async ()=>{
+  $('#YTID').on('blur', async ()=>{
+    fillVedioInfo($('#YTID'))
+  })
+
+  function fillVedioInfo(obj){
     // query youtube api get info
     // You can use your API key to query the info
     // https://developers.google.com/youtube/v3/getting-started
@@ -543,50 +551,48 @@ $(()=>{
            + '&id='+id
     */
     
+    const BERRYCHANNEL = ['UC7A7bGRVdIwo93nqnA3x-OQ', 'UCBOGwPeBtaPRU59j8jshdjQ', 'UC2cgr_UtYukapRUt404In-A']
 
-      const BERRYCHANNEL = ['UC7A7bGRVdIwo93nqnA3x-OQ', 'UCBOGwPeBtaPRU59j8jshdjQ', 'UC2cgr_UtYukapRUt404In-A']
+    let id = getYoutubeVideoId(obj.val())
+    if(id === undefined) return
 
-      let id = getYoutubeVideoId($('.YTInfoQ').val())
-      if(id === undefined) return
+    //load content
+    $.ajax({
+      url:'https://getyoutubevideoid.katani.workers.dev/?id='+id,
+      //url:url
+      })
+      .done((d, textStatus, request)=>{
+        let info = d.items[0]
+        let isBerryChannel = BERRYCHANNEL.filter(e=>info.snippet.channelId.includes(e))
+        //berry's video?
+        if( isBerryChannel.length > 0 ){
+          let title = info.snippet.title
+          $('#streamMsg').html("　")
+          $('#streamTitle').val(title)
 
-      //load content
-      $.ajax({
-        url:'https://getyoutubevideoid.katani.workers.dev/?id='+id,
-        //url:url
-        })
-        .done((d, textStatus, request)=>{
-          let info = d.items[0]
-          let isBerryChannel = BERRYCHANNEL.filter(e=>info.snippet.channelId.includes(e))
-          //berry's video?
-          if( isBerryChannel.length > 0 ){
-            let title = info.snippet.title
-            $('#streamMsg').html("　")
-            $('#streamTitle').val(title)
-
-            if(info.liveStreamingDetails === undefined){
-              $('#streamTime').val(info.snippet.publishedAt)
-              $('#setlistDate').val(info.snippet.publishedAt)
-            }
-            else{
-              $('#streamTime').val(info.liveStreamingDetails.scheduledStartTime)
-              $('#setlistDate').val(info.liveStreamingDetails.scheduledStartTime)
-            }
-            
-            $('#videoID').val(id)
-            $('#category').val(preCategory(title)).trigger('change');
+          if(info.liveStreamingDetails === undefined){
+            $('#streamTime').val(info.snippet.publishedAt)
+            $('#setlistDate').val(info.snippet.publishedAt)
           }
           else{
-            $('#streamMsg').html("Not berry's video")
-            $('.YTInfoQ').val('').focus()
-          }    
-        })
-        .fail((jqXHR, textStatus)=>{
-          $('#streamMsg').html("Get video info fail.")
-          $('#streamTitle').prop('disabled', false)
-          $('#streamTime').prop('disabled', false)
-        })
-
-  })
+            $('#streamTime').val(info.liveStreamingDetails.scheduledStartTime)
+            $('#setlistDate').val(info.liveStreamingDetails.scheduledStartTime)
+          }
+          
+          $('#videoID').val(id)
+          $('#category').val(preCategory(title)).trigger('change');
+        }
+        else{
+          $('#streamMsg').html("Not berry's video")
+          obj.val('').focus()
+        }    
+      })
+      .fail((jqXHR, textStatus)=>{
+        $('#streamMsg').html("Get video info fail.")
+        $('#streamTitle').prop('disabled', false)
+        $('#streamTime').prop('disabled', false)
+      })
+  }
   
   $('#streamTime').on('blur', (e)=>{
     if(e.target.value.length == 0) return
