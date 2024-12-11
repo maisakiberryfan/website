@@ -1,5 +1,427 @@
 [
 	{
+		"date": "2024-12-10T12:00:00.000Z",
+		"track": 1,
+		"song": "キミのせいだよ",
+		"singer": "苺咲べりぃ",
+		"note": "オリソン/初回",
+		"YTLink": "https://www.youtube.com/watch?v=t5wf0o_0jJY"
+	},
+	{
+		"date": "2024-12-10T12:00:00.000Z",
+		"track": 2,
+		"song": "雨とカプチーノ",
+		"singer": "ヨルシカ",
+		"YTLink": "https://www.youtube.com/watch?v=t5wf0o_0jJY"
+	},
+	{
+		"date": "2024-12-10T12:00:00.000Z",
+		"track": 3,
+		"song": "フリージア",
+		"singer": "Uru",
+		"YTLink": "https://www.youtube.com/watch?v=t5wf0o_0jJY"
+	},
+	{
+		"date": "2024-12-10T12:00:00.000Z",
+		"track": 4,
+		"song": "それを愛と呼ぶなら",
+		"singer": "Uru",
+		"YTLink": "https://www.youtube.com/watch?v=t5wf0o_0jJY"
+	},
+	{
+		"date": "2024-12-10T12:00:00.000Z",
+		"track": 5,
+		"song": "115万キロのフィルム",
+		"singer": "Official髭男dism",
+		"YTLink": "https://www.youtube.com/watch?v=t5wf0o_0jJY"
+	},
+	{
+		"date": "2024-12-10T12:00:00.000Z",
+		"track": 6,
+		"song": "クリスマスイブ",
+		"singer": "優里",
+		"YTLink": "https://www.youtube.com/watch?v=t5wf0o_0jJY"
+	},
+	{
+		"date": "2024-12-10T12:00:00.000Z",
+		"track": 7,
+		"song": "粉雪",
+		"singer": "レミオロメン",
+		"YTLink": "https://www.youtube.com/watch?v=t5wf0o_0jJY"
+	},
+	{
+		"date": "2024-12-10T12:00:00.000Z",
+		"track": 8,
+		"song": "美しい鰭",
+		"singer": "スピッツ",
+		"YTLink": "https://www.youtube.com/watch?v=t5wf0o_0jJY"
+	},
+	{
+		"date": "2024-12-10T12:00:00.000Z",
+		"track": 9,
+		"song": "366日",
+		"singer": "HY",
+		"YTLink": "https://www.youtube.com/watch?v=t5wf0o_0jJY"
+	},
+	{
+		"date": "2024-12-10T12:00:00.000Z",
+		"track": 10,
+		"song": "瞳をとじて",
+		"singer": "平井堅",
+		"YTLink": "https://www.youtube.com/watch?v=t5wf0o_0jJY"
+	},
+	{
+		"date": "2024-12-10T12:00:00.000Z",
+		"track": 11,
+		"song": "ガーネット",
+		"singer": "奥華子",
+		"YTLink": "https://www.youtube.com/watch?v=t5wf0o_0jJY"
+	},
+	{
+		"date": "2024-12-10T12:00:00.000Z",
+		"track": 12,
+		"song": "メリクリ",
+		"singer": "BoA",
+		"YTLink": "https://www.youtube.com/watch?v=t5wf0o_0jJY"
+	},
+	{
+		"date": "2024-12-10T12:00:00.000Z",
+		"track": 13,
+		"song": "雪の華",
+		"singer": "中島美嘉",
+		"YTLink": "https://www.youtube.com/watch?v=t5wf0o_0jJY"
+	},
+	{
+		"date": "2024-12-10T12:00:00.000Z",
+		"track": 14,
+		"song": "First Love",
+		"singer": "宇多田ヒカル",
+		"YTLink": "https://www.youtube.com/watch?v=t5wf0o_0jJY"
+	},
+	{
+		"date": "2024-12-10T12:00:00.000Z",
+		"track": 15,
+		"song": "HAPPY BIRTHDAY",
+		"singer": "back number",
+		"YTLink": "https://www.youtube.com/watch?v=t5wf0o_0jJY"
+	},
+	{
+		"date": "2024-12-10T12:00:00.000Z",
+		"track": 16,
+		"song": "ヒロイン",
+		"singer": "back number",
+		"YTLink": "https://www.youtube.com/watch?v=t5wf0o_0jJY"
+	},
+	{
+		"date": "2024-12-10T12:00:00.000Z",
+		"track": 17,
+		"song": "未来",
+		"singer": "コブクロ",
+		"YTLink": "https://www.youtube.com/watch?v=t5wf0o_0jJY"
+	},
+	{
+		"date": "2024-12-10T12:00:00.000Z",
+		"track": 18,
+		"song": "奏(かなで)",
+		"singer": "スキマスイッチ",
+		"YTLink": "https://www.youtube.com/watch?v=t5wf0o_0jJY"
+	},
+	{
+		"date": "2024-12-10T12:00:00.000Z",
+		"track": 19,
+		"song": "虹",
+		"singer": "菅田将暉",
+		"YTLink": "https://www.youtube.com/watch?v=t5wf0o_0jJY"
+	},
+	{
+		"date": "2024-12-10T12:00:00.000Z",
+		"track": 20,
+		"song": "クリスマスイブ",
+		"singer": "優里",
+		"YTLink": "https://www.youtube.com/watch?v=t5wf0o_0jJY"
+	},
+	{
+		"date": "2024-12-09T12:00:00.000Z",
+		"track": 1,
+		"song": "星へ伸ばす手",
+		"singer": "苺咲べりぃ",
+		"YTLink": "https://www.youtube.com/watch?v=EdSJTO0UMyo"
+	},
+	{
+		"date": "2024-12-09T12:00:00.000Z",
+		"track": 2,
+		"song": "乙女のポリシー",
+		"singer": "石田燿子",
+		"YTLink": "https://www.youtube.com/watch?v=EdSJTO0UMyo"
+	},
+	{
+		"date": "2024-12-09T12:00:00.000Z",
+		"track": 3,
+		"song": "セーラースターソング",
+		"singer": "花沢加絵",
+		"YTLink": "https://www.youtube.com/watch?v=EdSJTO0UMyo"
+	},
+	{
+		"date": "2024-12-09T12:00:00.000Z",
+		"track": 4,
+		"song": "同担☆拒否",
+		"singer": "HoneyWorks",
+		"YTLink": "https://www.youtube.com/watch?v=EdSJTO0UMyo"
+	},
+	{
+		"date": "2024-12-09T12:00:00.000Z",
+		"track": 5,
+		"song": "気まぐれロマンティック",
+		"singer": "いきものがかり",
+		"YTLink": "https://www.youtube.com/watch?v=EdSJTO0UMyo"
+	},
+	{
+		"date": "2024-12-09T12:00:00.000Z",
+		"track": 6,
+		"song": "クリスマスイブ",
+		"singer": "優里",
+		"YTLink": "https://www.youtube.com/watch?v=EdSJTO0UMyo"
+	},
+	{
+		"date": "2024-12-09T12:00:00.000Z",
+		"track": 7,
+		"song": "ヒロイン",
+		"singer": "back number",
+		"YTLink": "https://www.youtube.com/watch?v=EdSJTO0UMyo"
+	},
+	{
+		"date": "2024-12-09T12:00:00.000Z",
+		"track": 8,
+		"song": "DEAR…again",
+		"singer": "広瀬香美",
+		"YTLink": "https://www.youtube.com/watch?v=EdSJTO0UMyo"
+	},
+	{
+		"date": "2024-12-09T12:00:00.000Z",
+		"track": 9,
+		"song": "ゲレンデがとけるほど恋したい",
+		"singer": "広瀬香美",
+		"YTLink": "https://www.youtube.com/watch?v=EdSJTO0UMyo"
+	},
+	{
+		"date": "2024-12-09T12:00:00.000Z",
+		"track": 10,
+		"song": "陽のあたる坂道",
+		"singer": "Do As Infinity",
+		"YTLink": "https://www.youtube.com/watch?v=EdSJTO0UMyo"
+	},
+	{
+		"date": "2024-12-09T12:00:00.000Z",
+		"track": 11,
+		"song": "冬のうた",
+		"singer": "Kiroro",
+		"YTLink": "https://www.youtube.com/watch?v=EdSJTO0UMyo"
+	},
+	{
+		"date": "2024-12-09T12:00:00.000Z",
+		"track": 12,
+		"song": "シルシ",
+		"singer": "LiSA",
+		"YTLink": "https://www.youtube.com/watch?v=EdSJTO0UMyo"
+	},
+	{
+		"date": "2024-12-09T12:00:00.000Z",
+		"track": 13,
+		"song": "unlasting",
+		"singer": "LiSA",
+		"YTLink": "https://www.youtube.com/watch?v=EdSJTO0UMyo"
+	},
+	{
+		"date": "2024-12-09T12:00:00.000Z",
+		"track": 14,
+		"song": "瞳はダイアモンド",
+		"singer": "松田聖子",
+		"YTLink": "https://www.youtube.com/watch?v=EdSJTO0UMyo"
+	},
+	{
+		"date": "2024-12-09T12:00:00.000Z",
+		"track": 15,
+		"song": "奈落の花",
+		"singer": "島みやえい子",
+		"YTLink": "https://www.youtube.com/watch?v=EdSJTO0UMyo"
+	},
+	{
+		"date": "2024-12-09T12:00:00.000Z",
+		"track": 16,
+		"song": "Love marginal",
+		"singer": "Printemps",
+		"YTLink": "https://www.youtube.com/watch?v=EdSJTO0UMyo"
+	},
+	{
+		"date": "2024-12-09T12:00:00.000Z",
+		"track": 17,
+		"song": "冬がくれた予感",
+		"singer": "BiBi",
+		"YTLink": "https://www.youtube.com/watch?v=EdSJTO0UMyo"
+	},
+	{
+		"date": "2024-12-09T12:00:00.000Z",
+		"track": 18,
+		"song": "WISH",
+		"singer": "嵐",
+		"YTLink": "https://www.youtube.com/watch?v=EdSJTO0UMyo"
+	},
+	{
+		"date": "2024-12-09T12:00:00.000Z",
+		"track": 19,
+		"song": "Love So Sweet",
+		"singer": "嵐",
+		"YTLink": "https://www.youtube.com/watch?v=EdSJTO0UMyo"
+	},
+	{
+		"date": "2024-12-09T12:00:00.000Z",
+		"track": 20,
+		"song": "God Bless You",
+		"singer": "ワルキューレ",
+		"YTLink": "https://www.youtube.com/watch?v=EdSJTO0UMyo"
+	},
+	{
+		"date": "2024-12-08T13:00:00.000Z",
+		"track": 1,
+		"song": "Shoot!",
+		"singer": "苺咲べりぃ",
+		"YTLink": "https://www.youtube.com/watch?v=C4vQbcEa19Y"
+	},
+	{
+		"date": "2024-12-08T13:00:00.000Z",
+		"track": 2,
+		"song": "トワイライト",
+		"singer": "B小町 ルビー(齊藤なぎさ)、有馬かな(原菜乃華)、MEMちょ(あの)",
+		"YTLink": "https://www.youtube.com/watch?v=C4vQbcEa19Y"
+	},
+	{
+		"date": "2024-12-08T13:00:00.000Z",
+		"track": 3,
+		"song": "POP IN 2",
+		"singer": "B小町 ルビー(伊駒ゆりえ)、有馬かな(潘めぐみ)、MEMちょ(大久保瑠美)",
+		"YTLink": "https://www.youtube.com/watch?v=C4vQbcEa19Y"
+	},
+	{
+		"date": "2024-12-08T13:00:00.000Z",
+		"track": 4,
+		"song": "チキチキバンバン",
+		"singer": "QUEENDOM",
+		"YTLink": "https://www.youtube.com/watch?v=C4vQbcEa19Y"
+	},
+	{
+		"date": "2024-12-08T13:00:00.000Z",
+		"track": 5,
+		"song": "気分上々↑↑",
+		"singer": "mihimaru GT",
+		"YTLink": "https://www.youtube.com/watch?v=C4vQbcEa19Y"
+	},
+	{
+		"date": "2024-12-08T13:00:00.000Z",
+		"track": 6,
+		"song": "Happy Days",
+		"singer": "大塚愛",
+		"YTLink": "https://www.youtube.com/watch?v=C4vQbcEa19Y"
+	},
+	{
+		"date": "2024-12-08T13:00:00.000Z",
+		"track": 7,
+		"song": "フルーツバスケット",
+		"singer": "FRUITS ZIPPER",
+		"YTLink": "https://www.youtube.com/watch?v=C4vQbcEa19Y"
+	},
+	{
+		"date": "2024-12-08T13:00:00.000Z",
+		"track": 8,
+		"song": "流星",
+		"singer": "藍井エイル",
+		"YTLink": "https://www.youtube.com/watch?v=C4vQbcEa19Y"
+	},
+	{
+		"date": "2024-12-08T13:00:00.000Z",
+		"track": 9,
+		"song": "ラピスラズリ",
+		"singer": "藍井エイル",
+		"note": "初回",
+		"YTLink": "https://www.youtube.com/watch?v=C4vQbcEa19Y"
+	},
+	{
+		"date": "2024-12-08T13:00:00.000Z",
+		"track": 10,
+		"song": "あたしを彼女にしたいなら",
+		"singer": "コレサワ",
+		"YTLink": "https://www.youtube.com/watch?v=C4vQbcEa19Y"
+	},
+	{
+		"date": "2024-12-08T13:00:00.000Z",
+		"track": 11,
+		"song": "トリセツ",
+		"singer": "西野カナ",
+		"YTLink": "https://www.youtube.com/watch?v=C4vQbcEa19Y"
+	},
+	{
+		"date": "2024-12-08T13:00:00.000Z",
+		"track": 12,
+		"song": "かわいいだけじゃだめですか?",
+		"singer": "CUTIE STREET",
+		"YTLink": "https://www.youtube.com/watch?v=C4vQbcEa19Y"
+	},
+	{
+		"date": "2024-12-08T13:00:00.000Z",
+		"track": 13,
+		"song": "わたしの一番かわいいところ",
+		"singer": "FRUITS ZIPPER",
+		"YTLink": "https://www.youtube.com/watch?v=C4vQbcEa19Y"
+	},
+	{
+		"date": "2024-12-08T13:00:00.000Z",
+		"track": 14,
+		"song": "ハピチョコ",
+		"singer": "FRUITS ZIPPER",
+		"YTLink": "https://www.youtube.com/watch?v=C4vQbcEa19Y"
+	},
+	{
+		"date": "2024-12-08T13:00:00.000Z",
+		"track": 15,
+		"song": "NEW KAWAII",
+		"singer": "FRUITS ZIPPER",
+		"YTLink": "https://www.youtube.com/watch?v=C4vQbcEa19Y"
+	},
+	{
+		"date": "2024-12-08T13:00:00.000Z",
+		"track": 16,
+		"song": "元彼女のみなさまへ",
+		"singer": "コレサワ",
+		"YTLink": "https://www.youtube.com/watch?v=C4vQbcEa19Y"
+	},
+	{
+		"date": "2024-12-08T13:00:00.000Z",
+		"track": 17,
+		"song": "夜もすがら君想ふ",
+		"singer": "TOKOTOKO(西沢さんP)",
+		"YTLink": "https://www.youtube.com/watch?v=C4vQbcEa19Y"
+	},
+	{
+		"date": "2024-12-08T13:00:00.000Z",
+		"track": 18,
+		"song": "Winter Bells",
+		"singer": "倉木麻衣",
+		"YTLink": "https://www.youtube.com/watch?v=C4vQbcEa19Y"
+	},
+	{
+		"date": "2024-12-08T13:00:00.000Z",
+		"track": 19,
+		"song": "Snow halation",
+		"singer": "μ's",
+		"YTLink": "https://www.youtube.com/watch?v=C4vQbcEa19Y"
+	},
+	{
+		"date": "2024-12-08T13:00:00.000Z",
+		"track": 20,
+		"song": "クリスマスソング",
+		"singer": "back number",
+		"YTLink": "https://www.youtube.com/watch?v=C4vQbcEa19Y"
+	},
+	{
 		"date": "2024-12-05T13:00:00.000Z",
 		"track": 1,
 		"song": "Berry nice!!",
@@ -39452,7 +39874,7 @@
 		"date": "2023-02-21T16:00:00.000Z",
 		"track": "2",
 		"song": "クリスマスイブ",
-		"singer": "",
+		"singer": "優里",
 		"note": "",
 		"YTLink": "https://www.youtube.com/watch?v=MGMfof80yyY"
 	},
@@ -42300,7 +42722,7 @@
 		"date": "2022-12-23T16:00:00.000Z",
 		"track": "9",
 		"song": "クリスマスイブ",
-		"singer": "",
+		"singer": "優里",
 		"note": "",
 		"YTLink": "https://www.youtube.com/watch?v=EiVVnjifMKg"
 	},
@@ -42332,7 +42754,7 @@
 		"date": "2022-12-23T16:00:00.000Z",
 		"track": "13",
 		"song": "WISH",
-		"singer": "",
+		"singer": "嵐",
 		"note": "",
 		"YTLink": "https://www.youtube.com/watch?v=EiVVnjifMKg"
 	},
@@ -42476,7 +42898,7 @@
 		"date": "2022-12-22T16:00:00.000Z",
 		"track": "11",
 		"song": "クリスマスイブ",
-		"singer": "",
+		"singer": "優里",
 		"note": "",
 		"YTLink": "https://www.youtube.com/watch?v=d9TMrx7nvkw"
 	},
@@ -42556,7 +42978,7 @@
 		"date": "2022-12-21T16:00:00.000Z",
 		"track": "1",
 		"song": "クリスマスイブ",
-		"singer": "",
+		"singer": "優里",
 		"note": "21時/ピアノ/初回",
 		"YTLink": "https://www.youtube.com/watch?v=2kF21CBVEe4"
 	},
@@ -44124,7 +44546,7 @@
 		"date": "2022-12-05T16:00:00.000Z",
 		"track": "1",
 		"song": "WISH",
-		"singer": "",
+		"singer": "嵐",
 		"note": "13時",
 		"YTLink": "https://www.youtube.com/watch?v=2wYugOVEeM8"
 	},
@@ -44876,7 +45298,7 @@
 		"date": "2022-11-26T16:00:00.000Z",
 		"track": "5",
 		"song": "WISH",
-		"singer": "",
+		"singer": "嵐",
 		"note": "",
 		"YTLink": "https://www.youtube.com/watch?v=-k8dkpA-bP0"
 	},
@@ -46604,7 +47026,7 @@
 		"date": "2022-11-11T16:00:00.000Z",
 		"track": "4",
 		"song": "WISH",
-		"singer": "",
+		"singer": "嵐",
 		"note": "",
 		"YTLink": "https://www.youtube.com/watch?v=-9H-srh5Jhs"
 	},
@@ -67884,7 +68306,7 @@
 		"date": "2021-12-23T16:00:00.000Z",
 		"track": "16",
 		"song": "WISH",
-		"singer": "",
+		"singer": "嵐",
 		"note": "冬歌",
 		"YTLink": "https://www.youtube.com/watch?v=nvWyYAs4HBA"
 	},
@@ -84012,7 +84434,7 @@
 		"date": "2020-12-23T16:00:00.000Z",
 		"track": "4",
 		"song": "WISH",
-		"singer": "",
+		"singer": "嵐",
 		"note": "冬歌/初回",
 		"YTLink": "https://www.youtube.com/watch?v=5NKArkzcKP0"
 	},
