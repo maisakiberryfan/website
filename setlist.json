@@ -1,5 +1,289 @@
 [
 	{
+		"date": "2024-12-16T13:00:00.000Z",
+		"track": 1,
+		"song": "星へ伸ばす手",
+		"singer": "苺咲べりぃ",
+		"YTLink": "https://www.youtube.com/watch?v=_gb-6pa_0eE"
+	},
+	{
+		"date": "2024-12-16T13:00:00.000Z",
+		"track": 2,
+		"song": "超めでたいソング ～こんなに幸せでいいのかな?～",
+		"singer": "FRUITS ZIPPER",
+		"YTLink": "https://www.youtube.com/watch?v=_gb-6pa_0eE"
+	},
+	{
+		"date": "2024-12-16T13:00:00.000Z",
+		"track": 3,
+		"song": "世界はキミからはじまる",
+		"singer": "FRUITS ZIPPER",
+		"note": "初回",
+		"YTLink": "https://www.youtube.com/watch?v=_gb-6pa_0eE"
+	},
+	{
+		"date": "2024-12-16T13:00:00.000Z",
+		"track": "4",
+		"song": "夜の歌",
+		"singer": "大道寺知世(岩男潤子)",
+		"YTLink": "https://www.youtube.com/watch?v=_gb-6pa_0eE"
+	},
+	{
+		"date": "2024-12-16T13:00:00.000Z",
+		"track": 5,
+		"song": "Honey",
+		"singer": "chihiRo",
+		"YTLink": "https://www.youtube.com/watch?v=_gb-6pa_0eE"
+	},
+	{
+		"date": "2024-12-16T13:00:00.000Z",
+		"track": 6,
+		"song": "七つの海の物語 ～Pearls of Mermaid～",
+		"singer": "七海るちあ(中田あすみ)・宝生波音(寺門仁美)・洞院リナ(浅野まゆみ)",
+		"note": "初回",
+		"YTLink": "https://www.youtube.com/watch?v=_gb-6pa_0eE"
+	},
+	{
+		"date": "2024-12-16T13:00:00.000Z",
+		"track": 7,
+		"song": "希望の鐘音 ～Love goes on～",
+		"singer": "七海るちあ(中田あすみ)・宝生波音(寺門仁美)・洞院リナ(浅野まゆみ)",
+		"note": "初回",
+		"YTLink": "https://www.youtube.com/watch?v=_gb-6pa_0eE"
+	},
+	{
+		"date": "2024-12-16T13:00:00.000Z",
+		"track": 8,
+		"song": "ときめき",
+		"singer": "いきものがかり",
+		"note": "初回",
+		"YTLink": "https://www.youtube.com/watch?v=_gb-6pa_0eE"
+	},
+	{
+		"date": "2024-12-16T13:00:00.000Z",
+		"track": 9,
+		"song": "ゲッチュウ!らぶらぶぅ?!",
+		"singer": "五條真由美",
+		"note": "初回",
+		"YTLink": "https://www.youtube.com/watch?v=_gb-6pa_0eE"
+	},
+	{
+		"date": "2024-12-16T13:00:00.000Z",
+		"track": 10,
+		"song": "光るなら",
+		"singer": "Goose house",
+		"YTLink": "https://www.youtube.com/watch?v=_gb-6pa_0eE"
+	},
+	{
+		"date": "2024-12-16T13:00:00.000Z",
+		"track": 11,
+		"song": "ヒロイン育成計画",
+		"singer": "HoneyWorks",
+		"YTLink": "https://www.youtube.com/watch?v=_gb-6pa_0eE"
+	},
+	{
+		"date": "2024-12-16T13:00:00.000Z",
+		"track": 12,
+		"song": "紅蓮華",
+		"singer": "LiSA",
+		"YTLink": "https://www.youtube.com/watch?v=_gb-6pa_0eE"
+	},
+	{
+		"date": "2024-12-16T13:00:00.000Z",
+		"track": 13,
+		"song": "明け星",
+		"singer": "LiSA",
+		"YTLink": "https://www.youtube.com/watch?v=_gb-6pa_0eE"
+	},
+	{
+		"date": "2024-12-16T13:00:00.000Z",
+		"track": 14,
+		"song": "花になって",
+		"singer": "緑黄色社会",
+		"YTLink": "https://www.youtube.com/watch?v=_gb-6pa_0eE"
+	},
+	{
+		"date": "2024-12-16T13:00:00.000Z",
+		"track": 15,
+		"song": "Mela!",
+		"singer": "緑黄色社会",
+		"YTLink": "https://www.youtube.com/watch?v=_gb-6pa_0eE"
+	},
+	{
+		"date": "2024-12-16T13:00:00.000Z",
+		"track": 16,
+		"song": "ようこそジャパリパークへ",
+		"singer": "どうぶつビスケッツ",
+		"YTLink": "https://www.youtube.com/watch?v=_gb-6pa_0eE"
+	},
+	{
+		"date": "2024-12-16T13:00:00.000Z",
+		"track": 17,
+		"song": "アイドル",
+		"singer": "YOASOBI",
+		"YTLink": "https://www.youtube.com/watch?v=_gb-6pa_0eE"
+	},
+	{
+		"date": "2024-12-16T13:00:00.000Z",
+		"track": 18,
+		"song": "ひぐらしのなく頃に",
+		"singer": "島みやえい子",
+		"YTLink": "https://www.youtube.com/watch?v=_gb-6pa_0eE"
+	},
+	{
+		"date": "2024-12-16T13:00:00.000Z",
+		"track": 19,
+		"song": "奈落の花",
+		"singer": "島みやえい子",
+		"YTLink": "https://www.youtube.com/watch?v=_gb-6pa_0eE"
+	},
+	{
+		"date": "2024-12-16T13:00:00.000Z",
+		"track": 20,
+		"song": "ルンがピカッと光ったら",
+		"singer": "ワルキューレ",
+		"YTLink": "https://www.youtube.com/watch?v=_gb-6pa_0eE"
+	},
+	{
+		"date": "2024-12-15T13:30:00.000Z",
+		"track": 1,
+		"song": "Berry nice!!",
+		"singer": "苺咲べりぃ",
+		"YTLink": "https://www.youtube.com/watch?v=y9mKmflTzt0"
+	},
+	{
+		"date": "2024-12-15T13:30:00.000Z",
+		"track": 2,
+		"song": "かわいいだけじゃだめですか?",
+		"singer": "CUTIE STREET",
+		"YTLink": "https://www.youtube.com/watch?v=y9mKmflTzt0"
+	},
+	{
+		"date": "2024-12-15T13:30:00.000Z",
+		"track": 3,
+		"song": "POP IN 2",
+		"singer": "B小町 ルビー(伊駒ゆりえ)、有馬かな(潘めぐみ)、MEMちょ(大久保瑠美)",
+		"YTLink": "https://www.youtube.com/watch?v=y9mKmflTzt0"
+	},
+	{
+		"date": "2024-12-15T13:30:00.000Z",
+		"track": 4,
+		"song": "あわてんぼうのサンタクロース",
+		"singer": "坂田おさむ,神崎ゆう子",
+		"YTLink": "https://www.youtube.com/watch?v=y9mKmflTzt0"
+	},
+	{
+		"date": "2024-12-15T13:30:00.000Z",
+		"track": 5,
+		"song": "ジングルベル",
+		"YTLink": "https://www.youtube.com/watch?v=y9mKmflTzt0"
+	},
+	{
+		"date": "2024-12-15T13:30:00.000Z",
+		"track": 6,
+		"song": "Let It Go～ありのままで～",
+		"singer": "松たか子",
+		"YTLink": "https://www.youtube.com/watch?v=y9mKmflTzt0"
+	},
+	{
+		"date": "2024-12-15T13:30:00.000Z",
+		"track": 7,
+		"song": "生まれてはじめて",
+		"singer": "神田沙也加,松たか子",
+		"YTLink": "https://www.youtube.com/watch?v=y9mKmflTzt0"
+	},
+	{
+		"date": "2024-12-15T13:30:00.000Z",
+		"track": 8,
+		"song": "ゲレンデがとけるほど恋したい",
+		"singer": "広瀬香美",
+		"YTLink": "https://www.youtube.com/watch?v=y9mKmflTzt0"
+	},
+	{
+		"date": "2024-12-15T13:30:00.000Z",
+		"track": 9,
+		"song": "Snow halation",
+		"singer": "μ's",
+		"YTLink": "https://www.youtube.com/watch?v=y9mKmflTzt0"
+	},
+	{
+		"date": "2024-12-15T13:30:00.000Z",
+		"track": 10,
+		"song": "冬のうた",
+		"singer": "Kiroro",
+		"YTLink": "https://www.youtube.com/watch?v=y9mKmflTzt0"
+	},
+	{
+		"date": "2024-12-15T13:30:00.000Z",
+		"track": 11,
+		"song": "Winter Bells",
+		"singer": "倉木麻衣",
+		"YTLink": "https://www.youtube.com/watch?v=y9mKmflTzt0"
+	},
+	{
+		"date": "2024-12-15T13:30:00.000Z",
+		"track": 12,
+		"song": "Everything",
+		"singer": "MISIA",
+		"YTLink": "https://www.youtube.com/watch?v=y9mKmflTzt0"
+	},
+	{
+		"date": "2024-12-15T13:30:00.000Z",
+		"track": 13,
+		"song": "雪の華",
+		"singer": "中島美嘉",
+		"YTLink": "https://www.youtube.com/watch?v=y9mKmflTzt0"
+	},
+	{
+		"date": "2024-12-15T13:30:00.000Z",
+		"track": 14,
+		"song": "旦那様とのラブラブ・ラブソング",
+		"singer": "フェンリース(釘宮理恵)",
+		"YTLink": "https://www.youtube.com/watch?v=y9mKmflTzt0"
+	},
+	{
+		"date": "2024-12-15T13:30:00.000Z",
+		"track": 15,
+		"song": "トワイライト",
+		"singer": "B小町 ルビー(齊藤なぎさ)、有馬かな(原菜乃華)、MEMちょ(あの)",
+		"YTLink": "https://www.youtube.com/watch?v=y9mKmflTzt0"
+	},
+	{
+		"date": "2024-12-15T13:30:00.000Z",
+		"track": 16,
+		"song": "ウラオモテ・フォーチュン",
+		"singer": "小澤亜李",
+		"YTLink": "https://www.youtube.com/watch?v=y9mKmflTzt0"
+	},
+	{
+		"date": "2024-12-15T13:30:00.000Z",
+		"track": 17,
+		"song": "フルーツバスケット",
+		"singer": "FRUITS ZIPPER",
+		"YTLink": "https://www.youtube.com/watch?v=y9mKmflTzt0"
+	},
+	{
+		"date": "2024-12-15T13:30:00.000Z",
+		"track": 18,
+		"song": "星間飛行",
+		"singer": "ランカ・リー(中島愛)",
+		"YTLink": "https://www.youtube.com/watch?v=y9mKmflTzt0"
+	},
+	{
+		"date": "2024-12-15T13:30:00.000Z",
+		"track": 19,
+		"song": "NEW KAWAII",
+		"singer": "FRUITS ZIPPER",
+		"YTLink": "https://www.youtube.com/watch?v=y9mKmflTzt0"
+	},
+	{
+		"date": "2024-12-15T13:30:00.000Z",
+		"track": 20,
+		"song": "夜空",
+		"singer": "鈴木みのり",
+		"YTLink": "https://www.youtube.com/watch?v=y9mKmflTzt0"
+	},
+	{
 		"date": "2024-12-10T12:00:00.000Z",
 		"track": 1,
 		"song": "キミのせいだよ",
