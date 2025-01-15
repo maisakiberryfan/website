@@ -1,5 +1,145 @@
 [
 	{
+		"date": "2025-01-14T12:00:00.000Z",
+		"track": 1,
+		"song": "Shoot!",
+		"singer": "苺咲べりぃ",
+		"YTLink": "https://www.youtube.com/watch?v=TntVHjFyEwg"
+	},
+	{
+		"date": "2025-01-14T12:00:00.000Z",
+		"track": 2,
+		"song": "わたしの一番かわいいところ",
+		"singer": "FRUITS ZIPPER",
+		"YTLink": "https://www.youtube.com/watch?v=TntVHjFyEwg"
+	},
+	{
+		"date": "2025-01-14T12:00:00.000Z",
+		"track": 3,
+		"song": "フルーツバスケット",
+		"singer": "FRUITS ZIPPER",
+		"YTLink": "https://www.youtube.com/watch?v=TntVHjFyEwg"
+	},
+	{
+		"date": "2025-01-14T12:00:00.000Z",
+		"track": 4,
+		"song": "我ら完全無敵のアイドル!!",
+		"singer": "B小町 ルビー(齊藤なぎさ)、有馬かな(原菜乃華)、MEMちょ(あの)",
+		"YTLink": "https://www.youtube.com/watch?v=TntVHjFyEwg"
+	},
+	{
+		"date": "2025-01-14T12:00:00.000Z",
+		"track": 5,
+		"song": "NEW KAWAII",
+		"singer": "FRUITS ZIPPER",
+		"YTLink": "https://www.youtube.com/watch?v=TntVHjFyEwg"
+	},
+	{
+		"date": "2025-01-14T12:00:00.000Z",
+		"track": 6,
+		"song": "歌に形はないけれど",
+		"singer": "doriko",
+		"YTLink": "https://www.youtube.com/watch?v=TntVHjFyEwg"
+	},
+	{
+		"date": "2025-01-14T12:00:00.000Z",
+		"track": 7,
+		"song": "letter song",
+		"singer": "doriko",
+		"YTLink": "https://www.youtube.com/watch?v=TntVHjFyEwg"
+	},
+	{
+		"date": "2025-01-14T12:00:00.000Z",
+		"track": 8,
+		"song": "ヒッチコック",
+		"singer": "ヨルシカ",
+		"YTLink": "https://www.youtube.com/watch?v=TntVHjFyEwg"
+	},
+	{
+		"date": "2025-01-14T12:00:00.000Z",
+		"track": 9,
+		"song": "Everything",
+		"singer": "MISIA",
+		"YTLink": "https://www.youtube.com/watch?v=TntVHjFyEwg"
+	},
+	{
+		"date": "2025-01-14T12:00:00.000Z",
+		"track": 10,
+		"song": "Get Over",
+		"singer": "Dream",
+		"YTLink": "https://www.youtube.com/watch?v=TntVHjFyEwg"
+	},
+	{
+		"date": "2025-01-14T12:00:00.000Z",
+		"track": 11,
+		"song": "出逢った頃のように",
+		"singer": "Every Little Thing",
+		"YTLink": "https://www.youtube.com/watch?v=TntVHjFyEwg"
+	},
+	{
+		"date": "2025-01-14T12:00:00.000Z",
+		"track": 12,
+		"song": "吉原ラメント",
+		"singer": "亜沙",
+		"YTLink": "https://www.youtube.com/watch?v=TntVHjFyEwg"
+	},
+	{
+		"date": "2025-01-14T12:00:00.000Z",
+		"track": 13,
+		"song": "かわいいだけじゃだめですか?",
+		"singer": "CUTIE STREET",
+		"YTLink": "https://www.youtube.com/watch?v=TntVHjFyEwg"
+	},
+	{
+		"date": "2025-01-14T12:00:00.000Z",
+		"track": 14,
+		"song": "KissHug",
+		"singer": "aiko",
+		"YTLink": "https://www.youtube.com/watch?v=TntVHjFyEwg"
+	},
+	{
+		"date": "2025-01-14T12:00:00.000Z",
+		"track": 15,
+		"song": "プラネタリウム(いきもの)",
+		"singer": "いきものがかり",
+		"YTLink": "https://www.youtube.com/watch?v=TntVHjFyEwg"
+	},
+	{
+		"date": "2025-01-14T12:00:00.000Z",
+		"track": 16,
+		"song": "ワールドイズマイン",
+		"singer": "ryo",
+		"YTLink": "https://www.youtube.com/watch?v=TntVHjFyEwg"
+	},
+	{
+		"date": "2025-01-14T12:00:00.000Z",
+		"track": 17,
+		"song": "メルト",
+		"singer": "ryo",
+		"YTLink": "https://www.youtube.com/watch?v=TntVHjFyEwg"
+	},
+	{
+		"date": "2025-01-14T12:00:00.000Z",
+		"track": 18,
+		"song": "おじゃま虫",
+		"singer": "DECO*27",
+		"YTLink": "https://www.youtube.com/watch?v=TntVHjFyEwg"
+	},
+	{
+		"date": "2025-01-14T12:00:00.000Z",
+		"track": 19,
+		"song": "白い雪のプリンセスは",
+		"singer": "のぼる↑P",
+		"YTLink": "https://www.youtube.com/watch?v=TntVHjFyEwg"
+	},
+	{
+		"date": "2025-01-14T12:00:00.000Z",
+		"track": 20,
+		"song": "虹",
+		"singer": "菅田将暉",
+		"YTLink": "https://www.youtube.com/watch?v=TntVHjFyEwg"
+	},
+	{
 		"date": "2025-01-13T12:00:00.000Z",
 		"track": 1,
 		"song": "Berry nice!!",
