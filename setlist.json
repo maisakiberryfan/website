@@ -1,5 +1,145 @@
 [
 	{
+		"date": "2025-01-15T12:00:00.000Z",
+		"track": 1,
+		"song": "Happy Lucky Strawberry",
+		"singer": "苺咲べりぃ",
+		"YTLink": "https://www.youtube.com/watch?v=qjPFyMYXnfU"
+	},
+	{
+		"date": "2025-01-15T12:00:00.000Z",
+		"track": 2,
+		"song": "フルーツバスケット",
+		"singer": "FRUITS ZIPPER",
+		"YTLink": "https://www.youtube.com/watch?v=qjPFyMYXnfU"
+	},
+	{
+		"date": "2025-01-15T12:00:00.000Z",
+		"track": 3,
+		"song": "かわいいだけじゃだめですか?",
+		"singer": "CUTIE STREET",
+		"YTLink": "https://www.youtube.com/watch?v=qjPFyMYXnfU"
+	},
+	{
+		"date": "2025-01-15T12:00:00.000Z",
+		"track": 4,
+		"song": "我ら完全無敵のアイドル!!",
+		"singer": "B小町 ルビー(齊藤なぎさ)、有馬かな(原菜乃華)、MEMちょ(あの)",
+		"YTLink": "https://www.youtube.com/watch?v=qjPFyMYXnfU"
+	},
+	{
+		"date": "2025-01-15T12:00:00.000Z",
+		"track": 5,
+		"song": "NEW KAWAII",
+		"singer": "FRUITS ZIPPER",
+		"YTLink": "https://www.youtube.com/watch?v=qjPFyMYXnfU"
+	},
+	{
+		"date": "2025-01-15T12:00:00.000Z",
+		"track": 6,
+		"song": "ヒロイン",
+		"singer": "back number",
+		"YTLink": "https://www.youtube.com/watch?v=qjPFyMYXnfU"
+	},
+	{
+		"date": "2025-01-15T12:00:00.000Z",
+		"track": 7,
+		"song": "虹のかけら",
+		"singer": "昆夏美",
+		"YTLink": "https://www.youtube.com/watch?v=qjPFyMYXnfU"
+	},
+	{
+		"date": "2025-01-15T12:00:00.000Z",
+		"track": 8,
+		"song": "想い出がいっぱい",
+		"singer": "H2O",
+		"YTLink": "https://www.youtube.com/watch?v=qjPFyMYXnfU"
+	},
+	{
+		"date": "2025-01-15T12:00:00.000Z",
+		"track": 9,
+		"song": "ネコに風船",
+		"singer": "大塚愛",
+		"YTLink": "https://www.youtube.com/watch?v=qjPFyMYXnfU"
+	},
+	{
+		"date": "2025-01-15T12:00:00.000Z",
+		"track": 10,
+		"song": "夜もすがら君想ふ",
+		"singer": "TOKOTOKO(西沢さんP)",
+		"YTLink": "https://www.youtube.com/watch?v=qjPFyMYXnfU"
+	},
+	{
+		"date": "2025-01-15T12:00:00.000Z",
+		"track": 11,
+		"song": "同担☆拒否",
+		"singer": "HoneyWorks",
+		"YTLink": "https://www.youtube.com/watch?v=qjPFyMYXnfU"
+	},
+	{
+		"date": "2025-01-15T12:00:00.000Z",
+		"track": 12,
+		"song": "可愛くてごめん",
+		"singer": "HoneyWorks",
+		"YTLink": "https://www.youtube.com/watch?v=qjPFyMYXnfU"
+	},
+	{
+		"date": "2025-01-15T12:00:00.000Z",
+		"track": 13,
+		"song": "おジャ魔女カーニバル！！",
+		"singer": "MAHO堂",
+		"YTLink": "https://www.youtube.com/watch?v=qjPFyMYXnfU"
+	},
+	{
+		"date": "2025-01-15T12:00:00.000Z",
+		"track": 14,
+		"song": "バラライカ",
+		"singer": "久住小春",
+		"YTLink": "https://www.youtube.com/watch?v=qjPFyMYXnfU"
+	},
+	{
+		"date": "2025-01-15T12:00:00.000Z",
+		"track": 15,
+		"song": "ココロのちず",
+		"singer": "BOYSTYLE",
+		"YTLink": "https://www.youtube.com/watch?v=qjPFyMYXnfU"
+	},
+	{
+		"date": "2025-01-15T12:00:00.000Z",
+		"track": 16,
+		"song": "少女レイ",
+		"singer": "みきとP",
+		"YTLink": "https://www.youtube.com/watch?v=qjPFyMYXnfU"
+	},
+	{
+		"date": "2025-01-15T12:00:00.000Z",
+		"track": 17,
+		"song": "Missing Promise",
+		"singer": "鈴木このみ",
+		"YTLink": "https://www.youtube.com/watch?v=qjPFyMYXnfU"
+	},
+	{
+		"date": "2025-01-15T12:00:00.000Z",
+		"track": 18,
+		"song": "元彼女のみなさまへ",
+		"singer": "コレサワ",
+		"YTLink": "https://www.youtube.com/watch?v=qjPFyMYXnfU"
+	},
+	{
+		"date": "2025-01-15T12:00:00.000Z",
+		"track": 19,
+		"song": "乙女のポリシー",
+		"singer": "石田燿子",
+		"YTLink": "https://www.youtube.com/watch?v=qjPFyMYXnfU"
+	},
+	{
+		"date": "2025-01-15T12:00:00.000Z",
+		"track": 20,
+		"song": "星間飛行",
+		"singer": "ランカ・リー(中島愛)",
+		"YTLink": "https://www.youtube.com/watch?v=qjPFyMYXnfU"
+	},
+	{
 		"date": "2025-01-14T12:00:00.000Z",
 		"track": 1,
 		"song": "Shoot!",
@@ -73203,7 +73343,7 @@
 		"date": "2021-10-01T16:00:00.000Z",
 		"track": "5",
 		"song": "想い出がいっぱい",
-		"singer": "",
+		"singer": "H2O",
 		"note": "初回",
 		"YTLink": "https://www.youtube.com/watch?v=xSdb312w0gY"
 	},
