@@ -1,5 +1,153 @@
 [
 	{
+		"date": "2025-01-21T12:00:00.000Z",
+		"track": 1,
+		"song": "星へ伸ばす手",
+		"singer": "苺咲べりぃ",
+		"YTLink": "https://www.youtube.com/watch?v=v2a6XxSLF_0"
+	},
+	{
+		"date": "2025-01-21T12:00:00.000Z",
+		"track": 2,
+		"song": "我ら完全無敵のアイドル!!",
+		"singer": "B小町 ルビー(齊藤なぎさ)、有馬かな(原菜乃華)、MEMちょ(あの)",
+		"YTLink": "https://www.youtube.com/watch?v=v2a6XxSLF_0"
+	},
+	{
+		"date": "2025-01-21T12:00:00.000Z",
+		"track": 3,
+		"song": "ひたむきシンデレラ!",
+		"singer": "CUTIE STREET",
+		"note": "初回",
+		"YTLink": "https://www.youtube.com/watch?v=v2a6XxSLF_0"
+	},
+	{
+		"date": "2025-01-21T12:00:00.000Z",
+		"track": 4,
+		"song": "吉原ラメント",
+		"singer": "亜沙",
+		"YTLink": "https://www.youtube.com/watch?v=v2a6XxSLF_0"
+	},
+	{
+		"date": "2025-01-21T12:00:00.000Z",
+		"track": 5,
+		"song": "放課後オーバーフロウ",
+		"singer": "ランカ・リー(中島愛)",
+		"YTLink": "https://www.youtube.com/watch?v=v2a6XxSLF_0"
+	},
+	{
+		"date": "2025-01-21T12:00:00.000Z",
+		"track": 6,
+		"song": "天使にふれたよ！",
+		"singer": "放課後ティータイム",
+		"YTLink": "https://www.youtube.com/watch?v=v2a6XxSLF_0"
+	},
+	{
+		"date": "2025-01-21T12:00:00.000Z",
+		"track": 7,
+		"song": "ごはんはおかず",
+		"singer": "放課後ティータイム",
+		"YTLink": "https://www.youtube.com/watch?v=v2a6XxSLF_0"
+	},
+	{
+		"date": "2025-01-21T12:00:00.000Z",
+		"track": 8,
+		"song": "フルーツバスケット",
+		"singer": "FRUITS ZIPPER",
+		"YTLink": "https://www.youtube.com/watch?v=v2a6XxSLF_0"
+	},
+	{
+		"date": "2025-01-21T12:00:00.000Z",
+		"track": 9,
+		"song": "POP IN 2",
+		"singer": "B小町 ルビー(伊駒ゆりえ)、有馬かな(潘めぐみ)、MEMちょ(大久保瑠美)",
+		"YTLink": "https://www.youtube.com/watch?v=v2a6XxSLF_0"
+	},
+	{
+		"date": "2025-01-21T12:00:00.000Z",
+		"track": 10,
+		"song": "ギターと孤独と蒼い惑星",
+		"singer": "結束バンド",
+		"YTLink": "https://www.youtube.com/watch?v=v2a6XxSLF_0"
+	},
+	{
+		"date": "2025-01-21T12:00:00.000Z",
+		"track": 11,
+		"song": "青春コンプレックス",
+		"singer": "結束バンド",
+		"YTLink": "https://www.youtube.com/watch?v=v2a6XxSLF_0"
+	},
+	{
+		"date": "2025-01-21T12:00:00.000Z",
+		"track": 12,
+		"song": "明日への扉",
+		"singer": "I WiSH",
+		"YTLink": "https://www.youtube.com/watch?v=v2a6XxSLF_0"
+	},
+	{
+		"date": "2025-01-21T12:00:00.000Z",
+		"track": 13,
+		"song": "虹のかけら",
+		"singer": "昆夏美",
+		"YTLink": "https://www.youtube.com/watch?v=v2a6XxSLF_0"
+	},
+	{
+		"date": "2025-01-21T12:00:00.000Z",
+		"track": 14,
+		"song": "ノーザンクロス",
+		"singer": "シェリル・ノーム(May'n)",
+		"YTLink": "https://www.youtube.com/watch?v=v2a6XxSLF_0"
+	},
+	{
+		"date": "2025-01-21T12:00:00.000Z",
+		"track": 15,
+		"song": "ダダダダ天使",
+		"singer": "ナナヲアカリ",
+		"YTLink": "https://www.youtube.com/watch?v=v2a6XxSLF_0"
+	},
+	{
+		"date": "2025-01-21T12:00:00.000Z",
+		"track": 16,
+		"song": "ダ・カーポIII 〜キミにささげる あいのマホウ〜",
+		"singer": "yozuca*",
+		"YTLink": "https://www.youtube.com/watch?v=v2a6XxSLF_0"
+	},
+	{
+		"date": "2025-01-21T12:00:00.000Z",
+		"track": 17,
+		"song": "irony",
+		"singer": "ClariS",
+		"YTLink": "https://www.youtube.com/watch?v=v2a6XxSLF_0"
+	},
+	{
+		"date": "2025-01-21T12:00:00.000Z",
+		"track": 18,
+		"song": "SAKURAスキップ",
+		"singer": "fourfolium",
+		"YTLink": "https://www.youtube.com/watch?v=v2a6XxSLF_0"
+	},
+	{
+		"date": "2025-01-21T12:00:00.000Z",
+		"track": 19,
+		"song": "君色シグナル",
+		"singer": "春奈るな",
+		"YTLink": "https://www.youtube.com/watch?v=v2a6XxSLF_0"
+	},
+	{
+		"date": "2025-01-21T12:00:00.000Z",
+		"track": 20,
+		"song": "ひたむきシンデレラ!",
+		"singer": "CUTIE STREET",
+		"YTLink": "https://www.youtube.com/watch?v=v2a6XxSLF_0"
+	},
+	{
+		"date": "2025-01-21T12:00:00.000Z",
+		"track": 21,
+		"song": "桜色√END",
+		"singer": "苺咲べりぃ",
+		"YTLink": "https://www.youtube.com/watch?v=v2a6XxSLF_0"
+	},
+	{
 		"date": "2025-01-15T12:00:00.000Z",
 		"track": 1,
 		"song": "Happy Lucky Strawberry",
