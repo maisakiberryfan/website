@@ -42,4 +42,51 @@
     </div>
     <!-- bgm -->
 
+    <div id="BGM" class="text-center mt-4">
+        <H1>BGM</H1>
+        
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="bgm" id="bgm1" value="1">
+            <label class="form-check-label" for="bgm1" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="作曲 / ねぎとろ。">BGM1</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="bgm" id="bgm2" value="2">
+            <label class="form-check-label" for="bgm2" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="作曲 / ねぎとろ。">BGM2</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="bgm" id="bgm3" value="3">
+            <label class="form-check-label" for="bgm3" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="作曲 / 菅原ショウ">BGM3</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="bgm" id="bgm4" value="4">
+            <label class="form-check-label" for="bgm4" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="作曲 / 司/19G">BGM4</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="bgm" id="bgm5" value="5">
+            <label class="form-check-label" for="bgm5" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="作曲 / 司/19G">BGM5</label>
+        </div>
+        
+        <div class="mt-4">
+            <video-js class="video-js" controls></video-js>
+        </div>
+    </div>
+
 </div>
+
+<script>
+    $(()=>{
+        const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+        const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+
+        //set videojs
+        const player = videojs((document.querySelector('.video-js')), {
+            audioOnlyMode: true,
+            width:'500px'})
+
+        $('input[name="bgm"]').on('change', ()=>{
+            player.src(`img/profile/bgm/${$('input[name="bgm"]:checked').val()}.mp3`)
+            player.play()
+        })
+    })
+    
+</script>

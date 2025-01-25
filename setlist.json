@@ -1,5 +1,285 @@
 [
 	{
+		"date": "2025-01-23T12:00:00.000Z",
+		"track": 1,
+		"song": "Shoot!",
+		"singer": "苺咲べりぃ",
+		"YTLink": "https://www.youtube.com/watch?v=JS7SYtMEY8U"
+	},
+	{
+		"date": "2025-01-23T12:00:00.000Z",
+		"track": 2,
+		"song": "我ら完全無敵のアイドル!!",
+		"singer": "B小町 ルビー(齊藤なぎさ)、有馬かな(原菜乃華)、MEMちょ(あの)",
+		"YTLink": "https://www.youtube.com/watch?v=JS7SYtMEY8U"
+	},
+	{
+		"date": "2025-01-23T12:00:00.000Z",
+		"track": 3,
+		"song": "かわいいだけじゃだめですか?",
+		"singer": "CUTIE STREET",
+		"YTLink": "https://www.youtube.com/watch?v=JS7SYtMEY8U"
+	},
+	{
+		"date": "2025-01-23T12:00:00.000Z",
+		"track": 4,
+		"song": "ハピチョコ",
+		"singer": "FRUITS ZIPPER",
+		"YTLink": "https://www.youtube.com/watch?v=JS7SYtMEY8U"
+	},
+	{
+		"date": "2025-01-23T12:00:00.000Z",
+		"track": 5,
+		"song": "ひたむきシンデレラ!",
+		"singer": "CUTIE STREET",
+		"YTLink": "https://www.youtube.com/watch?v=JS7SYtMEY8U"
+	},
+	{
+		"date": "2025-01-23T12:00:00.000Z",
+		"track": 6,
+		"song": "高鳴る",
+		"singer": "藤田麻衣子",
+		"YTLink": "https://www.youtube.com/watch?v=JS7SYtMEY8U"
+	},
+	{
+		"date": "2025-01-23T12:00:00.000Z",
+		"track": 7,
+		"song": "冬がくれた予感",
+		"singer": "BiBi",
+		"YTLink": "https://www.youtube.com/watch?v=JS7SYtMEY8U"
+	},
+	{
+		"date": "2025-01-23T12:00:00.000Z",
+		"track": 8,
+		"song": "気まぐれロマンティック",
+		"singer": "いきものがかり",
+		"YTLink": "https://www.youtube.com/watch?v=JS7SYtMEY8U"
+	},
+	{
+		"date": "2025-01-23T12:00:00.000Z",
+		"track": 9,
+		"song": "夜に駆ける",
+		"singer": "YOASOBI",
+		"YTLink": "https://www.youtube.com/watch?v=JS7SYtMEY8U"
+	},
+	{
+		"date": "2025-01-23T12:00:00.000Z",
+		"track": 10,
+		"song": "ウラオモテ・フォーチュン",
+		"singer": "小澤亜李",
+		"YTLink": "https://www.youtube.com/watch?v=JS7SYtMEY8U"
+	},
+	{
+		"date": "2025-01-23T12:00:00.000Z",
+		"track": 11,
+		"song": "マジックナンバー",
+		"singer": "坂本真綾",
+		"YTLink": "https://www.youtube.com/watch?v=JS7SYtMEY8U"
+	},
+	{
+		"date": "2025-01-23T12:00:00.000Z",
+		"track": 12,
+		"song": "夜もすがら君想ふ",
+		"singer": "TOKOTOKO(西沢さんP)",
+		"YTLink": "https://www.youtube.com/watch?v=JS7SYtMEY8U"
+	},
+	{
+		"date": "2025-01-23T12:00:00.000Z",
+		"track": 13,
+		"song": "元彼女のみなさまへ",
+		"singer": "コレサワ",
+		"YTLink": "https://www.youtube.com/watch?v=JS7SYtMEY8U"
+	},
+	{
+		"date": "2025-01-23T12:00:00.000Z",
+		"track": 14,
+		"song": "あたしを彼女にしたいなら",
+		"singer": "コレサワ",
+		"YTLink": "https://www.youtube.com/watch?v=JS7SYtMEY8U"
+	},
+	{
+		"date": "2025-01-23T12:00:00.000Z",
+		"track": 15,
+		"song": "旦那様とのラブラブ・ラブソング",
+		"singer": "フェンリース(釘宮理恵)",
+		"YTLink": "https://www.youtube.com/watch?v=JS7SYtMEY8U"
+	},
+	{
+		"date": "2025-01-23T12:00:00.000Z",
+		"track": 16,
+		"song": "Dream × Dream",
+		"singer": "愛内里菜",
+		"YTLink": "https://www.youtube.com/watch?v=JS7SYtMEY8U"
+	},
+	{
+		"date": "2025-01-23T12:00:00.000Z",
+		"track": 17,
+		"song": "黒毛和牛上塩タン焼735円",
+		"singer": "大塚愛",
+		"YTLink": "https://www.youtube.com/watch?v=JS7SYtMEY8U"
+	},
+	{
+		"date": "2025-01-23T12:00:00.000Z",
+		"track": 18,
+		"song": "だから僕は音楽を辞めた",
+		"singer": "ヨルシカ",
+		"YTLink": "https://www.youtube.com/watch?v=JS7SYtMEY8U"
+	},
+	{
+		"date": "2025-01-23T12:00:00.000Z",
+		"track": 19,
+		"song": "吉原ラメント",
+		"singer": "亜沙",
+		"YTLink": "https://www.youtube.com/watch?v=JS7SYtMEY8U"
+	},
+	{
+		"date": "2025-01-23T12:00:00.000Z",
+		"track": 20,
+		"song": "ミュージカル",
+		"singer": "鈴木みのり",
+		"YTLink": "https://www.youtube.com/watch?v=JS7SYtMEY8U"
+	},
+	{
+		"date": "2025-01-22T12:30:00.000Z",
+		"track": 1,
+		"song": "星になろうよ",
+		"singer": "苺咲べりぃ",
+		"YTLink": "https://www.youtube.com/watch?v=WkJqiPFWR60"
+	},
+	{
+		"date": "2025-01-22T12:30:00.000Z",
+		"track": 2,
+		"song": "我ら完全無敵のアイドル!!",
+		"singer": "B小町 ルビー(齊藤なぎさ)、有馬かな(原菜乃華)、MEMちょ(あの)",
+		"YTLink": "https://www.youtube.com/watch?v=Bz6-_lZivtQ"
+	},
+	{
+		"date": "2025-01-22T12:30:00.000Z",
+		"track": 3,
+		"song": "ひたむきシンデレラ!",
+		"singer": "CUTIE STREET",
+		"YTLink": "https://www.youtube.com/watch?v=Bz6-_lZivtQ"
+	},
+	{
+		"date": "2025-01-22T12:30:00.000Z",
+		"track": 4,
+		"song": "僕たちはひとつの光",
+		"singer": "μ's",
+		"YTLink": "https://www.youtube.com/watch?v=Bz6-_lZivtQ"
+	},
+	{
+		"date": "2025-01-22T12:30:00.000Z",
+		"track": 5,
+		"song": "僕らは今のなかで",
+		"singer": "μ's",
+		"YTLink": "https://www.youtube.com/watch?v=Bz6-_lZivtQ"
+	},
+	{
+		"date": "2025-01-22T12:30:00.000Z",
+		"track": 6,
+		"song": "星座になれたら",
+		"singer": "結束バンド",
+		"YTLink": "https://www.youtube.com/watch?v=Bz6-_lZivtQ"
+	},
+	{
+		"date": "2025-01-22T12:30:00.000Z",
+		"track": 7,
+		"song": "secret base～君がくれたもの～",
+		"singer": "ZONE",
+		"YTLink": "https://www.youtube.com/watch?v=Bz6-_lZivtQ"
+	},
+	{
+		"date": "2025-01-22T12:30:00.000Z",
+		"track": 8,
+		"song": "勇者",
+		"singer": "YOASOBI",
+		"YTLink": "https://www.youtube.com/watch?v=Bz6-_lZivtQ"
+	},
+	{
+		"date": "2025-01-22T12:30:00.000Z",
+		"track": 9,
+		"song": "Mela!",
+		"singer": "緑黄色社会",
+		"YTLink": "https://www.youtube.com/watch?v=Bz6-_lZivtQ"
+	},
+	{
+		"date": "2025-01-22T12:30:00.000Z",
+		"track": 10,
+		"song": "ステラブリーズ",
+		"singer": "春奈るな",
+		"YTLink": "https://www.youtube.com/watch?v=Bz6-_lZivtQ"
+	},
+	{
+		"date": "2025-01-22T12:30:00.000Z",
+		"track": 11,
+		"song": "世界に一つだけの花",
+		"singer": "SMAP",
+		"YTLink": "https://www.youtube.com/watch?v=Bz6-_lZivtQ"
+	},
+	{
+		"date": "2025-01-22T12:30:00.000Z",
+		"track": 12,
+		"song": "プラチナ",
+		"singer": "坂本真綾",
+		"YTLink": "https://www.youtube.com/watch?v=Bz6-_lZivtQ"
+	},
+	{
+		"date": "2025-01-22T12:30:00.000Z",
+		"track": 13,
+		"song": "CLEAR",
+		"singer": "坂本真綾",
+		"YTLink": "https://www.youtube.com/watch?v=Bz6-_lZivtQ"
+	},
+	{
+		"date": "2025-01-22T12:30:00.000Z",
+		"track": 14,
+		"song": "同担☆拒否",
+		"singer": "HoneyWorks",
+		"YTLink": "https://www.youtube.com/watch?v=Bz6-_lZivtQ"
+	},
+	{
+		"date": "2025-01-22T12:30:00.000Z",
+		"track": 15,
+		"song": "初めての恋が終わる時",
+		"singer": "Ryo",
+		"YTLink": "https://www.youtube.com/watch?v=Bz6-_lZivtQ"
+	},
+	{
+		"date": "2025-01-22T12:30:00.000Z",
+		"track": 16,
+		"song": "ヒトリゴト",
+		"singer": "ClariS",
+		"YTLink": "https://www.youtube.com/watch?v=Bz6-_lZivtQ"
+	},
+	{
+		"date": "2025-01-22T12:30:00.000Z",
+		"track": 17,
+		"song": "可愛くなりたい",
+		"singer": "HoneyWorks feat.鎖那",
+		"YTLink": "https://www.youtube.com/watch?v=Bz6-_lZivtQ"
+	},
+	{
+		"date": "2025-01-22T12:30:00.000Z",
+		"track": 18,
+		"song": "恋はスリル、ショック、サスペンス",
+		"singer": "愛内里菜",
+		"YTLink": "https://www.youtube.com/watch?v=Bz6-_lZivtQ"
+	},
+	{
+		"date": "2025-01-22T12:30:00.000Z",
+		"track": 19,
+		"song": "I can't stop my love for you♥",
+		"singer": "愛内里菜",
+		"YTLink": "https://www.youtube.com/watch?v=Bz6-_lZivtQ"
+	},
+	{
+		"date": "2025-01-22T12:30:00.000Z",
+		"track": 20,
+		"song": "エフェメラをあつめて",
+		"singer": "鈴木みのり",
+		"YTLink": "https://www.youtube.com/watch?v=Bz6-_lZivtQ"
+	},
+	{
 		"date": "2025-01-21T12:00:00.000Z",
 		"track": 1,
 		"song": "星へ伸ばす手",

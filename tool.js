@@ -6,6 +6,7 @@ import "https://unpkg.com/tabulator-tables@5.5.0/dist/js/tabulator.min.js"
 import "https://unpkg.com/marked@12.0.1/marked.min.js"
 import "https://unpkg.com/dayjs@1.11.10/dayjs.min.js"
 import "https://unpkg.com/select2@4.0.13/dist/js/select2.full.min.js"
+import "https://unpkg.com/video.js@8.21.1/dist/video.min.js"
 
 //------  coding by hand  ------
 let nav = `

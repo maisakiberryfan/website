@@ -6,7 +6,7 @@
 <script>
     sourceArray = [
         {"name":"2D-JK服","date":"20250120","designer":"みわうに","modeler":"乃樹坂くしお","link":"s8xse8ghpTw","count":"4"},
-        {"name":"3D-衣装4","date":"20241205","designer":"ana","modeler":"Rぷりん","link":"tXgcfNdmL84","count":"1"},
+        {"name":"3D-衣装4","date":"20241205","designer":"ana","modeler":"Rぷりん","link":"tXgcfNdmL84","count":"5"},
         {"name":"2D-和服メイド","date":"20240617","designer":"みわうに","modeler":"乃樹坂くしお","link":"x4_vih6njco","count":"3"},
         {"name":"2D-ルームウェア","date":"20240116","designer":"みわうに","modeler":"乃樹坂くしお","link":"_puahGBIXPs","count":"5"},
         {"name":"3D-衣装3","date":"20230905","designer":"ana","modeler":"Rぷりん","link":"61TdPwpqekc","count":"1"},
@@ -28,7 +28,7 @@
     let data = sourceArray.map(e=>{
         //第一張要帶連結
         let item =
-          `<figure class="col figure"><a href='${itemsBaseURL}${e.date}/s1.webp' data-fancybox=${e.date}><img src="${itemsBaseURL}${e.date}/s1.webp" class="figure-img" width="324" height="576"></a>`
+          `<figure class="col figure figure-cloth"><a href='${itemsBaseURL}${e.date}/s1.webp' data-fancybox=${e.date}><img src="${itemsBaseURL}${e.date}/s1.webp" class="figure-img" width="324" height="576"></a>`
 
         for(let i=1; i<e.count; i++){
             item = item + `<a href='${itemsBaseURL}${e.date}/s${i+1}.webp' data-fancybox=${e.date}></a>`
