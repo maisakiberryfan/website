@@ -1,4 +1,6 @@
 ﻿## 2025
+* 2025/01/29　Single 『かくれんぼ』[youtube](https://www.youtube.com/watch?v=NnlmnMSXIks) / [booth](https://maisakiberry.booth.pm/items/6535210)
+* 2025/01/28　[12ヶ月連続！オリジナル楽曲リリースチャレンジ！](https://x.com/MaisakiBerry/status/1884376072512495625)
 * 2025/01/20　[2Dの新衣装のお披露目Live](https://www.youtube.com/watch?v=s8xse8ghpTw)
 
 ## 2024

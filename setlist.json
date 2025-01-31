@@ -1,5 +1,426 @@
 [
 	{
+		"date": "2025-01-29T12:00:00.000Z",
+		"track": 1,
+		"song": "to you.",
+		"singer": "苺咲べりぃ",
+		"YTLink": "https://www.youtube.com/watch?v=FU8s77LIYm4"
+	},
+	{
+		"date": "2025-01-29T12:00:00.000Z",
+		"track": 2,
+		"song": "我ら完全無敵のアイドル!!",
+		"singer": "B小町 ルビー(齊藤なぎさ)、有馬かな(原菜乃華)、MEMちょ(あの)",
+		"YTLink": "https://www.youtube.com/watch?v=FU8s77LIYm4"
+	},
+	{
+		"date": "2025-01-29T12:00:00.000Z",
+		"track": 3,
+		"song": "ひたむきシンデレラ!",
+		"singer": "CUTIE STREET",
+		"YTLink": "https://www.youtube.com/watch?v=FU8s77LIYm4"
+	},
+	{
+		"date": "2025-01-29T12:00:00.000Z",
+		"track": 4,
+		"song": "春泥棒",
+		"singer": "ヨルシカ",
+		"YTLink": "https://www.youtube.com/watch?v=FU8s77LIYm4"
+	},
+	{
+		"date": "2025-01-29T12:00:00.000Z",
+		"track": 5,
+		"song": "雨とカプチーノ",
+		"singer": "ヨルシカ",
+		"YTLink": "https://www.youtube.com/watch?v=FU8s77LIYm4"
+	},
+	{
+		"date": "2025-01-29T12:00:00.000Z",
+		"track": 6,
+		"song": "キス・ミー・パティシエ",
+		"singer": "CANDY TUNE",
+		"YTLink": "https://www.youtube.com/watch?v=FU8s77LIYm4"
+	},
+	{
+		"date": "2025-01-29T12:00:00.000Z",
+		"track": 7,
+		"song": "絶対アイドル辞めないで",
+		"singer": "=LOVE",
+		"YTLink": "https://www.youtube.com/watch?v=FU8s77LIYm4"
+	},
+	{
+		"date": "2025-01-29T12:00:00.000Z",
+		"track": 8,
+		"song": "初恋サイダー",
+		"singer": "Buono!",
+		"YTLink": "https://www.youtube.com/watch?v=FU8s77LIYm4"
+	},
+	{
+		"date": "2025-01-29T12:00:00.000Z",
+		"track": 9,
+		"song": "ウラオモテ・フォーチュン",
+		"singer": "小澤亜李",
+		"YTLink": "https://www.youtube.com/watch?v=FU8s77LIYm4"
+	},
+	{
+		"date": "2025-01-29T12:00:00.000Z",
+		"track": 10,
+		"song": "最悪な日でもあなたが好き。",
+		"singer": "芹澤優",
+		"YTLink": "https://www.youtube.com/watch?v=FU8s77LIYm4"
+	},
+	{
+		"date": "2025-01-29T12:00:00.000Z",
+		"track": 11,
+		"song": "旦那様とのラブラブ・ラブソング",
+		"singer": "フェンリース(釘宮理恵)",
+		"YTLink": "https://www.youtube.com/watch?v=FU8s77LIYm4"
+	},
+	{
+		"date": "2025-01-29T12:00:00.000Z",
+		"track": 12,
+		"song": "初めての恋が終わる時",
+		"singer": "Ryo",
+		"YTLink": "https://www.youtube.com/watch?v=FU8s77LIYm4"
+	},
+	{
+		"date": "2025-01-29T12:00:00.000Z",
+		"track": 13,
+		"song": "フリージア",
+		"singer": "Uru",
+		"YTLink": "https://www.youtube.com/watch?v=FU8s77LIYm4"
+	},
+	{
+		"date": "2025-01-29T12:00:00.000Z",
+		"track": 14,
+		"song": "夕日坂",
+		"singer": "doriko",
+		"YTLink": "https://www.youtube.com/watch?v=FU8s77LIYm4"
+	},
+	{
+		"date": "2025-01-29T12:00:00.000Z",
+		"track": 15,
+		"song": "letter song",
+		"singer": "doriko",
+		"YTLink": "https://www.youtube.com/watch?v=FU8s77LIYm4"
+	},
+	{
+		"date": "2025-01-29T12:00:00.000Z",
+		"track": 16,
+		"song": "ニッポン笑顔百景",
+		"singer": "桃黒亭一門",
+		"YTLink": "https://www.youtube.com/watch?v=FU8s77LIYm4"
+	},
+	{
+		"date": "2025-01-29T12:00:00.000Z",
+		"track": 17,
+		"song": "セーラースターソング",
+		"singer": "花沢加絵",
+		"YTLink": "https://www.youtube.com/watch?v=FU8s77LIYm4"
+	},
+	{
+		"date": "2025-01-29T12:00:00.000Z",
+		"track": 18,
+		"song": "季節のカルテット",
+		"singer": "鈴木みのり",
+		"YTLink": "https://www.youtube.com/watch?v=FU8s77LIYm4"
+	},
+	{
+		"date": "2025-01-29T12:00:00.000Z",
+		"track": 19,
+		"song": "サイハテ",
+		"singer": "鈴木みのり",
+		"YTLink": "https://www.youtube.com/watch?v=FU8s77LIYm4"
+	},
+	{
+		"date": "2025-01-29T12:00:00.000Z",
+		"track": 20,
+		"song": "心が、青い。",
+		"singer": "鈴木みのり",
+		"YTLink": "https://www.youtube.com/watch?v=FU8s77LIYm4"
+	},
+	{
+		"date": "2025-01-28T12:00:00.000Z",
+		"track": 1,
+		"song": "桜色√END",
+		"singer": "苺咲べりぃ",
+		"YTLink": "https://www.youtube.com/watch?v=u87-yNvJfy4"
+	},
+	{
+		"date": "2025-01-28T12:00:00.000Z",
+		"track": 2,
+		"song": "我ら完全無敵のアイドル!!",
+		"singer": "B小町 ルビー(齊藤なぎさ)、有馬かな(原菜乃華)、MEMちょ(あの)",
+		"YTLink": "https://www.youtube.com/watch?v=u87-yNvJfy4"
+	},
+	{
+		"date": "2025-01-28T12:00:00.000Z",
+		"track": 3,
+		"song": "ひたむきシンデレラ!",
+		"singer": "CUTIE STREET",
+		"YTLink": "https://www.youtube.com/watch?v=u87-yNvJfy4"
+	},
+	{
+		"date": "2025-01-28T12:00:00.000Z",
+		"track": 4,
+		"song": "キス・ミー・パティシエ",
+		"singer": "CANDY TUNE",
+		"YTLink": "https://www.youtube.com/watch?v=u87-yNvJfy4"
+	},
+	{
+		"date": "2025-01-28T12:00:00.000Z",
+		"track": 5,
+		"song": "ヒトリゴト",
+		"singer": "ClariS",
+		"YTLink": "https://www.youtube.com/watch?v=u87-yNvJfy4"
+	},
+	{
+		"date": "2025-01-28T12:00:00.000Z",
+		"track": 6,
+		"song": "adrenaline!!!",
+		"singer": "TrySail",
+		"YTLink": "https://www.youtube.com/watch?v=u87-yNvJfy4"
+	},
+	{
+		"date": "2025-01-28T12:00:00.000Z",
+		"track": 7,
+		"song": "Super Driver",
+		"singer": "平野綾",
+		"YTLink": "https://www.youtube.com/watch?v=u87-yNvJfy4"
+	},
+	{
+		"date": "2025-01-28T12:00:00.000Z",
+		"track": 8,
+		"song": "青空のラプソディ",
+		"singer": "fhána",
+		"YTLink": "https://www.youtube.com/watch?v=u87-yNvJfy4"
+	},
+	{
+		"date": "2025-01-28T12:00:00.000Z",
+		"track": 9,
+		"song": "ギミー! レボリューション",
+		"singer": "内田真礼",
+		"YTLink": "https://www.youtube.com/watch?v=u87-yNvJfy4"
+	},
+	{
+		"date": "2025-01-28T12:00:00.000Z",
+		"track": 10,
+		"song": "吉原ラメント",
+		"singer": "亜沙",
+		"YTLink": "https://www.youtube.com/watch?v=u87-yNvJfy4"
+	},
+	{
+		"date": "2025-01-28T12:00:00.000Z",
+		"track": 11,
+		"song": "渡月橋 〜君 想ふ〜",
+		"singer": "倉木麻衣",
+		"YTLink": "https://www.youtube.com/watch?v=u87-yNvJfy4"
+	},
+	{
+		"date": "2025-01-28T12:00:00.000Z",
+		"track": 12,
+		"song": "POP IN 2",
+		"singer": "B小町 ルビー(伊駒ゆりえ)、有馬かな(潘めぐみ)、MEMちょ(大久保瑠美)",
+		"YTLink": "https://www.youtube.com/watch?v=u87-yNvJfy4"
+	},
+	{
+		"date": "2025-01-28T12:00:00.000Z",
+		"track": 13,
+		"song": "そばかす",
+		"singer": "JUDY AND MARY",
+		"YTLink": "https://www.youtube.com/watch?v=u87-yNvJfy4"
+	},
+	{
+		"date": "2025-01-28T12:00:00.000Z",
+		"track": 14,
+		"song": "別の人の彼女になったよ",
+		"singer": "Wacci",
+		"YTLink": "https://www.youtube.com/watch?v=u87-yNvJfy4"
+	},
+	{
+		"date": "2025-01-28T12:00:00.000Z",
+		"track": 15,
+		"song": "たばこ",
+		"singer": "コレサワ",
+		"YTLink": "https://www.youtube.com/watch?v=u87-yNvJfy4"
+	},
+	{
+		"date": "2025-01-28T12:00:00.000Z",
+		"track": 16,
+		"song": "ハム太郎とっとこうた",
+		"singer": "ハムちゃんず",
+		"YTLink": "https://www.youtube.com/watch?v=u87-yNvJfy4"
+	},
+	{
+		"date": "2025-01-28T12:00:00.000Z",
+		"track": 17,
+		"song": "めざせポケモンマスター",
+		"singer": "松本梨香",
+		"YTLink": "https://www.youtube.com/watch?v=u87-yNvJfy4"
+	},
+	{
+		"date": "2025-01-28T12:00:00.000Z",
+		"track": 18,
+		"song": "キラキラ",
+		"singer": "aiko",
+		"YTLink": "https://www.youtube.com/watch?v=u87-yNvJfy4"
+	},
+	{
+		"date": "2025-01-28T12:00:00.000Z",
+		"track": 19,
+		"song": "雨とカプチーノ",
+		"singer": "ヨルシカ",
+		"YTLink": "https://www.youtube.com/watch?v=u87-yNvJfy4"
+	},
+	{
+		"date": "2025-01-28T12:00:00.000Z",
+		"track": 20,
+		"song": "アムリタ",
+		"singer": "牧野由依",
+		"YTLink": "https://www.youtube.com/watch?v=u87-yNvJfy4"
+	},
+	{
+		"date": "2025-01-27T12:00:00.000Z",
+		"track": 1,
+		"song": "Berry nice!!",
+		"singer": "苺咲べりぃ",
+		"YTLink": "https://www.youtube.com/watch?v=NyIP6_MwtyE"
+	},
+	{
+		"date": "2025-01-27T12:00:00.000Z",
+		"track": 2,
+		"song": "我ら完全無敵のアイドル!!",
+		"singer": "B小町 ルビー(齊藤なぎさ)、有馬かな(原菜乃華)、MEMちょ(あの)",
+		"YTLink": "https://www.youtube.com/watch?v=NyIP6_MwtyE"
+	},
+	{
+		"date": "2025-01-27T12:00:00.000Z",
+		"track": 3,
+		"song": "ひたむきシンデレラ!",
+		"singer": "CUTIE STREET",
+		"YTLink": "https://www.youtube.com/watch?v=NyIP6_MwtyE"
+	},
+	{
+		"date": "2025-01-27T12:00:00.000Z",
+		"track": 4,
+		"song": "冬のうた",
+		"singer": "Kiroro",
+		"YTLink": "https://www.youtube.com/watch?v=NyIP6_MwtyE"
+	},
+	{
+		"date": "2025-01-27T12:00:00.000Z",
+		"track": 5,
+		"song": "長い間",
+		"singer": "Kiroro",
+		"YTLink": "https://www.youtube.com/watch?v=NyIP6_MwtyE"
+	},
+	{
+		"date": "2025-01-27T12:00:00.000Z",
+		"track": 6,
+		"song": "キス・ミー・パティシエ",
+		"singer": "CANDY TUNE",
+		"note": "初回",
+		"YTLink": "https://www.youtube.com/watch?v=NyIP6_MwtyE"
+	},
+	{
+		"date": "2025-01-27T12:00:00.000Z",
+		"track": 7,
+		"song": "かわいいだけじゃだめですか?",
+		"singer": "CUTIE STREET",
+		"YTLink": "https://www.youtube.com/watch?v=NyIP6_MwtyE"
+	},
+	{
+		"date": "2025-01-27T12:00:00.000Z",
+		"track": 8,
+		"song": "ハルノヒ",
+		"singer": "あいみょん",
+		"YTLink": "https://www.youtube.com/watch?v=NyIP6_MwtyE"
+	},
+	{
+		"date": "2025-01-27T12:00:00.000Z",
+		"track": 9,
+		"song": "あなたがいることで",
+		"singer": "Uru",
+		"YTLink": "https://www.youtube.com/watch?v=NyIP6_MwtyE"
+	},
+	{
+		"date": "2025-01-27T12:00:00.000Z",
+		"track": 10,
+		"song": "YUME日和",
+		"singer": "島谷ひとみ",
+		"YTLink": "https://www.youtube.com/watch?v=NyIP6_MwtyE"
+	},
+	{
+		"date": "2025-01-27T12:00:00.000Z",
+		"track": 11,
+		"song": "亜麻色の髪の乙女",
+		"singer": "島谷ひとみ",
+		"YTLink": "https://www.youtube.com/watch?v=NyIP6_MwtyE"
+	},
+	{
+		"date": "2025-01-27T12:00:00.000Z",
+		"track": 12,
+		"song": "だから僕は音楽を辞めた",
+		"singer": "ヨルシカ",
+		"YTLink": "https://www.youtube.com/watch?v=NyIP6_MwtyE"
+	},
+	{
+		"date": "2025-01-27T12:00:00.000Z",
+		"track": 13,
+		"song": "世界は恋に落ちている",
+		"singer": "CHiCO",
+		"YTLink": "https://www.youtube.com/watch?v=NyIP6_MwtyE"
+	},
+	{
+		"date": "2025-01-27T12:00:00.000Z",
+		"track": 14,
+		"song": "吉原ラメント",
+		"singer": "亜沙",
+		"YTLink": "https://www.youtube.com/watch?v=NyIP6_MwtyE"
+	},
+	{
+		"date": "2025-01-27T12:00:00.000Z",
+		"track": 15,
+		"song": "ラストシーン",
+		"singer": "いきものがかり",
+		"YTLink": "https://www.youtube.com/watch?v=NyIP6_MwtyE"
+	},
+	{
+		"date": "2025-01-27T12:00:00.000Z",
+		"track": 16,
+		"song": "美しい鰭",
+		"singer": "スピッツ",
+		"YTLink": "https://www.youtube.com/watch?v=NyIP6_MwtyE"
+	},
+	{
+		"date": "2025-01-27T12:00:00.000Z",
+		"track": 17,
+		"song": "ドライフラワー",
+		"singer": "優里",
+		"YTLink": "https://www.youtube.com/watch?v=NyIP6_MwtyE"
+	},
+	{
+		"date": "2025-01-27T12:00:00.000Z",
+		"track": 18,
+		"song": "ルミナス",
+		"singer": "ClariS",
+		"YTLink": "https://www.youtube.com/watch?v=NyIP6_MwtyE"
+	},
+	{
+		"date": "2025-01-27T12:00:00.000Z",
+		"track": 19,
+		"song": "カラフル",
+		"singer": "ClariS",
+		"YTLink": "https://www.youtube.com/watch?v=NyIP6_MwtyE"
+	},
+	{
+		"date": "2025-01-27T12:00:00.000Z",
+		"track": 20,
+		"song": "夜空",
+		"singer": "鈴木みのり",
+		"YTLink": "https://www.youtube.com/watch?v=NyIP6_MwtyE"
+	},
+	{
 		"date": "2025-01-23T12:00:00.000Z",
 		"track": 1,
 		"song": "Shoot!",
