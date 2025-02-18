@@ -1,5 +1,565 @@
 [
 	{
+		"date": "2025-02-17T12:00:00.000Z",
+		"track": 1,
+		"song": "Shoot!",
+		"singer": "苺咲べりぃ",
+		"YTLink": "https://www.youtube.com/watch?v=lTTIuMZQ-V4"
+	},
+	{
+		"date": "2025-02-17T12:00:00.000Z",
+		"track": 2,
+		"song": "我ら完全無敵のアイドル!!",
+		"singer": "B小町 ルビー(齊藤なぎさ)、有馬かな(原菜乃華)、MEMちょ(あの)",
+		"YTLink": "https://www.youtube.com/watch?v=lTTIuMZQ-V4"
+	},
+	{
+		"date": "2025-02-17T12:00:00.000Z",
+		"track": 3,
+		"song": "POP IN 2",
+		"singer": "B小町 ルビー(伊駒ゆりえ)、有馬かな(潘めぐみ)、MEMちょ(大久保瑠美)",
+		"YTLink": "https://www.youtube.com/watch?v=lTTIuMZQ-V4"
+	},
+	{
+		"date": "2025-02-17T12:00:00.000Z",
+		"track": 4,
+		"song": "青春コンプレックス",
+		"singer": "結束バンド",
+		"YTLink": "https://www.youtube.com/watch?v=lTTIuMZQ-V4"
+	},
+	{
+		"date": "2025-02-17T12:00:00.000Z",
+		"track": 5,
+		"song": "ギターと孤独と蒼い惑星",
+		"singer": "結束バンド",
+		"YTLink": "https://www.youtube.com/watch?v=lTTIuMZQ-V4"
+	},
+	{
+		"date": "2025-02-17T12:00:00.000Z",
+		"track": 6,
+		"song": "ひたむきシンデレラ!",
+		"singer": "CUTIE STREET",
+		"YTLink": "https://www.youtube.com/watch?v=lTTIuMZQ-V4"
+	},
+	{
+		"date": "2025-02-17T12:00:00.000Z",
+		"track": 7,
+		"song": "キス・ミー・パティシエ",
+		"singer": "CANDY TUNE",
+		"YTLink": "https://www.youtube.com/watch?v=lTTIuMZQ-V4"
+	},
+	{
+		"date": "2025-02-17T12:00:00.000Z",
+		"track": 8,
+		"song": "ルンがピカッと光ったら",
+		"singer": "ワルキューレ",
+		"YTLink": "https://www.youtube.com/watch?v=lTTIuMZQ-V4"
+	},
+	{
+		"date": "2025-02-17T12:00:00.000Z",
+		"track": 9,
+		"song": "勇者",
+		"singer": "YOASOBI",
+		"YTLink": "https://www.youtube.com/watch?v=lTTIuMZQ-V4"
+	},
+	{
+		"date": "2025-02-17T12:00:00.000Z",
+		"track": 10,
+		"song": "白い雪のプリンセスは",
+		"singer": "のぼる↑P",
+		"YTLink": "https://www.youtube.com/watch?v=lTTIuMZQ-V4"
+	},
+	{
+		"date": "2025-02-17T12:00:00.000Z",
+		"track": 11,
+		"song": "雨とカプチーノ",
+		"singer": "ヨルシカ",
+		"YTLink": "https://www.youtube.com/watch?v=lTTIuMZQ-V4"
+	},
+	{
+		"date": "2025-02-17T12:00:00.000Z",
+		"track": 12,
+		"song": "同担☆拒否",
+		"singer": "HoneyWorks",
+		"YTLink": "https://www.youtube.com/watch?v=lTTIuMZQ-V4"
+	},
+	{
+		"date": "2025-02-17T12:00:00.000Z",
+		"track": 13,
+		"song": "言って。",
+		"singer": "ヨルシカ",
+		"YTLink": "https://www.youtube.com/watch?v=lTTIuMZQ-V4"
+	},
+	{
+		"date": "2025-02-17T12:00:00.000Z",
+		"track": 14,
+		"song": "SHOOT!",
+		"singer": "RO-KYU-BU!",
+		"YTLink": "https://www.youtube.com/watch?v=lTTIuMZQ-V4"
+	},
+	{
+		"date": "2025-02-17T12:00:00.000Z",
+		"track": 15,
+		"song": "かわいいだけじゃだめですか?",
+		"singer": "CUTIE STREET",
+		"YTLink": "https://www.youtube.com/watch?v=lTTIuMZQ-V4"
+	},
+	{
+		"date": "2025-02-17T12:00:00.000Z",
+		"track": 16,
+		"song": "あなたがいることで",
+		"singer": "Uru",
+		"YTLink": "https://www.youtube.com/watch?v=lTTIuMZQ-V4"
+	},
+	{
+		"date": "2025-02-17T12:00:00.000Z",
+		"track": 17,
+		"song": "それを愛と呼ぶなら",
+		"singer": "Uru",
+		"YTLink": "https://www.youtube.com/watch?v=lTTIuMZQ-V4"
+	},
+	{
+		"date": "2025-02-17T12:00:00.000Z",
+		"track": 18,
+		"song": "ブルーバード",
+		"singer": "いきものがかり",
+		"YTLink": "https://www.youtube.com/watch?v=lTTIuMZQ-V4"
+	},
+	{
+		"date": "2025-02-17T12:00:00.000Z",
+		"track": 19,
+		"song": "サインはB",
+		"singer": "B小町 アイ (高橋李依)",
+		"YTLink": "https://www.youtube.com/watch?v=lTTIuMZQ-V4"
+	},
+	{
+		"date": "2025-02-17T12:00:00.000Z",
+		"track": 20,
+		"song": "夜空",
+		"singer": "鈴木みのり",
+		"YTLink": "https://www.youtube.com/watch?v=lTTIuMZQ-V4"
+	},
+	{
+		"date": "2025-02-15T13:15:00.000Z",
+		"track": 1,
+		"song": "Berry nice!!",
+		"singer": "苺咲べりぃ",
+		"YTLink": "https://www.youtube.com/watch?v=8h5LnkApAL0"
+	},
+	{
+		"date": "2025-02-15T13:15:00.000Z",
+		"track": 2,
+		"song": "我ら完全無敵のアイドル!!",
+		"singer": "B小町 ルビー(齊藤なぎさ)、有馬かな(原菜乃華)、MEMちょ(あの)",
+		"YTLink": "https://www.youtube.com/watch?v=8h5LnkApAL0"
+	},
+	{
+		"date": "2025-02-15T13:15:00.000Z",
+		"track": 3,
+		"song": "キス・ミー・パティシエ",
+		"singer": "CANDY TUNE",
+		"YTLink": "https://www.youtube.com/watch?v=8h5LnkApAL0"
+	},
+	{
+		"date": "2025-02-15T13:15:00.000Z",
+		"track": 4,
+		"song": "ひたむきシンデレラ!",
+		"singer": "CUTIE STREET",
+		"YTLink": "https://www.youtube.com/watch?v=8h5LnkApAL0"
+	},
+	{
+		"date": "2025-02-15T13:15:00.000Z",
+		"track": 5,
+		"song": "かわいいだけじゃだめですか?",
+		"singer": "CUTIE STREET",
+		"YTLink": "https://www.youtube.com/watch?v=8h5LnkApAL0"
+	},
+	{
+		"date": "2025-02-15T13:15:00.000Z",
+		"track": 6,
+		"song": "フルーツバスケット",
+		"singer": "FRUITS ZIPPER",
+		"YTLink": "https://www.youtube.com/watch?v=8h5LnkApAL0"
+	},
+	{
+		"date": "2025-02-15T13:15:00.000Z",
+		"track": 7,
+		"song": "絶対アイドル辞めないで",
+		"singer": "=LOVE",
+		"YTLink": "https://www.youtube.com/watch?v=8h5LnkApAL0"
+	},
+	{
+		"date": "2025-02-15T13:15:00.000Z",
+		"track": 8,
+		"song": "Mela!",
+		"singer": "緑黄色社会",
+		"YTLink": "https://www.youtube.com/watch?v=8h5LnkApAL0"
+	},
+	{
+		"date": "2025-02-15T13:15:00.000Z",
+		"track": 9,
+		"song": "雪の華",
+		"singer": "中島美嘉",
+		"YTLink": "https://www.youtube.com/watch?v=8h5LnkApAL0"
+	},
+	{
+		"date": "2025-02-15T13:15:00.000Z",
+		"track": 10,
+		"song": "旦那様とのラブラブ・ラブソング",
+		"singer": "フェンリース(釘宮理恵)",
+		"YTLink": "https://www.youtube.com/watch?v=8h5LnkApAL0"
+	},
+	{
+		"date": "2025-02-15T13:15:00.000Z",
+		"track": 11,
+		"song": "恋愛サーキュレーション",
+		"singer": "千石撫子(花澤香菜)",
+		"YTLink": "https://www.youtube.com/watch?v=8h5LnkApAL0"
+	},
+	{
+		"date": "2025-02-15T13:15:00.000Z",
+		"track": 12,
+		"song": "プラネタリウム",
+		"singer": "大塚愛",
+		"YTLink": "https://www.youtube.com/watch?v=8h5LnkApAL0"
+	},
+	{
+		"date": "2025-02-15T13:15:00.000Z",
+		"track": 13,
+		"song": "初めての恋が終わる時",
+		"singer": "Ryo",
+		"YTLink": "https://www.youtube.com/watch?v=8h5LnkApAL0"
+	},
+	{
+		"date": "2025-02-15T13:15:00.000Z",
+		"track": 14,
+		"song": "あんなに一緒だったのに",
+		"singer": "See-Saw",
+		"YTLink": "https://www.youtube.com/watch?v=8h5LnkApAL0"
+	},
+	{
+		"date": "2025-02-15T13:15:00.000Z",
+		"track": 15,
+		"song": "YUME日和",
+		"singer": "島谷ひとみ",
+		"YTLink": "https://www.youtube.com/watch?v=8h5LnkApAL0"
+	},
+	{
+		"date": "2025-02-15T13:15:00.000Z",
+		"track": 16,
+		"song": "可愛くなりたい",
+		"singer": "HoneyWorks feat.鎖那",
+		"YTLink": "https://www.youtube.com/watch?v=8h5LnkApAL0"
+	},
+	{
+		"date": "2025-02-15T13:15:00.000Z",
+		"track": 17,
+		"song": "adrenaline!!!",
+		"singer": "TrySail",
+		"YTLink": "https://www.youtube.com/watch?v=8h5LnkApAL0"
+	},
+	{
+		"date": "2025-02-15T13:15:00.000Z",
+		"track": 18,
+		"song": "Everything",
+		"singer": "MISIA",
+		"YTLink": "https://www.youtube.com/watch?v=8h5LnkApAL0"
+	},
+	{
+		"date": "2025-02-15T13:15:00.000Z",
+		"track": 19,
+		"song": "エフェメラをあつめて",
+		"singer": "鈴木みのり",
+		"YTLink": "https://www.youtube.com/watch?v=8h5LnkApAL0"
+	},
+	{
+		"date": "2025-02-15T13:15:00.000Z",
+		"track": 20,
+		"song": "最上級にかわいいの！",
+		"singer": "超ときめき♡宣伝部",
+		"YTLink": "https://www.youtube.com/watch?v=8h5LnkApAL0"
+	},
+	{
+		"date": "2025-02-13T12:00:00.000Z",
+		"track": 1,
+		"song": "Happy Lucky Strawberry",
+		"singer": "苺咲べりぃ",
+		"YTLink": "https://www.youtube.com/watch?v=c_-xsc6sQGg"
+	},
+	{
+		"date": "2025-02-13T12:00:00.000Z",
+		"track": 2,
+		"song": "我ら完全無敵のアイドル!!",
+		"singer": "B小町 ルビー(齊藤なぎさ)、有馬かな(原菜乃華)、MEMちょ(あの)",
+		"YTLink": "https://www.youtube.com/watch?v=c_-xsc6sQGg"
+	},
+	{
+		"date": "2025-02-13T12:00:00.000Z",
+		"track": 3,
+		"song": "POP IN 2",
+		"singer": "B小町 ルビー(伊駒ゆりえ)、有馬かな(潘めぐみ)、MEMちょ(大久保瑠美)",
+		"YTLink": "https://www.youtube.com/watch?v=c_-xsc6sQGg"
+	},
+	{
+		"date": "2025-02-13T12:00:00.000Z",
+		"track": 4,
+		"song": "かわいいだけじゃだめですか?",
+		"singer": "CUTIE STREET",
+		"YTLink": "https://www.youtube.com/watch?v=c_-xsc6sQGg"
+	},
+	{
+		"date": "2025-02-13T12:00:00.000Z",
+		"track": 5,
+		"song": "ひたむきシンデレラ!",
+		"singer": "CUTIE STREET",
+		"YTLink": "https://www.youtube.com/watch?v=c_-xsc6sQGg"
+	},
+	{
+		"date": "2025-02-13T12:00:00.000Z",
+		"track": 6,
+		"song": "キス・ミー・パティシエ",
+		"singer": "CANDY TUNE",
+		"YTLink": "https://www.youtube.com/watch?v=c_-xsc6sQGg"
+	},
+	{
+		"date": "2025-02-13T12:00:00.000Z",
+		"track": 7,
+		"song": "可愛くなりたい",
+		"singer": "HoneyWorks feat.鎖那",
+		"YTLink": "https://www.youtube.com/watch?v=c_-xsc6sQGg"
+	},
+	{
+		"date": "2025-02-13T12:00:00.000Z",
+		"track": 8,
+		"song": "Baby Sweet Berry Love",
+		"singer": "小倉唯",
+		"YTLink": "https://www.youtube.com/watch?v=c_-xsc6sQGg"
+	},
+	{
+		"date": "2025-02-13T12:00:00.000Z",
+		"track": 9,
+		"song": "Honey♥Come!!",
+		"singer": "小倉唯",
+		"YTLink": "https://www.youtube.com/watch?v=c_-xsc6sQGg"
+	},
+	{
+		"date": "2025-02-13T12:00:00.000Z",
+		"track": 10,
+		"song": "恋愛サーキュレーション",
+		"singer": "千石撫子(花澤香菜)",
+		"YTLink": "https://www.youtube.com/watch?v=c_-xsc6sQGg"
+	},
+	{
+		"date": "2025-02-13T12:00:00.000Z",
+		"track": 11,
+		"song": "Sweets Parade",
+		"singer": "花澤香菜",
+		"YTLink": "https://www.youtube.com/watch?v=c_-xsc6sQGg"
+	},
+	{
+		"date": "2025-02-13T12:00:00.000Z",
+		"track": 12,
+		"song": "とまどい→レシピ",
+		"singer": "みかくにんぐッ!",
+		"YTLink": "https://www.youtube.com/watch?v=c_-xsc6sQGg"
+	},
+	{
+		"date": "2025-02-13T12:00:00.000Z",
+		"track": 13,
+		"song": "ぼなぺてぃーと♡S",
+		"singer": "ブレンド・A",
+		"YTLink": "https://www.youtube.com/watch?v=c_-xsc6sQGg"
+	},
+	{
+		"date": "2025-02-13T12:00:00.000Z",
+		"track": 14,
+		"song": "PUNCH☆MIND☆HAPPINESS",
+		"singer": "Happy Clover",
+		"YTLink": "https://www.youtube.com/watch?v=c_-xsc6sQGg"
+	},
+	{
+		"date": "2025-02-13T12:00:00.000Z",
+		"track": 15,
+		"song": "おじゃま虫",
+		"singer": "DECO*27",
+		"YTLink": "https://www.youtube.com/watch?v=c_-xsc6sQGg"
+	},
+	{
+		"date": "2025-02-13T12:00:00.000Z",
+		"track": 16,
+		"song": "オレンジ",
+		"singer": "流田Project(釘宮理恵,堀江由衣,喜多村英梨)",
+		"YTLink": "https://www.youtube.com/watch?v=c_-xsc6sQGg"
+	},
+	{
+		"date": "2025-02-13T12:00:00.000Z",
+		"track": 17,
+		"song": "ウラオモテ・フォーチュン",
+		"singer": "小澤亜李",
+		"YTLink": "https://www.youtube.com/watch?v=c_-xsc6sQGg"
+	},
+	{
+		"date": "2025-02-13T12:00:00.000Z",
+		"track": 18,
+		"song": "ハピチョコ",
+		"singer": "FRUITS ZIPPER",
+		"YTLink": "https://www.youtube.com/watch?v=c_-xsc6sQGg"
+	},
+	{
+		"date": "2025-02-13T12:00:00.000Z",
+		"track": 19,
+		"song": "わたしの一番かわいいところ",
+		"singer": "FRUITS ZIPPER",
+		"YTLink": "https://www.youtube.com/watch?v=c_-xsc6sQGg"
+	},
+	{
+		"date": "2025-02-13T12:00:00.000Z",
+		"track": 20,
+		"song": "バレンタイン・キッス",
+		"singer": "国生さゆり",
+		"YTLink": "https://www.youtube.com/watch?v=c_-xsc6sQGg"
+	},
+	{
+		"date": "2025-02-10T12:00:00.000Z",
+		"track": 1,
+		"song": "星へ伸ばす手",
+		"singer": "苺咲べりぃ",
+		"YTLink": "https://www.youtube.com/watch?v=JN7eyNcMSEE"
+	},
+	{
+		"date": "2025-02-10T12:00:00.000Z",
+		"track": 2,
+		"song": "我ら完全無敵のアイドル!!",
+		"singer": "B小町 ルビー(齊藤なぎさ)、有馬かな(原菜乃華)、MEMちょ(あの)",
+		"YTLink": "https://www.youtube.com/watch?v=JN7eyNcMSEE"
+	},
+	{
+		"date": "2025-02-10T12:00:00.000Z",
+		"track": 3,
+		"song": "かわいいだけじゃだめですか?",
+		"singer": "CUTIE STREET",
+		"YTLink": "https://www.youtube.com/watch?v=JN7eyNcMSEE"
+	},
+	{
+		"date": "2025-02-10T12:00:00.000Z",
+		"track": 4,
+		"song": "元彼女のみなさまへ",
+		"singer": "コレサワ",
+		"YTLink": "https://www.youtube.com/watch?v=JN7eyNcMSEE"
+	},
+	{
+		"date": "2025-02-10T12:00:00.000Z",
+		"track": 5,
+		"song": "あたしを彼女にしたいなら",
+		"singer": "コレサワ",
+		"YTLink": "https://www.youtube.com/watch?v=JN7eyNcMSEE"
+	},
+	{
+		"date": "2025-02-10T12:00:00.000Z",
+		"track": 6,
+		"song": "そばかす",
+		"singer": "JUDY AND MARY",
+		"YTLink": "https://www.youtube.com/watch?v=JN7eyNcMSEE"
+	},
+	{
+		"date": "2025-02-10T12:00:00.000Z",
+		"track": 7,
+		"song": "放課後オーバーフロウ",
+		"singer": "ランカ・リー(中島愛)",
+		"YTLink": "https://www.youtube.com/watch?v=JN7eyNcMSEE"
+	},
+	{
+		"date": "2025-02-10T12:00:00.000Z",
+		"track": 8,
+		"song": "愛・おぼえていますか",
+		"singer": "飯島真理",
+		"YTLink": "https://www.youtube.com/watch?v=JN7eyNcMSEE"
+	},
+	{
+		"date": "2025-02-10T12:00:00.000Z",
+		"track": 9,
+		"song": "Mela!",
+		"singer": "緑黄色社会",
+		"YTLink": "https://www.youtube.com/watch?v=JN7eyNcMSEE"
+	},
+	{
+		"date": "2025-02-10T12:00:00.000Z",
+		"track": 10,
+		"song": "Sweets Parade",
+		"singer": "花澤香菜",
+		"YTLink": "https://www.youtube.com/watch?v=JN7eyNcMSEE"
+	},
+	{
+		"date": "2025-02-10T12:00:00.000Z",
+		"track": 11,
+		"song": "白い雪のプリンセスは",
+		"singer": "のぼる↑P",
+		"YTLink": "https://www.youtube.com/watch?v=JN7eyNcMSEE"
+	},
+	{
+		"date": "2025-02-10T12:00:00.000Z",
+		"track": 12,
+		"song": "前前前世",
+		"singer": "RADWIMPS",
+		"YTLink": "https://www.youtube.com/watch?v=JN7eyNcMSEE"
+	},
+	{
+		"date": "2025-02-10T12:00:00.000Z",
+		"track": 13,
+		"song": "ミュージカル",
+		"singer": "鈴木みのり",
+		"YTLink": "https://www.youtube.com/watch?v=JN7eyNcMSEE"
+	},
+	{
+		"date": "2025-02-10T12:00:00.000Z",
+		"track": 14,
+		"song": "ベテルギウス",
+		"singer": "優里",
+		"YTLink": "https://www.youtube.com/watch?v=JN7eyNcMSEE"
+	},
+	{
+		"date": "2025-02-10T12:00:00.000Z",
+		"track": 15,
+		"song": "水平線",
+		"singer": "back number",
+		"YTLink": "https://www.youtube.com/watch?v=JN7eyNcMSEE"
+	},
+	{
+		"date": "2025-02-10T12:00:00.000Z",
+		"track": 16,
+		"song": "プラネタリウム",
+		"singer": "大塚愛",
+		"YTLink": "https://www.youtube.com/watch?v=JN7eyNcMSEE"
+	},
+	{
+		"date": "2025-02-10T12:00:00.000Z",
+		"track": 17,
+		"song": "ヒロイン",
+		"singer": "back number",
+		"YTLink": "https://www.youtube.com/watch?v=JN7eyNcMSEE"
+	},
+	{
+		"date": "2025-02-10T12:00:00.000Z",
+		"track": 18,
+		"song": "バレンタイン・キッス",
+		"singer": "国生さゆり",
+		"YTLink": "https://www.youtube.com/watch?v=JN7eyNcMSEE"
+	},
+	{
+		"date": "2025-02-10T12:00:00.000Z",
+		"track": 19,
+		"song": "ハピチョコ",
+		"singer": "FRUITS ZIPPER",
+		"YTLink": "https://www.youtube.com/watch?v=JN7eyNcMSEE"
+	},
+	{
+		"date": "2025-02-10T12:00:00.000Z",
+		"track": 20,
+		"song": "アムリタ",
+		"singer": "牧野由依",
+		"YTLink": "https://www.youtube.com/watch?v=JN7eyNcMSEE"
+	},
+	{
 		"date": "2025-02-06T12:00:00.000Z",
 		"track": 1,
 		"song": "星へ伸ばす手",
