@@ -1,5 +1,358 @@
 [
 	{
+		"date": "2025-03-01T14:00:00.000Z",
+		"track": 1,
+		"song": "キミのせいだよ",
+		"singer": "苺咲べりぃ",
+		"YTLink": "https://www.youtube.com/watch?v=Pix8-UDuH0o"
+	},
+	{
+		"date": "2025-03-01T14:00:00.000Z",
+		"track": 2,
+		"song": "ハッピーエンド",
+		"singer": "back number",
+		"YTLink": "https://www.youtube.com/watch?v=Pix8-UDuH0o"
+	},
+	{
+		"date": "2025-03-01T14:00:00.000Z",
+		"track": 3,
+		"song": "ヒロイン",
+		"singer": "back number",
+		"YTLink": "https://www.youtube.com/watch?v=Pix8-UDuH0o"
+	},
+	{
+		"date": "2025-03-01T14:00:00.000Z",
+		"track": 4,
+		"song": "rain stops, good-bye",
+		"singer": "におP",
+		"YTLink": "https://www.youtube.com/watch?v=Pix8-UDuH0o"
+	},
+	{
+		"date": "2025-03-01T14:00:00.000Z",
+		"track": 5,
+		"song": "letter song",
+		"singer": "doriko",
+		"YTLink": "https://www.youtube.com/watch?v=Pix8-UDuH0o"
+	},
+	{
+		"date": "2025-03-01T14:00:00.000Z",
+		"track": 6,
+		"song": "シルシ",
+		"singer": "LiSA",
+		"YTLink": "https://www.youtube.com/watch?v=Pix8-UDuH0o"
+	},
+	{
+		"date": "2025-03-01T14:00:00.000Z",
+		"track": 7,
+		"song": "ベテルギウス",
+		"singer": "優里",
+		"YTLink": "https://www.youtube.com/watch?v=Pix8-UDuH0o"
+	},
+	{
+		"date": "2025-03-01T14:00:00.000Z",
+		"track": 8,
+		"song": "この夜を止めてよ",
+		"singer": "JUJU",
+		"YTLink": "https://www.youtube.com/watch?v=Pix8-UDuH0o"
+	},
+	{
+		"date": "2025-03-01T14:00:00.000Z",
+		"track": 9,
+		"song": "あなたがいることで",
+		"singer": "Uru",
+		"YTLink": "https://www.youtube.com/watch?v=Pix8-UDuH0o"
+	},
+	{
+		"date": "2025-03-01T14:00:00.000Z",
+		"track": 10,
+		"song": "それを愛と呼ぶなら",
+		"singer": "Uru",
+		"YTLink": "https://www.youtube.com/watch?v=Pix8-UDuH0o"
+	},
+	{
+		"date": "2025-03-01T14:00:00.000Z",
+		"track": 11,
+		"song": "GIRAFFE BLUES",
+		"singer": "ワルキューレ",
+		"YTLink": "https://www.youtube.com/watch?v=Pix8-UDuH0o"
+	},
+	{
+		"date": "2025-03-01T14:00:00.000Z",
+		"track": 12,
+		"song": "愛してる",
+		"singer": "ワルキューレ",
+		"YTLink": "https://www.youtube.com/watch?v=Pix8-UDuH0o"
+	},
+	{
+		"date": "2025-03-01T14:00:00.000Z",
+		"track": 13,
+		"song": "secret base～君がくれたもの～",
+		"singer": "ZONE",
+		"YTLink": "https://www.youtube.com/watch?v=Pix8-UDuH0o"
+	},
+	{
+		"date": "2025-03-01T14:00:00.000Z",
+		"track": 14,
+		"song": "Best Friend",
+		"singer": "Kiroro",
+		"YTLink": "https://www.youtube.com/watch?v=Pix8-UDuH0o"
+	},
+	{
+		"date": "2025-03-01T14:00:00.000Z",
+		"track": 15,
+		"song": "プラネタリウム",
+		"singer": "大塚愛",
+		"YTLink": "https://www.youtube.com/watch?v=Pix8-UDuH0o"
+	},
+	{
+		"date": "2025-03-01T14:00:00.000Z",
+		"track": 16,
+		"song": "花に亡霊",
+		"singer": "ヨルシカ",
+		"YTLink": "https://www.youtube.com/watch?v=Pix8-UDuH0o"
+	},
+	{
+		"date": "2025-03-01T14:00:00.000Z",
+		"track": 17,
+		"song": "心做し",
+		"singer": "蝶々P",
+		"YTLink": "https://www.youtube.com/watch?v=Pix8-UDuH0o"
+	},
+	{
+		"date": "2025-03-01T14:00:00.000Z",
+		"track": 18,
+		"song": "ハロ/ハワユ",
+		"singer": "ほえほえP",
+		"YTLink": "https://www.youtube.com/watch?v=Pix8-UDuH0o"
+	},
+	{
+		"date": "2025-03-01T14:00:00.000Z",
+		"track": 19,
+		"song": "ピエロ",
+		"singer": "KEI",
+		"YTLink": "https://www.youtube.com/watch?v=Pix8-UDuH0o"
+	},
+	{
+		"date": "2025-03-01T14:00:00.000Z",
+		"track": 20,
+		"song": "楔",
+		"singer": "奥華子",
+		"YTLink": "https://www.youtube.com/watch?v=Pix8-UDuH0o"
+	},
+	{
+		"date": "2025-02-25T12:00:00.000Z",
+		"track": 1,
+		"song": "かくれんぼ",
+		"singer": "苺咲べりぃ",
+		"note": "オリソン/初回",
+		"YTLink": "https://www.youtube.com/watch?v=36FjpyJZEMc"
+	},
+	{
+		"date": "2025-02-25T12:00:00.000Z",
+		"track": 2,
+		"song": "かがみ",
+		"singer": "FRUITS ZIPPER",
+		"note": "初回",
+		"YTLink": "https://www.youtube.com/watch?v=36FjpyJZEMc"
+	},
+	{
+		"date": "2025-02-25T12:00:00.000Z",
+		"track": 3,
+		"song": "完璧主義で☆",
+		"singer": "FRUITS ZIPPER",
+		"note": "初回",
+		"YTLink": "https://www.youtube.com/watch?v=36FjpyJZEMc"
+	},
+	{
+		"date": "2025-02-25T12:00:00.000Z",
+		"track": 4,
+		"song": "God knows…",
+		"singer": "涼宮ハルヒ(平野綾)",
+		"YTLink": "https://www.youtube.com/watch?v=36FjpyJZEMc"
+	},
+	{
+		"date": "2025-02-25T12:00:00.000Z",
+		"track": 5,
+		"song": "三原色",
+		"singer": "YOASOBI",
+		"YTLink": "https://www.youtube.com/watch?v=36FjpyJZEMc"
+	},
+	{
+		"date": "2025-02-25T12:00:00.000Z",
+		"track": 6,
+		"song": "START:DASH!!",
+		"singer": "μ's",
+		"YTLink": "https://www.youtube.com/watch?v=36FjpyJZEMc"
+	},
+	{
+		"date": "2025-02-25T12:00:00.000Z",
+		"track": 7,
+		"song": "僕たちはひとつの光",
+		"singer": "μ's",
+		"YTLink": "https://www.youtube.com/watch?v=36FjpyJZEMc"
+	},
+	{
+		"date": "2025-02-25T12:00:00.000Z",
+		"track": 8,
+		"song": "言って。",
+		"singer": "ヨルシカ",
+		"YTLink": "https://www.youtube.com/watch?v=36FjpyJZEMc"
+	},
+	{
+		"date": "2025-02-25T12:00:00.000Z",
+		"track": 9,
+		"song": "若者のすべて",
+		"singer": "フジファブリック",
+		"YTLink": "https://www.youtube.com/watch?v=36FjpyJZEMc"
+	},
+	{
+		"date": "2025-02-25T12:00:00.000Z",
+		"track": 10,
+		"song": "コイスルオトメ",
+		"singer": "いきものがかり",
+		"YTLink": "https://www.youtube.com/watch?v=36FjpyJZEMc"
+	},
+	{
+		"date": "2025-02-25T12:00:00.000Z",
+		"track": 11,
+		"song": "帰りたくなったよ",
+		"singer": "いきものがかり",
+		"YTLink": "https://www.youtube.com/watch?v=36FjpyJZEMc"
+	},
+	{
+		"date": "2025-02-25T12:00:00.000Z",
+		"track": 12,
+		"song": "ユメクイ",
+		"singer": "大塚愛",
+		"YTLink": "https://www.youtube.com/watch?v=36FjpyJZEMc"
+	},
+	{
+		"date": "2025-02-25T12:00:00.000Z",
+		"track": 13,
+		"song": "ポケット",
+		"singer": "大塚愛",
+		"YTLink": "https://www.youtube.com/watch?v=36FjpyJZEMc"
+	},
+	{
+		"date": "2025-02-25T12:00:00.000Z",
+		"track": 14,
+		"song": "おジャ魔女カーニバル！！",
+		"singer": "MAHO堂",
+		"YTLink": "https://www.youtube.com/watch?v=36FjpyJZEMc"
+	},
+	{
+		"date": "2025-02-25T12:00:00.000Z",
+		"track": 15,
+		"song": "可愛くてごめん",
+		"singer": "HoneyWorks",
+		"YTLink": "https://www.youtube.com/watch?v=36FjpyJZEMc"
+	},
+	{
+		"date": "2025-02-25T12:00:00.000Z",
+		"track": 16,
+		"song": "美しい鰭",
+		"singer": "スピッツ",
+		"YTLink": "https://www.youtube.com/watch?v=36FjpyJZEMc"
+	},
+	{
+		"date": "2025-02-25T12:00:00.000Z",
+		"track": 17,
+		"song": "First Love",
+		"singer": "宇多田ヒカル",
+		"YTLink": "https://www.youtube.com/watch?v=36FjpyJZEMc"
+	},
+	{
+		"date": "2025-02-25T12:00:00.000Z",
+		"track": 18,
+		"song": "綺麗な花には毒がある",
+		"singer": "Yami_Q_ray",
+		"YTLink": "https://www.youtube.com/watch?v=36FjpyJZEMc"
+	},
+	{
+		"date": "2025-02-25T12:00:00.000Z",
+		"track": 19,
+		"song": "ルンに花咲く恋もある",
+		"singer": "ワルキューレ",
+		"YTLink": "https://www.youtube.com/watch?v=36FjpyJZEMc"
+	},
+	{
+		"date": "2025-02-25T12:00:00.000Z",
+		"track": 20,
+		"song": "God Bless You",
+		"singer": "ワルキューレ",
+		"YTLink": "https://www.youtube.com/watch?v=36FjpyJZEMc"
+	},
+	{
+		"date": "2025-02-21T12:00:00.000Z",
+		"track": 1,
+		"song": "Tasting my love！",
+		"singer": "苺咲べりぃ",
+		"YTLink": "https://www.youtube.com/watch?v=q7luWSH8Pj0"
+	},
+	{
+		"date": "2025-02-21T12:00:00.000Z",
+		"track": 2,
+		"song": "吉原ラメント",
+		"singer": "亜沙",
+		"YTLink": "https://www.youtube.com/watch?v=q7luWSH8Pj0"
+	},
+	{
+		"date": "2025-02-21T12:00:00.000Z",
+		"track": 3,
+		"song": "亜麻色の髪の乙女",
+		"singer": "島谷ひとみ",
+		"YTLink": "https://www.youtube.com/watch?v=q7luWSH8Pj0"
+	},
+	{
+		"date": "2025-02-21T12:00:00.000Z",
+		"track": 4,
+		"song": "Super Driver",
+		"singer": "平野綾",
+		"YTLink": "https://www.youtube.com/watch?v=q7luWSH8Pj0"
+	},
+	{
+		"date": "2025-02-21T12:00:00.000Z",
+		"track": 5,
+		"song": "ロケットビート",
+		"singer": "安野希世乃",
+		"YTLink": "https://www.youtube.com/watch?v=q7luWSH8Pj0"
+	},
+	{
+		"date": "2025-02-21T12:00:00.000Z",
+		"track": 6,
+		"song": "ウィーアー!",
+		"singer": "きただにひろし",
+		"YTLink": "https://www.youtube.com/watch?v=q7luWSH8Pj0"
+	},
+	{
+		"date": "2025-02-21T12:00:00.000Z",
+		"track": 7,
+		"song": "新時代",
+		"singer": "Ado",
+		"YTLink": "https://www.youtube.com/watch?v=q7luWSH8Pj0"
+	},
+	{
+		"date": "2025-02-21T12:00:00.000Z",
+		"track": 8,
+		"song": "シル・ヴ・プレジデント",
+		"singer": "P丸様。",
+		"YTLink": "https://www.youtube.com/watch?v=q7luWSH8Pj0"
+	},
+	{
+		"date": "2025-02-21T12:00:00.000Z",
+		"track": 9,
+		"song": "青いベンチ",
+		"singer": "サスケ",
+		"YTLink": "https://www.youtube.com/watch?v=q7luWSH8Pj0"
+	},
+	{
+		"date": "2025-02-21T12:00:00.000Z",
+		"track": 10,
+		"song": "愛してる",
+		"singer": "ワルキューレ",
+		"YTLink": "https://www.youtube.com/watch?v=q7luWSH8Pj0"
+	},
+	{
 		"date": "2025-02-18T12:00:00.000Z",
 		"track": 1,
 		"song": "Tasting my love！",
@@ -36113,7 +36466,7 @@
 		"date": "2023-05-30T16:00:00.000Z",
 		"track": "24",
 		"song": "ルンに花咲く恋もある",
-		"singer": "",
+		"singer": "ワルキューレ",
 		"note": "マクロスΔ",
 		"YTLink": "https://www.youtube.com/watch?v=GSi_OcsLdko"
 	},
@@ -36769,7 +37122,7 @@
 		"date": "2023-05-22T16:00:00.000Z",
 		"track": "23",
 		"song": "ルンに花咲く恋もある",
-		"singer": "",
+		"singer": "ワルキューレ",
 		"note": "",
 		"YTLink": "https://www.youtube.com/watch?v=oX5ME7FsllA"
 	},
@@ -64097,7 +64450,7 @@
 		"date": "2022-06-01T16:00:00.000Z",
 		"track": "11",
 		"song": "ルンに花咲く恋もある",
-		"singer": "",
+		"singer": "ワルキューレ",
 		"note": "",
 		"YTLink": "https://www.youtube.com/watch?v=ODW2Ye7rfSg"
 	},
@@ -66017,7 +66370,7 @@
 		"date": "2022-04-13T16:00:00.000Z",
 		"track": "16",
 		"song": "ルンに花咲く恋もある",
-		"singer": "",
+		"singer": "ワルキューレ",
 		"note": "マクロスΔ",
 		"YTLink": "https://www.youtube.com/watch?v=FLwg_L7dztU"
 	},
@@ -68033,7 +68386,7 @@
 		"date": "2022-03-02T16:00:00.000Z",
 		"track": "17",
 		"song": "ルンに花咲く恋もある",
-		"singer": "",
+		"singer": "ワルキューレ",
 		"note": "マクロス",
 		"YTLink": "https://www.youtube.com/watch?v=0PWgDlP9TRU"
 	},
@@ -69473,7 +69826,7 @@
 		"date": "2022-02-11T16:00:00.000Z",
 		"track": "89",
 		"song": "ルンに花咲く恋もある",
-		"singer": "",
+		"singer": "ワルキューレ",
 		"note": "耐久",
 		"YTLink": "https://www.youtube.com/watch?v=Q4nHOeY9Up0"
 	},
@@ -73337,7 +73690,7 @@
 		"date": "2021-11-01T16:00:00.000Z",
 		"track": "15",
 		"song": "ルンに花咲く恋もある",
-		"singer": "",
+		"singer": "ワルキューレ",
 		"note": "マクロス",
 		"YTLink": "https://www.youtube.com/watch?v=mlDy5VIJybI"
 	},
@@ -74417,7 +74770,7 @@
 		"date": "2021-10-19T16:00:00.000Z",
 		"track": "17",
 		"song": "ルンに花咲く恋もある",
-		"singer": "",
+		"singer": "ワルキューレ",
 		"note": "毎日歌枠/マクロス",
 		"YTLink": "https://www.youtube.com/watch?v=0t099VX3irQ"
 	},
@@ -86129,7 +86482,7 @@
 		"date": "2021-01-29T16:00:00.000Z",
 		"track": "48",
 		"song": "ルンに花咲く恋もある",
-		"singer": "",
+		"singer": "ワルキューレ",
 		"note": "耐久",
 		"YTLink": "https://www.youtube.com/watch?v=lvhVDp8DL-4"
 	},
@@ -90305,7 +90658,7 @@
 		"date": "2020-11-11T16:00:00.000Z",
 		"track": "9",
 		"song": "ルンに花咲く恋もある",
-		"singer": "",
+		"singer": "ワルキューレ",
 		"note": "マクロス/初回",
 		"YTLink": "https://www.youtube.com/watch?v=S7nRycQJO_k"
 	},
