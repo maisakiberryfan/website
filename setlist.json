@@ -1,5 +1,145 @@
 [
 	{
+		"date": "2025-03-13T12:00:00.000Z",
+		"track": 1,
+		"song": "Shoot!",
+		"singer": "苺咲べりぃ",
+		"YTLink": "https://www.youtube.com/watch?v=jLsi3sjre4k"
+	},
+	{
+		"date": "2025-03-13T12:00:00.000Z",
+		"track": 2,
+		"song": "倍倍FIGHT!",
+		"singer": "CANDY TUNE",
+		"YTLink": "https://www.youtube.com/watch?v=jLsi3sjre4k"
+	},
+	{
+		"date": "2025-03-13T12:00:00.000Z",
+		"track": 3,
+		"song": "キス・ミー・パティシエ",
+		"singer": "CANDY TUNE",
+		"YTLink": "https://www.youtube.com/watch?v=jLsi3sjre4k"
+	},
+	{
+		"date": "2025-03-13T12:00:00.000Z",
+		"track": 4,
+		"song": "勇気100%",
+		"singer": "光GENJI",
+		"YTLink": "https://www.youtube.com/watch?v=jLsi3sjre4k"
+	},
+	{
+		"date": "2025-03-13T12:00:00.000Z",
+		"track": 5,
+		"song": "可愛くてごめん",
+		"singer": "HoneyWorks",
+		"YTLink": "https://www.youtube.com/watch?v=jLsi3sjre4k"
+	},
+	{
+		"date": "2025-03-13T12:00:00.000Z",
+		"track": 6,
+		"song": "愛をこめて花束を",
+		"singer": "superfly",
+		"YTLink": "https://www.youtube.com/watch?v=jLsi3sjre4k"
+	},
+	{
+		"date": "2025-03-13T12:00:00.000Z",
+		"track": 7,
+		"song": "あたしを彼女にしたいなら",
+		"singer": "コレサワ",
+		"YTLink": "https://www.youtube.com/watch?v=jLsi3sjre4k"
+	},
+	{
+		"date": "2025-03-13T12:00:00.000Z",
+		"track": 8,
+		"song": "桜の時",
+		"singer": "aiko",
+		"YTLink": "https://www.youtube.com/watch?v=jLsi3sjre4k"
+	},
+	{
+		"date": "2025-03-13T12:00:00.000Z",
+		"track": 9,
+		"song": "キラキラ",
+		"singer": "aiko",
+		"YTLink": "https://www.youtube.com/watch?v=jLsi3sjre4k"
+	},
+	{
+		"date": "2025-03-13T12:00:00.000Z",
+		"track": 10,
+		"song": "恋愛裁判",
+		"singer": "40mP",
+		"YTLink": "https://www.youtube.com/watch?v=jLsi3sjre4k"
+	},
+	{
+		"date": "2025-03-13T12:00:00.000Z",
+		"track": 11,
+		"song": "完璧主義で☆",
+		"singer": "FRUITS ZIPPER",
+		"YTLink": "https://www.youtube.com/watch?v=jLsi3sjre4k"
+	},
+	{
+		"date": "2025-03-13T12:00:00.000Z",
+		"track": 12,
+		"song": "呪文降臨～マジカル・フォース",
+		"singer": "Sister MAYO",
+		"YTLink": "https://www.youtube.com/watch?v=jLsi3sjre4k"
+	},
+	{
+		"date": "2025-03-13T12:00:00.000Z",
+		"track": 13,
+		"song": "シル・ヴ・プレジデント",
+		"singer": "P丸様。",
+		"YTLink": "https://www.youtube.com/watch?v=jLsi3sjre4k"
+	},
+	{
+		"date": "2025-03-13T12:00:00.000Z",
+		"track": 14,
+		"song": "シュガーソングとビターステップ",
+		"singer": "UNISON SQUARE GARDEN",
+		"YTLink": "https://www.youtube.com/watch?v=jLsi3sjre4k"
+	},
+	{
+		"date": "2025-03-13T12:00:00.000Z",
+		"track": 15,
+		"song": "One Love",
+		"singer": "嵐",
+		"YTLink": "https://www.youtube.com/watch?v=jLsi3sjre4k"
+	},
+	{
+		"date": "2025-03-13T12:00:00.000Z",
+		"track": 16,
+		"song": "ボクノート",
+		"singer": "スキマスイッチ",
+		"YTLink": "https://www.youtube.com/watch?v=jLsi3sjre4k"
+	},
+	{
+		"date": "2025-03-13T12:00:00.000Z",
+		"track": 17,
+		"song": "別の人の彼女になったよ",
+		"singer": "Wacci",
+		"YTLink": "https://www.youtube.com/watch?v=jLsi3sjre4k"
+	},
+	{
+		"date": "2025-03-13T12:00:00.000Z",
+		"track": 18,
+		"song": "Snow halation",
+		"singer": "μ's",
+		"YTLink": "https://www.youtube.com/watch?v=jLsi3sjre4k"
+	},
+	{
+		"date": "2025-03-13T12:00:00.000Z",
+		"track": 19,
+		"song": "たぶん",
+		"singer": "YOASOBI",
+		"YTLink": "https://www.youtube.com/watch?v=jLsi3sjre4k"
+	},
+	{
+		"date": "2025-03-13T12:00:00.000Z",
+		"track": 20,
+		"song": "NEW KAWAII",
+		"singer": "FRUITS ZIPPER",
+		"YTLink": "https://www.youtube.com/watch?v=jLsi3sjre4k"
+	},
+	{
 		"date": "2025-03-10T12:00:00.000Z",
 		"track": 1,
 		"song": "Berry nice!!",
