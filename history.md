@@ -1,6 +1,7 @@
 ﻿## 2025
 * 2025/04/27　8th Album  発売
 * 2025/04/13　[「Rock on V」 出演](https://x.com/MaisakiBerry/status/1886013630392811976)
+* 2025/03/30　Single 『虹の向こう側』[youtube](https://www.youtube.com/watch?v=uJMo_6VWbNU) / [booth](https://maisakiberry.booth.pm/items/6749581)
 * 2025/03/17　[べりぃぬいぐるみ発売決定](https://booth.pm/ja/items/6701348)
 * 2025/02/14　Single 『Tasting my love！』[youtube](https://www.youtube.com/watch?v=0oiLP4U35wU) / [booth](https://maisakiberry.booth.pm/items/6590835)
 * 2025/01/29　Single 『かくれんぼ』[youtube](https://www.youtube.com/watch?v=NnlmnMSXIks) / [booth](https://maisakiberry.booth.pm/items/6535210)
