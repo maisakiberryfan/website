@@ -1,5 +1,146 @@
 [
 	{
+		"date": "2025-04-09T12:00:00.000Z",
+		"track": 1,
+		"song": "Spring Rain",
+		"singer": "苺咲べりぃ",
+		"note": "オリソン/初回",
+		"YTLink": "https://www.youtube.com/watch?v=x7ffaveVSjs"
+	},
+	{
+		"date": "2025-04-09T12:00:00.000Z",
+		"track": 2,
+		"song": "倍倍FIGHT!",
+		"singer": "CANDY TUNE",
+		"YTLink": "https://www.youtube.com/watch?v=x7ffaveVSjs"
+	},
+	{
+		"date": "2025-04-09T12:00:00.000Z",
+		"track": 3,
+		"song": "心絵",
+		"singer": "Road of major",
+		"YTLink": "https://www.youtube.com/watch?v=x7ffaveVSjs"
+	},
+	{
+		"date": "2025-04-09T12:00:00.000Z",
+		"track": 4,
+		"song": "ポニーテールとシュシュ",
+		"singer": "AKB48",
+		"YTLink": "https://www.youtube.com/watch?v=x7ffaveVSjs"
+	},
+	{
+		"date": "2025-04-09T12:00:00.000Z",
+		"track": 5,
+		"song": "カラフル",
+		"singer": "ClariS",
+		"YTLink": "https://www.youtube.com/watch?v=x7ffaveVSjs"
+	},
+	{
+		"date": "2025-04-09T12:00:00.000Z",
+		"track": 6,
+		"song": "雨とカプチーノ",
+		"singer": "ヨルシカ",
+		"YTLink": "https://www.youtube.com/watch?v=x7ffaveVSjs"
+	},
+	{
+		"date": "2025-04-09T12:00:00.000Z",
+		"track": 7,
+		"song": "ハナミズキ",
+		"singer": "一青窈",
+		"YTLink": "https://www.youtube.com/watch?v=x7ffaveVSjs"
+	},
+	{
+		"date": "2025-04-09T12:00:00.000Z",
+		"track": 8,
+		"song": "ユメクイ",
+		"singer": "大塚愛",
+		"YTLink": "https://www.youtube.com/watch?v=x7ffaveVSjs"
+	},
+	{
+		"date": "2025-04-09T12:00:00.000Z",
+		"track": 9,
+		"song": "Strawberry Jam",
+		"singer": "大塚愛",
+		"YTLink": "https://www.youtube.com/watch?v=x7ffaveVSjs"
+	},
+	{
+		"date": "2025-04-09T12:00:00.000Z",
+		"track": 10,
+		"song": "チェリー",
+		"singer": "スピッツ",
+		"YTLink": "https://www.youtube.com/watch?v=x7ffaveVSjs"
+	},
+	{
+		"date": "2025-04-09T12:00:00.000Z",
+		"track": 11,
+		"song": "同担☆拒否",
+		"singer": "HoneyWorks",
+		"YTLink": "https://www.youtube.com/watch?v=x7ffaveVSjs"
+	},
+	{
+		"date": "2025-04-09T12:00:00.000Z",
+		"track": 12,
+		"song": "そばかす",
+		"singer": "JUDY AND MARY",
+		"YTLink": "https://www.youtube.com/watch?v=x7ffaveVSjs"
+	},
+	{
+		"date": "2025-04-09T12:00:00.000Z",
+		"track": 13,
+		"song": "千本桜",
+		"singer": "黒うさP",
+		"YTLink": "https://www.youtube.com/watch?v=x7ffaveVSjs"
+	},
+	{
+		"date": "2025-04-09T12:00:00.000Z",
+		"track": 14,
+		"song": "流星",
+		"singer": "藍井エイル",
+		"YTLink": "https://www.youtube.com/watch?v=x7ffaveVSjs"
+	},
+	{
+		"date": "2025-04-09T12:00:00.000Z",
+		"track": 15,
+		"song": "大正浪漫",
+		"singer": "YOASOBI",
+		"YTLink": "https://www.youtube.com/watch?v=x7ffaveVSjs"
+	},
+	{
+		"date": "2025-04-09T12:00:00.000Z",
+		"track": 16,
+		"song": "夜空にふたつ",
+		"singer": "koyori(電ポルP)",
+		"YTLink": "https://www.youtube.com/watch?v=x7ffaveVSjs"
+	},
+	{
+		"date": "2025-04-09T12:00:00.000Z",
+		"track": 17,
+		"song": "Crosswalk",
+		"singer": "鈴木みのり",
+		"YTLink": "https://www.youtube.com/watch?v=x7ffaveVSjs"
+	},
+	{
+		"date": "2025-04-09T12:00:00.000Z",
+		"track": 18,
+		"song": "ホシキラ",
+		"singer": "ランカ・リー(中島愛)",
+		"YTLink": "https://www.youtube.com/watch?v=x7ffaveVSjs"
+	},
+	{
+		"date": "2025-04-09T12:00:00.000Z",
+		"track": 19,
+		"song": "蒼のエーテル",
+		"singer": "ランカ・リー(中島愛)",
+		"YTLink": "https://www.youtube.com/watch?v=x7ffaveVSjs"
+	},
+	{
+		"date": "2025-04-09T12:00:00.000Z",
+		"track": 20,
+		"song": "相思相愛",
+		"singer": "aiko",
+		"YTLink": "https://www.youtube.com/watch?v=x7ffaveVSjs"
+	},
+	{
 		"date": "2025-04-07T12:00:00.000Z",
 		"track": 1,
 		"song": "StartRoll",
