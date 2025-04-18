@@ -1,5 +1,706 @@
 [
 	{
+		"date": "2025-04-16T12:00:00.000Z",
+		"track": 1,
+		"song": "星になろうよ",
+		"singer": "苺咲べりぃ",
+		"YTLink": "https://www.youtube.com/watch?v=3MVEI_oTkPE"
+	},
+	{
+		"date": "2025-04-16T12:00:00.000Z",
+		"track": 2,
+		"song": "365日の紙飛行機",
+		"singer": "AKB48",
+		"YTLink": "https://www.youtube.com/watch?v=3MVEI_oTkPE"
+	},
+	{
+		"date": "2025-04-16T12:00:00.000Z",
+		"track": 3,
+		"song": "蕾",
+		"singer": "コブクロ",
+		"YTLink": "https://www.youtube.com/watch?v=3MVEI_oTkPE"
+	},
+	{
+		"date": "2025-04-16T12:00:00.000Z",
+		"track": 4,
+		"song": "三日月",
+		"singer": "絢香",
+		"YTLink": "https://www.youtube.com/watch?v=3MVEI_oTkPE"
+	},
+	{
+		"date": "2025-04-16T12:00:00.000Z",
+		"track": 5,
+		"song": "ORION",
+		"singer": "中島美嘉",
+		"YTLink": "https://www.youtube.com/watch?v=3MVEI_oTkPE"
+	},
+	{
+		"date": "2025-04-16T12:00:00.000Z",
+		"track": 6,
+		"song": "M",
+		"singer": "PRINCESS PRINCESS",
+		"YTLink": "https://www.youtube.com/watch?v=3MVEI_oTkPE"
+	},
+	{
+		"date": "2025-04-16T12:00:00.000Z",
+		"track": 7,
+		"song": "甘えんぼ",
+		"singer": "大塚愛",
+		"YTLink": "https://www.youtube.com/watch?v=3MVEI_oTkPE"
+	},
+	{
+		"date": "2025-04-16T12:00:00.000Z",
+		"track": 8,
+		"song": "炎",
+		"singer": "LiSA",
+		"YTLink": "https://www.youtube.com/watch?v=3MVEI_oTkPE"
+	},
+	{
+		"date": "2025-04-16T12:00:00.000Z",
+		"track": 9,
+		"song": "紅蓮華",
+		"singer": "LiSA",
+		"YTLink": "https://www.youtube.com/watch?v=3MVEI_oTkPE"
+	},
+	{
+		"date": "2025-04-16T12:00:00.000Z",
+		"track": 10,
+		"song": "深愛",
+		"singer": "水樹奈々",
+		"YTLink": "https://www.youtube.com/watch?v=3MVEI_oTkPE"
+	},
+	{
+		"date": "2025-04-16T12:00:00.000Z",
+		"track": 11,
+		"song": "ETERNAL BLAZE",
+		"singer": "水樹奈々",
+		"YTLink": "https://www.youtube.com/watch?v=3MVEI_oTkPE"
+	},
+	{
+		"date": "2025-04-16T12:00:00.000Z",
+		"track": 12,
+		"song": "ありがとう",
+		"singer": "いきものがかり",
+		"YTLink": "https://www.youtube.com/watch?v=3MVEI_oTkPE"
+	},
+	{
+		"date": "2025-04-16T12:00:00.000Z",
+		"track": 13,
+		"song": "雨とカプチーノ",
+		"singer": "ヨルシカ",
+		"YTLink": "https://www.youtube.com/watch?v=3MVEI_oTkPE"
+	},
+	{
+		"date": "2025-04-16T12:00:00.000Z",
+		"track": 14,
+		"song": "YUME日和",
+		"singer": "島谷ひとみ",
+		"YTLink": "https://www.youtube.com/watch?v=3MVEI_oTkPE"
+	},
+	{
+		"date": "2025-04-16T12:00:00.000Z",
+		"track": 15,
+		"song": "ボクノート",
+		"singer": "スキマスイッチ",
+		"YTLink": "https://www.youtube.com/watch?v=3MVEI_oTkPE"
+	},
+	{
+		"date": "2025-04-16T12:00:00.000Z",
+		"track": 16,
+		"song": "MAGIC",
+		"singer": "愛内里菜",
+		"YTLink": "https://www.youtube.com/watch?v=3MVEI_oTkPE"
+	},
+	{
+		"date": "2025-04-16T12:00:00.000Z",
+		"track": 17,
+		"song": "I can't stop my love for you♥",
+		"singer": "愛内里菜",
+		"YTLink": "https://www.youtube.com/watch?v=3MVEI_oTkPE"
+	},
+	{
+		"date": "2025-04-16T12:00:00.000Z",
+		"track": 18,
+		"song": "God Bless You",
+		"singer": "ワルキューレ",
+		"YTLink": "https://www.youtube.com/watch?v=3MVEI_oTkPE"
+	},
+	{
+		"date": "2025-04-16T12:00:00.000Z",
+		"track": 19,
+		"song": "GIRAFFE BLUES",
+		"singer": "ワルキューレ",
+		"YTLink": "https://www.youtube.com/watch?v=3MVEI_oTkPE"
+	},
+	{
+		"date": "2025-04-16T12:00:00.000Z",
+		"track": 20,
+		"song": "Wishing",
+		"singer": "レム (水瀬いのり)",
+		"YTLink": "https://www.youtube.com/watch?v=3MVEI_oTkPE"
+	},
+	{
+		"date": "2025-04-15T12:00:00.000Z",
+		"track": 1,
+		"song": "Berry nice!!",
+		"singer": "苺咲べりぃ",
+		"YTLink": "https://www.youtube.com/watch?v=_uD_6EdlB7A"
+	},
+	{
+		"date": "2025-04-15T12:00:00.000Z",
+		"track": 2,
+		"song": "倍倍FIGHT!",
+		"singer": "CANDY TUNE",
+		"YTLink": "https://www.youtube.com/watch?v=_uD_6EdlB7A"
+	},
+	{
+		"date": "2025-04-15T12:00:00.000Z",
+		"track": 3,
+		"song": "CHE.R.RY",
+		"singer": "Yui",
+		"YTLink": "https://www.youtube.com/watch?v=_uD_6EdlB7A"
+	},
+	{
+		"date": "2025-04-15T12:00:00.000Z",
+		"track": 4,
+		"song": "気まぐれロマンティック",
+		"singer": "いきものがかり",
+		"YTLink": "https://www.youtube.com/watch?v=_uD_6EdlB7A"
+	},
+	{
+		"date": "2025-04-15T12:00:00.000Z",
+		"track": 5,
+		"song": "カブトムシ",
+		"singer": "aiko",
+		"YTLink": "https://www.youtube.com/watch?v=_uD_6EdlB7A"
+	},
+	{
+		"date": "2025-04-15T12:00:00.000Z",
+		"track": 6,
+		"song": "初恋サイダー",
+		"singer": "Buono!",
+		"YTLink": "https://www.youtube.com/watch?v=_uD_6EdlB7A"
+	},
+	{
+		"date": "2025-04-15T12:00:00.000Z",
+		"track": 7,
+		"song": "絶対アイドル辞めないで",
+		"singer": "=LOVE",
+		"YTLink": "https://www.youtube.com/watch?v=_uD_6EdlB7A"
+	},
+	{
+		"date": "2025-04-15T12:00:00.000Z",
+		"track": 8,
+		"song": "僕たちはひとつの光",
+		"singer": "μ's",
+		"YTLink": "https://www.youtube.com/watch?v=_uD_6EdlB7A"
+	},
+	{
+		"date": "2025-04-15T12:00:00.000Z",
+		"track": 9,
+		"song": "言って。",
+		"singer": "ヨルシカ",
+		"YTLink": "https://www.youtube.com/watch?v=_uD_6EdlB7A"
+	},
+	{
+		"date": "2025-04-15T12:00:00.000Z",
+		"track": 10,
+		"song": "千本桜",
+		"singer": "黒うさP",
+		"YTLink": "https://www.youtube.com/watch?v=_uD_6EdlB7A"
+	},
+	{
+		"date": "2025-04-15T12:00:00.000Z",
+		"track": 11,
+		"song": "空色デイズ",
+		"singer": "中川翔子",
+		"YTLink": "https://www.youtube.com/watch?v=_uD_6EdlB7A"
+	},
+	{
+		"date": "2025-04-15T12:00:00.000Z",
+		"track": 12,
+		"song": "かがみ",
+		"singer": "FRUITS ZIPPER",
+		"YTLink": "https://www.youtube.com/watch?v=_uD_6EdlB7A"
+	},
+	{
+		"date": "2025-04-15T12:00:00.000Z",
+		"track": 13,
+		"song": "心拍数#0822",
+		"singer": "蝶々P",
+		"YTLink": "https://www.youtube.com/watch?v=_uD_6EdlB7A"
+	},
+	{
+		"date": "2025-04-15T12:00:00.000Z",
+		"track": 14,
+		"song": "うまぴょい伝説",
+		"singer": "ウマ娘",
+		"YTLink": "https://www.youtube.com/watch?v=_uD_6EdlB7A"
+	},
+	{
+		"date": "2025-04-15T12:00:00.000Z",
+		"track": 15,
+		"song": "ふわふわ時間",
+		"singer": "放課後ティータイム",
+		"YTLink": "https://www.youtube.com/watch?v=_uD_6EdlB7A"
+	},
+	{
+		"date": "2025-04-15T12:00:00.000Z",
+		"track": 16,
+		"song": "最上級にかわいいの！",
+		"singer": "超ときめき♡宣伝部",
+		"YTLink": "https://www.youtube.com/watch?v=_uD_6EdlB7A"
+	},
+	{
+		"date": "2025-04-15T12:00:00.000Z",
+		"track": 17,
+		"song": "青い珊瑚礁",
+		"singer": "松田聖子",
+		"YTLink": "https://www.youtube.com/watch?v=_uD_6EdlB7A"
+	},
+	{
+		"date": "2025-04-15T12:00:00.000Z",
+		"track": 18,
+		"song": "Strawberry Jam",
+		"singer": "大塚愛",
+		"YTLink": "https://www.youtube.com/watch?v=_uD_6EdlB7A"
+	},
+	{
+		"date": "2025-04-15T12:00:00.000Z",
+		"track": 19,
+		"song": "クムリウタ",
+		"singer": "大塚愛",
+		"YTLink": "https://www.youtube.com/watch?v=_uD_6EdlB7A"
+	},
+	{
+		"date": "2025-04-15T12:00:00.000Z",
+		"track": 20,
+		"song": "相思相愛",
+		"singer": "aiko",
+		"YTLink": "https://www.youtube.com/watch?v=_uD_6EdlB7A"
+	},
+	{
+		"date": "2025-04-14T12:00:00.000Z",
+		"track": 1,
+		"song": "虹の向こう側",
+		"singer": "苺咲べりぃ",
+		"note": "オリソン/初回",
+		"YTLink": "https://www.youtube.com/watch?v=oXDFl65cuJQ"
+	},
+	{
+		"date": "2025-04-14T12:00:00.000Z",
+		"track": 2,
+		"song": "倍倍FIGHT!",
+		"singer": "CANDY TUNE",
+		"YTLink": "https://www.youtube.com/watch?v=oXDFl65cuJQ"
+	},
+	{
+		"date": "2025-04-14T12:00:00.000Z",
+		"track": 3,
+		"song": "シル・ヴ・プレジデント",
+		"singer": "P丸様。",
+		"YTLink": "https://www.youtube.com/watch?v=oXDFl65cuJQ"
+	},
+	{
+		"date": "2025-04-14T12:00:00.000Z",
+		"track": 4,
+		"song": "Best Friend",
+		"singer": "Kiroro",
+		"YTLink": "https://www.youtube.com/watch?v=oXDFl65cuJQ"
+	},
+	{
+		"date": "2025-04-14T12:00:00.000Z",
+		"track": 5,
+		"song": "未来へ",
+		"singer": "Kiroro",
+		"YTLink": "https://www.youtube.com/watch?v=oXDFl65cuJQ"
+	},
+	{
+		"date": "2025-04-14T12:00:00.000Z",
+		"track": 6,
+		"song": "トリセツ",
+		"singer": "西野カナ",
+		"YTLink": "https://www.youtube.com/watch?v=oXDFl65cuJQ"
+	},
+	{
+		"date": "2025-04-14T12:00:00.000Z",
+		"track": 7,
+		"song": "さよならメモリーズ",
+		"singer": "Supercell",
+		"YTLink": "https://www.youtube.com/watch?v=oXDFl65cuJQ"
+	},
+	{
+		"date": "2025-04-14T12:00:00.000Z",
+		"track": 8,
+		"song": "地球最後の告白を",
+		"singer": "Kemu",
+		"YTLink": "https://www.youtube.com/watch?v=oXDFl65cuJQ"
+	},
+	{
+		"date": "2025-04-14T12:00:00.000Z",
+		"track": 9,
+		"song": "ステラブリーズ",
+		"singer": "春奈るな",
+		"YTLink": "https://www.youtube.com/watch?v=oXDFl65cuJQ"
+	},
+	{
+		"date": "2025-04-14T12:00:00.000Z",
+		"track": 10,
+		"song": "ALIVE",
+		"singer": "ClariS",
+		"YTLink": "https://www.youtube.com/watch?v=oXDFl65cuJQ"
+	},
+	{
+		"date": "2025-04-14T12:00:00.000Z",
+		"track": 11,
+		"song": "Startear",
+		"singer": "春奈るな",
+		"YTLink": "https://www.youtube.com/watch?v=oXDFl65cuJQ"
+	},
+	{
+		"date": "2025-04-14T12:00:00.000Z",
+		"track": 12,
+		"song": "ラストシーン",
+		"singer": "いきものがかり",
+		"YTLink": "https://www.youtube.com/watch?v=oXDFl65cuJQ"
+	},
+	{
+		"date": "2025-04-14T12:00:00.000Z",
+		"track": 13,
+		"song": "変わらないもの",
+		"singer": "奥華子",
+		"YTLink": "https://www.youtube.com/watch?v=oXDFl65cuJQ"
+	},
+	{
+		"date": "2025-04-14T12:00:00.000Z",
+		"track": 14,
+		"song": "春泥棒",
+		"singer": "ヨルシカ",
+		"YTLink": "https://www.youtube.com/watch?v=oXDFl65cuJQ"
+	},
+	{
+		"date": "2025-04-14T12:00:00.000Z",
+		"track": 15,
+		"song": "だから僕は音楽を辞めた",
+		"singer": "ヨルシカ",
+		"YTLink": "https://www.youtube.com/watch?v=oXDFl65cuJQ"
+	},
+	{
+		"date": "2025-04-14T12:00:00.000Z",
+		"track": 16,
+		"song": "プラチナ",
+		"singer": "坂本真綾",
+		"YTLink": "https://www.youtube.com/watch?v=oXDFl65cuJQ"
+	},
+	{
+		"date": "2025-04-14T12:00:00.000Z",
+		"track": 17,
+		"song": "CLEAR",
+		"singer": "坂本真綾",
+		"YTLink": "https://www.youtube.com/watch?v=oXDFl65cuJQ"
+	},
+	{
+		"date": "2025-04-14T12:00:00.000Z",
+		"track": 18,
+		"song": "ループ",
+		"singer": "坂本真綾",
+		"YTLink": "https://www.youtube.com/watch?v=oXDFl65cuJQ"
+	},
+	{
+		"date": "2025-04-14T12:00:00.000Z",
+		"track": 19,
+		"song": "少女レイ",
+		"singer": "みきとP",
+		"YTLink": "https://www.youtube.com/watch?v=oXDFl65cuJQ"
+	},
+	{
+		"date": "2025-04-14T12:00:00.000Z",
+		"track": 20,
+		"song": "虹",
+		"singer": "菅田将暉",
+		"YTLink": "https://www.youtube.com/watch?v=oXDFl65cuJQ"
+	},
+	{
+		"date": "2025-04-10T12:00:00.000Z",
+		"track": 1,
+		"song": "星へ伸ばす手",
+		"singer": "苺咲べりぃ",
+		"YTLink": "https://www.youtube.com/watch?v=31-BBcdMA7E"
+	},
+	{
+		"date": "2025-04-10T12:00:00.000Z",
+		"track": 2,
+		"song": "ひたむきシンデレラ!",
+		"singer": "CUTIE STREET",
+		"YTLink": "https://www.youtube.com/watch?v=31-BBcdMA7E"
+	},
+	{
+		"date": "2025-04-10T12:00:00.000Z",
+		"track": 3,
+		"song": "かわいいだけじゃだめですか?",
+		"singer": "CUTIE STREET",
+		"YTLink": "https://www.youtube.com/watch?v=31-BBcdMA7E"
+	},
+	{
+		"date": "2025-04-10T12:00:00.000Z",
+		"track": 4,
+		"song": "元彼女のみなさまへ",
+		"singer": "コレサワ",
+		"YTLink": "https://www.youtube.com/watch?v=31-BBcdMA7E"
+	},
+	{
+		"date": "2025-04-10T12:00:00.000Z",
+		"track": 5,
+		"song": "あたしを彼女にしたいなら",
+		"singer": "コレサワ",
+		"YTLink": "https://www.youtube.com/watch?v=31-BBcdMA7E"
+	},
+	{
+		"date": "2025-04-10T12:00:00.000Z",
+		"track": 6,
+		"song": "大声ダイヤモンド",
+		"singer": "AKB48",
+		"YTLink": "https://www.youtube.com/watch?v=31-BBcdMA7E"
+	},
+	{
+		"date": "2025-04-10T12:00:00.000Z",
+		"track": 7,
+		"song": "フリージア",
+		"singer": "Uru",
+		"YTLink": "https://www.youtube.com/watch?v=31-BBcdMA7E"
+	},
+	{
+		"date": "2025-04-10T12:00:00.000Z",
+		"track": 8,
+		"song": "キラキラ",
+		"singer": "aiko",
+		"YTLink": "https://www.youtube.com/watch?v=31-BBcdMA7E"
+	},
+	{
+		"date": "2025-04-10T12:00:00.000Z",
+		"track": 9,
+		"song": "桜の時",
+		"singer": "aiko",
+		"YTLink": "https://www.youtube.com/watch?v=31-BBcdMA7E"
+	},
+	{
+		"date": "2025-04-10T12:00:00.000Z",
+		"track": 10,
+		"song": "ハルジオン",
+		"singer": "YOASOBI",
+		"YTLink": "https://www.youtube.com/watch?v=31-BBcdMA7E"
+	},
+	{
+		"date": "2025-04-10T12:00:00.000Z",
+		"track": 11,
+		"song": "若者のすべて",
+		"singer": "フジファブリック",
+		"YTLink": "https://www.youtube.com/watch?v=31-BBcdMA7E"
+	},
+	{
+		"date": "2025-04-10T12:00:00.000Z",
+		"track": 12,
+		"song": "少年時代",
+		"singer": "井上陽水",
+		"YTLink": "https://www.youtube.com/watch?v=31-BBcdMA7E"
+	},
+	{
+		"date": "2025-04-10T12:00:00.000Z",
+		"track": 13,
+		"song": "SAKURA",
+		"singer": "いきものがかり",
+		"YTLink": "https://www.youtube.com/watch?v=31-BBcdMA7E"
+	},
+	{
+		"date": "2025-04-10T12:00:00.000Z",
+		"track": 14,
+		"song": "ポケット",
+		"singer": "大塚愛",
+		"YTLink": "https://www.youtube.com/watch?v=31-BBcdMA7E"
+	},
+	{
+		"date": "2025-04-10T12:00:00.000Z",
+		"track": 15,
+		"song": "恋愛写真",
+		"singer": "大塚愛",
+		"YTLink": "https://www.youtube.com/watch?v=31-BBcdMA7E"
+	},
+	{
+		"date": "2025-04-10T12:00:00.000Z",
+		"track": 16,
+		"song": "366日",
+		"singer": "HY",
+		"YTLink": "https://www.youtube.com/watch?v=31-BBcdMA7E"
+	},
+	{
+		"date": "2025-04-10T12:00:00.000Z",
+		"track": 17,
+		"song": "First Love",
+		"singer": "宇多田ヒカル",
+		"YTLink": "https://www.youtube.com/watch?v=31-BBcdMA7E"
+	},
+	{
+		"date": "2025-04-10T12:00:00.000Z",
+		"track": 18,
+		"song": "君をのせて",
+		"singer": "井上あずみ",
+		"YTLink": "https://www.youtube.com/watch?v=31-BBcdMA7E"
+	},
+	{
+		"date": "2025-04-10T12:00:00.000Z",
+		"track": 19,
+		"song": "風になる",
+		"singer": "つじあやの",
+		"YTLink": "https://www.youtube.com/watch?v=31-BBcdMA7E"
+	},
+	{
+		"date": "2025-04-10T12:00:00.000Z",
+		"track": 20,
+		"song": "アムリタ",
+		"YTLink": "https://www.youtube.com/watch?v=31-BBcdMA7E"
+	},
+	{
+		"date": "2025-04-09T12:00:00.000Z",
+		"track": 1,
+		"song": "Spring Rain",
+		"singer": "苺咲べりぃ",
+		"note": "オリソン/初回",
+		"YTLink": "https://www.youtube.com/watch?v=x7ffaveVSjs"
+	},
+	{
+		"date": "2025-04-09T12:00:00.000Z",
+		"track": 2,
+		"song": "倍倍FIGHT!",
+		"singer": "CANDY TUNE",
+		"YTLink": "https://www.youtube.com/watch?v=x7ffaveVSjs"
+	},
+	{
+		"date": "2025-04-09T12:00:00.000Z",
+		"track": 3,
+		"song": "心絵",
+		"singer": "Road of major",
+		"YTLink": "https://www.youtube.com/watch?v=x7ffaveVSjs"
+	},
+	{
+		"date": "2025-04-09T12:00:00.000Z",
+		"track": 4,
+		"song": "ポニーテールとシュシュ",
+		"singer": "AKB48",
+		"YTLink": "https://www.youtube.com/watch?v=x7ffaveVSjs"
+	},
+	{
+		"date": "2025-04-09T12:00:00.000Z",
+		"track": 5,
+		"song": "カラフル",
+		"singer": "ClariS",
+		"YTLink": "https://www.youtube.com/watch?v=x7ffaveVSjs"
+	},
+	{
+		"date": "2025-04-09T12:00:00.000Z",
+		"track": 6,
+		"song": "雨とカプチーノ",
+		"singer": "ヨルシカ",
+		"YTLink": "https://www.youtube.com/watch?v=x7ffaveVSjs"
+	},
+	{
+		"date": "2025-04-09T12:00:00.000Z",
+		"track": 7,
+		"song": "ハナミズキ",
+		"singer": "一青窈",
+		"YTLink": "https://www.youtube.com/watch?v=x7ffaveVSjs"
+	},
+	{
+		"date": "2025-04-09T12:00:00.000Z",
+		"track": 8,
+		"song": "ユメクイ",
+		"singer": "大塚愛",
+		"YTLink": "https://www.youtube.com/watch?v=x7ffaveVSjs"
+	},
+	{
+		"date": "2025-04-09T12:00:00.000Z",
+		"track": 9,
+		"song": "Strawberry Jam",
+		"singer": "大塚愛",
+		"YTLink": "https://www.youtube.com/watch?v=x7ffaveVSjs"
+	},
+	{
+		"date": "2025-04-09T12:00:00.000Z",
+		"track": 10,
+		"song": "チェリー",
+		"singer": "スピッツ",
+		"YTLink": "https://www.youtube.com/watch?v=x7ffaveVSjs"
+	},
+	{
+		"date": "2025-04-09T12:00:00.000Z",
+		"track": 11,
+		"song": "同担☆拒否",
+		"singer": "HoneyWorks",
+		"YTLink": "https://www.youtube.com/watch?v=x7ffaveVSjs"
+	},
+	{
+		"date": "2025-04-09T12:00:00.000Z",
+		"track": 12,
+		"song": "そばかす",
+		"singer": "JUDY AND MARY",
+		"YTLink": "https://www.youtube.com/watch?v=x7ffaveVSjs"
+	},
+	{
+		"date": "2025-04-09T12:00:00.000Z",
+		"track": 13,
+		"song": "千本桜",
+		"singer": "黒うさP",
+		"YTLink": "https://www.youtube.com/watch?v=x7ffaveVSjs"
+	},
+	{
+		"date": "2025-04-09T12:00:00.000Z",
+		"track": 14,
+		"song": "流星",
+		"singer": "藍井エイル",
+		"YTLink": "https://www.youtube.com/watch?v=x7ffaveVSjs"
+	},
+	{
+		"date": "2025-04-09T12:00:00.000Z",
+		"track": 15,
+		"song": "大正浪漫",
+		"singer": "YOASOBI",
+		"YTLink": "https://www.youtube.com/watch?v=x7ffaveVSjs"
+	},
+	{
+		"date": "2025-04-09T12:00:00.000Z",
+		"track": 16,
+		"song": "夜空にふたつ",
+		"singer": "koyori(電ポルP)",
+		"YTLink": "https://www.youtube.com/watch?v=x7ffaveVSjs"
+	},
+	{
+		"date": "2025-04-09T12:00:00.000Z",
+		"track": 17,
+		"song": "Crosswalk",
+		"singer": "鈴木みのり",
+		"YTLink": "https://www.youtube.com/watch?v=x7ffaveVSjs"
+	},
+	{
+		"date": "2025-04-09T12:00:00.000Z",
+		"track": 18,
+		"song": "ホシキラ",
+		"singer": "ランカ・リー(中島愛)",
+		"YTLink": "https://www.youtube.com/watch?v=x7ffaveVSjs"
+	},
+	{
+		"date": "2025-04-09T12:00:00.000Z",
+		"track": 19,
+		"song": "蒼のエーテル",
+		"singer": "ランカ・リー(中島愛)",
+		"YTLink": "https://www.youtube.com/watch?v=x7ffaveVSjs"
+	},
+	{
+		"date": "2025-04-09T12:00:00.000Z",
+		"track": 20,
+		"song": "相思相愛",
+		"singer": "aiko",
+		"YTLink": "https://www.youtube.com/watch?v=x7ffaveVSjs"
+	},
+	{
 		"date": "2025-04-07T12:00:00.000Z",
 		"track": 1,
 		"song": "StartRoll",
