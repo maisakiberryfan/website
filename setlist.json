@@ -1,5 +1,145 @@
 [
 	{
+		"date": "2025-04-21T12:00:00.000Z",
+		"track": 1,
+		"song": "Shoot!",
+		"singer": "苺咲べりぃ",
+		"YTLink": "https://www.youtube.com/watch?v=R0p5tOe6lls"
+	},
+	{
+		"date": "2025-04-21T12:00:00.000Z",
+		"track": 2,
+		"song": "好き、お願い",
+		"singer": "FRUITS ZIPPER",
+		"YTLink": "https://www.youtube.com/watch?v=R0p5tOe6lls"
+	},
+	{
+		"date": "2025-04-21T12:00:00.000Z",
+		"track": 3,
+		"song": "倍倍FIGHT!",
+		"singer": "CANDY TUNE",
+		"YTLink": "https://www.youtube.com/watch?v=R0p5tOe6lls"
+	},
+	{
+		"date": "2025-04-21T12:00:00.000Z",
+		"track": 4,
+		"song": "恋はスリル、ショック、サスペンス",
+		"singer": "愛内里菜",
+		"YTLink": "https://www.youtube.com/watch?v=R0p5tOe6lls"
+	},
+	{
+		"date": "2025-04-21T12:00:00.000Z",
+		"track": 5,
+		"song": "I can't stop my love for you♥",
+		"singer": "愛内里菜",
+		"YTLink": "https://www.youtube.com/watch?v=R0p5tOe6lls"
+	},
+	{
+		"date": "2025-04-21T12:00:00.000Z",
+		"track": 6,
+		"song": "ハルウタ",
+		"singer": "いきものがかり",
+		"YTLink": "https://www.youtube.com/watch?v=R0p5tOe6lls"
+	},
+	{
+		"date": "2025-04-21T12:00:00.000Z",
+		"track": 7,
+		"song": "渡月橋 〜君 想ふ〜",
+		"singer": "倉木麻衣",
+		"YTLink": "https://www.youtube.com/watch?v=R0p5tOe6lls"
+	},
+	{
+		"date": "2025-04-21T12:00:00.000Z",
+		"track": 8,
+		"song": "ネコに風船",
+		"singer": "大塚愛",
+		"YTLink": "https://www.youtube.com/watch?v=R0p5tOe6lls"
+	},
+	{
+		"date": "2025-04-21T12:00:00.000Z",
+		"track": 9,
+		"song": "大好きだよ。",
+		"singer": "大塚愛",
+		"YTLink": "https://www.youtube.com/watch?v=R0p5tOe6lls"
+	},
+	{
+		"date": "2025-04-21T12:00:00.000Z",
+		"track": 10,
+		"song": "名前のない怪物",
+		"singer": "EGOIST",
+		"YTLink": "https://www.youtube.com/watch?v=R0p5tOe6lls"
+	},
+	{
+		"date": "2025-04-21T12:00:00.000Z",
+		"track": 11,
+		"song": "AXIA～ダイスキでダイキライ～",
+		"singer": "ワルキューレ",
+		"YTLink": "https://www.youtube.com/watch?v=R0p5tOe6lls"
+	},
+	{
+		"date": "2025-04-21T12:00:00.000Z",
+		"track": 12,
+		"song": "心做し",
+		"singer": "蝶々P",
+		"YTLink": "https://www.youtube.com/watch?v=R0p5tOe6lls"
+	},
+	{
+		"date": "2025-04-21T12:00:00.000Z",
+		"track": 13,
+		"song": "歌に形はないけれど",
+		"singer": "doriko",
+		"YTLink": "https://www.youtube.com/watch?v=R0p5tOe6lls"
+	},
+	{
+		"date": "2025-04-21T12:00:00.000Z",
+		"track": 14,
+		"song": "まどろみの約束",
+		"singer": "千反田える(佐藤聡美), 伊原摩耶花(茅野愛衣)",
+		"YTLink": "https://www.youtube.com/watch?v=R0p5tOe6lls"
+	},
+	{
+		"date": "2025-04-21T12:00:00.000Z",
+		"track": 15,
+		"song": "letter song",
+		"singer": "doriko",
+		"YTLink": "https://www.youtube.com/watch?v=R0p5tOe6lls"
+	},
+	{
+		"date": "2025-04-21T12:00:00.000Z",
+		"track": 16,
+		"song": "オレンジ",
+		"singer": "逢坂大河(釘宮理恵),櫛枝実乃梨(堀江由衣),川嶋亜美(喜多村英梨)",
+		"YTLink": "https://www.youtube.com/watch?v=R0p5tOe6lls"
+	},
+	{
+		"date": "2025-04-21T12:00:00.000Z",
+		"track": 17,
+		"song": "愛してるばんざーい!",
+		"singer": "μ's",
+		"YTLink": "https://www.youtube.com/watch?v=R0p5tOe6lls"
+	},
+	{
+		"date": "2025-04-21T12:00:00.000Z",
+		"track": 18,
+		"song": "Believe",
+		"singer": "Folder5",
+		"YTLink": "https://www.youtube.com/watch?v=R0p5tOe6lls"
+	},
+	{
+		"date": "2025-04-21T12:00:00.000Z",
+		"track": 19,
+		"song": "ココロのちず",
+		"singer": "BOYSTYLE",
+		"YTLink": "https://www.youtube.com/watch?v=R0p5tOe6lls"
+	},
+	{
+		"date": "2025-04-21T12:00:00.000Z",
+		"track": 20,
+		"song": "相思相愛",
+		"singer": "aiko",
+		"YTLink": "https://www.youtube.com/watch?v=R0p5tOe6lls"
+	},
+	{
 		"date": "2025-04-16T12:00:00.000Z",
 		"track": 1,
 		"song": "星になろうよ",
@@ -3149,7 +3289,7 @@
 		"date": "2025-02-13T12:00:00.000Z",
 		"track": 16,
 		"song": "オレンジ",
-		"singer": "流田Project(釘宮理恵,堀江由衣,喜多村英梨)",
+		"singer": "逢坂大河(釘宮理恵),櫛枝実乃梨(堀江由衣),川嶋亜美(喜多村英梨)",
 		"YTLink": "https://www.youtube.com/watch?v=c_-xsc6sQGg"
 	},
 	{
@@ -5288,7 +5428,7 @@
 		"date": "2024-12-23T12:00:00.000Z",
 		"track": 19,
 		"song": "オレンジ",
-		"singer": "流田Project(釘宮理恵,堀江由衣,喜多村英梨)",
+		"singer": "逢坂大河(釘宮理恵),櫛枝実乃梨(堀江由衣),川嶋亜美(喜多村英梨)",
 		"YTLink": "https://www.youtube.com/watch?v=KbTq7VYqzrg"
 	},
 	{
@@ -11684,7 +11824,7 @@
 		"date": "2024-08-19T16:00:00.000Z",
 		"track": 16,
 		"song": "オレンジ",
-		"singer": "流田Project(釘宮理恵,堀江由衣,喜多村英梨)",
+		"singer": "逢坂大河(釘宮理恵),櫛枝実乃梨(堀江由衣),川嶋亜美(喜多村英梨)",
 		"YTLink": "https://www.youtube.com/watch?v=QTkOqOrfmbQ"
 	},
 	{
@@ -15083,7 +15223,7 @@
 		"date": "2024-06-05T16:00:00.000Z",
 		"track": 18,
 		"song": "オレンジ",
-		"singer": "流田Project(釘宮理恵,堀江由衣,喜多村英梨)",
+		"singer": "逢坂大河(釘宮理恵),櫛枝実乃梨(堀江由衣),川嶋亜美(喜多村英梨)",
 		"YTLink": "https://www.youtube.com/watch?v=y6qrCf0n9ds"
 	},
 	{
@@ -21592,7 +21732,7 @@
 		"date": "2024-02-13T16:00:00.000Z",
 		"track": 13,
 		"song": "オレンジ",
-		"singer": "流田Project(釘宮理恵,堀江由衣,喜多村英梨)",
+		"singer": "逢坂大河(釘宮理恵),櫛枝実乃梨(堀江由衣),川嶋亜美(喜多村英梨)",
 		"YTLink": "https://www.youtube.com/watch?v=gKnBFgsurAI"
 	},
 	{
@@ -23855,7 +23995,7 @@
 		"date": "2023-12-24T16:00:00.000Z",
 		"track": 15,
 		"song": "オレンジ",
-		"singer": "流田Project(釘宮理恵,堀江由衣,喜多村英梨)",
+		"singer": "逢坂大河(釘宮理恵),櫛枝実乃梨(堀江由衣),川嶋亜美(喜多村英梨)",
 		"YTLink": "https://www.youtube.com/watch?v=Zhao4Wc_rIU"
 	},
 	{
@@ -26760,7 +26900,7 @@
 		"date": "2023-11-19T16:00:00.000Z",
 		"track": 7,
 		"song": "オレンジ",
-		"singer": "流田Project(釘宮理恵,堀江由衣,喜多村英梨)",
+		"singer": "逢坂大河(釘宮理恵),櫛枝実乃梨(堀江由衣),川嶋亜美(喜多村英梨)",
 		"YTLink": "https://www.youtube.com/watch?v=blbbHiCbS2g"
 	},
 	{
@@ -28621,7 +28761,7 @@
 		"date": "2023-10-06T16:00:00.000Z",
 		"track": "5",
 		"song": "オレンジ",
-		"singer": "流田Project(釘宮理恵,堀江由衣,喜多村英梨)",
+		"singer": "逢坂大河(釘宮理恵),櫛枝実乃梨(堀江由衣),川嶋亜美(喜多村英梨)",
 		"note": "",
 		"YTLink": "https://www.youtube.com/watch?v=haQ7-mFKSio"
 	},
@@ -31781,7 +31921,7 @@
 		"date": "2023-08-21T16:00:00.000Z",
 		"track": "16",
 		"song": "オレンジ",
-		"singer": "流田Project(釘宮理恵,堀江由衣,喜多村英梨)",
+		"singer": "逢坂大河(釘宮理恵),櫛枝実乃梨(堀江由衣),川嶋亜美(喜多村英梨)",
 		"note": "",
 		"YTLink": "https://www.youtube.com/watch?v=8i6y-5O30ps"
 	},
@@ -32325,7 +32465,7 @@
 		"date": "2023-08-16T16:00:00.000Z",
 		"track": "6",
 		"song": "オレンジ",
-		"singer": "流田Project(釘宮理恵,堀江由衣,喜多村英梨)",
+		"singer": "逢坂大河(釘宮理恵),櫛枝実乃梨(堀江由衣),川嶋亜美(喜多村英梨)",
 		"note": "",
 		"YTLink": "https://www.youtube.com/watch?v=G-91jzmVyiM"
 	},
@@ -37557,7 +37697,7 @@
 		"date": "2023-06-14T16:00:00.000Z",
 		"track": "12",
 		"song": "オレンジ",
-		"singer": "流田Project(釘宮理恵,堀江由衣,喜多村英梨)",
+		"singer": "逢坂大河(釘宮理恵),櫛枝実乃梨(堀江由衣),川嶋亜美(喜多村英梨)",
 		"note": "",
 		"YTLink": "https://www.youtube.com/watch?v=IUklem2s9MY"
 	},
@@ -41941,7 +42081,7 @@
 		"date": "2023-04-20T16:00:00.000Z",
 		"track": "11",
 		"song": "オレンジ",
-		"singer": "",
+		"singer": "逢坂大河(釘宮理恵),櫛枝実乃梨(堀江由衣),川嶋亜美(喜多村英梨)",
 		"note": "毎日歌枠/オールジャンル",
 		"YTLink": "https://www.youtube.com/watch?v=jL0M6Waaj_0"
 	},
@@ -44373,7 +44513,7 @@
 		"date": "2023-03-13T16:00:00.000Z",
 		"track": "14",
 		"song": "オレンジ",
-		"singer": "",
+		"singer": "逢坂大河(釘宮理恵),櫛枝実乃梨(堀江由衣),川嶋亜美(喜多村英梨)",
 		"note": "リクエスト",
 		"YTLink": "https://www.youtube.com/watch?v=DisKVQ5v-1Y"
 	},
@@ -46501,7 +46641,7 @@
 		"date": "2023-02-12T16:00:00.000Z",
 		"track": "15",
 		"song": "オレンジ",
-		"singer": "",
+		"singer": "逢坂大河(釘宮理恵),櫛枝実乃梨(堀江由衣),川嶋亜美(喜多村英梨)",
 		"note": "",
 		"YTLink": "https://www.youtube.com/watch?v=eQLA-MiaFDM"
 	},
@@ -49285,7 +49425,7 @@
 		"date": "2022-12-18T16:00:00.000Z",
 		"track": "29",
 		"song": "オレンジ",
-		"singer": "",
+		"singer": "逢坂大河(釘宮理恵),櫛枝実乃梨(堀江由衣),川嶋亜美(喜多村英梨)",
 		"note": "",
 		"YTLink": "https://www.youtube.com/watch?v=H2yFDNZ-gKM"
 	},
@@ -52973,7 +53113,7 @@
 		"date": "2022-11-10T16:00:00.000Z",
 		"track": "7",
 		"song": "オレンジ",
-		"singer": "",
+		"singer": "逢坂大河(釘宮理恵),櫛枝実乃梨(堀江由衣),川嶋亜美(喜多村英梨)",
 		"note": "",
 		"YTLink": "https://www.youtube.com/watch?v=6ERJ9txPmyw"
 	},
@@ -54853,7 +54993,7 @@
 		"date": "2022-10-25T16:00:00.000Z",
 		"track": "27",
 		"song": "オレンジ",
-		"singer": "",
+		"singer": "逢坂大河(釘宮理恵),櫛枝実乃梨(堀江由衣),川嶋亜美(喜多村英梨)",
 		"note": "耐久",
 		"YTLink": "https://www.youtube.com/watch?v=SWzFHtvZu48"
 	},
@@ -59157,7 +59297,7 @@
 		"date": "2022-08-28T16:00:00.000Z",
 		"track": "5",
 		"song": "オレンジ",
-		"singer": "",
+		"singer": "逢坂大河(釘宮理恵),櫛枝実乃梨(堀江由衣),川嶋亜美(喜多村英梨)",
 		"note": "耐久",
 		"YTLink": "https://www.youtube.com/watch?v=nQUfpJIhKUw"
 	},
@@ -59989,7 +60129,7 @@
 		"date": "2022-08-23T16:00:00.000Z",
 		"track": "19",
 		"song": "オレンジ",
-		"singer": "",
+		"singer": "逢坂大河(釘宮理恵),櫛枝実乃梨(堀江由衣),川嶋亜美(喜多村英梨)",
 		"note": "",
 		"YTLink": "https://www.youtube.com/watch?v=urJ_wF4G9hc"
 	},
@@ -60517,7 +60657,7 @@
 		"date": "2022-08-13T16:00:00.000Z",
 		"track": "12",
 		"song": "オレンジ",
-		"singer": "",
+		"singer": "逢坂大河(釘宮理恵),櫛枝実乃梨(堀江由衣),川嶋亜美(喜多村英梨)",
 		"note": "",
 		"YTLink": "https://www.youtube.com/watch?v=3q-x4lILV2w"
 	},
@@ -64421,7 +64561,7 @@
 		"date": "2022-06-21T16:00:00.000Z",
 		"track": "9",
 		"song": "オレンジ",
-		"singer": "",
+		"singer": "逢坂大河(釘宮理恵),櫛枝実乃梨(堀江由衣),川嶋亜美(喜多村英梨)",
 		"note": "",
 		"YTLink": "https://www.youtube.com/watch?v=MGehpLrCba4"
 	},
@@ -65405,7 +65545,7 @@
 		"date": "2022-06-15T16:00:00.000Z",
 		"track": "8",
 		"song": "オレンジ",
-		"singer": "",
+		"singer": "逢坂大河(釘宮理恵),櫛枝実乃梨(堀江由衣),川嶋亜美(喜多村英梨)",
 		"note": "毎日歌枠/リクエスト",
 		"YTLink": "https://www.youtube.com/watch?v=js0DFgmhojw"
 	},
@@ -68845,7 +68985,7 @@
 		"date": "2022-04-07T16:00:00.000Z",
 		"track": "6",
 		"song": "オレンジ",
-		"singer": "",
+		"singer": "逢坂大河(釘宮理恵),櫛枝実乃梨(堀江由衣),川嶋亜美(喜多村英梨)",
 		"note": "",
 		"YTLink": "https://www.youtube.com/watch?v=dpylVnCIwqE"
 	},
@@ -71797,7 +71937,7 @@
 		"date": "2022-02-11T16:00:00.000Z",
 		"track": "52",
 		"song": "オレンジ",
-		"singer": "",
+		"singer": "逢坂大河(釘宮理恵),櫛枝実乃梨(堀江由衣),川嶋亜美(喜多村英梨)",
 		"note": "耐久",
 		"YTLink": "https://www.youtube.com/watch?v=Q4nHOeY9Up0"
 	},
@@ -74605,7 +74745,7 @@
 		"date": "2021-12-08T16:00:00.000Z",
 		"track": "17",
 		"song": "オレンジ",
-		"singer": "",
+		"singer": "逢坂大河(釘宮理恵),櫛枝実乃梨(堀江由衣),川嶋亜美(喜多村英梨)",
 		"note": "",
 		"YTLink": "https://www.youtube.com/watch?v=ltiRkuh7sSM"
 	},
@@ -76325,7 +76465,7 @@
 		"date": "2021-10-23T16:00:00.000Z",
 		"track": "4",
 		"song": "オレンジ",
-		"singer": "",
+		"singer": "逢坂大河(釘宮理恵),櫛枝実乃梨(堀江由衣),川嶋亜美(喜多村英梨)",
 		"note": "毎日歌枠/リクエスト",
 		"YTLink": "https://www.youtube.com/watch?v=jlOceMeeWsY"
 	},
@@ -78901,7 +79041,7 @@
 		"date": "2021-09-10T16:00:00.000Z",
 		"track": "5",
 		"song": "オレンジ",
-		"singer": "",
+		"singer": "逢坂大河(釘宮理恵),櫛枝実乃梨(堀江由衣),川嶋亜美(喜多村英梨)",
 		"note": "",
 		"YTLink": "https://www.youtube.com/watch?v=wTRADIYwBWI"
 	},
@@ -79901,7 +80041,7 @@
 		"date": "2021-08-13T16:00:00.000Z",
 		"track": "3",
 		"song": "オレンジ",
-		"singer": "",
+		"singer": "逢坂大河(釘宮理恵),櫛枝実乃梨(堀江由衣),川嶋亜美(喜多村英梨)",
 		"note": "",
 		"YTLink": "https://www.youtube.com/watch?v=LNpwH9yz2OI"
 	},
@@ -80581,7 +80721,7 @@
 		"date": "2021-07-26T16:00:00.000Z",
 		"track": "3",
 		"song": "オレンジ",
-		"singer": "",
+		"singer": "逢坂大河(釘宮理恵),櫛枝実乃梨(堀江由衣),川嶋亜美(喜多村英梨)",
 		"note": "",
 		"YTLink": "https://www.youtube.com/watch?v=kL1rSLmwxjQ"
 	},
@@ -81501,7 +81641,7 @@
 		"date": "2021-07-07T16:00:00.000Z",
 		"track": "18",
 		"song": "オレンジ",
-		"singer": "",
+		"singer": "逢坂大河(釘宮理恵),櫛枝実乃梨(堀江由衣),川嶋亜美(喜多村英梨)",
 		"note": "",
 		"YTLink": "https://www.youtube.com/watch?v=Nd50pWE0p-E"
 	},
@@ -81549,7 +81689,7 @@
 		"date": "2021-07-02T16:00:00.000Z",
 		"track": "5",
 		"song": "オレンジ",
-		"singer": "",
+		"singer": "逢坂大河(釘宮理恵),櫛枝実乃梨(堀江由衣),川嶋亜美(喜多村英梨)",
 		"note": "耐久/初回",
 		"YTLink": "https://www.youtube.com/watch?v=5GV1w_GnMgU"
 	},
