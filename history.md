@@ -1,4 +1,5 @@
 ﻿## 2025
+* 2025/04/29　Single 『love letter』[youtube](https://www.youtube.com/watch?v=-KV9NriS6Qw) / [booth](https://maisakiberry.booth.pm/items/6856723)
 * 2025/04/27　[8th Album 『ReveRseR!!!』 発売](https://www.maisakiberry.com/8th-reverser)
 * 2025/04/13　[「Rock on V」 出演](https://x.com/MaisakiBerry/status/1886013630392811976)
 * 2025/03/30　Single 『虹の向こう側』[youtube](https://www.youtube.com/watch?v=uJMo_6VWbNU) / [booth](https://maisakiberry.booth.pm/items/6749581)
