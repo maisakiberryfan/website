@@ -1,5 +1,567 @@
 [
 	{
+		"date": "2025-06-02T12:00:00.000Z",
+		"track": 1,
+		"song": "全肯定ハピハピキュートSTORY！",
+		"singer": "苺咲べりぃ",
+		"YTLink": "https://www.youtube.com/watch?v=N1ul0Aeo7FY"
+	},
+	{
+		"date": "2025-06-02T12:00:00.000Z",
+		"track": 2,
+		"song": "すーぱーかれんたいむ",
+		"singer": "FRUITS ZIPPER",
+		"YTLink": "https://www.youtube.com/watch?v=N1ul0Aeo7FY"
+	},
+	{
+		"date": "2025-06-02T12:00:00.000Z",
+		"track": 3,
+		"song": "完璧主義で☆",
+		"singer": "FRUITS ZIPPER",
+		"YTLink": "https://www.youtube.com/watch?v=N1ul0Aeo7FY"
+	},
+	{
+		"date": "2025-06-02T12:00:00.000Z",
+		"track": 4,
+		"song": "愛 for you!",
+		"singer": "i☆Ris",
+		"YTLink": "https://www.youtube.com/watch?v=N1ul0Aeo7FY"
+	},
+	{
+		"date": "2025-06-02T12:00:00.000Z",
+		"track": 5,
+		"song": "ハートビート急上昇",
+		"singer": "i☆Ris",
+		"YTLink": "https://www.youtube.com/watch?v=N1ul0Aeo7FY"
+	},
+	{
+		"date": "2025-06-02T12:00:00.000Z",
+		"track": 6,
+		"song": "同担☆拒否",
+		"singer": "HoneyWorks",
+		"YTLink": "https://www.youtube.com/watch?v=N1ul0Aeo7FY"
+	},
+	{
+		"date": "2025-06-02T12:00:00.000Z",
+		"track": 7,
+		"song": "Ring Ring Rainbow!!",
+		"singer": "ゆいかおり(小倉唯,石原夏織)",
+		"YTLink": "https://www.youtube.com/watch?v=N1ul0Aeo7FY"
+	},
+	{
+		"date": "2025-06-02T12:00:00.000Z",
+		"track": 8,
+		"song": "最悪な日でもあなたが好き。",
+		"singer": "芹澤優",
+		"YTLink": "https://www.youtube.com/watch?v=N1ul0Aeo7FY"
+	},
+	{
+		"date": "2025-06-02T12:00:00.000Z",
+		"track": 9,
+		"song": "ウラオモテ・フォーチュン",
+		"singer": "小澤亜李",
+		"YTLink": "https://www.youtube.com/watch?v=N1ul0Aeo7FY"
+	},
+	{
+		"date": "2025-06-02T12:00:00.000Z",
+		"track": 10,
+		"song": "オレンジ",
+		"singer": "逢坂大河(釘宮理恵),櫛枝実乃梨(堀江由衣),川嶋亜美(喜多村英梨)",
+		"YTLink": "https://www.youtube.com/watch?v=N1ul0Aeo7FY"
+	},
+	{
+		"date": "2025-06-02T12:00:00.000Z",
+		"track": 11,
+		"song": "silky heart",
+		"singer": "堀江由衣",
+		"YTLink": "https://www.youtube.com/watch?v=N1ul0Aeo7FY"
+	},
+	{
+		"date": "2025-06-02T12:00:00.000Z",
+		"track": 12,
+		"song": "Honey",
+		"singer": "chihiRo",
+		"YTLink": "https://www.youtube.com/watch?v=N1ul0Aeo7FY"
+	},
+	{
+		"date": "2025-06-02T12:00:00.000Z",
+		"track": 13,
+		"song": "ロケットビート",
+		"singer": "安野希世乃",
+		"YTLink": "https://www.youtube.com/watch?v=N1ul0Aeo7FY"
+	},
+	{
+		"date": "2025-06-02T12:00:00.000Z",
+		"track": 14,
+		"song": "花に赤い糸",
+		"singer": "瀬戸口雛(麻倉もも)",
+		"YTLink": "https://www.youtube.com/watch?v=N1ul0Aeo7FY"
+	},
+	{
+		"date": "2025-06-02T12:00:00.000Z",
+		"track": 15,
+		"song": "今好きになる。",
+		"singer": "HoneyWorks",
+		"YTLink": "https://www.youtube.com/watch?v=N1ul0Aeo7FY"
+	},
+	{
+		"date": "2025-06-02T12:00:00.000Z",
+		"track": 16,
+		"song": "ネコに風船",
+		"singer": "大塚愛",
+		"YTLink": "https://www.youtube.com/watch?v=N1ul0Aeo7FY"
+	},
+	{
+		"date": "2025-06-02T12:00:00.000Z",
+		"track": 17,
+		"song": "PEACH",
+		"singer": "大塚愛",
+		"YTLink": "https://www.youtube.com/watch?v=N1ul0Aeo7FY"
+	},
+	{
+		"date": "2025-06-02T12:00:00.000Z",
+		"track": 18,
+		"song": "MAGIC",
+		"singer": "愛内里菜",
+		"YTLink": "https://www.youtube.com/watch?v=N1ul0Aeo7FY"
+	},
+	{
+		"date": "2025-06-02T12:00:00.000Z",
+		"track": 19,
+		"song": "I can't stop my love for you♥",
+		"singer": "愛内里菜",
+		"YTLink": "https://www.youtube.com/watch?v=N1ul0Aeo7FY"
+	},
+	{
+		"date": "2025-06-02T12:00:00.000Z",
+		"track": 20,
+		"song": "Absolute 5",
+		"singer": "ワルキューレ",
+		"YTLink": "https://www.youtube.com/watch?v=N1ul0Aeo7FY"
+	},
+	{
+		"date": "2025-05-30T12:00:00.000Z",
+		"track": 1,
+		"song": "全肯定ハピハピキュートSTORY！",
+		"singer": "苺咲べりぃ",
+		"YTLink": "https://www.youtube.com/watch?v=8Y6ZEIG1Ah8"
+	},
+	{
+		"date": "2025-05-30T12:00:00.000Z",
+		"track": 2,
+		"song": "ひたむきシンデレラ!",
+		"singer": "CUTIE STREET",
+		"YTLink": "https://www.youtube.com/watch?v=8Y6ZEIG1Ah8"
+	},
+	{
+		"date": "2025-05-30T12:00:00.000Z",
+		"track": 3,
+		"song": "わたしの一番かわいいところ",
+		"singer": "FRUITS ZIPPER",
+		"YTLink": "https://www.youtube.com/watch?v=8Y6ZEIG1Ah8"
+	},
+	{
+		"date": "2025-05-30T12:00:00.000Z",
+		"track": 4,
+		"song": "アルティメット☆magic",
+		"singer": "i☆Ris",
+		"YTLink": "https://www.youtube.com/watch?v=8Y6ZEIG1Ah8"
+	},
+	{
+		"date": "2025-05-30T12:00:00.000Z",
+		"track": 5,
+		"song": "FANTASTIC ILLUSION",
+		"singer": "i☆Ris",
+		"YTLink": "https://www.youtube.com/watch?v=8Y6ZEIG1Ah8"
+	},
+	{
+		"date": "2025-05-30T12:00:00.000Z",
+		"track": 6,
+		"song": "たぶん",
+		"singer": "YOASOBI",
+		"YTLink": "https://www.youtube.com/watch?v=8Y6ZEIG1Ah8"
+	},
+	{
+		"date": "2025-05-30T12:00:00.000Z",
+		"track": 7,
+		"song": "ハルジオン",
+		"singer": "YOASOBI",
+		"YTLink": "https://www.youtube.com/watch?v=8Y6ZEIG1Ah8"
+	},
+	{
+		"date": "2025-05-30T12:00:00.000Z",
+		"track": 8,
+		"song": "ただ君に晴れ",
+		"singer": "ヨルシカ",
+		"YTLink": "https://www.youtube.com/watch?v=8Y6ZEIG1Ah8"
+	},
+	{
+		"date": "2025-05-30T12:00:00.000Z",
+		"track": 9,
+		"song": "花に亡霊",
+		"singer": "ヨルシカ",
+		"YTLink": "https://www.youtube.com/watch?v=8Y6ZEIG1Ah8"
+	},
+	{
+		"date": "2025-05-30T12:00:00.000Z",
+		"track": 10,
+		"song": "絶対アイドル辞めないで",
+		"singer": "=LOVE",
+		"YTLink": "https://www.youtube.com/watch?v=8Y6ZEIG1Ah8"
+	},
+	{
+		"date": "2025-05-30T12:00:00.000Z",
+		"track": 11,
+		"song": "サマーチョコレート",
+		"singer": "≠ME",
+		"YTLink": "https://www.youtube.com/watch?v=8Y6ZEIG1Ah8"
+	},
+	{
+		"date": "2025-05-30T12:00:00.000Z",
+		"track": 12,
+		"song": "気分上々↑↑",
+		"singer": "mihimaru GT",
+		"YTLink": "https://www.youtube.com/watch?v=8Y6ZEIG1Ah8"
+	},
+	{
+		"date": "2025-05-30T12:00:00.000Z",
+		"track": 13,
+		"song": "TOMORROW",
+		"singer": "Machico",
+		"YTLink": "https://www.youtube.com/watch?v=8Y6ZEIG1Ah8"
+	},
+	{
+		"date": "2025-05-30T12:00:00.000Z",
+		"track": 14,
+		"song": "君色シグナル",
+		"singer": "春奈るな",
+		"YTLink": "https://www.youtube.com/watch?v=8Y6ZEIG1Ah8"
+	},
+	{
+		"date": "2025-05-30T12:00:00.000Z",
+		"track": 15,
+		"song": "ステラブリーズ",
+		"singer": "春奈るな",
+		"YTLink": "https://www.youtube.com/watch?v=8Y6ZEIG1Ah8"
+	},
+	{
+		"date": "2025-05-30T12:00:00.000Z",
+		"track": 16,
+		"song": "Diamonds",
+		"singer": "PRINCESS PRINCESS",
+		"YTLink": "https://www.youtube.com/watch?v=8Y6ZEIG1Ah8"
+	},
+	{
+		"date": "2025-05-30T12:00:00.000Z",
+		"track": 17,
+		"song": "出逢った頃のように",
+		"singer": "Every Little Thing",
+		"YTLink": "https://www.youtube.com/watch?v=8Y6ZEIG1Ah8"
+	},
+	{
+		"date": "2025-05-30T12:00:00.000Z",
+		"track": 18,
+		"song": "時の迷宮",
+		"singer": "ランカ・リー(中島愛),シェリル・ノーム(May'n)",
+		"YTLink": "https://www.youtube.com/watch?v=8Y6ZEIG1Ah8"
+	},
+	{
+		"date": "2025-05-30T12:00:00.000Z",
+		"track": 19,
+		"song": "放課後オーバーフロウ",
+		"singer": "ランカ・リー(中島愛)",
+		"YTLink": "https://www.youtube.com/watch?v=8Y6ZEIG1Ah8"
+	},
+	{
+		"date": "2025-05-30T12:00:00.000Z",
+		"track": 20,
+		"song": "ホシキラ",
+		"singer": "ランカ・リー(中島愛)",
+		"YTLink": "https://www.youtube.com/watch?v=8Y6ZEIG1Ah8"
+	},
+	{
+		"date": "2025-05-29T12:00:00.000Z",
+		"track": 1,
+		"song": "全肯定ハピハピキュートSTORY！",
+		"singer": "苺咲べりぃ",
+		"YTLink": "https://www.youtube.com/watch?v=8TWyjEXhqKE"
+	},
+	{
+		"date": "2025-05-29T12:00:00.000Z",
+		"track": 2,
+		"song": "Mela!",
+		"singer": "緑黄色社会",
+		"YTLink": "https://www.youtube.com/watch?v=8TWyjEXhqKE"
+	},
+	{
+		"date": "2025-05-29T12:00:00.000Z",
+		"track": 3,
+		"song": "花になって",
+		"singer": "緑黄色社会",
+		"YTLink": "https://www.youtube.com/watch?v=8TWyjEXhqKE"
+	},
+	{
+		"date": "2025-05-29T12:00:00.000Z",
+		"track": 4,
+		"song": "奈落の花",
+		"singer": "島みやえい子",
+		"YTLink": "https://www.youtube.com/watch?v=8TWyjEXhqKE"
+	},
+	{
+		"date": "2025-05-29T12:00:00.000Z",
+		"track": 5,
+		"song": "対象a",
+		"singer": "anNina",
+		"YTLink": "https://www.youtube.com/watch?v=8TWyjEXhqKE"
+	},
+	{
+		"date": "2025-05-29T12:00:00.000Z",
+		"track": 6,
+		"song": "3年目の浮気",
+		"singer": "ヒロシ&キーボー",
+		"YTLink": "https://www.youtube.com/watch?v=8TWyjEXhqKE"
+	},
+	{
+		"date": "2025-05-29T12:00:00.000Z",
+		"track": 7,
+		"song": "君の知らない物語",
+		"singer": "Supercell",
+		"YTLink": "https://www.youtube.com/watch?v=8TWyjEXhqKE"
+	},
+	{
+		"date": "2025-05-29T12:00:00.000Z",
+		"track": 8,
+		"song": "アイドル",
+		"singer": "YOASOBI",
+		"YTLink": "https://www.youtube.com/watch?v=8TWyjEXhqKE"
+	},
+	{
+		"date": "2025-05-29T12:00:00.000Z",
+		"track": 9,
+		"song": "我ら完全無敵のアイドル!!",
+		"singer": "B小町 ルビー(齊藤なぎさ)、有馬かな(原菜乃華)、MEMちょ(あの)",
+		"YTLink": "https://www.youtube.com/watch?v=8TWyjEXhqKE"
+	},
+	{
+		"date": "2025-05-29T12:00:00.000Z",
+		"track": 10,
+		"song": "白い雪のプリンセスは",
+		"singer": "のぼる↑P",
+		"YTLink": "https://www.youtube.com/watch?v=8TWyjEXhqKE"
+	},
+	{
+		"date": "2025-05-29T12:00:00.000Z",
+		"track": 11,
+		"song": "ポジティブ☆ダンスタイム",
+		"singer": "キノシタ",
+		"YTLink": "https://www.youtube.com/watch?v=8TWyjEXhqKE"
+	},
+	{
+		"date": "2025-05-29T12:00:00.000Z",
+		"track": 12,
+		"song": "メルト",
+		"singer": "ryo",
+		"YTLink": "https://www.youtube.com/watch?v=8TWyjEXhqKE"
+	},
+	{
+		"date": "2025-05-29T12:00:00.000Z",
+		"track": 13,
+		"song": "ワールドイズマイン",
+		"singer": "ryo",
+		"YTLink": "https://www.youtube.com/watch?v=8TWyjEXhqKE"
+	},
+	{
+		"date": "2025-05-29T12:00:00.000Z",
+		"track": 14,
+		"song": "ミキミキ★ロマンティックナイト",
+		"singer": "samfree",
+		"note": "初回",
+		"YTLink": "https://www.youtube.com/watch?v=8TWyjEXhqKE"
+	},
+	{
+		"date": "2025-05-29T12:00:00.000Z",
+		"track": 15,
+		"song": "あんなに一緒だったのに",
+		"singer": "See-Saw",
+		"YTLink": "https://www.youtube.com/watch?v=8TWyjEXhqKE"
+	},
+	{
+		"date": "2025-05-29T12:00:00.000Z",
+		"track": 16,
+		"song": "雨とカプチーノ",
+		"singer": "ヨルシカ",
+		"YTLink": "https://www.youtube.com/watch?v=8TWyjEXhqKE"
+	},
+	{
+		"date": "2025-05-29T12:00:00.000Z",
+		"track": 17,
+		"song": "だから僕は音楽を辞めた",
+		"singer": "ヨルシカ",
+		"YTLink": "https://www.youtube.com/watch?v=8TWyjEXhqKE"
+	},
+	{
+		"date": "2025-05-29T12:00:00.000Z",
+		"track": 18,
+		"song": "可愛くてごめん",
+		"singer": "HoneyWorks",
+		"YTLink": "https://www.youtube.com/watch?v=8TWyjEXhqKE"
+	},
+	{
+		"date": "2025-05-29T12:00:00.000Z",
+		"track": 19,
+		"song": "ヒロイン育成計画",
+		"singer": "HoneyWorks",
+		"YTLink": "https://www.youtube.com/watch?v=8TWyjEXhqKE"
+	},
+	{
+		"date": "2025-05-29T12:00:00.000Z",
+		"track": 20,
+		"song": "ファンサ",
+		"singer": "mona(夏川椎菜)",
+		"YTLink": "https://www.youtube.com/watch?v=8TWyjEXhqKE"
+	},
+	{
+		"date": "2025-05-28T12:00:00.000Z",
+		"track": 1,
+		"song": "全肯定ハピハピキュートSTORY！",
+		"singer": "苺咲べりぃ",
+		"note": "オリソン/初回",
+		"YTLink": "https://www.youtube.com/watch?v=4eBbbpqWb34"
+	},
+	{
+		"date": "2025-05-28T12:00:00.000Z",
+		"track": 2,
+		"song": "NEW KAWAII",
+		"singer": "FRUITS ZIPPER",
+		"YTLink": "https://www.youtube.com/watch?v=4eBbbpqWb34"
+	},
+	{
+		"date": "2025-05-28T12:00:00.000Z",
+		"track": 3,
+		"song": "超めでたいソング ～こんなに幸せでいいのかな?～",
+		"singer": "FRUITS ZIPPER",
+		"YTLink": "https://www.youtube.com/watch?v=4eBbbpqWb34"
+	},
+	{
+		"date": "2025-05-28T12:00:00.000Z",
+		"track": 4,
+		"song": "すーぱーかれんたいむ",
+		"singer": "FRUITS ZIPPER",
+		"YTLink": "https://www.youtube.com/watch?v=4eBbbpqWb34"
+	},
+	{
+		"date": "2025-05-28T12:00:00.000Z",
+		"track": 5,
+		"song": "かわいいだけじゃだめですか?",
+		"singer": "CUTIE STREET",
+		"YTLink": "https://www.youtube.com/watch?v=4eBbbpqWb34"
+	},
+	{
+		"date": "2025-05-28T12:00:00.000Z",
+		"track": 6,
+		"song": "SHINING SONG",
+		"singer": "B小町 ルビー(齊藤なぎさ)、有馬かな(原菜乃華)、MEMちょ(あの)",
+		"YTLink": "https://www.youtube.com/watch?v=4eBbbpqWb34"
+	},
+	{
+		"date": "2025-05-28T12:00:00.000Z",
+		"track": 7,
+		"song": "トワイライト",
+		"singer": "B小町 ルビー(齊藤なぎさ)、有馬かな(原菜乃華)、MEMちょ(あの)",
+		"YTLink": "https://www.youtube.com/watch?v=4eBbbpqWb34"
+	},
+	{
+		"date": "2025-05-28T12:00:00.000Z",
+		"track": 8,
+		"song": "ヒトリゴト",
+		"singer": "ClariS",
+		"YTLink": "https://www.youtube.com/watch?v=4eBbbpqWb34"
+	},
+	{
+		"date": "2025-05-28T12:00:00.000Z",
+		"track": 9,
+		"song": "STEP",
+		"singer": "ClariS",
+		"YTLink": "https://www.youtube.com/watch?v=4eBbbpqWb34"
+	},
+	{
+		"date": "2025-05-28T12:00:00.000Z",
+		"track": 10,
+		"song": "Choose me♡ダーリン",
+		"singer": "StylipS",
+		"YTLink": "https://www.youtube.com/watch?v=4eBbbpqWb34"
+	},
+	{
+		"date": "2025-05-28T12:00:00.000Z",
+		"track": 11,
+		"song": "MIRACLE RUSH",
+		"singer": "StylipS",
+		"YTLink": "https://www.youtube.com/watch?v=4eBbbpqWb34"
+	},
+	{
+		"date": "2025-05-28T12:00:00.000Z",
+		"track": 12,
+		"song": "promise",
+		"singer": "広瀬香美",
+		"YTLink": "https://www.youtube.com/watch?v=4eBbbpqWb34"
+	},
+	{
+		"date": "2025-05-28T12:00:00.000Z",
+		"track": 13,
+		"song": "ロマンスの神様",
+		"singer": "広瀬香美",
+		"YTLink": "https://www.youtube.com/watch?v=4eBbbpqWb34"
+	},
+	{
+		"date": "2025-05-28T12:00:00.000Z",
+		"track": 14,
+		"song": "最高の片想い",
+		"singer": "タイナカサチ",
+		"YTLink": "https://www.youtube.com/watch?v=4eBbbpqWb34"
+	},
+	{
+		"date": "2025-05-28T12:00:00.000Z",
+		"track": 15,
+		"song": "手紙～愛するあなたへ～",
+		"singer": "藤田麻衣子",
+		"YTLink": "https://www.youtube.com/watch?v=4eBbbpqWb34"
+	},
+	{
+		"date": "2025-05-28T12:00:00.000Z",
+		"track": 16,
+		"song": "世界は恋に落ちている",
+		"singer": "CHiCO",
+		"YTLink": "https://www.youtube.com/watch?v=4eBbbpqWb34"
+	},
+	{
+		"date": "2025-05-28T12:00:00.000Z",
+		"track": 17,
+		"song": "可愛くなりたい",
+		"singer": "HoneyWorks feat.鎖那",
+		"YTLink": "https://www.youtube.com/watch?v=4eBbbpqWb34"
+	},
+	{
+		"date": "2025-05-28T12:00:00.000Z",
+		"track": 18,
+		"song": "半永久的に愛してよ♡",
+		"singer": "堀江由衣",
+		"YTLink": "https://www.youtube.com/watch?v=4eBbbpqWb34"
+	},
+	{
+		"date": "2025-05-28T12:00:00.000Z",
+		"track": 19,
+		"song": "虹のかけら",
+		"singer": "昆夏美",
+		"YTLink": "https://www.youtube.com/watch?v=4eBbbpqWb34"
+	},
+	{
+		"date": "2025-05-28T12:00:00.000Z",
+		"track": 20,
+		"song": "コネクト",
+		"singer": "ClariS",
+		"YTLink": "https://www.youtube.com/watch?v=4eBbbpqWb34"
+	},
+	{
 		"date": "2025-05-22T12:00:00.000Z",
 		"track": 1,
 		"song": "Happy Lucky Strawberry",
@@ -602,7 +1164,7 @@
 	{
 		"date": "2025-05-14T12:00:00.000Z",
 		"track": 6,
-		"song": "Choose me♡ダーリン44444",
+		"song": "Choose me♡ダーリン",
 		"singer": "StylipS",
 		"YTLink": "https://www.youtube.com/watch?v=Uih_lKfGfQ8"
 	},
@@ -65044,7 +65606,7 @@
 		"date": "2022-07-09T16:00:00.000Z",
 		"track": "3",
 		"song": "TOMORROW",
-		"singer": "",
+		"singer": "岡本真夜",
 		"note": "初回",
 		"YTLink": "https://www.youtube.com/watch?v=XBCmifqcdi4"
 	},
@@ -86259,7 +86821,7 @@
 	{
 		"date": "2021-05-12T16:00:00.000Z",
 		"track": "11",
-		"song": "Ring Ring Rainbow！！",
+		"song": "Ring Ring Rainbow!!",
 		"singer": "",
 		"note": "初回",
 		"YTLink": ""
