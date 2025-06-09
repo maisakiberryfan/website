@@ -1,5 +1,146 @@
 [
 	{
+		"date": "2025-06-04T12:00:00.000Z",
+		"track": 1,
+		"song": "全肯定ハピハピキュートSTORY！",
+		"singer": "苺咲べりぃ",
+		"YTLink": "https://www.youtube.com/watch?v=hIngtoKOtmc"
+	},
+	{
+		"date": "2025-06-04T12:00:00.000Z",
+		"track": 2,
+		"song": "超めでたいソング ～こんなに幸せでいいのかな?～",
+		"singer": "FRUITS ZIPPER",
+		"YTLink": "https://www.youtube.com/watch?v=hIngtoKOtmc"
+	},
+	{
+		"date": "2025-06-04T12:00:00.000Z",
+		"track": 3,
+		"song": "倍倍FIGHT!",
+		"singer": "CANDY TUNE",
+		"YTLink": "https://www.youtube.com/watch?v=hIngtoKOtmc"
+	},
+	{
+		"date": "2025-06-04T12:00:00.000Z",
+		"track": 4,
+		"song": "FANTASTIC ILLUSION",
+		"singer": "i☆Ris",
+		"YTLink": "https://www.youtube.com/watch?v=hIngtoKOtmc"
+	},
+	{
+		"date": "2025-06-04T12:00:00.000Z",
+		"track": 5,
+		"song": "Happy New World☆",
+		"singer": "i☆Ris",
+		"note": "初回",
+		"YTLink": "https://www.youtube.com/watch?v=hIngtoKOtmc"
+	},
+	{
+		"date": "2025-06-04T12:00:00.000Z",
+		"track": 6,
+		"song": "こちら、幸福安心委員会です。",
+		"singer": "うたたP",
+		"YTLink": "https://www.youtube.com/watch?v=hIngtoKOtmc"
+	},
+	{
+		"date": "2025-06-04T12:00:00.000Z",
+		"track": 7,
+		"song": "Missing Promise",
+		"singer": "鈴木このみ",
+		"YTLink": "https://www.youtube.com/watch?v=hIngtoKOtmc"
+	},
+	{
+		"date": "2025-06-04T12:00:00.000Z",
+		"track": 8,
+		"song": "祝福",
+		"singer": "YOASOBI",
+		"YTLink": "https://www.youtube.com/watch?v=hIngtoKOtmc"
+	},
+	{
+		"date": "2025-06-04T12:00:00.000Z",
+		"track": 9,
+		"song": "夜に駆ける",
+		"singer": "YOASOBI",
+		"YTLink": "https://www.youtube.com/watch?v=hIngtoKOtmc"
+	},
+	{
+		"date": "2025-06-04T12:00:00.000Z",
+		"track": 10,
+		"song": "プラネタリウム",
+		"singer": "大塚愛",
+		"YTLink": "https://www.youtube.com/watch?v=hIngtoKOtmc"
+	},
+	{
+		"date": "2025-06-04T12:00:00.000Z",
+		"track": 11,
+		"song": "クリスマスイブ",
+		"singer": "優里",
+		"YTLink": "https://www.youtube.com/watch?v=hIngtoKOtmc"
+	},
+	{
+		"date": "2025-06-04T12:00:00.000Z",
+		"track": 12,
+		"song": "オールドファッション",
+		"singer": "back number",
+		"YTLink": "https://www.youtube.com/watch?v=hIngtoKOtmc"
+	},
+	{
+		"date": "2025-06-04T12:00:00.000Z",
+		"track": 13,
+		"song": "ハッピーエンド",
+		"singer": "back number",
+		"YTLink": "https://www.youtube.com/watch?v=hIngtoKOtmc"
+	},
+	{
+		"date": "2025-06-04T12:00:00.000Z",
+		"track": 14,
+		"song": "ただ君に晴れ",
+		"singer": "ヨルシカ",
+		"YTLink": "https://www.youtube.com/watch?v=hIngtoKOtmc"
+	},
+	{
+		"date": "2025-06-04T12:00:00.000Z",
+		"track": 15,
+		"song": "ヒッチコック",
+		"singer": "ヨルシカ",
+		"YTLink": "https://www.youtube.com/watch?v=hIngtoKOtmc"
+	},
+	{
+		"date": "2025-06-04T12:00:00.000Z",
+		"track": 16,
+		"song": "優しい彗星",
+		"singer": "YOASOBI",
+		"YTLink": "https://www.youtube.com/watch?v=hIngtoKOtmc"
+	},
+	{
+		"date": "2025-06-04T12:00:00.000Z",
+		"track": 17,
+		"song": "勇者",
+		"singer": "YOASOBI",
+		"YTLink": "https://www.youtube.com/watch?v=hIngtoKOtmc"
+	},
+	{
+		"date": "2025-06-04T12:00:00.000Z",
+		"track": 18,
+		"song": "打上花火",
+		"singer": "DAOKO × 米津玄師",
+		"YTLink": "https://www.youtube.com/watch?v=hIngtoKOtmc"
+	},
+	{
+		"date": "2025-06-04T12:00:00.000Z",
+		"track": 19,
+		"song": "ユメセカイ",
+		"singer": "戸松遥",
+		"YTLink": "https://www.youtube.com/watch?v=hIngtoKOtmc"
+	},
+	{
+		"date": "2025-06-04T12:00:00.000Z",
+		"track": 20,
+		"song": "アムリタ",
+		"singer": "牧野由依",
+		"YTLink": "https://www.youtube.com/watch?v=hIngtoKOtmc"
+	},
+	{
 		"date": "2025-06-02T12:00:00.000Z",
 		"track": 1,
 		"song": "全肯定ハピハピキュートSTORY！",
