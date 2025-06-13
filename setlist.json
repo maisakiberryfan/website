@@ -1,5 +1,146 @@
 [
 	{
+		"date": "2025-06-10T12:00:00.000Z",
+		"track": 1,
+		"song": "love letter",
+		"singer": "苺咲べりぃ",
+		"YTLink": "https://www.youtube.com/watch?v=VOUjE02nREw"
+	},
+	{
+		"date": "2025-06-10T12:00:00.000Z",
+		"track": 2,
+		"song": "ユメ語るよりユメ歌おう",
+		"singer": "Aqours",
+		"YTLink": "https://www.youtube.com/watch?v=VOUjE02nREw"
+	},
+	{
+		"date": "2025-06-10T12:00:00.000Z",
+		"track": 3,
+		"song": "夢をかなえてドラえもん",
+		"singer": "mao",
+		"YTLink": "https://www.youtube.com/watch?v=VOUjE02nREw"
+	},
+	{
+		"date": "2025-06-10T12:00:00.000Z",
+		"track": 4,
+		"song": "ラストシーン",
+		"singer": "いきものがかり",
+		"YTLink": "https://www.youtube.com/watch?v=VOUjE02nREw"
+	},
+	{
+		"date": "2025-06-10T12:00:00.000Z",
+		"track": 5,
+		"song": "ふたり",
+		"singer": "いきものがかり",
+		"YTLink": "https://www.youtube.com/watch?v=VOUjE02nREw"
+	},
+	{
+		"date": "2025-06-10T12:00:00.000Z",
+		"track": 6,
+		"song": "手紙～愛するあなたへ～",
+		"singer": "藤田麻衣子",
+		"YTLink": "https://www.youtube.com/watch?v=VOUjE02nREw"
+	},
+	{
+		"date": "2025-06-10T12:00:00.000Z",
+		"track": 7,
+		"song": "ねぇ",
+		"singer": "藤田麻衣子",
+		"YTLink": "https://www.youtube.com/watch?v=VOUjE02nREw"
+	},
+	{
+		"date": "2025-06-10T12:00:00.000Z",
+		"track": 8,
+		"song": "おじゃま虫",
+		"singer": "DECO*27",
+		"YTLink": "https://www.youtube.com/watch?v=VOUjE02nREw"
+	},
+	{
+		"date": "2025-06-10T12:00:00.000Z",
+		"track": 9,
+		"song": "おじゃま虫Ⅱ",
+		"singer": "DECO*27",
+		"YTLink": "https://www.youtube.com/watch?v=VOUjE02nREw"
+	},
+	{
+		"date": "2025-06-10T12:00:00.000Z",
+		"track": 10,
+		"song": "亜麻色の髪の乙女",
+		"singer": "島谷ひとみ",
+		"YTLink": "https://www.youtube.com/watch?v=VOUjE02nREw"
+	},
+	{
+		"date": "2025-06-10T12:00:00.000Z",
+		"track": 11,
+		"song": "YUME日和",
+		"singer": "島谷ひとみ",
+		"YTLink": "https://www.youtube.com/watch?v=VOUjE02nREw"
+	},
+	{
+		"date": "2025-06-10T12:00:00.000Z",
+		"track": 12,
+		"song": "Legend of Mermaid",
+		"singer": "七海るちあ(中田あすみ)・宝生波音(寺門仁美)・洞院リナ(浅野まゆみ)",
+		"YTLink": "https://www.youtube.com/watch?v=VOUjE02nREw"
+	},
+	{
+		"date": "2025-06-10T12:00:00.000Z",
+		"track": 13,
+		"song": "Before the Moment",
+		"singer": "喜多村英梨",
+		"note": "初回",
+		"YTLink": "https://www.youtube.com/watch?v=VOUjE02nREw"
+	},
+	{
+		"date": "2025-06-10T12:00:00.000Z",
+		"track": 14,
+		"song": "my sweet heart",
+		"singer": "小松里歌",
+		"YTLink": "https://www.youtube.com/watch?v=VOUjE02nREw"
+	},
+	{
+		"date": "2025-06-10T12:00:00.000Z",
+		"track": 15,
+		"song": "恋はア・ラ・モード",
+		"singer": "東京ミュウミュウ",
+		"YTLink": "https://www.youtube.com/watch?v=VOUjE02nREw"
+	},
+	{
+		"date": "2025-06-10T12:00:00.000Z",
+		"track": 16,
+		"song": "Dream × Dream",
+		"singer": "愛内里菜",
+		"YTLink": "https://www.youtube.com/watch?v=VOUjE02nREw"
+	},
+	{
+		"date": "2025-06-10T12:00:00.000Z",
+		"track": 17,
+		"song": "恋はスリル、ショック、サスペンス",
+		"singer": "愛内里菜",
+		"YTLink": "https://www.youtube.com/watch?v=VOUjE02nREw"
+	},
+	{
+		"date": "2025-06-10T12:00:00.000Z",
+		"track": 18,
+		"song": "風も空もきっと…",
+		"singer": "観月ありさ",
+		"YTLink": "https://www.youtube.com/watch?v=VOUjE02nREw"
+	},
+	{
+		"date": "2025-06-10T12:00:00.000Z",
+		"track": 19,
+		"song": "私たちになりたくて",
+		"singer": "藤谷美和子",
+		"YTLink": "https://www.youtube.com/watch?v=VOUjE02nREw"
+	},
+	{
+		"date": "2025-06-10T12:00:00.000Z",
+		"track": 20,
+		"song": "夜空",
+		"singer": "鈴木みのり",
+		"YTLink": "https://www.youtube.com/watch?v=VOUjE02nREw"
+	},
+	{
 		"date": "2025-06-09T12:00:00.000Z",
 		"track": 1,
 		"song": "全肯定ハピハピキュートSTORY！",
@@ -84191,7 +84332,7 @@
 		"date": "2021-07-07T16:00:00.000Z",
 		"track": "11",
 		"song": "恋はア・ラ・モード",
-		"singer": "",
+		"singer": "東京ミュウミュウ",
 		"note": "",
 		"YTLink": "https://www.youtube.com/watch?v=Nd50pWE0p-E"
 	},
@@ -95487,7 +95628,7 @@
 		"date": "2020-11-15T16:00:00.000Z",
 		"track": "4",
 		"song": "恋はア・ラ・モード",
-		"singer": "",
+		"singer": "東京ミュウミュウ",
 		"note": "初回",
 		"YTLink": "https://www.youtube.com/watch?v=_CHXwwEx_p0"
 	},
