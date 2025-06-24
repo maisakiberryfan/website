@@ -1,5 +1,565 @@
 [
 	{
+		"date": "2025-06-23T12:00:00.000Z",
+		"track": 1,
+		"song": "全肯定ハピハピキュートSTORY！",
+		"singer": "苺咲べりぃ",
+		"YTLink": "https://www.youtube.com/watch?v=CQCCopX4sVo"
+	},
+	{
+		"date": "2025-06-23T12:00:00.000Z",
+		"track": 2,
+		"song": "歩いていこう！",
+		"singer": "東山奈央",
+		"YTLink": "https://www.youtube.com/watch?v=CQCCopX4sVo"
+	},
+	{
+		"date": "2025-06-23T12:00:00.000Z",
+		"track": 3,
+		"song": "青空 Jumping Heart",
+		"singer": "Aqours",
+		"YTLink": "https://www.youtube.com/watch?v=CQCCopX4sVo"
+	},
+	{
+		"date": "2025-06-23T12:00:00.000Z",
+		"track": 4,
+		"song": "恋になりたいAQUARIUM",
+		"singer": "Aqours",
+		"YTLink": "https://www.youtube.com/watch?v=CQCCopX4sVo"
+	},
+	{
+		"date": "2025-06-23T12:00:00.000Z",
+		"track": 5,
+		"song": "ユメ語るよりユメ歌おう",
+		"singer": "Aqours",
+		"YTLink": "https://www.youtube.com/watch?v=CQCCopX4sVo"
+	},
+	{
+		"date": "2025-06-23T12:00:00.000Z",
+		"track": 6,
+		"song": "告白日和、です！",
+		"singer": "南ことり(CV.内田彩), 小泉花陽(CV.久保ユリカ)",
+		"YTLink": "https://www.youtube.com/watch?v=CQCCopX4sVo"
+	},
+	{
+		"date": "2025-06-23T12:00:00.000Z",
+		"track": 7,
+		"song": "ススメ→トゥモロウ",
+		"singer": "高坂穂乃果(CV.新田恵海), 南ことり(CV.内田彩), 園田海未(CV.三森すずこ)",
+		"YTLink": "https://www.youtube.com/watch?v=CQCCopX4sVo"
+	},
+	{
+		"date": "2025-06-23T12:00:00.000Z",
+		"track": 8,
+		"song": "START:DASH!!",
+		"singer": "高坂穂乃果(CV.新田恵海), 南ことり(CV.内田彩), 園田海未(CV.三森すずこ)",
+		"YTLink": "https://www.youtube.com/watch?v=CQCCopX4sVo"
+	},
+	{
+		"date": "2025-06-23T12:00:00.000Z",
+		"track": 9,
+		"song": "Mermaid festa vol.2 ～Passionate～",
+		"singer": "高坂穂乃果(新田恵海), 星空凛(飯田里穂)",
+		"YTLink": "https://www.youtube.com/watch?v=CQCCopX4sVo"
+	},
+	{
+		"date": "2025-06-23T12:00:00.000Z",
+		"track": 10,
+		"song": "最悪な日でもあなたが好き。",
+		"singer": "芹澤優",
+		"YTLink": "https://www.youtube.com/watch?v=CQCCopX4sVo"
+	},
+	{
+		"date": "2025-06-23T12:00:00.000Z",
+		"track": 11,
+		"song": "アイマイモコ",
+		"singer": "水瀬いのり",
+		"YTLink": "https://www.youtube.com/watch?v=CQCCopX4sVo"
+	},
+	{
+		"date": "2025-06-23T12:00:00.000Z",
+		"track": 12,
+		"song": "Missing Promise",
+		"singer": "鈴木このみ",
+		"YTLink": "https://www.youtube.com/watch?v=CQCCopX4sVo"
+	},
+	{
+		"date": "2025-06-23T12:00:00.000Z",
+		"track": 13,
+		"song": "対象a",
+		"singer": "anNina",
+		"YTLink": "https://www.youtube.com/watch?v=CQCCopX4sVo"
+	},
+	{
+		"date": "2025-06-23T12:00:00.000Z",
+		"track": 14,
+		"song": "FEELING AROUND",
+		"singer": "鈴木みのり",
+		"YTLink": "https://www.youtube.com/watch?v=CQCCopX4sVo"
+	},
+	{
+		"date": "2025-06-23T12:00:00.000Z",
+		"track": 15,
+		"song": "虹のかけら",
+		"singer": "昆夏美",
+		"YTLink": "https://www.youtube.com/watch?v=CQCCopX4sVo"
+	},
+	{
+		"date": "2025-06-23T12:00:00.000Z",
+		"track": 16,
+		"song": "虹いろ・クマクマ",
+		"singer": "ランカ・リー(中島愛)",
+		"YTLink": "https://www.youtube.com/watch?v=CQCCopX4sVo"
+	},
+	{
+		"date": "2025-06-23T12:00:00.000Z",
+		"track": 17,
+		"song": "アナタノオト",
+		"singer": "ランカ・リー(中島愛)",
+		"YTLink": "https://www.youtube.com/watch?v=CQCCopX4sVo"
+	},
+	{
+		"date": "2025-06-23T12:00:00.000Z",
+		"track": 18,
+		"song": "風が吹いている",
+		"singer": "いきものがかり",
+		"YTLink": "https://www.youtube.com/watch?v=CQCCopX4sVo"
+	},
+	{
+		"date": "2025-06-23T12:00:00.000Z",
+		"track": 19,
+		"song": "SMILY",
+		"singer": "大塚愛",
+		"YTLink": "https://www.youtube.com/watch?v=CQCCopX4sVo"
+	},
+	{
+		"date": "2025-06-23T12:00:00.000Z",
+		"track": 20,
+		"song": "愛してるばんざーい!",
+		"singer": "μ's",
+		"YTLink": "https://www.youtube.com/watch?v=CQCCopX4sVo"
+	},
+	{
+		"date": "2025-06-20T14:00:00.000Z",
+		"track": 1,
+		"song": "love letter",
+		"singer": "苺咲べりぃ",
+		"YTLink": "https://www.youtube.com/watch?v=uqzJUsqn8sI"
+	},
+	{
+		"date": "2025-06-20T14:00:00.000Z",
+		"track": 2,
+		"song": "君の知らない物語",
+		"singer": "Supercell",
+		"YTLink": "https://www.youtube.com/watch?v=uqzJUsqn8sI"
+	},
+	{
+		"date": "2025-06-20T14:00:00.000Z",
+		"track": 3,
+		"song": "カブトムシ",
+		"singer": "aiko",
+		"YTLink": "https://www.youtube.com/watch?v=uqzJUsqn8sI"
+	},
+	{
+		"date": "2025-06-20T14:00:00.000Z",
+		"track": 4,
+		"song": "雨とカプチーノ",
+		"singer": "ヨルシカ",
+		"YTLink": "https://www.youtube.com/watch?v=uqzJUsqn8sI"
+	},
+	{
+		"date": "2025-06-20T14:00:00.000Z",
+		"track": 5,
+		"song": "歌に形はないけれど",
+		"singer": "doriko",
+		"YTLink": "https://www.youtube.com/watch?v=uqzJUsqn8sI"
+	},
+	{
+		"date": "2025-06-20T14:00:00.000Z",
+		"track": 6,
+		"song": "水平線",
+		"singer": "back number",
+		"YTLink": "https://www.youtube.com/watch?v=uqzJUsqn8sI"
+	},
+	{
+		"date": "2025-06-20T14:00:00.000Z",
+		"track": 7,
+		"song": "オールドファッション",
+		"singer": "back number",
+		"YTLink": "https://www.youtube.com/watch?v=uqzJUsqn8sI"
+	},
+	{
+		"date": "2025-06-20T14:00:00.000Z",
+		"track": 8,
+		"song": "HAPPY BIRTHDAY",
+		"singer": "back number",
+		"YTLink": "https://www.youtube.com/watch?v=uqzJUsqn8sI"
+	},
+	{
+		"date": "2025-06-20T14:00:00.000Z",
+		"track": 9,
+		"song": "クリスマスイブ",
+		"singer": "優里",
+		"YTLink": "https://www.youtube.com/watch?v=uqzJUsqn8sI"
+	},
+	{
+		"date": "2025-06-20T14:00:00.000Z",
+		"track": 10,
+		"song": "115万キロのフィルム",
+		"singer": "Official髭男dism",
+		"YTLink": "https://www.youtube.com/watch?v=uqzJUsqn8sI"
+	},
+	{
+		"date": "2025-06-20T14:00:00.000Z",
+		"track": 11,
+		"song": "ヒロイン",
+		"singer": "back number",
+		"YTLink": "https://www.youtube.com/watch?v=uqzJUsqn8sI"
+	},
+	{
+		"date": "2025-06-20T14:00:00.000Z",
+		"track": 12,
+		"song": "ガーネット",
+		"singer": "奥華子",
+		"YTLink": "https://www.youtube.com/watch?v=uqzJUsqn8sI"
+	},
+	{
+		"date": "2025-06-20T14:00:00.000Z",
+		"track": 13,
+		"song": "変わらないもの",
+		"singer": "奥華子",
+		"YTLink": "https://www.youtube.com/watch?v=uqzJUsqn8sI"
+	},
+	{
+		"date": "2025-06-20T14:00:00.000Z",
+		"track": 14,
+		"song": "アイネクライネ",
+		"singer": "米津玄師",
+		"YTLink": "https://www.youtube.com/watch?v=uqzJUsqn8sI"
+	},
+	{
+		"date": "2025-06-20T14:00:00.000Z",
+		"track": 15,
+		"song": "ハッピーエンド",
+		"singer": "back number",
+		"YTLink": "https://www.youtube.com/watch?v=uqzJUsqn8sI"
+	},
+	{
+		"date": "2025-06-20T14:00:00.000Z",
+		"track": 16,
+		"song": "未来",
+		"singer": "コブクロ",
+		"YTLink": "https://www.youtube.com/watch?v=uqzJUsqn8sI"
+	},
+	{
+		"date": "2025-06-20T14:00:00.000Z",
+		"track": 17,
+		"song": "アイノカタチ",
+		"singer": "MISIA",
+		"YTLink": "https://www.youtube.com/watch?v=uqzJUsqn8sI"
+	},
+	{
+		"date": "2025-06-20T14:00:00.000Z",
+		"track": 18,
+		"song": "楔",
+		"singer": "奥華子",
+		"YTLink": "https://www.youtube.com/watch?v=uqzJUsqn8sI"
+	},
+	{
+		"date": "2025-06-20T14:00:00.000Z",
+		"track": 19,
+		"song": "虹",
+		"singer": "菅田将暉",
+		"YTLink": "https://www.youtube.com/watch?v=uqzJUsqn8sI"
+	},
+	{
+		"date": "2025-06-20T14:00:00.000Z",
+		"track": 20,
+		"song": "You",
+		"singer": "癒月",
+		"YTLink": "https://www.youtube.com/watch?v=uqzJUsqn8sI"
+	},
+	{
+		"date": "2025-06-17T12:00:00.000Z",
+		"track": 1,
+		"song": "全肯定ハピハピキュートSTORY！",
+		"singer": "苺咲べりぃ",
+		"YTLink": "https://www.youtube.com/watch?v=pIZyp2Yccfs"
+	},
+	{
+		"date": "2025-06-17T12:00:00.000Z",
+		"track": 2,
+		"song": "アルティメット☆magic",
+		"singer": "i☆Ris",
+		"YTLink": "https://www.youtube.com/watch?v=pIZyp2Yccfs"
+	},
+	{
+		"date": "2025-06-17T12:00:00.000Z",
+		"track": 3,
+		"song": "ハートビート急上昇",
+		"singer": "i☆Ris",
+		"YTLink": "https://www.youtube.com/watch?v=pIZyp2Yccfs"
+	},
+	{
+		"date": "2025-06-17T12:00:00.000Z",
+		"track": 4,
+		"song": "TOMORROW",
+		"singer": "Machico",
+		"YTLink": "https://www.youtube.com/watch?v=pIZyp2Yccfs"
+	},
+	{
+		"date": "2025-06-17T12:00:00.000Z",
+		"track": 5,
+		"song": "いつかの、いくつかのきみとのせかい",
+		"singer": "fhána",
+		"YTLink": "https://www.youtube.com/watch?v=pIZyp2Yccfs"
+	},
+	{
+		"date": "2025-06-17T12:00:00.000Z",
+		"track": 6,
+		"song": "可愛くなりたい",
+		"singer": "HoneyWorks feat.鎖那",
+		"YTLink": "https://www.youtube.com/watch?v=pIZyp2Yccfs"
+	},
+	{
+		"date": "2025-06-17T12:00:00.000Z",
+		"track": 7,
+		"song": "ヒロイン育成計画",
+		"singer": "HoneyWorks",
+		"YTLink": "https://www.youtube.com/watch?v=pIZyp2Yccfs"
+	},
+	{
+		"date": "2025-06-17T12:00:00.000Z",
+		"track": 8,
+		"song": "Honey",
+		"singer": "chihiRo",
+		"YTLink": "https://www.youtube.com/watch?v=pIZyp2Yccfs"
+	},
+	{
+		"date": "2025-06-17T12:00:00.000Z",
+		"track": 9,
+		"song": "CLEAR",
+		"singer": "坂本真綾",
+		"YTLink": "https://www.youtube.com/watch?v=pIZyp2Yccfs"
+	},
+	{
+		"date": "2025-06-17T12:00:00.000Z",
+		"track": 10,
+		"song": "ヒロイン",
+		"singer": "back number",
+		"YTLink": "https://www.youtube.com/watch?v=pIZyp2Yccfs"
+	},
+	{
+		"date": "2025-06-17T12:00:00.000Z",
+		"track": 11,
+		"song": "オールドファッション",
+		"singer": "back number",
+		"YTLink": "https://www.youtube.com/watch?v=pIZyp2Yccfs"
+	},
+	{
+		"date": "2025-06-17T12:00:00.000Z",
+		"track": 12,
+		"song": "恋(奥華子)",
+		"singer": "奥華子",
+		"YTLink": "https://www.youtube.com/watch?v=pIZyp2Yccfs"
+	},
+	{
+		"date": "2025-06-17T12:00:00.000Z",
+		"track": 13,
+		"song": "あなたに好きと言われたい",
+		"singer": "奥華子",
+		"YTLink": "https://www.youtube.com/watch?v=pIZyp2Yccfs"
+	},
+	{
+		"date": "2025-06-17T12:00:00.000Z",
+		"track": 14,
+		"song": "大正浪漫",
+		"singer": "YOASOBI",
+		"YTLink": "https://www.youtube.com/watch?v=pIZyp2Yccfs"
+	},
+	{
+		"date": "2025-06-17T12:00:00.000Z",
+		"track": 15,
+		"song": "群青",
+		"singer": "YOASOBI",
+		"YTLink": "https://www.youtube.com/watch?v=pIZyp2Yccfs"
+	},
+	{
+		"date": "2025-06-17T12:00:00.000Z",
+		"track": 16,
+		"song": "だから僕は音楽を辞めた",
+		"singer": "ヨルシカ",
+		"YTLink": "https://www.youtube.com/watch?v=pIZyp2Yccfs"
+	},
+	{
+		"date": "2025-06-17T12:00:00.000Z",
+		"track": 17,
+		"song": "言って。",
+		"singer": "ヨルシカ",
+		"YTLink": "https://www.youtube.com/watch?v=pIZyp2Yccfs"
+	},
+	{
+		"date": "2025-06-17T12:00:00.000Z",
+		"track": 18,
+		"song": "クラゲ、流れ星",
+		"singer": "大塚愛",
+		"YTLink": "https://www.youtube.com/watch?v=pIZyp2Yccfs"
+	},
+	{
+		"date": "2025-06-17T12:00:00.000Z",
+		"track": 19,
+		"song": "クムリウタ",
+		"singer": "大塚愛",
+		"YTLink": "https://www.youtube.com/watch?v=pIZyp2Yccfs"
+	},
+	{
+		"date": "2025-06-17T12:00:00.000Z",
+		"track": 20,
+		"song": "Crosswalk",
+		"singer": "鈴木みのり",
+		"YTLink": "https://www.youtube.com/watch?v=pIZyp2Yccfs"
+	},
+	{
+		"date": "2025-06-15T13:00:00.000Z",
+		"track": 1,
+		"song": "全肯定ハピハピキュートSTORY！",
+		"singer": "苺咲べりぃ",
+		"YTLink": "https://www.youtube.com/watch?v=LOgGurMfvPA"
+	},
+	{
+		"date": "2025-06-15T13:00:00.000Z",
+		"track": 2,
+		"song": "SHINING SONG",
+		"singer": "B小町 ルビー(齊藤なぎさ)、有馬かな(原菜乃華)、MEMちょ(あの)",
+		"YTLink": "https://www.youtube.com/watch?v=LOgGurMfvPA"
+	},
+	{
+		"date": "2025-06-15T13:00:00.000Z",
+		"track": 3,
+		"song": "すーぱーかれんたいむ",
+		"singer": "FRUITS ZIPPER",
+		"YTLink": "https://www.youtube.com/watch?v=LOgGurMfvPA"
+	},
+	{
+		"date": "2025-06-15T13:00:00.000Z",
+		"track": 4,
+		"song": "Strawberry Jam",
+		"singer": "大塚愛",
+		"YTLink": "https://www.youtube.com/watch?v=LOgGurMfvPA"
+	},
+	{
+		"date": "2025-06-15T13:00:00.000Z",
+		"track": 5,
+		"song": "金魚花火",
+		"singer": "大塚愛",
+		"YTLink": "https://www.youtube.com/watch?v=LOgGurMfvPA"
+	},
+	{
+		"date": "2025-06-15T13:00:00.000Z",
+		"track": 6,
+		"song": "Flavor Of Life",
+		"singer": "宇多田ヒカル",
+		"YTLink": "https://www.youtube.com/watch?v=LOgGurMfvPA"
+	},
+	{
+		"date": "2025-06-15T13:00:00.000Z",
+		"track": 7,
+		"song": "プラネタリウム",
+		"singer": "大塚愛",
+		"YTLink": "https://www.youtube.com/watch?v=LOgGurMfvPA"
+	},
+	{
+		"date": "2025-06-15T13:00:00.000Z",
+		"track": 8,
+		"song": "半永久的に愛してよ♡",
+		"singer": "堀江由衣",
+		"YTLink": "https://www.youtube.com/watch?v=LOgGurMfvPA"
+	},
+	{
+		"date": "2025-06-15T13:00:00.000Z",
+		"track": 9,
+		"song": "夏の約束",
+		"singer": "堀江由衣",
+		"YTLink": "https://www.youtube.com/watch?v=LOgGurMfvPA"
+	},
+	{
+		"date": "2025-06-15T13:00:00.000Z",
+		"track": 10,
+		"song": "雨とカプチーノ",
+		"singer": "ヨルシカ",
+		"YTLink": "https://www.youtube.com/watch?v=LOgGurMfvPA"
+	},
+	{
+		"date": "2025-06-15T13:00:00.000Z",
+		"track": 11,
+		"song": "ヒッチコック",
+		"singer": "ヨルシカ",
+		"YTLink": "https://www.youtube.com/watch?v=LOgGurMfvPA"
+	},
+	{
+		"date": "2025-06-15T13:00:00.000Z",
+		"track": 12,
+		"song": "ユメセカイ",
+		"singer": "戸松遥",
+		"YTLink": "https://www.youtube.com/watch?v=LOgGurMfvPA"
+	},
+	{
+		"date": "2025-06-15T13:00:00.000Z",
+		"track": 13,
+		"song": "Overfly",
+		"singer": "春奈るな",
+		"YTLink": "https://www.youtube.com/watch?v=LOgGurMfvPA"
+	},
+	{
+		"date": "2025-06-15T13:00:00.000Z",
+		"track": 14,
+		"song": "unlasting",
+		"singer": "LiSA",
+		"YTLink": "https://www.youtube.com/watch?v=LOgGurMfvPA"
+	},
+	{
+		"date": "2025-06-15T13:00:00.000Z",
+		"track": 15,
+		"song": "Startear",
+		"singer": "春奈るな",
+		"YTLink": "https://www.youtube.com/watch?v=LOgGurMfvPA"
+	},
+	{
+		"date": "2025-06-15T13:00:00.000Z",
+		"track": 16,
+		"song": "白い雪のプリンセスは",
+		"singer": "のぼる↑P",
+		"YTLink": "https://www.youtube.com/watch?v=LOgGurMfvPA"
+	},
+	{
+		"date": "2025-06-15T13:00:00.000Z",
+		"track": 17,
+		"song": "メルト",
+		"singer": "ryo",
+		"YTLink": "https://www.youtube.com/watch?v=LOgGurMfvPA"
+	},
+	{
+		"date": "2025-06-15T13:00:00.000Z",
+		"track": 18,
+		"song": "放課後オーバーフロウ",
+		"singer": "ランカ・リー(中島愛)",
+		"YTLink": "https://www.youtube.com/watch?v=LOgGurMfvPA"
+	},
+	{
+		"date": "2025-06-15T13:00:00.000Z",
+		"track": 19,
+		"song": "時の迷宮",
+		"singer": "ランカ・リー(中島愛),シェリル・ノーム(May'n)",
+		"YTLink": "https://www.youtube.com/watch?v=LOgGurMfvPA"
+	},
+	{
+		"date": "2025-06-15T13:00:00.000Z",
+		"track": 20,
+		"song": "ホシキラ",
+		"singer": "ランカ・リー(中島愛)",
+		"YTLink": "https://www.youtube.com/watch?v=LOgGurMfvPA"
+	},
+	{
 		"date": "2025-06-10T12:00:00.000Z",
 		"track": 1,
 		"song": "love letter",
@@ -1411,7 +1971,7 @@
 		"track": 1,
 		"song": "love letter",
 		"singer": "苺咲べりぃ",
-		"note": "初回",
+		"note": "",
 		"YTLink": "https://www.youtube.com/watch?v=ERk8mXLE6UY"
 	},
 	{
@@ -2727,7 +3287,7 @@
 		"date": "2025-04-23T12:00:00.000Z",
 		"track": 18,
 		"song": "START:DASH!!",
-		"singer": "μ's",
+		"singer": "高坂穂乃果(CV.新田恵海), 南ことり(CV.内田彩), 園田海未(CV.三森すずこ)",
 		"YTLink": "https://www.youtube.com/watch?v=jFObXN3n0xM"
 	},
 	{
@@ -5335,7 +5895,7 @@
 		"date": "2025-02-25T12:00:00.000Z",
 		"track": 6,
 		"song": "START:DASH!!",
-		"singer": "μ's",
+		"singer": "高坂穂乃果(CV.新田恵海), 南ことり(CV.内田彩), 園田海未(CV.三森すずこ)",
 		"YTLink": "https://www.youtube.com/watch?v=36FjpyJZEMc"
 	},
 	{
@@ -19568,7 +20128,7 @@
 		"date": "2024-05-07T16:00:00.000Z",
 		"track": 12,
 		"song": "START:DASH!!",
-		"singer": "μ's",
+		"singer": "高坂穂乃果(CV.新田恵海), 南ことり(CV.内田彩), 園田海未(CV.三森すずこ)",
 		"YTLink": "https://www.youtube.com/watch?v=jQEBmfqILPY"
 	},
 	{
@@ -30722,7 +31282,7 @@
 		"date": "2023-10-22T16:00:00.000Z",
 		"track": 10,
 		"song": "START:DASH!!",
-		"singer": "μ's",
+		"singer": "高坂穂乃果(CV.新田恵海), 南ことり(CV.内田彩), 園田海未(CV.三森すずこ)",
 		"YTLink": "https://www.youtube.com/watch?v=nAQ5VRlIIxw"
 	},
 	{
@@ -42588,7 +43148,7 @@
 		"date": "2023-05-15T16:00:00.000Z",
 		"track": "17",
 		"song": "ススメ→トゥモロウ",
-		"singer": "",
+		"singer": "高坂穂乃果(CV.新田恵海), 南ことり(CV.内田彩), 園田海未(CV.三森すずこ)",
 		"note": "",
 		"YTLink": "https://www.youtube.com/watch?v=4zW35KNjpO0"
 	},
@@ -68724,7 +69284,7 @@
 		"date": "2022-06-13T16:00:00.000Z",
 		"track": "7",
 		"song": "ススメ→トゥモロウ",
-		"singer": "",
+		"singer": "高坂穂乃果(CV.新田恵海), 南ことり(CV.内田彩), 園田海未(CV.三森すずこ)",
 		"note": "毎日歌枠/アイドルアニメ",
 		"YTLink": "https://www.youtube.com/watch?v=zf3YSNeQITQ"
 	},
@@ -68780,7 +69340,7 @@
 		"date": "2022-06-13T16:00:00.000Z",
 		"track": "14",
 		"song": "恋になりたいAQUARIUM",
-		"singer": "",
+		"singer": "Aqours",
 		"note": "毎日歌枠/アイドルアニメ",
 		"YTLink": "https://www.youtube.com/watch?v=zf3YSNeQITQ"
 	},
@@ -68828,7 +69388,7 @@
 		"date": "2022-06-13T16:00:00.000Z",
 		"track": "20",
 		"song": "START:DASH!!",
-		"singer": "",
+		"singer": "高坂穂乃果(CV.新田恵海), 南ことり(CV.内田彩), 園田海未(CV.三森すずこ)",
 		"note": "毎日歌枠/アイドルアニメ",
 		"YTLink": "https://www.youtube.com/watch?v=zf3YSNeQITQ"
 	},
@@ -82324,7 +82884,7 @@
 		"date": "2021-08-24T16:00:00.000Z",
 		"track": "9",
 		"song": "恋になりたいAQUARIUM",
-		"singer": "",
+		"singer": "Aqours",
 		"note": "夏歌",
 		"YTLink": "https://www.youtube.com/watch?v=RmWyxsVJQu0"
 	},
@@ -83860,7 +84420,7 @@
 		"date": "2021-07-14T16:00:00.000Z",
 		"track": "10",
 		"song": "ススメ→トゥモロウ",
-		"singer": "",
+		"singer": "高坂穂乃果(CV.新田恵海), 南ことり(CV.内田彩), 園田海未(CV.三森すずこ)",
 		"note": "",
 		"YTLink": "https://www.youtube.com/watch?v=KkYok0GGylU"
 	},
@@ -85668,7 +86228,7 @@
 		"date": "2021-06-14T16:00:00.000Z",
 		"track": "15",
 		"song": "ススメ→トゥモロウ",
-		"singer": "",
+		"singer": "高坂穂乃果(CV.新田恵海), 南ことり(CV.内田彩), 園田海未(CV.三森すずこ)",
 		"note": "",
 		"YTLink": "https://www.youtube.com/watch?v=OmxwOa1AZcg"
 	},
@@ -90532,7 +91092,7 @@
 		"date": "2021-02-15T16:00:00.000Z",
 		"track": "5",
 		"song": "START:DASH!!",
-		"singer": "",
+		"singer": "高坂穂乃果(CV.新田恵海), 南ことり(CV.内田彩), 園田海未(CV.三森すずこ)",
 		"note": "初回",
 		"YTLink": "https://www.youtube.com/watch?v=rMKGq1x0vGs"
 	},
@@ -90692,7 +91252,7 @@
 		"date": "2021-02-12T16:00:00.000Z",
 		"track": "7",
 		"song": "恋になりたいAQUARIUM",
-		"singer": "",
+		"singer": "Aqours",
 		"note": "初回",
 		"YTLink": "https://www.youtube.com/watch?v=FlefQ-HoDxU"
 	},

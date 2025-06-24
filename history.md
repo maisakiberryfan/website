@@ -1,4 +1,5 @@
 ﻿## 2025
+* 2025/06/28　歌枠リレー ライドリ歌謡祭ー水無月ー [twitter](https://x.com/MaisakiBerry/status/1936736376856412425) / [youtube]
 * 2025/05/27　Single 『全肯定ハピハピキュートSTORY！』[youtube](https://www.youtube.com/watch?v=CfoE7AlT9Gw) / [booth](https://maisakiberry.booth.pm/items/6973630)
 * 2025/05/26　[新モデル&衣装お披露目](https://www.youtube.com/watch?v=9G0RAa5cOlY)
 * 2025/04/29　Single 『love letter』[youtube](https://www.youtube.com/watch?v=-KV9NriS6Qw) / [booth](https://maisakiberry.booth.pm/items/6856723)
