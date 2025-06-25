@@ -1,5 +1,146 @@
 [
 	{
+		"date": "2025-06-24T12:00:00.000Z",
+		"track": 1,
+		"song": "全肯定ハピハピキュートSTORY！",
+		"singer": "苺咲べりぃ",
+		"YTLink": "https://www.youtube.com/watch?v=aqiTd5DO13M"
+	},
+	{
+		"date": "2025-06-24T12:00:00.000Z",
+		"track": 2,
+		"song": "向日葵",
+		"singer": "Ado",
+		"YTLink": "https://www.youtube.com/watch?v=aqiTd5DO13M"
+	},
+	{
+		"date": "2025-06-24T12:00:00.000Z",
+		"track": 3,
+		"song": "踊",
+		"singer": "Ado",
+		"YTLink": "https://www.youtube.com/watch?v=aqiTd5DO13M"
+	},
+	{
+		"date": "2025-06-24T12:00:00.000Z",
+		"track": 4,
+		"song": "夏色えがおで1,2,Jump!",
+		"singer": "μ's",
+		"YTLink": "https://www.youtube.com/watch?v=aqiTd5DO13M"
+	},
+	{
+		"date": "2025-06-24T12:00:00.000Z",
+		"track": 5,
+		"song": "きっと青春が聞こえる",
+		"singer": "μ's",
+		"YTLink": "https://www.youtube.com/watch?v=aqiTd5DO13M"
+	},
+	{
+		"date": "2025-06-24T12:00:00.000Z",
+		"track": 6,
+		"song": "コイスルオトメ",
+		"singer": "いきものがかり",
+		"YTLink": "https://www.youtube.com/watch?v=aqiTd5DO13M"
+	},
+	{
+		"date": "2025-06-24T12:00:00.000Z",
+		"track": 7,
+		"song": "ハルウタ",
+		"singer": "いきものがかり",
+		"YTLink": "https://www.youtube.com/watch?v=aqiTd5DO13M"
+	},
+	{
+		"date": "2025-06-24T12:00:00.000Z",
+		"track": 8,
+		"song": "赤い糸",
+		"singer": "コブクロ",
+		"YTLink": "https://www.youtube.com/watch?v=aqiTd5DO13M"
+	},
+	{
+		"date": "2025-06-24T12:00:00.000Z",
+		"track": 9,
+		"song": "Voyage",
+		"singer": "浜崎あゆみ",
+		"YTLink": "https://www.youtube.com/watch?v=aqiTd5DO13M"
+	},
+	{
+		"date": "2025-06-24T12:00:00.000Z",
+		"track": 10,
+		"song": "りんごのうた",
+		"singer": "フレイア・ヴィオン(鈴木みのり)",
+		"note": "初回",
+		"YTLink": "https://www.youtube.com/watch?v=aqiTd5DO13M"
+	},
+	{
+		"date": "2025-06-24T12:00:00.000Z",
+		"track": 11,
+		"song": "風は予告なく吹く",
+		"singer": "ワルキューレ",
+		"YTLink": "https://www.youtube.com/watch?v=aqiTd5DO13M"
+	},
+	{
+		"date": "2025-06-24T12:00:00.000Z",
+		"track": 12,
+		"song": "歌に形はないけれど",
+		"singer": "doriko",
+		"YTLink": "https://www.youtube.com/watch?v=aqiTd5DO13M"
+	},
+	{
+		"date": "2025-06-24T12:00:00.000Z",
+		"track": 13,
+		"song": "夕日坂",
+		"singer": "doriko",
+		"YTLink": "https://www.youtube.com/watch?v=aqiTd5DO13M"
+	},
+	{
+		"date": "2025-06-24T12:00:00.000Z",
+		"track": 14,
+		"song": "君色に染まる",
+		"singer": "TOKOTOKO(西沢さんP)",
+		"YTLink": "https://www.youtube.com/watch?v=aqiTd5DO13M"
+	},
+	{
+		"date": "2025-06-24T12:00:00.000Z",
+		"track": 15,
+		"song": "夜もすがら君想ふ",
+		"singer": "TOKOTOKO(西沢さんP)",
+		"YTLink": "https://www.youtube.com/watch?v=aqiTd5DO13M"
+	},
+	{
+		"date": "2025-06-24T12:00:00.000Z",
+		"track": 16,
+		"song": "スイートマジック",
+		"singer": "Junky",
+		"YTLink": "https://www.youtube.com/watch?v=aqiTd5DO13M"
+	},
+	{
+		"date": "2025-06-24T12:00:00.000Z",
+		"track": 17,
+		"song": "サディスティック・ラブ",
+		"singer": "Junky",
+		"YTLink": "https://www.youtube.com/watch?v=aqiTd5DO13M"
+	},
+	{
+		"date": "2025-06-24T12:00:00.000Z",
+		"track": 18,
+		"song": "心做し",
+		"singer": "蝶々P",
+		"YTLink": "https://www.youtube.com/watch?v=aqiTd5DO13M"
+	},
+	{
+		"date": "2025-06-24T12:00:00.000Z",
+		"track": 19,
+		"song": "ピエロ",
+		"singer": "KEI",
+		"YTLink": "https://www.youtube.com/watch?v=aqiTd5DO13M"
+	},
+	{
+		"date": "2025-06-24T12:00:00.000Z",
+		"track": 20,
+		"song": "ドレミファロンド",
+		"singer": "40mP",
+		"YTLink": "https://www.youtube.com/watch?v=aqiTd5DO13M"
+	},
+	{
 		"date": "2025-06-23T12:00:00.000Z",
 		"track": 1,
 		"song": "全肯定ハピハピキュートSTORY！",
