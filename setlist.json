@@ -1,5 +1,577 @@
 [
 	{
+		"date": "2025-07-09T12:00:00.000Z",
+		"track": 1,
+		"song": "全肯定ハピハピキュートSTORY！",
+		"singer": "苺咲べりぃ",
+		"YTLink": "https://www.youtube.com/watch?v=Vkc8RHC24KE"
+	},
+	{
+		"date": "2025-07-09T12:00:00.000Z",
+		"track": 2,
+		"song": "Starry Wish",
+		"singer": "水瀬いのり",
+		"YTLink": "https://www.youtube.com/watch?v=Vkc8RHC24KE"
+	},
+	{
+		"date": "2025-07-09T12:00:00.000Z",
+		"track": 3,
+		"song": "ヒロイン育成計画",
+		"singer": "HoneyWorks",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=Vkc8RHC24KE"
+	},
+	{
+		"date": "2025-07-09T12:00:00.000Z",
+		"track": 4,
+		"song": "サマータイムシンデレラ",
+		"singer": "緑黄色社会",
+		"YTLink": "https://www.youtube.com/watch?v=Vkc8RHC24KE"
+	},
+	{
+		"date": "2025-07-09T12:00:00.000Z",
+		"track": 5,
+		"song": "Mela!",
+		"singer": "緑黄色社会",
+		"YTLink": "https://www.youtube.com/watch?v=Vkc8RHC24KE"
+	},
+	{
+		"date": "2025-07-09T12:00:00.000Z",
+		"track": 6,
+		"song": "ゲレンデがとけるほど恋したい",
+		"singer": "広瀬香美",
+		"YTLink": "https://www.youtube.com/watch?v=Vkc8RHC24KE"
+	},
+	{
+		"date": "2025-07-09T12:00:00.000Z",
+		"track": 7,
+		"song": "promise",
+		"singer": "広瀬香美",
+		"YTLink": "https://www.youtube.com/watch?v=Vkc8RHC24KE"
+	},
+	{
+		"date": "2025-07-09T12:00:00.000Z",
+		"track": 8,
+		"song": "射手座☆午後九時 Don't be late",
+		"singer": "シェリル・ノーム(May'n)",
+		"YTLink": "https://www.youtube.com/watch?v=Vkc8RHC24KE"
+	},
+	{
+		"date": "2025-07-09T12:00:00.000Z",
+		"track": 9,
+		"song": "ダイアモンド クレバス",
+		"singer": "シェリル・ノーム(May'n)",
+		"YTLink": "https://www.youtube.com/watch?v=Vkc8RHC24KE"
+	},
+	{
+		"date": "2025-07-09T12:00:00.000Z",
+		"track": 10,
+		"song": "なのです☆",
+		"singer": "羽入(堀江由衣)",
+		"YTLink": "https://www.youtube.com/watch?v=Vkc8RHC24KE"
+	},
+	{
+		"date": "2025-07-09T12:00:00.000Z",
+		"track": 11,
+		"song": "ひぐらしのなく頃に",
+		"singer": "島みやえい子",
+		"YTLink": "https://www.youtube.com/watch?v=Vkc8RHC24KE"
+	},
+	{
+		"date": "2025-07-09T12:00:00.000Z",
+		"track": 12,
+		"song": "半永久的に愛してよ♡",
+		"singer": "堀江由衣",
+		"YTLink": "https://www.youtube.com/watch?v=Vkc8RHC24KE"
+	},
+	{
+		"date": "2025-07-09T12:00:00.000Z",
+		"track": 13,
+		"song": "夏の約束",
+		"singer": "堀江由衣",
+		"YTLink": "https://www.youtube.com/watch?v=Vkc8RHC24KE"
+	},
+	{
+		"date": "2025-07-09T12:00:00.000Z",
+		"track": 14,
+		"song": "Fantastic future",
+		"singer": "田村ゆかり",
+		"YTLink": "https://www.youtube.com/watch?v=Vkc8RHC24KE"
+	},
+	{
+		"date": "2025-07-09T12:00:00.000Z",
+		"track": 15,
+		"song": "アルティメット☆magic",
+		"singer": "i☆Ris",
+		"YTLink": "https://www.youtube.com/watch?v=Vkc8RHC24KE"
+	},
+	{
+		"date": "2025-07-09T12:00:00.000Z",
+		"track": 16,
+		"song": "白い雪のプリンセスは",
+		"singer": "のぼる↑P",
+		"YTLink": "https://www.youtube.com/watch?v=Vkc8RHC24KE"
+	},
+	{
+		"date": "2025-07-09T12:00:00.000Z",
+		"track": 17,
+		"song": "only my railgun",
+		"singer": "fripSide",
+		"YTLink": "https://www.youtube.com/watch?v=Vkc8RHC24KE"
+	},
+	{
+		"date": "2025-07-09T12:00:00.000Z",
+		"track": 18,
+		"song": "Glossy:MMM",
+		"singer": "橋本みゆき",
+		"YTLink": "https://www.youtube.com/watch?v=Vkc8RHC24KE"
+	},
+	{
+		"date": "2025-07-09T12:00:00.000Z",
+		"track": 19,
+		"song": "TOMORROW",
+		"singer": "Machico",
+		"YTLink": "https://www.youtube.com/watch?v=Vkc8RHC24KE"
+	},
+	{
+		"date": "2025-07-09T12:00:00.000Z",
+		"track": 20,
+		"song": "Crosswalk",
+		"singer": "鈴木みのり",
+		"YTLink": "https://www.youtube.com/watch?v=Vkc8RHC24KE"
+	},
+	{
+		"date": "2025-07-07T12:00:00.000Z",
+		"track": 1,
+		"song": "星になろうよ",
+		"singer": "苺咲べりぃ",
+		"YTLink": "https://www.youtube.com/watch?v=lTaptc0dTTw"
+	},
+	{
+		"date": "2025-07-07T12:00:00.000Z",
+		"track": 2,
+		"song": "Starry Wish",
+		"singer": "水瀬いのり",
+		"YTLink": "https://www.youtube.com/watch?v=lTaptc0dTTw"
+	},
+	{
+		"date": "2025-07-07T12:00:00.000Z",
+		"track": 3,
+		"song": "Hello,星を数えて",
+		"singer": "星空凛(飯田里穂),西木野真姫(Pile),小泉花陽(久保ユリカ)",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=lTaptc0dTTw"
+	},
+	{
+		"date": "2025-07-07T12:00:00.000Z",
+		"track": 4,
+		"song": "夜の歌",
+		"singer": "大道寺知世(岩男潤子)",
+		"YTLink": "https://www.youtube.com/watch?v=lTaptc0dTTw"
+	},
+	{
+		"date": "2025-07-07T12:00:00.000Z",
+		"track": 5,
+		"song": "タキシード・ミラージュ",
+		"singer": "三石琴乃, 富沢美智恵,久川綾,篠原恵美,深見梨加",
+		"YTLink": "https://www.youtube.com/watch?v=lTaptc0dTTw"
+	},
+	{
+		"date": "2025-07-07T12:00:00.000Z",
+		"track": 6,
+		"song": "夜空にふたつ",
+		"singer": "koyori(電ポルP)",
+		"YTLink": "https://www.youtube.com/watch?v=lTaptc0dTTw"
+	},
+	{
+		"date": "2025-07-07T12:00:00.000Z",
+		"track": 7,
+		"song": "フタリボシ",
+		"singer": "40mp",
+		"note": "初回",
+		"YTLink": "https://www.youtube.com/watch?v=lTaptc0dTTw"
+	},
+	{
+		"date": "2025-07-07T12:00:00.000Z",
+		"track": 8,
+		"song": "ベテルギウス",
+		"singer": "優里",
+		"YTLink": "https://www.youtube.com/watch?v=lTaptc0dTTw"
+	},
+	{
+		"date": "2025-07-07T12:00:00.000Z",
+		"track": 9,
+		"song": "PRIDE",
+		"singer": "今井美樹",
+		"YTLink": "https://www.youtube.com/watch?v=lTaptc0dTTw"
+	},
+	{
+		"date": "2025-07-07T12:00:00.000Z",
+		"track": 10,
+		"song": "君の知らない物語",
+		"singer": "supercell",
+		"YTLink": "https://www.youtube.com/watch?v=lTaptc0dTTw"
+	},
+	{
+		"date": "2025-07-07T12:00:00.000Z",
+		"track": 11,
+		"song": "まどろみの約束",
+		"singer": "千反田える(佐藤聡美), 伊原摩耶花(茅野愛衣)",
+		"YTLink": "https://www.youtube.com/watch?v=lTaptc0dTTw"
+	},
+	{
+		"date": "2025-07-07T12:00:00.000Z",
+		"track": 12,
+		"song": "クラゲ、流れ星",
+		"singer": "大塚愛",
+		"YTLink": "https://www.youtube.com/watch?v=lTaptc0dTTw"
+	},
+	{
+		"date": "2025-07-07T12:00:00.000Z",
+		"track": 13,
+		"song": "プラネタリウム",
+		"singer": "大塚愛",
+		"YTLink": "https://www.youtube.com/watch?v=lTaptc0dTTw"
+	},
+	{
+		"date": "2025-07-07T12:00:00.000Z",
+		"track": 14,
+		"song": "星座になれたら",
+		"singer": "結束バンド",
+		"YTLink": "https://www.youtube.com/watch?v=lTaptc0dTTw"
+	},
+	{
+		"date": "2025-07-07T12:00:00.000Z",
+		"track": 15,
+		"song": "プラネタリウム(いきもの)",
+		"singer": "いきものがかり",
+		"YTLink": "https://www.youtube.com/watch?v=lTaptc0dTTw"
+	},
+	{
+		"date": "2025-07-07T12:00:00.000Z",
+		"track": 16,
+		"song": "流星",
+		"singer": "藍井エイル",
+		"YTLink": "https://www.youtube.com/watch?v=lTaptc0dTTw"
+	},
+	{
+		"date": "2025-07-07T12:00:00.000Z",
+		"track": 17,
+		"song": "Startear",
+		"singer": "春奈るな",
+		"YTLink": "https://www.youtube.com/watch?v=lTaptc0dTTw"
+	},
+	{
+		"date": "2025-07-07T12:00:00.000Z",
+		"track": 18,
+		"song": "ホシキラ",
+		"singer": "ランカ・リー(中島愛)",
+		"YTLink": "https://www.youtube.com/watch?v=lTaptc0dTTw"
+	},
+	{
+		"date": "2025-07-07T12:00:00.000Z",
+		"track": 19,
+		"song": "星間飛行",
+		"singer": "ランカ・リー(中島愛)",
+		"YTLink": "https://www.youtube.com/watch?v=lTaptc0dTTw"
+	},
+	{
+		"date": "2025-07-07T12:00:00.000Z",
+		"track": 20,
+		"song": "夜空",
+		"singer": "鈴木みのり",
+		"YTLink": "https://www.youtube.com/watch?v=lTaptc0dTTw"
+	},
+	{
+		"date": "2025-07-05T13:00:00.000Z",
+		"track": 1,
+		"song": "全肯定ハピハピキュートSTORY！",
+		"singer": "苺咲べりぃ",
+		"YTLink": "https://www.youtube.com/watch?v=MdkpQGWPT3E"
+	},
+	{
+		"date": "2025-07-05T13:00:00.000Z",
+		"track": 2,
+		"song": "サマータイムシンデレラ",
+		"singer": "緑黄色社会",
+		"YTLink": "https://www.youtube.com/watch?v=MdkpQGWPT3E"
+	},
+	{
+		"date": "2025-07-05T13:00:00.000Z",
+		"track": 3,
+		"song": "青と夏",
+		"singer": "Mrs. GREEN APPLE",
+		"YTLink": "https://www.youtube.com/watch?v=MdkpQGWPT3E"
+	},
+	{
+		"date": "2025-07-05T13:00:00.000Z",
+		"track": 4,
+		"song": "桃色片想い",
+		"singer": "松浦亜弥",
+		"YTLink": "https://www.youtube.com/watch?v=MdkpQGWPT3E"
+	},
+	{
+		"date": "2025-07-05T13:00:00.000Z",
+		"track": 5,
+		"song": "バラライカ",
+		"singer": "久住小春",
+		"YTLink": "https://www.youtube.com/watch?v=MdkpQGWPT3E"
+	},
+	{
+		"date": "2025-07-05T13:00:00.000Z",
+		"track": 6,
+		"song": "輝夜の城で踊りたい",
+		"singer": "μ's",
+		"YTLink": "https://www.youtube.com/watch?v=MdkpQGWPT3E"
+	},
+	{
+		"date": "2025-07-05T13:00:00.000Z",
+		"track": 7,
+		"song": "Love marginal",
+		"singer": "Printemps",
+		"YTLink": "https://www.youtube.com/watch?v=MdkpQGWPT3E"
+	},
+	{
+		"date": "2025-07-05T13:00:00.000Z",
+		"track": 8,
+		"song": "おジャ魔女カーニバル！！",
+		"singer": "MAHO堂",
+		"YTLink": "https://www.youtube.com/watch?v=MdkpQGWPT3E"
+	},
+	{
+		"date": "2025-07-05T13:00:00.000Z",
+		"track": 9,
+		"song": "DANZEN!ふたりはプリキュア (ver.Max Heart)",
+		"singer": "五條真由美",
+		"YTLink": "https://www.youtube.com/watch?v=MdkpQGWPT3E"
+	},
+	{
+		"date": "2025-07-05T13:00:00.000Z",
+		"track": 10,
+		"song": "Honey",
+		"singer": "chihiRo",
+		"YTLink": "https://www.youtube.com/watch?v=MdkpQGWPT3E"
+	},
+	{
+		"date": "2025-07-05T13:00:00.000Z",
+		"track": 11,
+		"song": "夜の歌",
+		"singer": "大道寺知世(岩男潤子)",
+		"YTLink": "https://www.youtube.com/watch?v=MdkpQGWPT3E"
+	},
+	{
+		"date": "2025-07-05T13:00:00.000Z",
+		"track": 12,
+		"song": "ヒッチコック",
+		"singer": "ヨルシカ",
+		"YTLink": "https://www.youtube.com/watch?v=MdkpQGWPT3E"
+	},
+	{
+		"date": "2025-07-05T13:00:00.000Z",
+		"track": 13,
+		"song": "虹のかけら",
+		"singer": "昆夏美",
+		"YTLink": "https://www.youtube.com/watch?v=MdkpQGWPT3E"
+	},
+	{
+		"date": "2025-07-05T13:00:00.000Z",
+		"track": 14,
+		"song": "アムリタ",
+		"singer": "牧野由依",
+		"YTLink": "https://www.youtube.com/watch?v=MdkpQGWPT3E"
+	},
+	{
+		"date": "2025-07-05T13:00:00.000Z",
+		"track": 15,
+		"song": "Wishing",
+		"singer": "レム (水瀬いのり)",
+		"YTLink": "https://www.youtube.com/watch?v=MdkpQGWPT3E"
+	},
+	{
+		"date": "2025-07-05T13:00:00.000Z",
+		"track": 16,
+		"song": "クリスマスソング",
+		"singer": "back number",
+		"YTLink": "https://www.youtube.com/watch?v=MdkpQGWPT3E"
+	},
+	{
+		"date": "2025-07-05T13:00:00.000Z",
+		"track": 17,
+		"song": "プロローグ",
+		"singer": "Uru",
+		"YTLink": "https://www.youtube.com/watch?v=MdkpQGWPT3E"
+	},
+	{
+		"date": "2025-07-05T13:00:00.000Z",
+		"track": 18,
+		"song": "コネクト",
+		"singer": "ClariS",
+		"YTLink": "https://www.youtube.com/watch?v=MdkpQGWPT3E"
+	},
+	{
+		"date": "2025-07-05T13:00:00.000Z",
+		"track": 19,
+		"song": "ビードロ模様",
+		"singer": "やなぎなぎ",
+		"YTLink": "https://www.youtube.com/watch?v=MdkpQGWPT3E"
+	},
+	{
+		"date": "2025-07-05T13:00:00.000Z",
+		"track": 20,
+		"song": "虹",
+		"singer": "菅田将暉",
+		"YTLink": "https://www.youtube.com/watch?v=MdkpQGWPT3E"
+	},
+	{
+		"date": "2025-07-01T12:00:00.000Z",
+		"track": 1,
+		"song": "Complete x Memorial",
+		"singer": "苺咲べりぃ",
+		"YTLink": "https://www.youtube.com/watch?v=t8BjrnmWOtY"
+	},
+	{
+		"date": "2025-07-01T12:00:00.000Z",
+		"track": 2,
+		"song": "青と夏",
+		"singer": "Mrs. GREEN APPLE",
+		"YTLink": "https://www.youtube.com/watch?v=t8BjrnmWOtY"
+	},
+	{
+		"date": "2025-07-01T12:00:00.000Z",
+		"track": 3,
+		"song": "打上花火",
+		"singer": "DAOKO × 米津玄師",
+		"YTLink": "https://www.youtube.com/watch?v=t8BjrnmWOtY"
+	},
+	{
+		"date": "2025-07-01T12:00:00.000Z",
+		"track": 4,
+		"song": "サマータイムシンデレラ",
+		"singer": "緑黄色社会",
+		"note": "初回",
+		"YTLink": "https://www.youtube.com/watch?v=t8BjrnmWOtY"
+	},
+	{
+		"date": "2025-07-01T12:00:00.000Z",
+		"track": 5,
+		"song": "カブトムシ",
+		"singer": "aiko",
+		"YTLink": "https://www.youtube.com/watch?v=t8BjrnmWOtY"
+	},
+	{
+		"date": "2025-07-01T12:00:00.000Z",
+		"track": 6,
+		"song": "花火",
+		"singer": "aiko",
+		"YTLink": "https://www.youtube.com/watch?v=t8BjrnmWOtY"
+	},
+	{
+		"date": "2025-07-01T12:00:00.000Z",
+		"track": 7,
+		"song": "KissHug",
+		"singer": "aiko",
+		"YTLink": "https://www.youtube.com/watch?v=t8BjrnmWOtY"
+	},
+	{
+		"date": "2025-07-01T12:00:00.000Z",
+		"track": 8,
+		"song": "うたかた花火",
+		"singer": "supercell",
+		"YTLink": "https://www.youtube.com/watch?v=t8BjrnmWOtY"
+	},
+	{
+		"date": "2025-07-01T12:00:00.000Z",
+		"track": 9,
+		"song": "夏恋花火",
+		"singer": "40mP",
+		"YTLink": "https://www.youtube.com/watch?v=t8BjrnmWOtY"
+	},
+	{
+		"date": "2025-07-01T12:00:00.000Z",
+		"track": 10,
+		"song": "SMILY",
+		"singer": "大塚愛",
+		"YTLink": "https://www.youtube.com/watch?v=t8BjrnmWOtY"
+	},
+	{
+		"date": "2025-07-01T12:00:00.000Z",
+		"track": 11,
+		"song": "PEACH",
+		"singer": "大塚愛",
+		"YTLink": "https://www.youtube.com/watch?v=t8BjrnmWOtY"
+	},
+	{
+		"date": "2025-07-01T12:00:00.000Z",
+		"track": 12,
+		"song": "夏祭り",
+		"singer": "whiteberry",
+		"YTLink": "https://www.youtube.com/watch?v=t8BjrnmWOtY"
+	},
+	{
+		"date": "2025-07-01T12:00:00.000Z",
+		"track": 13,
+		"song": "出逢った頃のように",
+		"singer": "Every Little Thing",
+		"YTLink": "https://www.youtube.com/watch?v=t8BjrnmWOtY"
+	},
+	{
+		"date": "2025-07-01T12:00:00.000Z",
+		"track": 14,
+		"song": "夏の扉",
+		"singer": "松田聖子",
+		"YTLink": "https://www.youtube.com/watch?v=t8BjrnmWOtY"
+	},
+	{
+		"date": "2025-07-01T12:00:00.000Z",
+		"track": 15,
+		"song": "青い珊瑚礁",
+		"singer": "松田聖子",
+		"YTLink": "https://www.youtube.com/watch?v=t8BjrnmWOtY"
+	},
+	{
+		"date": "2025-07-01T12:00:00.000Z",
+		"track": 16,
+		"song": "Yeah! めっちゃホリディ",
+		"singer": "松浦亜弥",
+		"YTLink": "https://www.youtube.com/watch?v=t8BjrnmWOtY"
+	},
+	{
+		"date": "2025-07-01T12:00:00.000Z",
+		"track": 17,
+		"song": "ハッピーサマーウェディング",
+		"singer": "モーニング娘",
+		"YTLink": "https://www.youtube.com/watch?v=t8BjrnmWOtY"
+	},
+	{
+		"date": "2025-07-01T12:00:00.000Z",
+		"track": 18,
+		"song": "HOT LIMIT",
+		"singer": "T.M.Revolution",
+		"YTLink": "https://www.youtube.com/watch?v=t8BjrnmWOtY"
+	},
+	{
+		"date": "2025-07-01T12:00:00.000Z",
+		"track": 19,
+		"song": "Everyday、カチューシャ",
+		"singer": "AKB48",
+		"YTLink": "https://www.youtube.com/watch?v=t8BjrnmWOtY"
+	},
+	{
+		"date": "2025-07-01T12:00:00.000Z",
+		"track": 20,
+		"song": "君の知らない物語",
+		"singer": "supercell",
+		"YTLink": "https://www.youtube.com/watch?v=t8BjrnmWOtY"
+	},
+	{
+		"date": "2025-07-01T12:00:00.000Z",
+		"track": 21,
+		"song": "ドラえもん・えかきうた",
+		"singer": "大山のぶ代",
+		"note": "初回",
+		"YTLink": "https://www.youtube.com/watch?v=t8BjrnmWOtY"
+	},
+	{
 		"date": "2025-06-30T13:40:00.000Z",
 		"track": 1,
 		"song": "全肯定ハピハピキュートSTORY！",
@@ -599,7 +1171,7 @@
 		"date": "2025-06-20T14:00:00.000Z",
 		"track": 2,
 		"song": "君の知らない物語",
-		"singer": "Supercell",
+		"singer": "supercell",
 		"YTLink": "https://www.youtube.com/watch?v=uqzJUsqn8sI"
 	},
 	{
@@ -1756,7 +2328,7 @@
 		"date": "2025-05-29T12:00:00.000Z",
 		"track": 7,
 		"song": "君の知らない物語",
-		"singer": "Supercell",
+		"singer": "supercell",
 		"YTLink": "https://www.youtube.com/watch?v=8TWyjEXhqKE"
 	},
 	{
@@ -4220,7 +4792,7 @@
 		"date": "2025-04-14T12:00:00.000Z",
 		"track": 7,
 		"song": "さよならメモリーズ",
-		"singer": "Supercell",
+		"singer": "supercell",
 		"YTLink": "https://www.youtube.com/watch?v=oXDFl65cuJQ"
 	},
 	{
@@ -5007,7 +5579,7 @@
 		"date": "2025-04-01T12:00:00.000Z",
 		"track": 19,
 		"song": "さよならメモリーズ",
-		"singer": "Supercell",
+		"singer": "supercell",
 		"YTLink": "https://www.youtube.com/watch?v=-HtiLkMky18"
 	},
 	{
@@ -5386,7 +5958,7 @@
 		"date": "2025-03-15T13:00:00.000Z",
 		"track": 11,
 		"song": "君の知らない物語",
-		"singer": "Supercell",
+		"singer": "supercell",
 		"YTLink": "https://www.youtube.com/watch?v=hDAZVvze1bc"
 	},
 	{
@@ -5414,7 +5986,7 @@
 		"date": "2025-03-15T13:00:00.000Z",
 		"track": 15,
 		"song": "さよならメモリーズ",
-		"singer": "Supercell",
+		"singer": "supercell",
 		"YTLink": "https://www.youtube.com/watch?v=hDAZVvze1bc"
 	},
 	{
@@ -5695,7 +6267,7 @@
 		"date": "2025-03-10T12:00:00.000Z",
 		"track": 14,
 		"song": "さよならメモリーズ",
-		"singer": "Supercell",
+		"singer": "supercell",
 		"YTLink": "https://www.youtube.com/watch?v=l6b5h8itZq8"
 	},
 	{
@@ -5716,7 +6288,7 @@
 		"date": "2025-03-10T12:00:00.000Z",
 		"track": 17,
 		"song": "君の知らない物語",
-		"singer": "Supercell",
+		"singer": "supercell",
 		"YTLink": "https://www.youtube.com/watch?v=l6b5h8itZq8"
 	},
 	{
@@ -11934,7 +12506,7 @@
 		"date": "2024-11-01T16:00:00.000Z",
 		"track": 56,
 		"song": "さよならメモリーズ",
-		"singer": "Supercell",
+		"singer": "supercell",
 		"YTLink": "https://www.youtube.com/watch?v=ukkqGAh_kdc"
 	},
 	{
@@ -12095,7 +12667,7 @@
 		"date": "2024-11-01T16:00:00.000Z",
 		"track": 79,
 		"song": "君の知らない物語",
-		"singer": "Supercell",
+		"singer": "supercell",
 		"YTLink": "https://www.youtube.com/watch?v=ukkqGAh_kdc"
 	},
 	{
@@ -14750,7 +15322,7 @@
 		"date": "2024-09-06T16:00:00.000Z",
 		"track": 10,
 		"song": "君の知らない物語",
-		"singer": "Supercell",
+		"singer": "supercell",
 		"YTLink": "https://www.youtube.com/watch?v=QssEirShGwA"
 	},
 	{
@@ -15643,7 +16215,7 @@
 		"date": "2024-08-14T16:00:00.000Z",
 		"track": 5,
 		"song": "うたかた花火",
-		"singer": "Supercell",
+		"singer": "supercell",
 		"YTLink": "https://www.youtube.com/watch?v=neGHjz9z8OM"
 	},
 	{
@@ -15699,7 +16271,7 @@
 		"date": "2024-08-14T16:00:00.000Z",
 		"track": 13,
 		"song": "君の知らない物語",
-		"singer": "Supercell",
+		"singer": "supercell",
 		"YTLink": "https://www.youtube.com/watch?v=neGHjz9z8OM"
 	},
 	{
@@ -16336,7 +16908,7 @@
 		"date": "2024-08-04T16:00:00.000Z",
 		"track": 13,
 		"song": "うたかた花火",
-		"singer": "Supercell",
+		"singer": "supercell",
 		"YTLink": "https://www.youtube.com/watch?v=0VbgHNffwmA"
 	},
 	{
@@ -18035,14 +18607,14 @@
 		"date": "2024-06-30T16:00:00.000Z",
 		"track": 4,
 		"song": "うたかた花火",
-		"singer": "Supercell",
+		"singer": "supercell",
 		"YTLink": "https://www.youtube.com/watch?v=WczisdA6zoA"
 	},
 	{
 		"date": "2024-06-30T16:00:00.000Z",
 		"track": 5,
 		"song": "君の知らない物語",
-		"singer": "Supercell",
+		"singer": "supercell",
 		"YTLink": "https://www.youtube.com/watch?v=WczisdA6zoA"
 	},
 	{
@@ -18210,7 +18782,7 @@
 	{
 		"date": "2024-06-26T16:00:00.000Z",
 		"track": 9,
-		"song": "DANZEN！ふたりはプリキュア(Ver.Max Heart)",
+		"song": "DANZEN!ふたりはプリキュア (ver.Max Heart)",
 		"YTLink": "https://www.youtube.com/watch?v=mPcWlLf7_Ts"
 	},
 	{
@@ -20710,7 +21282,7 @@
 		"date": "2024-05-06T16:00:00.000Z",
 		"track": 11,
 		"song": "君の知らない物語",
-		"singer": "Supercell",
+		"singer": "supercell",
 		"YTLink": "https://www.youtube.com/watch?v=gqR4KMHCcME"
 	},
 	{
@@ -20997,7 +21569,7 @@
 		"date": "2024-04-28T16:00:00.000Z",
 		"track": 7,
 		"song": "さよならメモリーズ",
-		"singer": "Supercell",
+		"singer": "supercell",
 		"YTLink": "https://www.youtube.com/watch?v=r_Oq69egIgU"
 	},
 	{
@@ -22625,7 +23197,7 @@
 		"date": "2024-04-02T16:00:00.000Z",
 		"track": 2,
 		"song": "さよならメモリーズ",
-		"singer": "Supercell",
+		"singer": "supercell",
 		"YTLink": "https://www.youtube.com/watch?v=S09zBvUr2kE"
 	},
 	{
@@ -23066,7 +23638,7 @@
 		"date": "2024-03-24T16:00:00.000Z",
 		"track": 15,
 		"song": "さよならメモリーズ",
-		"singer": "Supercell",
+		"singer": "supercell",
 		"YTLink": "https://www.youtube.com/watch?v=8IHozWaQXjU"
 	},
 	{
@@ -71156,7 +71728,7 @@
 	{
 		"date": "2022-05-18T16:00:00.000Z",
 		"track": "7",
-		"song": "DANZEN！ふたりはプリキュア(Ver.Max Heart)",
+		"song": "DANZEN!ふたりはプリキュア (ver.Max Heart)",
 		"singer": "",
 		"note": "",
 		"YTLink": "https://www.youtube.com/watch?v=RMdTLEgG9MM"
@@ -81540,7 +82112,7 @@
 	{
 		"date": "2021-10-08T16:00:00.000Z",
 		"track": "5",
-		"song": "DANZEN！ふたりはプリキュア(Ver.Max Heart)",
+		"song": "DANZEN!ふたりはプリキュア (ver.Max Heart)",
 		"singer": "",
 		"note": "",
 		"YTLink": "https://www.youtube.com/watch?v=ZOzLqvfyFtg"
@@ -84821,7 +85393,7 @@
 		"date": "2021-07-14T16:00:00.000Z",
 		"track": "4",
 		"song": "Hello,星を数えて",
-		"singer": "",
+		"singer": "星空凛(飯田里穂),西木野真姫(Pile),小泉花陽(久保ユリカ)",
 		"note": "初回",
 		"YTLink": "https://www.youtube.com/watch?v=KkYok0GGylU"
 	},
@@ -89260,7 +89832,7 @@
 	{
 		"date": "2021-04-09T16:00:00.000Z",
 		"track": "2",
-		"song": "DANZEN！ふたりはプリキュア(Ver.Max Heart)",
+		"song": "DANZEN!ふたりはプリキュア (ver.Max Heart)",
 		"singer": "",
 		"note": "",
 		"YTLink": "https://www.youtube.com/watch?v=FK1_lo5dkj4"
@@ -94604,7 +95176,7 @@
 	{
 		"date": "2020-12-14T16:00:00.000Z",
 		"track": "6",
-		"song": "DANZEN！ふたりはプリキュア(Ver.Max Heart)",
+		"song": "DANZEN!ふたりはプリキュア (ver.Max Heart)",
 		"singer": "",
 		"note": "",
 		"YTLink": "https://www.youtube.com/watch?v=l4sTNgBHiLQ"
@@ -96476,7 +97048,7 @@
 	{
 		"date": "2020-11-18T16:00:00.000Z",
 		"track": "2",
-		"song": "DANZEN！ふたりはプリキュア(Ver.Max Heart)",
+		"song": "DANZEN!ふたりはプリキュア (ver.Max Heart)",
 		"singer": "",
 		"note": "",
 		"YTLink": "https://www.youtube.com/watch?v=Yc-pvP2youQ"
@@ -98252,7 +98824,7 @@
 	{
 		"date": "2020-09-11T16:00:00.000Z",
 		"track": "7",
-		"song": "DANZEN！ふたりはプリキュア(Ver.Max Heart)",
+		"song": "DANZEN!ふたりはプリキュア (ver.Max Heart)",
 		"singer": "",
 		"note": "初回",
 		"YTLink": "https://www.youtube.com/watch?v=MGvQHicm9LQ"
