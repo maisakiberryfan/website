@@ -1,5 +1,6 @@
 ## 2025
 * 2025/09/13　V-Universe FES『SPECTRUM』参加 [twitter](https://x.com/ama_hano/status/1946405821119906255)
+* 2025/07/26　LEAFshadeのスポンサードVtuberさんに加入します [twitter](https://x.com/LEAFshade_/status/1949068494877942109)
 * 2025/06/29　Single 『Drop Note』[youtube](https://www.youtube.com/watch?v=NfF1BrPKdhQ) / [booth](https://maisakiberry.booth.pm/items/7108521)
 * 2025/06/28　歌枠リレー ライドリ歌謡祭ー水無月ー [twitter](https://x.com/MaisakiBerry/status/1936736376856412425) / [youtube](https://www.youtube.com/watch?v=lKmuCNyQyfw)
 * 2025/05/27　Single 『全肯定ハピハピキュートSTORY！』[youtube](https://www.youtube.com/watch?v=CfoE7AlT9Gw) / [booth](https://maisakiberry.booth.pm/items/6973630)
