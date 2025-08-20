@@ -1,5 +1,340 @@
 [
 	{
+		"date": "2025-08-15T12:00:00.000Z",
+		"track": 1,
+		"song": "Tasting my love！",
+		"singer": "苺咲べりぃ",
+		"YTLink": "https://www.youtube.com/watch?v=ZGtdick1yI4"
+	},
+	{
+		"date": "2025-08-15T12:00:00.000Z",
+		"track": 2,
+		"song": "ギターと孤独と蒼い惑星",
+		"singer": "結束バンド",
+		"YTLink": "https://www.youtube.com/watch?v=ZGtdick1yI4"
+	},
+	{
+		"date": "2025-08-15T12:00:00.000Z",
+		"track": 3,
+		"song": "プラチナ",
+		"singer": "坂本真綾",
+		"YTLink": "https://www.youtube.com/watch?v=ZGtdick1yI4"
+	},
+	{
+		"date": "2025-08-15T12:00:00.000Z",
+		"track": 4,
+		"song": "CLEAR",
+		"singer": "坂本真綾",
+		"YTLink": "https://www.youtube.com/watch?v=ZGtdick1yI4"
+	},
+	{
+		"date": "2025-08-15T12:00:00.000Z",
+		"track": 5,
+		"song": "プラネタリウム",
+		"singer": "大塚愛",
+		"YTLink": "https://www.youtube.com/watch?v=ZGtdick1yI4"
+	},
+	{
+		"date": "2025-08-15T12:00:00.000Z",
+		"track": 6,
+		"song": "Wishing",
+		"singer": "レム (水瀬いのり)",
+		"YTLink": "https://www.youtube.com/watch?v=ZGtdick1yI4"
+	},
+	{
+		"date": "2025-08-15T12:00:00.000Z",
+		"track": 7,
+		"song": "虹のかけら",
+		"singer": "昆夏美",
+		"YTLink": "https://www.youtube.com/watch?v=ZGtdick1yI4"
+	},
+	{
+		"date": "2025-08-15T12:00:00.000Z",
+		"track": 8,
+		"song": "虹いろ・クマクマ",
+		"singer": "ランカ・リー(中島愛)",
+		"YTLink": "https://www.youtube.com/watch?v=ZGtdick1yI4"
+	},
+	{
+		"date": "2025-08-15T12:00:00.000Z",
+		"track": 9,
+		"song": "放課後オーバーフロウ",
+		"singer": "ランカ・リー(中島愛)",
+		"YTLink": "https://www.youtube.com/watch?v=ZGtdick1yI4"
+	},
+	{
+		"date": "2025-08-15T12:00:00.000Z",
+		"track": 10,
+		"song": "ホシキラ",
+		"singer": "ランカ・リー(中島愛)",
+		"YTLink": "https://www.youtube.com/watch?v=ZGtdick1yI4"
+	},
+	{
+		"date": "2025-08-15T12:00:00.000Z",
+		"track": 11,
+		"song": "幻日",
+		"singer": "苺咲べりぃ",
+		"YTLink": "https://www.youtube.com/watch?v=ZGtdick1yI4"
+	},
+	{
+		"date": "2025-08-15T12:00:00.000Z",
+		"track": 12,
+		"song": "星へ伸ばす手",
+		"singer": "苺咲べりぃ",
+		"YTLink": "https://www.youtube.com/watch?v=ZGtdick1yI4"
+	},
+	{
+		"date": "2025-08-15T12:00:00.000Z",
+		"track": 13,
+		"song": "夜空",
+		"singer": "鈴木みのり",
+		"YTLink": "https://www.youtube.com/watch?v=ZGtdick1yI4"
+	},
+	{
+		"date": "2025-08-15T12:00:00.000Z",
+		"track": 14,
+		"song": "Crosswalk",
+		"singer": "鈴木みのり",
+		"YTLink": "https://www.youtube.com/watch?v=ZGtdick1yI4"
+	},
+	{
+		"date": "2025-08-15T12:00:00.000Z",
+		"track": 15,
+		"song": "全肯定ハピハピキュートSTORY！",
+		"singer": "苺咲べりぃ",
+		"YTLink": "https://www.youtube.com/watch?v=ZGtdick1yI4"
+	},
+	{
+		"date": "2025-08-14T14:00:00.000Z",
+		"track": 1,
+		"song": "全肯定ハピハピキュートSTORY！",
+		"singer": "苺咲べりぃ",
+		"YTLink": "https://www.youtube.com/watch?v=wHFEBlfG7dA"
+	},
+	{
+		"date": "2025-08-14T14:00:00.000Z",
+		"track": 2,
+		"song": "Baby Sweet Berry Love",
+		"singer": "小倉唯",
+		"YTLink": "https://www.youtube.com/watch?v=wHFEBlfG7dA"
+	},
+	{
+		"date": "2025-08-14T14:00:00.000Z",
+		"track": 3,
+		"song": "Happy Girl",
+		"singer": "喜多村英梨",
+		"YTLink": "https://www.youtube.com/watch?v=wHFEBlfG7dA"
+	},
+	{
+		"date": "2025-08-14T14:00:00.000Z",
+		"track": 4,
+		"song": "超最強",
+		"singer": "超ときめき♡宣伝部",
+		"YTLink": "https://www.youtube.com/watch?v=wHFEBlfG7dA"
+	},
+	{
+		"date": "2025-08-14T14:00:00.000Z",
+		"track": 5,
+		"song": "超めでたいソング ～こんなに幸せでいいのかな?～",
+		"singer": "FRUITS ZIPPER",
+		"YTLink": "https://www.youtube.com/watch?v=wHFEBlfG7dA"
+	},
+	{
+		"date": "2025-08-14T14:00:00.000Z",
+		"track": 6,
+		"song": "CLEAR",
+		"singer": "坂本真綾",
+		"YTLink": "https://www.youtube.com/watch?v=wHFEBlfG7dA"
+	},
+	{
+		"date": "2025-08-14T14:00:00.000Z",
+		"track": 7,
+		"song": "ホシキラ",
+		"singer": "ランカ・リー(中島愛)",
+		"YTLink": "https://www.youtube.com/watch?v=wHFEBlfG7dA"
+	},
+	{
+		"date": "2025-08-09T13:00:00.000Z",
+		"track": 1,
+		"song": "ギターと孤独と蒼い惑星",
+		"singer": "結束バンド",
+		"YTLink": "https://www.youtube.com/watch?v=7VNHKq1Tt5k"
+	},
+	{
+		"date": "2025-08-09T13:00:00.000Z",
+		"track": 2,
+		"song": "カブトムシ",
+		"singer": "aiko",
+		"YTLink": "https://www.youtube.com/watch?v=7VNHKq1Tt5k"
+	},
+	{
+		"date": "2025-08-09T13:00:00.000Z",
+		"track": 3,
+		"song": "夏祭り",
+		"singer": "whiteberry",
+		"YTLink": "https://www.youtube.com/watch?v=7VNHKq1Tt5k"
+	},
+	{
+		"date": "2025-08-09T13:00:00.000Z",
+		"track": 4,
+		"song": "幻日",
+		"singer": "苺咲べりぃ",
+		"note": "初回",
+		"YTLink": "https://www.youtube.com/watch?v=7VNHKq1Tt5k"
+	},
+	{
+		"date": "2025-08-09T13:00:00.000Z",
+		"track": 5,
+		"song": "secret base～君がくれたもの～",
+		"singer": "ZONE",
+		"YTLink": "https://www.youtube.com/watch?v=7VNHKq1Tt5k"
+	},
+	{
+		"date": "2025-07-31T13:00:00.000Z",
+		"track": 1,
+		"song": "Drop Note",
+		"singer": "苺咲べりぃ",
+		"note": "初回",
+		"YTLink": "https://www.youtube.com/watch?v=xl4QvEJqcuc"
+	},
+	{
+		"date": "2025-07-31T13:00:00.000Z",
+		"track": 2,
+		"song": "超最強",
+		"singer": "超ときめき♡宣伝部",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=xl4QvEJqcuc"
+	},
+	{
+		"date": "2025-07-31T13:00:00.000Z",
+		"track": 3,
+		"song": "FRUITS CANDY",
+		"singer": "こじまめぐみ",
+		"note": "初回",
+		"YTLink": "https://www.youtube.com/watch?v=xl4QvEJqcuc"
+	},
+	{
+		"date": "2025-07-31T13:00:00.000Z",
+		"track": 4,
+		"song": "サマータイムシンデレラ",
+		"singer": "緑黄色社会",
+		"YTLink": "https://www.youtube.com/watch?v=xl4QvEJqcuc"
+	},
+	{
+		"date": "2025-07-31T13:00:00.000Z",
+		"track": 5,
+		"song": "青と夏",
+		"singer": "Mrs. GREEN APPLE",
+		"YTLink": "https://www.youtube.com/watch?v=xl4QvEJqcuc"
+	},
+	{
+		"date": "2025-07-31T13:00:00.000Z",
+		"track": 6,
+		"song": "secret base～君がくれたもの～",
+		"singer": "ZONE",
+		"YTLink": "https://www.youtube.com/watch?v=xl4QvEJqcuc"
+	},
+	{
+		"date": "2025-07-31T13:00:00.000Z",
+		"track": 7,
+		"song": "夏祭り",
+		"singer": "whiteberry",
+		"YTLink": "https://www.youtube.com/watch?v=xl4QvEJqcuc"
+	},
+	{
+		"date": "2025-07-31T13:00:00.000Z",
+		"track": 8,
+		"song": "闇のBAROQUE―バロック―",
+		"singer": "シェシェ(土屋実紀)・ミミ(下屋則子)",
+		"note": "初回",
+		"YTLink": "https://www.youtube.com/watch?v=xl4QvEJqcuc"
+	},
+	{
+		"date": "2025-07-31T13:00:00.000Z",
+		"track": 9,
+		"song": "暗黒の翼",
+		"singer": "レディ バット(小林沙苗)",
+		"note": "初回",
+		"YTLink": "https://www.youtube.com/watch?v=xl4QvEJqcuc"
+	},
+	{
+		"date": "2025-07-31T13:00:00.000Z",
+		"track": 10,
+		"song": "Legend of Mermaid",
+		"singer": "七海るちあ(中田あすみ)・宝生波音(寺門仁美)・洞院リナ(浅野まゆみ)",
+		"YTLink": "https://www.youtube.com/watch?v=xl4QvEJqcuc"
+	},
+	{
+		"date": "2025-07-31T13:00:00.000Z",
+		"track": 11,
+		"song": "希望の鐘音 ～Love goes on～",
+		"singer": "七海るちあ(中田あすみ)・宝生波音(寺門仁美)・洞院リナ(浅野まゆみ)",
+		"YTLink": "https://www.youtube.com/watch?v=xl4QvEJqcuc"
+	},
+	{
+		"date": "2025-07-31T13:00:00.000Z",
+		"track": 12,
+		"song": "オベリスク",
+		"singer": "シェリル・ノーム(May'n)",
+		"YTLink": "https://www.youtube.com/watch?v=xl4QvEJqcuc"
+	},
+	{
+		"date": "2025-07-31T13:00:00.000Z",
+		"track": 13,
+		"song": "アナタノオト",
+		"singer": "ランカ・リー(中島愛)",
+		"YTLink": "https://www.youtube.com/watch?v=xl4QvEJqcuc"
+	},
+	{
+		"date": "2025-07-31T13:00:00.000Z",
+		"track": 14,
+		"song": "Summer Dude",
+		"singer": "i☆Ris",
+		"YTLink": "https://www.youtube.com/watch?v=xl4QvEJqcuc"
+	},
+	{
+		"date": "2025-07-31T13:00:00.000Z",
+		"track": 15,
+		"song": "夏の約束",
+		"singer": "堀江由衣",
+		"YTLink": "https://www.youtube.com/watch?v=xl4QvEJqcuc"
+	},
+	{
+		"date": "2025-07-31T13:00:00.000Z",
+		"track": 16,
+		"song": "虹いろ・クマクマ",
+		"singer": "ランカ・リー(中島愛)",
+		"YTLink": "https://www.youtube.com/watch?v=xl4QvEJqcuc"
+	},
+	{
+		"date": "2025-07-31T13:00:00.000Z",
+		"track": 17,
+		"song": "放課後オーバーフロウ",
+		"singer": "ランカ・リー(中島愛)",
+		"YTLink": "https://www.youtube.com/watch?v=xl4QvEJqcuc"
+	},
+	{
+		"date": "2025-07-31T13:00:00.000Z",
+		"track": 18,
+		"song": "Absolute 5",
+		"singer": "ワルキューレ",
+		"YTLink": "https://www.youtube.com/watch?v=xl4QvEJqcuc"
+	},
+	{
+		"date": "2025-07-31T13:00:00.000Z",
+		"track": 19,
+		"song": "ルンがピカッと光ったら",
+		"singer": "ワルキューレ",
+		"YTLink": "https://www.youtube.com/watch?v=xl4QvEJqcuc"
+	},
+	{
+		"date": "2025-07-31T13:00:00.000Z",
+		"track": 20,
+		"song": "ホシキラ",
+		"singer": "ランカ・リー(中島愛)",
+		"YTLink": "https://www.youtube.com/watch?v=xl4QvEJqcuc"
+	},
+	{
 		"date": "2025-07-28T13:00:00.000Z",
 		"track": 1,
 		"song": "全肯定ハピハピキュートSTORY！",

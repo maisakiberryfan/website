@@ -1,11 +1,16 @@
 ## 2025
 * 2025/09/13　V-Universe FES『SPECTRUM』参加 [twitter](https://x.com/ama_hano/status/1946405821119906255)
-* 2025/07/26　LEAFshadeのスポンサードVtuberさんに加入します [twitter](https://x.com/LEAFshade_/status/1949068494877942109)
+* 2025/08/14　[苺咲べりぃのはぴラジオ！ep2：夏風邪注意〜！](https://creators.spotify.com/pod/profile/maisakiberry/episodes/EP2-e36rg6j)
+* 2025/08/10~09/09 [Fan Project 苺咲べりぃ応援広告](https://x.com/BerryManagers)
+* 2025/08/09　#サマーロックVフェス 1日目 参加 [twitter](https://x.com/ama_hano/status/1946405821119906255) / [youtube](https://www.youtube.com/watch?v=7VNHKq1Tt5k)
+* 2025/07/31　Single 『幻日』[youtube](https://www.youtube.com/watch?v=FBeKfnhStXc) / [booth](https://maisakiberry.booth.pm/items/7245306)
+* 2025/07/26　[LEAFshadeのスポンサードVtuberさんに加入します](https://x.com/LEAFshade_/status/1949068494877942109)
+* 2025/07/24　[苺咲べりぃのはぴラジオ！ep1：いちごの国からやってきたアイドルです！](https://creators.spotify.com/pod/profile/maisakiberry/episodes/ep1-e35umin)
 * 2025/06/29　Single 『Drop Note』[youtube](https://www.youtube.com/watch?v=NfF1BrPKdhQ) / [booth](https://maisakiberry.booth.pm/items/7108521)
 * 2025/06/28　歌枠リレー ライドリ歌謡祭ー水無月ー [twitter](https://x.com/MaisakiBerry/status/1936736376856412425) / [youtube](https://www.youtube.com/watch?v=lKmuCNyQyfw)
 * 2025/05/27　Single 『全肯定ハピハピキュートSTORY！』[youtube](https://www.youtube.com/watch?v=CfoE7AlT9Gw) / [booth](https://maisakiberry.booth.pm/items/6973630)
 * 2025/05/26　[新モデル&衣装お披露目](https://www.youtube.com/watch?v=9G0RAa5cOlY)
-* 2025/05/01　「Voice of Vtuber」第二弾参加
+* 2025/05/01　[「Voice of Vtuber」第二弾参加](https://x.com/_vee_official_/status/1917881683837354055)
 * 2025/04/29　Single 『love letter』[youtube](https://www.youtube.com/watch?v=-KV9NriS6Qw) / [booth](https://maisakiberry.booth.pm/items/6856723)
 * 2025/04/27　[8th Album 『ReveRseR!!!』 発売](https://www.maisakiberry.com/8th-reverser)
 * 2025/04/13　[「Rock on V」 出演](https://x.com/MaisakiBerry/status/1886013630392811976)
