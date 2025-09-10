@@ -1,5 +1,9 @@
 ## 2025
-* 2025/09/13　V-Universe FES『SPECTRUM』参加 [twitter](https://x.com/ama_hano/status/1946405821119906255)
+* 2025/10/18　[ぶいきゃすコレクション ファンミーティング](https://tiget.net/events/427098)
+* 2025/09/13　V-Universe FES『SPECTRUM』オフラインFES前3Dコラボ [twitter](https://x.com/ama_hano/status/1946405821119906255) / [youtube](https://www.youtube.com/live/k-v6oz8tdgM)
+* 2025/09/13　[V-Universe FES『SPECTRUM』参加](https://x.com/ama_hano/status/1946405821119906255)
+* 2025/09/09　[苺咲べりぃのはぴラジオ！EP3：9月！みんなお待たせっ！](https://creators.spotify.com/pod/profile/maisakiberry/episodes/EP39-e380d1c)
+* 2025/09/02　[ぶいきゃすコレクション アンバサダー就任](https://x.com/MaisakiBerry/status/1962872502109213074)
 * 2025/08/14　[苺咲べりぃのはぴラジオ！ep2：夏風邪注意〜！](https://creators.spotify.com/pod/profile/maisakiberry/episodes/EP2-e36rg6j)
 * 2025/08/10~09/09 [Fan Project 苺咲べりぃ応援広告](https://x.com/BerryManagers)
 * 2025/08/09　#サマーロックVフェス 1日目 参加 [twitter](https://x.com/ama_hano/status/1946405821119906255) / [youtube](https://www.youtube.com/watch?v=7VNHKq1Tt5k)

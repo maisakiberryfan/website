@@ -1,5 +1,306 @@
 [
 	{
+		"date": "2025-09-08T12:00:00.000Z",
+		"track": 1,
+		"song": "emotion",
+		"singer": "苺咲べりぃ",
+		"YTLink": "https://www.youtube.com/watch?v=O0UMX3lY5lc"
+	},
+	{
+		"date": "2025-09-08T12:00:00.000Z",
+		"track": 2,
+		"song": "Watch me!",
+		"singer": "YOASOBI",
+		"YTLink": "https://www.youtube.com/watch?v=O0UMX3lY5lc"
+	},
+	{
+		"date": "2025-09-08T12:00:00.000Z",
+		"track": 3,
+		"song": "ワンダー・スターター",
+		"singer": " TINGS:青天国春(CV.鈴代紗弓)、玉城杏夏(CV.蟹沢萌子)、聖舞理王(CV.夏吉ゆうこ)、祇園寺雪音(CV.長谷川里桃)、伊藤紅葉(CV.中川梨花)",
+		"YTLink": "https://www.youtube.com/watch?v=O0UMX3lY5lc"
+	},
+	{
+		"date": "2025-09-08T12:00:00.000Z",
+		"track": 4,
+		"song": "優しい彗星",
+		"singer": "YOASOBI",
+		"YTLink": "https://www.youtube.com/watch?v=O0UMX3lY5lc"
+	},
+	{
+		"date": "2025-09-08T12:00:00.000Z",
+		"track": 5,
+		"song": "たぶん",
+		"singer": "YOASOBI",
+		"YTLink": "https://www.youtube.com/watch?v=O0UMX3lY5lc"
+	},
+	{
+		"date": "2025-09-08T12:00:00.000Z",
+		"track": 6,
+		"song": "花に亡霊",
+		"singer": "ヨルシカ",
+		"YTLink": "https://www.youtube.com/watch?v=O0UMX3lY5lc"
+	},
+	{
+		"date": "2025-09-08T12:00:00.000Z",
+		"track": 7,
+		"song": "ただ君に晴れ",
+		"singer": "ヨルシカ",
+		"YTLink": "https://www.youtube.com/watch?v=O0UMX3lY5lc"
+	},
+	{
+		"date": "2025-09-08T12:00:00.000Z",
+		"track": 8,
+		"song": "黒毛和牛上塩タン焼735円",
+		"singer": "大塚愛",
+		"YTLink": "https://www.youtube.com/watch?v=O0UMX3lY5lc"
+	},
+	{
+		"date": "2025-09-08T12:00:00.000Z",
+		"track": 9,
+		"song": "大好きだよ。",
+		"singer": "大塚愛",
+		"YTLink": "https://www.youtube.com/watch?v=O0UMX3lY5lc"
+	},
+	{
+		"date": "2025-09-08T12:00:00.000Z",
+		"track": 10,
+		"song": "カブトムシ",
+		"singer": "aiko",
+		"YTLink": "https://www.youtube.com/watch?v=O0UMX3lY5lc"
+	},
+	{
+		"date": "2025-09-08T12:00:00.000Z",
+		"track": 11,
+		"song": "KissHug",
+		"singer": "aiko",
+		"YTLink": "https://www.youtube.com/watch?v=O0UMX3lY5lc"
+	},
+	{
+		"date": "2025-09-08T12:00:00.000Z",
+		"track": 12,
+		"song": "あなたに好きと言われたい",
+		"singer": "奥華子",
+		"YTLink": "https://www.youtube.com/watch?v=O0UMX3lY5lc"
+	},
+	{
+		"date": "2025-09-08T12:00:00.000Z",
+		"track": 13,
+		"song": "恋(奥華子)",
+		"singer": "奥華子",
+		"YTLink": "https://www.youtube.com/watch?v=O0UMX3lY5lc"
+	},
+	{
+		"date": "2025-09-08T12:00:00.000Z",
+		"track": 14,
+		"song": "マジックナンバー",
+		"singer": "坂本真綾",
+		"YTLink": "https://www.youtube.com/watch?v=O0UMX3lY5lc"
+	},
+	{
+		"date": "2025-09-08T12:00:00.000Z",
+		"track": 15,
+		"song": "CLEAR",
+		"singer": "坂本真綾",
+		"YTLink": "https://www.youtube.com/watch?v=O0UMX3lY5lc"
+	},
+	{
+		"date": "2025-09-08T12:00:00.000Z",
+		"track": 16,
+		"song": "吉原ラメント",
+		"singer": "亜沙",
+		"YTLink": "https://www.youtube.com/watch?v=O0UMX3lY5lc"
+	},
+	{
+		"date": "2025-09-08T12:00:00.000Z",
+		"track": 17,
+		"song": "うたかた花火",
+		"singer": "supercell",
+		"YTLink": "https://www.youtube.com/watch?v=O0UMX3lY5lc"
+	},
+	{
+		"date": "2025-09-08T12:00:00.000Z",
+		"track": 18,
+		"song": "必殺あざとポーズ",
+		"singer": "CANDY TUNE",
+		"YTLink": "https://www.youtube.com/watch?v=O0UMX3lY5lc"
+	},
+	{
+		"date": "2025-09-08T12:00:00.000Z",
+		"track": 19,
+		"song": "倍倍FIGHT!",
+		"singer": "CANDY TUNE",
+		"YTLink": "https://www.youtube.com/watch?v=O0UMX3lY5lc"
+	},
+	{
+		"date": "2025-09-08T12:00:00.000Z",
+		"track": 20,
+		"song": "ホシキラ",
+		"singer": "ランカ・リー(中島愛)",
+		"YTLink": "https://www.youtube.com/watch?v=O0UMX3lY5lc"
+	},
+	{
+		"date": "2025-09-05T12:00:00.000Z",
+		"track": 1,
+		"song": "全肯定ハピハピキュートSTORY！",
+		"singer": "苺咲べりぃ",
+		"YTLink": "https://www.youtube.com/watch?v=-6Zz4f9yE74"
+	},
+	{
+		"date": "2025-09-05T12:00:00.000Z",
+		"track": 2,
+		"song": "ワンダー・スターター",
+		"singer": " TINGS:青天国春(CV.鈴代紗弓)、玉城杏夏(CV.蟹沢萌子)、聖舞理王(CV.夏吉ゆうこ)、祇園寺雪音(CV.長谷川里桃)、伊藤紅葉(CV.中川梨花)",
+		"YTLink": "https://www.youtube.com/watch?v=-6Zz4f9yE74"
+	},
+	{
+		"date": "2025-09-05T12:00:00.000Z",
+		"track": 3,
+		"song": "SHINING SONG",
+		"singer": "B小町 ルビー(齊藤なぎさ)、有馬かな(原菜乃華)、MEMちょ(あの)",
+		"YTLink": "https://www.youtube.com/watch?v=-6Zz4f9yE74"
+	},
+	{
+		"date": "2025-09-05T12:00:00.000Z",
+		"track": 4,
+		"song": "クリスマスソング",
+		"singer": "back number",
+		"YTLink": "https://www.youtube.com/watch?v=-6Zz4f9yE74"
+	},
+	{
+		"date": "2025-09-05T12:00:00.000Z",
+		"track": 5,
+		"song": "コネクト",
+		"singer": "ClariS",
+		"YTLink": "https://www.youtube.com/watch?v=-6Zz4f9yE74"
+	},
+	{
+		"date": "2025-09-05T12:00:00.000Z",
+		"track": 6,
+		"song": "変わらないもの",
+		"singer": "奥華子",
+		"YTLink": "https://www.youtube.com/watch?v=-6Zz4f9yE74"
+	},
+	{
+		"date": "2025-09-05T12:00:00.000Z",
+		"track": 7,
+		"song": "secret base～君がくれたもの～",
+		"singer": "ZONE",
+		"YTLink": "https://www.youtube.com/watch?v=-6Zz4f9yE74"
+	},
+	{
+		"date": "2025-09-05T12:00:00.000Z",
+		"track": 8,
+		"song": "いけないボーダーライン",
+		"singer": "ワルキューレ",
+		"YTLink": "https://www.youtube.com/watch?v=-6Zz4f9yE74"
+	},
+	{
+		"date": "2025-09-05T12:00:00.000Z",
+		"track": 9,
+		"song": "ヒッチコック",
+		"singer": "ヨルシカ",
+		"YTLink": "https://www.youtube.com/watch?v=-6Zz4f9yE74"
+	},
+	{
+		"date": "2025-09-05T12:00:00.000Z",
+		"track": 10,
+		"song": "君の知らない物語",
+		"singer": "supercell",
+		"YTLink": "https://www.youtube.com/watch?v=-6Zz4f9yE74"
+	},
+	{
+		"date": "2025-09-05T12:00:00.000Z",
+		"track": 11,
+		"song": "奏(かなで)",
+		"singer": "スキマスイッチ",
+		"YTLink": "https://www.youtube.com/watch?v=-6Zz4f9yE74"
+	},
+	{
+		"date": "2025-09-05T12:00:00.000Z",
+		"track": 12,
+		"song": "ドライフラワー",
+		"singer": "優里",
+		"YTLink": "https://www.youtube.com/watch?v=-6Zz4f9yE74"
+	},
+	{
+		"date": "2025-09-05T12:00:00.000Z",
+		"track": 13,
+		"song": "雪の華",
+		"singer": "中島美嘉",
+		"YTLink": "https://www.youtube.com/watch?v=-6Zz4f9yE74"
+	},
+	{
+		"date": "2025-09-05T12:00:00.000Z",
+		"track": 14,
+		"song": "Wishing",
+		"singer": "レム (水瀬いのり)",
+		"YTLink": "https://www.youtube.com/watch?v=-6Zz4f9yE74"
+	},
+	{
+		"date": "2025-09-05T12:00:00.000Z",
+		"track": 15,
+		"song": "愛してる",
+		"singer": "ワルキューレ",
+		"YTLink": "https://www.youtube.com/watch?v=-6Zz4f9yE74"
+	},
+	{
+		"date": "2025-09-05T12:00:00.000Z",
+		"track": 16,
+		"song": "フリージア",
+		"singer": "Uru",
+		"YTLink": "https://www.youtube.com/watch?v=-6Zz4f9yE74"
+	},
+	{
+		"date": "2025-09-05T12:00:00.000Z",
+		"track": 17,
+		"song": "ガーネット",
+		"singer": "奥華子",
+		"YTLink": "https://www.youtube.com/watch?v=-6Zz4f9yE74"
+	},
+	{
+		"date": "2025-09-05T12:00:00.000Z",
+		"track": 18,
+		"song": "ファンサ",
+		"singer": "mona(夏川椎菜)",
+		"YTLink": "https://www.youtube.com/watch?v=-6Zz4f9yE74"
+	},
+	{
+		"date": "2025-09-05T12:00:00.000Z",
+		"track": 19,
+		"song": "虹",
+		"singer": "菅田将暉",
+		"YTLink": "https://www.youtube.com/watch?v=-6Zz4f9yE74"
+	},
+	{
+		"date": "2025-09-05T12:00:00.000Z",
+		"track": 20,
+		"song": "プラネタリウム",
+		"singer": "大塚愛",
+		"YTLink": "https://www.youtube.com/watch?v=-6Zz4f9yE74"
+	},
+	{
+		"date": "2025-09-05T12:00:00.000Z",
+		"track": 21,
+		"song": "夜に駆ける",
+		"singer": "YOASOBI",
+		"YTLink": "https://www.youtube.com/watch?v=-6Zz4f9yE74"
+	},
+	{
+		"date": "2025-09-05T12:00:00.000Z",
+		"track": 22,
+		"song": "夜空",
+		"singer": "鈴木みのり",
+		"YTLink": "https://www.youtube.com/watch?v=-6Zz4f9yE74"
+	},
+	{
+		"date": "2025-09-05T12:00:00.000Z",
+		"track": 23,
+		"song": "星へ伸ばす手",
+		"singer": "苺咲べりぃ",
+		"YTLink": "https://www.youtube.com/watch?v=-6Zz4f9yE74"
+	},
+	{
 		"date": "2025-09-04T12:00:00.000Z",
 		"track": 1,
 		"song": "Tasting my love！",

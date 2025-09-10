@@ -168,8 +168,9 @@ $(()=>{
         let c = `
               <button id='reloadBtn' class='btn btn-outline-light'>Reload Data</button>
               <button id='edit' class='btn btn-outline-light' data-bs-toggle="button">Edit mode</button>
-              <button id='`+ (process=='streamlist'?'addStreamRow':'addRow') + `' class='btn btn-outline-light addRow' disabled>Add Row</button>
-              <button id='deleteRow' class='btn btn-outline-light'>Delete Row</button>
+              <button id='`+ (process=='streamlist'?'addStreamRow':'addRow') + `' class='btn btn-outline-light addRow' disabled>Add Row</button>`
+              + (process=='streamlist'?`<button id='addFromList' class='btn btn-outline-light addRow' disabled>Add from list(Beta)</button>`:'') + 
+              `<button id='deleteRow' class='btn btn-outline-light'>Delete Row</button>
               <button id='dlcsv' class='btn btn-outline-light'>Get CSV</button>
               <button id='dljson' class='btn btn-outline-light'>Get JSON</button>
               <div id='setTableMsg' class='p-3'>&emsp;</div>
@@ -543,7 +544,7 @@ $(()=>{
     // You can use your API key to query the info
     // https://developers.google.com/youtube/v3/getting-started
     // if you have api key then decomment the following code
-    // and comment url:'https://getyoutubevideoid.katani.workers.dev/?id='+id, decomment url:url
+    // and comment url:'https://getytvideoinfo.katani.workers.dev/?id='+id, decomment url:url
 
     /* const YOUTUBEAPIKEY = 'YOUR_YOUTUBE_API_KEY'
      let url = https://www.googleapis.com/youtube/v3/videos?key=' + YOUTUBEAPIKEY 
@@ -559,7 +560,7 @@ $(()=>{
 
     //load content
     $.ajax({
-      url:'https://getyoutubevideoid.katani.workers.dev/?id='+id,
+      url:'https://getytvideoinfo.katani.workers.dev/?id='+id,
       //url:url
       })
       .done((d, textStatus, request)=>{
@@ -609,7 +610,64 @@ $(()=>{
         , true)
     })
 
-  
+  // Add from list button click handler
+  $('#content').on('click', '#addFromList', () => {
+    addFromLatestList()
+  })
+
+  // Add from latest list function for streamlist
+  function addFromLatestList() {
+    $.ajax({
+      url: 'https://getytvideoinfo.katani.workers.dev/newvideos'
+    })
+    .done((data) => {
+      if (!data.items || data.items.length === 0) {
+        $('#setTableMsg').text('No new data available').addClass('text-bg-warning')
+        setTimeout(() => {
+          $('#setTableMsg').html('&emsp;').removeClass('text-bg-warning')
+        }, 3000)
+        return
+      }
+
+      // Get existing IDs from current table data
+      const existingIds = jsonTable.getData().map(row => row.id)
+      
+      // Filter out duplicates and convert format
+      const newData = data.items
+        .filter(item => !existingIds.includes(item.id))
+        .map(item => ({
+          id: item.id,
+          title: item.snippet.title,
+          time: item.liveStreamingDetails?.scheduledStartTime || item.snippet.publishedAt,
+          category: item.category || preCategory(item.snippet.title)
+        }))
+        .sort((a, b) => new Date(b.time) - new Date(a.time)) // Sort by date desc
+
+      if (newData.length === 0) {
+        $('#setTableMsg').text('No new videos found (all videos already exist)').addClass('text-bg-info')
+        setTimeout(() => {
+          $('#setTableMsg').html('&emsp;').removeClass('text-bg-info')
+        }, 3000)
+        return
+      }
+
+      // Add data to table at top
+      jsonTable.addData(newData, true)
+      
+      $('#setTableMsg').text(`Successfully added ${newData.length} new video(s)`).addClass('text-bg-success')
+      setTimeout(() => {
+        $('#setTableMsg').html('&emsp;').removeClass('text-bg-success')
+      }, 3000)
+    })
+    .fail((error) => {
+      console.error('Error fetching latest videos:', error)
+      $('#setTableMsg').text('Failed to fetch latest videos').addClass('text-bg-danger')
+      setTimeout(() => {
+        $('#setTableMsg').html('&emsp;').removeClass('text-bg-danger')
+      }, 3000)
+    })
+  }
+
 //--- json table ---
 
 function getProcess(){
@@ -676,7 +734,7 @@ async function getLatest(){
 function getYTlatest(){
   return new Promise((resolve, reject)=>{
     $.ajax({
-      url:'https://getberrylatestytvideo.katani.workers.dev/'
+      url:'https://getytvideoinfo.katani.workers.dev/latest'
     })
     .done((d)=>{
       let v = d.items[0].snippet
