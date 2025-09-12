@@ -169,7 +169,8 @@ $(()=>{
               <button id='reloadBtn' class='btn btn-outline-light'>Reload Data</button>
               <button id='edit' class='btn btn-outline-light' data-bs-toggle="button">Edit mode</button>
               <button id='`+ (process=='streamlist'?'addStreamRow':'addRow') + `' class='btn btn-outline-light addRow' disabled>Add Row</button>`
-              + (process=='streamlist'?`<button id='addFromList' class='btn btn-outline-light addRow' disabled>Add from list(Beta)</button>`:'') + 
+              + (process=='streamlist'?`<button id='addFromList' class='btn btn-outline-light addRow' disabled>Add from list(Beta)</button>`:'')
+              + (process=='setlist'?`<button id='addListByBatch' class='btn btn-outline-light addRow'>批量添加歌單</button>`:'') +
               `<button id='deleteRow' class='btn btn-outline-light'>Delete Row</button>
               <button id='dlcsv' class='btn btn-outline-light'>Get CSV</button>
               <button id='dljson' class='btn btn-outline-light'>Get JSON</button>
@@ -667,6 +668,97 @@ $(()=>{
       }, 3000)
     })
   }
+
+  // Batch Add Setlist functionality
+  var addListByBatchModal = new bootstrap.Modal(document.getElementById('modalAddListByBatch'))
+  document.getElementById('modalAddListByBatch').addEventListener('shown.bs.modal', () => {
+    $('#batchInput').focus()
+  })
+
+  $('#content').on('click', '#addListByBatch', () => {
+    $('#batchInput').val('')
+    $('#batchDate').val('')
+    $('#batchYTLink').val('')
+    $('#batchPreview').hide()
+    addListByBatchModal.show()
+  })
+
+  // Parse batch input function
+  function parseBatchInput(input) {
+    if (!input.trim()) return []
+    
+    // Only support JSON format now (from Admin page)
+    try {
+      const jsonData = JSON.parse(input)
+      if (Array.isArray(jsonData)) {
+        return jsonData.map(item => ({
+          songname: item.songname || item.song || '',
+          artist: item.artist || item.singer || '',
+          note: item.note || '',
+          date: item.date || '',
+          YTLink: item.YTLink || '',
+          track: item.track || 0
+        }))
+      }
+    } catch (e) {
+      // JSON parse error
+      return []
+    }
+    
+    return []
+  }
+
+  // Preview batch data
+  $('#previewBatch').on('click', () => {
+    const input = $('#batchInput').val()
+    const songs = parseBatchInput(input)
+    
+    if (songs.length === 0) {
+      $('#previewContent').html('<div class="text-danger">未找到有效的歌曲資料</div>')
+      $('#batchPreview').show()
+      return
+    }
+    
+    let previewHtml = `<div class="text-success">找到 ${songs.length} 首歌曲：</div><ul>`
+    songs.forEach((song, index) => {
+      previewHtml += `<li>${index + 1}. ${song.songname}${song.artist ? ' - ' + song.artist : ''}${song.note ? ' (' + song.note + ')' : ''}</li>`
+    })
+    previewHtml += '</ul>'
+    
+    $('#previewContent').html(previewHtml)
+    $('#batchPreview').show()
+  })
+
+  // Add batch data to table
+  $('#addBatchData').on('click', () => {
+    const input = $('#batchInput').val()
+    const songs = parseBatchInput(input)
+    
+    if (songs.length === 0) {
+      alert('請輸入有效的JSON格式資料')
+      return
+    }
+    
+    jsonTable.blockRedraw()
+    
+    const rowsToAdd = songs.map(song => ({
+      date: song.date,
+      track: song.track,
+      song: song.songname,
+      singer: song.artist,
+      note: song.note,
+      YTLink: song.YTLink
+    }))
+    
+    jsonTable.addData(rowsToAdd)
+    
+    jsonTable.restoreRedraw()
+    jsonTable.redraw()
+    
+    alert(`成功添加 ${songs.length} 首歌曲！`)
+    addListByBatchModal.hide()
+  })
+
 
 //--- json table ---
 

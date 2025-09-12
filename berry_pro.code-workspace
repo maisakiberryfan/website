@@ -1,0 +1,18 @@
+{
+  "folders": [
+    {
+      "name": "Pages (Main Site)",
+      "path": "."
+    },
+    {
+      "name": "Worker",
+      "path": "./worker"
+    }
+  ],
+  "settings": {
+    "files.exclude": {
+      "**/node_modules": true,
+      "**/.git": false
+    }
+  },
+}

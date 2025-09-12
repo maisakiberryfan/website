@@ -65,3 +65,26 @@ node_modules/
 # dotenv environment variables file
 .env
 CLAUDE.md
+worker/.dev.vars
+worker/.gitignore
+worker/.prettierrc
+worker/DEPLOYMENT.md
+worker/eslint.config.js
+worker/package.json
+worker/README.md
+worker/wrangler.toml
+worker/src/config.js
+worker/src/index.js
+worker/src/songlist-test.json
+worker/src/types.js
+AI_SETLIST_README.md
+DEBUG_GUIDE.md
+debug.html
+
+# Private admin files
+admin-*.html
+admin-*.js
+worker/src/songlist-test-long.json
+
+# Worker directory (independent git repo)
+worker/
