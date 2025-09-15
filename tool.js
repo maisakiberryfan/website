@@ -573,14 +573,8 @@ $(()=>{
           $('#streamMsg').html("　")
           $('#streamTitle').val(title)
 
-          if(info.liveStreamingDetails === undefined){
-            $('#streamTime').val(info.snippet.publishedAt)
-            $('#setlistDate').val(info.snippet.publishedAt)
-          }
-          else{
-            $('#streamTime').val(info.liveStreamingDetails.scheduledStartTime)
-            $('#setlistDate').val(info.liveStreamingDetails.scheduledStartTime)
-          }
+          $('#streamTime').val(info.time)
+          $('#setlistDate').val(info.time)
           
           $('#videoID').val(id)
           $('#category').val(preCategory(title)).trigger('change');
@@ -639,7 +633,7 @@ $(()=>{
         .map(item => ({
           id: item.id,
           title: item.snippet.title,
-          time: item.liveStreamingDetails?.scheduledStartTime || item.snippet.publishedAt,
+          time: item.time,
           category: item.category || preCategory(item.snippet.title)
         }))
         .sort((a, b) => new Date(b.time) - new Date(a.time)) // Sort by date desc

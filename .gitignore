@@ -88,3 +88,9 @@ worker/src/songlist-test-long.json
 
 # Worker directory (independent git repo)
 worker/
+
+# Claude Code settings
+.claude/
+
+# Wrangler cache
+.wrangler/
