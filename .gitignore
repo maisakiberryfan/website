@@ -94,3 +94,4 @@ worker/
 
 # Wrangler cache
 .wrangler/
+TECHNICAL_ARCHITECTURE.md
