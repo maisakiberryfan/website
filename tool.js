@@ -797,12 +797,12 @@ function preCategory(t){
   let origin = ['xfd', 'オリジナル', 'music video']
   let chat = ['chat', 'talk', '雑談']
 
-  if(t.includes('歌枠')){return '歌枠 / Singing'}
-  else if(t.toLowerCase().includes('gam')){return 'ゲーム / Gaming'}
+  if(t.toLowerCase().includes('gam')){return 'ゲーム / Gaming'}
   else if(t.toLowerCase().includes('short')){return 'ショート / Shorts'}
   else if(t.toLowerCase().includes('歌ってみた')){return '歌ってみた動画 / Cover movie'}
   else if(origin.some(e=>t.toLowerCase().includes(e))){return 'オリジナル曲 / Original Songs'}
   else if(chat.some(e=>t.toLowerCase().includes(e))){return '雑談 / Chatting'}
+  else if(t.includes('歌枠')){return '歌枠 / Singing'}
   else{return 'other'}
 }
 
