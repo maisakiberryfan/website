@@ -58,7 +58,79 @@
 
     $('#pic').html(data.join(''))
 
-    Fancybox.bind("[data-fancybox]")
+    Fancybox.bind("[data-fancybox]", {
+      Hash: true
+    })
+
+    // Handle URL hash navigation
+    function handleHashNavigation() {
+      const hash = window.location.hash.substring(1) // Remove #
+      if (!hash) return
+
+      // Parse hash format: date or date-index
+      const parts = hash.split('-')
+      const date = parts[0]
+      const index = parts[1] ? parseInt(parts[1]) - 1 : 0 // Convert to 0-based index
+
+      // Find the outfit data
+      const outfit = sourceArray.find(e => e.date === date)
+      if (!outfit) return
+
+      // Wait for DOM to be ready with all images
+      setTimeout(() => {
+        // Check if Fancybox is already handling this hash
+        if (Fancybox.getInstance()) return
+
+        // Get all actual links from the DOM for this outfit group
+        const existingLinks = document.querySelectorAll(`[data-fancybox="${date}"]`)
+
+        if (existingLinks.length > 0) {
+          // Use existing DOM links - this ensures we get the exact same items as the HTML
+          const galleryItems = Array.from(existingLinks).map(link => ({
+            src: link.href,
+            thumb: link.href
+          }))
+
+          // Open Fancybox programmatically
+          Fancybox.show(galleryItems, {
+            startIndex: Math.min(index, galleryItems.length - 1),
+            groupAll: true,
+            Hash: true
+          })
+        } else {
+          // Fallback: Build gallery items manually (original method)
+          const galleryItems = []
+          for (let i = 0; i < outfit.count; i++) {
+            galleryItems.push({
+              src: `${itemsBaseURL}${outfit.date}/s${i + 1}.webp`,
+              thumb: `${itemsBaseURL}${outfit.date}/s${i + 1}.webp`
+            })
+          }
+
+          // Add side view images if available
+          if (outfit.sideView > 0) {
+            for (let j = 0; j < outfit.sideView; j++) {
+              galleryItems.push({
+                src: `${itemsBaseURL}${outfit.date}/c${j + 1}.webp`,
+                thumb: `${itemsBaseURL}${outfit.date}/c${j + 1}.webp`
+              })
+            }
+          }
+
+          if (galleryItems.length > 0) {
+            Fancybox.show(galleryItems, {
+              startIndex: Math.min(index, galleryItems.length - 1),
+              groupAll: true,
+              Hash: true
+            })
+          }
+        }
+      }, 100)
+    }
+
+    // Handle hash navigation on page load and hash change
+    handleHashNavigation()
+    window.addEventListener('hashchange', handleHashNavigation)
 
   })
   </script>

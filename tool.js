@@ -112,6 +112,15 @@ $(()=>{
   //if direct url
   setContent(location.pathname)
 
+  // Handle hash navigation after content is loaded
+  if (location.hash) {
+    // Wait for content to load before processing hash
+    setTimeout(() => {
+      // Trigger any hash-specific handling for the loaded page
+      window.dispatchEvent(new HashChangeEvent('hashchange'))
+    }, 200)
+  }
+
   $('.setContent').click((e)=>{
     e.preventDefault()
     setContent(e.target.pathname, true)
@@ -169,8 +178,7 @@ $(()=>{
               <button id='reloadBtn' class='btn btn-outline-light'>Reload Data</button>
               <button id='edit' class='btn btn-outline-light' data-bs-toggle="button">Edit mode</button>
               <button id='`+ (process=='streamlist'?'addStreamRow':'addRow') + `' class='btn btn-outline-light addRow' disabled>Add Row</button>`
-              + (process=='streamlist'?`<button id='addFromList' class='btn btn-outline-light addRow' disabled>Add from list(Beta)</button>`:'')
-              + (process=='setlist'?`<button id='addListByBatch' class='btn btn-outline-light addRow'>批量添加歌單</button>`:'') +
+              + (process=='streamlist'?`<button id='addFromList' class='btn btn-outline-light addRow' disabled>Add from list(Beta)</button>`:'') +
               `<button id='deleteRow' class='btn btn-outline-light'>Delete Row</button>
               <button id='dlcsv' class='btn btn-outline-light'>Get CSV</button>
               <button id='dljson' class='btn btn-outline-light'>Get JSON</button>
@@ -279,7 +287,7 @@ $(()=>{
 
   //column definition
   var setlistColDef = [
-    {title:"Date", field:"date", validator:dateValid, accessor:((value)=>dayjs(value).toJSON()), width:'150', formatter:dateWithYTLink},
+    {title:`local time(${dayjs().format('Z')})`, field:"date", mutator:((cell)=>dayjs(cell).format('YYYY/MM/DD HH:mm')), accessor:((value)=>dayjs(value).toJSON()), width:'150', formatter:dateWithYTLink},
     {title:"Track", field:"track", sorter:'number'},
     {title:"Song", field:"song", topCalc:'count', topCalcFormatter:(c=>'subtotal/小計：'+c.getValue()), headerFilter:select2, headerFilterParams:{field:"song"}, headerSort:false},
     {title:"singer", field:"singer", headerFilter:select2, headerFilterParams:{field:"singer"}, headerSort:false},
@@ -312,18 +320,6 @@ $(()=>{
 
   function canEdit(){
     return $('#edit').hasClass('active')
-  }
-
-  function dateValid(cell, value, parameters){
-    //cell - the cell component for the edited cell
-    //value - the new input value of the cell
-    //parameters - the parameters passed in with the validator
-      return dayjs(value).isValid();
-  }
-
-  function dateFormatter (cell){
-    //Change format to YYYY/MM/DD
-    return cell.setValue(dayjs(cell.getValue()).format('YYYY/MM/DD'))
   }
 
   function dateWithYTLink(cell){
@@ -712,95 +708,6 @@ $(()=>{
     })
   }
 
-  // Batch Add Setlist functionality
-  var addListByBatchModal = new bootstrap.Modal(document.getElementById('modalAddListByBatch'))
-  document.getElementById('modalAddListByBatch').addEventListener('shown.bs.modal', () => {
-    $('#batchInput').focus()
-  })
-
-  $('#content').on('click', '#addListByBatch', () => {
-    $('#batchInput').val('')
-    $('#batchDate').val('')
-    $('#batchYTLink').val('')
-    $('#batchPreview').hide()
-    addListByBatchModal.show()
-  })
-
-  // Parse batch input function
-  function parseBatchInput(input) {
-    if (!input.trim()) return []
-    
-    // Only support JSON format now (from Admin page)
-    try {
-      const jsonData = JSON.parse(input)
-      if (Array.isArray(jsonData)) {
-        return jsonData.map(item => ({
-          songname: item.songname || item.song || '',
-          artist: item.artist || item.singer || '',
-          note: item.note || '',
-          date: item.date || '',
-          YTLink: item.YTLink || '',
-          track: item.track || 0
-        }))
-      }
-    } catch (e) {
-      // JSON parse error
-      return []
-    }
-    
-    return []
-  }
-
-  // Preview batch data
-  $('#previewBatch').on('click', () => {
-    const input = $('#batchInput').val()
-    const songs = parseBatchInput(input)
-    
-    if (songs.length === 0) {
-      $('#previewContent').html('<div class="text-danger">未找到有效的歌曲資料</div>')
-      $('#batchPreview').show()
-      return
-    }
-    
-    let previewHtml = `<div class="text-success">找到 ${songs.length} 首歌曲：</div><ul>`
-    songs.forEach((song, index) => {
-      previewHtml += `<li>${index + 1}. ${song.songname}${song.artist ? ' - ' + song.artist : ''}${song.note ? ' (' + song.note + ')' : ''}</li>`
-    })
-    previewHtml += '</ul>'
-    
-    $('#previewContent').html(previewHtml)
-    $('#batchPreview').show()
-  })
-
-  // Add batch data to table
-  $('#addBatchData').on('click', () => {
-    const input = $('#batchInput').val()
-    const songs = parseBatchInput(input)
-    
-    if (songs.length === 0) {
-      alert('請輸入有效的JSON格式資料')
-      return
-    }
-    
-    jsonTable.blockRedraw()
-    
-    const rowsToAdd = songs.map(song => ({
-      date: song.date,
-      track: song.track,
-      song: song.songname,
-      singer: song.artist,
-      note: song.note,
-      YTLink: song.YTLink
-    }))
-    
-    jsonTable.addData(rowsToAdd)
-    
-    jsonTable.restoreRedraw()
-    jsonTable.redraw()
-    
-    alert(`成功添加 ${songs.length} 首歌曲！`)
-    addListByBatchModal.hide()
-  })
 
 
 //--- json table ---
