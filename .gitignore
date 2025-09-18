@@ -95,3 +95,4 @@ worker/
 # Wrangler cache
 .wrangler/
 TECHNICAL_ARCHITECTURE.md
+LOADPAGE_REFACTOR.md

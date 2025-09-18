@@ -1,5 +1,6 @@
 ## 2025
 * 2025/10/18　[ぶいきゃすコレクション ファンミーティング](https://tiget.net/events/427098)
+* 2025/09/18　[苺咲べりぃのはぴラジオ！EP4：秋、近づく？](https://creators.spotify.com/pod/profile/maisakiberry/episodes/EP4-e389vef)
 * 2025/09/13　V-Universe FES『SPECTRUM』オフラインFES前3Dコラボ [twitter](https://x.com/ama_hano/status/1946405821119906255) / [youtube](https://www.youtube.com/live/k-v6oz8tdgM)
 * 2025/09/13　[V-Universe FES『SPECTRUM』参加](https://x.com/ama_hano/status/1946405821119906255)
 * 2025/09/09　[苺咲べりぃのはぴラジオ！EP3：9月！みんなお待たせっ！](https://creators.spotify.com/pod/profile/maisakiberry/episodes/EP39-e380d1c)
