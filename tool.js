@@ -480,6 +480,7 @@ $(()=>{
     $('#modalFooter').empty()
   })
 
+
   $('#modalFooter').on('click', '#dlData', ()=>{
     $('#dljson').click()
     $('#modalFooter').empty()
@@ -580,8 +581,20 @@ $(()=>{
           $('#category').val(preCategory(title)).trigger('change');
         }
         else{
-          $('#streamMsg').html("Not berry's video")
-          obj.val('').focus()
+          // 非berry頻道，在當前modal內顯示確認按鈕
+          $('#streamMsg').html(`
+            <div class="text-warning">⚠️ 非berry頻道 確認要新增?</div>
+            <div class="mt-2">
+              <button type="button" class="btn btn-sm btn-secondary me-2" id="cancelNonBerry">取消</button>
+              <button type="button" class="btn btn-sm btn-primary" id="confirmNonBerry">確認</button>
+            </div>
+          `)
+
+          // 暫存影片資訊供確認後使用
+          $('#YTID').data('tempVideoInfo', {
+            info: info,
+            id: id
+          })
         }    
       })
       .fail((jqXHR, textStatus)=>{
@@ -598,12 +611,48 @@ $(()=>{
 
   $('#addStreamRowData').on('click', (e)=>{
       jsonTable.addRow({
-        id:$('#videoID').val(), 
-        title:$('#streamTitle').val(), 
+        id:$('#videoID').val(),
+        title:$('#streamTitle').val(),
         time:dayjs($('#streamTime').val()).toJSON(),
         category:$('#category').val() }
         , true)
     })
+
+  // 處理非berry頻道確認按鈕
+  $(document).on('click', '#confirmNonBerry', (e)=>{
+    console.log('確認按鈕被點擊') // 調試輸出
+    let tempData = $('#YTID').data('tempVideoInfo')
+    console.log('暫存資料:', tempData) // 調試輸出
+
+    if (tempData) {
+      let {info, id} = tempData
+      let title = info.snippet.title
+
+      // 填入影片資訊 (與berry頻道相同邏輯)
+      $('#streamMsg').html("　")
+      $('#streamTitle').val(title).prop('disabled', false)
+      $('#streamTime').val(info.time).prop('disabled', false)
+      $('#setlistDate').val(info.time)
+      $('#videoID').val(id)
+      $('#category').val(preCategory(title)).trigger('change')
+
+      console.log('影片資訊已填入') // 調試輸出
+      // 清除暫存資料
+      $('#YTID').removeData('tempVideoInfo')
+    }
+  })
+
+  // 處理非berry頻道取消按鈕
+  $(document).on('click', '#cancelNonBerry', (e)=>{
+    console.log('取消按鈕被點擊') // 調試輸出
+
+    // 清空輸入框並重新獲得焦點
+    $('#YTID').val('').focus()
+    $('#streamMsg').html("已取消新增")
+
+    // 清除暫存資料
+    $('#YTID').removeData('tempVideoInfo')
+  })
 
   // Add from list button click handler
   $('#content').on('click', '#addFromList', () => {
