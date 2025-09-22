@@ -140,11 +140,11 @@ $(()=>{
     var url='', title='', process=''
 
     if(path === undefined || path.length < 2 || !path.includes('/')){
-      url = 'main.md'
+      url = 'pages/main.md'
     }
     else{
       url = path.slice(1)
-      
+
       //find title
       let t = $("#navbarContent a[href='"+path+"']")
         if(t.length==0){
@@ -153,12 +153,22 @@ $(()=>{
           $('#modalMsg').html('Load page fail.<br>If you think the url is correct, please report in github issues.')
           $('#modalFooter').append('<button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="urlError">OK</button>')
           msgModal.show()
-          url = 'main.md'
+          url = 'pages/main.md'
         }
         else{
           title = t.text()+' - '
           process = url
-          url+=t.data().ext
+
+          // 根據檔案類型設定正確的路徑
+          let ext = t.data().ext
+          if(ext === '.json') {
+            url = 'assets/data/' + url + ext
+          } else if(ext === '.htm' || ext === '.md') {
+            url = 'pages/' + url + ext
+          } else {
+            url += ext
+          }
+
           //songlist is a exception
           if(process=='songlist') url='https://hackmd.io/NSAM_dezTrWPQJ0nGWViIQ/download'
         }
@@ -214,7 +224,7 @@ $(()=>{
         $("#content").empty().append(c)
 
         //append latest video info / update info
-        if(url == 'main.md'){
+        if(url == 'pages/main.md'){
           getLatest().then(r=>{
             $("#content").append(r)
           })
