@@ -5,8 +5,12 @@ import 'https://unpkg.com/bootstrap@5.3.3/dist/js/bootstrap.min.js'
 import "https://cdnjs.cloudflare.com/ajax/libs/tabulator/6.3.1/js/tabulator.min.js"
 import "https://unpkg.com/marked@12.0.1/marked.min.js"
 import "https://unpkg.com/dayjs@1.11.10/dayjs.min.js"
+import "https://unpkg.com/dayjs@1.11.10/plugin/utc.js"
 import "https://unpkg.com/select2@4.0.13/dist/js/select2.full.min.js"
 import "https://unpkg.com/video.js@8.21.1/dist/video.min.js"
+
+// 載入 dayjs UTC 插件
+dayjs.extend(window.dayjs_plugin_utc)
 
 //------  coding by hand  ------
 let nav = `
@@ -287,7 +291,7 @@ $(()=>{
 
   //column definition
   var setlistColDef = [
-    {title:`local time(${dayjs().format('Z')})`, field:"date", mutator:((cell)=>dayjs(cell).format('YYYY/MM/DD HH:mm')), accessor:((value)=>dayjs(value).toJSON()), width:'150', formatter:dateWithYTLink},
+    {title:`local time(${dayjs().format('Z')})`, field:"date", mutator:((cell)=>dayjs(cell).format('YYYY/MM/DD HH:mm')), accessor:((value)=>dayjs(value).utc().format('YYYY-MM-DDTHH:mm:ss[Z]')), width:'150', formatter:dateWithYTLink},
     {title:"Track", field:"track", sorter:'number'},
     {title:"Song", field:"song", topCalc:'count', topCalcFormatter:(c=>'subtotal/小計：'+c.getValue()), headerFilter:select2, headerFilterParams:{field:"song"}, headerSort:false},
     {title:"singer", field:"singer", headerFilter:select2, headerFilterParams:{field:"singer"}, headerSort:false},
@@ -299,7 +303,7 @@ $(()=>{
     {title:"thumbnail", formatter:imageLink, headerFilter:false},
     {title:"id", field:"id", visible: false, download:true},
     {title:"title", field:"title", width:300, topCalc:'count',topCalcFormatter:(c=>'subtotal/小計：'+c.getValue()), formatter:multiLineLinkFormat},
-    {title:`local time(${dayjs().format('Z')})`, field:"time", mutator:((cell)=>dayjs(cell).format('YYYY/MM/DD HH:mm')), accessor:((value)=>dayjs(value).toJSON())},
+    {title:`local time(${dayjs().format('Z')})`, field:"time", mutator:((cell)=>dayjs(cell).format('YYYY/MM/DD HH:mm')), accessor:((value)=>dayjs(value).utc().format('YYYY-MM-DDTHH:mm:ss[Z]'))},
     {title:"category", field:"category", headerFilter:select2, headerFilterParams:{field:'category'}, headerSort:false, editor:select2, editorParams:{field:'category'}, formatter:(cell=>{
       cell.getElement().style.whiteSpace ='pre-line'
       return cell.getValue()
@@ -609,7 +613,7 @@ $(()=>{
       jsonTable.addRow({
         id:$('#videoID').val(),
         title:$('#streamTitle').val(),
-        time:dayjs($('#streamTime').val()).toJSON(),
+        time:dayjs($('#streamTime').val()).utc().format('YYYY-MM-DDTHH:mm:ss[Z]'),
         category:$('#category').val() }
         , true)
     })
