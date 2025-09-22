@@ -2,7 +2,7 @@
 import 'https://unpkg.com/jquery@3.7.1/dist/jquery.min.js'
 import 'https://unpkg.com/@popperjs/core@2.11.8/dist/umd/popper.min.js'
 import 'https://unpkg.com/bootstrap@5.3.3/dist/js/bootstrap.min.js'
-import "https://cdnjs.cloudflare.com/ajax/libs/tabulator/5.5.0/js/tabulator.min.js"
+import "https://cdnjs.cloudflare.com/ajax/libs/tabulator/6.3.1/js/tabulator.min.js"
 import "https://unpkg.com/marked@12.0.1/marked.min.js"
 import "https://unpkg.com/dayjs@1.11.10/dayjs.min.js"
 import "https://unpkg.com/select2@4.0.13/dist/js/select2.full.min.js"

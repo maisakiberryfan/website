@@ -1,0 +1,235 @@
+/*
+ * Tabulator Bootstrap 5 Dark Theme Patch (SCSS Version)
+ * Based on commit 952a19e2dba03d4828070246a03ccd527bd85c1e
+ * Fixes dark mode styling for Bootstrap 5 with data-bs-theme="dark"
+ */
+
+// Dark theme color variables
+$table-dark-bg: #212529;
+$table-dark-color: #fff;
+$table-dark-border: #373b3e;
+$table-striped-bg: rgba(0, 0, 0, 0.05);
+$table-hover-bg: #323539;
+
+[data-bs-theme="dark"] {
+  .tabulator {
+    // CSS Variables for Bootstrap 5 integration
+    --bs-table-color-state: #{$table-dark-color};
+    --bs-table-bg-state: #{$table-dark-bg};
+    --bs-table-border-color-state: #{$table-dark-border};
+    --bs-table-striped-bg-state: #{$table-striped-bg};
+    --bs-table-hover-bg-state: #{$table-hover-bg};
+
+    background-color: var(--bs-table-bg-state) !important;
+
+    // Table structure
+    .tabulator-header {
+      background-color: var(--bs-table-bg-state);
+      color: var(--bs-table-color-state);
+      border-color: var(--bs-table-border-color-state);
+
+      .tabulator-col {
+        background-color: var(--bs-table-bg-state);
+        color: var(--bs-table-color-state);
+        border-color: var(--bs-table-border-color-state);
+
+        .tabulator-col-content {
+          color: var(--bs-table-color-state);
+        }
+      }
+    }
+
+    // Table body
+    .tabulator-tableHolder,
+    .tabulator-tableholder {
+      background-color: var(--bs-table-bg-state) !important;
+    }
+
+    .tabulator-table {
+      background-color: var(--bs-table-bg-state) !important;
+      color: var(--bs-table-color-state);
+    }
+
+    // Row styling - transparent background like 5.2.6
+    .tabulator-row {
+      background-color: transparent !important;
+      color: var(--bs-table-color-state);
+      border-color: var(--bs-table-border-color-state);
+
+      // Hover effect
+      &:hover {
+        background-color: var(--bs-table-hover-bg-state) !important;
+      }
+
+      // Selected rows
+      &.tabulator-selected {
+        background-color: #0d6efd;
+        color: #fff;
+
+        &:hover {
+          background-color: #0b5ed7;
+        }
+      }
+    }
+
+    // Striped rows - even rows only
+    &.table-striped:not(.table) {
+      .tabulator-row.tabulator-row-even {
+        background-color: var(--bs-table-striped-bg-state) !important;
+
+        &.tabulator-selected {
+          background-color: #0d6efd;
+        }
+      }
+    }
+
+    // Cell styling
+    .tabulator-cell {
+      color: var(--bs-table-color-state);
+      border-color: var(--bs-table-border-color-state);
+    }
+
+    // Calculation rows - special handling to prevent border inheritance
+    .tabulator-calcs-holder {
+      background-color: var(--bs-table-bg-state) !important;
+
+      .tabulator-row {
+        background-color: var(--bs-table-bg-state) !important;
+      }
+
+      .tabulator-cell {
+        background-color: var(--bs-table-bg-state) !important;
+        color: var(--bs-table-color-state) !important;
+        // Remove all borders for calculation rows
+        border: none !important;
+      }
+    }
+
+    // Table borders for table-bordered class
+    &.table-bordered {
+      .tabulator-col {
+        border-right: 1px solid var(--bs-table-border-color-state) !important;
+      }
+
+      .tabulator-cell {
+        border-right: 1px solid var(--bs-table-border-color-state) !important;
+      }
+
+      .tabulator-header .tabulator-col {
+        border-right: 1px solid var(--bs-table-border-color-state) !important;
+      }
+
+      // Exception: calculation rows should not have borders even in bordered tables
+      .tabulator-calcs-holder .tabulator-cell {
+        border: none !important;
+      }
+    }
+
+    // Resize handle with white line effect
+    .tabulator-col-resize-handle {
+      background: transparent !important;
+      border: none !important;
+      position: relative !important;
+      z-index: 15 !important;
+
+      &::after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        top: 0;
+        bottom: 0;
+        width: 1px;
+        background-color: rgba(255, 255, 255, 0.8);
+        transform: translateX(-50%);
+      }
+
+      &:hover::after {
+        background-color: #ffffff;
+      }
+    }
+
+    // Footer
+    .tabulator-footer {
+      background-color: var(--bs-table-bg-state);
+      color: var(--bs-table-color-state);
+      border-color: var(--bs-table-border-color-state);
+    }
+
+    // Header filters
+    .tabulator-header-filter input {
+      background-color: var(--bs-table-bg-state);
+      color: var(--bs-table-color-state);
+      border-color: var(--bs-table-border-color-state);
+
+      &:focus {
+        background-color: var(--bs-table-bg-state);
+        color: var(--bs-table-color-state);
+        border-color: #0d6efd;
+        box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+      }
+    }
+
+    // Edit mode
+    .tabulator-cell.tabulator-editing input {
+      background-color: var(--bs-table-bg-state);
+      color: var(--bs-table-color-state);
+      border-color: var(--bs-table-border-color-state);
+    }
+
+    // Sortable headers
+    .tabulator-col.tabulator-sortable:hover {
+      background-color: var(--bs-table-hover-bg-state);
+    }
+
+    // Pagination
+    .tabulator-paginator {
+      background-color: var(--bs-table-bg-state);
+      color: var(--bs-table-color-state);
+      border-color: var(--bs-table-border-color-state);
+    }
+
+    .tabulator-page {
+      background-color: var(--bs-table-bg-state);
+      color: var(--bs-table-color-state);
+      border-color: var(--bs-table-border-color-state);
+
+      &:hover {
+        background-color: var(--bs-table-hover-bg-state);
+      }
+
+      &.active {
+        background-color: #0d6efd;
+        color: #fff;
+        border-color: #0d6efd;
+      }
+    }
+
+    // Loader
+    .tabulator-loader {
+      background-color: rgba(33, 37, 41, 0.8);
+      color: var(--bs-table-color-state);
+    }
+  }
+
+  // Menu (outside tabulator scope)
+  .tabulator-menu {
+    background-color: $table-dark-bg;
+    color: $table-dark-color;
+    border-color: $table-dark-border;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5);
+
+    .tabulator-menu-item {
+      color: $table-dark-color;
+
+      &:hover {
+        background-color: $table-hover-bg;
+      }
+    }
+  }
+
+  // Tooltip
+  .tabulator-tooltip {
+    background-color: #000;
+    color: #fff;
+  }
+}

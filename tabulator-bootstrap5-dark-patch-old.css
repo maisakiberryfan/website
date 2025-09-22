@@ -1,0 +1,223 @@
+/*
+ * Tabulator Bootstrap 5 Dark Theme Patch
+ * Based on commit 952a19e2dba03d4828070246a03ccd527bd85c1e
+ * Fixes dark mode styling for Bootstrap 5 with data-bs-theme="dark"
+ */
+
+/* Dark theme support for Bootstrap 5 */
+[data-bs-theme="dark"] .tabulator {
+  --bs-table-color-state: #fff;
+  --bs-table-bg-state: #212529;
+  --bs-table-border-color-state: #373b3e;
+  --bs-table-striped-bg-state: rgba(0, 0, 0, 0.05);
+  --bs-table-hover-bg-state: #323539;
+  background-color: var(--bs-table-bg-state) !important;
+}
+
+/* Table headers dark styling */
+[data-bs-theme="dark"] .tabulator .tabulator-header {
+  background-color: var(--bs-table-bg-state);
+  color: var(--bs-table-color-state);
+  border-color: var(--bs-table-border-color-state);
+}
+
+[data-bs-theme="dark"] .tabulator .tabulator-header .tabulator-col {
+  background-color: var(--bs-table-bg-state);
+  color: var(--bs-table-color-state);
+  border-color: var(--bs-table-border-color-state);
+}
+
+[data-bs-theme="dark"] .tabulator .tabulator-header .tabulator-col-content {
+  color: var(--bs-table-color-state);
+}
+
+/* Table body dark styling - fix white areas when data is sparse */
+[data-bs-theme="dark"] .tabulator .tabulator-tableHolder {
+  background-color: var(--bs-table-bg-state) !important;
+}
+
+[data-bs-theme="dark"] .tabulator .tabulator-table {
+  background-color: var(--bs-table-bg-state) !important;
+  color: var(--bs-table-color-state);
+}
+
+/* Fix empty table areas */
+[data-bs-theme="dark"] .tabulator .tabulator-tableholder {
+  background-color: var(--bs-table-bg-state) !important;
+}
+
+/* Row styling - transparent background like 5.2.6, keep text and border colors */
+[data-bs-theme="dark"] .tabulator .tabulator-row {
+  background-color: transparent !important;
+  color: var(--bs-table-color-state);
+  border-color: var(--bs-table-border-color-state);
+}
+
+/* Even rows with 5.2.6 exact striped color */
+[data-bs-theme="dark"] .tabulator.table-striped:not(.table) .tabulator-row.tabulator-row-even {
+  background-color: var(--bs-table-striped-bg-state) !important;
+}
+
+/* Hover states */
+[data-bs-theme="dark"] .tabulator .tabulator-row:hover {
+  background-color: var(--bs-table-hover-bg-state) !important;
+}
+
+/* Selected rows */
+[data-bs-theme="dark"] .tabulator .tabulator-row.tabulator-selected {
+  background-color: #0d6efd;
+  color: #fff;
+}
+
+[data-bs-theme="dark"] .tabulator .tabulator-row.tabulator-selected:hover {
+  background-color: #0b5ed7;
+}
+
+/* Selected striped rows - matching 6.3.1 pattern */
+[data-bs-theme="dark"] .tabulator.table-striped:not(.table) .tabulator-row.tabulator-row-even.tabulator-selected {
+  background-color: #0d6efd;
+}
+
+/* Cell styling */
+[data-bs-theme="dark"] .tabulator .tabulator-cell {
+  color: var(--bs-table-color-state);
+  border-color: var(--bs-table-border-color-state);
+}
+
+/* Fix subtotal/calculation row background and remove unwanted borders */
+[data-bs-theme="dark"] .tabulator .tabulator-calcs-holder {
+  background-color: var(--bs-table-bg-state) !important;
+}
+
+[data-bs-theme="dark"] .tabulator .tabulator-calcs-holder .tabulator-row {
+  background-color: var(--bs-table-bg-state) !important;
+}
+
+[data-bs-theme="dark"] .tabulator .tabulator-calcs-holder .tabulator-cell {
+  background-color: var(--bs-table-bg-state) !important;
+  color: var(--bs-table-color-state) !important;
+  border-right: none !important;
+  border-left: none !important;
+  border-top: none !important;
+  border-bottom: none !important;
+}
+
+/* Footer styling */
+[data-bs-theme="dark"] .tabulator .tabulator-footer {
+  background-color: var(--bs-table-bg-state);
+  color: var(--bs-table-color-state);
+  border-color: var(--bs-table-border-color-state);
+}
+
+/* Header filter styling */
+[data-bs-theme="dark"] .tabulator .tabulator-header-filter input {
+  background-color: var(--bs-table-bg-state);
+  color: var(--bs-table-color-state);
+  border-color: var(--bs-table-border-color-state);
+}
+
+[data-bs-theme="dark"] .tabulator .tabulator-header-filter input:focus {
+  background-color: var(--bs-table-bg-state);
+  color: var(--bs-table-color-state);
+  border-color: #0d6efd;
+  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+
+/* Edit styling */
+[data-bs-theme="dark"] .tabulator .tabulator-cell.tabulator-editing input {
+  background-color: var(--bs-table-bg-state);
+  color: var(--bs-table-color-state);
+  border-color: var(--bs-table-border-color-state);
+}
+
+/* Sortable headers */
+[data-bs-theme="dark"] .tabulator .tabulator-col.tabulator-sortable:hover {
+  background-color: var(--bs-table-hover-bg-state);
+}
+
+/* Pagination styling */
+[data-bs-theme="dark"] .tabulator .tabulator-paginator {
+  background-color: var(--bs-table-bg-state);
+  color: var(--bs-table-color-state);
+  border-color: var(--bs-table-border-color-state);
+}
+
+[data-bs-theme="dark"] .tabulator .tabulator-page {
+  background-color: var(--bs-table-bg-state);
+  color: var(--bs-table-color-state);
+  border-color: var(--bs-table-border-color-state);
+}
+
+[data-bs-theme="dark"] .tabulator .tabulator-page:hover {
+  background-color: var(--bs-table-hover-bg-state);
+}
+
+[data-bs-theme="dark"] .tabulator .tabulator-page.active {
+  background-color: #0d6efd;
+  color: #fff;
+  border-color: #0d6efd;
+}
+
+/* Loader styling */
+[data-bs-theme="dark"] .tabulator .tabulator-loader {
+  background-color: rgba(33, 37, 41, 0.8);
+  color: var(--bs-table-color-state);
+}
+
+/* Fix table-bordered borders for dark theme */
+[data-bs-theme="dark"] .tabulator.table-bordered .tabulator-col {
+  border-right: 1px solid var(--bs-table-border-color-state) !important;
+}
+
+[data-bs-theme="dark"] .tabulator.table-bordered .tabulator-cell {
+  border-right: 1px solid var(--bs-table-border-color-state) !important;
+}
+
+[data-bs-theme="dark"] .tabulator.table-bordered .tabulator-header .tabulator-col {
+  border-right: 1px solid var(--bs-table-border-color-state) !important;
+}
+
+/* Create white resize handle that overlays the border */
+[data-bs-theme="dark"] .tabulator .tabulator-col-resize-handle {
+  background: transparent !important;
+  border: none !important;
+  position: relative !important;
+  z-index: 15 !important;
+}
+
+[data-bs-theme="dark"] .tabulator .tabulator-col-resize-handle::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background-color: rgba(255, 255, 255, 0.8);
+  transform: translateX(-50%);
+}
+
+[data-bs-theme="dark"] .tabulator .tabulator-col-resize-handle:hover::after {
+  background-color: #ffffff;
+}
+
+/* Menu styling */
+[data-bs-theme="dark"] .tabulator-menu {
+  background-color: var(--bs-table-bg-state);
+  color: var(--bs-table-color-state);
+  border-color: var(--bs-table-border-color-state);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5);
+}
+
+[data-bs-theme="dark"] .tabulator-menu .tabulator-menu-item {
+  color: var(--bs-table-color-state);
+}
+
+[data-bs-theme="dark"] .tabulator-menu .tabulator-menu-item:hover {
+  background-color: var(--bs-table-hover-bg-state);
+}
+
+/* Tooltip styling */
+[data-bs-theme="dark"] .tabulator-tooltip {
+  background-color: #000;
+  color: #fff;
+}
