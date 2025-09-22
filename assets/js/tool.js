@@ -73,7 +73,7 @@ let nav = `
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link dropdown-item" href='fileUpload'>fileUpload</a>
+          <a class="nav-link dropdown-item" href='fileUpload.html'>fileUpload</a>
         </li>
         <li class="nav-item">
           <a class="nav-link dropdown-item setContent" href='/howTo' data-ext='.md'>How To Edit</a>
