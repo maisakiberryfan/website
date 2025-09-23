@@ -1,0 +1,23 @@
+{
+  "name": "website",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "build:tabulator": "sass --load-path=node_modules assets/css/tabulator-bootstrap5-custom.scss assets/css/tabulator-bootstrap5-custom.css",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "tabulator-tables": "^6.3.1"
+  },
+  "devDependencies": {
+    "sass": "^1.93.1"
+  }
+}
