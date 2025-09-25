@@ -277,16 +277,52 @@ $(()=>{
       }
     }
     if(process=='streamlist'){
-      uniqueData = 
-      {
-        category: sortDataForSelect2(data, 'category')
-      }
-      
+      // No longer need static uniqueData.category - using dynamic generation
+      uniqueData = {}
     }
   }
 
   function sortDataForSelect2(arr, txt){
     return [...new Set(arr.map(e=>e[txt]))].sort().map(e=>{return {id:e,text:e}})
+  }
+
+  // Dynamic category data generation for arrays
+  function getDynamicCategoryData(table) {
+    try {
+      // Check if data is processed and ready
+      if (!window.tableDataLoaded) {
+        console.log('getDynamicCategoryData - data not processed yet, returning empty array');
+        return [];
+      }
+
+      const tableData = table ? table.getData() : (window.jsonTable ? window.jsonTable.getData() : []);
+      const categories = new Set();
+
+      // Debug logging
+      console.log('getDynamicCategoryData - tableData length:', tableData.length);
+
+      if (tableData.length === 0) {
+        console.log('getDynamicCategoryData - no data available');
+        return [];
+      }
+
+      tableData.forEach(row => {
+        if (Array.isArray(row.category)) {
+          row.category.forEach(cat => {
+            if (cat && cat.trim().length > 0) {
+              categories.add(cat.trim());
+            }
+          });
+        }
+      });
+
+      const result = Array.from(categories).sort().map(cat => ({id: cat, text: cat}));
+      console.log('getDynamicCategoryData - result count:', result.length);
+      return result;
+    } catch (error) {
+      console.error('getDynamicCategoryData error:', error);
+      return [];
+    }
   }
 
   //--- url Error ---
@@ -314,9 +350,34 @@ $(()=>{
     {title:"id", field:"id", visible: false, download:true},
     {title:"title", field:"title", width:300, topCalc:'count',topCalcFormatter:(c=>'subtotal/小計：'+c.getValue()), formatter:multiLineLinkFormat},
     {title:`local time(${dayjs().format('Z')})`, field:"time", mutator:((cell)=>dayjs(cell).format('YYYY/MM/DD HH:mm')), accessor:((value)=>dayjs(value).utc().format('YYYY-MM-DDTHH:mm:ss[Z]'))},
-    {title:"category", field:"category", headerFilter:select2, headerFilterParams:{field:'category'}, headerSort:false, editor:select2, editorParams:{field:'category'}, formatter:(cell=>{
-      cell.getElement().style.whiteSpace ='pre-line'
-      return cell.getValue()
+    {title:"category", field:"category",
+      headerFilter:select2,
+      headerFilterParams:{field:'category', multiple: true},
+      headerFilterFunc: function(headerValue, rowValue, rowData, filterParams) {
+        // console.log('Header filter - headerValue:', headerValue, 'rowValue:', rowValue);
+
+        // No filter applied
+        if (!headerValue || headerValue.length === 0) return true;
+
+        // Ensure rowValue is an array
+        if (!Array.isArray(rowValue)) return false;
+
+        // Check if any selected filter value matches any category in the row (OR logic)
+        return headerValue.some(filterVal =>
+          rowValue.some(rowCat =>
+            rowCat.toLowerCase().includes(filterVal.toLowerCase())
+          )
+        );
+      },
+      headerSort:false,
+      editor:select2,
+      editorParams:{field:'category', multiple: true},
+      formatter:(cell=>{
+        const categories = cell.getValue();
+        if (!Array.isArray(categories)) return '';
+
+        // Display categories with line breaks for better readability
+        return categories.map(cat => cat).join('<br>');
       })
     },
     {title:"note", field:"note"},
@@ -349,39 +410,78 @@ $(()=>{
     //cancel - function to call to abort the edit and return to a normal cell
     //editorParams - params object passed into the editorParams column definition property
 
-    //create input element to hold select
-    var editor = document.createElement("input")
+    // console.log('select2 function called for field:', editorParams.field, 'tableDataLoaded:', window.tableDataLoaded);
 
-    var d = uniqueData[editorParams.field]
-    
+    // Create select element for better select2 compatibility
+    var editor = document.createElement("select")
+    if (editorParams.multiple) {
+      editor.setAttribute("multiple", "multiple")
+    }
+
+    let f = editorParams.field
+
     onRendered(function(){
+      // console.log('select2 onRendered called for field:', f, 'tableDataLoaded:', window.tableDataLoaded);
       let op = $(editor)
 
-      //console.log(op)
+      // Get data after onRendered to ensure table is loaded
+      var d = []
+      if (f === 'category') {
+        d = getDynamicCategoryData(cell.getTable())
+        // console.log('Select2 editor - category data:', d.length, 'items');
+      } else {
+        d = uniqueData[f] || []
+      }
+
       op.select2({
             data: d,
             width: '300px',
             allowClear: true,
-            placeholder:'',
+            placeholder: editorParams.multiple ? 'Select categories...' : '',
             tags: true,
-            //multiple:true //if use multiple, filter have to change to 'in'
+            multiple: editorParams.multiple || false,
+            templateResult: function(data) {
+              if (!data.id) return data.text;
+              return data.text;
+            },
+            templateSelection: function(data) {
+              return data.text;
+            },
+            escapeMarkup: function(markup) {
+              return markup; // Let our custom templates work
+            }
       })
-      op.val(cell.getValue()).trigger('change')
 
-      op.on('change', function (e) {
-        /*let q = $(editor).val()
-        if(q.length==0){  //清除
-          q = null
+      // Set initial value
+      let v = cell.getValue()
+      if (v === null || v === undefined) {
+        v = editorParams.multiple ? [] : ''
+      }
+
+      // Set the value and trigger change
+      op.val(v).trigger('change')
+
+      // Handle change events
+      op.on('change.select2', function (e) {
+        let val = $(this).val()
+        // For multiple selection, ensure we return array format for category
+        if (editorParams.multiple && f === 'category') {
+          val = Array.isArray(val) ? val : (val ? [val] : [])
         }
-        else{
-          q = $(editor).val().split(',').filter(e=>e.length>0)
-        }*/
-        success($(editor).val())
+        success(val)
       })
 
-      op.on('blur', function (e) {
-          cancel()
+      // Handle close events for immediate update
+      op.on('select2:close', function (e) {
+        let val = $(this).val()
+        if (editorParams.multiple && f === 'category') {
+          val = Array.isArray(val) ? val : (val ? [val] : [])
+        }
+        success(val)
       })
+
+      // Don't auto-open select2 - let user click to open
+      // Focus is handled by Tabulator when cell is clicked
     })
 
     //add editor to cell
@@ -414,6 +514,22 @@ $(()=>{
       addRowPos:"top",
       downloadRowRange:'all'
     })
+
+    // Listen for data processing events - data is ready for access via getData()
+    jsonTable.on("dataProcessed", function(){
+      const data = jsonTable.getData();
+      console.log('Table data processed and ready, count:', data.length);
+      // Store reference to processed data for getDynamicCategoryData
+      window.tableDataLoaded = true;
+
+      // Re-initialize category header filter after data is processed
+      if (p === 'streamlist') {
+        console.log('Re-initializing category header filter with data');
+        // Clear existing header filter
+        jsonTable.clearHeaderFilter();
+        // The header filters will be re-initialized automatically
+      }
+    });
   }
 
   //--- jsonTable button block ---
@@ -533,15 +649,45 @@ $(()=>{
 
   $('#content').on('click', '#addStreamRow', ()=>{
     $('.form-control').val('')
+
+    // Check if table data is loaded
+    if (!window.tableDataLoaded || !jsonTable) {
+      alert('Please wait for table data to load before adding new rows.');
+      return;
+    }
+
+    // Initialize select2 for category with dynamic data
+    $('#category').empty()
+    if ($('#category').hasClass('select2-hidden-accessible')) {
+      $('#category').select2('destroy')
+    }
+
+    let categoryData = getDynamicCategoryData(jsonTable)
+    console.log('Modal category data:', categoryData)
+
+    if (categoryData.length === 0) {
+      console.warn('No category data available, allow tags only');
+    }
+
     $('#category').select2({
-      data: uniqueData.category,
+      data: categoryData,
       allowClear: true,
       tags: true,
-      width: '300px',
+      multiple: true,
+      width: '100%',
       dropdownParent: $('#modalAddStreamRow'),
-      placeholder: ''
+      placeholder: categoryData.length === 0 ? 'Type to add categories...' : 'Select or type categories...',
+      templateResult: function(data) {
+        return data.text;
+      },
+      templateSelection: function(data) {
+        return data.text;
+      }
     })
-    $('#category').val('歌枠 / Singing').trigger('change');
+
+    // Set default category
+    $('#category').val(['歌枠 / Singing']).trigger('change');
+
     $('#streamTitle').prop('disabled', true)
     $('#streamTime').prop('disabled', true)
     addStreamRowModal.show()
@@ -620,11 +766,14 @@ $(()=>{
   })
 
   $('#addStreamRowData').on('click', (e)=>{
+      // Select2 multiple already returns array format
+      const categories = $('#category').val() || [];
+
       jsonTable.addRow({
         id:$('#videoID').val(),
         title:$('#streamTitle').val(),
         time:dayjs($('#streamTime').val()).utc().format('YYYY-MM-DDTHH:mm:ss[Z]'),
-        category:$('#category').val() }
+        category: categories }
         , true)
     })
 
@@ -767,13 +916,13 @@ function preCategory(t){
   let origin = ['xfd', 'オリジナル', 'music video']
   let chat = ['chat', 'talk', '雑談']
 
-  if(t.toLowerCase().includes('gam')){return 'ゲーム / Gaming'}
-  else if(t.toLowerCase().includes('short')){return 'ショート / Shorts'}
-  else if(t.toLowerCase().includes('歌ってみた')){return '歌ってみた動画 / Cover movie'}
-  else if(origin.some(e=>t.toLowerCase().includes(e))){return 'オリジナル曲 / Original Songs'}
-  else if(chat.some(e=>t.toLowerCase().includes(e))){return '雑談 / Chatting'}
-  else if(t.includes('歌枠')){return '歌枠 / Singing'}
-  else{return 'other'}
+  if(t.toLowerCase().includes('gam')){return ['ゲーム / Gaming']}
+  else if(t.toLowerCase().includes('short')){return ['ショート / Shorts']}
+  else if(t.toLowerCase().includes('歌ってみた')){return ['歌ってみた動画 / Cover movie']}
+  else if(origin.some(e=>t.toLowerCase().includes(e))){return ['オリジナル曲 / Original Songs']}
+  else if(chat.some(e=>t.toLowerCase().includes(e))){return ['雑談 / Chatting']}
+  else if(t.includes('歌枠')){return ['歌枠 / Singing']}
+  else{return ['other']}
 }
 
 async function getLatest(){

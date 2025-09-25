@@ -96,3 +96,4 @@ worker/
 .wrangler/
 TECHNICAL_ARCHITECTURE.md
 LOADPAGE_REFACTOR.md
+*.backup*
