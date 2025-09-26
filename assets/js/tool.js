@@ -9,6 +9,9 @@ import "https://unpkg.com/dayjs@1.11.10/plugin/utc.js"
 import "https://unpkg.com/select2@4.0.13/dist/js/select2.full.min.js"
 import "https://unpkg.com/video.js@8.21.1/dist/video.min.js"
 
+// API configuration
+import { API_CONFIG, apiRequest, loadingManager, showError } from './config.js'
+
 // 載入 dayjs UTC 插件
 dayjs.extend(window.dayjs_plugin_utc)
 
@@ -162,15 +165,24 @@ $(()=>{
           // 根據檔案類型設定正確的路徑
           let ext = t.data().ext
           if(ext === '.json') {
-            url = 'assets/data/' + url + ext
+            // Use new API endpoints instead of JSON files
+            if (process === 'streamlist') {
+              url = API_CONFIG.BASE_URL + API_CONFIG.ENDPOINTS.streamlist
+            } else if (process === 'setlist') {
+              url = API_CONFIG.BASE_URL + API_CONFIG.ENDPOINTS.setlist
+            } else {
+              url = 'assets/data/' + url + ext
+            }
           } else if(ext === '.htm' || ext === '.md') {
             url = 'pages/' + url + ext
           } else {
             url += ext
           }
 
-          //songlist is a exception
-          if(process=='songlist') url='https://hackmd.io/NSAM_dezTrWPQJ0nGWViIQ/download'
+          //songlist uses API endpoint now
+          if(process=='songlist') {
+            url = API_CONFIG.BASE_URL + API_CONFIG.ENDPOINTS.songlist
+          }
         }
 
       if(clk){
@@ -187,9 +199,12 @@ $(()=>{
       document.title = title + '苺咲べりぃ非公式倉庫'
       let ext = url.split('.')  //check .html
       //check if there are some exception page
-      if(process=='setlist' || process=='streamlist'){
+      if(process=='setlist' || process=='streamlist' || process=='songlist'){
         let c = `
-              <button id='reloadBtn' class='btn btn-outline-light'>Reload Data</button>
+              <button id='reloadBtn' class='btn btn-outline-light' data-disable-on-loading="true">
+                <span class="loading-indicator spinner-border spinner-border-sm me-2" style="display: none;"></span>
+                Reload Data
+              </button>
               <button id='edit' class='btn btn-outline-light' data-bs-toggle="button">Edit mode</button>
               <button id='`+ (process=='streamlist'?'addStreamRow':'addRow') + `' class='btn btn-outline-light addRow' disabled>Add Row</button>`
               + (process=='streamlist'?`<button id='addFromList' class='btn btn-outline-light addRow' disabled>Add from list(Beta)</button>`:'') +
@@ -200,7 +215,15 @@ $(()=>{
               <div id='tb' class='table-dark table-striped table-bordered'>progressing...</div>
                 `
         $("#content").empty().append(c)
-        extractUniqueData(d, process)
+
+        // Handle different data types for API vs static files
+        let processedData = d
+        if (url.includes(API_CONFIG.BASE_URL)) {
+          // API response format: { data: [...] } or direct array
+          processedData = d.data || d
+        }
+
+        extractUniqueData(processedData, process)
         configJsonTable(url, process)
       }
       else if(ext[1] == 'htm'){
@@ -269,10 +292,10 @@ $(()=>{
     //https://stackoverflow.com/questions/15125920
 
     if(process=='setlist'){
-      uniqueData = 
+      uniqueData =
       {
-        song: sortDataForSelect2(data, 'song'),
-        singer: sortDataForSelect2(data, 'singer'),
+        songName: sortDataForSelect2(data, 'songName'),
+        artist: sortDataForSelect2(data, 'artist'),
         note: sortDataForSelect2(data, 'note')
       }
     }
@@ -307,8 +330,10 @@ $(()=>{
       }
 
       tableData.forEach(row => {
-        if (Array.isArray(row.category)) {
-          row.category.forEach(cat => {
+        // Support both 'category' (old) and 'categories' (new API) field names
+        const categoryField = row.categories || row.category;
+        if (Array.isArray(categoryField)) {
+          categoryField.forEach(cat => {
             if (cat && cat.trim().length > 0) {
               categories.add(cat.trim());
             }
@@ -337,25 +362,25 @@ $(()=>{
 
   //column definition
   var setlistColDef = [
-    {title:`local time(${dayjs().format('Z')})`, field:"date", mutator:((cell)=>dayjs(cell).format('YYYY/MM/DD HH:mm')), accessor:((value)=>dayjs(value).utc().format('YYYY-MM-DDTHH:mm:ss[Z]')), width:'150', formatter:dateWithYTLink},
+    {title:"streamID", field:"streamID", visible: false, download:true},
+    {title:`local time(${dayjs().format('Z')})`, field:"time", mutator:((cell)=>dayjs(cell).format('YYYY/MM/DD HH:mm')), accessor:((value)=>dayjs(value).utc().format('YYYY-MM-DDTHH:mm:ss[Z]')), width:'150', formatter:dateWithYTLink},
     {title:"Track", field:"track", sorter:'number'},
-    {title:"Song", field:"song", topCalc:'count', topCalcFormatter:(c=>'subtotal/小計：'+c.getValue()), headerFilter:select2, headerFilterParams:{field:"song"}, headerSort:false},
-    {title:"singer", field:"singer", headerFilter:select2, headerFilterParams:{field:"singer"}, headerSort:false},
-    {title:"note", field:"note", headerFilter:select2, headerFilterParams:{field:"note"}, headerSort:false},
+    {title:"Song", field:"songName", topCalc:'count', topCalcFormatter:(c=>'subtotal/小計：'+c.getValue()), headerFilter:select2, headerFilterParams:{field:"songName"}, headerSort:false},
+    {title:"Artist", field:"artist", headerFilter:select2, headerFilterParams:{field:"artist"}, headerSort:false},
+    {title:"Note", field:"note", headerFilter:select2, headerFilterParams:{field:"note"}, headerSort:false},
     {title:"YTLink", field:"YTLink", visible: false, download:true},
+    {title:"songID", field:"songID", visible: false, download:true},
   ]
 
   var streamlistColDef = [
     {title:"thumbnail", formatter:imageLink, headerFilter:false},
-    {title:"id", field:"id", visible: false, download:true},
+    {title:"streamID", field:"streamID", visible: false, download:true},
     {title:"title", field:"title", width:300, topCalc:'count',topCalcFormatter:(c=>'subtotal/小計：'+c.getValue()), formatter:multiLineLinkFormat},
     {title:`local time(${dayjs().format('Z')})`, field:"time", mutator:((cell)=>dayjs(cell).format('YYYY/MM/DD HH:mm')), accessor:((value)=>dayjs(value).utc().format('YYYY-MM-DDTHH:mm:ss[Z]'))},
-    {title:"category", field:"category",
+    {title:"categories", field:"categories",
       headerFilter:select2,
-      headerFilterParams:{field:'category', multiple: true},
+      headerFilterParams:{field:'categories', multiple: true},
       headerFilterFunc: function(headerValue, rowValue, rowData, filterParams) {
-        // console.log('Header filter - headerValue:', headerValue, 'rowValue:', rowValue);
-
         // No filter applied
         if (!headerValue || headerValue.length === 0) return true;
 
@@ -371,7 +396,7 @@ $(()=>{
       },
       headerSort:false,
       editor:select2,
-      editorParams:{field:'category', multiple: true},
+      editorParams:{field:'categories', multiple: true},
       formatter:(cell=>{
         const categories = cell.getValue();
         if (!Array.isArray(categories)) return '';
@@ -383,14 +408,29 @@ $(()=>{
     {title:"note", field:"note"},
   ]
 
+  var songlistColDef = [
+    {title:"songID", field:"songID", visible: false, download:true},
+    {title:"Song Name", field:"songName", width:300, topCalc:'count', topCalcFormatter:(c=>'subtotal/小計：'+c.getValue())},
+    {title:"Artist", field:"artist", headerFilter:"input"},
+    {title:"Genre", field:"genre", headerFilter:"input"},
+    {title:"Tie-up", field:"tieup", headerFilter:"input"},
+    {title:"Note", field:"songNote", headerFilter:"input"},
+    {title:"Created", field:"created_at", visible: false, download:true, mutator:((cell)=>cell ? dayjs(cell).format('YYYY/MM/DD HH:mm') : '')},
+    {title:"Updated", field:"updated_at", visible: false, download:true, mutator:((cell)=>cell ? dayjs(cell).format('YYYY/MM/DD HH:mm') : '')},
+  ]
+
   //column definition function
   function multiLineLinkFormat(cell){
     cell.getElement().style.whiteSpace ='pre-line'  //set multi line
-    return "<a href='https://www.youtube.com/watch?v=" + cell.getData().id + "'>"+ cell.getValue() +"</a>"
+    const data = cell.getData()
+    const id = data.id || data.streamID  // Support both old and new field names
+    return "<a href='https://www.youtube.com/watch?v=" + id + "'>"+ cell.getValue() +"</a>"
   }
 
   function imageLink(cell){
-    return `<img src='https://i.ytimg.com/vi/${cell.getData().id}/hqdefault.jpg' width="160" height="120">`
+    const data = cell.getData()
+    const id = data.id || data.streamID  // Support both old and new field names
+    return `<img src='https://i.ytimg.com/vi/${id}/hqdefault.jpg' width="160" height="120">`
   }
 
   function canEdit(){
@@ -399,7 +439,8 @@ $(()=>{
 
   function dateWithYTLink(cell){
     let d = cell.getData()
-    return `<a href=${d.YTLink}>${dayjs(d.date).format('YYYY/MM/DD')}</a>`
+    const dateValue = d.date || d.time  // Support both old and new field names
+    return `<a href=${d.YTLink}>${dayjs(dateValue).format('YYYY/MM/DD')}</a>`
   }
 
   function select2 (cell, onRendered, success, cancel, editorParams){
@@ -426,7 +467,7 @@ $(()=>{
 
       // Get data after onRendered to ensure table is loaded
       var d = []
-      if (f === 'category') {
+      if (f === 'category' || f === 'categories') {
         d = getDynamicCategoryData(cell.getTable())
         // console.log('Select2 editor - category data:', d.length, 'items');
       } else {
@@ -464,8 +505,8 @@ $(()=>{
       // Handle change events
       op.on('change.select2', function (e) {
         let val = $(this).val()
-        // For multiple selection, ensure we return array format for category
-        if (editorParams.multiple && f === 'category') {
+        // For multiple selection, ensure we return array format for category/categories
+        if (editorParams.multiple && (f === 'category' || f === 'categories')) {
           val = Array.isArray(val) ? val : (val ? [val] : [])
         }
         success(val)
@@ -474,7 +515,7 @@ $(()=>{
       // Handle close events for immediate update
       op.on('select2:close', function (e) {
         let val = $(this).val()
-        if (editorParams.multiple && f === 'category') {
+        if (editorParams.multiple && (f === 'category' || f === 'categories')) {
           val = Array.isArray(val) ? val : (val ? [val] : [])
         }
         success(val)
@@ -497,6 +538,9 @@ $(()=>{
     }
     if(p == 'streamlist'){
       colDef=streamlistColDef
+    }
+    if(p == 'songlist'){
+      colDef=songlistColDef
     }
 
     jsonTable = new Tabulator("#tb", {
