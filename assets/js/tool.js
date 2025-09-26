@@ -12,6 +12,23 @@ import "https://unpkg.com/video.js@8.21.1/dist/video.min.js"
 // 載入 dayjs UTC 插件
 dayjs.extend(window.dayjs_plugin_utc)
 
+const API_BASE_URL = (window.__BERRY_API_BASE__ ?? '').replace(/\/+$/, '')
+const API_TIMEOUT_MS = 15000
+const API_ENABLED = API_BASE_URL.length > 0
+const API_PROCESSES = new Set(['streamlist', 'setlist', 'songlist'])
+const PROCESS_DISPLAY_NAMES = {
+  streamlist: 'Stream List',
+  setlist: 'Set List',
+  songlist: 'Song List',
+}
+const API_REQUIRED_PROCESSES = new Set(['songlist'])
+const TABLE_MESSAGE_CLASSES = ['text-bg-info', 'text-bg-success', 'text-bg-warning', 'text-bg-danger']
+
+let currentProcess = null
+let currentDataSource = 'static'
+let currentDataUrl = null
+let bulkCategoryModal = null
+
 //------  coding by hand  ------
 let nav = `
 <nav class="navbar fixed-top navbar-expand-lg bg-body-tertiary px-5">
@@ -137,7 +154,8 @@ $(()=>{
       at least length 1: /
     */
 
-    var url='', title='', process=''
+    let url = '', title = '', process = ''
+    let dataSourceType = 'static'
 
     if(path === undefined || path.length < 2 || !path.includes('/')){
       url = 'pages/main.md'
@@ -160,17 +178,37 @@ $(()=>{
           process = url
 
           // 根據檔案類型設定正確的路徑
-          let ext = t.data().ext
+          const ext = t.data().ext
+          const processRequiresApi = API_REQUIRED_PROCESSES.has(process)
+          const preferApi = shouldUseApi(process)
+
           if(ext === '.json') {
-            url = 'assets/data/' + url + ext
+            if(preferApi){
+              url = `${API_BASE_URL}/${process}`
+              dataSourceType = 'api'
+            }
+            else if(processRequiresApi){
+              renderApiRequirementNotice(process, title)
+              return
+            }
+            else{
+              url = 'assets/data/' + url + ext
+            }
           } else if(ext === '.htm' || ext === '.md') {
             url = 'pages/' + url + ext
           } else {
-            url += ext
+            if(preferApi){
+              url = `${API_BASE_URL}/${process}`
+              dataSourceType = 'api'
+            }
+            else if(processRequiresApi){
+              renderApiRequirementNotice(process, title)
+              return
+            }
+            else{
+              url += ext
+            }
           }
-
-          //songlist is a exception
-          if(process=='songlist') url='https://hackmd.io/NSAM_dezTrWPQJ0nGWViIQ/download'
         }
 
       if(clk){
@@ -187,21 +225,27 @@ $(()=>{
       document.title = title + '苺咲べりぃ非公式倉庫'
       let ext = url.split('.')  //check .html
       //check if there are some exception page
-      if(process=='setlist' || process=='streamlist'){
-        let c = `
-              <button id='reloadBtn' class='btn btn-outline-light'>Reload Data</button>
-              <button id='edit' class='btn btn-outline-light' data-bs-toggle="button">Edit mode</button>
-              <button id='`+ (process=='streamlist'?'addStreamRow':'addRow') + `' class='btn btn-outline-light addRow' disabled>Add Row</button>`
-              + (process=='streamlist'?`<button id='addFromList' class='btn btn-outline-light addRow' disabled>Add from list(Beta)</button>`:'') +
-              `<button id='deleteRow' class='btn btn-outline-light'>Delete Row</button>
-              <button id='dlcsv' class='btn btn-outline-light'>Get CSV</button>
-              <button id='dljson' class='btn btn-outline-light'>Get JSON</button>
-              <div id='setTableMsg' class='p-3'>&emsp;</div>
-              <div id='tb' class='table-dark table-striped table-bordered'>progressing...</div>
-                `
-        $("#content").empty().append(c)
-        extractUniqueData(d, process)
-        configJsonTable(url, process)
+      if(process=='setlist' || process=='streamlist' || (process === 'songlist' && dataSourceType === 'api')){
+        const controls = []
+        controls.push(`<button id='reloadBtn' class='btn btn-outline-light'>Reload Data</button>`)
+        controls.push(`<button id='edit' class='btn btn-outline-light' data-bs-toggle="button">Edit mode</button>`)
+        if(process === 'streamlist'){
+          controls.push(`<button id='addStreamRow' class='btn btn-outline-light addRow' disabled>Add Row</button>`)
+          controls.push(`<button id='addFromList' class='btn btn-outline-light addRow' disabled>Add from list(Beta)</button>`)
+          controls.push(`<button id='bulkUpdateCategories' class='btn btn-outline-light' disabled>Update Categories</button>`)
+        }
+        if(process === 'setlist'){
+          controls.push(`<button id='addRow' class='btn btn-outline-light addRow' disabled>Add Row</button>`)
+        }
+        controls.push(`<button id='deleteRow' class='btn btn-outline-light'>Delete Row</button>`)
+        controls.push(`<button id='dlcsv' class='btn btn-outline-light'>Get CSV</button>`)
+        controls.push(`<button id='dljson' class='btn btn-outline-light'>Get JSON</button>`)
+        controls.push(`<div id='setTableMsg' class='p-3'>&emsp;</div>`)
+        controls.push(`<div id='tb' class='table-dark table-striped table-bordered'>progressing...</div>`)
+        $("#content").empty().append(controls.join(''))
+        const normalizedData = getRowsFromResponse(d, process, dataSourceType)
+        extractUniqueData(normalizedData, process)
+        configJsonTable(url, process, dataSourceType)
       }
       else if(ext[1] == 'htm'){
         $("#content").empty().append(d)
@@ -323,6 +367,285 @@ $(()=>{
       console.error('getDynamicCategoryData error:', error);
       return [];
     }
+  }
+
+  function resetJsonTableState(){
+    if(typeof jsonTable !== 'undefined' && jsonTable){
+      try{
+        jsonTable.destroy()
+      }
+      catch(error){
+        console.warn('destroy Tabulator failed', error)
+      }
+      jsonTable = null
+    }
+
+    window.tableDataLoaded = false
+    currentProcess = null
+    currentDataSource = 'static'
+    currentDataUrl = null
+  }
+
+  function renderApiRequirementNotice(process, titlePrefix = ''){
+    resetJsonTableState()
+
+    const displayName = PROCESS_DISPLAY_NAMES[process] ?? process
+    const heading = `${displayName} 需要 API`
+    const pageTitlePrefix = titlePrefix && titlePrefix.length > 0 ? titlePrefix : `${displayName} - `
+    document.title = `${pageTitlePrefix}苺咲べりぃ非公式倉庫`
+
+    $('#content').empty().append(`
+      <div class="alert alert-warning" role="alert">
+        <h2 class="h5 mb-3">${heading}</h2>
+        <p class="mb-0">請先設定 <code>window.__BERRY_API_BASE__</code> 後再重新載入此頁，避免回退到舊的資料來源。</p>
+      </div>
+    `)
+  }
+
+  function shouldUseApi(process){
+    return API_ENABLED && API_PROCESSES.has(process)
+  }
+
+  function setTableMessage(type, text, options = {}){
+    const target = $('#setTableMsg')
+    if (!target.length) return
+
+    const {persist = false} = options
+    const message = text ?? '&emsp;'
+    if(message === '&emsp;'){
+      target.html(message)
+    }
+    else{
+      target.text(message)
+    }
+
+    target.removeClass(TABLE_MESSAGE_CLASSES.join(' '))
+    if(type){
+      target.addClass(`text-bg-${type}`)
+    }
+
+    const timerId = target.data('messageTimer')
+    if(timerId){
+      clearTimeout(timerId)
+      target.removeData('messageTimer')
+    }
+
+    if(!persist && text){
+      const newTimer = setTimeout(()=>{
+        target.html('&emsp;')
+        target.removeClass(TABLE_MESSAGE_CLASSES.join(' '))
+        target.removeData('messageTimer')
+      }, 4000)
+      target.data('messageTimer', newTimer)
+    }
+  }
+
+  function getRowsFromResponse(response, process, sourceType){
+    const raw = sourceType === 'api' ? (response?.data ?? []) : response
+    return normalizeDataset(process, raw)
+  }
+
+  function normalizeDataset(process, rows){
+    if(!Array.isArray(rows)) return []
+    if(process === 'streamlist'){
+      return rows.map(normalizeStreamlistRow)
+    }
+    if(process === 'setlist'){
+      return rows.map(normalizeSetlistRow)
+    }
+    if(process === 'songlist'){
+      return rows.map(normalizeSonglistRow)
+    }
+    return rows
+  }
+
+  function normalizeStreamlistRow(row){
+    const id = row?.streamID ?? row?.stream_id ?? row?.streamId ?? row?.id
+    const time = row?.time ?? row?.date ?? row?.startTime ?? ''
+    const note = row?.note ?? ''
+    return {
+      ...row,
+      id,
+      time,
+      note,
+      category: getNormalizedCategories(row),
+      _meta:{
+        streamID: id ?? null,
+      },
+    }
+  }
+
+  function normalizeSetlistRow(row){
+    const time = row?.date ?? row?.time ?? null
+    const trackValue = row?.track ?? row?.trackNo ?? row?.track_no
+    const segmentValue = row?.segmentNo ?? row?.segment_no ?? row?.segment ?? 0
+    return {
+      ...row,
+      date: time,
+      track: trackValue !== undefined && trackValue !== null ? Number(trackValue) : trackValue,
+      song: row?.song ?? row?.songName ?? row?.title ?? '',
+      singer: row?.singer ?? row?.artist ?? '',
+      note: row?.note ?? '',
+      YTLink: row?.YTLink ?? row?.ytLink ?? row?.youtube ?? '',
+      _meta:{
+        streamID: row?.streamID ?? row?.stream_id ?? row?.streamId ?? null,
+        trackNo: Number(trackValue ?? 0),
+        segmentNo: Number(segmentValue ?? 0),
+        songID: row?.songID ?? row?.song_id ?? null,
+      },
+    }
+  }
+
+  function normalizeSonglistRow(row){
+    const id = row?.songID ?? row?.song_id ?? row?.id ?? null
+    return {
+      ...row,
+      songID: id,
+      songName: row?.songName ?? row?.name ?? row?.title ?? '',
+      artist: row?.artist ?? '',
+      genre: row?.genre ?? '',
+      tieup: row?.tieup ?? row?.tieUp ?? '',
+      songNote: row?.songNote ?? row?.note ?? '',
+      _meta:{
+        songID: id,
+      },
+    }
+  }
+
+  function getNormalizedCategories(row){
+    let categories = row?.categories ?? row?.category ?? []
+    if(typeof categories === 'string'){
+      try{
+        const parsed = JSON.parse(categories)
+        categories = parsed
+      }
+      catch(e){
+        categories = categories.split(/[\n,;]/).map(e=>e.trim())
+      }
+    }
+
+    if(!Array.isArray(categories)){
+      return []
+    }
+
+    return categories
+      .map(cat => typeof cat === 'string' ? cat.trim() : `${cat}`)
+      .filter(cat => cat.length > 0)
+  }
+
+  function updateBulkCategoryButtonState(){
+    const bulkButton = $('#bulkUpdateCategories')
+    if(!bulkButton.length){
+      return
+    }
+
+    if(currentProcess !== 'streamlist' || currentDataSource !== 'api' || !canEdit()){
+      bulkButton.prop('disabled', true)
+      return
+    }
+
+    const hasSelection = jsonTable && jsonTable.getSelectedRows().length > 0
+    bulkButton.prop('disabled', !hasSelection)
+  }
+
+  function formatFieldErrors(fieldErrors){
+    if(!fieldErrors){
+      return ''
+    }
+
+    const messages = []
+
+    if(typeof fieldErrors === 'string'){
+      messages.push(fieldErrors)
+    }
+    else if(Array.isArray(fieldErrors)){
+      fieldErrors.forEach(entry=>{
+        if(!entry){
+          return
+        }
+        if(typeof entry === 'string'){
+          messages.push(entry)
+          return
+        }
+        if(typeof entry === 'object'){
+          const field = entry.field || entry.name || entry.path || ''
+          const message = entry.message || entry.error || ''
+          const combined = [field, message].filter(Boolean).join('：')
+          if(combined){
+            messages.push(combined)
+          }
+          else if(field){
+            messages.push(field)
+          }
+        }
+      })
+    }
+    else if(typeof fieldErrors === 'object'){
+      Object.entries(fieldErrors).forEach(([field, detail])=>{
+        if(detail === null || detail === undefined){
+          return
+        }
+        if(Array.isArray(detail)){
+          detail.forEach(item=>{
+            if(item === null || item === undefined){
+              return
+            }
+            const text = `${field}：${item}`.trim()
+            if(text){
+              messages.push(text)
+            }
+          })
+          return
+        }
+        if(typeof detail === 'object'){
+          const nestedMessage = detail.message || detail.error || ''
+          const text = nestedMessage ? `${field}：${nestedMessage}` : `${field}`
+          if(text){
+            messages.push(text)
+          }
+          return
+        }
+        const text = `${field}：${detail}`.trim()
+        if(text){
+          messages.push(text)
+        }
+      })
+    }
+
+    const uniqueMessages = [...new Set(messages.map(item=>item.trim()).filter(item=>item.length > 0))]
+    return uniqueMessages.join('；')
+  }
+
+  function getErrorMessage(error){
+    if(!error){
+      return 'Unknown error'
+    }
+    if(typeof error === 'string'){
+      return error
+    }
+
+    const errorResponse = error?.response
+    const apiError = errorResponse?.error
+    if(apiError){
+      const codeText = apiError.code ? `[${apiError.code}] ` : ''
+      const baseMessage = apiError.message || errorResponse?.message || error.message
+      const fieldMessage = formatFieldErrors(apiError.fieldErrors)
+      if(fieldMessage){
+        const combined = `${codeText}${baseMessage ?? 'API 錯誤'}（${fieldMessage}）`
+        return combined.trim()
+      }
+      if(baseMessage || codeText){
+        return `${codeText}${baseMessage ?? 'API 錯誤'}`.trim()
+      }
+    }
+
+    if(errorResponse?.message){
+      return errorResponse.message
+    }
+    if(error?.message){
+      return error.message
+    }
+    return 'Unknown error'
   }
 
   //--- url Error ---
@@ -490,7 +813,12 @@ $(()=>{
 
 
   //set table
-  function configJsonTable(u, p){
+  function configJsonTable(u, p, sourceType = 'static'){
+
+    currentProcess = p
+    currentDataSource = sourceType
+    currentDataUrl = u
+    window.tableDataLoaded = false
 
     if(p == 'setlist'){
       colDef=setlistColDef
@@ -527,9 +855,278 @@ $(()=>{
         console.log('Re-initializing category header filter with data');
         // Clear existing header filter
         jsonTable.clearHeaderFilter();
-        // The header filters will be re-initialized automatically
       }
+      updateBulkCategoryButtonState()
     });
+
+    jsonTable.on('rowSelectionChanged', ()=>{
+      updateBulkCategoryButtonState()
+    })
+
+    jsonTable.on('cellEdited', async (cell)=>{
+      if(currentDataSource !== 'api' || !canEdit()){
+        return
+      }
+
+      try{
+        if(currentProcess === 'streamlist'){
+          await handleStreamlistCellEdit(cell)
+        }
+        else if(currentProcess === 'setlist'){
+          await handleSetlistCellEdit(cell)
+        }
+        else if(currentProcess === 'songlist'){
+          await handleSonglistCellEdit(cell)
+        }
+        setTableMessage('success', '已儲存變更')
+      }
+      catch(error){
+        console.error('cellEdited error', error)
+        cell.restoreOldValue()
+        setTableMessage('danger', getErrorMessage(error), {persist:true})
+      }
+    })
+  }
+
+  async function handleStreamlistCellEdit(cell){
+    const rowData = cell.getRow().getData()
+    const field = cell.getField()
+    const meta = rowData._meta || {}
+    const streamID = meta.streamID || rowData.id
+
+    if(!streamID){
+      throw new Error('找不到 Stream ID')
+    }
+
+    const payload = {}
+    if(field === 'time'){
+      const timeValue = dayjs(rowData.time)
+      if(!timeValue.isValid()){
+        throw new Error('時間格式錯誤')
+      }
+      payload.time = timeValue.utc().format('YYYY-MM-DDTHH:mm:ss[Z]')
+    }
+    else if(field === 'category'){
+      payload.categories = Array.isArray(rowData.category) ? rowData.category : []
+    }
+    else if(field === 'title'){
+      payload.title = rowData.title ?? ''
+    }
+    else if(field === 'note'){
+      payload.note = rowData.note ?? ''
+    }
+    else{
+      return
+    }
+
+    await apiRequest('PUT', `/streamlist/${encodeURIComponent(streamID)}`, payload)
+  }
+
+  async function handleSetlistCellEdit(cell){
+    const rowData = cell.getRow().getData()
+    const field = cell.getField()
+    const meta = rowData._meta || {}
+    const streamID = meta.streamID
+    const trackNo = meta.trackNo ?? rowData.track
+    const segmentNo = meta.segmentNo ?? 0
+
+    if(!streamID || trackNo === undefined || trackNo === null){
+      throw new Error('找不到對應的曲目編號')
+    }
+
+    const payload = {}
+    if(field === 'note'){
+      payload.note = rowData.note ?? ''
+    }
+    else if(field === 'YTLink'){
+      payload.YTLink = rowData.YTLink ?? ''
+    }
+    else if(field === 'song'){
+      payload.song = rowData.song ?? ''
+    }
+    else if(field === 'singer'){
+      payload.singer = rowData.singer ?? ''
+    }
+    else if(field === 'date'){
+      const timeValue = dayjs(rowData.date)
+      if(!timeValue.isValid()){
+        throw new Error('時間格式錯誤')
+      }
+      payload.time = timeValue.utc().format('YYYY-MM-DDTHH:mm:ss[Z]')
+    }
+    else{
+      return
+    }
+
+    await apiRequest('PUT', `/setlist/${encodeURIComponent(streamID)}/${encodeURIComponent(trackNo)}/${encodeURIComponent(segmentNo)}`, payload)
+  }
+
+  async function handleSonglistCellEdit(cell){
+    const rowData = cell.getRow().getData()
+    const field = cell.getField()
+    const meta = rowData._meta || {}
+    const songID = meta.songID ?? rowData.songID ?? rowData.id
+
+    if(!songID){
+      throw new Error('找不到歌曲編號')
+    }
+
+    const payload = {}
+    if(field === 'songName'){
+      payload.songName = rowData.songName ?? ''
+    }
+    else if(field === 'artist'){
+      payload.artist = rowData.artist ?? ''
+    }
+    else if(field === 'genre'){
+      payload.genre = rowData.genre ?? ''
+    }
+    else if(field === 'tieup'){
+      payload.tieup = rowData.tieup ?? ''
+    }
+    else if(field === 'songNote'){
+      payload.songNote = rowData.songNote ?? ''
+    }
+    else{
+      return
+    }
+
+    await apiRequest('PUT', `/songlist/${encodeURIComponent(songID)}`, payload)
+  }
+
+  async function apiRequest(method, path, payload){
+    if(!API_ENABLED){
+      throw new Error('API 尚未啟用')
+    }
+
+    const controller = new AbortController()
+    const timeout = setTimeout(()=>controller.abort(), API_TIMEOUT_MS)
+
+    const options = {
+      method,
+      headers:{
+        Accept:'application/json'
+      },
+      signal: controller.signal,
+    }
+
+    if(payload !== undefined && method !== 'GET'){
+      options.headers['Content-Type'] = 'application/json'
+      options.body = JSON.stringify(payload)
+    }
+
+    let response
+    try{
+      response = await fetch(`${API_BASE_URL}${path}`, options)
+    }
+    catch(error){
+      clearTimeout(timeout)
+      if(error.name === 'AbortError'){
+        throw new Error('請求逾時，請稍後再試')
+      }
+      throw error
+    }
+
+    clearTimeout(timeout)
+
+    let text = ''
+    try{
+      text = await response.text()
+    }
+    catch(error){
+      console.error('讀取回應失敗', error)
+      throw new Error('讀取伺服器回應失敗')
+    }
+
+    let data = {}
+    if(text){
+      try{
+        data = JSON.parse(text)
+      }
+      catch(error){
+        console.error('解析回應失敗', error)
+        throw new Error('回應解析失敗')
+      }
+    }
+
+    if(!response.ok){
+      const message = data?.error?.message || data?.message || response.statusText || '未知錯誤'
+      const err = new Error(message)
+      err.status = response.status
+      err.response = data
+      throw err
+    }
+
+    return data
+  }
+
+  async function deleteRowViaApi(rowData, process){
+    if(process === 'streamlist'){
+      const meta = rowData._meta || {}
+      const streamID = meta.streamID || rowData.id
+      if(!streamID){
+        throw new Error('找不到 Stream ID')
+      }
+      await apiRequest('DELETE', `/streamlist/${encodeURIComponent(streamID)}`)
+      return
+    }
+
+    if(process === 'setlist'){
+      const meta = rowData._meta || {}
+      const streamID = meta.streamID
+      const trackNo = meta.trackNo ?? rowData.track
+      const segmentNo = meta.segmentNo ?? 0
+      if(!streamID || trackNo === undefined || trackNo === null){
+        throw new Error('找不到對應的曲目編號')
+      }
+      await apiRequest('DELETE', `/setlist/${encodeURIComponent(streamID)}/${encodeURIComponent(trackNo)}/${encodeURIComponent(segmentNo)}`)
+      return
+    }
+
+    if(process === 'songlist'){
+      const meta = rowData._meta || {}
+      const songID = meta.songID ?? rowData.songID ?? rowData.id
+      if(!songID){
+        throw new Error('找不到歌曲編號')
+      }
+      await apiRequest('DELETE', `/songlist/${encodeURIComponent(songID)}`)
+    }
+  }
+
+  async function addStreamsToApi(newData){
+    if(!Array.isArray(newData) || newData.length === 0){
+      setTableMessage('info', '沒有需要新增的直播資料')
+      return
+    }
+
+    try{
+      const results = await Promise.allSettled(newData.map(item=>{
+        const timeValue = dayjs(item.time)
+        const isoTime = timeValue.isValid() ? timeValue.utc().format('YYYY-MM-DDTHH:mm:ss[Z]') : item.time
+        return apiRequest('POST', '/streamlist', {
+          streamID: item.id,
+          title: item.title,
+          time: isoTime,
+          categories: getNormalizedCategories(item),
+        })
+      }))
+
+      const successCount = results.filter(r=>r.status === 'fulfilled').length
+      const failCount = results.length - successCount
+
+      if(successCount > 0){
+        setTableMessage('success', `成功新增 ${successCount} 筆直播資料`)
+        await reloadJsonTable({silent:true})
+      }
+
+      if(failCount > 0){
+        setTableMessage('warning', `${failCount} 筆資料新增失敗`, {persist:true})
+      }
+    }
+    catch(error){
+      console.error('批次新增直播失敗', error)
+      setTableMessage('danger', getErrorMessage(error), {persist:true})
+    }
   }
 
   //--- jsonTable button block ---
@@ -599,9 +1196,35 @@ $(()=>{
 
   $('#modalFooter').on('click', '#deleteRowOK', ()=>{
     let selectedRows = jsonTable.getSelectedRows()
-    jsonTable.blockRedraw()
-    selectedRows.forEach(e=>{e.delete()})
-    jsonTable.restoreRedraw()
+
+    if(mode === 'api'){
+      e.preventDefault()
+      e.stopPropagation()
+      if(selectedRows.length === 0){
+        msgModal.hide()
+        return
+      }
+
+      try{
+        for(const row of selectedRows){
+          await deleteRowViaApi(row.getData(), currentProcess)
+        }
+        msgModal.hide()
+        setTableMessage('success', '已刪除選取資料')
+        jsonTable.deselectRow()
+        await reloadJsonTable({silent:true})
+        updateBulkCategoryButtonState()
+      }
+      catch(error){
+        console.error('Delete failed', error)
+        setTableMessage('danger', getErrorMessage(error), {persist:true})
+      }
+    }
+    else{
+      jsonTable.blockRedraw()
+      selectedRows.forEach(e=>{e.delete()})
+      jsonTable.restoreRedraw()
+    }
 
     $('#modalFooter').empty()
   })
@@ -769,6 +1392,42 @@ $(()=>{
       // Select2 multiple already returns array format
       const categories = $('#category').val() || [];
 
+      if(currentProcess === 'streamlist' && currentDataSource === 'api'){
+        e.preventDefault()
+        e.stopPropagation()
+
+        const streamID = $('#videoID').val()
+        const title = $('#streamTitle').val()
+        const timeValue = dayjs($('#streamTime').val())
+
+        if(!streamID){
+          $('#streamMsg').text('請先輸入有效的 YouTube 連結')
+          return
+        }
+
+        if(!timeValue.isValid()){
+          $('#streamMsg').text('請確認時間格式，例如 2024-01-01 20:00')
+          return
+        }
+
+        try{
+          await apiRequest('POST', '/streamlist', {
+            streamID,
+            title,
+            time: timeValue.utc().format('YYYY-MM-DDTHH:mm:ss[Z]'),
+            categories,
+          })
+          addStreamRowModal.hide()
+          setTableMessage('success', '已新增直播資料')
+          await reloadJsonTable({silent:true})
+        }
+        catch(error){
+          console.error('新增直播失敗', error)
+          $('#streamMsg').text(getErrorMessage(error))
+        }
+        return
+      }
+
       jsonTable.addRow({
         id:$('#videoID').val(),
         title:$('#streamTitle').val(),
@@ -816,6 +1475,84 @@ $(()=>{
   // Add from list button click handler
   $('#content').on('click', '#addFromList', () => {
     addFromLatestList()
+  })
+
+  $('#content').on('click', '#bulkUpdateCategories', () => {
+    if(currentProcess !== 'streamlist' || currentDataSource !== 'api'){
+      setTableMessage('warning', '目前僅支援 streamlist API 模式下的批次更新。', {persist:true})
+      return
+    }
+
+    if(!jsonTable){
+      return
+    }
+
+    const selectedRows = jsonTable.getSelectedRows()
+    if(selectedRows.length === 0){
+      setTableMessage('warning', '請先選擇要更新的直播資料', {persist:true})
+      return
+    }
+
+    const select = $('#bulkCategorySelect')
+    if(select.hasClass('select2-hidden-accessible')){
+      select.select2('destroy')
+    }
+
+    const categoryData = getDynamicCategoryData(jsonTable)
+    select.empty()
+    select.select2({
+      data: categoryData,
+      tags: true,
+      allowClear: true,
+      width: '100%',
+      dropdownParent: $('#modalBulkCategories'),
+      placeholder: categoryData.length === 0 ? '輸入或貼上分類' : '選擇或輸入分類',
+    })
+
+    select.val([]).trigger('change')
+    bulkCategoryModal.show()
+  })
+
+  $('#applyBulkCategories').on('click', async ()=>{
+    if(currentProcess !== 'streamlist' || currentDataSource !== 'api'){
+      bulkCategoryModal.hide()
+      return
+    }
+
+    const selectedRows = jsonTable ? jsonTable.getSelectedRows() : []
+    if(selectedRows.length === 0){
+      setTableMessage('warning', '請先選擇要更新的直播資料', {persist:true})
+      return
+    }
+
+    const categories = $('#bulkCategorySelect').val() || []
+    const streamIDs = selectedRows
+      .map(row => {
+        const data = row.getData()
+        return (data._meta && data._meta.streamID) || data.id
+      })
+      .filter(Boolean)
+
+    if(streamIDs.length === 0){
+      setTableMessage('danger', '選取的資料缺少 Stream ID，無法更新', {persist:true})
+      return
+    }
+
+    try{
+      await apiRequest('PATCH', '/streamlist/bulk-categories', {
+        streamIDs,
+        categories,
+      })
+      bulkCategoryModal.hide()
+      setTableMessage('success', '已批次更新分類')
+      jsonTable.deselectRow()
+      await reloadJsonTable({silent:true})
+      updateBulkCategoryButtonState()
+    }
+    catch(error){
+      console.error('批次更新分類失敗', error)
+      setTableMessage('danger', getErrorMessage(error), {persist:true})
+    }
   })
 
   // Add from latest list function for streamlist
@@ -979,3 +1716,4 @@ function getGitCommitMsg(){
 }
 
 })//end ready
+
