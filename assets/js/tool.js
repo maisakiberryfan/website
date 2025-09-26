@@ -211,22 +211,33 @@ $(()=>{
         var c ="<div id='md'>"+marked.parse(d)+"</div>"
 
         if(process=='songlist'){
-          //combine multiple table
-          let t = document.createElement('input')
-          t.innerHTML = c
+          //combine multiple tables using DOMParser
+          let parser = new DOMParser()
+          let doc = parser.parseFromString(c, 'text/html')
 
-          let tr = t.querySelectorAll("#md table tbody tr")
-          let tb = t.querySelector("#md table tbody")
-          tb.replaceChildren(...tr)
-          //table already change
-          let tableElement = t.querySelector("#md table")
+          let allRows = doc.querySelectorAll("#md table tbody tr")
+          let firstTable = doc.querySelector("#md table")
 
-          // Add download button for songlist
-          let downloadBtn = `<button id='dlSonglistJson' class='btn btn-outline-light mb-3'>Download JSON</button>`
-          c = downloadBtn + (tableElement ? tableElement.outerHTML : '<p>No table found</p>')
+          if(firstTable && allRows.length > 0) {
+            let firstTbody = firstTable.querySelector('tbody')
+            firstTbody.replaceChildren(...allRows)
+
+            // Remove other tables, keep only the first one
+            doc.querySelectorAll("#md table").forEach((table, index) => {
+              if (index > 0) table.remove()
+            })
+
+            let tableElement = firstTable
+            // Add download button for songlist
+            let downloadBtn = `<button id='dlSonglistJson' class='btn btn-outline-light mb-3'>Download JSON</button>`
+            c = downloadBtn + tableElement.outerHTML
+          } else {
+            c = '<p>No table found</p>'
+          }
         }
 
-        $("#content").empty().append(c)
+        // Use .html() instead of .append() to prevent entity re-encoding
+        $("#content").empty().html(c)
 
         //append latest video info / update info
         if(url == 'pages/main.md'){
@@ -260,6 +271,7 @@ $(()=>{
         columnDefaults:{
           width:200,
           headerFilter:true,
+          formatter: "html"  // Enable HTML rendering for all columns
         },
         height:700,
         persistence:true,
