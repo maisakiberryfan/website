@@ -137,6 +137,7 @@ $(()=>{
       at least length 1: /
     */
 
+
     var url='', title='', process=''
 
     if(path === undefined || path.length < 2 || !path.includes('/')){
@@ -218,7 +219,11 @@ $(()=>{
           let tb = t.querySelector("#md table tbody")
           tb.replaceChildren(...tr)
           //table already change
-          c = t.querySelector("#md table")
+          let tableElement = t.querySelector("#md table")
+
+          // Add download button for songlist
+          let downloadBtn = `<button id='dlSonglistJson' class='btn btn-outline-light mb-3'>Download JSON</button>`
+          c = downloadBtn + (tableElement ? tableElement.outerHTML : '<p>No table found</p>')
         }
 
         $("#content").empty().append(c)
@@ -247,8 +252,10 @@ $(()=>{
     })
   }
   
+
   function setContentMDTable(){
-    let t = [...document.querySelectorAll('table')].forEach(e=>{
+    let tables = [...document.querySelectorAll('table')];
+    tables.forEach(e=>{
       new Tabulator(e, {
         columnDefaults:{
           width:200,
@@ -257,7 +264,7 @@ $(()=>{
         height:700,
         persistence:true,
         downloadRowRange:'all'
-      })
+      });
     })
   }
 
@@ -623,6 +630,17 @@ $(()=>{
     jsonTable.download('json', filename + '.json')
   })
 
+  // Download button handler for songlist JSON
+  $('#content').on('click', '#dlSonglistJson', ()=>{
+    // Use official Tabulator API to find table instance
+    let table = Tabulator.findTable('#content .tabulator')[0] ||
+                Tabulator.findTable('.tabulator')[0];
+
+    if (table) {
+      table.download('json', 'songlist.json')
+    }
+  })
+
   $('#setlistDate').on('blur', (e)=>{
     let d = dayjs(e.target.value)
     if(!d.isValid()){
@@ -734,7 +752,7 @@ $(()=>{
           $('#setlistDate').val(info.time)
           
           $('#videoID').val(id)
-          $('#category').val(preCategory(title)).trigger('change');
+          $('#category').val(preCategory(title, info.snippet.channelId)).trigger('change');
         }
         else{
           // 非berry頻道，在當前modal內顯示確認按鈕
@@ -793,7 +811,7 @@ $(()=>{
       $('#streamTime').val(info.time).prop('disabled', false)
       $('#setlistDate').val(info.time)
       $('#videoID').val(id)
-      $('#category').val(preCategory(title)).trigger('change')
+      $('#category').val(preCategory(title, info.snippet.channelId)).trigger('change')
 
       console.log('影片資訊已填入') // 調試輸出
       // 清除暫存資料
@@ -842,7 +860,7 @@ $(()=>{
           id: item.id,
           title: item.snippet.title,
           time: item.time,
-          category: item.category || preCategory(item.snippet.title)
+          category: item.category || preCategory(item.snippet.title, item.snippet.channelId)
         }))
         .sort((a, b) => new Date(b.time) - new Date(a.time)) // Sort by date desc
 
@@ -911,18 +929,45 @@ function getYoutubeVideoId(url){
   }
 }
 
-function preCategory(t){
-  //when user add streamlist, pre-category
+function preCategory(t, channelId){
+  //when user add streamlist, pre-category (支援複選邏輯)
+  let categories = []
   let origin = ['xfd', 'オリジナル', 'music video']
   let chat = ['chat', 'talk', '雑談']
+  let lowerTitle = t.toLowerCase()
 
-  if(t.toLowerCase().includes('gam')){return ['ゲーム / Gaming']}
-  else if(t.toLowerCase().includes('short')){return ['ショート / Shorts']}
-  else if(t.toLowerCase().includes('歌ってみた')){return ['歌ってみた動画 / Cover movie']}
-  else if(origin.some(e=>t.toLowerCase().includes(e))){return ['オリジナル曲 / Original Songs']}
-  else if(chat.some(e=>t.toLowerCase().includes(e))){return ['雑談 / Chatting']}
-  else if(t.includes('歌枠')){return ['歌枠 / Singing']}
-  else{return ['other']}
+  // 檢查子頻道
+  const subChannels = ['UCBOGwPeBtaPRU59j8jshdjQ', 'UC2cgr_UtYukapRUt404In-A']
+  if (channelId && subChannels.includes(channelId)) {
+    categories.push('Subchannel')
+  }
+
+  // 檢查內容類型（複選邏輯）
+  if(lowerTitle.includes('gam')){
+    categories.push('ゲーム / Gaming')
+  }
+  if(lowerTitle.includes('short')){
+    categories.push('ショート / Shorts')
+  }
+  if(lowerTitle.includes('歌ってみた')){
+    categories.push('歌ってみた動画 / Cover movie')
+  }
+  if(origin.some(e=>lowerTitle.includes(e))){
+    categories.push('オリジナル曲 / Original Songs')
+  }
+  if(chat.some(e=>lowerTitle.includes(e))){
+    categories.push('雑談 / Chatting')
+  }
+  if(t.includes('歌枠')){
+    categories.push('歌枠 / Singing')
+  }
+
+  // 如果沒有任何內容類型分類，添加預設分類
+  if (categories.length === 0 || (categories.length === 1 && categories[0] === 'Subchannel')) {
+    categories.push('other')
+  }
+
+  return categories
 }
 
 async function getLatest(){
