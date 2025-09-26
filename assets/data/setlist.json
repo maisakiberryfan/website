@@ -1,5 +1,165 @@
 [
 	{
+		"date": "2025-09-25T12:00:00Z",
+		"track": 1,
+		"song": "to you.",
+		"singer": "苺咲べりぃ",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=P9YCus-bO7Y"
+	},
+	{
+		"date": "2025-09-25T12:00:00Z",
+		"track": 2,
+		"song": "ホタルノヒカリ",
+		"singer": "いきものがかり",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=P9YCus-bO7Y"
+	},
+	{
+		"date": "2025-09-25T12:00:00Z",
+		"track": 3,
+		"song": "ふたり",
+		"singer": "いきものがかり",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=P9YCus-bO7Y"
+	},
+	{
+		"date": "2025-09-25T12:00:00Z",
+		"track": 4,
+		"song": "瑠璃色の地球",
+		"singer": "松田聖子",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=P9YCus-bO7Y"
+	},
+	{
+		"date": "2025-09-25T12:00:00Z",
+		"track": 5,
+		"song": "赤いスイートピー",
+		"singer": "松田聖子",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=P9YCus-bO7Y"
+	},
+	{
+		"date": "2025-09-25T12:00:00Z",
+		"track": 6,
+		"song": "綺麗な花には毒がある",
+		"singer": "Yami_Q_ray",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=P9YCus-bO7Y"
+	},
+	{
+		"date": "2025-09-25T12:00:00Z",
+		"track": 7,
+		"song": "不確定性☆COSMIC MOVEMENT",
+		"singer": "ワルキューレ",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=P9YCus-bO7Y"
+	},
+	{
+		"date": "2025-09-25T12:00:00Z",
+		"track": 8,
+		"song": "新時代",
+		"singer": "Ado",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=P9YCus-bO7Y"
+	},
+	{
+		"date": "2025-09-25T12:00:00Z",
+		"track": 9,
+		"song": "Believe",
+		"singer": "Folder 5",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=P9YCus-bO7Y"
+	},
+	{
+		"date": "2025-09-25T12:00:00Z",
+		"track": 10,
+		"song": "すーぱーかれんたいむ",
+		"singer": "FRUITS ZIPPER",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=P9YCus-bO7Y"
+	},
+	{
+		"date": "2025-09-25T12:00:00Z",
+		"track": 11,
+		"song": "ハピチョコ",
+		"singer": "FRUITS ZIPPER",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=P9YCus-bO7Y"
+	},
+	{
+		"date": "2025-09-25T12:00:00Z",
+		"track": 12,
+		"song": "とまどい→レシピ",
+		"singer": "みかくにんぐッ!",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=P9YCus-bO7Y"
+	},
+	{
+		"date": "2025-09-25T12:00:00Z",
+		"track": 13,
+		"song": "PUNCH☆MIND☆HAPPINESS",
+		"singer": "Happy Clover",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=P9YCus-bO7Y"
+	},
+	{
+		"date": "2025-09-25T12:00:00Z",
+		"track": 14,
+		"song": "Get Over",
+		"singer": "Dream",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=P9YCus-bO7Y"
+	},
+	{
+		"date": "2025-09-25T12:00:00Z",
+		"track": 15,
+		"song": "Grip!",
+		"singer": "Every Little Thing",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=P9YCus-bO7Y"
+	},
+	{
+		"date": "2025-09-25T12:00:00Z",
+		"track": 16,
+		"song": "ハッピークレセント",
+		"singer": "東山奈央",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=P9YCus-bO7Y"
+	},
+	{
+		"date": "2025-09-25T12:00:00Z",
+		"track": 17,
+		"song": "コイノシルシ",
+		"singer": "神のみぞ知り隊",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=P9YCus-bO7Y"
+	},
+	{
+		"date": "2025-09-25T12:00:00Z",
+		"track": 18,
+		"song": "らぶこーる",
+		"singer": "中川かのん, 東山奈央",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=P9YCus-bO7Y"
+	},
+	{
+		"date": "2025-09-25T12:00:00Z",
+		"track": 19,
+		"song": "アイノヨカン",
+		"singer": "神のみぞ知り隊",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=P9YCus-bO7Y"
+	},
+	{
+		"date": "2025-09-25T12:00:00Z",
+		"track": 20,
+		"song": "プラチナ",
+		"singer": "坂本真綾",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=P9YCus-bO7Y"
+	},
+	{
 		"date": "2025-09-18T13:00:00Z",
 		"track": 1,
 		"song": "ラストディーヴァと光の歌",
