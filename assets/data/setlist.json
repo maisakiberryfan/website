@@ -1,5 +1,165 @@
 [
 	{
+		"date": "2025-09-27T12:00:00Z",
+		"track": 1,
+		"song": "Shoot!",
+		"singer": "苺咲べりぃ",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=lADLMqZ_wGA"
+	},
+	{
+		"date": "2025-09-27T12:00:00Z",
+		"track": 2,
+		"song": "ゲレンデがとけるほど恋したい",
+		"singer": "広瀬香美",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=lADLMqZ_wGA"
+	},
+	{
+		"date": "2025-09-27T12:00:00Z",
+		"track": 3,
+		"song": "ロマンスの神様",
+		"singer": "広瀬香美",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=lADLMqZ_wGA"
+	},
+	{
+		"date": "2025-09-27T12:00:00Z",
+		"track": 4,
+		"song": "如月アテンション",
+		"singer": "じん",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=lADLMqZ_wGA"
+	},
+	{
+		"date": "2025-09-27T12:00:00Z",
+		"track": 5,
+		"song": "夕景イエスタデイ",
+		"singer": "じん",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=lADLMqZ_wGA"
+	},
+	{
+		"date": "2025-09-27T12:00:00Z",
+		"track": 6,
+		"song": "おじゃま虫",
+		"singer": "DECO*27",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=lADLMqZ_wGA"
+	},
+	{
+		"date": "2025-09-27T12:00:00Z",
+		"track": 7,
+		"song": "おじゃま虫Ⅱ",
+		"singer": "DECO*27",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=lADLMqZ_wGA"
+	},
+	{
+		"date": "2025-09-27T12:00:00Z",
+		"track": 8,
+		"song": "僕らの戦場",
+		"singer": "ワルキューレ",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=lADLMqZ_wGA"
+	},
+	{
+		"date": "2025-09-27T12:00:00Z",
+		"track": 9,
+		"song": "Dancing in the moonlight",
+		"singer": "ワルキューレ",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=lADLMqZ_wGA"
+	},
+	{
+		"date": "2025-09-27T12:00:00Z",
+		"track": 10,
+		"song": "Strawberry Jam",
+		"singer": "大塚愛",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=lADLMqZ_wGA"
+	},
+	{
+		"date": "2025-09-27T12:00:00Z",
+		"track": 11,
+		"song": "白い雪のプリンセスは",
+		"singer": "のぼる↑P",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=lADLMqZ_wGA"
+	},
+	{
+		"date": "2025-09-27T12:00:00Z",
+		"track": 12,
+		"song": "紅一葉",
+		"singer": "黒うさP",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=lADLMqZ_wGA"
+	},
+	{
+		"date": "2025-09-27T12:00:00Z",
+		"track": 13,
+		"song": "二息歩行",
+		"singer": "DECO*27",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=lADLMqZ_wGA"
+	},
+	{
+		"date": "2025-09-27T12:00:00Z",
+		"track": 14,
+		"song": "唇の凍傷",
+		"singer": "ワルキューレ",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=lADLMqZ_wGA"
+	},
+	{
+		"date": "2025-09-27T12:00:00Z",
+		"track": 15,
+		"song": "風は予告なく吹く",
+		"singer": "ワルキューレ",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=lADLMqZ_wGA"
+	},
+	{
+		"date": "2025-09-27T12:00:00Z",
+		"track": 16,
+		"song": "フタリボシ",
+		"singer": "40mp",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=lADLMqZ_wGA"
+	},
+	{
+		"date": "2025-09-27T12:00:00Z",
+		"track": 17,
+		"song": "シリョクケンサ",
+		"singer": "40mP",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=lADLMqZ_wGA"
+	},
+	{
+		"date": "2025-09-27T12:00:00Z",
+		"track": 18,
+		"song": "相思相愛",
+		"singer": "aiko",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=lADLMqZ_wGA"
+	},
+	{
+		"date": "2025-09-27T12:00:00Z",
+		"track": 19,
+		"song": "ダ・カーポIII ～キミにささげる あいのマホウ～",
+		"singer": "yozuca*",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=lADLMqZ_wGA"
+	},
+	{
+		"date": "2025-09-27T12:00:00Z",
+		"track": 20,
+		"song": "エフェメラをあつめて",
+		"singer": "鈴木みのり",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=lADLMqZ_wGA"
+	},
+	{
 		"date": "2025-09-25T12:00:00Z",
 		"track": 1,
 		"song": "to you.",
