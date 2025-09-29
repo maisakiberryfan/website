@@ -1,5 +1,197 @@
 [
 	{
+		"date": "2025-09-29T12:00:00Z",
+		"track": 1,
+		"song": "to you.",
+		"singer": "苺咲べりぃ",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=q7iim-JebUU"
+	},
+	{
+		"date": "2025-09-29T12:00:00Z",
+		"track": 2,
+		"song": "Watch me!",
+		"singer": "YOASOBI",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=q7iim-JebUU"
+	},
+	{
+		"date": "2025-09-29T12:00:00Z",
+		"track": 3,
+		"song": "ハルジオン",
+		"singer": "YOASOBI",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=q7iim-JebUU"
+	},
+	{
+		"date": "2025-09-29T12:00:00Z",
+		"track": 4,
+		"song": "勇者",
+		"singer": "YOASOBI",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=q7iim-JebUU"
+	},
+	{
+		"date": "2025-09-29T12:00:00Z",
+		"track": 5,
+		"song": "晴る",
+		"singer": "ヨルシカ",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=q7iim-JebUU"
+	},
+	{
+		"date": "2025-09-29T12:00:00Z",
+		"track": 6,
+		"song": "雨とカプチーノ",
+		"singer": "ヨルシカ",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=q7iim-JebUU"
+	},
+	{
+		"date": "2025-09-29T12:00:00Z",
+		"track": 7,
+		"song": "言って。",
+		"singer": "ヨルシカ",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=q7iim-JebUU"
+	},
+	{
+		"date": "2025-09-29T12:00:00Z",
+		"track": 8,
+		"song": "キラキラ",
+		"singer": "aiko",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=q7iim-JebUU"
+	},
+	{
+		"date": "2025-09-29T12:00:00Z",
+		"track": 9,
+		"song": "カブトムシ",
+		"singer": "aiko",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=q7iim-JebUU"
+	},
+	{
+		"date": "2025-09-29T12:00:00Z",
+		"track": 10,
+		"song": "甘えんぼ",
+		"singer": "大塚愛",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=q7iim-JebUU"
+	},
+	{
+		"date": "2025-09-29T12:00:00Z",
+		"track": 11,
+		"song": "恋愛写真",
+		"singer": "大塚愛",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=q7iim-JebUU"
+	},
+	{
+		"date": "2025-09-29T12:00:00Z",
+		"track": 12,
+		"song": "ORION",
+		"singer": "中島美嘉",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=q7iim-JebUU"
+	},
+	{
+		"date": "2025-09-29T12:00:00Z",
+		"track": 13,
+		"song": "プロローグ",
+		"singer": "Uru",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=q7iim-JebUU"
+	},
+	{
+		"date": "2025-09-29T12:00:00Z",
+		"track": 14,
+		"song": "それを愛と呼ぶなら",
+		"singer": "Uru",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=q7iim-JebUU"
+	},
+	{
+		"date": "2025-09-29T12:00:00Z",
+		"track": 15,
+		"song": "unlasting",
+		"singer": "LiSA",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=q7iim-JebUU"
+	},
+	{
+		"date": "2025-09-29T12:00:00Z",
+		"track": 16,
+		"song": "君色に染まる",
+		"singer": "TOKOTOKO(西沢さんP)",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=q7iim-JebUU"
+	},
+	{
+		"date": "2025-09-29T12:00:00Z",
+		"track": 17,
+		"song": "ステラブリーズ",
+		"singer": "春奈るな",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=q7iim-JebUU"
+	},
+	{
+		"date": "2025-09-29T12:00:00Z",
+		"track": 18,
+		"song": "流星",
+		"singer": "藍井エイル",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=q7iim-JebUU"
+	},
+	{
+		"date": "2025-09-29T12:00:00Z",
+		"track": 19,
+		"song": "INNOCENCE",
+		"singer": "藍井エイル",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=q7iim-JebUU"
+	},
+	{
+		"date": "2025-09-29T12:00:00Z",
+		"track": 20,
+		"song": "ユメセカイ",
+		"singer": "戸松遥",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=q7iim-JebUU"
+	},
+	{
+		"date": "2025-09-29T12:00:00Z",
+		"track": 21,
+		"song": "Overfly",
+		"singer": "春奈るな",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=q7iim-JebUU"
+	},
+	{
+		"date": "2025-09-29T12:00:00Z",
+		"track": 22,
+		"song": "夕日坂",
+		"singer": "doriko",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=q7iim-JebUU"
+	},
+	{
+		"date": "2025-09-29T12:00:00Z",
+		"track": 23,
+		"song": "letter song",
+		"singer": "doriko",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=q7iim-JebUU"
+	},
+	{
+		"date": "2025-09-29T12:00:00Z",
+		"track": 24,
+		"song": "蒼のエーテル",
+		"singer": "ランカ・リー(中島愛)",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=q7iim-JebUU"
+	},
+	{
 		"date": "2025-09-27T12:00:00Z",
 		"track": 1,
 		"song": "Shoot!",
