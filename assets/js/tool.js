@@ -10,7 +10,7 @@ import "https://unpkg.com/select2@4.0.13/dist/js/select2.full.min.js"
 import "https://unpkg.com/video.js@8.21.1/dist/video.min.js"
 
 // API configuration
-import { API_CONFIG, apiRequest, loadingManager, showError } from './config.js'
+import { API_CONFIG, apiRequest, loadingManager, showError } from '../../config.js'
 
 // 載入 dayjs UTC 插件
 dayjs.extend(window.dayjs_plugin_utc)
@@ -211,8 +211,17 @@ $(()=>{
               `<button id='deleteRow' class='btn btn-outline-light'>Delete Row</button>
               <button id='dlcsv' class='btn btn-outline-light'>Get CSV</button>
               <button id='dljson' class='btn btn-outline-light'>Get JSON</button>
-              <div id='setTableMsg' class='p-3'>&emsp;</div>
-              <div id='tb' class='table-dark table-striped table-bordered'>progressing...</div>
+              <div id='setTableMsg' class='p-3'>&emsp;</div>`
+              + (process=='songlist'?`
+              <div class="mb-3 p-2 border rounded bg-dark-subtle">
+                <div class="form-check form-switch d-inline-block">
+                  <input class="form-check-input" type="checkbox" role="switch" id="languageSwitch">
+                  <label class="form-check-label text-light" for="languageSwitch">
+                    <span id="langJA">日文</span> / <span id="langEN" class="text-muted">English</span>
+                  </label>
+                </div>
+              </div>`:'') +
+              `<div id='tb' class='table-dark table-striped table-bordered'>progressing...</div>
                 `
         $("#content").empty().append(c)
 
@@ -279,7 +288,9 @@ $(()=>{
         },
         height:700,
         persistence:true,
-        downloadRowRange:'all'
+        downloadRowRange:'all',
+        selectableRows:true,
+        selectableRangeMode:"click",
       })
     })
   }
@@ -364,7 +375,8 @@ $(()=>{
   var setlistColDef = [
     {title:"streamID", field:"streamID", visible: false, download:true},
     {title:`local time(${dayjs().format('Z')})`, field:"time", mutator:((cell)=>dayjs(cell).format('YYYY/MM/DD HH:mm')), accessor:((value)=>dayjs(value).utc().format('YYYY-MM-DDTHH:mm:ss[Z]')), width:'150', formatter:dateWithYTLink},
-    {title:"Track", field:"track", sorter:'number'},
+    {title:"Track", field:"track", sorter:'number', width:80},
+    {title:"Seg", field:"segment", sorter:'number', width:60},
     {title:"Song", field:"songName", topCalc:'count', topCalcFormatter:(c=>'subtotal/小計：'+c.getValue()), headerFilter:select2, headerFilterParams:{field:"songName"}, headerSort:false},
     {title:"Artist", field:"artist", headerFilter:select2, headerFilterParams:{field:"artist"}, headerSort:false},
     {title:"Note", field:"note", headerFilter:select2, headerFilterParams:{field:"note"}, headerSort:false},
@@ -408,16 +420,34 @@ $(()=>{
     {title:"note", field:"note"},
   ]
 
-  var songlistColDef = [
+  // Tabulator 自動完成設定常數
+  const AUTOCOMPLETE_PARAMS = {
+    valuesLookup: "active",
+    autocomplete: true
+  }
+
+  // Japanese version (default)
+  var songlistColDef_JA = [
     {title:"songID", field:"songID", visible: false, download:true},
-    {title:"Song Name", field:"songName", width:300, topCalc:'count', topCalcFormatter:(c=>'subtotal/小計：'+c.getValue())},
-    {title:"Artist", field:"artist", headerFilter:"input"},
+    {title:"Song Name", field:"songName", width:250, topCalc:'count', topCalcFormatter:(c=>'subtotal/小計：'+c.getValue()), editor:"input", headerFilter:"list", headerFilterParams:AUTOCOMPLETE_PARAMS},
+    {title:"Artist", field:"artist", width:200, headerFilter:"input"},
     {title:"Genre", field:"genre", headerFilter:"input"},
     {title:"Tie-up", field:"tieup", headerFilter:"input"},
     {title:"Note", field:"songNote", headerFilter:"input"},
-    {title:"Created", field:"created_at", visible: false, download:true, mutator:((cell)=>cell ? dayjs(cell).format('YYYY/MM/DD HH:mm') : '')},
-    {title:"Updated", field:"updated_at", visible: false, download:true, mutator:((cell)=>cell ? dayjs(cell).format('YYYY/MM/DD HH:mm') : '')},
   ]
+
+  // English version
+  var songlistColDef_EN = [
+    {title:"songID", field:"songID", visible: false, download:true},
+    {title:"Song Name (EN)", field:"songNameEn", width:250, topCalc:'count', topCalcFormatter:(c=>'subtotal/小計：'+c.getValue()), headerFilter:"input"},
+    {title:"Artist (EN)", field:"artistEn", width:200, headerFilter:"input"},
+    {title:"Genre", field:"genre", headerFilter:"input"},
+    {title:"Tie-up", field:"tieup", headerFilter:"input"},
+    {title:"Note", field:"songNote", headerFilter:"input"},
+  ]
+
+  // Default to Japanese
+  var songlistColDef = songlistColDef_JA
 
   //column definition function
   function multiLineLinkFormat(cell){
@@ -441,6 +471,103 @@ $(()=>{
     let d = cell.getData()
     const dateValue = d.date || d.time  // Support both old and new field names
     return `<a href=${d.YTLink}>${dayjs(dateValue).format('YYYY/MM/DD')}</a>`
+  }
+
+
+  // Initialize Artist Select2 for songlist modal
+  function initializeArtistSelect() {
+
+    $('#artistName').select2({
+      allowClear: true,
+      tags: true,
+      placeholder: 'Select or type artist name...',
+      width: '100%',
+      minimumInputLength: 0, // Show all results immediately
+      dropdownParent: $('#modalAddSong'), // Fix positioning in modal
+      ajax: {
+        url: `${API_CONFIG.BASE_URL}${API_CONFIG.ENDPOINTS.songlistArtists}`,
+        dataType: 'json',
+        delay: 250,
+        data: function(params) {
+          return {
+            q: params.term || '', // search term (empty for initial load)
+            page: params.page || 1
+          }
+        },
+        processResults: function(data, params) {
+          // Transform API response to Select2 format
+          const results = (data.data || data || []).map(item => ({
+            id: item.artist,
+            text: item.artist,
+            artistEn: item.artistEn || ''
+          }))
+
+          // If search term exists but not in results, add it as a new option
+          params.page = params.page || 1
+          const term = params.term?.trim()
+          if (term && !results.find(r => r.text.toLowerCase() === term.toLowerCase())) {
+            results.unshift({
+              id: term,
+              text: term,
+              newTag: true
+            })
+          }
+
+          return {
+            results: results,
+            pagination: {
+              more: false // No pagination needed for artists
+            }
+          }
+        },
+        cache: true
+      },
+      createTag: function(params) {
+        const term = params.term?.trim()
+        if (!term) return null
+
+        return {
+          id: term,
+          text: term,
+          newTag: true
+        }
+      },
+      templateResult: function(item) {
+        if (item.loading) {
+          return item.text
+        }
+
+        // Create display for options
+        var $container = $('<span>')
+        $container.text(item.text || item.id)
+
+        if (item.newTag) {
+          $container.append(' <small>(new)</small>')
+        }
+
+        return $container
+      },
+      templateSelection: function(item) {
+        return item.text || item.id
+      }
+    })
+
+
+    // Add event handlers
+    $('#artistName').on('select2:select', function(e) {
+      const selectedData = e.params.data
+
+      if (!selectedData.newTag && selectedData.artistEn) {
+        // Existing artist with English name, auto-fill but keep editable
+        $('#artistNameEn').val(selectedData.artistEn)
+      }
+      // For new artists or artists without English names, do nothing, let user fill manually
+    })
+
+    $('#artistName').on('select2:clear', function() {
+      // When cleared, also clear artistEN field for consistency
+      $('#artistNameEn').val('')
+    })
   }
 
   function select2 (cell, onRendered, success, cancel, editorParams){
@@ -545,6 +672,9 @@ $(()=>{
 
     jsonTable = new Tabulator("#tb", {
       ajaxURL: u,
+      ajaxResponse: function(url, params, response) {
+        return response.data || response; // 解包 {data: [...]} 格式
+      },
       height:700,
       columnDefaults:{
         headerFilter:"input",
@@ -554,6 +684,7 @@ $(()=>{
       columns:colDef,
       selectable:true,
       selectableRangeMode:"click",
+      selectableRollingSelection:false,
       clipboard:true,
       addRowPos:"top",
       downloadRowRange:'all'
@@ -574,6 +705,101 @@ $(()=>{
         // The header filters will be re-initialized automatically
       }
     });
+
+    // Add API sync events for immediate save
+    jsonTable.on("cellEdited", async function(cell) {
+      try {
+        const rowData = cell.getRow().getData()
+        const field = cell.getField()
+        const value = cell.getValue()
+
+        console.log(`Cell edited: ${field} = ${value}`)
+
+        // Determine API endpoint and ID field
+        let endpoint, idField, id
+        if (p === 'songlist') {
+          endpoint = API_CONFIG.ENDPOINTS.songlist
+          idField = 'songID'
+          id = rowData.songID
+        } else if (p === 'streamlist') {
+          endpoint = API_CONFIG.ENDPOINTS.streamlist
+          idField = 'streamID'
+          id = rowData.streamID
+        } else if (p === 'setlist') {
+          endpoint = API_CONFIG.ENDPOINTS.setlist
+          // setlist uses composite key
+          id = `${rowData.streamID}/${rowData.track}`
+        } else {
+          console.log('No API sync for this table type')
+          return
+        }
+
+        // Skip if no ID (new row not yet saved)
+        if (!id) {
+          console.log('No ID found, skipping API sync')
+          return
+        }
+
+        // PUT update to API
+        const updateData = { [field]: value }
+        await apiRequest('PUT', `${endpoint}/${id}`, updateData)
+
+        // Show brief success indicator
+        cell.getElement().style.backgroundColor = '#d4edda'
+        setTimeout(() => {
+          cell.getElement().style.backgroundColor = ''
+        }, 1000)
+
+      } catch (error) {
+        console.error('Error syncing cell edit:', error)
+        // Revert cell value on error
+        cell.restoreOldValue()
+        alert(`Error saving changes: ${error.message}`)
+      }
+    })
+
+    jsonTable.on("rowDeleted", async function(row) {
+      try {
+        const rowData = row.getData()
+        console.log('Row deleted:', rowData)
+
+        // Determine API endpoint and ID
+        let endpoint, id
+        if (p === 'songlist') {
+          endpoint = API_CONFIG.ENDPOINTS.songlist
+          id = rowData.songID
+        } else if (p === 'streamlist') {
+          endpoint = API_CONFIG.ENDPOINTS.streamlist
+          id = rowData.streamID
+        } else if (p === 'setlist') {
+          endpoint = API_CONFIG.ENDPOINTS.setlist
+          id = `${rowData.streamID}/${rowData.track}`
+        } else {
+          console.log('No API sync for this table type')
+          return
+        }
+
+        // Skip if no ID
+        if (!id) {
+          console.log('No ID found, skipping API delete')
+          return
+        }
+
+        // DELETE from API
+        await apiRequest('DELETE', `${endpoint}/${id}`)
+
+        // Show success message
+        $('#setTableMsg').text('Row deleted successfully').addClass('text-bg-success')
+        setTimeout(() => {
+          $('#setTableMsg').html('&emsp;').removeClass('text-bg-success')
+        }, 3000)
+
+      } catch (error) {
+        console.error('Error deleting row:', error)
+        alert(`Error deleting row: ${error.message}`)
+        // TODO: Consider re-adding the row on error
+      }
+    })
   }
 
   //--- jsonTable button block ---
@@ -604,15 +830,57 @@ $(()=>{
     }
   })
 
+  // Language switch for songlist
+  $('#content').on('change', '#languageSwitch', function(){
+    const isEnglishMode = $(this).is(':checked')
+
+    if (isEnglishMode) {
+      songlistColDef = songlistColDef_EN
+      $('#langJA').removeClass('text-light').addClass('text-muted')
+      $('#langEN').removeClass('text-muted').addClass('text-light')
+    } else {
+      songlistColDef = songlistColDef_JA
+      $('#langJA').removeClass('text-muted').addClass('text-light')
+      $('#langEN').removeClass('text-light').addClass('text-muted')
+    }
+
+    // Update table columns
+    jsonTable.setColumns(songlistColDef)
+  })
+
   var addRowModal = new bootstrap.Modal(document.getElementById('modalAddRow'))
   document.getElementById('modalAddRow').addEventListener('shown.bs.modal', () => {
     $('#YTLink').focus()
   })
+
+  var addSongModal = new bootstrap.Modal(document.getElementById('modalAddSong'))
+  document.getElementById('modalAddSong').addEventListener('shown.bs.modal', () => {
+    $('#songName').focus()
+  })
     
   $('#content').on('click', '#addRow', ()=>{
+    // Check which page type this is
+    const currentPath = window.location.pathname.split('/').pop()
 
-    //$('#setlistDate').val(dayjs().format('YYYY/MM/DD'))
-    addRowModal.show()
+    if (currentPath === 'songlist') {
+      // Reset form
+      $('#modalAddSong form')[0].reset()
+
+      // Destroy existing Select2 if present
+      if ($('#artistName').hasClass('select2-hidden-accessible')) {
+        $('#artistName').select2('destroy')
+      }
+
+      // Initialize AJAX Artist Select2
+      initializeArtistSelect()
+
+      // Open songlist modal
+      addSongModal.show()
+    } else {
+      // Default: setlist modal
+      //$('#setlistDate').val(dayjs().format('YYYY/MM/DD'))
+      addRowModal.show()
+    }
   })
 
   $('#addRowData').on('click', ()=>{
@@ -624,6 +892,59 @@ $(()=>{
     }
     jsonTable.restoreRedraw()
     jsonTable.redraw()
+  })
+
+  // songlist modal submit handler
+  $('#addSongData').on('click', async ()=>{
+    try {
+      // Validate required fields
+      const songName = $('#songName').val().trim()
+      const artistName = $('#artistName').val().trim()
+
+      if (!songName || !artistName) {
+        alert('Please fill in required fields: Song Name and Artist')
+        return
+      }
+
+      // Prepare song data
+      const songData = {
+        songName: songName,
+        songNameEn: $('#songNameEn').val().trim() || null,
+        artist: artistName,
+        artistEn: $('#artistNameEn').val().trim() || null,
+        genre: $('#genreName').val().trim() || null,
+        tieup: $('#tieupName').val().trim() || null,
+        songNote: $('#songNoteText').val().trim() || null
+      }
+
+      // Show loading state
+      const submitBtn = $('#addSongData')
+      const originalText = submitBtn.text()
+      submitBtn.prop('disabled', true).text('Adding...')
+
+      // POST to API
+      const newSong = await apiRequest('POST', API_CONFIG.ENDPOINTS.songlist, songData)
+
+      // Add to table
+      jsonTable.addRow(newSong, true)
+
+      // Close modal and reset form
+      addSongModal.hide()
+      $('#modalAddSong form')[0].reset()
+
+      // Show success message
+      $('#setTableMsg').text('Song added successfully').addClass('text-bg-success')
+      setTimeout(() => {
+        $('#setTableMsg').html('&emsp;').removeClass('text-bg-success')
+      }, 3000)
+
+    } catch (error) {
+      console.error('Error adding song:', error)
+      alert(`Error adding song: ${error.message}`)
+    } finally {
+      // Reset button state
+      $('#addSongData').prop('disabled', false).text('Add Song')
+    }
   })
 
   $('#content').on('click', '#deleteRow', ()=>{

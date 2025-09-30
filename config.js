@@ -1,12 +1,13 @@
 // Berry Fansite API Configuration
 export const API_CONFIG = {
-  // Worker API base URL (will be updated when deployed)
-  BASE_URL: 'http://localhost:8787', // Local development - berry_hyperdrive
-  // BASE_URL: 'https://your-berry-hyperdrive-worker.workers.dev', // Production (to be updated)
+  // Hyperdrive API base URL (will be updated when deployed)
+  BASE_URL: 'http://localhost:8785', // Local development - hyperdrive
+  // BASE_URL: 'https://your-hyperdrive-worker.workers.dev', // Production (to be updated)
 
   // API endpoints
   ENDPOINTS: {
     songlist: '/songlist',
+    songlistArtists: '/songlist/artists',
     streamlist: '/streamlist',
     setlist: '/setlist',
     health: '/health'

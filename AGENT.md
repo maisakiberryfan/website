@@ -23,12 +23,15 @@
   - `compatibility_flags`: `nodejs_compat`
   - `hyperdrive` 綁定 `HYPERDRIVE`，ID `3794cb90bec64a1f9e92bc3b4a60ea41`，`localConnectionString` 同測試專案。
 - 資料流程：Worker 暴露 REST API，前端依原表格行為讀寫；每日匯出 SQL 備份於 GitHub。
+- **英文多語言支援**：songlist 新增 `songNameEn` 和 `artistEn` 欄位，前端表格顯示雙語版本。
 
 ## 資料庫結構建議
 - `songlist`
   - `songID INT UNSIGNED PRIMARY KEY AUTO_INCREMENT`
   - `songName VARCHAR(512)`
+  - `songNameEn VARCHAR(512)` (英文曲名)
   - `artist VARCHAR(512)`
+  - `artistEn VARCHAR(512)` (英文歌手名)
   - `genre VARCHAR(512)`
   - `tieup VARCHAR(512)`
   - `songNote VARCHAR(512)`
@@ -59,12 +62,12 @@
 ## REST API 契約（草案）
 ### songlist
 - `GET /songlist`
-  - 回傳 `{ data: Song[] }`。
+  - 回傳 `{ data: Song[] }`，包含英文欄位 `songNameEn`, `artistEn`。
 - `POST /songlist`
-  - body `{ songName, artist?, genre?, tieup?, songNote? }`。
+  - body `{ songName, songNameEn?, artist?, artistEn?, genre?, tieup?, songNote? }`。
   - 建立新歌，回傳 `{ data: Song }`。
 - `PUT /songlist/:songID`
-  - 局部更新欄位。
+  - 局部更新欄位，支援英文欄位更新。
 - `DELETE /songlist/:songID`
   - 若仍被 setlist 參照，回傳 409 錯誤。
 

@@ -15,7 +15,7 @@ This document describes the changes made to integrate the fansite frontend with 
 #### Column Definitions Updated
 - **Streamlist**: Changed `id` → `streamID`, `category` → `categories`
 - **Setlist**: Changed `song` → `songName`, `singer` → `artist`, `date` → `time`
-- **Songlist**: New column definition for song management
+- **Songlist**: New column definition for song management with English field support
 
 #### API Integration
 - Data source URLs now point to Worker API endpoints
@@ -61,7 +61,14 @@ Update the `BASE_URL` in `config.js` to point to your deployed Worker API.
 - [x] Column definition updates
 - [x] Error handling implementation
 
-### Phase 3: Testing & Deployment
+### Phase 3: English Field Enhancement ✅
+- [x] Add songNameEn and artistEn fields to database schema
+- [x] Update API endpoints to support English fields
+- [x] Update frontend table columns for English display
+- [x] Create database migration script
+
+### Phase 4: Testing & Deployment
+- [ ] Execute database migration script
 - [ ] Local testing with Worker API
 - [ ] Data migration from JSON to database
 - [ ] Production deployment
@@ -135,11 +142,13 @@ Update the `BASE_URL` in `config.js` to point to your deployed Worker API.
 
 ### Songlist
 ```javascript
-// New API format
+// New API format with English field support
 {
   "songID": 123,
   "songName": "Song Name",
+  "songNameEn": "English Song Name",
   "artist": "Artist Name",
+  "artistEn": "English Artist Name",
   "genre": "Pop",
   "tieup": "Anime Name",
   "songNote": "Some note",

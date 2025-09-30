@@ -15,8 +15,39 @@
 	<base target="_blank">
 	<meta name="description" content="An Unofficial fansite about 苺咲べりぃ(Maisaki Berry).Main content are singing data.">
 	<style>
-		.select2-results__option , .select2-selection__choice, .select2-selection__clear {
-			color:black
+		/* Select2 dark theme fixes */
+		.select2-results__option, .select2-selection__choice, .select2-selection__clear {
+			color: black !important;
+		}
+
+		.select2-dropdown {
+			background-color: white !important;
+			border: 1px solid #ced4da !important;
+		}
+
+		.select2-results__options {
+			background-color: white !important;
+			color: black !important;
+		}
+
+		.select2-results__option--highlighted {
+			background-color: #0d6efd !important;
+			color: white !important;
+		}
+
+		.select2-search__field {
+			background-color: white !important;
+			color: black !important;
+			border: 1px solid #ced4da !important;
+		}
+
+		.select2-selection {
+			background-color: white !important;
+			border: 1px solid #ced4da !important;
+		}
+
+		.select2-selection__rendered {
+			color: black !important;
 		}
 
 		.figure-cloth {
@@ -146,6 +177,77 @@
 		</div>
 	</div>
 
-	
+	<!-- Modal for add songlist row -->
+	<div class="modal fade" id="modalAddSong" data-bs-keyboard="false" tabindex="-1" aria-labelledby="modalTitleAddSong" aria-hidden="true">
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h1 class="modal-title fs-5" id="modalTitleAddSong">Add Song</h1>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body" id='addSongInfo'>
+					<form>
+						<div class="form-group row my-2">
+							<label for="songName" class="col-sm-3 col-form-label">Song Name *</label>
+							<div class="col-sm-9">
+								<input type="text" class="form-control" id="songName" required>
+							</div>
+						</div>
+						<div class="form-group row my-2">
+							<label for="songNameEn" class="col-sm-3 col-form-label">Song Name (EN)</label>
+							<div class="col-sm-9">
+								<input type="text" class="form-control" id="songNameEn">
+							</div>
+						</div>
+						<div class="form-group row my-2">
+							<label for="artistName" class="col-sm-3 col-form-label">Artist *</label>
+							<div class="col-sm-9">
+								<select class="form-control" id="artistName" required>
+									<option value="">Select or type artist name...</option>
+								</select>
+							</div>
+						</div>
+						<div class="form-group row my-2">
+							<label for="artistNameEn" class="col-sm-3 col-form-label">Artist (EN)</label>
+							<div class="col-sm-9">
+								<input type="text" class="form-control" id="artistNameEn">
+								<small class="form-text text-muted">Auto-filled when selecting existing artist, but can be manually edited</small>
+							</div>
+						</div>
+						<div class="form-group row my-2">
+							<label for="genreName" class="col-sm-3 col-form-label">Genre</label>
+							<div class="col-sm-9">
+								<input type="text" class="form-control" id="genreName">
+							</div>
+						</div>
+						<div class="form-group row my-2">
+							<label for="tieupName" class="col-sm-3 col-form-label">Tie-up</label>
+							<div class="col-sm-9">
+								<input type="text" class="form-control" id="tieupName">
+							</div>
+						</div>
+						<div class="form-group row my-2">
+							<label for="songNoteText" class="col-sm-3 col-form-label">Note</label>
+							<div class="col-sm-9">
+								<textarea class="form-control" id="songNoteText" rows="2"></textarea>
+							</div>
+						</div>
+						<div class="form-group row my-2">
+							<div class="col-sm-3"></div>
+							<div class="col-sm-9">
+								<span class="text-muted">* Required fields</span>
+							</div>
+						</div>
+					</form>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+					<button type="button" class="btn btn-primary" id="addSongData">Add Song</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
 </body>
 </html>

@@ -1,0 +1,8 @@
+/*.js
+  Content-Type: application/javascript
+
+/assets/js/*.js
+  Content-Type: application/javascript
+
+/config.js
+  Content-Type: application/javascript
