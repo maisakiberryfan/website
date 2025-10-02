@@ -290,7 +290,7 @@ $(()=>{
         persistence:true,
         downloadRowRange:'all',
         selectableRows:true,
-        selectableRangeMode:"click",
+        selectableRowsRangeMode:"click",
       })
     })
   }
@@ -678,13 +678,10 @@ $(()=>{
       height:700,
       columnDefaults:{
         headerFilter:"input",
-        editor:"input",
-        editable:canEdit,
       },
       columns:colDef,
-      selectable:true,
-      selectableRangeMode:"click",
-      selectableRollingSelection:false,
+      selectableRows:true,
+      selectableRowsRangeMode:"click",
       clipboard:true,
       addRowPos:"top",
       downloadRowRange:'all'
@@ -811,16 +808,27 @@ $(()=>{
   })
 
   $('#content').on('click', '#edit', ()=>{
-    jsonTable.setColumns(colDef)
     $('.addRow').prop('disabled', !canEdit())
     $('#deleteRow').prop('disabled', canEdit())
 
     if(canEdit()){
+      // 進入編輯模式：動態添加 editor
+      const editableColDef = colDef.map(col => {
+        if (col.editor) {
+          // 已有 editor 的欄位（如 select2）保持不變
+          return { ...col, editable: true }
+        }
+        // 其他欄位添加預設 input editor
+        return { ...col, editor: "input", editable: true }
+      })
+      jsonTable.setColumns(editableColDef)
       jsonTable.showColumn("YTLink")
       jsonTable.deselectRow()
       $('#setTableMsg').text('You can edit data by clicing cell , or using Excel edit , click the table, and paste to it.').addClass('text-bg-info')
     }
     else{
+      // 離開編輯模式：恢復原始欄位定義（移除 editor）
+      jsonTable.setColumns(colDef)
       //tell user upload to github
       $('#setTableMsg').text('Please upload the JSON to github.Thanks.').addClass('text-bg-info')
       $('#dljson').click()
