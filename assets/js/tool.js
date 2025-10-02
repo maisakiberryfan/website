@@ -325,18 +325,13 @@ $(()=>{
     try {
       // Check if data is processed and ready
       if (!window.tableDataLoaded) {
-        console.log('getDynamicCategoryData - data not processed yet, returning empty array');
         return [];
       }
 
       const tableData = table ? table.getData() : (window.jsonTable ? window.jsonTable.getData() : []);
       const categories = new Set();
 
-      // Debug logging
-      console.log('getDynamicCategoryData - tableData length:', tableData.length);
-
       if (tableData.length === 0) {
-        console.log('getDynamicCategoryData - no data available');
         return [];
       }
 
@@ -353,10 +348,8 @@ $(()=>{
       });
 
       const result = Array.from(categories).sort().map(cat => ({id: cat, text: cat}));
-      console.log('getDynamicCategoryData - result count:', result.length);
       return result;
     } catch (error) {
-      console.error('getDynamicCategoryData error:', error);
       return [];
     }
   }
@@ -690,13 +683,11 @@ $(()=>{
     // Listen for data processing events - data is ready for access via getData()
     jsonTable.on("dataProcessed", function(){
       const data = jsonTable.getData();
-      console.log('Table data processed and ready, count:', data.length);
       // Store reference to processed data for getDynamicCategoryData
       window.tableDataLoaded = true;
 
       // Re-initialize category header filter after data is processed
       if (p === 'streamlist') {
-        console.log('Re-initializing category header filter with data');
         // Clear existing header filter
         jsonTable.clearHeaderFilter();
         // The header filters will be re-initialized automatically
