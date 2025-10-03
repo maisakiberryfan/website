@@ -366,6 +366,60 @@ $(()=>{
   let batchStreamData = null
   const batchEditModal = new bootstrap.Modal(document.getElementById('modalBatchEdit'))
 
+  // Batch editor Select2 - uses songlist data directly
+  const batchSelect2Editor = function(cell, onRendered, success, cancel, editorParams){
+    const editor = document.createElement("select")
+    const f = editorParams.field
+
+    onRendered(async function(){
+      let op = $(editor)
+
+      try {
+        // Fetch songlist data from API
+        const songlist = await apiRequest('GET', API_CONFIG.ENDPOINTS.songlist)
+
+        // Extract unique values for the field
+        let dataOptions = []
+        if (f === 'songName') {
+          dataOptions = [...new Set(songlist.map(s => s.songName))].sort().map(name => ({id: name, text: name}))
+        } else if (f === 'artist') {
+          dataOptions = [...new Set(songlist.map(s => s.artist))].sort().map(artist => ({id: artist, text: artist}))
+        }
+
+        op.select2({
+          data: dataOptions,
+          width: '100%',
+          dropdownAutoWidth: true,
+          placeholder: f === 'songName' ? 'Select song...' : 'Select artist...',
+          tags: true,
+          multiple: false,
+          dropdownParent: $(cell.getElement()).closest('.modal'),
+          templateResult: function(data) {
+            if (!data.id) return data.text
+            return data.text
+          }
+        })
+
+        const val = cell.getValue()
+        op.val(val).trigger('change')
+
+        op.on('change', function(){
+          success(op.val())
+        })
+
+        op.on('select2:close', function(){
+          success(op.val())
+        })
+
+      } catch (error) {
+        console.error('Failed to load select2 data:', error)
+        success(cell.getValue())
+      }
+    })
+
+    return editor
+  }
+
   function openBatchEditor(streamData) {
     console.log('Opening batch editor for:', streamData)
     batchStreamData = streamData
@@ -1395,13 +1449,11 @@ function getYTlatest(){
     const totalSongs = parseInt($('#batchTotalSongs').val()) || 20
     const segment = parseInt($('#batchSegment').val()) || 1
 
-    // Generate empty rows
+    // Generate empty rows (segment is shared for all, not per-row)
     const rows = []
     for (let i = 0; i < totalSongs; i++) {
       rows.push({
         track: startTrack + i,
-        segment: segment,
-        songID: null,
         songName: '',
         artist: '',
         note: ''
@@ -1421,18 +1473,17 @@ function getYTlatest(){
       movableRows: true,
       columns: [
         {title: "Track", field: "track", width: 80, editor: false},
-        {title: "Seg", field: "segment", width: 70, editor: "number", editorParams: {min: 1}},
         {
           title: "Song Name",
           field: "songName",
-          editor: select2,
+          editor: batchSelect2Editor,
           editorParams: {field: "songName"},
           headerSort: false
         },
         {
           title: "Artist",
           field: "artist",
-          editor: select2,
+          editor: batchSelect2Editor,
           editorParams: {field: "artist"},
           headerSort: false
         },

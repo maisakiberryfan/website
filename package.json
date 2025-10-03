@@ -7,6 +7,7 @@
     "doc": "docs"
   },
   "scripts": {
+    "dev": "npx wrangler pages dev ./",
     "build:tabulator": "sass --load-path=node_modules assets/css/tabulator-bootstrap5-custom.scss assets/css/tabulator-bootstrap5-custom.css",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
