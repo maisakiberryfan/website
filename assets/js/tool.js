@@ -225,14 +225,6 @@ $(()=>{
                 `
         $("#content").empty().append(c)
 
-        // Handle different data types for API vs static files
-        let processedData = d
-        if (url.includes(API_CONFIG.BASE_URL)) {
-          // API response format: { data: [...] } or direct array
-          processedData = d.data || d
-        }
-
-        extractUniqueData(processedData, process)
         configJsonTable(url, process)
       }
       else if(ext[1] == 'htm'){
@@ -240,18 +232,6 @@ $(()=>{
       }
       else{
         var c ="<div id='md'>"+marked.parse(d)+"</div>"
-
-        if(process=='songlist'){
-          //combine multiple table
-          let t = document.createElement('input')
-          t.innerHTML = c
-
-          let tr = t.querySelectorAll("#md table tbody tr")
-          let tb = t.querySelector("#md table tbody")
-          tb.replaceChildren(...tr)
-          //table already change
-          c = t.querySelector("#md table")
-        }
 
         $("#content").empty().append(c)
 
@@ -261,13 +241,14 @@ $(()=>{
             $("#content").append(r)
           })
         }
-        
+
         //if data is remote, tell the source
         if(url.includes('http')){
           if(url.includes('hackmd.io')) {url=url.replace('/download', '')}
           $("#content").prepend("<div id='source' class='mb-2'>Source: <a href='"+url+"'>"+url+"</a></div>")
         }
 
+        // Only apply setContentMDTable to Markdown tables (not database-driven tables)
         setContentMDTable()
       }
 
@@ -295,33 +276,9 @@ $(()=>{
     })
   }
 
-  // use global variable
-  var uniqueData={}
 
-  function extractUniqueData(data, process){
-    //pick unique data
-    //https://stackoverflow.com/questions/15125920
-
-    if(process=='setlist'){
-      uniqueData =
-      {
-        songName: sortDataForSelect2(data, 'songName'),
-        artist: sortDataForSelect2(data, 'artist'),
-        note: sortDataForSelect2(data, 'note')
-      }
-    }
-    if(process=='streamlist'){
-      // No longer need static uniqueData.category - using dynamic generation
-      uniqueData = {}
-    }
-  }
-
-  function sortDataForSelect2(arr, txt){
-    return [...new Set(arr.map(e=>e[txt]))].sort().map(e=>{return {id:e,text:e}})
-  }
-
-  // Dynamic category data generation for arrays
-  function getDynamicCategoryData(table) {
+  // Dynamic field data generation for both array and string fields
+  function getDynamicFieldData(table, field) {
     try {
       // Check if data is processed and ready
       if (!window.tableDataLoaded) {
@@ -329,25 +286,32 @@ $(()=>{
       }
 
       const tableData = table ? table.getData() : (window.jsonTable ? window.jsonTable.getData() : []);
-      const categories = new Set();
+      const uniqueValues = new Set();
 
       if (tableData.length === 0) {
         return [];
       }
 
       tableData.forEach(row => {
-        // Support both 'category' (old) and 'categories' (new API) field names
-        const categoryField = row.categories || row.category;
-        if (Array.isArray(categoryField)) {
-          categoryField.forEach(cat => {
-            if (cat && cat.trim().length > 0) {
-              categories.add(cat.trim());
+        const fieldValue = row[field];
+
+        if (Array.isArray(fieldValue)) {
+          // Handle array fields (like categories)
+          fieldValue.forEach(val => {
+            if (val && typeof val === 'string' && val.trim().length > 0) {
+              uniqueValues.add(val.trim());
             }
           });
+        } else if (fieldValue !== null && fieldValue !== undefined && fieldValue !== '') {
+          // Handle string fields (like songName, artist, note)
+          const strValue = String(fieldValue).trim();
+          if (strValue.length > 0) {
+            uniqueValues.add(strValue);
+          }
         }
       });
 
-      const result = Array.from(categories).sort().map(cat => ({id: cat, text: cat}));
+      const result = Array.from(uniqueValues).sort().map(val => ({id: val, text: val}));
       return result;
     } catch (error) {
       return [];
@@ -368,8 +332,8 @@ $(()=>{
   var setlistColDef = [
     {title:"streamID", field:"streamID", visible: false, download:true},
     {title:`local time(${dayjs().format('Z')})`, field:"time", mutator:((cell)=>dayjs(cell).format('YYYY/MM/DD HH:mm')), accessor:((value)=>dayjs(value).utc().format('YYYY-MM-DDTHH:mm:ss[Z]')), width:'150', formatter:dateWithYTLink},
-    {title:"Track", field:"track", sorter:'number', width:80},
     {title:"Seg", field:"segment", sorter:'number', width:60},
+    {title:"Track", field:"track", sorter:'number', width:80},
     {title:"Song", field:"songName", topCalc:'count', topCalcFormatter:(c=>'subtotal/小計：'+c.getValue()), headerFilter:select2, headerFilterParams:{field:"songName"}, headerSort:false},
     {title:"Artist", field:"artist", headerFilter:select2, headerFilterParams:{field:"artist"}, headerSort:false},
     {title:"Note", field:"note", headerFilter:select2, headerFilterParams:{field:"note"}, headerSort:false},
@@ -463,7 +427,7 @@ $(()=>{
   function dateWithYTLink(cell){
     let d = cell.getData()
     const dateValue = d.date || d.time  // Support both old and new field names
-    return `<a href=${d.YTLink}>${dayjs(dateValue).format('YYYY/MM/DD')}</a>`
+    return `<a href="https://www.youtube.com/watch?v=${d.streamID}">${dayjs(dateValue).format('YYYY/MM/DD')}</a>`
   }
 
 
@@ -585,14 +549,11 @@ $(()=>{
       // console.log('select2 onRendered called for field:', f, 'tableDataLoaded:', window.tableDataLoaded);
       let op = $(editor)
 
-      // Get data after onRendered to ensure table is loaded
-      var d = []
-      if (f === 'category' || f === 'categories') {
-        d = getDynamicCategoryData(cell.getTable())
-        // console.log('Select2 editor - category data:', d.length, 'items');
-      } else {
-        d = uniqueData[f] || []
-      }
+      // Get data dynamically from table for all fields
+      var d = getDynamicFieldData(cell.getTable(), f)
+
+      // Determine if this is a header filter or cell editor
+      const isHeaderFilter = $(cell.getElement()).closest('.tabulator-header').length > 0
 
       op.select2({
             data: d,
@@ -601,6 +562,7 @@ $(()=>{
             placeholder: editorParams.multiple ? 'Select categories...' : '',
             tags: true,
             multiple: editorParams.multiple || false,
+            dropdownParent: isHeaderFilter ? $('body') : $(cell.getElement()).closest('.tabulator'),
             templateResult: function(data) {
               if (!data.id) return data.text;
               return data.text;
@@ -683,11 +645,11 @@ $(()=>{
     // Listen for data processing events - data is ready for access via getData()
     jsonTable.on("dataProcessed", function(){
       const data = jsonTable.getData();
-      // Store reference to processed data for getDynamicCategoryData
+      // Store reference to processed data for getDynamicFieldData
       window.tableDataLoaded = true;
 
-      // Re-initialize category header filter after data is processed
-      if (p === 'streamlist') {
+      // Re-initialize header filters after data is processed for dynamic field data
+      if (p === 'streamlist' || p === 'setlist') {
         // Clear existing header filter
         jsonTable.clearHeaderFilter();
         // The header filters will be re-initialized automatically
@@ -1026,7 +988,7 @@ $(()=>{
       $('#category').select2('destroy')
     }
 
-    let categoryData = getDynamicCategoryData(jsonTable)
+    let categoryData = getDynamicFieldData(jsonTable, 'categories')
     console.log('Modal category data:', categoryData)
 
     if (categoryData.length === 0) {
