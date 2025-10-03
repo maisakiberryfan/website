@@ -327,6 +327,88 @@
 		</div>
 	</div>
 
+	<!-- Modal for quick add setlist (live streaming) -->
+	<div class="modal fade" id="modalQuickAdd" data-bs-keyboard="true" tabindex="-1" aria-labelledby="modalTitleQuickAdd" aria-hidden="true">
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h1 class="modal-title fs-5" id="modalTitleQuickAdd">⚡ 快速新增歌單 - Quick Add (Live)</h1>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<div class="mb-3">
+						<h6>Stream Information</h6>
+						<p class="mb-1"><strong>ID:</strong> <span id="quickStreamID"></span></p>
+						<p class="mb-1"><strong>Title:</strong> <span id="quickStreamTitle"></span></p>
+					</div>
+
+					<div class="alert alert-info">
+						<small>💡 此模式適合直播中快速記錄歌曲。按 Enter 連續新增，按 Esc 關閉視窗。</small>
+					</div>
+
+					<div class="row mb-3">
+						<div class="col-md-6">
+							<label for="quickStartTrack" class="form-label">起始 Track 編號 (Start Track) *</label>
+							<input type="number" class="form-control" id="quickStartTrack" placeholder="首次需填寫" min="1" required>
+							<small class="form-text text-muted">第一次填寫後會自動遞增</small>
+						</div>
+						<div class="col-md-6">
+							<label for="quickSegment" class="form-label">歌回編號 (Segment)</label>
+							<input type="number" class="form-control" id="quickSegment" value="1" min="1">
+							<small class="form-text text-muted">當天第幾次歌回</small>
+						</div>
+					</div>
+
+					<hr>
+
+					<div class="mb-3" id="quickAddFormSection" style="display: none;">
+						<div class="alert alert-success">
+							<strong>下一首 Track:</strong> <span id="quickNextTrack">-</span>
+						</div>
+
+						<div class="mb-3">
+							<label for="quickSongSelect" class="form-label">歌曲 (Song) *</label>
+							<select class="form-control" id="quickSongSelect" required>
+								<option value="">搜尋歌曲...</option>
+							</select>
+						</div>
+
+						<div class="mb-3">
+							<label for="quickNote" class="form-label">備註 (Note)</label>
+							<input type="text" class="form-control" id="quickNote" placeholder="選填">
+						</div>
+
+						<div class="d-grid gap-2">
+							<button type="button" class="btn btn-primary" id="quickAddSongBtn">
+								<strong>Enter</strong> 新增歌曲
+							</button>
+						</div>
+					</div>
+
+					<div class="mb-3" id="quickStartSection">
+						<div class="d-grid gap-2">
+							<button type="button" class="btn btn-success btn-lg" id="quickStartBtn">
+								開始記錄 (Start)
+							</button>
+						</div>
+					</div>
+
+					<hr>
+
+					<div class="mb-3">
+						<h6>已新增清單 (Added Songs)</h6>
+						<div id="quickAddedList" class="border rounded p-2" style="max-height: 200px; overflow-y: auto; min-height: 50px;">
+							<small class="text-muted">尚未新增任何歌曲</small>
+						</div>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">關閉 (Close)</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
 
 </body>
 </html>

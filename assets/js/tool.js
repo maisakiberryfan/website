@@ -570,10 +570,56 @@ $(()=>{
     })
   }
 
-  function openQuickAdd(streamData) {
+  // Quick Add variables
+  let quickStreamData = null
+  let quickCurrentTrack = null
+  let quickAddModal = new bootstrap.Modal(document.getElementById('modalQuickAdd'))
+  let quickSongSelect2 = null
+
+  async function openQuickAdd(streamData) {
     console.log('Opening quick add for:', streamData)
-    alert(`快速新增功能開發中...\nStream: ${streamData.streamID}\nTitle: ${streamData.title}`)
-    // TODO: Implement quick add modal
+    quickStreamData = streamData
+
+    // Set stream info
+    $('#quickStreamID').text(streamData.streamID)
+    $('#quickStreamTitle').text(streamData.title)
+
+    // Reset form
+    $('#quickStartTrack').val('')
+    $('#quickSegment').val(1)
+    $('#quickNote').val('')
+    $('#quickAddedList').html('<small class="text-muted">尚未新增任何歌曲</small>')
+
+    // Reset state
+    quickCurrentTrack = null
+    $('#quickAddFormSection').hide()
+    $('#quickStartSection').show()
+
+    // Initialize Select2 for song selection
+    if (quickSongSelect2) {
+      quickSongSelect2.destroy()
+    }
+
+    // Try to auto-detect next track from existing setlist
+    try {
+      const allSetlist = await apiRequest('GET', API_CONFIG.ENDPOINTS.setlist)
+      const existingEntries = allSetlist.filter(entry => entry.streamID === streamData.streamID)
+
+      if (existingEntries.length > 0) {
+        const maxTrack = Math.max(...existingEntries.map(e => e.track))
+        const firstSegment = existingEntries[0].segment || 1
+        $('#quickStartTrack').val(maxTrack + 1)
+        $('#quickSegment').val(firstSegment)
+        console.log(`Auto-detected next track: ${maxTrack + 1}`)
+      }
+    } catch (error) {
+      console.error('Failed to auto-detect track:', error)
+    }
+
+    quickAddModal.show()
+
+    // Focus on start track input
+    setTimeout(() => $('#quickStartTrack').focus(), 300)
   }
 
 //--- json table ---
@@ -1687,6 +1733,128 @@ function getYTlatest(){
       alert('儲存失敗：' + error.message)
     }
   })
+
+  //--- Quick Add Event Handlers ---
+  $('#quickStartBtn').on('click', async function() {
+    const startTrack = parseInt($('#quickStartTrack').val())
+    if (!startTrack || startTrack < 1) {
+      alert('請填寫起始 Track 編號')
+      $('#quickStartTrack').focus()
+      return
+    }
+
+    quickCurrentTrack = startTrack
+    $('#quickNextTrack').text(quickCurrentTrack)
+
+    // Initialize Select2 for song selection
+    try {
+      const songlist = await apiRequest('GET', API_CONFIG.ENDPOINTS.songlist)
+      const songOptions = songlist.map(s => ({
+        id: s.songID,
+        text: `${s.songName} - ${s.artist}`
+      })).sort((a, b) => a.text.localeCompare(b.text))
+
+      $('#quickSongSelect').select2({
+        data: songOptions,
+        width: '100%',
+        dropdownParent: $('#modalQuickAdd'),
+        placeholder: '搜尋歌曲...',
+        allowClear: true
+      })
+
+      quickSongSelect2 = $('#quickSongSelect').data('select2')
+    } catch (error) {
+      console.error('Failed to load songlist:', error)
+      alert('載入歌曲清單失敗')
+      return
+    }
+
+    // Switch UI
+    $('#quickStartSection').hide()
+    $('#quickAddFormSection').show()
+
+    // Focus on song select
+    setTimeout(() => $('#quickSongSelect').select2('open'), 100)
+  })
+
+  $('#quickAddSongBtn').on('click', quickAddSong)
+
+  // Enter key to add song
+  $('#quickNote').on('keypress', function(e) {
+    if (e.which === 13) {
+      e.preventDefault()
+      quickAddSong()
+    }
+  })
+
+  // Esc key to close modal
+  $(document).on('keydown', function(e) {
+    if (e.key === 'Escape' && quickAddModal._isShown) {
+      quickAddModal.hide()
+    }
+  })
+
+  async function quickAddSong() {
+    const songID = $('#quickSongSelect').val()
+    const note = $('#quickNote').val()
+    const segment = parseInt($('#quickSegment').val()) || 1
+
+    if (!songID) {
+      alert('請選擇歌曲')
+      $('#quickSongSelect').select2('open')
+      return
+    }
+
+    try {
+      // POST to API immediately
+      await apiRequest('POST', API_CONFIG.ENDPOINTS.setlist, {
+        streamID: quickStreamData.streamID,
+        trackNo: quickCurrentTrack,
+        segmentNo: segment,
+        songID: parseInt(songID),
+        note: note || null
+      })
+
+      // Get song name for display
+      const selectedData = $('#quickSongSelect').select2('data')[0]
+      const songDisplay = selectedData ? selectedData.text : `Song ID: ${songID}`
+
+      // Add to list
+      const listItem = $(`
+        <div class="border-bottom pb-1 mb-1">
+          <small>
+            <strong>Track ${quickCurrentTrack}:</strong> ${songDisplay}
+            ${note ? `<span class="text-muted">(${note})</span>` : ''}
+          </small>
+        </div>
+      `)
+
+      if ($('#quickAddedList').find('.text-muted').length > 0) {
+        $('#quickAddedList').empty()
+      }
+      $('#quickAddedList').append(listItem)
+
+      // Auto-scroll to bottom
+      $('#quickAddedList').scrollTop($('#quickAddedList')[0].scrollHeight)
+
+      // Increment track
+      quickCurrentTrack++
+      $('#quickNextTrack').text(quickCurrentTrack)
+
+      // Clear form
+      $('#quickSongSelect').val('').trigger('change')
+      $('#quickNote').val('')
+
+      // Focus back to song select
+      setTimeout(() => $('#quickSongSelect').select2('open'), 100)
+
+      console.log(`Quick added: Track ${quickCurrentTrack - 1}`)
+
+    } catch (error) {
+      console.error('Quick add failed:', error)
+      alert('新增失敗：' + error.message)
+    }
+  }
 
   // Add new song button in batch editor
   $('#batchAddNewSong').on('click', function() {
