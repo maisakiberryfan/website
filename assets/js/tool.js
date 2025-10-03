@@ -441,18 +441,13 @@ $(()=>{
     return rowData.songDisplay || ''
   }
 
-  function openBatchEditor(streamData) {
+  async function openBatchEditor(streamData) {
     console.log('Opening batch editor for:', streamData)
     batchStreamData = streamData
 
     // Set stream info
     $('#batchStreamID').text(streamData.streamID)
     $('#batchStreamTitle').text(streamData.title)
-
-    // Reset form
-    $('#batchStartTrack').val(1)
-    $('#batchTotalSongs').val(20)
-    $('#batchSegment').val(1)
 
     // Clear previous table
     if (batchTable) {
@@ -461,7 +456,118 @@ $(()=>{
     }
     $('#batchTableContainer').empty()
 
+    // Check if existing setlist data exists for this stream
+    try {
+      const allSetlist = await apiRequest('GET', API_CONFIG.ENDPOINTS.setlist)
+      const existingEntries = allSetlist.filter(entry => entry.streamID === streamData.streamID)
+                                        .sort((a, b) => a.track - b.track)
+
+      if (existingEntries.length > 0) {
+        // Found existing data - auto-populate
+        const firstEntry = existingEntries[0]
+        const lastEntry = existingEntries[existingEntries.length - 1]
+
+        $('#batchStartTrack').val(firstEntry.track)
+        $('#batchTotalSongs').val(existingEntries.length)
+        $('#batchSegment').val(firstEntry.segment || 1)
+
+        // Show status message
+        $('#batchLoadStatus').html(`
+          ✅ 已載入現有歌單資料（${existingEntries.length} 首）<br>
+          <small>可直接編輯或點擊「產生表格」重新建立</small>
+        `).removeClass('alert-warning').addClass('alert-success').show()
+
+        // Auto-generate table with existing data
+        setTimeout(() => {
+          loadExistingSetlist(existingEntries)
+        }, 100)
+
+        console.log(`Loaded ${existingEntries.length} existing setlist entries`)
+      } else {
+        // No existing data - use defaults
+        $('#batchStartTrack').val(1)
+        $('#batchTotalSongs').val(20)
+        $('#batchSegment').val(1)
+
+        // Show status message
+        $('#batchLoadStatus').html(`
+          📋 此直播尚無歌單資料<br>
+          <small>請設定參數後點擊「產生表格」開始建立</small>
+        `).removeClass('alert-success').addClass('alert-warning').show()
+      }
+    } catch (error) {
+      console.error('Failed to load existing setlist:', error)
+      // Use defaults on error
+      $('#batchStartTrack').val(1)
+      $('#batchTotalSongs').val(20)
+      $('#batchSegment').val(1)
+    }
+
     batchEditModal.show()
+  }
+
+  function loadExistingSetlist(entries) {
+    // Get songlist for mapping
+    apiRequest('GET', API_CONFIG.ENDPOINTS.songlist).then(songlist => {
+      // Map entries to table rows
+      const rows = entries.map(entry => {
+        const song = songlist.find(s => s.songID === entry.songID)
+        return {
+          track: entry.track,
+          songID: entry.songID,
+          songDisplay: song ? `${song.songName} - ${song.artist}` : '',
+          songName: song ? song.songName : '',
+          artist: song ? song.artist : '',
+          note: entry.note || ''
+        }
+      })
+
+      // Destroy previous table if exists
+      if (batchTable) {
+        batchTable.destroy()
+      }
+
+      // Create table with existing data
+      batchTable = new Tabulator("#batchTableContainer", {
+        data: rows,
+        layout: "fitColumns",
+        movableRows: true,
+        maxHeight: "100%",
+        columns: [
+          {title: "Track", field: "track", width: 80, editor: false},
+          {
+            title: "Song (歌名 - 歌手)",
+            field: "songID",
+            editor: batchSongSelect2Editor,
+            formatter: songDisplayFormatter,
+            headerSort: false,
+            widthGrow: 3
+          },
+          {
+            title: "Note",
+            field: "note",
+            editor: "input",
+            headerSort: false,
+            widthGrow: 2
+          }
+        ]
+      })
+
+      // Update track numbers on row move
+      batchTable.on("rowMoved", function() {
+        recalculateTrackNumbers()
+      })
+
+      // Update track numbers when start track changes
+      $('#batchStartTrack').off('change').on('change', function() {
+        if (batchTable) {
+          recalculateTrackNumbers()
+        }
+      })
+    }).catch(error => {
+      console.error('Failed to load songlist for existing setlist:', error)
+      alert('載入歌單資料失敗，請點擊「產生表格」重新建立')
+    })
   }
 
   function openQuickAdd(streamData) {
