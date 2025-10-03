@@ -366,10 +366,9 @@ $(()=>{
   let batchStreamData = null
   const batchEditModal = new bootstrap.Modal(document.getElementById('modalBatchEdit'))
 
-  // Batch editor Select2 - uses songlist data directly
-  const batchSelect2Editor = function(cell, onRendered, success, cancel, editorParams){
+  // Batch editor Song Select2 - stores songID, displays "songName - artist"
+  const batchSongSelect2Editor = function(cell, onRendered, success, cancel){
     const editor = document.createElement("select")
-    const f = editorParams.field
 
     onRendered(async function(){
       let op = $(editor)
@@ -378,33 +377,49 @@ $(()=>{
         // Fetch songlist data from API
         const songlist = await apiRequest('GET', API_CONFIG.ENDPOINTS.songlist)
 
-        // Extract unique values for the field
-        let dataOptions = []
-        if (f === 'songName') {
-          dataOptions = [...new Set(songlist.map(s => s.songName))].sort().map(name => ({id: name, text: name}))
-        } else if (f === 'artist') {
-          dataOptions = [...new Set(songlist.map(s => s.artist))].sort().map(artist => ({id: artist, text: artist}))
-        }
+        // Format: {id: songID, text: "songName - artist"}
+        const dataOptions = songlist.map(s => ({
+          id: s.songID,
+          text: `${s.songName} - ${s.artist}`,
+          songName: s.songName,
+          artist: s.artist
+        })).sort((a, b) => a.text.localeCompare(b.text))
 
         op.select2({
           data: dataOptions,
           width: '100%',
           dropdownAutoWidth: true,
-          placeholder: f === 'songName' ? 'Select song...' : 'Select artist...',
-          tags: true,
+          placeholder: 'Select song...',
+          allowClear: true,
           multiple: false,
-          dropdownParent: $(cell.getElement()).closest('.modal'),
+          dropdownParent: $('#modalBatchEdit'),
           templateResult: function(data) {
             if (!data.id) return data.text
+            return data.text
+          },
+          templateSelection: function(data) {
             return data.text
           }
         })
 
+        // Set current value (songID)
         const val = cell.getValue()
         op.val(val).trigger('change')
 
         op.on('change', function(){
-          success(op.val())
+          const selectedId = op.val()
+          const selectedData = op.select2('data')[0]
+
+          // Update row data with songID and display info
+          const rowData = cell.getRow().getData()
+          rowData.songID = selectedId
+          if (selectedData && selectedData.songName) {
+            rowData.songDisplay = selectedData.text
+            rowData.songName = selectedData.songName
+            rowData.artist = selectedData.artist
+          }
+
+          success(selectedId)
         })
 
         op.on('select2:close', function(){
@@ -418,6 +433,12 @@ $(()=>{
     })
 
     return editor
+  }
+
+  // Custom formatter to display "songName - artist" even though cell stores songID
+  const songDisplayFormatter = function(cell) {
+    const rowData = cell.getRow().getData()
+    return rowData.songDisplay || ''
   }
 
   function openBatchEditor(streamData) {
@@ -1454,8 +1475,8 @@ function getYTlatest(){
     for (let i = 0; i < totalSongs; i++) {
       rows.push({
         track: startTrack + i,
-        songName: '',
-        artist: '',
+        songID: null,
+        songDisplay: '',
         note: ''
       })
     }
@@ -1474,24 +1495,19 @@ function getYTlatest(){
       columns: [
         {title: "Track", field: "track", width: 80, editor: false},
         {
-          title: "Song Name",
-          field: "songName",
-          editor: batchSelect2Editor,
-          editorParams: {field: "songName"},
-          headerSort: false
-        },
-        {
-          title: "Artist",
-          field: "artist",
-          editor: batchSelect2Editor,
-          editorParams: {field: "artist"},
-          headerSort: false
+          title: "Song (歌名 - 歌手)",
+          field: "songID",
+          editor: batchSongSelect2Editor,
+          formatter: songDisplayFormatter,
+          headerSort: false,
+          widthGrow: 3
         },
         {
           title: "Note",
           field: "note",
           editor: "input",
-          headerSort: false
+          headerSort: false,
+          widthGrow: 2
         }
       ]
     })
@@ -1527,11 +1543,11 @@ function getYTlatest(){
     const rows = batchTable.getData()
     const segment = parseInt($('#batchSegment').val()) || 1
 
-    // Validate: check for empty songName
+    // Validate: check for empty songID
     const errors = []
     rows.forEach((row, index) => {
-      if (!row.songName || row.songName.trim() === '') {
-        errors.push(`第 ${index + 1} 行：歌曲名稱未填寫`)
+      if (!row.songID) {
+        errors.push(`第 ${index + 1} 行：歌曲未選擇`)
       }
     })
 
@@ -1541,22 +1557,14 @@ function getYTlatest(){
     }
 
     try {
-      // Get songlist to map songName to songID
-      const songlist = await apiRequest('GET', API_CONFIG.ENDPOINTS.songlist)
-
-      // Prepare batch data
-      const batchData = rows.map(row => {
-        // Find song by name
-        const song = songlist.find(s => s.songName === row.songName)
-
-        return {
-          streamID: batchStreamData.streamID,
-          trackNo: row.track,
-          segmentNo: segment,
-          songID: song ? song.songID : null,
-          note: row.note || null
-        }
-      })
+      // Prepare batch data (songID already stored in rows)
+      const batchData = rows.map(row => ({
+        streamID: batchStreamData.streamID,
+        trackNo: row.track,
+        segmentNo: segment,
+        songID: row.songID,
+        note: row.note || null
+      }))
 
       // Send batch POST request
       const result = await apiRequest('POST', API_CONFIG.ENDPOINTS.setlist, batchData)
@@ -1572,6 +1580,28 @@ function getYTlatest(){
       console.error('Batch save failed:', error)
       alert('儲存失敗：' + error.message)
     }
+  })
+
+  // Add new song button in batch editor
+  $('#batchAddNewSong').on('click', function() {
+    // Close batch editor temporarily
+    batchEditModal.hide()
+
+    // Open add song modal
+    const addSongModal = new bootstrap.Modal(document.getElementById('modalAddSong'))
+    addSongModal.show()
+
+    // When song is added, reload batch editor
+    $('#modalAddSong').one('hidden.bs.modal', function() {
+      // Reopen batch editor
+      batchEditModal.show()
+
+      // Refresh the table to get new songlist data
+      if (batchTable) {
+        // Trigger a refresh - user can re-generate table if needed
+        console.log('Song added, regenerate table to see new song')
+      }
+    })
   })
 
 //get github latest commit
