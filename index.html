@@ -278,6 +278,53 @@
 		</div>
 	</div>
 
+	<!-- Modal for batch setlist editing -->
+	<div class="modal fade" id="modalBatchEdit" data-bs-keyboard="false" tabindex="-1" aria-labelledby="modalTitleBatchEdit" aria-hidden="true">
+		<div class="modal-dialog modal-xl">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h1 class="modal-title fs-5" id="modalTitleBatchEdit">📝 批次編輯歌單 - Batch Edit Setlist</h1>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<div class="mb-3">
+						<h6>Stream Information</h6>
+						<p class="mb-1"><strong>ID:</strong> <span id="batchStreamID"></span></p>
+						<p class="mb-1"><strong>Title:</strong> <span id="batchStreamTitle"></span></p>
+					</div>
+
+					<div class="row mb-3">
+						<div class="col-md-4">
+							<label for="batchStartTrack" class="form-label">起始 Track 編號 (Start Track)</label>
+							<input type="number" class="form-control" id="batchStartTrack" value="1" min="1">
+						</div>
+						<div class="col-md-4">
+							<label for="batchTotalSongs" class="form-label">總曲數 (Total Songs)</label>
+							<input type="number" class="form-control" id="batchTotalSongs" value="20" min="1" max="100">
+						</div>
+						<div class="col-md-4">
+							<label for="batchSegment" class="form-label">歌回編號 (Segment)</label>
+							<input type="number" class="form-control" id="batchSegment" value="1" min="1">
+							<small class="form-text text-muted">當天第幾次歌回（整場共用）</small>
+						</div>
+					</div>
+
+					<div class="mb-2">
+						<button type="button" class="btn btn-primary btn-sm" id="generateBatchTable">產生表格 (Generate Table)</button>
+					</div>
+
+					<div id="batchTableContainer" style="height: 500px;">
+						<!-- Tabulator table will be rendered here -->
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+					<button type="button" class="btn btn-primary" id="saveBatchSetlist">Save All</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
 
 </body>
 </html>

@@ -361,10 +361,32 @@ $(()=>{
     }, 10)
   }
 
+  // Batch Editor variables
+  let batchTable = null
+  let batchStreamData = null
+  const batchEditModal = new bootstrap.Modal(document.getElementById('modalBatchEdit'))
+
   function openBatchEditor(streamData) {
     console.log('Opening batch editor for:', streamData)
-    alert(`批次編輯功能開發中...\nStream: ${streamData.streamID}\nTitle: ${streamData.title}`)
-    // TODO: Implement batch editor modal
+    batchStreamData = streamData
+
+    // Set stream info
+    $('#batchStreamID').text(streamData.streamID)
+    $('#batchStreamTitle').text(streamData.title)
+
+    // Reset form
+    $('#batchStartTrack').val(1)
+    $('#batchTotalSongs').val(20)
+    $('#batchSegment').val(1)
+
+    // Clear previous table
+    if (batchTable) {
+      batchTable.destroy()
+      batchTable = null
+    }
+    $('#batchTableContainer').empty()
+
+    batchEditModal.show()
   }
 
   function openQuickAdd(streamData) {
@@ -1366,6 +1388,140 @@ function getYTlatest(){
     .fail((err)=>{reject(err)});
   })
 }
+
+  //--- Batch Editor Event Handlers ---
+  $('#generateBatchTable').on('click', function() {
+    const startTrack = parseInt($('#batchStartTrack').val()) || 1
+    const totalSongs = parseInt($('#batchTotalSongs').val()) || 20
+    const segment = parseInt($('#batchSegment').val()) || 1
+
+    // Generate empty rows
+    const rows = []
+    for (let i = 0; i < totalSongs; i++) {
+      rows.push({
+        track: startTrack + i,
+        segment: segment,
+        songID: null,
+        songName: '',
+        artist: '',
+        note: ''
+      })
+    }
+
+    // Destroy previous table if exists
+    if (batchTable) {
+      batchTable.destroy()
+    }
+
+    // Create batch edit table with Movable Rows
+    batchTable = new Tabulator("#batchTableContainer", {
+      data: rows,
+      height: "100%",
+      layout: "fitColumns",
+      movableRows: true,
+      columns: [
+        {title: "Track", field: "track", width: 80, editor: false},
+        {title: "Seg", field: "segment", width: 70, editor: "number", editorParams: {min: 1}},
+        {
+          title: "Song Name",
+          field: "songName",
+          editor: select2,
+          editorParams: {field: "songName"},
+          headerSort: false
+        },
+        {
+          title: "Artist",
+          field: "artist",
+          editor: select2,
+          editorParams: {field: "artist"},
+          headerSort: false
+        },
+        {
+          title: "Note",
+          field: "note",
+          editor: "input",
+          headerSort: false
+        }
+      ]
+    })
+
+    // Update track numbers on row move
+    batchTable.on("rowMoved", function() {
+      recalculateTrackNumbers()
+    })
+
+    // Update track numbers when start track changes
+    $('#batchStartTrack').off('change').on('change', function() {
+      if (batchTable) {
+        recalculateTrackNumbers()
+      }
+    })
+  })
+
+  function recalculateTrackNumbers() {
+    const startTrack = parseInt($('#batchStartTrack').val()) || 1
+    const rows = batchTable.getRows()
+
+    rows.forEach((row, index) => {
+      row.update({ track: startTrack + index })
+    })
+  }
+
+  $('#saveBatchSetlist').on('click', async function() {
+    if (!batchTable || !batchStreamData) {
+      alert('表格未建立或資料遺失')
+      return
+    }
+
+    const rows = batchTable.getData()
+    const segment = parseInt($('#batchSegment').val()) || 1
+
+    // Validate: check for empty songName
+    const errors = []
+    rows.forEach((row, index) => {
+      if (!row.songName || row.songName.trim() === '') {
+        errors.push(`第 ${index + 1} 行：歌曲名稱未填寫`)
+      }
+    })
+
+    if (errors.length > 0) {
+      alert('請修正以下錯誤：\n' + errors.join('\n'))
+      return
+    }
+
+    try {
+      // Get songlist to map songName to songID
+      const songlist = await apiRequest('GET', API_CONFIG.ENDPOINTS.songlist)
+
+      // Prepare batch data
+      const batchData = rows.map(row => {
+        // Find song by name
+        const song = songlist.find(s => s.songName === row.songName)
+
+        return {
+          streamID: batchStreamData.streamID,
+          trackNo: row.track,
+          segmentNo: segment,
+          songID: song ? song.songID : null,
+          note: row.note || null
+        }
+      })
+
+      // Send batch POST request
+      const result = await apiRequest('POST', API_CONFIG.ENDPOINTS.setlist, batchData)
+
+      alert(`成功儲存 ${rows.length} 筆歌單資料！`)
+      batchEditModal.hide()
+
+      // Reload setlist table if on setlist page
+      if (getProcess() === 'setlist') {
+        jsonTable.setData(API_CONFIG.BASE_URL + API_CONFIG.ENDPOINTS.setlist)
+      }
+    } catch (error) {
+      console.error('Batch save failed:', error)
+      alert('儲存失敗：' + error.message)
+    }
+  })
 
 //get github latest commit
 function getGitCommitMsg(){
