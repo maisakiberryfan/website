@@ -324,6 +324,55 @@ $(()=>{
     $('#modalFooter').empty()
   })
 
+  //--- Context Menu for streamlist ---
+  function showContextMenu(x, y, items) {
+    // Remove any existing context menu
+    $('.context-menu').remove()
+
+    // Create context menu
+    const menu = $('<div class="context-menu"></div>')
+
+    items.forEach(item => {
+      if (item.type === 'divider') {
+        menu.append('<div class="context-menu-divider"></div>')
+      } else {
+        const menuItem = $(`<div class="context-menu-item">${item.label}</div>`)
+        menuItem.on('click', () => {
+          item.action()
+          menu.remove()
+        })
+        menu.append(menuItem)
+      }
+    })
+
+    // Position and show menu
+    menu.css({ left: x + 'px', top: y + 'px' })
+    $('body').append(menu)
+
+    // Close menu on outside click
+    $(document).one('click', () => menu.remove())
+
+    // Prevent menu from being immediately closed by the same click
+    setTimeout(() => {
+      $(document).on('click.contextmenu', () => {
+        menu.remove()
+        $(document).off('click.contextmenu')
+      })
+    }, 10)
+  }
+
+  function openBatchEditor(streamData) {
+    console.log('Opening batch editor for:', streamData)
+    alert(`批次編輯功能開發中...\nStream: ${streamData.streamID}\nTitle: ${streamData.title}`)
+    // TODO: Implement batch editor modal
+  }
+
+  function openQuickAdd(streamData) {
+    console.log('Opening quick add for:', streamData)
+    alert(`快速新增功能開發中...\nStream: ${streamData.streamID}\nTitle: ${streamData.title}`)
+    // TODO: Implement quick add modal
+  }
+
 //--- json table ---
   //use a global variable to easy access the table and colDef
   var jsonTable, colDef
@@ -655,6 +704,39 @@ $(()=>{
         // The header filters will be re-initialized automatically
       }
     });
+
+    // Add context menu for streamlist (right-click menu)
+    if (p === 'streamlist') {
+      jsonTable.on("rowContext", function(e, row) {
+        e.preventDefault();
+
+        const data = row.getData();
+        const categories = data.categories || [];
+
+        // Only show menu for singing streams
+        const isSingingStream = categories.some(cat =>
+          cat.includes('歌枠') || cat.includes('Singing') || cat.includes('singing') || cat.includes('karaoke')
+        );
+
+        if (isSingingStream) {
+          showContextMenu(e.pageX, e.pageY, [
+            {
+              label: '📝 補檔用 - 批次編輯歌單',
+              action: () => openBatchEditor(data)
+            },
+            {
+              label: '⚡ 直播用 - 快速新增歌單',
+              action: () => openQuickAdd(data)
+            },
+            { type: 'divider' },
+            {
+              label: '🎥 查看 YouTube 影片',
+              action: () => window.open(`https://youtube.com/watch?v=${data.streamID}`, '_blank')
+            }
+          ]);
+        }
+      });
+    }
 
     // Add API sync events for immediate save
     jsonTable.on("cellEdited", async function(cell) {

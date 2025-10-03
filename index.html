@@ -57,6 +57,37 @@
 		.card {
 			width: 480px;
 		}
+
+		/* Context Menu Styles */
+		.context-menu {
+			position: fixed;
+			background: var(--bs-dark);
+			border: 1px solid var(--bs-border-color);
+			border-radius: 4px;
+			box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+			z-index: 9999;
+			min-width: 250px;
+			padding: 4px 0;
+		}
+
+		.context-menu-item {
+			padding: 10px 16px;
+			cursor: pointer;
+			color: var(--bs-light);
+			display: flex;
+			align-items: center;
+			gap: 8px;
+		}
+
+		.context-menu-item:hover {
+			background: var(--bs-primary);
+		}
+
+		.context-menu-divider {
+			height: 1px;
+			background: var(--bs-border-color);
+			margin: 4px 0;
+		}
 	</style>
 </head>
 
