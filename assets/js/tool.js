@@ -1489,9 +1489,9 @@ function getYTlatest(){
     // Create batch edit table with Movable Rows
     batchTable = new Tabulator("#batchTableContainer", {
       data: rows,
-      height: "100%",
       layout: "fitColumns",
       movableRows: true,
+      maxHeight: "100%",
       columns: [
         {title: "Track", field: "track", width: 80, editor: false},
         {
