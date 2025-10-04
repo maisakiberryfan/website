@@ -280,7 +280,7 @@
 
 	<!-- Modal for batch setlist editing -->
 	<div class="modal fade" id="modalBatchEdit" data-bs-keyboard="false" tabindex="-1" aria-labelledby="modalTitleBatchEdit" aria-hidden="true">
-		<div class="modal-dialog modal-xl">
+		<div class="modal-dialog modal-xl modal-dialog-scrollable">
 			<div class="modal-content">
 				<div class="modal-header">
 					<h1 class="modal-title fs-5" id="modalTitleBatchEdit">📝 批次編輯歌單 - Batch Edit Setlist</h1>
@@ -315,7 +315,7 @@
 						<button type="button" class="btn btn-success btn-sm" id="batchAddNewSong">➕ 新增歌曲 (Add New Song)</button>
 					</div>
 
-					<div id="batchTableContainer" style="height: 400px; overflow: auto;">
+					<div id="batchTableContainer">
 						<!-- Tabulator table will be rendered here -->
 					</div>
 				</div>
@@ -367,15 +367,15 @@
 						</div>
 
 						<div class="mb-3">
-							<label for="quickSongSelect" class="form-label">歌曲 (Song) *</label>
+							<div class="d-flex justify-content-between align-items-center mb-2">
+								<label for="quickSongSelect" class="form-label mb-0">歌曲 (Song) *</label>
+								<button type="button" class="btn btn-success btn-sm" id="quickAddNewSong">
+									➕ 新增初回歌曲
+								</button>
+							</div>
 							<select class="form-control" id="quickSongSelect" required>
 								<option value="">搜尋歌曲...</option>
 							</select>
-							<div class="mt-2">
-								<button type="button" class="btn btn-success btn-sm" id="quickAddNewSong">
-									➕ 新增初回歌曲 (Add New Song)
-								</button>
-							</div>
 						</div>
 
 						<div class="mb-3">

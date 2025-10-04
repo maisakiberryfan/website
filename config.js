@@ -14,7 +14,7 @@ export const API_CONFIG = {
   },
 
   // Request timeout (ms)
-  TIMEOUT: 10000,
+  TIMEOUT: 30000, // Increased to 30s for batch operations
 
   // Retry configuration
   RETRY: {

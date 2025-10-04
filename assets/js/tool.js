@@ -369,6 +369,7 @@ $(()=>{
   // Batch editor Song Select2 - stores songID, displays "songName - artist"
   const batchSongSelect2Editor = function(cell, onRendered, success, cancel){
     const editor = document.createElement("select")
+    let hasSucceeded = false
 
     onRendered(async function(){
       let op = $(editor)
@@ -404,31 +405,71 @@ $(()=>{
 
         // Set current value (songID)
         const val = cell.getValue()
-        op.val(val).trigger('change')
+        if (val) {
+          op.val(val).trigger('change.select2')
+        }
 
-        op.on('change', function(){
+        op.on('select2:select select2:clear', function(e){
+          if (hasSucceeded) return
+
           const selectedId = op.val()
           const selectedData = op.select2('data')[0]
 
           // Update row data with songID and display info
-          const rowData = cell.getRow().getData()
-          rowData.songID = selectedId
+          const row = cell.getRow()
+          const rowData = row.getData()
+          rowData.songID = selectedId || null
           if (selectedData && selectedData.songName) {
             rowData.songDisplay = selectedData.text
             rowData.songName = selectedData.songName
             rowData.artist = selectedData.artist
+          } else {
+            rowData.songDisplay = ''
+            rowData.songName = ''
+            rowData.artist = ''
           }
 
+          // Update the row to trigger formatter refresh
+          row.update(rowData)
+
+          hasSucceeded = true
           success(selectedId)
         })
 
         op.on('select2:close', function(){
-          success(op.val())
+          if (hasSucceeded) return
+
+          // Get current value on close
+          const selectedId = op.val()
+          const selectedData = op.select2('data')[0]
+
+          // Update display info even on close
+          const row = cell.getRow()
+          const rowData = row.getData()
+          rowData.songID = selectedId || null
+          if (selectedData && selectedData.songName) {
+            rowData.songDisplay = selectedData.text
+            rowData.songName = selectedData.songName
+            rowData.artist = selectedData.artist
+          } else {
+            rowData.songDisplay = ''
+            rowData.songName = ''
+            rowData.artist = ''
+          }
+
+          // Update the row to trigger formatter refresh
+          row.update(rowData)
+
+          hasSucceeded = true
+          success(selectedId)
         })
 
       } catch (error) {
         console.error('Failed to load select2 data:', error)
-        success(cell.getValue())
+        if (!hasSucceeded) {
+          hasSucceeded = true
+          success(cell.getValue())
+        }
       }
     })
 
@@ -532,7 +573,6 @@ $(()=>{
         data: rows,
         layout: "fitColumns",
         movableRows: true,
-        maxHeight: "100%",
         columns: [
           {title: "Track", field: "track", width: 80, editor: false},
           {
@@ -554,11 +594,9 @@ $(()=>{
       })
 
       // Update track numbers on row move
-      batchTable.on("rowMoved", function() {
-        recalculateTrackNumbers()
-      })
+      batchTable.on("rowMoved", recalculateTrackNumbers)
 
-      // Update track numbers when start track changes
+      // Update track numbers when start track changes (remove old handler first)
       $('#batchStartTrack').off('change').on('change', function() {
         if (batchTable) {
           recalculateTrackNumbers()
@@ -1022,8 +1060,15 @@ $(()=>{
           return
         }
 
+        // Map frontend field names to API field names
+        const fieldMapping = {
+          'segment': 'segmentNo',
+          'track': 'trackNo'
+        }
+        const apiField = fieldMapping[field] || field
+
         // PUT update to API
-        const updateData = { [field]: value }
+        const updateData = { [apiField]: value }
         await apiRequest('PUT', `${endpoint}/${id}`, updateData)
 
         // Show brief success indicator
@@ -1218,18 +1263,23 @@ $(()=>{
       // POST to API
       const newSong = await apiRequest('POST', API_CONFIG.ENDPOINTS.songlist, songData)
 
-      // Add to table
-      jsonTable.addRow(newSong, true)
+      // Only add to table if we're on the songlist page
+      const currentPath = window.location.pathname.split('/').pop()
+      if (currentPath === 'songlist' && jsonTable) {
+        jsonTable.addRow(newSong, true)
+      }
 
       // Close modal and reset form
       addSongModal.hide()
       $('#modalAddSong form')[0].reset()
 
-      // Show success message
-      $('#setTableMsg').text('Song added successfully').addClass('text-bg-success')
-      setTimeout(() => {
-        $('#setTableMsg').html('&emsp;').removeClass('text-bg-success')
-      }, 3000)
+      // Show success message only if on songlist page
+      if (currentPath === 'songlist') {
+        $('#setTableMsg').text('Song added successfully').addClass('text-bg-success')
+        setTimeout(() => {
+          $('#setTableMsg').html('&emsp;').removeClass('text-bg-success')
+        }, 3000)
+      }
 
     } catch (error) {
       console.error('Error adding song:', error)
@@ -1644,7 +1694,6 @@ function getYTlatest(){
       data: rows,
       layout: "fitColumns",
       movableRows: true,
-      maxHeight: "100%",
       columns: [
         {title: "Track", field: "track", width: 80, editor: false},
         {
@@ -1666,9 +1715,7 @@ function getYTlatest(){
     })
 
     // Update track numbers on row move
-    batchTable.on("rowMoved", function() {
-      recalculateTrackNumbers()
-    })
+    batchTable.on("rowMoved", recalculateTrackNumbers)
 
     // Update track numbers when start track changes
     $('#batchStartTrack').off('change').on('change', function() {
@@ -1709,6 +1756,11 @@ function getYTlatest(){
       return
     }
 
+    // Disable button and show loading state
+    const $saveBtn = $(this)
+    const originalText = $saveBtn.html()
+    $saveBtn.prop('disabled', true).html('⏳ 儲存中...')
+
     try {
       // Prepare batch data (songID already stored in rows)
       const batchData = rows.map(row => ({
@@ -1719,8 +1771,10 @@ function getYTlatest(){
         note: row.note || null
       }))
 
-      // Send batch POST request
-      const result = await apiRequest('POST', API_CONFIG.ENDPOINTS.setlist, batchData)
+      // Send batch POST request with user source header (to enable overwrite mode)
+      const result = await apiRequest('POST', API_CONFIG.ENDPOINTS.setlist, batchData, {
+        headers: { 'X-Source': 'user' }
+      })
 
       alert(`成功儲存 ${rows.length} 筆歌單資料！`)
       batchEditModal.hide()
@@ -1732,6 +1786,9 @@ function getYTlatest(){
     } catch (error) {
       console.error('Batch save failed:', error)
       alert('儲存失敗：' + error.message)
+    } finally {
+      // Re-enable button and restore text
+      $saveBtn.prop('disabled', false).html(originalText)
     }
   })
 
