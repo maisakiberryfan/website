@@ -1878,6 +1878,55 @@ function getYTlatest(){
     })
   })
 
+  // Add new song button in quick add
+  $('#quickAddNewSong').on('click', function() {
+    // Close quick add temporarily
+    quickAddModal.hide()
+
+    // Open add song modal
+    const addSongModal = new bootstrap.Modal(document.getElementById('modalAddSong'))
+    addSongModal.show()
+
+    // When song is added, reload quick add and refresh Select2
+    $('#modalAddSong').one('hidden.bs.modal', async function() {
+      // Reopen quick add
+      quickAddModal.show()
+
+      // Reload Select2 options with new song
+      try {
+        const songlist = await apiRequest('GET', API_CONFIG.ENDPOINTS.songlist)
+        const songOptions = songlist.map(s => ({
+          id: s.songID,
+          text: `${s.songName} - ${s.artist}`
+        })).sort((a, b) => a.text.localeCompare(b.text))
+
+        // Clear and reload Select2
+        $('#quickSongSelect').empty().select2('destroy')
+        $('#quickSongSelect').select2({
+          data: songOptions,
+          width: '100%',
+          dropdownParent: $('#modalQuickAdd'),
+          placeholder: '搜尋歌曲...',
+          allowClear: true
+        })
+
+        // Auto-select the newly added song (last one in the list)
+        const lastSong = songlist[songlist.length - 1]
+        if (lastSong) {
+          $('#quickSongSelect').val(lastSong.songID).trigger('change')
+          console.log(`Auto-selected newly added song: ${lastSong.songName}`)
+        }
+
+        // Focus on song select
+        setTimeout(() => $('#quickSongSelect').select2('open'), 100)
+
+      } catch (error) {
+        console.error('Failed to reload songlist:', error)
+        alert('重新載入歌曲清單失敗')
+      }
+    })
+  })
+
 //get github latest commit
 function getGitCommitMsg(){
   return new Promise((resolve, reject)=>{
