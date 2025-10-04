@@ -595,10 +595,11 @@ $(()=>{
     $('#quickAddFormSection').hide()
     $('#quickStartSection').show()
 
-    // Initialize Select2 for song selection
-    if (quickSongSelect2) {
-      quickSongSelect2.destroy()
+    // Destroy existing Select2 if present
+    if ($('#quickSongSelect').hasClass('select2-hidden-accessible')) {
+      $('#quickSongSelect').select2('destroy')
     }
+    $('#quickSongSelect').empty().html('<option value="">搜尋歌曲...</option>')
 
     // Try to auto-detect next track from existing setlist
     try {
@@ -1861,6 +1862,13 @@ function getYTlatest(){
     // Close batch editor temporarily
     batchEditModal.hide()
 
+    // Reset and prepare add song modal
+    $('#modalAddSong form')[0].reset()
+    if ($('#artistName').hasClass('select2-hidden-accessible')) {
+      $('#artistName').select2('destroy')
+    }
+    initializeArtistSelect()
+
     // Open add song modal
     const addSongModal = new bootstrap.Modal(document.getElementById('modalAddSong'))
     addSongModal.show()
@@ -1882,6 +1890,13 @@ function getYTlatest(){
   $('#quickAddNewSong').on('click', function() {
     // Close quick add temporarily
     quickAddModal.hide()
+
+    // Reset and prepare add song modal
+    $('#modalAddSong form')[0].reset()
+    if ($('#artistName').hasClass('select2-hidden-accessible')) {
+      $('#artistName').select2('destroy')
+    }
+    initializeArtistSelect()
 
     // Open add song modal
     const addSongModal = new bootstrap.Modal(document.getElementById('modalAddSong'))
