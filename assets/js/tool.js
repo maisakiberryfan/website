@@ -210,8 +210,14 @@ $(()=>{
               + (process=='streamlist'?`<button id='addFromList' class='btn btn-outline-light addRow' disabled>Add from list(Beta)</button>`:'') +
               `<button id='deleteRow' class='btn btn-outline-light'>Delete Row</button>
               <button id='dlcsv' class='btn btn-outline-light'>Get CSV</button>
-              <button id='dljson' class='btn btn-outline-light'>Get JSON</button>
-              <div id='setTableMsg' class='p-3'>&emsp;</div>`
+              <button id='dljson' class='btn btn-outline-light'>Get JSON</button>`
+              + (process=='setlist'?`
+              <div class="my-2">
+                <button id='addNewSongInSetlist' class='btn btn-success' style="display: none;">
+                  ➕ 新增初回歌曲 (Add New Song)
+                </button>
+              </div>`:'') +
+              `<div id='setTableMsg' class='p-3'>&emsp;</div>`
               + (process=='songlist'?`
               <div class="mb-3 p-2 border rounded bg-dark-subtle">
                 <div class="form-check form-switch d-inline-block">
@@ -476,6 +482,118 @@ $(()=>{
     return editor
   }
 
+  // Select2 editor for setlist table song selection
+  const setlistSongSelect2Editor = function(cell, onRendered, success, cancel) {
+    const editor = document.createElement("select")
+    let hasSucceeded = false
+
+    onRendered(async function() {
+      const $editor = $(editor)
+
+      try {
+        // Fetch songlist data from API
+        const songlist = await apiRequest('GET', API_CONFIG.ENDPOINTS.songlist)
+
+        // Format: {id: songID, text: "songName - artist"}
+        const dataOptions = songlist.map(s => ({
+          id: s.songID,
+          text: `${s.songName} - ${s.artist}`,
+          songName: s.songName,
+          artist: s.artist
+        })).sort((a, b) => a.text.localeCompare(b.text))
+
+        // Initialize Select2
+        $editor.select2({
+          data: dataOptions,
+          width: '100%',
+          dropdownAutoWidth: true,
+          placeholder: 'Select song...',
+          allowClear: true,
+          dropdownParent: $('body'),  // Avoid z-index issues
+        })
+
+        // Set current value from songID
+        const currentSongID = cell.getRow().getData().songID
+        if (currentSongID) {
+          $editor.val(currentSongID).trigger('change.select2')
+        }
+
+        // Handle selection change
+        $editor.on('select2:select select2:clear', async function(e) {
+          if (hasSucceeded) return
+
+          const selectedId = $editor.val()
+          const selectedData = $editor.select2('data')[0]
+
+          // Update row data
+          const row = cell.getRow()
+          const rowData = row.getData()
+
+          // Update local data
+          if (selectedData && selectedData.songName) {
+            row.update({
+              songID: selectedId,
+              songName: selectedData.songName,
+              artist: selectedData.artist
+            })
+          } else {
+            row.update({
+              songID: null,
+              songName: '',
+              artist: ''
+            })
+          }
+
+          // Sync to API immediately
+          try {
+            const endpoint = API_CONFIG.ENDPOINTS.setlist
+            const id = `${rowData.streamID}/${rowData.track}`
+            const updateData = { songID: selectedId || null }
+
+            await apiRequest('PUT', `${endpoint}/${id}`, updateData)
+
+            // Show success indicator
+            cell.getElement().style.backgroundColor = '#d4edda'
+            setTimeout(() => {
+              cell.getElement().style.backgroundColor = ''
+            }, 1000)
+
+            console.log(`Song updated: ${selectedData ? selectedData.songName : '(cleared)'} (songID: ${selectedId || null})`)
+          } catch (error) {
+            console.error('Error syncing song selection:', error)
+            alert(`儲存失敗：${error.message}`)
+            // Revert on error
+            cancel()
+            return
+          }
+
+          hasSucceeded = true
+          success(selectedData ? selectedData.songName : '')  // Return songName for the cell value
+        })
+
+        // Handle close without selection
+        $editor.on('select2:close', function() {
+          if (!hasSucceeded) {
+            cancel()
+          }
+        })
+
+        // Auto-open dropdown after initialization
+        setTimeout(() => $editor.select2('open'), 50)
+
+      } catch (error) {
+        console.error('Failed to load songlist:', error)
+        alert('載入歌曲清單失敗：' + error.message)
+        if (!hasSucceeded) {
+          hasSucceeded = true
+          cancel()
+        }
+      }
+    })
+
+    return editor
+  }
+
   // Custom formatter to display "songName - artist" even though cell stores songID
   const songDisplayFormatter = function(cell) {
     const rowData = cell.getRow().getData()
@@ -671,11 +789,11 @@ $(()=>{
     {title:`local time(${dayjs().format('Z')})`, field:"time", mutator:((cell)=>dayjs(cell).format('YYYY/MM/DD HH:mm')), accessor:((value)=>dayjs(value).utc().format('YYYY-MM-DDTHH:mm:ss[Z]')), width:'150', formatter:dateWithYTLink},
     {title:"Seg", field:"segment", sorter:'number', width:60},
     {title:"Track", field:"track", sorter:'number', width:80},
-    {title:"Song", field:"songName", topCalc:'count', topCalcFormatter:(c=>'subtotal/小計：'+c.getValue()), headerFilter:select2, headerFilterParams:{field:"songName"}, headerSort:false},
-    {title:"Artist", field:"artist", headerFilter:select2, headerFilterParams:{field:"artist"}, headerSort:false},
+    {title:"Song", field:"songName", editor: setlistSongSelect2Editor, editable: false, topCalc:'count', topCalcFormatter:(c=>'subtotal/小計：'+c.getValue()), headerFilter:select2, headerFilterParams:{field:"songName"}, headerSort:false},
+    {title:"Artist", field:"artist", headerFilter:select2, headerFilterParams:{field:"artist"}, headerSort:false},  // No editor - will be auto-updated by song selection
     {title:"Note", field:"note", headerFilter:select2, headerFilterParams:{field:"note"}, headerSort:false},
     {title:"YTLink", field:"YTLink", visible: false, download:true},
-    {title:"songID", field:"songID", visible: false, download:true},
+    {title:"songID", field:"songID", visible: false, download:true},  // Hidden field for database ID
   ]
 
   var streamlistColDef = [
@@ -1033,6 +1151,18 @@ $(()=>{
         const field = cell.getField()
         const value = cell.getValue()
 
+        // Skip artist field (auto-updated by song selection, no need to sync)
+        if (field === 'artist') {
+          console.log('Artist field updated via song selection, skipping API sync')
+          return
+        }
+
+        // Skip songName field (already synced in Select2 editor)
+        if (field === 'songName') {
+          console.log('Song field already synced in Select2 editor, skipping API sync')
+          return
+        }
+
         console.log(`Cell edited: ${field} = ${value}`)
 
         // Determine API endpoint and ID field
@@ -1144,8 +1274,20 @@ $(()=>{
     if(canEdit()){
       // 進入編輯模式：動態添加 editor
       const editableColDef = colDef.map(col => {
+        // Song 欄位已有 Select2 editor，直接啟用
+        if (col.field === 'songName' && col.editor) {
+          return { ...col, editable: true }
+        }
+        // Artist 欄位不添加 editor（保持原狀，自然無法編輯）
+        if (col.field === 'artist') {
+          return col  // No editor, remains read-only
+        }
+        // songID 隱藏欄位不需要編輯
+        if (col.field === 'songID') {
+          return col  // Keep as is
+        }
+        // 已有 editor 的欄位保持不變
         if (col.editor) {
-          // 已有 editor 的欄位（如 select2）保持不變
           return { ...col, editable: true }
         }
         // 其他欄位添加預設 input editor
@@ -1154,11 +1296,20 @@ $(()=>{
       jsonTable.setColumns(editableColDef)
       jsonTable.showColumn("YTLink")
       jsonTable.deselectRow()
+
+      // Show add new song button for setlist
+      if (getProcess() === 'setlist') {
+        $('#addNewSongInSetlist').show()
+      }
+
       $('#setTableMsg').text('You can edit data by clicing cell , or using Excel edit , click the table, and paste to it.').addClass('text-bg-info')
     }
     else{
       // 離開編輯模式：恢復原始欄位定義（移除 editor）
       jsonTable.setColumns(colDef)
+
+      // Hide add new song button
+      $('#addNewSongInSetlist').hide()
       //tell user upload to github
       $('#setTableMsg').text('Please upload the JSON to github.Thanks.').addClass('text-bg-info')
       $('#dljson').click()
@@ -1864,13 +2015,15 @@ function getYTlatest(){
     }
 
     try {
-      // POST to API immediately
+      // POST to API immediately with user source header
       await apiRequest('POST', API_CONFIG.ENDPOINTS.setlist, {
         streamID: quickStreamData.streamID,
         trackNo: quickCurrentTrack,
         segmentNo: segment,
         songID: parseInt(songID),
         note: note || null
+      }, {
+        headers: { 'X-Source': 'user' }
       })
 
       // Get song name for display
@@ -1995,6 +2148,30 @@ function getYTlatest(){
       } catch (error) {
         console.error('Failed to reload songlist:', error)
         alert('重新載入歌曲清單失敗')
+      }
+    })
+  })
+
+  // Add new song button in setlist table (use event delegation for dynamic element)
+  $('#content').on('click', '#addNewSongInSetlist', function() {
+    // Reset and prepare add song modal
+    $('#modalAddSong form')[0].reset()
+    if ($('#artistName').hasClass('select2-hidden-accessible')) {
+      $('#artistName').select2('destroy')
+    }
+    initializeArtistSelect()
+
+    // Show modal
+    const addSongModal = new bootstrap.Modal($('#modalAddSong')[0])
+    addSongModal.show()
+
+    // Handle modal close - reload setlist to get updated songlist
+    $('#modalAddSong').one('hidden.bs.modal', function() {
+      // Check if we're still on setlist page
+      if (getProcess() === 'setlist') {
+        console.log('Song may have been added, reloading setlist table')
+        // Reload table to refresh songlist data in Select2
+        jsonTable.setData(API_CONFIG.BASE_URL + API_CONFIG.ENDPOINTS.setlist)
       }
     })
   })
