@@ -1,5 +1,165 @@
 [
 	{
+		"date": "2025-10-16T12:00:00Z",
+		"track": 1,
+		"song": "星へ伸ばす手",
+		"singer": "苺咲べりぃ",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=-gSk-LEPk3g"
+	},
+	{
+		"date": "2025-10-16T12:00:00Z",
+		"track": 2,
+		"song": "Watch me!",
+		"singer": "YOASOBI",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=-gSk-LEPk3g"
+	},
+	{
+		"date": "2025-10-16T12:00:00Z",
+		"track": 3,
+		"song": "silky heart",
+		"singer": "堀江由衣",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=-gSk-LEPk3g"
+	},
+	{
+		"date": "2025-10-16T12:00:00Z",
+		"track": 4,
+		"song": "とまどい→レシピ",
+		"singer": "みかくにんぐッ!",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=-gSk-LEPk3g"
+	},
+	{
+		"date": "2025-10-16T12:00:00Z",
+		"track": 5,
+		"song": "SUNNY DAY SONG",
+		"singer": "μ's",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=-gSk-LEPk3g"
+	},
+	{
+		"date": "2025-10-16T12:00:00Z",
+		"track": 6,
+		"song": "可愛くなりたい",
+		"singer": "HoneyWorks",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=-gSk-LEPk3g"
+	},
+	{
+		"date": "2025-10-16T12:00:00Z",
+		"track": 7,
+		"song": "Choose me♡ダーリン",
+		"singer": "StylipS",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=-gSk-LEPk3g"
+	},
+	{
+		"date": "2025-10-16T12:00:00Z",
+		"track": 8,
+		"song": "ココロのちず",
+		"singer": "BOYSTYLE",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=-gSk-LEPk3g"
+	},
+	{
+		"date": "2025-10-16T12:00:00Z",
+		"track": 9,
+		"song": "ワンダー・スターター",
+		"singer": "TINGS",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=-gSk-LEPk3g"
+	},
+	{
+		"date": "2025-10-16T12:00:00Z",
+		"track": 10,
+		"song": "必殺あざとポーズ",
+		"singer": "CANDY TUNE",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=-gSk-LEPk3g"
+	},
+	{
+		"date": "2025-10-16T12:00:00Z",
+		"track": 11,
+		"song": "MIRACLE RUSH",
+		"singer": "StylipS",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=-gSk-LEPk3g"
+	},
+	{
+		"date": "2025-10-16T12:00:00Z",
+		"track": 12,
+		"song": "花ハ踊レヤいろはにほ",
+		"singer": "チーム\"ハナヤマタ\"",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=-gSk-LEPk3g"
+	},
+	{
+		"date": "2025-10-16T12:00:00Z",
+		"track": 13,
+		"song": "花雪",
+		"singer": "SmileY inc.",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=-gSk-LEPk3g"
+	},
+	{
+		"date": "2025-10-16T12:00:00Z",
+		"track": 14,
+		"song": "深海少女",
+		"singer": "ゆうゆ",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=-gSk-LEPk3g"
+	},
+	{
+		"date": "2025-10-16T12:00:00Z",
+		"track": 15,
+		"song": "メルト",
+		"singer": "ryo",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=-gSk-LEPk3g"
+	},
+	{
+		"date": "2025-10-16T12:00:00Z",
+		"track": 16,
+		"song": "いつかの、いくつかのきみとのせかい",
+		"singer": "fhána",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=-gSk-LEPk3g"
+	},
+	{
+		"date": "2025-10-16T12:00:00Z",
+		"track": 17,
+		"song": "青空のラプソディ",
+		"singer": "fhána",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=-gSk-LEPk3g"
+	},
+	{
+		"date": "2025-10-16T12:00:00Z",
+		"track": 18,
+		"song": "ALIVE",
+		"singer": "ClariS",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=-gSk-LEPk3g"
+	},
+	{
+		"date": "2025-10-16T12:00:00Z",
+		"track": 19,
+		"song": "君の知らない物語",
+		"singer": "supercell",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=-gSk-LEPk3g"
+	},
+	{
+		"date": "2025-10-16T12:00:00Z",
+		"track": 20,
+		"song": "星座になれたら",
+		"singer": "結束バンド",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=-gSk-LEPk3g"
+	},
+	{
 		"date": "2025-10-13T12:32:47Z",
 		"track": 1,
 		"song": "Berry nice!!",
