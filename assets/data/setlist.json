@@ -1,5 +1,197 @@
 [
 	{
+		"date": "2025-10-20T12:00:00Z",
+		"track": 1,
+		"song": "キミのせいだよ",
+		"singer": "苺咲べりぃ",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=mUmL2kyNrPs"
+	},
+	{
+		"date": "2025-10-20T12:00:00Z",
+		"track": 2,
+		"song": "呪文降臨～マジカル・フォース",
+		"singer": "Sister MAYO",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=mUmL2kyNrPs"
+	},
+	{
+		"date": "2025-10-20T12:00:00Z",
+		"track": 3,
+		"song": "ゲッチュウ!らぶらぶぅ?!",
+		"singer": "五條真由美",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=mUmL2kyNrPs"
+	},
+	{
+		"date": "2025-10-20T12:00:00Z",
+		"track": 4,
+		"song": "紅一葉",
+		"singer": "黒うさP",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=mUmL2kyNrPs"
+	},
+	{
+		"date": "2025-10-20T12:00:00Z",
+		"track": 5,
+		"song": "ダーリンダンス",
+		"singer": "かいりきベア",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=mUmL2kyNrPs"
+	},
+	{
+		"date": "2025-10-20T12:00:00Z",
+		"track": 6,
+		"song": "ポジティブ☆ダンスタイム",
+		"singer": "キノシタ",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=mUmL2kyNrPs"
+	},
+	{
+		"date": "2025-10-20T12:00:00Z",
+		"track": 7,
+		"song": "花に赤い糸",
+		"singer": "麻倉桃",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=mUmL2kyNrPs"
+	},
+	{
+		"date": "2025-10-20T12:00:00Z",
+		"track": 8,
+		"song": "Dreamer",
+		"singer": "AiRI",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=mUmL2kyNrPs"
+	},
+	{
+		"date": "2025-10-20T12:00:00Z",
+		"track": 9,
+		"song": "Happy Girl",
+		"singer": "喜多村英梨",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=mUmL2kyNrPs"
+	},
+	{
+		"date": "2025-10-20T12:00:00Z",
+		"track": 10,
+		"song": "君色に染まる",
+		"singer": "西沢さんP",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=mUmL2kyNrPs"
+	},
+	{
+		"date": "2025-10-20T12:00:00Z",
+		"track": 11,
+		"song": "Booo!",
+		"singer": "西沢さんP",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=mUmL2kyNrPs"
+	},
+	{
+		"date": "2025-10-20T12:00:00Z",
+		"track": 12,
+		"song": "Grip!",
+		"singer": "Every Little Thing",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=mUmL2kyNrPs"
+	},
+	{
+		"date": "2025-10-20T12:00:00Z",
+		"track": 13,
+		"song": "出逢った頃のように",
+		"singer": "Every Little Thing",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=mUmL2kyNrPs"
+	},
+	{
+		"date": "2025-10-20T12:00:00Z",
+		"track": 14,
+		"song": "長い間",
+		"singer": "Kiroro",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=mUmL2kyNrPs"
+	},
+	{
+		"date": "2025-10-20T12:00:00Z",
+		"track": 15,
+		"song": "冬のうた",
+		"singer": "Kiroro",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=mUmL2kyNrPs"
+	},
+	{
+		"date": "2025-10-20T12:00:00Z",
+		"track": 16,
+		"song": "ネコに風船",
+		"singer": "大塚愛",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=mUmL2kyNrPs"
+	},
+	{
+		"date": "2025-10-20T12:00:00Z",
+		"track": 17,
+		"song": "クラゲ、流れ星",
+		"singer": "大塚愛",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=mUmL2kyNrPs"
+	},
+	{
+		"date": "2025-10-20T12:00:00Z",
+		"track": 18,
+		"song": "クムリウタ",
+		"singer": "大塚愛",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=mUmL2kyNrPs"
+	},
+	{
+		"date": "2025-10-20T12:00:00Z",
+		"track": 19,
+		"song": "歌に形はないけれど",
+		"singer": "doriko",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=mUmL2kyNrPs"
+	},
+	{
+		"date": "2025-10-20T12:00:00Z",
+		"track": 20,
+		"song": "letter song",
+		"singer": "doriko",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=mUmL2kyNrPs"
+	},
+	{
+		"date": "2025-10-20T12:00:00Z",
+		"track": 21,
+		"song": "蒼のエーテル",
+		"singer": "ランカ・リー(中島愛)",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=mUmL2kyNrPs"
+	},
+	{
+		"date": "2025-10-20T12:00:00Z",
+		"track": 22,
+		"song": "恋",
+		"singer": "奥華子",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=mUmL2kyNrPs"
+	},
+	{
+		"date": "2025-10-20T12:00:00Z",
+		"track": 23,
+		"song": "あなたに好きと言われたい",
+		"singer": "奥華子",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=mUmL2kyNrPs"
+	},
+	{
+		"date": "2025-10-20T12:00:00Z",
+		"track": 24,
+		"song": "ミュージカル",
+		"singer": "鈴木みのり",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=mUmL2kyNrPs"
+	},
+	{
 		"date": "2025-10-16T12:00:00Z",
 		"track": 1,
 		"song": "星へ伸ばす手",
