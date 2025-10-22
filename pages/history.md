@@ -1,5 +1,9 @@
 ## 2025
+* 2025/10/26　[9th Album 『Lucisphere』 発売](https://www.maisakiberry.com/9th-lucisphere)
 * 2025/10/18　[ぶいきゃすコレクション ファンミーティング](https://tiget.net/events/427098)
+* 2025/09/30　[苺咲べりぃのはぴラジオ！歌は続くよどこまでも！](https://creators.spotify.com/pod/profile/maisakiberry/episodes/EP6-e38spln)
+* 2025/09/26　Single 『TowaLove』[youtube](https://www.youtube.com/watch?v=edEixC0NJE0) / [booth](https://maisakiberry.booth.pm/items/7469203)
+* 2025/09/23　[苺咲べりぃのはぴラジオ！EP5：光陰矢の如し〜！](https://creators.spotify.com/pod/profile/maisakiberry/episodes/EP5-e38jnr3)
 * 2025/09/18　[苺咲べりぃのはぴラジオ！EP4：秋、近づく？](https://creators.spotify.com/pod/profile/maisakiberry/episodes/EP4-e389vef)
 * 2025/09/13　V-Universe FES『SPECTRUM』オフラインFES前3Dコラボ [twitter](https://x.com/ama_hano/status/1946405821119906255) / [youtube](https://www.youtube.com/live/k-v6oz8tdgM)
 * 2025/09/13　[V-Universe FES『SPECTRUM』参加](https://x.com/ama_hano/status/1946405821119906255)
