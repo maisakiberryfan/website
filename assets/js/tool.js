@@ -1153,6 +1153,77 @@ $(()=>{
     return editor
   }
 
+  // Bilingual editor for Song Name and Artist (opens Modal)
+  function bilingualEditor(cell, onRendered, success, cancel, editorParams) {
+    const rowData = cell.getRow().getData()
+    const field = editorParams.field // 'songName' or 'artist'
+    const fieldLabel = editorParams.fieldLabel || field
+
+    // Get current values
+    const jaValue = rowData[field] || ''
+    const enValue = rowData[field + 'En'] || ''
+
+    // Setup Modal
+    const modal = new bootstrap.Modal(document.getElementById('modalBilingualEdit'))
+
+    // Set field label
+    $('#bilingualFieldLabel').text(fieldLabel)
+
+    // Set current values
+    $('#bilingualJA').val(jaValue)
+    $('#bilingualEN').val(enValue)
+
+    // Handle save button
+    $('#saveBilingual').off('click').on('click', async function() {
+      const newJA = $('#bilingualJA').val()
+      const newEN = $('#bilingualEN').val()
+
+      // Update both fields via API
+      try {
+        const updateData = {
+          [field]: newJA,
+          [field + 'En']: newEN
+        }
+
+        await apiRequest('PUT', `${API_CONFIG.ENDPOINTS.songlist}/${rowData.songID}`, updateData)
+
+        // Update row data
+        rowData[field] = newJA
+        rowData[field + 'En'] = newEN
+
+        // Trigger table update
+        cell.getRow().update(rowData)
+
+        // Success visual feedback
+        cell.getElement().style.backgroundColor = '#d4edda'
+        setTimeout(() => {
+          cell.getElement().style.backgroundColor = ''
+        }, 1000)
+
+        modal.hide()
+        success(newJA) // Return primary language value
+      } catch (error) {
+        console.error('Error updating bilingual field:', error)
+        alert(`Error: ${error.message}`)
+        cancel()
+      }
+    })
+
+    // Handle cancel/close
+    $('#modalBilingualEdit').off('hidden.bs.modal').on('hidden.bs.modal', function() {
+      cancel()
+    })
+
+    // Show modal
+    modal.show()
+
+    // Focus on first input
+    setTimeout(() => $('#bilingualJA').focus(), 300)
+
+    // Return empty div (modal-based editor doesn't need inline element)
+    return document.createElement('div')
+  }
+
 
   //set table
   function configJsonTable(u, p){
@@ -1344,17 +1415,37 @@ $(()=>{
     if(canEdit()){
       // 進入編輯模式：動態添加 editor
       const editableColDef = colDef.map(col => {
-        // Song 欄位已有 Select2 editor，直接啟用
+        // Songlist: Use bilingual editor for songName and artist
+        if (getProcess() === 'songlist') {
+          if (col.field === 'songName') {
+            return {
+              ...col,
+              editor: bilingualEditor,
+              editorParams: { field: 'songName', fieldLabel: 'Song Name / 歌名' },
+              editable: true
+            }
+          }
+          if (col.field === 'artist') {
+            return {
+              ...col,
+              editor: bilingualEditor,
+              editorParams: { field: 'artist', fieldLabel: 'Artist / 歌手' },
+              editable: true
+            }
+          }
+        }
+
+        // Setlist: Song 欄位已有 Select2 editor，直接啟用
         if (col.field === 'songName' && col.editor) {
           return { ...col, editable: true }
         }
         // Artist 欄位在 setlist 保持唯讀（由 Select2 自動填入）
-        // 在 songlist/streamlist 添加 editor（允許手動編輯）
+        // 在 streamlist 添加 editor（允許手動編輯）
         if (col.field === 'artist') {
           if (getProcess() === 'setlist') {
             return col  // No editor in setlist, auto-updated by song selection
           }
-          // For other pages, fall through to add default editor
+          // For streamlist, fall through to add default editor
         }
         // songID 隱藏欄位不需要編輯
         if (col.field === 'songID') {

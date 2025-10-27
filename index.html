@@ -439,6 +439,36 @@
 		</div>
 	</div>
 
+	<!-- Modal for bilingual field editing -->
+	<div class="modal fade" id="modalBilingualEdit" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="modalTitleBilingualEdit" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h1 class="modal-title fs-5" id="modalTitleBilingualEdit">編輯 / Edit</h1>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<div class="mb-3">
+						<label for="bilingualJA" class="form-label">
+							<span id="bilingualFieldLabel">日文</span> (Japanese)
+						</label>
+						<input type="text" class="form-control" id="bilingualJA" placeholder="日本語で入力">
+					</div>
+					<div class="mb-3">
+						<label for="bilingualEN" class="form-label">
+							英文 (English)
+						</label>
+						<input type="text" class="form-control" id="bilingualEN" placeholder="Enter in English">
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+					<button type="button" class="btn btn-primary" id="saveBilingual">Save</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
 	<!-- Connection Error Alert (fixed position at top) -->
 	<div id="connectionErrorAlert" class="alert alert-danger alert-dismissible fade" role="alert" style="display: none; position: fixed; top: 20px; left: 50%; transform: translateX(-50%); z-index: 9999; min-width: 400px; max-width: 600px; box-shadow: 0 4px 12px rgba(0,0,0,0.3);">
 		<h5 class="alert-heading">
