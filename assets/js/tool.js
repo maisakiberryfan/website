@@ -547,7 +547,7 @@ $(()=>{
           // Sync to API immediately
           try {
             const endpoint = API_CONFIG.ENDPOINTS.setlist
-            const id = `${rowData.streamID}/${rowData.track}`
+            const id = `${rowData.streamID}/${rowData.trackNo}`
             const updateData = { songID: selectedId || null }
 
             await apiRequest('PUT', `${endpoint}/${id}`, updateData)
@@ -616,19 +616,19 @@ $(()=>{
     $('#batchTableContainer').empty()
 
     // Check if existing setlist data exists for this stream
+    // Use API filter parameter for better performance (instead of fetching all and filtering locally)
     try {
-      const allSetlist = await apiRequest('GET', API_CONFIG.ENDPOINTS.setlist)
-      const existingEntries = allSetlist.filter(entry => entry.streamID === streamData.streamID)
-                                        .sort((a, b) => a.track - b.track)
+      const existingEntries = await apiRequest('GET', `${API_CONFIG.ENDPOINTS.setlist}?streamID=${streamData.streamID}`)
+      // Data is already sorted by API (segmentNo, trackNo), no need to sort again
 
       if (existingEntries.length > 0) {
         // Found existing data - auto-populate
         const firstEntry = existingEntries[0]
         const lastEntry = existingEntries[existingEntries.length - 1]
 
-        $('#batchStartTrack').val(firstEntry.track)
+        $('#batchStartTrack').val(firstEntry.trackNo)
         $('#batchTotalSongs').val(existingEntries.length)
-        $('#batchSegment').val(firstEntry.segment || 1)
+        $('#batchSegment').val(firstEntry.segmentNo || 1)
 
         // Show status message
         $('#batchLoadStatus').html(`
@@ -636,10 +636,8 @@ $(()=>{
           <small>可直接編輯或點擊「產生表格」重新建立</small>
         `).removeClass('alert-warning').addClass('alert-success').show()
 
-        // Auto-generate table with existing data
-        setTimeout(() => {
-          loadExistingSetlist(existingEntries)
-        }, 100)
+        // Auto-generate table with existing data (no setTimeout needed)
+        loadExistingSetlist(existingEntries)
 
         console.log(`Loaded ${existingEntries.length} existing setlist entries`)
       } else {
@@ -668,11 +666,14 @@ $(()=>{
   function loadExistingSetlist(entries) {
     // Get songlist for mapping
     apiRequest('GET', API_CONFIG.ENDPOINTS.songlist).then(songlist => {
+      // Build songID -> song Map for O(1) lookup (instead of O(n) find)
+      const songMap = new Map(songlist.map(s => [s.songID, s]))
+
       // Map entries to table rows
       const rows = entries.map(entry => {
-        const song = songlist.find(s => s.songID === entry.songID)
+        const song = songMap.get(entry.songID)
         return {
-          track: entry.track,
+          trackNo: entry.trackNo,
           songID: entry.songID,
           songDisplay: song ? `${song.songName} - ${song.artist}` : '',
           songName: song ? song.songName : '',
@@ -692,7 +693,7 @@ $(()=>{
         layout: "fitColumns",
         movableRows: true,
         columns: [
-          {title: "Track", field: "track", width: 80, editor: false},
+          {title: "Track", field: "trackNo", width: 80, editor: false},
           {
             title: "Song (歌名 - 歌手)",
             field: "songID",
@@ -736,6 +737,12 @@ $(()=>{
     console.log('Opening quick add for:', streamData)
     quickStreamData = streamData
 
+    // === 1. 立即開啟 Modal（不等待） ===
+    quickAddModal.show()
+
+    // === 2. 顯示載入遮罩（鎖定 Modal） ===
+    $('#quickAddLoadingOverlay').show()
+
     // Set stream info
     $('#quickStreamID').text(streamData.streamID)
     $('#quickStreamTitle').text(streamData.title)
@@ -745,6 +752,10 @@ $(()=>{
     $('#quickSegment').val(1)
     $('#quickNote').val('')
     $('#quickAddedList').html('<small class="text-muted">尚未新增任何歌曲</small>')
+
+    // 清空並隱藏錯誤訊息
+    $('#quickAddErrorMsg').html('')
+    $('#quickAddError').hide()
 
     // Reset state
     quickCurrentTrack = null
@@ -757,26 +768,50 @@ $(()=>{
     }
     $('#quickSongSelect').empty().html('<option value="">搜尋歌曲...</option>')
 
-    // Try to auto-detect next track from existing setlist
+    // === 3. Try to auto-detect next track ===
     try {
-      const allSetlist = await apiRequest('GET', API_CONFIG.ENDPOINTS.setlist)
-      const existingEntries = allSetlist.filter(entry => entry.streamID === streamData.streamID)
+      const existingEntries = await apiRequest('GET', `${API_CONFIG.ENDPOINTS.setlist}?streamID=${streamData.streamID}`)
 
       if (existingEntries.length > 0) {
-        const maxTrack = Math.max(...existingEntries.map(e => e.track))
-        const firstSegment = existingEntries[0].segment || 1
+        const maxTrack = Math.max(...existingEntries.map(e => e.trackNo))
+        const firstSegment = existingEntries[0].segmentNo || 1
         $('#quickStartTrack').val(maxTrack + 1)
         $('#quickSegment').val(firstSegment)
         console.log(`Auto-detected next track: ${maxTrack + 1}`)
+      } else {
+        console.log('No existing setlist found, user will fill Track manually')
       }
+
+      // === 4a. 成功：移除遮罩，解鎖 Modal ===
+      $('#quickAddLoadingOverlay').hide()
+      setTimeout(() => $('#quickStartTrack').focus(), 100)
+
     } catch (error) {
       console.error('Failed to auto-detect track:', error)
+
+      // === 4b. 失敗：移除遮罩 → 關閉 Modal → 顯示錯誤 ===
+      $('#quickAddLoadingOverlay').hide()
+      quickAddModal.hide()
+      showConnectionError(error.message || String(error))
+    }
+  }
+
+  // Helper function to show connection error alert
+  function showConnectionError(errorDetails) {
+    let message = `請檢查 Hyperdrive 服務是否啟動（<code>${API_CONFIG.BASE_URL}</code>），或稍後再試。`
+
+    if (errorDetails.includes('timeout')) {
+      message = `連線逾時。請檢查網路連線或 Hyperdrive 服務狀態（<code>${API_CONFIG.BASE_URL}</code>）。`
+    } else if (errorDetails.includes('NetworkError') || errorDetails.includes('Failed to fetch')) {
+      message = `無法連線至伺服器（<code>${API_CONFIG.BASE_URL}</code>）。請確認 Hyperdrive 服務正在運行。`
     }
 
-    quickAddModal.show()
+    $('#connectionErrorMessage').html(message)
 
-    // Focus on start track input
-    setTimeout(() => $('#quickStartTrack').focus(), 300)
+    const alertElement = $('#connectionErrorAlert')
+    alertElement.removeClass('fade').addClass('show').slideDown(300)
+
+    // 不自動關閉，需要使用者手動點擊 X 按鈕關閉
   }
 
 //--- json table ---
@@ -787,8 +822,8 @@ $(()=>{
   var setlistColDef = [
     {title:"streamID", field:"streamID", visible: false, download:true},
     {title:`local time(${dayjs().format('Z')})`, field:"time", mutator:((cell)=>dayjs(cell).format('YYYY/MM/DD HH:mm')), accessor:((value)=>dayjs(value).utc().format('YYYY-MM-DDTHH:mm:ss[Z]')), width:'150', formatter:dateWithYTLink},
-    {title:"Seg", field:"segment", sorter:'number', width:60},
-    {title:"Track", field:"track", sorter:'number', width:80},
+    {title:"Seg", field:"segmentNo", sorter:'number', width:60},
+    {title:"Track", field:"trackNo", sorter:'number', width:80},
     {title:"Song", field:"songName", editor: setlistSongSelect2Editor, editable: false, topCalc:'count', topCalcFormatter:(c=>'subtotal/小計：'+c.getValue()), headerFilter:select2, headerFilterParams:{field:"songName"}, headerSort:false},
     {title:"Artist", field:"artist", headerFilter:select2, headerFilterParams:{field:"artist"}, headerSort:false},  // No editor - will be auto-updated by song selection
     {title:"Note", field:"note", headerFilter:select2, headerFilterParams:{field:"note"}, headerSort:false},
@@ -841,7 +876,7 @@ $(()=>{
   // Japanese version (default)
   var songlistColDef_JA = [
     {title:"songID", field:"songID", visible: false, download:true},
-    {title:"Song Name", field:"songName", width:250, topCalc:'count', topCalcFormatter:(c=>'subtotal/小計：'+c.getValue()), editor:"input", headerFilter:"list", headerFilterParams:AUTOCOMPLETE_PARAMS},
+    {title:"Song Name", field:"songName", width:250, topCalc:'count', topCalcFormatter:(c=>'subtotal/小計：'+c.getValue()), headerFilter:"list", headerFilterParams:AUTOCOMPLETE_PARAMS},
     {title:"Artist", field:"artist", width:200, headerFilter:"input"},
     {title:"Genre", field:"genre", headerFilter:"input"},
     {title:"Tie-up", field:"tieup", headerFilter:"input"},
@@ -1151,15 +1186,17 @@ $(()=>{
         const field = cell.getField()
         const value = cell.getValue()
 
-        // Skip artist field (auto-updated by song selection, no need to sync)
-        if (field === 'artist') {
-          console.log('Artist field updated via song selection, skipping API sync')
+        // Skip artist field ONLY in setlist (auto-updated by song selection)
+        // In other pages, artist is manually editable and should sync
+        if (p === 'setlist' && field === 'artist') {
+          console.log('Artist field updated via song selection in setlist, skipping API sync')
           return
         }
 
-        // Skip songName field (already synced in Select2 editor)
-        if (field === 'songName') {
-          console.log('Song field already synced in Select2 editor, skipping API sync')
+        // Skip songName field ONLY in setlist (already synced in Select2 editor)
+        // In other pages, songName uses normal input editor and should sync
+        if (p === 'setlist' && field === 'songName') {
+          console.log('Song field already synced in Select2 editor in setlist, skipping API sync')
           return
         }
 
@@ -1178,7 +1215,7 @@ $(()=>{
         } else if (p === 'setlist') {
           endpoint = API_CONFIG.ENDPOINTS.setlist
           // setlist uses composite key
-          id = `${rowData.streamID}/${rowData.track}`
+          id = `${rowData.streamID}/${rowData.trackNo}`
         } else {
           console.log('No API sync for this table type')
           return
@@ -1230,7 +1267,7 @@ $(()=>{
           id = rowData.streamID
         } else if (p === 'setlist') {
           endpoint = API_CONFIG.ENDPOINTS.setlist
-          id = `${rowData.streamID}/${rowData.track}`
+          id = `${rowData.streamID}/${rowData.trackNo}`
         } else {
           console.log('No API sync for this table type')
           return
@@ -1278,9 +1315,13 @@ $(()=>{
         if (col.field === 'songName' && col.editor) {
           return { ...col, editable: true }
         }
-        // Artist 欄位不添加 editor（保持原狀，自然無法編輯）
+        // Artist 欄位在 setlist 保持唯讀（由 Select2 自動填入）
+        // 在 songlist/streamlist 添加 editor（允許手動編輯）
         if (col.field === 'artist') {
-          return col  // No editor, remains read-only
+          if (getProcess() === 'setlist') {
+            return col  // No editor in setlist, auto-updated by song selection
+          }
+          // For other pages, fall through to add default editor
         }
         // songID 隱藏欄位不需要編輯
         if (col.field === 'songID') {
@@ -1624,16 +1665,84 @@ $(()=>{
     e.target.value = dayjs(e.target.value).format('YYYY-MM-DD HH:mm:00.000Z')
   })
 
-  $('#addStreamRowData').on('click', (e)=>{
+  $('#addStreamRowData').on('click', async (e)=>{
       // Select2 multiple already returns array format
       const categories = $('#category').val() || [];
+      const streamID = $('#videoID').val()
+      const title = $('#streamTitle').val()
+      const time = dayjs($('#streamTime').val()).utc().format('YYYY-MM-DDTHH:mm:ss[Z]')
+      const note = null
 
-      jsonTable.addRow({
-        id:$('#videoID').val(),
-        title:$('#streamTitle').val(),
-        time:dayjs($('#streamTime').val()).utc().format('YYYY-MM-DDTHH:mm:ss[Z]'),
-        category: categories }
-        , true)
+      // 隱藏之前的錯誤訊息
+      $('#addStreamRowError').hide()
+
+      // 先送資料庫驗證
+      try {
+        // 顯示載入狀態
+        $('#addStreamRowData').prop('disabled', true).text('新增中...')
+
+        // 先呼叫 API 新增到資料庫
+        const result = await apiRequest('POST', API_CONFIG.ENDPOINTS.streamlist, {
+          streamID: streamID,
+          title: title,
+          time: time,
+          categories: categories,
+          note: note
+        }, {
+          headers: { 'X-Source': 'user' }
+        })
+
+        console.log('✅ Streamlist entry created:', result)
+
+        // API 成功後才加入 Tabulator 表格
+        jsonTable.addRow({
+          streamID: streamID,
+          title: title,
+          time: time,
+          categories: categories,
+          note: note
+        }, true)
+
+        // 關閉 Modal（✅ 成功時才關閉）
+        addStreamRowModal.hide()
+
+        // 清空表單
+        $('.form-control').val('')
+        $('#category').val([]).trigger('change')
+
+        // 恢復按鈕狀態
+        $('#addStreamRowData').prop('disabled', false).text('Add')
+
+      } catch (error) {
+        // API 失敗處理
+        console.error('Failed to create streamlist entry:', error)
+
+        // 恢復按鈕狀態
+        $('#addStreamRowData').prop('disabled', false).text('Add')
+
+        // 處理特定錯誤並顯示在 Modal 內
+        const errorMsg = error.message || String(error)
+        let errorDetail = ''
+
+        if (errorMsg.includes('already exists') || errorMsg.includes('Conflict')) {
+          errorDetail = `此直播已存在<br><small>StreamID "<strong>${streamID}</strong>" 已在資料庫中，請使用其他影片</small>`
+        } else if (errorMsg.includes('400') || errorMsg.includes('VALIDATION')) {
+          errorDetail = `資料格式錯誤<br><small>請檢查必填欄位是否填寫完整</small>`
+        } else if (errorMsg.includes('timeout') || errorMsg.includes('NetworkError')) {
+          errorDetail = `網路連線錯誤<br><small>請檢查網路連線或 Hyperdrive 服務是否啟動</small>`
+        } else {
+          errorDetail = `${errorMsg}<br><small>請檢查輸入資料或聯繫管理員</small>`
+        }
+
+        // 在 Modal 內顯示錯誤訊息
+        $('#addStreamRowErrorMsg').html(errorDetail)
+        $('#addStreamRowError').show()
+
+        // 自動捲動到錯誤訊息（讓使用者看到）
+        $('#addStreamRowError')[0].scrollIntoView({ behavior: 'smooth', block: 'nearest' })
+
+        // ⚠️ Modal 保持開啟，讓使用者可以修改資料後重試
+      }
     })
 
   // 處理非berry頻道確認按鈕
@@ -1828,7 +1937,7 @@ function getYTlatest(){
     const rows = []
     for (let i = 0; i < totalSongs; i++) {
       rows.push({
-        track: startTrack + i,
+        trackNo: startTrack + i,
         songID: null,
         songDisplay: '',
         note: ''
@@ -1846,7 +1955,7 @@ function getYTlatest(){
       layout: "fitColumns",
       movableRows: true,
       columns: [
-        {title: "Track", field: "track", width: 80, editor: false},
+        {title: "Track", field: "trackNo", width: 80, editor: false},
         {
           title: "Song (歌名 - 歌手)",
           field: "songID",
@@ -1881,7 +1990,7 @@ function getYTlatest(){
     const rows = batchTable.getRows()
 
     rows.forEach((row, index) => {
-      row.update({ track: startTrack + index })
+      row.update({ trackNo: startTrack + index })
     })
   }
 
@@ -1916,7 +2025,7 @@ function getYTlatest(){
       // Prepare batch data (songID already stored in rows)
       const batchData = rows.map(row => ({
         streamID: batchStreamData.streamID,
-        trackNo: row.track,
+        trackNo: row.trackNo,
         segmentNo: segment,
         songID: row.songID,
         note: row.note || null
@@ -1945,15 +2054,26 @@ function getYTlatest(){
 
   //--- Quick Add Event Handlers ---
   $('#quickStartBtn').on('click', async function() {
+    // 清空並隱藏錯誤訊息
+    $('#quickAddErrorMsg').html('')
+    $('#quickAddError').hide()
+
     const startTrack = parseInt($('#quickStartTrack').val())
     if (!startTrack || startTrack < 1) {
-      alert('請填寫起始 Track 編號')
+      $('#quickAddErrorMsg').html('請填寫起始 Track 編號<br><small>Track 編號必須為大於 0 的整數</small>')
+      $('#quickAddError').show()
+      $('#quickAddError')[0].scrollIntoView({ behavior: 'smooth', block: 'nearest' })
       $('#quickStartTrack').focus()
       return
     }
 
     quickCurrentTrack = startTrack
     $('#quickNextTrack').text(quickCurrentTrack)
+
+    // 顯示載入狀態
+    const $btn = $(this)
+    const originalText = $btn.html()
+    $btn.prop('disabled', true).html('⏳ 載入中...')
 
     // Initialize Select2 for song selection
     try {
@@ -1972,9 +2092,34 @@ function getYTlatest(){
       })
 
       quickSongSelect2 = $('#quickSongSelect').data('select2')
+
+      // 恢復按鈕狀態
+      $btn.prop('disabled', false).html(originalText)
     } catch (error) {
       console.error('Failed to load songlist:', error)
-      alert('載入歌曲清單失敗')
+
+      // 恢復按鈕狀態
+      $btn.prop('disabled', false).html(originalText)
+
+      // 處理特定錯誤並顯示在 Modal 內
+      const errorMsg = error.message || String(error)
+      let errorDetail = ''
+
+      if (errorMsg.includes('timeout') || errorMsg.includes('NetworkError') || errorMsg.includes('Failed to fetch')) {
+        errorDetail = `無法連線到 Hyperdrive 服務<br><small>請檢查網路連線或確認 Hyperdrive 服務是否啟動（<code>http://localhost:8785</code>）</small>`
+      } else if (errorMsg.includes('400') || errorMsg.includes('VALIDATION')) {
+        errorDetail = `資料格式錯誤<br><small>請檢查 StreamID 是否有效</small>`
+      } else {
+        errorDetail = `${errorMsg}<br><small>請聯繫管理員或稍後再試</small>`
+      }
+
+      // 在 Modal 內顯示錯誤訊息
+      $('#quickAddErrorMsg').html(errorDetail)
+      $('#quickAddError').show()
+
+      // 自動捲動到錯誤訊息
+      $('#quickAddError')[0].scrollIntoView({ behavior: 'smooth', block: 'nearest' })
+
       return
     }
 
@@ -1996,21 +2141,33 @@ function getYTlatest(){
     }
   })
 
-  // Esc key to close modal
+  // Esc key handling for Quick Add modal is disabled
+  // Reason: Conflicts with HTML setting data-bs-keyboard="false"
+  // The modal should NOT close on Esc to prevent accidental data loss during continuous adding
+  // User must explicitly click X button to close
+  // TODO: Remove this commented code after confirming no side effects (tested 2025-10-26)
+  /*
   $(document).on('keydown', function(e) {
     if (e.key === 'Escape' && quickAddModal._isShown) {
       quickAddModal.hide()
     }
   })
+  */
 
   async function quickAddSong() {
+    // 清空並隱藏錯誤訊息
+    $('#quickAddErrorMsg').html('')
+    $('#quickAddError').hide()
+
     const songID = $('#quickSongSelect').val()
     const note = $('#quickNote').val()
     const segment = parseInt($('#quickSegment').val()) || 1
 
     if (!songID) {
-      alert('請選擇歌曲')
-      $('#quickSongSelect').select2('open')
+      $('#quickAddErrorMsg').html('請選擇歌曲<br><small>從下拉選單選擇歌曲，或點擊「新增初回歌曲」按鈕</small>')
+      $('#quickAddError').show()
+      $('#quickAddError')[0].scrollIntoView({ behavior: 'smooth', block: 'nearest' })
+      setTimeout(() => $('#quickSongSelect').select2('open'), 300)
       return
     }
 
@@ -2063,7 +2220,29 @@ function getYTlatest(){
 
     } catch (error) {
       console.error('Quick add failed:', error)
-      alert('新增失敗：' + error.message)
+
+      // 處理特定錯誤並顯示在 Modal 內
+      const errorMsg = error.message || String(error)
+      let errorDetail = ''
+
+      if (errorMsg.includes('already exists') || errorMsg.includes('Conflict')) {
+        errorDetail = `此歌曲已存在於此 Track<br><small>Track <strong>${quickCurrentTrack}</strong> 已有歌曲，系統已執行更新</small>`
+      } else if (errorMsg.includes('timeout') || errorMsg.includes('NetworkError') || errorMsg.includes('Failed to fetch')) {
+        errorDetail = `無法連線到 Hyperdrive 服務<br><small>請檢查網路連線或確認 Hyperdrive 服務是否啟動（<code>http://localhost:8785</code>）</small>`
+      } else if (errorMsg.includes('400') || errorMsg.includes('VALIDATION') || errorMsg.includes('Required fields missing')) {
+        errorDetail = `資料格式錯誤<br><small>請確認所有必填欄位已填寫（StreamID, Track, Segment, SongID）</small>`
+      } else if (errorMsg.includes('Foreign key constraint')) {
+        errorDetail = `資料庫錯誤<br><small>StreamID 或 SongID 不存在於資料庫中</small>`
+      } else {
+        errorDetail = `${errorMsg}<br><small>請聯繫管理員或稍後再試</small>`
+      }
+
+      // 在 Modal 內顯示錯誤訊息
+      $('#quickAddErrorMsg').html(errorDetail)
+      $('#quickAddError').show()
+
+      // 自動捲動到錯誤訊息
+      $('#quickAddError')[0].scrollIntoView({ behavior: 'smooth', block: 'nearest' })
     }
   }
 

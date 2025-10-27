@@ -112,7 +112,7 @@
 	</div>
 
 	<!-- Modal for add setlist row -->
-	<div class="modal fade" id="modalAddRow" data-bs-keyboard="false" tabindex="-1" aria-labelledby="modalTitleAddRow" aria-hidden="true">
+	<div class="modal fade" id="modalAddRow" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="modalTitleAddRow" aria-hidden="true">
 		<div class="modal-dialog modal-lg">
 			<div class="modal-content">
 				<div class="modal-header">
@@ -152,7 +152,7 @@
 	</div>
 
 	<!-- Modal for add streamlist row -->
-	<div class="modal fade" id="modalAddStreamRow" data-bs-keyboard="false" tabindex="-1" aria-labelledby="modalTitleAddStreamRow" aria-hidden="true">
+	<div class="modal fade" id="modalAddStreamRow" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="modalTitleAddStreamRow" aria-hidden="true">
 		<div class="modal-dialog modal-lg">
 			<div class="modal-content">
 				<div class="modal-header">
@@ -160,6 +160,13 @@
 					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 				</div>
 				<div class="modal-body" id='addStreamRowInfo'>
+					<!-- 錯誤訊息區域 -->
+					<div id="addStreamRowError" class="alert alert-danger alert-dismissible fade show" role="alert" style="display: none;">
+						<strong>❌ 新增失敗</strong>
+						<div id="addStreamRowErrorMsg"></div>
+						<button type="button" class="btn-close" onclick="document.getElementById('addStreamRowError').style.display='none'"></button>
+					</div>
+
 					<form>
 						<div class="form-group row my-2">
 							<label for="YTID" class="col-sm-3 col-form-label">YTLink</label>
@@ -201,14 +208,14 @@
 					</form>
 				</div>
 				<div class="modal-footer">
-					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="addStreamRowData">Add</button>
+					<button type="button" class="btn btn-secondary" id="addStreamRowData">Add</button>
 				</div>
 			</div>
 		</div>
 	</div>
 
 	<!-- Modal for add songlist row -->
-	<div class="modal fade" id="modalAddSong" data-bs-keyboard="false" tabindex="-1" aria-labelledby="modalTitleAddSong" aria-hidden="true">
+	<div class="modal fade" id="modalAddSong" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="modalTitleAddSong" aria-hidden="true">
 		<div class="modal-dialog modal-lg">
 			<div class="modal-content">
 				<div class="modal-header">
@@ -279,7 +286,7 @@
 	</div>
 
 	<!-- Modal for batch setlist editing -->
-	<div class="modal fade" id="modalBatchEdit" data-bs-keyboard="false" tabindex="-1" aria-labelledby="modalTitleBatchEdit" aria-hidden="true">
+	<div class="modal fade" id="modalBatchEdit" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="modalTitleBatchEdit" aria-hidden="true">
 		<div class="modal-dialog modal-xl modal-dialog-scrollable">
 			<div class="modal-content">
 				<div class="modal-header">
@@ -328,14 +335,32 @@
 	</div>
 
 	<!-- Modal for quick add setlist (live streaming) -->
-	<div class="modal fade" id="modalQuickAdd" data-bs-keyboard="true" tabindex="-1" aria-labelledby="modalTitleQuickAdd" aria-hidden="true">
+	<div class="modal fade" id="modalQuickAdd" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="modalTitleQuickAdd" aria-hidden="true">
 		<div class="modal-dialog modal-lg">
 			<div class="modal-content">
 				<div class="modal-header">
 					<h1 class="modal-title fs-5" id="modalTitleQuickAdd">⚡ 快速新增歌單 - Quick Add (Live)</h1>
 					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 				</div>
-				<div class="modal-body">
+				<div class="modal-body" style="position: relative; min-height: 300px;">
+
+				<!-- 載入遮罩層 -->
+				<div id="quickAddLoadingOverlay" style="display: none; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0, 0, 0, 0.7); z-index: 1050; border-radius: 0.375rem;">
+					<div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; color: white;">
+						<div class="spinner-border mb-3" role="status" style="width: 3rem; height: 3rem;">
+							<span class="visually-hidden">載入中...</span>
+						</div>
+						<div style="font-size: 1.1rem; font-weight: 500;">正在檢測現有歌單...</div>
+					</div>
+				</div>
+
+				<!-- 錯誤訊息區域 -->
+				<div id="quickAddError" class="alert alert-danger alert-dismissible fade show" role="alert" style="display: none;">
+					<strong>❌ 操作失敗</strong>
+						<div id="quickAddErrorMsg"></div>
+						<button type="button" class="btn-close" onclick="document.getElementById('quickAddError').style.display='none'; document.getElementById('quickAddErrorMsg').innerHTML=''"></button>
+					</div>
+					
 					<div class="mb-3">
 						<h6>Stream Information</h6>
 						<p class="mb-1"><strong>ID:</strong> <span id="quickStreamID"></span></p>
@@ -414,6 +439,15 @@
 		</div>
 	</div>
 
+	<!-- Connection Error Alert (fixed position at top) -->
+	<div id="connectionErrorAlert" class="alert alert-danger alert-dismissible fade" role="alert" style="display: none; position: fixed; top: 20px; left: 50%; transform: translateX(-50%); z-index: 9999; min-width: 400px; max-width: 600px; box-shadow: 0 4px 12px rgba(0,0,0,0.3);">
+		<h5 class="alert-heading">
+			<i class="bi bi-exclamation-triangle-fill me-2"></i>
+			無法連線到資料庫
+		</h5>
+		<p class="mb-2" id="connectionErrorMessage">請檢查 Hyperdrive 服務是否啟動（<code>http://localhost:8785</code>），或稍後再試。</p>
+		<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+	</div>
 
 </body>
 </html>
