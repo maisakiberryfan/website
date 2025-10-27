@@ -1167,6 +1167,17 @@ $(()=>{
       colDef=songlistColDef
     }
 
+    // Initial view mode: remove editors to allow row selection
+    const initialColDef = colDef.map(col => {
+      const newCol = { ...col, editable: false }
+      // Remove songName editor in setlist to allow row selection
+      if (p === 'setlist' && col.field === 'songName' && col.editor) {
+        const { editor, ...rest } = newCol
+        return rest
+      }
+      return newCol
+    })
+
     jsonTable = new Tabulator("#tb", {
       ajaxURL: u,
       ajaxResponse: function(url, params, response) {
@@ -1176,7 +1187,7 @@ $(()=>{
       columnDefaults:{
         headerFilter:"input",
       },
-      columns:colDef,
+      columns:initialColDef,
       selectableRows:true,
       selectableRowsRangeMode:"click",
       clipboard:true,
@@ -1505,7 +1516,7 @@ $(()=>{
       else{
         $('#modalMsg').html("Delete?")
         $('#modalFooter').append(`<button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="deleteRowCancel">Cancel</button>
-                                  <button type="button" class="btn btn-danger" data-bs-dismiss="modal" id="deleteRowOK">OK</button>`)
+                                  <button type="button" class="btn btn-danger" id="deleteRowOK">OK</button>`)
       }
       msgModal.show()
   })
