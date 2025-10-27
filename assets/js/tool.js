@@ -217,17 +217,8 @@ $(()=>{
                   ➕ 新增初回歌曲 (Add New Song)
                 </button>
               </div>`:'') +
-              `<div id='setTableMsg' class='p-3'>&emsp;</div>`
-              + (process=='songlist'?`
-              <div class="mb-3 p-2 border rounded bg-dark-subtle">
-                <div class="form-check form-switch d-inline-block">
-                  <input class="form-check-input" type="checkbox" role="switch" id="languageSwitch">
-                  <label class="form-check-label text-light" for="languageSwitch">
-                    <span id="langJA">日文</span> / <span id="langEN" class="text-muted">English</span>
-                  </label>
-                </div>
-              </div>`:'') +
-              `<div id='tb' class='table-dark table-striped table-bordered'>progressing...</div>
+              `<div id='setTableMsg' class='p-3'>&emsp;</div>
+              <div id='tb' class='table-dark table-striped table-bordered'>progressing...</div>
                 `
         $("#content").empty().append(c)
 
@@ -834,7 +825,31 @@ $(()=>{
   var streamlistColDef = [
     {title:"thumbnail", formatter:imageLink, headerFilter:false},
     {title:"streamID", field:"streamID", visible: false, download:true},
-    {title:"title", field:"title", width:300, topCalc:'count',topCalcFormatter:(c=>'subtotal/小計：'+c.getValue()), formatter:multiLineLinkFormat},
+    {
+      title:"title",
+      field:"title",
+      width:300,
+      topCalc:'count',
+      topCalcFormatter:(c=>'subtotal/小計：'+c.getValue()),
+      formatter:multiLineLinkFormat,
+      headerFilter:"input",
+      headerFilterPlaceholder:"搜尋標題或影片 ID",
+      headerFilterFunc: function(headerValue, rowValue, rowData, filterParams) {
+        // No filter applied
+        if (!headerValue) return true;
+
+        const searchTerm = headerValue.toLowerCase();
+
+        // Search in title
+        const titleMatch = rowValue?.toLowerCase().includes(searchTerm) || false;
+
+        // Search in streamID
+        const idMatch = rowData.streamID?.toLowerCase().includes(searchTerm) || false;
+
+        // Return true if either matches
+        return titleMatch || idMatch;
+      }
+    },
     {title:`local time(${dayjs().format('Z')})`, field:"time", mutator:((cell)=>dayjs(cell).format('YYYY/MM/DD HH:mm')), accessor:((value)=>dayjs(value).utc().format('YYYY-MM-DDTHH:mm:ss[Z]'))},
     {title:"categories", field:"categories",
       headerFilter:select2,
@@ -873,28 +888,65 @@ $(()=>{
     autocomplete: true
   }
 
-  // Japanese version (default)
-  var songlistColDef_JA = [
+  // Bilingual version (Japanese + English in one view)
+  var songlistColDef = [
     {title:"songID", field:"songID", visible: false, download:true},
-    {title:"Song Name", field:"songName", width:250, topCalc:'count', topCalcFormatter:(c=>'subtotal/小計：'+c.getValue()), headerFilter:"list", headerFilterParams:AUTOCOMPLETE_PARAMS},
-    {title:"Artist", field:"artist", width:200, headerFilter:"input"},
+    {
+      title:"Song Name / 歌名",
+      field:"songName",
+      width:300,
+      topCalc:'count',
+      topCalcFormatter:(c=>'subtotal/小計：'+c.getValue()),
+      headerFilter:"input",
+      headerFilterPlaceholder:"搜尋日文或英文歌名",
+      headerFilterFunc: function(headerValue, rowValue, rowData, filterParams) {
+        if (!headerValue) return true;
+        const searchTerm = headerValue.toLowerCase();
+        const jaMatch = rowData.songName?.toLowerCase().includes(searchTerm) || false;
+        const enMatch = rowData.songNameEn?.toLowerCase().includes(searchTerm) || false;
+        return jaMatch || enMatch;
+      },
+      formatter: function(cell) {
+        const row = cell.getRow().getData();
+        const ja = row.songName || '';
+        const en = row.songNameEn || '';
+        return `
+          <div style="line-height: 1.5;">
+            <div style="font-weight: 500;">${ja}</div>
+            ${en ? `<div style="font-size: 0.85em; color: #999; margin-top: 2px;">${en}</div>` : ''}
+          </div>
+        `;
+      }
+    },
+    {
+      title:"Artist / 歌手",
+      field:"artist",
+      width:250,
+      headerFilter:"input",
+      headerFilterPlaceholder:"搜尋日文或英文歌手",
+      headerFilterFunc: function(headerValue, rowValue, rowData, filterParams) {
+        if (!headerValue) return true;
+        const searchTerm = headerValue.toLowerCase();
+        const jaMatch = rowData.artist?.toLowerCase().includes(searchTerm) || false;
+        const enMatch = rowData.artistEn?.toLowerCase().includes(searchTerm) || false;
+        return jaMatch || enMatch;
+      },
+      formatter: function(cell) {
+        const row = cell.getRow().getData();
+        const ja = row.artist || '';
+        const en = row.artistEn || '';
+        return `
+          <div style="line-height: 1.5;">
+            <div>${ja}</div>
+            ${en ? `<div style="font-size: 0.85em; color: #999; margin-top: 2px;">${en}</div>` : ''}
+          </div>
+        `;
+      }
+    },
     {title:"Genre", field:"genre", headerFilter:"input"},
     {title:"Tie-up", field:"tieup", headerFilter:"input"},
     {title:"Note", field:"songNote", headerFilter:"input"},
   ]
-
-  // English version
-  var songlistColDef_EN = [
-    {title:"songID", field:"songID", visible: false, download:true},
-    {title:"Song Name (EN)", field:"songNameEn", width:250, topCalc:'count', topCalcFormatter:(c=>'subtotal/小計：'+c.getValue()), headerFilter:"input"},
-    {title:"Artist (EN)", field:"artistEn", width:200, headerFilter:"input"},
-    {title:"Genre", field:"genre", headerFilter:"input"},
-    {title:"Tie-up", field:"tieup", headerFilter:"input"},
-    {title:"Note", field:"songNote", headerFilter:"input"},
-  ]
-
-  // Default to Japanese
-  var songlistColDef = songlistColDef_JA
 
   //column definition function
   function multiLineLinkFormat(cell){
@@ -1252,47 +1304,17 @@ $(()=>{
       }
     })
 
-    jsonTable.on("rowDeleted", async function(row) {
-      try {
-        const rowData = row.getData()
-        console.log('Row deleted:', rowData)
+    jsonTable.on("rowDeleted", function(row) {
+      // Row deleted from table - API delete is now handled in deleteRowOK handler
+      // This event is only used for logging
+      const rowData = row.getData()
+      console.log('Row deleted from table:', rowData)
 
-        // Determine API endpoint and ID
-        let endpoint, id
-        if (p === 'songlist') {
-          endpoint = API_CONFIG.ENDPOINTS.songlist
-          id = rowData.songID
-        } else if (p === 'streamlist') {
-          endpoint = API_CONFIG.ENDPOINTS.streamlist
-          id = rowData.streamID
-        } else if (p === 'setlist') {
-          endpoint = API_CONFIG.ENDPOINTS.setlist
-          id = `${rowData.streamID}/${rowData.trackNo}`
-        } else {
-          console.log('No API sync for this table type')
-          return
-        }
-
-        // Skip if no ID
-        if (!id) {
-          console.log('No ID found, skipping API delete')
-          return
-        }
-
-        // DELETE from API
-        await apiRequest('DELETE', `${endpoint}/${id}`)
-
-        // Show success message
-        $('#setTableMsg').text('Row deleted successfully').addClass('text-bg-success')
-        setTimeout(() => {
-          $('#setTableMsg').html('&emsp;').removeClass('text-bg-success')
-        }, 3000)
-
-      } catch (error) {
-        console.error('Error deleting row:', error)
-        alert(`Error deleting row: ${error.message}`)
-        // TODO: Consider re-adding the row on error
-      }
+      // Show brief notification
+      $('#setTableMsg').text('資料已從表格移除').addClass('text-bg-info')
+      setTimeout(() => {
+        $('#setTableMsg').html('&emsp;').removeClass('text-bg-info')
+      }, 2000)
     })
   }
 
@@ -1346,8 +1368,17 @@ $(()=>{
       $('#setTableMsg').text('You can edit data by clicing cell , or using Excel edit , click the table, and paste to it.').addClass('text-bg-info')
     }
     else{
-      // 離開編輯模式：恢復原始欄位定義（移除 editor）
-      jsonTable.setColumns(colDef)
+      // 離開編輯模式：恢復原始欄位定義（移除特定 editor 避免攔截點擊）
+      const viewColDef = colDef.map(col => {
+        const newCol = { ...col, editable: false }
+        // 移除 songName 的 editor 以允許正常的 row selection
+        if (col.field === 'songName' && col.editor) {
+          const { editor, ...rest } = newCol
+          return rest
+        }
+        return newCol
+      })
+      jsonTable.setColumns(viewColDef)
 
       // Hide add new song button
       $('#addNewSongInSetlist').hide()
@@ -1358,24 +1389,6 @@ $(()=>{
         $('#setTableMsg').html('&emsp;').removeClass('text-bg-info')
       },5000)
     }
-  })
-
-  // Language switch for songlist
-  $('#content').on('change', '#languageSwitch', function(){
-    const isEnglishMode = $(this).is(':checked')
-
-    if (isEnglishMode) {
-      songlistColDef = songlistColDef_EN
-      $('#langJA').removeClass('text-light').addClass('text-muted')
-      $('#langEN').removeClass('text-muted').addClass('text-light')
-    } else {
-      songlistColDef = songlistColDef_JA
-      $('#langJA').removeClass('text-muted').addClass('text-light')
-      $('#langEN').removeClass('text-light').addClass('text-muted')
-    }
-
-    // Update table columns
-    jsonTable.setColumns(songlistColDef)
   })
 
   var addRowModal = new bootstrap.Modal(document.getElementById('modalAddRow'))
@@ -1497,13 +1510,131 @@ $(()=>{
       msgModal.show()
   })
 
-  $('#modalFooter').on('click', '#deleteRowOK', ()=>{
-    let selectedRows = jsonTable.getSelectedRows()
+  $('#modalFooter').on('click', '#deleteRowOK', async ()=>{
+    const selectedRows = jsonTable.getSelectedRows()
+    const p = getProcess()
+
+    // 1. 顯示 loading 狀態
+    $('#modalMsg').html(`
+      <div class="text-center">
+        <div class="spinner-border text-danger mb-3" role="status">
+          <span class="visually-hidden">Deleting...</span>
+        </div>
+        <p class="mb-2">正在刪除 ${selectedRows.length} 筆資料...</p>
+        <p class="small text-muted">請稍候，正在檢查資料關聯性</p>
+      </div>
+    `)
+    $('#modalFooter').empty()  // 移除按鈕防止重複點擊
+
+    // 2. 確定 API endpoint
+    let endpoint
+    if (p === 'songlist') {
+      endpoint = API_CONFIG.ENDPOINTS.songlist
+    } else if (p === 'streamlist') {
+      endpoint = API_CONFIG.ENDPOINTS.streamlist
+    } else if (p === 'setlist') {
+      endpoint = API_CONFIG.ENDPOINTS.setlist
+    } else {
+      // 不支援 API 的表格，直接刪除
+      jsonTable.blockRedraw()
+      selectedRows.forEach(row => row.delete())
+      jsonTable.restoreRedraw()
+      msgModal.hide()
+      return
+    }
+
+    // 3. 逐一呼叫 API 驗證並刪除
+    const results = []
+    for (let i = 0; i < selectedRows.length; i++) {
+      const row = selectedRows[i]
+      const rowData = row.getData()
+
+      // 更新進度
+      $('#modalMsg').html(`
+        <div class="text-center">
+          <div class="spinner-border text-danger mb-3" role="status"></div>
+          <p class="mb-2">正在刪除 ${i + 1} / ${selectedRows.length} ...</p>
+          <p class="small text-muted">${rowData.title || rowData.songName || rowData.streamID || ''}</p>
+        </div>
+      `)
+
+      // 確定 ID
+      let id
+      if (p === 'songlist') {
+        id = rowData.songID
+      } else if (p === 'streamlist') {
+        id = rowData.streamID
+      } else if (p === 'setlist') {
+        id = `${rowData.streamID}/${rowData.trackNo}`
+      }
+
+      if (!id) {
+        results.push({ row, success: false, error: 'No ID found' })
+        continue
+      }
+
+      // 呼叫 API DELETE
+      try {
+        await apiRequest('DELETE', `${endpoint}/${id}`)
+        results.push({ row, success: true, data: rowData })
+      } catch (error) {
+        results.push({ row, success: false, error: error.message, data: rowData })
+      }
+    }
+
+    // 4. 只刪除成功的 rows
     jsonTable.blockRedraw()
-    selectedRows.forEach(e=>{e.delete()})
+    results.forEach(r => {
+      if (r.success) {
+        r.row.delete()
+      }
+    })
     jsonTable.restoreRedraw()
 
-    $('#modalFooter').empty()
+    // 5. 顯示結果
+    const successCount = results.filter(r => r.success).length
+    const failCount = results.length - successCount
+
+    if (failCount > 0) {
+      const failedRows = results.filter(r => !r.success)
+      const errorDetails = failedRows.map(r => {
+        const name = r.data?.title || r.data?.songName || r.data?.streamID || 'Unknown'
+        return `<li><strong>${name}</strong>: ${r.error}</li>`
+      }).join('')
+
+      $('#modalMsg').html(`
+        <div class="alert alert-warning mb-0">
+          <h6 class="alert-heading">
+            <i class="bi bi-exclamation-triangle-fill me-2"></i>
+            部分刪除失敗
+          </h6>
+          <p class="mb-2">
+            <span class="badge bg-success">${successCount} 筆成功</span>
+            <span class="badge bg-danger ms-2">${failCount} 筆失敗</span>
+          </p>
+          ${failCount <= 5 ? `
+            <hr>
+            <p class="mb-2"><strong>失敗原因：</strong></p>
+            <ul class="mb-0 small">${errorDetails}</ul>
+          ` : `
+            <hr>
+            <p class="mb-0 small"><strong>常見原因：</strong>該項目仍被其他資料引用（例如 streamlist 有關聯的 setlist）</p>
+          `}
+        </div>
+      `)
+    } else {
+      $('#modalMsg').html(`
+        <div class="alert alert-success mb-0">
+          <h6 class="alert-heading">
+            <i class="bi bi-check-circle-fill me-2"></i>
+            刪除成功
+          </h6>
+          <p class="mb-0">成功刪除 ${successCount} 筆資料</p>
+        </div>
+      `)
+    }
+
+    $('#modalFooter').html(`<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">關閉</button>`)
   })
 
 
