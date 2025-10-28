@@ -275,7 +275,8 @@ $(()=>{
 
 
   // Dynamic field data generation for both array and string fields
-  function getDynamicFieldData(table, field) {
+  // Supports bilingual fields: pass fieldEn to show as "日文 | 英文" format
+  function getDynamicFieldData(table, field, fieldEn) {
     try {
       // Check if data is processed and ready
       if (!window.tableDataLoaded) {
@@ -283,7 +284,7 @@ $(()=>{
       }
 
       const tableData = table ? table.getData() : (window.jsonTable ? window.jsonTable.getData() : []);
-      const uniqueValues = new Set();
+      const uniqueOptions = new Map();  // Use Map to avoid duplicates by Japanese value
 
       if (tableData.length === 0) {
         return [];
@@ -296,19 +297,43 @@ $(()=>{
           // Handle array fields (like categories)
           fieldValue.forEach(val => {
             if (val && typeof val === 'string' && val.trim().length > 0) {
-              uniqueValues.add(val.trim());
+              const trimmedVal = val.trim();
+              if (!uniqueOptions.has(trimmedVal)) {
+                uniqueOptions.set(trimmedVal, {id: trimmedVal, text: trimmedVal});
+              }
             }
           });
         } else if (fieldValue !== null && fieldValue !== undefined && fieldValue !== '') {
           // Handle string fields (like songName, artist, note)
-          const strValue = String(fieldValue).trim();
-          if (strValue.length > 0) {
-            uniqueValues.add(strValue);
+          const jaValue = String(fieldValue).trim();
+
+          if (jaValue.length > 0) {
+            // If bilingual field is provided, format as "日文 | 英文"
+            if (fieldEn) {
+              const enValue = row[fieldEn];
+              let displayText;
+
+              if (enValue && String(enValue).trim() && String(enValue).trim() !== jaValue) {
+                displayText = `${jaValue} | ${String(enValue).trim()}`;
+              } else {
+                displayText = jaValue;
+              }
+
+              // Use Japanese value as key to avoid duplicates
+              if (!uniqueOptions.has(jaValue)) {
+                uniqueOptions.set(jaValue, {id: jaValue, text: displayText});
+              }
+            } else {
+              // No bilingual support, use simple format
+              if (!uniqueOptions.has(jaValue)) {
+                uniqueOptions.set(jaValue, {id: jaValue, text: jaValue});
+              }
+            }
           }
         }
       });
 
-      const result = Array.from(uniqueValues).sort().map(val => ({id: val, text: val}));
+      const result = Array.from(uniqueOptions.values()).sort((a, b) => a.text.localeCompare(b.text));
       return result;
     } catch (error) {
       return [];
@@ -835,29 +860,15 @@ $(()=>{
       width: 300,
       topCalc:'count',
       topCalcFormatter:(c=>'subtotal/小計：'+c.getValue()),
-      headerFilter:select2,
-      headerFilterParams:{
-        values: function(cell, filterParams) {
-          const data = jsonTable ? jsonTable.getData() : [];
-          const uniqueOptions = new Map();
-
-          data.forEach(row => {
-            const ja = row.songName || '';
-            const en = row.songNameEn || '';
-
-            // Add JA version
-            if (ja && ja.trim()) {
-              uniqueOptions.set(ja, ja);
-            }
-
-            // Add EN version if different from JA
-            if (en && en.trim() && en !== ja) {
-              uniqueOptions.set(en, en);
-            }
-          });
-
-          return Array.from(uniqueOptions.values()).sort().map(val => ({id: val, text: val}));
-        }
+      headerFilter: select2,
+      headerFilterParams: {
+        field: "songName",
+        fieldEn: "songNameEn"
+      },
+      headerFilterFunc: function(headerValue, rowValue, rowData) {
+        // Match either Japanese or English
+        if (!headerValue) return true;
+        return rowData.songName === headerValue || rowData.songNameEn === headerValue;
       },
       headerSort:false,
       formatter: function(cell) {
@@ -876,29 +887,15 @@ $(()=>{
       title:"Artist",
       field:"artist",
       width: 250,
-      headerFilter:select2,
-      headerFilterParams:{
-        values: function(cell, filterParams) {
-          const data = jsonTable ? jsonTable.getData() : [];
-          const uniqueOptions = new Map();
-
-          data.forEach(row => {
-            const ja = row.artist || '';
-            const en = row.artistEn || '';
-
-            // Add JA version
-            if (ja && ja.trim()) {
-              uniqueOptions.set(ja, ja);
-            }
-
-            // Add EN version if different from JA
-            if (en && en.trim() && en !== ja) {
-              uniqueOptions.set(en, en);
-            }
-          });
-
-          return Array.from(uniqueOptions.values()).sort().map(val => ({id: val, text: val}));
-        }
+      headerFilter: select2,
+      headerFilterParams: {
+        field: "artist",
+        fieldEn: "artistEn"
+      },
+      headerFilterFunc: function(headerValue, rowValue, rowData) {
+        // Match either Japanese or English
+        if (!headerValue) return true;
+        return rowData.artist === headerValue || rowData.artistEn === headerValue;
       },
       headerSort:false,
       formatter: function(cell) {
@@ -1184,16 +1181,33 @@ $(()=>{
     }
 
     let f = editorParams.field
+    let fEn = editorParams.fieldEn  // Optional English field for bilingual support
 
     onRendered(function(){
       // console.log('select2 onRendered called for field:', f, 'tableDataLoaded:', window.tableDataLoaded);
       let op = $(editor)
 
-      // Get data dynamically from table for all fields
-      var d = getDynamicFieldData(cell.getTable(), f)
+      // Destroy existing select2 instance if present (prevents conflicts when setColumns rebuilds headers)
+      if (op.hasClass('select2-hidden-accessible')) {
+        op.select2('destroy')
+      }
 
-      // Determine if this is a header filter or cell editor
-      const isHeaderFilter = $(cell.getElement()).closest('.tabulator-header').length > 0
+      // Get data dynamically from table for all fields
+      // If fieldEn is provided, getDynamicFieldData will include both JA and EN values
+      var d = getDynamicFieldData(cell.getTable(), f, fEn)
+
+      // Safely get cell element and determine if this is a header filter or cell editor
+      const cellElement = cell.getElement()
+      const isHeaderFilter = cellElement && $(cellElement).closest('.tabulator-header').length > 0
+
+      // Determine dropdown parent - use body for header filters to avoid z-index issues
+      let dropdownParent = $('body')
+      if (!isHeaderFilter && cellElement) {
+        const tableContainer = $(cellElement).closest('.tabulator')
+        if (tableContainer.length > 0) {
+          dropdownParent = tableContainer
+        }
+      }
 
       op.select2({
             data: d,
@@ -1202,7 +1216,7 @@ $(()=>{
             placeholder: editorParams.multiple ? 'Select categories...' : '',
             tags: true,
             multiple: editorParams.multiple || false,
-            dropdownParent: isHeaderFilter ? $('body') : $(cell.getElement()).closest('.tabulator'),
+            dropdownParent: dropdownParent,
             templateResult: function(data) {
               if (!data.id) return data.text;
               return data.text;
