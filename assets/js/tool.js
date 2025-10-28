@@ -380,7 +380,9 @@ $(()=>{
           id: s.songID,
           text: `${s.songName} - ${s.artist}`,
           songName: s.songName,
-          artist: s.artist
+          artist: s.artist,
+          songNameEn: s.songNameEn,
+          artistEn: s.artistEn
         })).sort((a, b) => a.text.localeCompare(b.text))
 
         op.select2({
@@ -420,10 +422,14 @@ $(()=>{
             rowData.songDisplay = selectedData.text
             rowData.songName = selectedData.songName
             rowData.artist = selectedData.artist
+            rowData.songNameEn = selectedData.songNameEn
+            rowData.artistEn = selectedData.artistEn
           } else {
             rowData.songDisplay = ''
             rowData.songName = ''
             rowData.artist = ''
+            rowData.songNameEn = ''
+            rowData.artistEn = ''
           }
 
           // Update the row to trigger formatter refresh
@@ -490,7 +496,9 @@ $(()=>{
           id: s.songID,
           text: `${s.songName} - ${s.artist}`,
           songName: s.songName,
-          artist: s.artist
+          artist: s.artist,
+          songNameEn: s.songNameEn,
+          artistEn: s.artistEn
         })).sort((a, b) => a.text.localeCompare(b.text))
 
         // Initialize Select2
@@ -525,13 +533,17 @@ $(()=>{
             row.update({
               songID: selectedId,
               songName: selectedData.songName,
-              artist: selectedData.artist
+              artist: selectedData.artist,
+              songNameEn: selectedData.songNameEn,
+              artistEn: selectedData.artistEn
             })
           } else {
             row.update({
               songID: null,
               songName: '',
-              artist: ''
+              artist: '',
+              songNameEn: '',
+              artistEn: ''
             })
           }
 
@@ -824,7 +836,29 @@ $(()=>{
       topCalc:'count',
       topCalcFormatter:(c=>'subtotal/小計：'+c.getValue()),
       headerFilter:select2,
-      headerFilterParams:{field:"songName"},
+      headerFilterParams:{
+        values: function(cell, filterParams) {
+          const data = jsonTable ? jsonTable.getData() : [];
+          const uniqueOptions = new Map();
+
+          data.forEach(row => {
+            const ja = row.songName || '';
+            const en = row.songNameEn || '';
+
+            // Add JA version
+            if (ja && ja.trim()) {
+              uniqueOptions.set(ja, ja);
+            }
+
+            // Add EN version if different from JA
+            if (en && en.trim() && en !== ja) {
+              uniqueOptions.set(en, en);
+            }
+          });
+
+          return Array.from(uniqueOptions.values()).sort().map(val => ({id: val, text: val}));
+        }
+      },
       headerSort:false,
       formatter: function(cell) {
         const row = cell.getRow().getData();
@@ -843,7 +877,29 @@ $(()=>{
       field:"artist",
       width: 250,
       headerFilter:select2,
-      headerFilterParams:{field:"artist"},
+      headerFilterParams:{
+        values: function(cell, filterParams) {
+          const data = jsonTable ? jsonTable.getData() : [];
+          const uniqueOptions = new Map();
+
+          data.forEach(row => {
+            const ja = row.artist || '';
+            const en = row.artistEn || '';
+
+            // Add JA version
+            if (ja && ja.trim()) {
+              uniqueOptions.set(ja, ja);
+            }
+
+            // Add EN version if different from JA
+            if (en && en.trim() && en !== ja) {
+              uniqueOptions.set(en, en);
+            }
+          });
+
+          return Array.from(uniqueOptions.values()).sort().map(val => ({id: val, text: val}));
+        }
+      },
       headerSort:false,
       formatter: function(cell) {
         const row = cell.getRow().getData();
@@ -1233,22 +1289,25 @@ $(()=>{
         rowData[field] = newJA
         rowData[field + 'En'] = newEN
 
-        // Trigger table update and reformat to adjust height
+        // Trigger table update
         const row = cell.getRow()
         row.update(rowData)
 
-        // Force cell height recalculation
+        modal.hide()
+
+        // Force complete redraw of this row to recalculate height
         setTimeout(() => {
-          row.reformat()
+          jsonTable.redrawRows([row])
+
+          // Success visual feedback after redraw
+          setTimeout(() => {
+            cell.getElement().style.backgroundColor = '#d4edda'
+            setTimeout(() => {
+              cell.getElement().style.backgroundColor = ''
+            }, 1000)
+          }, 50)
         }, 50)
 
-        // Success visual feedback
-        cell.getElement().style.backgroundColor = '#d4edda'
-        setTimeout(() => {
-          cell.getElement().style.backgroundColor = ''
-        }, 1000)
-
-        modal.hide()
         success(newJA) // Return primary language value
       } catch (error) {
         console.error('Error updating bilingual field:', error)
