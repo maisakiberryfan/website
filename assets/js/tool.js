@@ -815,11 +815,53 @@ $(()=>{
     {title:`local time(${dayjs().format('Z')})`, field:"time", mutator:((cell)=>dayjs(cell).format('YYYY/MM/DD HH:mm')), accessor:((value)=>dayjs(value).utc().format('YYYY-MM-DDTHH:mm:ss[Z]')), width:'150', formatter:dateWithYTLink},
     {title:"Seg", field:"segmentNo", sorter:'number', width:60},
     {title:"Track", field:"trackNo", sorter:'number', width:80},
-    {title:"Song", field:"songName", editor: setlistSongSelect2Editor, editable: false, topCalc:'count', topCalcFormatter:(c=>'subtotal/小計：'+c.getValue()), headerFilter:select2, headerFilterParams:{field:"songName"}, headerSort:false},
-    {title:"Artist", field:"artist", headerFilter:select2, headerFilterParams:{field:"artist"}, headerSort:false},  // No editor - will be auto-updated by song selection
+    {
+      title:"Song",
+      field:"songName",
+      editor: setlistSongSelect2Editor,
+      editable: false,
+      width: 300,
+      topCalc:'count',
+      topCalcFormatter:(c=>'subtotal/小計：'+c.getValue()),
+      headerFilter:select2,
+      headerFilterParams:{field:"songName"},
+      headerSort:false,
+      formatter: function(cell) {
+        const row = cell.getRow().getData();
+        const ja = row.songName || '';
+        const en = row.songNameEn || '';
+        return `
+          <div style="line-height: 1.5;">
+            <div style="font-weight: 500;">${ja}</div>
+            ${en ? `<div style="font-size: 0.85em; color: #999; margin-top: 2px;">${en}</div>` : ''}
+          </div>
+        `;
+      }
+    },
+    {
+      title:"Artist",
+      field:"artist",
+      width: 250,
+      headerFilter:select2,
+      headerFilterParams:{field:"artist"},
+      headerSort:false,
+      formatter: function(cell) {
+        const row = cell.getRow().getData();
+        const ja = row.artist || '';
+        const en = row.artistEn || '';
+        return `
+          <div style="line-height: 1.5;">
+            <div>${ja}</div>
+            ${en ? `<div style="font-size: 0.85em; color: #999; margin-top: 2px;">${en}</div>` : ''}
+          </div>
+        `;
+      }
+    },
     {title:"Note", field:"note", headerFilter:select2, headerFilterParams:{field:"note"}, headerSort:false},
     {title:"YTLink", field:"YTLink", visible: false, download:true},
     {title:"songID", field:"songID", visible: false, download:true},  // Hidden field for database ID
+    {title:"songNameEn", field:"songNameEn", visible: false, download:true},  // Hidden field for English name
+    {title:"artistEn", field:"artistEn", visible: false, download:true},  // Hidden field for English artist
   ]
 
   var streamlistColDef = [
@@ -1191,8 +1233,14 @@ $(()=>{
         rowData[field] = newJA
         rowData[field + 'En'] = newEN
 
-        // Trigger table update
-        cell.getRow().update(rowData)
+        // Trigger table update and reformat to adjust height
+        const row = cell.getRow()
+        row.update(rowData)
+
+        // Force cell height recalculation
+        setTimeout(() => {
+          row.reformat()
+        }, 50)
 
         // Success visual feedback
         cell.getElement().style.backgroundColor = '#d4edda'
