@@ -1,5 +1,165 @@
 [
 	{
+		"date": "2025-10-30T12:00:00Z",
+		"track": 1,
+		"song": "虚飾のアスターテ",
+		"singer": "苺咲べりぃ",
+		"note": "初回(待確認)",
+		"YTLink": "https://www.youtube.com/watch?v=l-nmOs99jY4"
+	},
+	{
+		"date": "2025-10-30T12:00:00Z",
+		"track": 2,
+		"song": "最悪な日でもあなたが好き。",
+		"singer": "芹澤優",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=l-nmOs99jY4"
+	},
+	{
+		"date": "2025-10-30T12:00:00Z",
+		"track": 3,
+		"song": "SMILY",
+		"singer": "大塚愛",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=l-nmOs99jY4"
+	},
+	{
+		"date": "2025-10-30T12:00:00Z",
+		"track": 4,
+		"song": "金魚花火",
+		"singer": "大塚愛",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=l-nmOs99jY4"
+	},
+	{
+		"date": "2025-10-30T12:00:00Z",
+		"track": 5,
+		"song": "ポケット",
+		"singer": "大塚愛",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=l-nmOs99jY4"
+	},
+	{
+		"date": "2025-10-30T12:00:00Z",
+		"track": 6,
+		"song": "Booo!",
+		"singer": "TOKOTOKO(西沢さんP)",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=l-nmOs99jY4"
+	},
+	{
+		"date": "2025-10-30T12:00:00Z",
+		"track": 7,
+		"song": "君色に染まる",
+		"singer": "TOKOTOKO(西沢さんP)",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=l-nmOs99jY4"
+	},
+	{
+		"date": "2025-10-30T12:00:00Z",
+		"track": 8,
+		"song": "恋はスリル、ショック、サスペンス",
+		"singer": "愛内里菜",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=l-nmOs99jY4"
+	},
+	{
+		"date": "2025-10-30T12:00:00Z",
+		"track": 9,
+		"song": "渡月橋 ～君 想ふ～",
+		"singer": "倉木麻衣",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=l-nmOs99jY4"
+	},
+	{
+		"date": "2025-10-30T12:00:00Z",
+		"track": 10,
+		"song": "マジックナンバー",
+		"singer": "坂本真綾",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=l-nmOs99jY4"
+	},
+	{
+		"date": "2025-10-30T12:00:00Z",
+		"track": 11,
+		"song": "Be mine!",
+		"singer": "坂本真綾",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=l-nmOs99jY4"
+	},
+	{
+		"date": "2025-10-30T12:00:00Z",
+		"track": 12,
+		"song": "Honey",
+		"singer": "chihiRo",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=l-nmOs99jY4"
+	},
+	{
+		"date": "2025-10-30T12:00:00Z",
+		"track": 13,
+		"song": "カワルミライ",
+		"singer": "ChouCho",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=l-nmOs99jY4"
+	},
+	{
+		"date": "2025-10-30T12:00:00Z",
+		"track": 14,
+		"song": "それを愛と呼ぶなら",
+		"singer": "Uru",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=l-nmOs99jY4"
+	},
+	{
+		"date": "2025-10-30T12:00:00Z",
+		"track": 15,
+		"song": "プロローグ",
+		"singer": "Uru",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=l-nmOs99jY4"
+	},
+	{
+		"date": "2025-10-30T12:00:00Z",
+		"track": 16,
+		"song": "心做し",
+		"singer": "蝶々P",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=l-nmOs99jY4"
+	},
+	{
+		"date": "2025-10-30T12:00:00Z",
+		"track": 17,
+		"song": "あなたに逢いたくて ～Missing You～",
+		"singer": "松田聖子",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=l-nmOs99jY4"
+	},
+	{
+		"date": "2025-10-30T12:00:00Z",
+		"track": 18,
+		"song": "HAPPY BIRTHDAY",
+		"singer": "back number",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=l-nmOs99jY4"
+	},
+	{
+		"date": "2025-10-30T12:00:00Z",
+		"track": 19,
+		"song": "クリスマスソング",
+		"singer": "back number",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=l-nmOs99jY4"
+	},
+	{
+		"date": "2025-10-30T12:00:00Z",
+		"track": 20,
+		"song": "Subtitle",
+		"singer": "Official髭男dism",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=l-nmOs99jY4"
+	},
+	{
 		"date": "2025-10-28T12:00:00Z",
 		"track": 1,
 		"song": "しらないうた",
