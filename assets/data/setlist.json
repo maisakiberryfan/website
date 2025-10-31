@@ -4,7 +4,7 @@
 		"track": 1,
 		"song": "虚飾のアスターテ",
 		"singer": "苺咲べりぃ",
-		"note": "初回(待確認)",
+		"note": "オリソン/初回",
 		"YTLink": "https://www.youtube.com/watch?v=l-nmOs99jY4"
 	},
 	{
@@ -164,7 +164,7 @@
 		"track": 1,
 		"song": "しらないうた",
 		"singer": "苺咲べりぃ",
-		"note": "",
+		"note": "オリソン/初回",
 		"YTLink": "https://www.youtube.com/watch?v=xjBl1sNDW68"
 	},
 	{
@@ -212,7 +212,7 @@
 		"track": 7,
 		"song": "スイートマジック",
 		"singer": "Junky",
-		"note": "初回(待確認)",
+		"note": "",
 		"YTLink": "https://www.youtube.com/watch?v=xjBl1sNDW68"
 	},
 	{
@@ -284,7 +284,7 @@
 		"track": 16,
 		"song": "Music S.T.A.R.T!!",
 		"singer": "μ's",
-		"note": "初回(待確認)",
+		"note": "",
 		"YTLink": "https://www.youtube.com/watch?v=xjBl1sNDW68"
 	},
 	{
@@ -322,9 +322,9 @@
 	{
 		"date": "2025-10-27T12:00:00Z",
 		"track": 1,
-		"song": "INNOCENCE",
-		"singer": "藍井エイル",
-		"note": "初回(待確認)",
+		"song": "innoecnec",
+		"singer": "苺咲べりぃ",
+		"note": "オリソン/初回",
 		"YTLink": "https://www.youtube.com/watch?v=yGQdXt0sfyI"
 	},
 	{
@@ -340,7 +340,7 @@
 		"track": 3,
 		"song": "憂一乗",
 		"singer": "ヨルシカ",
-		"note": "初回(待確認)",
+		"note": "",
 		"YTLink": "https://www.youtube.com/watch?v=yGQdXt0sfyI"
 	},
 	{
@@ -370,7 +370,7 @@
 	{
 		"date": "2025-10-27T12:00:00Z",
 		"track": 7,
-		"song": "奏",
+		"song": "奏(かなで)",
 		"singer": "スキマスイッチ",
 		"note": "",
 		"YTLink": "https://www.youtube.com/watch?v=yGQdXt0sfyI"
@@ -640,15 +640,15 @@
 		"YTLink": "https://www.youtube.com/watch?v=2wF8GAHyRNs"
 	},
 	{
-		"date": "2025-10-21T12:33:01Z",
+		"date": "2025-10-21T12:33:00Z",
 		"track": 1,
 		"song": "TowaLove",
 		"singer": "苺咲べりぃ",
-		"note": "",
+		"note": "オリソン/初回",
 		"YTLink": "https://www.youtube.com/watch?v=23zA1-I6l2o"
 	},
 	{
-		"date": "2025-10-21T12:33:01Z",
+		"date": "2025-10-21T12:33:00Z",
 		"track": 2,
 		"song": "Dancing stars on me!",
 		"singer": "μ's",
@@ -656,7 +656,7 @@
 		"YTLink": "https://www.youtube.com/watch?v=23zA1-I6l2o"
 	},
 	{
-		"date": "2025-10-21T12:33:01Z",
+		"date": "2025-10-21T12:33:00Z",
 		"track": 3,
 		"song": "ユメノトビラ",
 		"singer": "μ's",
@@ -664,15 +664,15 @@
 		"YTLink": "https://www.youtube.com/watch?v=23zA1-I6l2o"
 	},
 	{
-		"date": "2025-10-21T12:33:01Z",
+		"date": "2025-10-21T12:33:00Z",
 		"track": 4,
 		"song": "Music S.T.A.R.T!!",
 		"singer": "μ's",
-		"note": "初回(待確認)",
+		"note": "初回",
 		"YTLink": "https://www.youtube.com/watch?v=23zA1-I6l2o"
 	},
 	{
-		"date": "2025-10-21T12:33:01Z",
+		"date": "2025-10-21T12:33:00Z",
 		"track": 5,
 		"song": "それは僕たちの奇跡",
 		"singer": "μ's",
@@ -680,7 +680,7 @@
 		"YTLink": "https://www.youtube.com/watch?v=23zA1-I6l2o"
 	},
 	{
-		"date": "2025-10-21T12:33:01Z",
+		"date": "2025-10-21T12:33:00Z",
 		"track": 6,
 		"song": "僕らは今のなかで",
 		"singer": "μ's",
@@ -688,7 +688,7 @@
 		"YTLink": "https://www.youtube.com/watch?v=23zA1-I6l2o"
 	},
 	{
-		"date": "2025-10-21T12:33:01Z",
+		"date": "2025-10-21T12:33:00Z",
 		"track": 7,
 		"song": "僕らのLIVE 君とのLIFE",
 		"singer": "μ's",
@@ -696,7 +696,7 @@
 		"YTLink": "https://www.youtube.com/watch?v=23zA1-I6l2o"
 	},
 	{
-		"date": "2025-10-21T12:33:01Z",
+		"date": "2025-10-21T12:33:00Z",
 		"track": 8,
 		"song": "START:DASH!!",
 		"singer": "μ's",
@@ -704,7 +704,7 @@
 		"YTLink": "https://www.youtube.com/watch?v=23zA1-I6l2o"
 	},
 	{
-		"date": "2025-10-21T12:33:01Z",
+		"date": "2025-10-21T12:33:00Z",
 		"track": 9,
 		"song": "ススメ→トゥモロウ",
 		"singer": "μ's",
@@ -712,7 +712,7 @@
 		"YTLink": "https://www.youtube.com/watch?v=23zA1-I6l2o"
 	},
 	{
-		"date": "2025-10-21T12:33:01Z",
+		"date": "2025-10-21T12:33:00Z",
 		"track": 10,
 		"song": "ライオン",
 		"singer": "シェリル・ノーム(May'n),ランカ・リー(中島愛)",
@@ -720,7 +720,7 @@
 		"YTLink": "https://www.youtube.com/watch?v=23zA1-I6l2o"
 	},
 	{
-		"date": "2025-10-21T12:33:01Z",
+		"date": "2025-10-21T12:33:00Z",
 		"track": 11,
 		"song": "そうだよ。",
 		"singer": "ランカ・リー(中島愛)",
@@ -728,15 +728,15 @@
 		"YTLink": "https://www.youtube.com/watch?v=23zA1-I6l2o"
 	},
 	{
-		"date": "2025-10-21T12:33:01Z",
+		"date": "2025-10-21T12:33:00Z",
 		"track": 12,
 		"song": "あしたも ともだち",
-		"singer": "あしたも ともだち",
-		"note": "初回(待確認)",
+		"singer": "西脇唯",
+		"note": "初回",
 		"YTLink": "https://www.youtube.com/watch?v=23zA1-I6l2o"
 	},
 	{
-		"date": "2025-10-21T12:33:01Z",
+		"date": "2025-10-21T12:33:00Z",
 		"track": 13,
 		"song": "おどるポンポコリン",
 		"singer": "B.B.クィーンズ",
@@ -744,7 +744,7 @@
 		"YTLink": "https://www.youtube.com/watch?v=23zA1-I6l2o"
 	},
 	{
-		"date": "2025-10-21T12:33:01Z",
+		"date": "2025-10-21T12:33:00Z",
 		"track": 14,
 		"song": "はじめてのチュウ",
 		"singer": "あんしんパパ",
@@ -752,7 +752,7 @@
 		"YTLink": "https://www.youtube.com/watch?v=23zA1-I6l2o"
 	},
 	{
-		"date": "2025-10-21T12:33:01Z",
+		"date": "2025-10-21T12:33:00Z",
 		"track": 15,
 		"song": "キューティーハニー",
 		"singer": "倖田來未",
@@ -760,7 +760,7 @@
 		"YTLink": "https://www.youtube.com/watch?v=23zA1-I6l2o"
 	},
 	{
-		"date": "2025-10-21T12:33:01Z",
+		"date": "2025-10-21T12:33:00Z",
 		"track": 16,
 		"song": "わたしの恋はホッチキス",
 		"singer": "放課後ティータイム",
@@ -768,7 +768,7 @@
 		"YTLink": "https://www.youtube.com/watch?v=23zA1-I6l2o"
 	},
 	{
-		"date": "2025-10-21T12:33:01Z",
+		"date": "2025-10-21T12:33:00Z",
 		"track": 17,
 		"song": "ふでペン ～ボールペン～",
 		"singer": "放課後ティータイム",
@@ -776,7 +776,7 @@
 		"YTLink": "https://www.youtube.com/watch?v=23zA1-I6l2o"
 	},
 	{
-		"date": "2025-10-21T12:33:01Z",
+		"date": "2025-10-21T12:33:00Z",
 		"track": 18,
 		"song": "オレンジ",
 		"singer": "とらドラ!(釘宮理恵,堀江由衣,喜多村英梨)",
@@ -784,7 +784,7 @@
 		"YTLink": "https://www.youtube.com/watch?v=23zA1-I6l2o"
 	},
 	{
-		"date": "2025-10-21T12:33:01Z",
+		"date": "2025-10-21T12:33:00Z",
 		"track": 19,
 		"song": "半永久的に愛してよ♡",
 		"singer": "堀江由衣",
@@ -792,7 +792,7 @@
 		"YTLink": "https://www.youtube.com/watch?v=23zA1-I6l2o"
 	},
 	{
-		"date": "2025-10-21T12:33:01Z",
+		"date": "2025-10-21T12:33:00Z",
 		"track": 20,
 		"song": "ユメセカイ",
 		"singer": "戸松遥",
