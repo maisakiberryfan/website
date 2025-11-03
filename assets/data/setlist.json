@@ -1,5 +1,165 @@
 [
 	{
+		"date": "2025-11-03T12:00:00Z",
+		"track": 1,
+		"song": "レプリカ",
+		"singer": "苺咲べりぃ",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=wqIecr8Ly0s"
+	},
+	{
+		"date": "2025-11-03T12:00:00Z",
+		"track": 2,
+		"song": "不確定性☆COSMIC MOVEMENT",
+		"singer": "ワルキューレ",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=wqIecr8Ly0s"
+	},
+	{
+		"date": "2025-11-03T12:00:00Z",
+		"track": 3,
+		"song": "僕らの戦場",
+		"singer": "ワルキューレ",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=wqIecr8Ly0s"
+	},
+	{
+		"date": "2025-11-03T12:00:00Z",
+		"track": 4,
+		"song": "Winter Bells",
+		"singer": "倉木麻衣",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=wqIecr8Ly0s"
+	},
+	{
+		"date": "2025-11-03T12:00:00Z",
+		"track": 5,
+		"song": "好き!雪!本気マジック",
+		"singer": "Mitchie M",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=wqIecr8Ly0s"
+	},
+	{
+		"date": "2025-11-03T12:00:00Z",
+		"track": 6,
+		"song": "irony",
+		"singer": "ClariS",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=wqIecr8Ly0s"
+	},
+	{
+		"date": "2025-11-03T12:00:00Z",
+		"track": 7,
+		"song": "ヒトリゴト",
+		"singer": "ClariS",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=wqIecr8Ly0s"
+	},
+	{
+		"date": "2025-11-03T12:00:00Z",
+		"track": 8,
+		"song": "創聖のアクエリオン",
+		"singer": "AKINO",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=wqIecr8Ly0s"
+	},
+	{
+		"date": "2025-11-03T12:00:00Z",
+		"track": 9,
+		"song": "残酷な天使のテーゼ",
+		"singer": "高橋洋子",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=wqIecr8Ly0s"
+	},
+	{
+		"date": "2025-11-03T12:00:00Z",
+		"track": 10,
+		"song": "魂のルフラン",
+		"singer": "高橋洋子",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=wqIecr8Ly0s"
+	},
+	{
+		"date": "2025-11-03T12:00:00Z",
+		"track": 11,
+		"song": "あんなに一緒だったのに",
+		"singer": "See-Saw",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=wqIecr8Ly0s"
+	},
+	{
+		"date": "2025-11-03T12:00:00Z",
+		"track": 12,
+		"song": "祝福",
+		"singer": "YOASOBI",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=wqIecr8Ly0s"
+	},
+	{
+		"date": "2025-11-03T12:00:00Z",
+		"track": 13,
+		"song": "フリージア",
+		"singer": "Uru",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=wqIecr8Ly0s"
+	},
+	{
+		"date": "2025-11-03T12:00:00Z",
+		"track": 14,
+		"song": "冬のうた",
+		"singer": "Kiroro",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=wqIecr8Ly0s"
+	},
+	{
+		"date": "2025-11-03T12:00:00Z",
+		"track": 15,
+		"song": "雪の華",
+		"singer": "中島美嘉",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=wqIecr8Ly0s"
+	},
+	{
+		"date": "2025-11-03T12:00:00Z",
+		"track": 16,
+		"song": "トイレの神様",
+		"singer": "植村花菜",
+		"note": "初回(待確認)",
+		"YTLink": "https://www.youtube.com/watch?v=wqIecr8Ly0s"
+	},
+	{
+		"date": "2025-11-03T12:00:00Z",
+		"track": 17,
+		"song": "M",
+		"singer": "PRINCESS PRINCESS",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=wqIecr8Ly0s"
+	},
+	{
+		"date": "2025-11-03T12:00:00Z",
+		"track": 18,
+		"song": "風は予告なく吹く",
+		"singer": "ワルキューレ",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=wqIecr8Ly0s"
+	},
+	{
+		"date": "2025-11-03T12:00:00Z",
+		"track": 19,
+		"song": "God Bless You",
+		"singer": "ワルキューレ",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=wqIecr8Ly0s"
+	},
+	{
+		"date": "2025-11-03T12:00:00Z",
+		"track": 20,
+		"song": "ルンがピカッと光ったら",
+		"singer": "ワルキューレ",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=wqIecr8Ly0s"
+	},
+	{
 		"date": "2025-10-30T12:00:00Z",
 		"track": 1,
 		"song": "虚飾のアスターテ",
