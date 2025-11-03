@@ -6,7 +6,7 @@ import "https://cdnjs.cloudflare.com/ajax/libs/tabulator/6.3.1/js/tabulator.min.
 import "https://unpkg.com/marked@12.0.1/marked.min.js"
 import "https://unpkg.com/dayjs@1.11.10/dayjs.min.js"
 import "https://unpkg.com/dayjs@1.11.10/plugin/utc.js"
-import "https://unpkg.com/select2@4.0.13/dist/js/select2.full.min.js"
+import "https://unpkg.com/select2@4.1.0-rc.0/dist/js/select2.full.min.js"
 import "https://unpkg.com/video.js@8.21.1/dist/video.min.js"
 
 // API configuration
@@ -417,14 +417,7 @@ $(()=>{
           placeholder: 'Select song...',
           allowClear: true,
           multiple: false,
-          dropdownParent: $('#modalBatchEdit'),
-          templateResult: function(data) {
-            if (!data.id) return data.text
-            return data.text
-          },
-          templateSelection: function(data) {
-            return data.text
-          }
+          dropdownParent: $('#modalBatchEdit')
         })
 
         // Set current value (songID)
@@ -1125,24 +1118,6 @@ $(()=>{
           text: term,
           newTag: true
         }
-      },
-      templateResult: function(item) {
-        if (item.loading) {
-          return item.text
-        }
-
-        // Create display for options
-        var $container = $('<span>')
-        $container.text(item.text || item.id)
-
-        if (item.newTag) {
-          $container.append(' <small>(new)</small>')
-        }
-
-        return $container
-      },
-      templateSelection: function(item) {
-        return item.text || item.id
       }
     })
 
@@ -1186,6 +1161,7 @@ $(()=>{
     onRendered(function(){
       // console.log('select2 onRendered called for field:', f, 'tableDataLoaded:', window.tableDataLoaded);
       let op = $(editor)
+      let hasSucceeded = false  // Guard flag to prevent multiple success() calls
 
       // Destroy existing select2 instance if present (prevents conflicts when setColumns rebuilds headers)
       if (op.hasClass('select2-hidden-accessible')) {
@@ -1213,52 +1189,38 @@ $(()=>{
             data: d,
             width: '300px',
             allowClear: true,
-            placeholder: editorParams.multiple ? 'Select categories...' : '',
-            tags: true,
-            multiple: editorParams.multiple || false,
-            dropdownParent: dropdownParent,
-            templateResult: function(data) {
-              if (!data.id) return data.text;
-              return data.text;
-            },
-            templateSelection: function(data) {
-              return data.text;
-            },
-            escapeMarkup: function(markup) {
-              return markup; // Let our custom templates work
-            }
+            placeholder: 'Select categories...',
+            tags: true,  // Restored: Allow creating new categories
+            multiple: true,  // Restored: Allow multiple selection
+            dropdownParent: dropdownParent
       })
 
       // Set initial value
       let v = cell.getValue()
       if (v === null || v === undefined) {
-        v = editorParams.multiple ? [] : ''
+        v = []  // Stage B-2: multiple mode, default empty array
+      }
+      // If value is string, convert to array for multiple mode
+      if (typeof v === 'string' && v) {
+        v = [v]
+      }
+      // Ensure it's an array
+      if (!Array.isArray(v)) {
+        v = []
       }
 
-      // Set the value and trigger change
-      op.val(v).trigger('change')
+      // Set the value
+      op.val(v).trigger('change.select2')
 
-      // Handle change events
-      op.on('change.select2', function (e) {
+      // Simple change event handler (Select2 4.1.0-rc.0 has native IME support)
+      op.on('change', function (e) {
         let val = $(this).val()
-        // For multiple selection, ensure we return array format for category/categories
-        if (editorParams.multiple && (f === 'category' || f === 'categories')) {
+        // Ensure array format for category/categories in multiple mode
+        if (f === 'category' || f === 'categories') {
           val = Array.isArray(val) ? val : (val ? [val] : [])
         }
         success(val)
       })
-
-      // Handle close events for immediate update
-      op.on('select2:close', function (e) {
-        let val = $(this).val()
-        if (editorParams.multiple && (f === 'category' || f === 'categories')) {
-          val = Array.isArray(val) ? val : (val ? [val] : [])
-        }
-        success(val)
-      })
-
-      // Don't auto-open select2 - let user click to open
-      // Focus is handled by Tabulator when cell is clicked
     })
 
     //add editor to cell
@@ -1926,20 +1888,14 @@ $(()=>{
     $('#category').select2({
       data: categoryData,
       allowClear: true,
-      tags: true,
-      multiple: true,
+      tags: true,  // Restored: Allow creating new categories
+      multiple: true,  // Restored: Allow multiple selection
       width: '100%',
       dropdownParent: $('#modalAddStreamRow'),
-      placeholder: categoryData.length === 0 ? 'Type to add categories...' : 'Select or type categories...',
-      templateResult: function(data) {
-        return data.text;
-      },
-      templateSelection: function(data) {
-        return data.text;
-      }
+      placeholder: categoryData.length === 0 ? 'Type to add categories...' : 'Select or type categories...'
     })
 
-    // Set default category
+    // Set default category (Stage B-2: array for multiple mode)
     $('#category').val(['歌枠 / Singing']).trigger('change');
 
     $('#streamTitle').prop('disabled', true)

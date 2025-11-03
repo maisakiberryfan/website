@@ -80,6 +80,8 @@ worker/src/types.js
 AI_SETLIST_README.md
 DEBUG_GUIDE.md
 debug.html
+test-select2-tags-multiple.html
+test-tom-select.html
 
 # Private admin files
 admin-*.html
