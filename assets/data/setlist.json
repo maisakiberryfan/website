@@ -1,5 +1,165 @@
 [
 	{
+		"date": "2025-11-05T12:00:00Z",
+		"track": 1,
+		"song": "INNOCENCE",
+		"singer": "藍井エイル",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=4Q9ge-z-APo"
+	},
+	{
+		"date": "2025-11-05T12:00:00Z",
+		"track": 2,
+		"song": "ALIVE～祈りの唄～",
+		"singer": "ワルキューレ",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=4Q9ge-z-APo"
+	},
+	{
+		"date": "2025-11-05T12:00:00Z",
+		"track": 3,
+		"song": "GIRAFFE BLUES",
+		"singer": "ワルキューレ",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=4Q9ge-z-APo"
+	},
+	{
+		"date": "2025-11-05T12:00:00Z",
+		"track": 4,
+		"song": "虹のかけら",
+		"singer": "昆夏美",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=4Q9ge-z-APo"
+	},
+	{
+		"date": "2025-11-05T12:00:00Z",
+		"track": 5,
+		"song": "奏",
+		"singer": "スキマスイッチ",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=4Q9ge-z-APo"
+	},
+	{
+		"date": "2025-11-05T12:00:00Z",
+		"track": 6,
+		"song": "憂一乗",
+		"singer": "ヨルシカ",
+		"note": "初回(待確認)",
+		"YTLink": "https://www.youtube.com/watch?v=4Q9ge-z-APo"
+	},
+	{
+		"date": "2025-11-05T12:00:00Z",
+		"track": 7,
+		"song": "だから僕は音楽を辞めた",
+		"singer": "ヨルシカ",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=4Q9ge-z-APo"
+	},
+	{
+		"date": "2025-11-05T12:00:00Z",
+		"track": 8,
+		"song": "fragile",
+		"singer": "Every Little Thing",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=4Q9ge-z-APo"
+	},
+	{
+		"date": "2025-11-05T12:00:00Z",
+		"track": 9,
+		"song": "Time goes by",
+		"singer": "Every Little Thing",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=4Q9ge-z-APo"
+	},
+	{
+		"date": "2025-11-05T12:00:00Z",
+		"track": 10,
+		"song": "Hello Alone -Yui Ballade-",
+		"singer": "由比ヶ浜結衣(東山奈央)",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=4Q9ge-z-APo"
+	},
+	{
+		"date": "2025-11-05T12:00:00Z",
+		"track": 11,
+		"song": "初めての恋が終わる時",
+		"singer": "ryo",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=4Q9ge-z-APo"
+	},
+	{
+		"date": "2025-11-05T12:00:00Z",
+		"track": 12,
+		"song": "メリクリ",
+		"singer": "BoA",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=4Q9ge-z-APo"
+	},
+	{
+		"date": "2025-11-05T12:00:00Z",
+		"track": 13,
+		"song": "DEAR…again",
+		"singer": "広瀬香美",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=4Q9ge-z-APo"
+	},
+	{
+		"date": "2025-11-05T12:00:00Z",
+		"track": 14,
+		"song": "ポケット",
+		"singer": "大塚愛",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=4Q9ge-z-APo"
+	},
+	{
+		"date": "2025-11-05T12:00:00Z",
+		"track": 15,
+		"song": "クラゲ、流れ星",
+		"singer": "大塚愛",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=4Q9ge-z-APo"
+	},
+	{
+		"date": "2025-11-05T12:00:00Z",
+		"track": 16,
+		"song": "恋のつぼみ",
+		"singer": "倖田來未",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=4Q9ge-z-APo"
+	},
+	{
+		"date": "2025-11-05T12:00:00Z",
+		"track": 17,
+		"song": "恋のつぼみ",
+		"singer": "倖田來未",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=4Q9ge-z-APo"
+	},
+	{
+		"date": "2025-11-05T12:00:00Z",
+		"track": 18,
+		"song": "今好きになる。",
+		"singer": "HoneyWorks",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=4Q9ge-z-APo"
+	},
+	{
+		"date": "2025-11-05T12:00:00Z",
+		"track": 19,
+		"song": "告白日和、です！",
+		"singer": "南ことり(CV.内田彩) & 小泉花陽(CV.久保ユリカ)",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=4Q9ge-z-APo"
+	},
+	{
+		"date": "2025-11-05T12:00:00Z",
+		"track": 20,
+		"song": "Subtitle",
+		"singer": "Official髭男dism",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=4Q9ge-z-APo"
+	},
+	{
 		"date": "2025-11-03T12:00:00Z",
 		"track": 1,
 		"song": "レプリカ",
