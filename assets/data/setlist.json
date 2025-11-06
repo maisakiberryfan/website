@@ -1,5 +1,165 @@
 [
 	{
+		"date": "2025-11-06T12:00:00Z",
+		"track": 1,
+		"song": "しらないうた",
+		"singer": "苺咲べりぃ",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=UAqqa7qlnfQ"
+	},
+	{
+		"date": "2025-11-06T12:00:00Z",
+		"track": 2,
+		"song": "もう恋なんてしない",
+		"singer": "槇原敬之",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=UAqqa7qlnfQ"
+	},
+	{
+		"date": "2025-11-06T12:00:00Z",
+		"track": 3,
+		"song": "冬がはじまるよ",
+		"singer": "槇原敬之",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=UAqqa7qlnfQ"
+	},
+	{
+		"date": "2025-11-06T12:00:00Z",
+		"track": 4,
+		"song": "ロマンスの神様",
+		"singer": "広瀬香美",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=UAqqa7qlnfQ"
+	},
+	{
+		"date": "2025-11-06T12:00:00Z",
+		"track": 5,
+		"song": "ゲレンデがとけるほど恋したい",
+		"singer": "広瀬香美",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=UAqqa7qlnfQ"
+	},
+	{
+		"date": "2025-11-06T12:00:00Z",
+		"track": 6,
+		"song": "陽のあたる坂道",
+		"singer": "Do As Infinity",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=UAqqa7qlnfQ"
+	},
+	{
+		"date": "2025-11-06T12:00:00Z",
+		"track": 7,
+		"song": "Everything",
+		"singer": "MISIA",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=UAqqa7qlnfQ"
+	},
+	{
+		"date": "2025-11-06T12:00:00Z",
+		"track": 8,
+		"song": "KISSして",
+		"singer": "KOH+",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=UAqqa7qlnfQ"
+	},
+	{
+		"date": "2025-11-06T12:00:00Z",
+		"track": 9,
+		"song": "ヒトツボシ",
+		"singer": "KOH+",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=UAqqa7qlnfQ"
+	},
+	{
+		"date": "2025-11-06T12:00:00Z",
+		"track": 10,
+		"song": "Snow halation",
+		"singer": "μ's",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=UAqqa7qlnfQ"
+	},
+	{
+		"date": "2025-11-06T12:00:00Z",
+		"track": 11,
+		"song": "ジングルベル",
+		"singer": "クリスマスソング",
+		"note": "初回(待確認)",
+		"YTLink": "https://www.youtube.com/watch?v=UAqqa7qlnfQ"
+	},
+	{
+		"date": "2025-11-06T12:00:00Z",
+		"track": 12,
+		"song": "ハッピーエンド",
+		"singer": "back number",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=UAqqa7qlnfQ"
+	},
+	{
+		"date": "2025-11-06T12:00:00Z",
+		"track": 13,
+		"song": "クリスマスイブ",
+		"singer": "優里",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=UAqqa7qlnfQ"
+	},
+	{
+		"date": "2025-11-06T12:00:00Z",
+		"track": 14,
+		"song": "ドライフラワー",
+		"singer": "優里",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=UAqqa7qlnfQ"
+	},
+	{
+		"date": "2025-11-06T12:00:00Z",
+		"track": 15,
+		"song": "ベテルギウス",
+		"singer": "優里",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=UAqqa7qlnfQ"
+	},
+	{
+		"date": "2025-11-06T12:00:00Z",
+		"track": 16,
+		"song": "空も飛べるはず",
+		"singer": "スピッツ",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=UAqqa7qlnfQ"
+	},
+	{
+		"date": "2025-11-06T12:00:00Z",
+		"track": 17,
+		"song": "青いベンチ",
+		"singer": "サスケ",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=UAqqa7qlnfQ"
+	},
+	{
+		"date": "2025-11-06T12:00:00Z",
+		"track": 18,
+		"song": "水平線",
+		"singer": "back number",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=UAqqa7qlnfQ"
+	},
+	{
+		"date": "2025-11-06T12:00:00Z",
+		"track": 19,
+		"song": "ヒロイン",
+		"singer": "back number",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=UAqqa7qlnfQ"
+	},
+	{
+		"date": "2025-11-06T12:00:00Z",
+		"track": 20,
+		"song": "クリスマスソング",
+		"singer": "back number",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=UAqqa7qlnfQ"
+	},
+	{
 		"date": "2025-11-05T12:00:00Z",
 		"track": 1,
 		"song": "INNOCENCE",
