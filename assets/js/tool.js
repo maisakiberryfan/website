@@ -1122,18 +1122,22 @@ $(()=>{
     })
 
 
-    // Add event handlers
-    $('#artistName').on('select2:select', function(e) {
+    // Add event handlers (remove old handlers first to prevent duplicates)
+    $('#artistName').off('select2:select').on('select2:select', function(e) {
       const selectedData = e.params.data
+      console.log('Artist selected:', selectedData)  // Debug log
 
       if (!selectedData.newTag && selectedData.artistEn) {
         // Existing artist with English name, auto-fill but keep editable
         $('#artistNameEn').val(selectedData.artistEn)
+        console.log('ArtistEn auto-filled:', selectedData.artistEn)  // Debug log
+      } else {
+        console.log('ArtistEn not available - newTag:', selectedData.newTag, 'artistEn:', selectedData.artistEn)  // Debug log
       }
       // For new artists or artists without English names, do nothing, let user fill manually
     })
 
-    $('#artistName').on('select2:clear', function() {
+    $('#artistName').off('select2:clear').on('select2:clear', function() {
       // When cleared, also clear artistEN field for consistency
       $('#artistNameEn').val('')
     })
@@ -1185,28 +1189,44 @@ $(()=>{
         }
       }
 
+      // Read multiple configuration from editorParams
+      const isMultiple = editorParams.multiple === true
+      const fieldPlaceholder = isMultiple ? 'Select...' : 'Select one...'
+
       op.select2({
             data: d,
-            width: '300px',
+            width: isHeaderFilter ? '100%' : '100%',  // Full width for both header and cell
             allowClear: true,
-            placeholder: 'Select categories...',
-            tags: true,  // Restored: Allow creating new categories
-            multiple: true,  // Restored: Allow multiple selection
+            placeholder: fieldPlaceholder,  // Dynamic placeholder
+            tags: editorParams.tags !== false,  // Allow tags by default, can be disabled
+            multiple: isMultiple,  // Dynamic single/multiple selection
             dropdownParent: dropdownParent
       })
 
       // Set initial value
       let v = cell.getValue()
-      if (v === null || v === undefined) {
-        v = []  // Stage B-2: multiple mode, default empty array
-      }
-      // If value is string, convert to array for multiple mode
-      if (typeof v === 'string' && v) {
-        v = [v]
-      }
-      // Ensure it's an array
-      if (!Array.isArray(v)) {
-        v = []
+      if (isMultiple) {
+        // Multiple mode: ensure array format
+        if (v === null || v === undefined) {
+          v = []
+        }
+        // If value is string, convert to array
+        if (typeof v === 'string' && v) {
+          v = [v]
+        }
+        // Ensure it's an array
+        if (!Array.isArray(v)) {
+          v = []
+        }
+      } else {
+        // Single mode: keep as string or empty string
+        if (v === null || v === undefined) {
+          v = ''
+        }
+        // If value is array, take first element
+        if (Array.isArray(v)) {
+          v = v[0] || ''
+        }
       }
 
       // Set the value
@@ -1215,11 +1235,26 @@ $(()=>{
       // Simple change event handler (Select2 4.1.0-rc.0 has native IME support)
       op.on('change', function (e) {
         let val = $(this).val()
-        // Ensure array format for category/categories in multiple mode
-        if (f === 'category' || f === 'categories') {
+
+        // Handle value format based on multiple mode
+        if (isMultiple) {
+          // Multiple mode: ensure array format
           val = Array.isArray(val) ? val : (val ? [val] : [])
+        } else {
+          // Single mode: return string (or first element if array)
+          val = Array.isArray(val) ? (val[0] || '') : (val || '')
         }
+
         success(val)
+
+        // For headerFilter, manually trigger Tabulator to re-filter
+        if (isHeaderFilter) {
+          const table = cell.getTable()
+          if (table) {
+            // Use refreshFilter to trigger headerFilterFunc
+            table.refreshFilter()
+          }
+        }
       })
     })
 
@@ -2191,16 +2226,32 @@ function getYoutubeVideoId(url){
 
 function preCategory(t){
   //when user add streamlist, pre-category
+  //Returns ALL matching categories (not just first match)
   let origin = ['xfd', 'オリジナル', 'music video']
   let chat = ['chat', 'talk', '雑談']
+  let categories = []
 
-  if(t.toLowerCase().includes('gam')){return ['ゲーム / Gaming']}
-  else if(t.toLowerCase().includes('short')){return ['ショート / Shorts']}
-  else if(t.toLowerCase().includes('歌ってみた')){return ['歌ってみた動画 / Cover movie']}
-  else if(origin.some(e=>t.toLowerCase().includes(e))){return ['オリジナル曲 / Original Songs']}
-  else if(chat.some(e=>t.toLowerCase().includes(e))){return ['雑談 / Chatting']}
-  else if(t.includes('歌枠')){return ['歌枠 / Singing']}
-  else{return ['other']}
+  if(t.includes('歌枠')){
+    categories.push('歌枠 / Singing')
+  }
+  if(t.toLowerCase().includes('gam')){
+    categories.push('ゲーム / Gaming')
+  }
+  if(t.toLowerCase().includes('short')){
+    categories.push('ショート / Shorts')
+  }
+  if(t.toLowerCase().includes('歌ってみた')){
+    categories.push('歌ってみた動画 / Cover movie')
+  }
+  if(origin.some(e=>t.toLowerCase().includes(e))){
+    categories.push('オリジナル曲 / Original Songs')
+  }
+  if(chat.some(e=>t.toLowerCase().includes(e))){
+    categories.push('雑談 / Chatting')
+  }
+
+  // If no categories matched, return 'other'
+  return categories.length > 0 ? categories : ['other']
 }
 
 async function getLatest(){
