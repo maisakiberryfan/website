@@ -859,9 +859,12 @@ $(()=>{
         fieldEn: "songNameEn"
       },
       headerFilterFunc: function(headerValue, rowValue, rowData) {
-        // Match either Japanese or English
+        // Fuzzy search: match if headerValue is contained in Japanese or English name
         if (!headerValue) return true;
-        return rowData.songName === headerValue || rowData.songNameEn === headerValue;
+        const searchTerm = headerValue.toLowerCase();
+        const jaMatch = rowData.songName?.toLowerCase().includes(searchTerm) || false;
+        const enMatch = rowData.songNameEn?.toLowerCase().includes(searchTerm) || false;
+        return jaMatch || enMatch;
       },
       headerSort:false,
       formatter: function(cell) {
@@ -886,9 +889,12 @@ $(()=>{
         fieldEn: "artistEn"
       },
       headerFilterFunc: function(headerValue, rowValue, rowData) {
-        // Match either Japanese or English
+        // Fuzzy search: match if headerValue is contained in Japanese or English artist name
         if (!headerValue) return true;
-        return rowData.artist === headerValue || rowData.artistEn === headerValue;
+        const searchTerm = headerValue.toLowerCase();
+        const jaMatch = rowData.artist?.toLowerCase().includes(searchTerm) || false;
+        const enMatch = rowData.artistEn?.toLowerCase().includes(searchTerm) || false;
+        return jaMatch || enMatch;
       },
       headerSort:false,
       formatter: function(cell) {
@@ -903,7 +909,19 @@ $(()=>{
         `;
       }
     },
-    {title:"Note", field:"note", headerFilter:select2, headerFilterParams:{field:"note"}, headerSort:false},
+    {
+      title:"Note",
+      field:"note",
+      headerFilter:select2,
+      headerFilterParams:{field:"note"},
+      headerFilterFunc: function(headerValue, rowValue, rowData) {
+        // Fuzzy search: match if headerValue is contained in note
+        if (!headerValue) return true;
+        const searchTerm = headerValue.toLowerCase();
+        return rowData.note?.toLowerCase().includes(searchTerm) || false;
+      },
+      headerSort:false
+    },
     {title:"YTLink", field:"YTLink", visible: false, download:true},
     {title:"songID", field:"songID", visible: false, download:true},  // Hidden field for database ID
     {title:"songNameEn", field:"songNameEn", visible: false, download:true},  // Hidden field for English name
@@ -1143,6 +1161,137 @@ $(()=>{
     })
   }
 
+  // Update all headerFilter options based on currently filtered data (cascade effect)
+  function updateAllHeaderFilterOptions(table, triggerField, triggerValue) {
+    // Get currently filtered data (what user sees after all filters applied)
+    const filteredData = table.getData("active")
+
+    // Find all headerFilter select2 elements for this table
+    const headerFilters = $('select[data-header-filter="true"]').filter(function() {
+      return $(this).data('tabulatorTable') === table
+    })
+
+    headerFilters.each(function() {
+      const $select = $(this)
+      const field = $select.attr('data-field')
+
+      // For trigger field, use passed value; for others, read from DOM
+      let currentValue
+      if (field === triggerField) {
+        currentValue = triggerValue  // Use the value just set by user
+      } else {
+        currentValue = $select.val()  // Read current value from DOM
+      }
+
+      // Extract unique values from filtered data for this field
+      const uniqueValues = new Set()
+      filteredData.forEach(row => {
+        const value = row[field]
+        if (value !== null && value !== undefined && value !== '') {
+          if (Array.isArray(value)) {
+            // For array fields (like categories), add each item
+            value.forEach(v => uniqueValues.add(v))
+          } else {
+            uniqueValues.add(value)
+          }
+        }
+
+        // Also check English field if it exists (e.g., songNameEn, artistEn)
+        const enField = field + 'En'
+        if (row[enField] && row[enField] !== '') {
+          uniqueValues.add(row[enField])
+        }
+      })
+
+      // Convert to sorted array
+      const newValues = Array.from(uniqueValues).sort()
+
+      // Get current options to compare
+      const currentOptions = []
+      $select.find('option').each(function() {
+        const val = $(this).val()
+        if (val) {  // Skip empty placeholder option
+          currentOptions.push(val)
+        }
+      })
+
+      // Check if options need updating
+      const optionsChanged =
+        newValues.length !== currentOptions.length ||
+        !newValues.every((val, idx) => val === currentOptions[idx])
+
+      if (optionsChanged) {
+        // Store whether this is multiple select
+        const isMultiple = $select.attr('multiple') === 'multiple'
+
+        // Clear all options
+        $select.find('option').remove()
+
+        // For single-select, add empty placeholder option first (required for allowClear)
+        if (!isMultiple) {
+          $select.append('<option></option>')
+        }
+
+        // Add new options (none selected by default)
+        newValues.forEach(val => {
+          const option = new Option(val, val, false, false)
+          $select.append(option)
+        })
+
+        // Value restoration logic
+        if (field === triggerField) {
+          // For trigger field: restore the value user just selected
+          if (currentValue !== null && currentValue !== '' &&
+              (!Array.isArray(currentValue) || currentValue.length > 0)) {
+            if (isMultiple && Array.isArray(currentValue)) {
+              const validValues = currentValue.filter(v => newValues.includes(v))
+              $select.val(validValues.length > 0 ? validValues : null)
+            } else if (!isMultiple) {
+              // For single-select, check if value exists in options
+              if (newValues.includes(currentValue)) {
+                $select.val(currentValue)
+              } else {
+                // Value doesn't exist in filtered data (user entered a tag)
+                // Add it as an option so allowClear can work
+                const tagOption = new Option(currentValue, currentValue, true, true)
+                $select.append(tagOption)
+              }
+            }
+          } else {
+            // User cleared this field, keep it cleared
+            $select.val(null)
+          }
+        } else {
+          // For other fields: do NOT auto-select, keep empty
+          // Only restore if user had manually selected a value before
+          if (currentValue !== null && currentValue !== '' &&
+              (!Array.isArray(currentValue) || currentValue.length > 0)) {
+            if (isMultiple && Array.isArray(currentValue)) {
+              const validValues = currentValue.filter(v => newValues.includes(v))
+              $select.val(validValues.length > 0 ? validValues : null)
+            } else if (!isMultiple) {
+              // For single-select, check if value exists
+              if (newValues.includes(currentValue)) {
+                $select.val(currentValue)
+              } else if (currentValue) {
+                // Value doesn't exist (could be a tag from before filtering)
+                // Add it back as an option so user can clear it
+                const tagOption = new Option(currentValue, currentValue, true, true)
+                $select.append(tagOption)
+              }
+            }
+          } else {
+            // No previous value, keep empty
+            $select.val(null)
+          }
+        }
+
+        // Trigger select2 to update its display (but not change event)
+        $select.trigger('change.select2')
+      }
+    })
+  }
+
   function select2 (cell, onRendered, success, cancel, editorParams){
     //use select2 replace header filter
     //cell - the cell component for the editable cell
@@ -1192,6 +1341,19 @@ $(()=>{
       // Read multiple configuration from editorParams
       const isMultiple = editorParams.multiple === true
       const fieldPlaceholder = isMultiple ? 'Select...' : 'Select one...'
+
+      // Add data attributes for headerFilter cascade support
+      if (isHeaderFilter) {
+        op.attr('data-header-filter', 'true')
+        op.attr('data-field', f)
+        // Store table reference for later access
+        op.data('tabulatorTable', cell.getTable())
+      }
+
+      // For single-select mode, add an empty placeholder option to ensure allowClear works
+      if (!isMultiple) {
+        op.append('<option></option>')
+      }
 
       op.select2({
             data: d,
@@ -1253,6 +1415,12 @@ $(()=>{
           if (table) {
             // Use refreshFilter to trigger headerFilterFunc
             table.refreshFilter()
+
+            // Update all other headerFilters with cascade effect
+            // Pass trigger field and its current value to prevent timing issues
+            setTimeout(() => {
+              updateAllHeaderFilterOptions(table, f, val)
+            }, 10)
           }
         }
       })
