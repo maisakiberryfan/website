@@ -1,5 +1,341 @@
 [
 	{
+		"date": "2025-11-11T12:00:00Z",
+		"track": 1,
+		"song": "しらないうた",
+		"singer": "苺咲べりぃ",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=y-ne3B3WEj8"
+	},
+	{
+		"date": "2025-11-11T12:00:00Z",
+		"track": 2,
+		"song": "遠く遠く",
+		"singer": "槇原敬之",
+		"note": "初回(待確認)",
+		"YTLink": "https://www.youtube.com/watch?v=y-ne3B3WEj8"
+	},
+	{
+		"date": "2025-11-11T12:00:00Z",
+		"track": 3,
+		"song": "冬がはじまるよ",
+		"singer": "槇原敬之",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=y-ne3B3WEj8"
+	},
+	{
+		"date": "2025-11-11T12:00:00Z",
+		"track": 4,
+		"song": "瑠璃色の地球",
+		"singer": "松田聖子",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=y-ne3B3WEj8"
+	},
+	{
+		"date": "2025-11-11T12:00:00Z",
+		"track": 5,
+		"song": "赤いスイートピー",
+		"singer": "松田聖子",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=y-ne3B3WEj8"
+	},
+	{
+		"date": "2025-11-11T12:00:00Z",
+		"track": 6,
+		"song": "NAO",
+		"singer": "HY",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=y-ne3B3WEj8"
+	},
+	{
+		"date": "2025-11-11T12:00:00Z",
+		"track": 7,
+		"song": "366日",
+		"singer": "HY",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=y-ne3B3WEj8"
+	},
+	{
+		"date": "2025-11-11T12:00:00Z",
+		"track": 8,
+		"song": "PIECE OF MY WISH",
+		"singer": "今井美樹",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=y-ne3B3WEj8"
+	},
+	{
+		"date": "2025-11-11T12:00:00Z",
+		"track": 9,
+		"song": "PRIDE",
+		"singer": "今井美樹",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=y-ne3B3WEj8"
+	},
+	{
+		"date": "2025-11-11T12:00:00Z",
+		"track": 10,
+		"song": "メルト",
+		"singer": "ryo",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=y-ne3B3WEj8"
+	},
+	{
+		"date": "2025-11-11T12:00:00Z",
+		"track": 11,
+		"song": "初めての恋が終わる時",
+		"singer": "ryo",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=y-ne3B3WEj8"
+	},
+	{
+		"date": "2025-11-11T12:00:00Z",
+		"track": 12,
+		"song": "ハロ/ハワユ",
+		"singer": "ほえほえP",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=y-ne3B3WEj8"
+	},
+	{
+		"date": "2025-11-11T12:00:00Z",
+		"track": 13,
+		"song": "letter song",
+		"singer": "doriko",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=y-ne3B3WEj8"
+	},
+	{
+		"date": "2025-11-11T12:00:00Z",
+		"track": 14,
+		"song": "深海少女",
+		"singer": "ゆうゆ",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=y-ne3B3WEj8"
+	},
+	{
+		"date": "2025-11-11T12:00:00Z",
+		"track": 15,
+		"song": "地球最後の告白を",
+		"singer": "kemu",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=y-ne3B3WEj8"
+	},
+	{
+		"date": "2025-11-11T12:00:00Z",
+		"track": 16,
+		"song": "ラストシーン",
+		"singer": "いきものがかり",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=y-ne3B3WEj8"
+	},
+	{
+		"date": "2025-11-11T12:00:00Z",
+		"track": 17,
+		"song": "ノスタルジア",
+		"singer": "いきものがかり",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=y-ne3B3WEj8"
+	},
+	{
+		"date": "2025-11-11T12:00:00Z",
+		"track": 18,
+		"song": "YELL",
+		"singer": "いきものがかり",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=y-ne3B3WEj8"
+	},
+	{
+		"date": "2025-11-11T12:00:00Z",
+		"track": 19,
+		"song": "I can't stop my love for you♥",
+		"singer": "愛内里菜",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=y-ne3B3WEj8"
+	},
+	{
+		"date": "2025-11-11T12:00:00Z",
+		"track": 20,
+		"song": "MAGIC",
+		"singer": "愛内里菜",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=y-ne3B3WEj8"
+	},
+	{
+		"date": "2025-11-11T12:00:00Z",
+		"track": 21,
+		"song": "Dream × Dream",
+		"singer": "愛内里菜",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=y-ne3B3WEj8"
+	},
+	{
+		"date": "2025-11-11T12:00:00Z",
+		"track": 22,
+		"song": "アムリタ",
+		"singer": "牧野由依",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=y-ne3B3WEj8"
+	},
+	{
+		"date": "2025-11-10T12:00:00Z",
+		"track": 1,
+		"song": "レプリカ",
+		"singer": "苺咲べりぃ",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=14raCI0rqrY"
+	},
+	{
+		"date": "2025-11-10T12:00:00Z",
+		"track": 2,
+		"song": "ジングルベル",
+		"singer": "クリスマスソング",
+		"note": "初回(待確認)",
+		"YTLink": "https://www.youtube.com/watch?v=14raCI0rqrY"
+	},
+	{
+		"date": "2025-11-10T12:00:00Z",
+		"track": 3,
+		"song": "Winter Bells",
+		"singer": "倉木麻衣",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=14raCI0rqrY"
+	},
+	{
+		"date": "2025-11-10T12:00:00Z",
+		"track": 4,
+		"song": "トリセツ",
+		"singer": "西野カナ",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=14raCI0rqrY"
+	},
+	{
+		"date": "2025-11-10T12:00:00Z",
+		"track": 5,
+		"song": "Always",
+		"singer": "西野カナ",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=14raCI0rqrY"
+	},
+	{
+		"date": "2025-11-10T12:00:00Z",
+		"track": 6,
+		"song": "SHINING SONG",
+		"singer": "B小町",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=14raCI0rqrY"
+	},
+	{
+		"date": "2025-11-10T12:00:00Z",
+		"track": 7,
+		"song": "世界はキミからはじまる",
+		"singer": "FRUITS ZIPPER",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=14raCI0rqrY"
+	},
+	{
+		"date": "2025-11-10T12:00:00Z",
+		"track": 8,
+		"song": "白い雪のプリンセスは",
+		"singer": "のぼる↑P",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=14raCI0rqrY"
+	},
+	{
+		"date": "2025-11-10T12:00:00Z",
+		"track": 9,
+		"song": "Starry Wish",
+		"singer": "水瀬いのり",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=14raCI0rqrY"
+	},
+	{
+		"date": "2025-11-10T12:00:00Z",
+		"track": 10,
+		"song": "深愛",
+		"singer": "水樹奈々",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=14raCI0rqrY"
+	},
+	{
+		"date": "2025-11-10T12:00:00Z",
+		"track": 11,
+		"song": "ETERNAL BLAZE",
+		"singer": "水樹奈々",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=14raCI0rqrY"
+	},
+	{
+		"date": "2025-11-10T12:00:00Z",
+		"track": 12,
+		"song": "あなたに逢いたくて ～Missing You～",
+		"singer": "松田聖子",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=14raCI0rqrY"
+	},
+	{
+		"date": "2025-11-10T12:00:00Z",
+		"track": 13,
+		"song": "瞳はダイアモンド",
+		"singer": "松田聖子",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=14raCI0rqrY"
+	},
+	{
+		"date": "2025-11-10T12:00:00Z",
+		"track": 14,
+		"song": "雪の華",
+		"singer": "中島美嘉",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=14raCI0rqrY"
+	},
+	{
+		"date": "2025-11-10T12:00:00Z",
+		"track": 15,
+		"song": "ORION",
+		"singer": "中島美嘉",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=14raCI0rqrY"
+	},
+	{
+		"date": "2025-11-10T12:00:00Z",
+		"track": 16,
+		"song": "Voyage",
+		"singer": "浜崎あゆみ",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=14raCI0rqrY"
+	},
+	{
+		"date": "2025-11-10T12:00:00Z",
+		"track": 17,
+		"song": "愛のうた",
+		"singer": "ストロベリー・フラワー",
+		"note": "初回(待確認)",
+		"YTLink": "https://www.youtube.com/watch?v=14raCI0rqrY"
+	},
+	{
+		"date": "2025-11-10T12:00:00Z",
+		"track": 18,
+		"song": "蒼のエーテル",
+		"singer": "ランカ・リー(中島愛)",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=14raCI0rqrY"
+	},
+	{
+		"date": "2025-11-10T12:00:00Z",
+		"track": 19,
+		"song": "そうだよ。",
+		"singer": "ランカ・リー(中島愛)",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=14raCI0rqrY"
+	},
+	{
+		"date": "2025-11-10T12:00:00Z",
+		"track": 20,
+		"song": "ホシキラ",
+		"singer": "ランカ・リー(中島愛)",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=14raCI0rqrY"
+	},
+	{
 		"date": "2025-11-06T12:00:00Z",
 		"track": 1,
 		"song": "しらないうた",
