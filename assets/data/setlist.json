@@ -12,7 +12,7 @@
 		"track": 2,
 		"song": "遠く遠く",
 		"singer": "槇原敬之",
-		"note": "初回(待確認)",
+		"note": "初回",
 		"YTLink": "https://www.youtube.com/watch?v=y-ne3B3WEj8"
 	},
 	{
@@ -186,9 +186,9 @@
 	{
 		"date": "2025-11-10T12:00:00Z",
 		"track": 2,
-		"song": "ジングルベル",
-		"singer": "クリスマスソング",
-		"note": "初回(待確認)",
+		"song": "ジングルベルがとまらない",
+		"singer": "Aqours",
+		"note": "",
 		"YTLink": "https://www.youtube.com/watch?v=14raCI0rqrY"
 	},
 	{
@@ -307,8 +307,8 @@
 		"date": "2025-11-10T12:00:00Z",
 		"track": 17,
 		"song": "愛のうた",
-		"singer": "ストロベリー・フラワー",
-		"note": "初回(待確認)",
+		"singer": "倖田來未",
+		"note": "",
 		"YTLink": "https://www.youtube.com/watch?v=14raCI0rqrY"
 	},
 	{
@@ -418,9 +418,9 @@
 	{
 		"date": "2025-11-06T12:00:00Z",
 		"track": 11,
-		"song": "ジングルベル",
-		"singer": "クリスマスソング",
-		"note": "初回(待確認)",
+		"song": "ジングルベルがとまらない",
+		"singer": "Aqours",
+		"note": "初回",
 		"YTLink": "https://www.youtube.com/watch?v=UAqqa7qlnfQ"
 	},
 	{
@@ -540,7 +540,7 @@
 		"track": 6,
 		"song": "憂一乗",
 		"singer": "ヨルシカ",
-		"note": "初回(待確認)",
+		"note": "",
 		"YTLink": "https://www.youtube.com/watch?v=4Q9ge-z-APo"
 	},
 	{
@@ -626,8 +626,8 @@
 	{
 		"date": "2025-11-05T12:00:00Z",
 		"track": 17,
-		"song": "恋のつぼみ",
-		"singer": "倖田來未",
+		"song": "会いたくて 会いたくて",
+		"singer": "西野カナ",
 		"note": "",
 		"YTLink": "https://www.youtube.com/watch?v=4Q9ge-z-APo"
 	},
@@ -660,7 +660,7 @@
 		"track": 1,
 		"song": "レプリカ",
 		"singer": "苺咲べりぃ",
-		"note": "",
+		"note": "オリソン/初回",
 		"YTLink": "https://www.youtube.com/watch?v=wqIecr8Ly0s"
 	},
 	{
@@ -780,7 +780,7 @@
 		"track": 16,
 		"song": "トイレの神様",
 		"singer": "植村花菜",
-		"note": "初回(待確認)",
+		"note": "初回",
 		"YTLink": "https://www.youtube.com/watch?v=wqIecr8Ly0s"
 	},
 	{
