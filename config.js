@@ -1,8 +1,16 @@
+// Environment detection for API URL
+function getApiUrl() {
+  if (window.location.hostname === 'localhost' ||
+      window.location.hostname === '127.0.0.1') {
+    return 'http://localhost:8785'  // Local development
+  }
+  return 'https://hyperdrive-v2.katani.workers.dev'  // Production
+}
+
 // Berry Fansite API Configuration
 export const API_CONFIG = {
-  // Hyperdrive API base URL (will be updated when deployed)
-  BASE_URL: 'http://localhost:8785', // Local development - hyperdrive
-  // BASE_URL: 'https://your-hyperdrive-worker.workers.dev', // Production (to be updated)
+  // Hyperdrive API base URL - automatically detects environment
+  BASE_URL: getApiUrl(),
 
   // API endpoints
   ENDPOINTS: {
