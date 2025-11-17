@@ -1596,6 +1596,26 @@ $(()=>{
           },
           { type: 'divider' },
           {
+            label: '📋 複製網址',
+            action: async () => {
+              const url = `https://youtube.com/watch?v=${data.streamID}`;
+              try {
+                await navigator.clipboard.writeText(url);
+                // Optional: Show a brief success message
+                console.log('URL copied to clipboard:', url);
+              } catch (err) {
+                console.error('Failed to copy URL:', err);
+                // Fallback: create a temporary input element
+                const input = document.createElement('input');
+                input.value = url;
+                document.body.appendChild(input);
+                input.select();
+                document.execCommand('copy');
+                document.body.removeChild(input);
+              }
+            }
+          },
+          {
             label: '🎥 查看 YouTube 影片',
             action: () => window.open(`https://youtube.com/watch?v=${data.streamID}`, '_blank')
           }
