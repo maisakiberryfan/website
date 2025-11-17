@@ -1569,8 +1569,6 @@ $(()=>{
     // Add context menu for streamlist (right-click menu)
     if (p === 'streamlist') {
       jsonTable.on("rowContext", function(e, row) {
-        e.preventDefault();
-
         const data = row.getData();
         const categories = data.categories || [];
 
@@ -1579,23 +1577,29 @@ $(()=>{
           cat.includes('歌枠') || cat.includes('Singing') || cat.includes('singing') || cat.includes('karaoke')
         );
 
-        if (isSingingStream) {
-          showContextMenu(e.pageX, e.pageY, [
-            {
-              label: '📝 補檔用 - 批次編輯歌單',
-              action: () => openBatchEditor(data)
-            },
-            {
-              label: '⚡ 直播用 - 快速新增歌單',
-              action: () => openQuickAdd(data)
-            },
-            { type: 'divider' },
-            {
-              label: '🎥 查看 YouTube 影片',
-              action: () => window.open(`https://youtube.com/watch?v=${data.streamID}`, '_blank')
-            }
-          ]);
+        // Only prevent default context menu for singing streams
+        // Non-singing streams will show browser's default menu
+        if (!isSingingStream) {
+          return;
         }
+
+        e.preventDefault();
+
+        showContextMenu(e.pageX, e.pageY, [
+          {
+            label: '📝 補檔用 - 批次編輯歌單',
+            action: () => openBatchEditor(data)
+          },
+          {
+            label: '⚡ 直播用 - 快速新增歌單',
+            action: () => openQuickAdd(data)
+          },
+          { type: 'divider' },
+          {
+            label: '🎥 查看 YouTube 影片',
+            action: () => window.open(`https://youtube.com/watch?v=${data.streamID}`, '_blank')
+          }
+        ]);
       });
     }
 
