@@ -1654,8 +1654,17 @@ $(()=>{
         }
         const apiField = fieldMapping[field] || field
 
+        // Handle timezone conversion for time field
+        // mutator displays as Taiwan time (YYYY/MM/DD HH:mm)
+        // Need to convert back to ISO 8601 UTC before sending to API
+        let finalValue = value
+        if (field === 'time') {
+          finalValue = dayjs(value, 'YYYY/MM/DD HH:mm').toISOString()
+          console.log(`Time field converted: ${value} (local) → ${finalValue} (UTC)`)
+        }
+
         // PUT update to API
-        const updateData = { [apiField]: value }
+        const updateData = { [apiField]: finalValue }
         await apiRequest('PUT', `${endpoint}/${id}`, updateData)
 
         // Show brief success indicator
