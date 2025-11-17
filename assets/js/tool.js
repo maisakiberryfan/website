@@ -842,7 +842,7 @@ $(()=>{
   //column definition
   var setlistColDef = [
     {title:"streamID", field:"streamID", visible: false, download:true},
-    {title:`local time(${dayjs().format('Z')})`, field:"time", mutator:((cell)=>dayjs(cell).format('YYYY/MM/DD HH:mm')), accessor:((value)=>dayjs(value).utc().format('YYYY-MM-DDTHH:mm:ss[Z]')), width:'150', formatter:dateWithYTLink},
+    {title:`local time(${dayjs().format('Z')})`, field:"time", mutator: (cell) => dayjs(cell).format('YYYY/MM/DD HH:mm'), accessor: (value) => dayjs(value).toISOString(), width:'150', formatter:dateWithYTLink},
     {title:"Seg", field:"segmentNo", sorter:'number', width:60},
     {title:"Track", field:"trackNo", sorter:'number', width:80},
     {
@@ -956,7 +956,7 @@ $(()=>{
         return titleMatch || idMatch;
       }
     },
-    {title:`local time(${dayjs().format('Z')})`, field:"time", mutator:((cell)=>dayjs(cell).format('YYYY/MM/DD HH:mm')), accessor:((value)=>dayjs(value).utc().format('YYYY-MM-DDTHH:mm:ss[Z]'))},
+    {title:`local time(${dayjs().format('Z')})`, field:"time", mutator: (cell) => dayjs(cell).format('YYYY/MM/DD HH:mm'), accessor: (value) => dayjs(value).toISOString()},
     {title:"categories", field:"categories",
       headerFilter:select2,
       headerFilterParams:{field:'categories', multiple: true},
