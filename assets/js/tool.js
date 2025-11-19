@@ -116,18 +116,6 @@ $(()=>{
 
   $('#nav').html(nav)
 
-  //if direct url
-  setContent(location.pathname)
-
-  // Handle hash navigation after content is loaded
-  if (location.hash) {
-    // Wait for content to load before processing hash
-    setTimeout(() => {
-      // Trigger any hash-specific handling for the loaded page
-      window.dispatchEvent(new HashChangeEvent('hashchange'))
-    }, 200)
-  }
-
   $('.setContent').click((e)=>{
     e.preventDefault()
     setContent(e.target.pathname, true)
@@ -146,10 +134,11 @@ $(()=>{
       url = 'pages/main.md'
     }
     else{
-      url = path.slice(1)
+      url = path.slice(1).replace(/\/$/, '')  // Remove trailing slash
+      const normalizedPath = path.replace(/\/$/, '')  // Also normalize path for navbar search
 
       //find title
-      let t = $("#navbarContent a[href='"+path+"']")
+      let t = $("#navbarContent a[href='"+normalizedPath+"']")
         if(t.length==0){
           $('#modalFooter').empty()
           //not found = url mismatch
@@ -190,71 +179,75 @@ $(()=>{
         history.pushState({}, '', path)
       }
     }
-      
-    //load content
-    $.ajax({
-    url:url,
-    //cache:false
-    }).done((d, textStatus, request)=>{
-      document.title = title + '苺咲べりぃ非公式倉庫'
-      let ext = url.split('.')  //check .html
-      //check if there are some exception page
-      if(process=='setlist' || process=='streamlist' || process=='songlist'){
-        let c = `
-              <button id='reloadBtn' class='btn btn-outline-light' data-disable-on-loading="true">
-                <span class="loading-indicator spinner-border spinner-border-sm me-2" style="display: none;"></span>
-                Reload Data
+
+    // Set page title
+    document.title = title + '苺咲べりぃ非公式倉庫'
+
+    // For API endpoints (setlist, streamlist, songlist), skip $.ajax() and directly call configJsonTable
+    // This eliminates duplicate requests (previously $.ajax() + Tabulator's ajaxURL)
+    if(process=='setlist' || process=='streamlist' || process=='songlist'){
+      let c = `
+            <button id='reloadBtn' class='btn btn-outline-light' data-disable-on-loading="true">
+              <span class="loading-indicator spinner-border spinner-border-sm me-2" style="display: none;"></span>
+              Reload Data
+            </button>
+            <button id='edit' class='btn btn-outline-light' data-bs-toggle="button">Edit mode</button>
+            <button id='`+ (process=='streamlist'?'addStreamRow':'addRow') + `' class='btn btn-outline-light addRow' disabled>Add Row</button>`
+            + (process=='streamlist'?`<button id='addFromList' class='btn btn-outline-light addRow' disabled>Add from list(Beta)</button>`:'') +
+            `<button id='deleteRow' class='btn btn-outline-light'>Delete Row</button>
+            <button id='dlcsv' class='btn btn-outline-light'>Get CSV</button>
+            <button id='dljson' class='btn btn-outline-light'>Get JSON</button>`
+            + (process=='setlist'?`
+            <div class="my-2">
+              <button id='addNewSongInSetlist' class='btn btn-success' style="display: none;">
+                ➕ 新增初回歌曲 (Add New Song)
               </button>
-              <button id='edit' class='btn btn-outline-light' data-bs-toggle="button">Edit mode</button>
-              <button id='`+ (process=='streamlist'?'addStreamRow':'addRow') + `' class='btn btn-outline-light addRow' disabled>Add Row</button>`
-              + (process=='streamlist'?`<button id='addFromList' class='btn btn-outline-light addRow' disabled>Add from list(Beta)</button>`:'') +
-              `<button id='deleteRow' class='btn btn-outline-light'>Delete Row</button>
-              <button id='dlcsv' class='btn btn-outline-light'>Get CSV</button>
-              <button id='dljson' class='btn btn-outline-light'>Get JSON</button>`
-              + (process=='setlist'?`
-              <div class="my-2">
-                <button id='addNewSongInSetlist' class='btn btn-success' style="display: none;">
-                  ➕ 新增初回歌曲 (Add New Song)
-                </button>
-              </div>`:'') +
-              `<div id='setTableMsg' class='p-3'>&emsp;</div>
-              <div id='tb' class='table-dark table-striped table-bordered'>progressing...</div>
-                `
-        $("#content").empty().append(c)
+            </div>`:'') +
+            `<div id='setTableMsg' class='p-3'>&emsp;</div>
+            <div id='tb' class='table-dark table-striped table-bordered'>progressing...</div>
+              `
+      $("#content").empty().append(c)
+      configJsonTable(url, process)
+    }
+    // For other content (markdown, HTML), use $.ajax() to fetch content
+    else {
+      $.ajax({
+        url:url,
+        //cache:false
+      }).done((d, textStatus, request)=>{
+        let ext = url.split('.')  //check .html
 
-        configJsonTable(url, process)
-      }
-      else if(ext[1] == 'htm'){
-        $("#content").empty().append(d)
-      }
-      else{
-        var c ="<div id='md'>"+marked.parse(d)+"</div>"
-
-        $("#content").empty().append(c)
-
-        //append latest video info / update info
-        if(url == 'pages/main.md'){
-          getLatest().then(r=>{
-            $("#content").append(r)
-          })
+        if(ext[1] == 'htm'){
+          $("#content").empty().append(d)
         }
+        else{
+          var c ="<div id='md'>"+marked.parse(d)+"</div>"
 
-        //if data is remote, tell the source
-        if(url.includes('http')){
-          if(url.includes('hackmd.io')) {url=url.replace('/download', '')}
-          $("#content").prepend("<div id='source' class='mb-2'>Source: <a href='"+url+"'>"+url+"</a></div>")
+          $("#content").empty().append(c)
+
+          //append latest video info / update info
+          if(url == 'pages/main.md'){
+            getLatest().then(r=>{
+              $("#content").append(r)
+            })
+          }
+
+          //if data is remote, tell the source
+          if(url.includes('http')){
+            if(url.includes('hackmd.io')) {url=url.replace('/download', '')}
+            $("#content").prepend("<div id='source' class='mb-2'>Source: <a href='"+url+"'>"+url+"</a></div>")
+          }
+
+          // Only apply setContentMDTable to Markdown tables (not database-driven tables)
+          setContentMDTable()
         }
-
-        // Only apply setContentMDTable to Markdown tables (not database-driven tables)
-        setContentMDTable()
-      }
-
-    }).fail((jqXHR, textStatus)=>{
-      $('#modalFooter').empty()
-      $('#modalMsg').html('Load page fail：'+ textStatus + '<br>If you think the url is correct, please report in github issues.')
-      $('#modalFooter').append('<button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="urlError">OK</button>')
-      msgModal.show()
-    })
+      }).fail((jqXHR, textStatus)=>{
+        $('#modalFooter').empty()
+        $('#modalMsg').html('Load page fail：'+ textStatus + '<br>If you think the url is correct, please report in github issues.')
+        $('#modalFooter').append('<button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="urlError">OK</button>')
+        msgModal.show()
+      })
+    }
   }
   
   function setContentMDTable(){
@@ -1054,6 +1047,20 @@ $(()=>{
     {title:"Note", field:"songNote", headerFilter:"input"},
   ]
 
+  // Initialize content after all colDef are defined
+  // (Must be after Line 1047 to ensure setlistColDef, streamlistColDef, songlistColDef are initialized)
+  //if direct url
+  setContent(location.pathname)
+
+  // Handle hash navigation after content is loaded
+  if (location.hash) {
+    // Wait for content to load before processing hash
+    setTimeout(() => {
+      // Trigger any hash-specific handling for the loaded page
+      window.dispatchEvent(new HashChangeEvent('hashchange'))
+    }, 200)
+  }
+
   //column definition function
   function multiLineLinkFormat(cell){
     cell.getElement().style.whiteSpace ='pre-line'  //set multi line
@@ -1513,6 +1520,7 @@ $(()=>{
 
   //set table
   function configJsonTable(u, p){
+    var colDef
 
     if(p == 'setlist'){
       colDef=setlistColDef
@@ -1522,6 +1530,13 @@ $(()=>{
     }
     if(p == 'songlist'){
       colDef=songlistColDef
+    }
+
+    // Error handling: if colDef is still undefined, show error message
+    if(!colDef){
+      console.error('[ERROR] Invalid table type:', p);
+      $('#tb').html('<div class="alert alert-danger">Error: Invalid table type "' + p + '". Please reload the page.</div>');
+      return;
     }
 
     // Initial view mode: remove editors to allow row selection
