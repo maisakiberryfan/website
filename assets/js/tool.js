@@ -24,6 +24,19 @@ window.marked = marked
 window.dayjs = dayjs
 window.Fancybox = Fancybox
 
+let fancyboxPromise
+window.loadFancybox = async () => {
+  if (window.Fancybox) return window.Fancybox
+  if (!fancyboxPromise) {
+    fancyboxPromise = import('@fancyapps/ui').then(mod => {
+      const fb = mod.Fancybox || mod.default || mod
+      window.Fancybox = fb
+      return fb
+    })
+  }
+  return fancyboxPromise
+}
+
 // Load select2 after jQuery is set on window (plugin expects global jQuery)
 {
   const mod = await import('select2/dist/js/select2.full.js')

@@ -29,19 +29,19 @@
     let data = sourceArray.map(e => {
       //第一張要帶連結
       let item =
-        `<figure class="col figure figure-cloth"><a href='${itemsBaseURL}${e.date}/s1.webp' data-fancybox=${e.date}><img src="${itemsBaseURL}${e.date}/s1.webp" class="figure-img" width="324" height="576"></a>`
+        `<figure class="col figure figure-cloth"><a href='${itemsBaseURL}${e.date}/s1.webp' data-fancybox="${e.date}"><img src="${itemsBaseURL}${e.date}/s1.webp" class="figure-img" width="324" height="576"></a>`
 
       let itemSideView = ''
 
       for (let i = 1; i < e.count; i++) {
-        item = item + `<a href='${itemsBaseURL}${e.date}/s${i + 1}.webp' data-fancybox=${e.date}></a>`
+        item = item + `<a href='${itemsBaseURL}${e.date}/s${i + 1}.webp' data-fancybox="${e.date}"></a>`
       }
 
       if (e.sideView > 0) {
         //有四面圖另外處理
-        itemSideView = `<a href="${itemsBaseURL}${e.date}/c1.webp" data-fancybox=${e.date}_s>四面圖</a>`
+        itemSideView = `<a href="${itemsBaseURL}${e.date}/c1.webp" data-fancybox="${e.date}_s">四面圖</a>`
         for (let j = 1; j < e.sideView; j++) {
-          itemSideView = itemSideView + `<a href="${itemsBaseURL}${e.date}/c${j + 1}.webp" data-fancybox=${e.date}_s></a>`
+          itemSideView = itemSideView + `<a href="${itemsBaseURL}${e.date}/c${j + 1}.webp" data-fancybox="${e.date}_s"></a>`
         }
       }
 
@@ -58,8 +58,25 @@
 
     $('#pic').html(data.join(''))
 
-    Fancybox.bind("[data-fancybox]", {
-      Hash: true
+    // Lazy load Fancybox and bind
+    window.loadFancybox().then(Fancybox => {
+      Fancybox.bind('[data-fancybox]', {
+        Hash: true,
+        Thumbs: {
+          autoStart: true
+        },
+        Toolbar: {
+          display: [
+            { id: 'counter', position: 'left' },
+            'zoom',
+            'close'
+          ]
+        },
+        Carousel: {
+          transition: 'fade',
+          infinite: false
+        }
+      })
     })
 
     // Handle URL hash navigation
@@ -67,64 +84,49 @@
       const hash = window.location.hash.substring(1) // Remove #
       if (!hash) return
 
-      // Parse hash format: date or date-index
       const parts = hash.split('-')
       const date = parts[0]
       const index = parts[1] ? parseInt(parts[1]) - 1 : 0 // Convert to 0-based index
 
-      // Find the outfit data
       const outfit = sourceArray.find(e => e.date === date)
       if (!outfit) return
 
       // Wait for DOM to be ready with all images
       setTimeout(() => {
-        // Check if Fancybox is already handling this hash
-        if (Fancybox.getInstance()) return
-
-        // Get all actual links from the DOM for this outfit group
+        // Build gallery items for this outfit
         const existingLinks = document.querySelectorAll(`[data-fancybox="${date}"]`)
+        const galleryItems = existingLinks.length > 0
+          ? Array.from(existingLinks).map(link => ({ src: link.href, thumb: link.href }))
+          : (() => {
+              const items = []
+              for (let i = 0; i < outfit.count; i++) {
+                items.push({ src: `${itemsBaseURL}${outfit.date}/s${i + 1}.webp`, thumb: `${itemsBaseURL}${outfit.date}/s${i + 1}.webp` })
+              }
+              if (outfit.sideView > 0) {
+                for (let j = 0; j < outfit.sideView; j++) {
+                  items.push({ src: `${itemsBaseURL}${outfit.date}/c${j + 1}.webp`, thumb: `${itemsBaseURL}${outfit.date}/c${j + 1}.webp` })
+                }
+              }
+              return items
+            })()
 
-        if (existingLinks.length > 0) {
-          // Use existing DOM links - this ensures we get the exact same items as the HTML
-          const galleryItems = Array.from(existingLinks).map(link => ({
-            src: link.href,
-            thumb: link.href
-          }))
+        if (galleryItems.length === 0) return
 
-          // Open Fancybox programmatically
+        window.loadFancybox().then(() => {
           Fancybox.show(galleryItems, {
             startIndex: Math.min(index, galleryItems.length - 1),
-            groupAll: true,
-            Hash: true
+            Hash: true,
+            Thumbs: { autoStart: true },
+            Toolbar: {
+              display: [
+                { id: 'counter', position: 'left' },
+                'zoom',
+                'close'
+              ]
+            },
+            Carousel: { transition: 'fade', infinite: false }
           })
-        } else {
-          // Fallback: Build gallery items manually (original method)
-          const galleryItems = []
-          for (let i = 0; i < outfit.count; i++) {
-            galleryItems.push({
-              src: `${itemsBaseURL}${outfit.date}/s${i + 1}.webp`,
-              thumb: `${itemsBaseURL}${outfit.date}/s${i + 1}.webp`
-            })
-          }
-
-          // Add side view images if available
-          if (outfit.sideView > 0) {
-            for (let j = 0; j < outfit.sideView; j++) {
-              galleryItems.push({
-                src: `${itemsBaseURL}${outfit.date}/c${j + 1}.webp`,
-                thumb: `${itemsBaseURL}${outfit.date}/c${j + 1}.webp`
-              })
-            }
-          }
-
-          if (galleryItems.length > 0) {
-            Fancybox.show(galleryItems, {
-              startIndex: Math.min(index, galleryItems.length - 1),
-              groupAll: true,
-              Hash: true
-            })
-          }
-        }
+        })
       }, 100)
     }
 
