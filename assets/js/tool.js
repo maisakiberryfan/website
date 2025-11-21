@@ -5,14 +5,12 @@ import { TabulatorFull as Tabulator } from 'tabulator-tables'
 import { marked } from 'marked'
 import dayjs from 'dayjs'
 import utc from 'dayjs/plugin/utc'
-import videojs from 'video.js'
 import { Fancybox } from '@fancyapps/ui'
 
 // Local CSS imports (bundled)
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'select2/dist/css/select2.min.css'
 import '@fancyapps/ui/dist/fancybox/fancybox.css'
-import 'video.js/dist/video-js.min.css'
 import '../css/tabulator-bootstrap5-custom.css'
 
 // API configuration
@@ -24,7 +22,6 @@ window.bootstrap = bootstrap
 window.Tabulator = Tabulator
 window.marked = marked
 window.dayjs = dayjs
-window.videojs = videojs
 window.Fancybox = Fancybox
 
 // Load select2 after jQuery is set on window (plugin expects global jQuery)
