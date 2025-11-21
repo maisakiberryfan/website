@@ -148,7 +148,8 @@
   box-sizing: border-box;
   margin-top: 2px;
   width: 100%;
-  text-align: center;
+  text-align: left;
+  overflow: visible;
 }
 .tabulator .tabulator-header .tabulator-col .tabulator-header-filter textarea {
   height: auto !important;
@@ -1637,6 +1638,119 @@ body.tabulator-print-fullscreen-hide > *:not(.tabulator-print-fullscreen) {
   box-shadow: 0 0 0 0.2rem rgba(var(--bs-primary-rgb, 13, 110, 253), 0.25);
   color: var(--bs-body-color, #212529);
   background-color: var(--bs-body-bg, #fff);
+}
+.tabulator .tabulator-header-filter {
+  text-align: left;
+  white-space: normal;
+  overflow: visible;
+}
+.tabulator .tabulator-header-filter .select2-container {
+  display: block !important;
+  width: 100% !important;
+  min-width: 0;
+  text-align: left !important;
+  z-index: 20;
+}
+.tabulator .tabulator-header-filter .select2-container--open {
+  z-index: 4000 !important;
+}
+.tabulator .tabulator-header-filter .select2-selection--single, .tabulator .tabulator-header-filter .select2-selection--multiple {
+  font-size: 0.95rem;
+  min-height: 2.05rem;
+  padding: 0;
+  border-radius: 0.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.15rem;
+  line-height: 1.3;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  text-align: left;
+}
+.tabulator .tabulator-header-filter .select2-selection__rendered {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.2rem;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  text-align: left !important;
+  padding: 0.2rem 0.35rem;
+  margin: 0;
+  white-space: normal;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  box-sizing: border-box;
+}
+.tabulator .tabulator-header-filter .select2-selection--single {
+  padding: 0;
+}
+.tabulator .tabulator-header-filter .select2-selection--single .select2-selection__rendered {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  padding: 0.3rem 1.75rem 0.3rem 0.5rem;
+  line-height: 1.2;
+  gap: 0;
+  flex-wrap: nowrap;
+}
+.tabulator .tabulator-header-filter .select2-selection--single .select2-selection__placeholder {
+  text-align: left !important;
+}
+.tabulator .tabulator-header-filter .select2-selection--multiple {
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+.tabulator .tabulator-header-filter .select2-selection--multiple .select2-selection__rendered {
+  flex: 1 1 100%;
+  white-space: normal;
+  align-content: flex-start;
+  overflow: visible;
+  max-height: none;
+}
+.tabulator .tabulator-header-filter .select2-selection--multiple .select2-selection__rendered:empty {
+  padding: 0;
+}
+.tabulator .tabulator-header-filter .select2-selection--multiple .select2-selection__choice {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.2rem;
+  padding: 0.15rem 0.3rem;
+  margin: 0.05rem 0.3rem 0.05rem 0;
+  float: none;
+  white-space: normal;
+  word-break: break-word;
+  line-height: 1.2;
+}
+.tabulator .tabulator-header-filter .select2-selection--multiple .select2-search--inline {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  flex: 1 1 8ch;
+  min-width: 6ch;
+  align-self: flex-start;
+}
+.tabulator .tabulator-header-filter .select2-selection--multiple .select2-search__field {
+  padding: 0;
+  margin: 0;
+  text-align: left !important;
+  line-height: 1.2;
+  height: 1.2rem;
+  min-height: 1.2rem;
+  flex: 1 1 auto;
+}
+.tabulator .tabulator-header, .tabulator .tabulator-header .tabulator-header-contents, .tabulator .tabulator-header .tabulator-header-contents .tabulator-headers, .tabulator .tabulator-header .tabulator-col, .tabulator .tabulator-header .tabulator-col .tabulator-col-content {
+  overflow: visible;
+}
+.tabulator .select2-container {
+  z-index: 20;
+}
+.tabulator .select2-container--open {
+  z-index: 4000 !important;
 }
 .tabulator .tabulator-paginator,
 .tabulator .tabulator-page {
