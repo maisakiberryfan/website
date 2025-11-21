@@ -148,8 +148,7 @@
   box-sizing: border-box;
   margin-top: 2px;
   width: 100%;
-  text-align: left;
-  overflow: visible;
+  text-align: center;
 }
 .tabulator .tabulator-header .tabulator-col .tabulator-header-filter textarea {
   height: auto !important;
@@ -1654,7 +1653,8 @@ body.tabulator-print-fullscreen-hide > *:not(.tabulator-print-fullscreen) {
 .tabulator .tabulator-header-filter .select2-container--open {
   z-index: 4000 !important;
 }
-.tabulator .tabulator-header-filter .select2-selection--single, .tabulator .tabulator-header-filter .select2-selection--multiple {
+.tabulator .tabulator-header-filter .select2-selection--single,
+.tabulator .tabulator-header-filter .select2-selection--multiple {
   font-size: 0.95rem;
   min-height: 2.05rem;
   padding: 0;
@@ -1742,15 +1742,6 @@ body.tabulator-print-fullscreen-hide > *:not(.tabulator-print-fullscreen) {
   height: 1.2rem;
   min-height: 1.2rem;
   flex: 1 1 auto;
-}
-.tabulator .tabulator-header, .tabulator .tabulator-header .tabulator-header-contents, .tabulator .tabulator-header .tabulator-header-contents .tabulator-headers, .tabulator .tabulator-header .tabulator-col, .tabulator .tabulator-header .tabulator-col .tabulator-col-content {
-  overflow: visible;
-}
-.tabulator .select2-container {
-  z-index: 20;
-}
-.tabulator .select2-container--open {
-  z-index: 4000 !important;
 }
 .tabulator .tabulator-paginator,
 .tabulator .tabulator-page {
