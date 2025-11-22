@@ -31,11 +31,15 @@ export const API_CONFIG = {
   }
 }
 
-// API request helper with error handling and retry
+// ETag cache storage (in-memory)
+const etagCache = new Map() // { endpoint: { etag, data } }
+
+// API request helper with error handling, retry, and ETag support
 export async function apiRequest(method, endpoint, data = null, options = {}) {
   const url = `${API_CONFIG.BASE_URL}${endpoint}`
+  const methodUpper = method.toUpperCase()
   const config = {
-    method: method.toUpperCase(),
+    method: methodUpper,
     headers: {
       'Content-Type': 'application/json',
       ...options.headers
@@ -43,7 +47,13 @@ export async function apiRequest(method, endpoint, data = null, options = {}) {
     ...options
   }
 
-  if (data && (method.toUpperCase() === 'POST' || method.toUpperCase() === 'PUT' || method.toUpperCase() === 'PATCH')) {
+  // For GET requests, add If-None-Match header if ETag exists in cache
+  if (methodUpper === 'GET' && etagCache.has(endpoint)) {
+    const cached = etagCache.get(endpoint)
+    config.headers['If-None-Match'] = cached.etag
+  }
+
+  if (data && (methodUpper === 'POST' || methodUpper === 'PUT' || methodUpper === 'PATCH')) {
     config.body = JSON.stringify(data)
   }
 
@@ -62,13 +72,36 @@ export async function apiRequest(method, endpoint, data = null, options = {}) {
 
       clearTimeout(timeoutId)
 
+      // Handle 304 Not Modified - return cached data
+      if (response.status === 304) {
+        const cached = etagCache.get(endpoint)
+        if (cached) {
+          console.log(`[ETag] 304 Not Modified for ${endpoint}, using cached data`)
+          return cached.data
+        }
+      }
+
       if (!response.ok) {
         const errorData = await response.json().catch(() => ({}))
         throw new Error(errorData.error?.message || `HTTP ${response.status}: ${response.statusText}`)
       }
 
       const result = await response.json()
-      return result.data || result
+      const resultData = result.data || result
+
+      // For GET requests, cache the ETag and data
+      if (methodUpper === 'GET' && response.headers.has('etag')) {
+        const etag = response.headers.get('etag')
+        etagCache.set(endpoint, { etag, data: resultData })
+        console.log(`[ETag] Cached ${endpoint} with ETag: ${etag}`)
+      }
+
+      // For mutating requests (POST/PUT/DELETE), invalidate related caches
+      if (methodUpper !== 'GET') {
+        invalidateCache(endpoint)
+      }
+
+      return resultData
 
     } catch (error) {
       lastError = error
@@ -87,6 +120,23 @@ export async function apiRequest(method, endpoint, data = null, options = {}) {
   }
 
   throw lastError
+}
+
+// Invalidate cache for related endpoints after mutations
+function invalidateCache(endpoint) {
+  // Determine which caches to clear based on the mutation endpoint
+  if (endpoint.includes('/songlist')) {
+    etagCache.delete('/songlist')
+    etagCache.delete('/setlist')  // setlist includes song data
+    console.log('[ETag] Invalidated cache: songlist, setlist')
+  } else if (endpoint.includes('/streamlist')) {
+    etagCache.delete('/streamlist')
+    etagCache.delete('/setlist')  // setlist includes stream data
+    console.log('[ETag] Invalidated cache: streamlist, setlist')
+  } else if (endpoint.includes('/setlist')) {
+    etagCache.delete('/setlist')
+    console.log('[ETag] Invalidated cache: setlist')
+  }
 }
 
 // Loading state management
