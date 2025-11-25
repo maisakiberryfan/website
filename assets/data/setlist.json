@@ -1,5 +1,181 @@
 [
 	{
+		"date": "2025-11-25T12:00:00Z",
+		"track": 1,
+		"song": "レプリカ",
+		"singer": "苺咲べりぃ",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=tXzr8YPCHYo"
+	},
+	{
+		"date": "2025-11-25T12:00:00Z",
+		"track": 2,
+		"song": "アイノカタチ",
+		"singer": "MISIA",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=tXzr8YPCHYo"
+	},
+	{
+		"date": "2025-11-25T12:00:00Z",
+		"track": 3,
+		"song": "明日への手紙",
+		"singer": "手嶌葵",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=tXzr8YPCHYo"
+	},
+	{
+		"date": "2025-11-25T12:00:00Z",
+		"track": 4,
+		"song": "花になって",
+		"singer": "緑黄色社会",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=tXzr8YPCHYo"
+	},
+	{
+		"date": "2025-11-25T12:00:00Z",
+		"track": 5,
+		"song": "Mela!",
+		"singer": "緑黄色社会",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=tXzr8YPCHYo"
+	},
+	{
+		"date": "2025-11-25T12:00:00Z",
+		"track": 6,
+		"song": "とくべチュ、して",
+		"singer": "=LOVE",
+		"note": "初回(待確認)",
+		"YTLink": "https://www.youtube.com/watch?v=tXzr8YPCHYo"
+	},
+	{
+		"date": "2025-11-25T12:00:00Z",
+		"track": 7,
+		"song": "シンデレラストーリー",
+		"singer": "芹澤優",
+		"note": "初回(待確認)",
+		"YTLink": "https://www.youtube.com/watch?v=tXzr8YPCHYo"
+	},
+	{
+		"date": "2025-11-25T12:00:00Z",
+		"track": 8,
+		"song": "あなたに好きと言われたい",
+		"singer": "奥華子",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=tXzr8YPCHYo"
+	},
+	{
+		"date": "2025-11-25T12:00:00Z",
+		"track": 9,
+		"song": "恋",
+		"singer": "奥華子",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=tXzr8YPCHYo"
+	},
+	{
+		"date": "2025-11-25T12:00:00Z",
+		"track": 10,
+		"song": "プラネタリウム",
+		"singer": "いきものがかり",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=tXzr8YPCHYo"
+	},
+	{
+		"date": "2025-11-25T12:00:00Z",
+		"track": 11,
+		"song": "クラゲ、流れ星",
+		"singer": "大塚愛",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=tXzr8YPCHYo"
+	},
+	{
+		"date": "2025-11-25T12:00:00Z",
+		"track": 12,
+		"song": "想い出がいっぱい",
+		"singer": "H2O",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=tXzr8YPCHYo"
+	},
+	{
+		"date": "2025-11-25T12:00:00Z",
+		"track": 13,
+		"song": "PRIDE",
+		"singer": "今井美樹",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=tXzr8YPCHYo"
+	},
+	{
+		"date": "2025-11-25T12:00:00Z",
+		"track": 14,
+		"song": "冬のうた",
+		"singer": "Kiroro",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=tXzr8YPCHYo"
+	},
+	{
+		"date": "2025-11-25T12:00:00Z",
+		"track": 15,
+		"song": "未来へ",
+		"singer": "Kiroro",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=tXzr8YPCHYo"
+	},
+	{
+		"date": "2025-11-25T12:00:00Z",
+		"track": 16,
+		"song": "私たちになりたくて",
+		"singer": "藤谷美和子",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=tXzr8YPCHYo"
+	},
+	{
+		"date": "2025-11-25T12:00:00Z",
+		"track": 17,
+		"song": "風も空もきっと…",
+		"singer": "観月ありさ",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=tXzr8YPCHYo"
+	},
+	{
+		"date": "2025-11-25T12:00:00Z",
+		"track": 18,
+		"song": "亜麻色の髪の乙女",
+		"singer": "島谷ひとみ",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=tXzr8YPCHYo"
+	},
+	{
+		"date": "2025-11-25T12:00:00Z",
+		"track": 19,
+		"song": "YUME日和",
+		"singer": "島谷ひとみ",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=tXzr8YPCHYo"
+	},
+	{
+		"date": "2025-11-25T12:00:00Z",
+		"track": 20,
+		"song": "アムリタ",
+		"singer": "牧野由依",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=tXzr8YPCHYo"
+	},
+	{
+		"date": "2025-11-25T12:00:00Z",
+		"track": 21,
+		"song": "ホシキラ",
+		"singer": "ランカ・リー(中島愛)",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=tXzr8YPCHYo"
+	},
+	{
+		"date": "2025-11-25T12:00:00Z",
+		"track": 22,
+		"song": "クリスマスソング",
+		"singer": "back number",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=tXzr8YPCHYo"
+	},
+	{
 		"date": "2025-11-24T12:00:00Z",
 		"track": 1,
 		"song": "全肯定ハピハピキュートSTORY！",
