@@ -1,5 +1,165 @@
 [
 	{
+		"date": "2025-11-26T12:00:00Z",
+		"track": 1,
+		"song": "キミのせいだよ",
+		"singer": "苺咲べりぃ",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=CVaI9XoXJso"
+	},
+	{
+		"date": "2025-11-26T12:00:00Z",
+		"track": 2,
+		"song": "デビきゅー",
+		"singer": "芹澤優",
+		"note": "初回(待確認)",
+		"YTLink": "https://www.youtube.com/watch?v=CVaI9XoXJso"
+	},
+	{
+		"date": "2025-11-26T12:00:00Z",
+		"track": 3,
+		"song": "最悪な日でもあなたが好き。",
+		"singer": "芹澤優",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=CVaI9XoXJso"
+	},
+	{
+		"date": "2025-11-26T12:00:00Z",
+		"track": 4,
+		"song": "ダダダダ天使",
+		"singer": "ナナヲアカリ",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=CVaI9XoXJso"
+	},
+	{
+		"date": "2025-11-26T12:00:00Z",
+		"track": 5,
+		"song": "ジングルベルがとまらない",
+		"singer": "Aqours",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=CVaI9XoXJso"
+	},
+	{
+		"date": "2025-11-26T12:00:00Z",
+		"track": 6,
+		"song": "Winter Bells",
+		"singer": "倉木麻衣",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=CVaI9XoXJso"
+	},
+	{
+		"date": "2025-11-26T12:00:00Z",
+		"track": 7,
+		"song": "MAGIC",
+		"singer": "愛内里菜",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=CVaI9XoXJso"
+	},
+	{
+		"date": "2025-11-26T12:00:00Z",
+		"track": 8,
+		"song": "とくべチュ、して",
+		"singer": "=LOVE",
+		"note": "初回(待確認)",
+		"YTLink": "https://www.youtube.com/watch?v=CVaI9XoXJso"
+	},
+	{
+		"date": "2025-11-26T12:00:00Z",
+		"track": 9,
+		"song": "シンデレラストーリー",
+		"singer": "芹澤優",
+		"note": "初回(待確認)",
+		"YTLink": "https://www.youtube.com/watch?v=CVaI9XoXJso"
+	},
+	{
+		"date": "2025-11-26T12:00:00Z",
+		"track": 10,
+		"song": "Precious",
+		"singer": "伊藤由奈",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=CVaI9XoXJso"
+	},
+	{
+		"date": "2025-11-26T12:00:00Z",
+		"track": 11,
+		"song": "心做し",
+		"singer": "蝶々P",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=CVaI9XoXJso"
+	},
+	{
+		"date": "2025-11-26T12:00:00Z",
+		"track": 12,
+		"song": "Fantastic future",
+		"singer": "田村ゆかり",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=CVaI9XoXJso"
+	},
+	{
+		"date": "2025-11-26T12:00:00Z",
+		"track": 13,
+		"song": "Love marginal",
+		"singer": "Printemps",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=CVaI9XoXJso"
+	},
+	{
+		"date": "2025-11-26T12:00:00Z",
+		"track": 14,
+		"song": "チキチキバンバン",
+		"singer": "QUEENDOM",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=CVaI9XoXJso"
+	},
+	{
+		"date": "2025-11-26T12:00:00Z",
+		"track": 15,
+		"song": "気分上々↑↑",
+		"singer": "mihimaru GT",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=CVaI9XoXJso"
+	},
+	{
+		"date": "2025-11-26T12:00:00Z",
+		"track": 16,
+		"song": "ふわふわ時間",
+		"singer": "放課後ティータイム",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=CVaI9XoXJso"
+	},
+	{
+		"date": "2025-11-26T12:00:00Z",
+		"track": 17,
+		"song": "Don't say \"lazy\"",
+		"singer": "放課後ティータイム",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=CVaI9XoXJso"
+	},
+	{
+		"date": "2025-11-26T12:00:00Z",
+		"track": 18,
+		"song": "地球最後の告白を",
+		"singer": "kemu",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=CVaI9XoXJso"
+	},
+	{
+		"date": "2025-11-26T12:00:00Z",
+		"track": 19,
+		"song": "最高の片想い",
+		"singer": "タイナカサチ",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=CVaI9XoXJso"
+	},
+	{
+		"date": "2025-11-26T12:00:00Z",
+		"track": 20,
+		"song": "放課後オーバーフロウ",
+		"singer": "ランカ・リー(中島愛)",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=CVaI9XoXJso"
+	},
+	{
 		"date": "2025-11-25T12:00:00Z",
 		"track": 1,
 		"song": "レプリカ",
