@@ -67,6 +67,7 @@ export async function apiRequest(method, endpoint, data = null, options = {}) {
 
       const response = await fetch(url, {
         ...config,
+        cache: 'no-store', // 強制每次重驗證，配合 ETag
         signal: controller.signal
       })
 
