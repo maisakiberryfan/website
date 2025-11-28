@@ -872,7 +872,10 @@ $(()=>{
   //column definition
   var setlistColDef = [
     {title:"streamID", field:"streamID", visible: false, download:true},
-    {title:`local time(${dayjs().format('Z')})`, field:"time", mutator: (cell) => dayjs(cell).format('YYYY/MM/DD HH:mm'), accessor: (value) => dayjs(value).toISOString(), width:'150', formatter:dateWithYTLink},
+    {title:`local time(${dayjs().format('Z')})`, field:"time", mutator: (cell) => dayjs(cell).format('YYYY/MM/DD HH:mm'), accessor: (value) => {
+      const date = dayjs(value);
+      return date.isValid() ? date.toISOString() : value;
+    }, width:'150', formatter:dateWithYTLink},
     {title:"Seg", field:"segmentNo", sorter:'number', width:60},
     {title:"Track", field:"trackNo", sorter:'number', width:80},
     {
@@ -986,7 +989,10 @@ $(()=>{
         return titleMatch || idMatch;
       }
     },
-    {title:`local time(${dayjs().format('Z')})`, field:"time", mutator: (cell) => dayjs(cell).format('YYYY/MM/DD HH:mm'), accessor: (value) => dayjs(value).toISOString()},
+    {title:`local time(${dayjs().format('Z')})`, field:"time", mutator: (cell) => dayjs(cell).format('YYYY/MM/DD HH:mm'), accessor: (value) => {
+      const date = dayjs(value);
+      return date.isValid() ? date.toISOString() : value;
+    }},
     {title:"categories", field:"categories",
       headerFilter:select2,
       headerFilterParams:{field:'categories', multiple: true},
@@ -1735,7 +1741,8 @@ $(()=>{
         // Need to convert back to ISO 8601 UTC before sending to API
         let finalValue = value
         if (field === 'time') {
-          finalValue = dayjs(value, 'YYYY/MM/DD HH:mm').toISOString()
+          const date = dayjs(value, 'YYYY/MM/DD HH:mm')
+          finalValue = date.isValid() ? date.toISOString() : value
           console.log(`Time field converted: ${value} (local) → ${finalValue} (UTC)`)
         }
 
@@ -1785,7 +1792,16 @@ $(()=>{
 
     if(canEdit()){
       // 進入編輯模式：動態添加 editor
-      const editableColDef = colDef.map(col => {
+      // 從表格實例獲取當前列定義
+      const currentColDef = jsonTable.getColumnDefinitions()
+
+      // 安全檢查：確保 API 返回有效數組
+      if (!Array.isArray(currentColDef) || currentColDef.length === 0) {
+        console.error('[ERROR] Failed to get column definitions')
+        return
+      }
+
+      const editableColDef = currentColDef.map(col => {
         // Songlist: Use bilingual editor for songName and artist
         if (getProcess() === 'songlist') {
           if (col.field === 'songName') {
@@ -1842,7 +1858,16 @@ $(()=>{
     }
     else{
       // 離開編輯模式：恢復原始欄位定義（移除特定 editor 避免攔截點擊）
-      const viewColDef = colDef.map(col => {
+      // 從表格實例獲取當前列定義
+      const currentColDef = jsonTable.getColumnDefinitions()
+
+      // 安全檢查：確保 API 返回有效數組
+      if (!Array.isArray(currentColDef) || currentColDef.length === 0) {
+        console.error('[ERROR] Failed to get column definitions')
+        return
+      }
+
+      const viewColDef = currentColDef.map(col => {
         const newCol = { ...col, editable: false }
         // 移除 songName 的 editor 以允許正常的 row selection
         if (col.field === 'songName' && col.editor) {
@@ -1852,6 +1877,22 @@ $(()=>{
         return newCol
       })
       jsonTable.setColumns(viewColDef)
+
+      // 重新載入資料以確保與後端同步
+      const currentProcess = getProcess()
+      const endpoint = API_CONFIG.ENDPOINTS[currentProcess]
+      if (endpoint) {
+        console.log(`[Edit Mode] Reloading ${currentProcess} data from API after exiting edit mode`)
+        apiRequest('GET', endpoint)
+          .then(data => {
+            jsonTable.setData(data)
+            console.log(`[Edit Mode] Successfully reloaded ${data.length} rows`)
+          })
+          .catch(error => {
+            console.error(`[Edit Mode] Failed to reload data:`, error)
+            showError(`Failed to reload data: ${error.message}`)
+          })
+      }
 
       // Hide add new song button
       $('#addNewSongInSetlist').hide()
