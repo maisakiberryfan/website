@@ -1896,9 +1896,8 @@ $(()=>{
 
       // Hide add new song button
       $('#addNewSongInSetlist').hide()
-      //tell user upload to github
-      $('#setTableMsg').text('Please upload the JSON to github.Thanks.').addClass('text-bg-info')
-      $('#dljson').click()
+      //tell user editing completed
+      $('#setTableMsg').text('編輯完成').addClass('text-bg-info')
       setTimeout(()=>{
         $('#setTableMsg').html('&emsp;').removeClass('text-bg-info')
       },5000)
