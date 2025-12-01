@@ -18,6 +18,11 @@ export const API_CONFIG = {
     songlistArtists: '/songlist/artists',
     streamlist: '/streamlist',
     setlist: '/setlist',
+    aliases: '/aliases',
+    aliasesGrouped: '/aliases/grouped',
+    aliasesQuickAdd: '/aliases/quick-add',
+    aliasesTest: '/aliases/test',
+    aliasesBatch: '/aliases/batch',
     health: '/health'
   },
 

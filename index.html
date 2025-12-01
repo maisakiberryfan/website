@@ -464,6 +464,134 @@
 		</div>
 	</div>
 
+	<!-- Modal: Batch Add Aliases -->
+	<div class="modal fade" id="modalBatchAddAliases" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="modalTitleBatchAddAliases" aria-hidden="true">
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h1 class="modal-title fs-5" id="modalTitleBatchAddAliases">📦 批次新增別名 - Batch Add Aliases</h1>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<div class="mb-3">
+						<label for="batchAliasType" class="form-label">類型 (Type)</label>
+						<select class="form-select" id="batchAliasType">
+							<option value="artist">歌手 (Artist)</option>
+							<option value="title">歌名 (Title)</option>
+						</select>
+					</div>
+					<div class="mb-3">
+						<label for="batchAliasJSON" class="form-label">JSON 格式 (批次匯入)</label>
+						<textarea class="form-control font-monospace" id="batchAliasJSON" rows="10" placeholder='{"釘宮理恵": ["kugimiya rie", "釘宮"], "μ\'s": ["ミューズ", "muse"]}'></textarea>
+						<div class="form-text">
+							格式：{"標準名稱": ["別名1", "別名2"], ...}
+						</div>
+					</div>
+					<div class="mb-3">
+						<div class="alert alert-info" role="alert">
+							<strong>說明：</strong>
+							<ul class="mb-0">
+								<li>JSON 格式：物件的 key 為標準名稱，value 為別名陣列</li>
+								<li>範例：{"釘宮理恵": ["kugimiya rie", "釘宮"]}</li>
+								<li>每個別名將建立為獨立的資料列</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+					<button type="button" class="btn btn-primary" id="saveBatchAliases">
+						<i class="bi bi-upload"></i> Upload
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Modal: Quick Add Alias -->
+	<div class="modal fade" id="modalQuickAddAlias" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="modalTitleQuickAddAlias" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h1 class="modal-title fs-5" id="modalTitleQuickAddAlias">⚡ 快速新增別名 - Quick Add Alias</h1>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<div class="mb-3">
+						<label for="quickAliasType" class="form-label">類型 (Type)</label>
+						<select class="form-select" id="quickAliasType">
+							<option value="artist">歌手 (Artist)</option>
+							<option value="title">歌名 (Title)</option>
+						</select>
+					</div>
+					<div class="mb-3">
+						<label for="quickCanonicalName" class="form-label">標準名稱 (Canonical Name)</label>
+						<select class="form-select" id="quickCanonicalName">
+							<option value="">請選擇...</option>
+						</select>
+						<div class="form-text">
+							請從清單中選擇資料庫中已存在的歌曲或歌手
+						</div>
+					</div>
+					<div class="mb-3">
+						<label for="quickAliasValue" class="form-label">別名 (Alias)</label>
+						<input type="text" class="form-control" id="quickAliasValue" placeholder="例：kugimiya rie">
+						<div class="form-text">
+							輸入這首歌/歌手的另一種寫法
+						</div>
+					</div>
+					<div class="mb-3">
+						<label for="quickAliasNote" class="form-label">備註 (Note) <span class="text-muted">(可選)</span></label>
+						<input type="text" class="form-control" id="quickAliasNote" placeholder="例：Romaji name">
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+					<button type="button" class="btn btn-primary" id="saveQuickAlias">
+						<i class="bi bi-plus-circle"></i> Add
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Modal: Test Alias -->
+	<div class="modal fade" id="modalTestAlias" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="modalTitleTestAlias" aria-hidden="true">
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h1 class="modal-title fs-5" id="modalTitleTestAlias">🧪 測試別名匹配 - Test Alias Matching</h1>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<div class="mb-3">
+						<label for="testAliasType" class="form-label">類型 (Type)</label>
+						<select class="form-select" id="testAliasType">
+							<option value="artist">歌手 (Artist)</option>
+							<option value="title">歌名 (Title)</option>
+						</select>
+					</div>
+					<div class="mb-3">
+						<label for="testAliasInput" class="form-label">測試輸入 (Input Text)</label>
+						<input type="text" class="form-control" id="testAliasInput" placeholder="輸入要測試的文字">
+					</div>
+					<div class="mb-3">
+						<button type="button" class="btn btn-primary" id="runTestAlias">
+							<i class="bi bi-search"></i> Test
+						</button>
+					</div>
+					<div id="testAliasResults" class="mt-3" style="display: none;">
+						<h6>匹配結果 (Matching Results):</h6>
+						<div id="testAliasResultsContent"></div>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
 	<!-- Connection Error Alert (fixed position at top) -->
 	<div id="connectionErrorAlert" class="alert alert-danger alert-dismissible fade" role="alert" style="display: none; position: fixed; top: 20px; left: 50%; transform: translateX(-50%); z-index: 9999; min-width: 400px; max-width: 600px; box-shadow: 0 4px 12px rgba(0,0,0,0.3);">
 		<h5 class="alert-heading">

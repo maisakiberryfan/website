@@ -83,6 +83,7 @@ let nav = `
             <li><a class="dropdown-item setContent" href='/songlist' data-ext=''>Song List</a></li>
             <li><a class="dropdown-item setContent" href='/streamlist' data-ext='.json'>Stream List</a></li>
             <li><a class="dropdown-item setContent" href='/setlist' data-ext='.json'>Set List</a></li>
+            <li><a class="dropdown-item setContent" href='/aliases' data-ext=''>Aliases</a></li>
           </ul>
         </li>
         <li class="nav-item dropdown">
@@ -209,6 +210,11 @@ $(()=>{
           if(process=='songlist') {
             url = API_CONFIG.BASE_URL + API_CONFIG.ENDPOINTS.songlist
           }
+
+          //aliases uses API endpoint
+          if(process=='aliases') {
+            url = API_CONFIG.BASE_URL + API_CONFIG.ENDPOINTS.aliases
+          }
         }
 
       if(clk){
@@ -220,17 +226,19 @@ $(()=>{
     // Set page title
     document.title = title + '苺咲べりぃ非公式倉庫'
 
-    // For API endpoints (setlist, streamlist, songlist), skip $.ajax() and directly call configJsonTable
+    // For API endpoints (setlist, streamlist, songlist, aliases), skip $.ajax() and directly call configJsonTable
     // This eliminates duplicate requests (previously $.ajax() + Tabulator's ajaxURL)
-    if(process=='setlist' || process=='streamlist' || process=='songlist'){
+    if(process=='setlist' || process=='streamlist' || process=='songlist' || process=='aliases'){
       let c = `
             <button id='reloadBtn' class='btn btn-outline-light' data-disable-on-loading="true">
               <span class="loading-indicator spinner-border spinner-border-sm me-2" style="display: none;"></span>
               Reload Data
             </button>
             <button id='edit' class='btn btn-outline-light' data-bs-toggle="button">Edit mode</button>
-            <button id='`+ (process=='streamlist'?'addStreamRow':'addRow') + `' class='btn btn-outline-light addRow' disabled>Add Row</button>`
+            <button id='`+ (process=='streamlist'?'addStreamRow':(process=='aliases'?'addAlias':'addRow')) + `' class='btn btn-outline-light addRow' disabled>Add Row</button>`
             + (process=='streamlist'?`<button id='addFromList' class='btn btn-outline-light addRow' disabled>Add from list(Beta)</button>`:'') +
+            (process=='aliases'?`<button id='batchAddAliases' class='btn btn-outline-light addRow' disabled>📦 Batch Add</button>
+            <button id='testAlias' class='btn btn-outline-light'>🧪 Test Alias</button>`:'') +
             `<button id='deleteRow' class='btn btn-outline-light'>Delete Row</button>
             <button id='dlcsv' class='btn btn-outline-light'>Get CSV</button>
             <button id='dljson' class='btn btn-outline-light'>Get JSON</button>`
@@ -958,7 +966,7 @@ $(()=>{
     {title:"YTLink", field:"YTLink", visible: false, download:true},
     {title:"songID", field:"songID", visible: false, download:true},  // Hidden field for database ID
     {title:"songNameEn", field:"songNameEn", visible: false, download:true},  // Hidden field for English name
-    {title:"artistEn", field:"artistEn", visible: false, download:true},  // Hidden field for English artist
+    {title:"artistEn", field:"artistEn", visible: false, download:true}  // Hidden field for English artist
   ]
 
   var streamlistColDef = [
@@ -1029,6 +1037,59 @@ $(()=>{
     valuesLookup: "active",
     autocomplete: true
   }
+
+  // Aliases column definition
+  var aliasesColDef = [
+    {title:"aliasID", field:"aliasID", visible: false, download:true},
+    {
+      title:"Type / 類型",
+      field:"aliasType",
+      width:120,
+      editor:"list",
+      editorParams:{
+        values:["artist", "title"]
+      },
+      headerFilter:"list",
+      headerFilterParams:{
+        values:["artist", "title"],
+        clearable:true
+      }
+    },
+    {
+      title:"Canonical Name / 標準名稱",
+      field:"canonicalName",
+      width:250,
+      editor:"input",
+      headerFilter:"input",
+      headerFilterPlaceholder:"搜尋標準名稱"
+    },
+    {
+      title:"Alias Value / 別名",
+      field:"aliasValue",
+      width:250,
+      editor:"input",
+      headerFilter:"input",
+      headerFilterPlaceholder:"搜尋別名"
+    },
+    {
+      title:"Note / 備註",
+      field:"note",
+      editor:"input",
+      headerFilter:"input"
+    },
+    {
+      title:"Created At / 建立時間",
+      field:"createdAt",
+      visible: false,
+      download: true
+    },
+    {
+      title:"Updated At / 更新時間",
+      field:"updatedAt",
+      visible: false,
+      download: true
+    }
+  ]
 
   // Bilingual version (Japanese + English in one view)
   var songlistColDef = [
@@ -1574,6 +1635,9 @@ $(()=>{
     if(p == 'songlist'){
       colDef=songlistColDef
     }
+    if(p == 'aliases'){
+      colDef=aliasesColDef
+    }
 
     // Error handling: if colDef is still undefined, show error message
     if(!colDef){
@@ -1585,8 +1649,9 @@ $(()=>{
     // Initial view mode: remove editors to allow row selection
     const initialColDef = colDef.map(col => {
       const newCol = { ...col, editable: false }
-      // Remove songName editor in setlist to allow row selection
-      if (p === 'setlist' && col.field === 'songName' && col.editor) {
+      // Remove editors that would prevent row selection
+      // For all tables: remove editor in non-edit mode
+      if (col.editor) {
         const { editor, ...rest } = newCol
         return rest
       }
@@ -1681,6 +1746,47 @@ $(()=>{
       });
     }
 
+    // Add context menu for setlist (right-click menu for new songs)
+    if (p === 'setlist') {
+      jsonTable.on("rowContext", function(e, row) {
+        const rowData = row.getData();
+
+        // Check if this is a new song (has "初回" marker in note)
+        const isNewSong = rowData.note &&
+                          (rowData.note.includes('初回') ||
+                           rowData.note.includes('待確認') ||
+                           rowData.note.includes('待确认'));
+
+        // Only show context menu for new songs
+        if (!isNewSong) {
+          return;
+        }
+
+        e.preventDefault();
+
+        showContextMenu(e.pageX, e.pageY, [
+          {
+            label: '➕ 新增別名 (Add Alias)',
+            action: () => {
+              // Pre-fill Quick Add modal with song data
+              $('#quickAliasType').val('artist')  // Default to artist
+              $('#quickAliasValue').val(rowData.artist || '')  // Pre-fill with artist name
+              $('#quickCanonicalName').val('').trigger('change')  // Empty for user to select
+              $('#quickAliasNote').val('')  // Ensure note is empty
+
+              // Store streamID and trackNo for later use
+              $('#modalQuickAddAlias').data('streamID', rowData.streamID)
+              $('#modalQuickAddAlias').data('trackNo', rowData.trackNo)
+              $('#modalQuickAddAlias').data('songData', rowData)
+
+              // Show modal
+              new bootstrap.Modal('#modalQuickAddAlias').show()
+            }
+          }
+        ]);
+      });
+    }
+
     // Add API sync events for immediate save
     jsonTable.on("cellEdited", async function(cell) {
       try {
@@ -1718,6 +1824,10 @@ $(()=>{
           endpoint = API_CONFIG.ENDPOINTS.setlist
           // setlist uses composite key
           id = `${rowData.streamID}/${rowData.trackNo}`
+        } else if (p === 'aliases') {
+          endpoint = API_CONFIG.ENDPOINTS.aliases
+          idField = 'aliasID'
+          id = rowData.aliasID
         } else {
           console.log('No API sync for this table type')
           return
@@ -1869,8 +1979,8 @@ $(()=>{
 
       const viewColDef = currentColDef.map(col => {
         const newCol = { ...col, editable: false }
-        // 移除 songName 的 editor 以允許正常的 row selection
-        if (col.field === 'songName' && col.editor) {
+        // 移除所有 editor 以允許正常的 row selection
+        if (col.editor) {
           const { editor, ...rest } = newCol
           return rest
         }
@@ -2047,6 +2157,8 @@ $(()=>{
       endpoint = API_CONFIG.ENDPOINTS.streamlist
     } else if (p === 'setlist') {
       endpoint = API_CONFIG.ENDPOINTS.setlist
+    } else if (p === 'aliases') {
+      endpoint = API_CONFIG.ENDPOINTS.aliases
     } else {
       // 不支援 API 的表格，直接刪除
       jsonTable.blockRedraw()
@@ -2079,6 +2191,8 @@ $(()=>{
         id = rowData.streamID
       } else if (p === 'setlist') {
         id = `${rowData.streamID}/${rowData.trackNo}`
+      } else if (p === 'aliases') {
+        id = rowData.aliasID
       }
 
       if (!id) {
@@ -2477,6 +2591,323 @@ $(()=>{
     })
   }
 
+  //--- Aliases Page Handlers ---
+
+  // Add Alias button - open quick add modal
+  $('#content').on('click', '#addAlias', () => {
+    $('#quickAliasType').val('artist')
+    $('#quickCanonicalName').val('')
+    $('#quickAliasValue').val('')
+    $('#quickAliasNote').val('')
+    new bootstrap.Modal('#modalQuickAddAlias').show()
+  })
+
+  // Batch Add Aliases button
+  $('#content').on('click', '#batchAddAliases', () => {
+    $('#batchAliasType').val('artist')
+    $('#batchAliasJSON').val('')
+    new bootstrap.Modal('#modalBatchAddAliases').show()
+  })
+
+  // Test Alias button
+  $('#content').on('click', '#testAlias', () => {
+    $('#testAliasType').val('artist')
+    $('#testAliasInput').val('')
+    $('#testAliasResults').hide()
+    $('#testAliasResultsContent').empty()
+    new bootstrap.Modal('#modalTestAlias').show()
+  })
+
+  // Quick Add Alias: Initialize Select2 and load options
+  $('#modalQuickAddAlias').on('shown.bs.modal', async function() {
+    // Initialize Select2 for canonical name dropdown
+    if (!$('#quickCanonicalName').data('select2')) {
+      $('#quickCanonicalName').select2({
+        dropdownParent: $('#modalQuickAddAlias'),
+        width: '100%',
+        placeholder: '請選擇...',
+        allowClear: true
+      })
+    }
+
+    // Load initial options based on current type
+    await loadQuickAddOptions()
+  })
+
+  // Quick Add Alias: Update options when type changes
+  $('#quickAliasType').on('change', async function() {
+    await loadQuickAddOptions()
+  })
+
+  // Function to load canonical name options for Quick Add
+  async function loadQuickAddOptions() {
+    const aliasType = $('#quickAliasType').val()
+
+    try {
+      // Fetch songlist data from API
+      const response = await apiRequest('GET', API_CONFIG.ENDPOINTS.songlist)
+      const songlist = response.data || response
+
+      // Extract unique canonical names based on type
+      let options = []
+      if (aliasType === 'artist') {
+        // Get unique artist names
+        const artists = new Set()
+        songlist.forEach(song => {
+          if (song.artist) artists.add(song.artist)
+        })
+        options = Array.from(artists).sort()
+      } else {
+        // Get unique song titles
+        const titles = new Set()
+        songlist.forEach(song => {
+          if (song.songName) titles.add(song.songName)
+        })
+        options = Array.from(titles).sort()
+      }
+
+      // Update select options
+      const $select = $('#quickCanonicalName')
+      $select.empty()
+      $select.append('<option value="">請選擇...</option>')
+      options.forEach(option => {
+        $select.append(`<option value="${option}">${option}</option>`)
+      })
+
+      // Trigger Select2 to refresh
+      $select.trigger('change.select2')
+
+    } catch (error) {
+      console.error('Error loading canonical names:', error)
+      alert(`❌ 無法載入選項 (Failed to load options): ${error.message}`)
+    }
+  }
+
+  // Save Quick Alias
+  $('#saveQuickAlias').on('click', async () => {
+    const aliasType = $('#quickAliasType').val()
+    const canonicalName = $('#quickCanonicalName').val().trim()
+    const aliasValue = $('#quickAliasValue').val().trim()
+    const note = $('#quickAliasNote').val().trim()
+
+    // Validation
+    if (!canonicalName || !aliasValue) {
+      alert('請填寫標準名稱和別名 (Canonical Name and Alias are required)')
+      return
+    }
+
+    try {
+      // Disable button during request
+      $('#saveQuickAlias').prop('disabled', true).html('<span class="spinner-border spinner-border-sm me-2"></span>Adding...')
+
+      const result = await apiRequest('POST', API_CONFIG.ENDPOINTS.aliasesQuickAdd, {
+        aliasType,
+        canonicalName,
+        aliasValue,
+        note: note || null
+      })
+
+      // Close modal
+      bootstrap.Modal.getInstance('#modalQuickAddAlias').hide()
+
+      // Reload table if on aliases page
+      if (getProcess() === 'aliases') {
+        jsonTable.setData()
+      }
+
+      // Show success message
+      alert(`✅ 別名新增成功 (Alias added successfully)\n\n類型: ${aliasType}\n標準名稱: ${canonicalName}\n別名: ${aliasValue}`)
+
+    } catch (error) {
+      console.error('Error adding alias:', error)
+      alert(`❌ 新增失敗 (Failed to add alias): ${error.message}`)
+    } finally {
+      $('#saveQuickAlias').prop('disabled', false).html('<i class="bi bi-plus-circle"></i> Add')
+    }
+  })
+
+  // Save Batch Aliases
+  $('#saveBatchAliases').on('click', async () => {
+    const aliasType = $('#batchAliasType').val()
+    const jsonText = $('#batchAliasJSON').val().trim()
+
+    // Validation
+    if (!jsonText) {
+      alert('請輸入 JSON 資料 (Please enter JSON data)')
+      return
+    }
+
+    let jsonData
+    try {
+      jsonData = JSON.parse(jsonText)
+    } catch (error) {
+      alert(`❌ JSON 格式錯誤 (Invalid JSON format):\n${error.message}`)
+      return
+    }
+
+    // Validate JSON structure
+    if (typeof jsonData !== 'object' || jsonData === null) {
+      alert('❌ JSON 必須是物件格式 (JSON must be an object)\n\n正確格式：{"標準名稱": ["別名1", "別名2"]}')
+      return
+    }
+
+    // Convert JSON object to aliases array
+    const aliases = []
+    for (const [canonicalName, aliasValues] of Object.entries(jsonData)) {
+      if (!Array.isArray(aliasValues)) {
+        alert(`❌ 錯誤：「${canonicalName}」的值必須是陣列 (Value must be an array)\n\n正確格式：{"${canonicalName}": ["別名1", "別名2"]}`)
+        return
+      }
+      for (const aliasValue of aliasValues) {
+        if (typeof aliasValue !== 'string' || !aliasValue.trim()) {
+          alert(`❌ 錯誤：別名值必須是非空字串 (Alias value must be a non-empty string)`)
+          return
+        }
+        aliases.push({
+          aliasType,
+          canonicalName: canonicalName.trim(),
+          aliasValue: aliasValue.trim(),
+          note: null
+        })
+      }
+    }
+
+    if (aliases.length === 0) {
+      alert('沒有要新增的別名 (No aliases to add)')
+      return
+    }
+
+    try {
+      // Disable button during request
+      $('#saveBatchAliases').prop('disabled', true).html('<span class="spinner-border spinner-border-sm me-2"></span>Uploading...')
+
+      const result = await apiRequest('POST', API_CONFIG.ENDPOINTS.aliasesBatch, { aliases })
+
+      // Validate response (apiRequest already unpacks result.data)
+      if (!result || typeof result.total === 'undefined') {
+        throw new Error('API 返回格式錯誤 (Invalid API response)')
+      }
+
+      // Close modal
+      bootstrap.Modal.getInstance('#modalBatchAddAliases').hide()
+
+      // Reload table if on aliases page
+      if (getProcess() === 'aliases') {
+        jsonTable.setData()
+      }
+
+      // Show success message
+      const summary = result
+      alert(`✅ 批次新增完成 (Batch add completed)\n\n總數: ${summary.total}\n成功新增: ${summary.inserted}\n已存在（更新）: ${summary.updated}${summary.errors ? `\n錯誤: ${summary.errors.length}` : ''}`)
+
+    } catch (error) {
+      console.error('Error batch adding aliases:', error)
+      alert(`❌ 批次新增失敗 (Batch add failed): ${error.message}`)
+    } finally {
+      $('#saveBatchAliases').prop('disabled', false).html('<i class="bi bi-upload"></i> Upload')
+    }
+  })
+
+  // Setlist: Add Alias button click handler
+  $('#content').on('click', '.add-alias-btn', function() {
+    const streamID = $(this).data('streamid')
+    const trackNo = $(this).data('trackno')
+
+    // Find the row data from table
+    const rows = jsonTable.getData()
+    const rowData = rows.find(r => r.streamID === streamID && r.trackNo === trackNo)
+
+    if (!rowData) {
+      alert('無法找到該歌曲資料 (Cannot find song data)')
+      return
+    }
+
+    // Determine alias type based on what's missing
+    // If both are present, default to title
+    let aliasType = 'title'
+    let canonicalName = ''
+    let aliasValue = ''
+
+    // Pre-fill canonical name with the parsed value from setlist
+    // User needs to manually input the correct canonical name from database
+    if (rowData.songName) {
+      aliasType = 'title'
+      canonicalName = '' // User should fill this with the correct song name from database
+      aliasValue = rowData.songName
+    } else if (rowData.artist) {
+      aliasType = 'artist'
+      canonicalName = '' // User should fill this with the correct artist name from database
+      aliasValue = rowData.artist
+    }
+
+    // Open modal with pre-filled values
+    $('#quickAliasType').val(aliasType)
+    $('#quickCanonicalName').val(canonicalName)
+    $('#quickAliasValue').val(aliasValue)
+    $('#quickAliasNote').val(`From setlist: ${rowData.streamID} track ${rowData.trackNo}`)
+
+    new bootstrap.Modal('#modalQuickAddAlias').show()
+
+    // Show instruction alert
+    setTimeout(() => {
+      alert(`💡 使用說明 (Instructions):\n\n1. 請在「標準名稱」欄位填入資料庫中正確的歌名/歌手名稱\n   (Enter the correct song/artist name from the database in "Canonical Name")\n\n2. 「別名」欄位已預填歌單中的名稱\n   (The "Alias" field is pre-filled with the name from setlist)\n\n3. 確認無誤後點擊 Add 即可新增別名\n   (Click Add to save the alias mapping)`)
+    }, 300)
+  })
+
+  // Run Test Alias
+  $('#runTestAlias').on('click', async () => {
+    const aliasType = $('#testAliasType').val()
+    const inputText = $('#testAliasInput').val().trim()
+
+    if (!inputText) {
+      alert('請輸入測試文字 (Please enter input text)')
+      return
+    }
+
+    try {
+      // Disable button during request
+      $('#runTestAlias').prop('disabled', true).html('<span class="spinner-border spinner-border-sm me-2"></span>Testing...')
+
+      const result = await apiRequest('POST', API_CONFIG.ENDPOINTS.aliasesTest, {
+        aliasType,
+        inputText
+      })
+
+      // Display results
+      const data = result.data
+      if (data.matches.length === 0) {
+        $('#testAliasResultsContent').html('<div class="alert alert-info">沒有找到匹配的別名 (No matches found)</div>')
+      } else {
+        let html = `<p class="mb-2">找到 ${data.matchCount} 個匹配 (Found ${data.matchCount} matches):</p>`
+        html += '<div class="list-group">'
+        for (const match of data.matches) {
+          html += `
+            <div class="list-group-item">
+              <h6 class="mb-2"><strong>${match.canonicalName}</strong></h6>
+              <div class="ms-3">
+                ${match.aliases.map(a => `
+                  <div class="small">
+                    • ${a.value}
+                    ${a.note ? `<span class="text-muted">(${a.note})</span>` : ''}
+                  </div>
+                `).join('')}
+              </div>
+            </div>
+          `
+        }
+        html += '</div>'
+        $('#testAliasResultsContent').html(html)
+      }
+
+      $('#testAliasResults').show()
+
+    } catch (error) {
+      console.error('Error testing alias:', error)
+      alert(`❌ 測試失敗 (Test failed): ${error.message}`)
+    } finally {
+      $('#runTestAlias').prop('disabled', false).html('<i class="bi bi-search"></i> Test')
+    }
+  })
 
 
 //--- json table ---
