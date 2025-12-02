@@ -1760,23 +1760,12 @@ $(()=>{
       });
     }
 
-    // Add context menu for setlist (right-click menu for new songs)
+    // Add context menu for setlist (right-click menu to add alias)
     if (p === 'setlist') {
       jsonTable.on("rowContext", function(e, row) {
-        const rowData = row.getData();
-
-        // Check if this is a new song (has "初回" marker in note)
-        const isNewSong = rowData.note &&
-                          (rowData.note.includes('初回') ||
-                           rowData.note.includes('待確認') ||
-                           rowData.note.includes('待确认'));
-
-        // Only show context menu for new songs
-        if (!isNewSong) {
-          return;
-        }
-
         e.preventDefault();
+
+        const rowData = row.getData();
 
         showContextMenu(e.pageX, e.pageY, [
           {
@@ -2655,6 +2644,18 @@ $(()=>{
   // Quick Add Alias: Update options when type changes
   $('#quickAliasType').on('change', async function() {
     await loadQuickAddOptions()
+
+    // Auto-update alias value based on new type
+    const aliasType = $(this).val()
+    const songData = $('#modalQuickAddAlias').data('songData')
+
+    if (songData) {
+      if (aliasType === 'artist') {
+        $('#quickAliasValue').val(songData.artist || '')
+      } else if (aliasType === 'title') {
+        $('#quickAliasValue').val(songData.songName || '')
+      }
+    }
   })
 
   // Function to load canonical name options for Quick Add
@@ -2701,6 +2702,27 @@ $(()=>{
     }
   }
 
+  // Helper function to show alerts in Quick Add Alias Modal
+  function showQuickAliasAlert(message, type = 'info') {
+    const alertContainer = $('#quickAliasAlert')
+    const alertClass = type === 'success' ? 'alert-success' : type === 'danger' ? 'alert-danger' : 'alert-info'
+
+    alertContainer.html(`
+      <div class="alert ${alertClass} alert-dismissible fade show" role="alert">
+        ${message}
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+    `).show()
+
+    // Auto-hide success messages after 5 seconds
+    if (type === 'success') {
+      setTimeout(() => {
+        alertContainer.find('.alert').alert('close')
+        alertContainer.hide()
+      }, 5000)
+    }
+  }
+
   // Save Quick Alias
   $('#saveQuickAlias').on('click', async () => {
     const aliasType = $('#quickAliasType').val()
@@ -2710,7 +2732,7 @@ $(()=>{
 
     // Validation
     if (!canonicalName || !aliasValue) {
-      alert('請填寫標準名稱和別名 (Canonical Name and Alias are required)')
+      showQuickAliasAlert('請填寫標準名稱和別名 (Canonical Name and Alias are required)', 'danger')
       return
     }
 
@@ -2725,20 +2747,22 @@ $(()=>{
         note: note || null
       })
 
-      // Close modal
-      bootstrap.Modal.getInstance('#modalQuickAddAlias').hide()
-
       // Reload table if on aliases page
       if (getProcess() === 'aliases') {
         jsonTable.setData()
       }
 
       // Show success message
-      alert(`✅ 別名新增成功 (Alias added successfully)\n\n類型: ${aliasType}\n標準名稱: ${canonicalName}\n別名: ${aliasValue}`)
+      showQuickAliasAlert(`✅ 別名新增成功 (Alias added successfully)<br><br><strong>類型:</strong> ${aliasType}<br><strong>標準名稱:</strong> ${canonicalName}<br><strong>別名:</strong> ${aliasValue}`, 'success')
+
+      // Clear form for next entry
+      $('#quickCanonicalName').val('').trigger('change')
+      $('#quickAliasValue').val('')
+      $('#quickAliasNote').val('')
 
     } catch (error) {
       console.error('Error adding alias:', error)
-      alert(`❌ 新增失敗 (Failed to add alias): ${error.message}`)
+      showQuickAliasAlert(`❌ 新增失敗 (Failed to add alias): ${error.message}`, 'danger')
     } finally {
       $('#saveQuickAlias').prop('disabled', false).html('<i class="bi bi-plus-circle"></i> Add')
     }
