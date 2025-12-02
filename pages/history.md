@@ -1,4 +1,5 @@
 ## 2025
+* 2025/11/30　Single 『季節の歩幅』[youtube](https://www.youtube.com/watch?v=zqyrT6ONh_c) / [booth](https://maisakiberry.booth.pm/items/7707663)
 * 2025/10/31　Single 『Happy, Likey』[youtube](https://www.youtube.com/watch?v=htpuXviUngU) / [booth](https://maisakiberry.booth.pm/items/7599259)
 * 2025/10/26　[9th Album 『Lucisphere』 発売](https://www.maisakiberry.com/9th-lucisphere)
 * 2025/10/18　[ぶいきゃすコレクション ファンミーティング](https://tiget.net/events/427098)
