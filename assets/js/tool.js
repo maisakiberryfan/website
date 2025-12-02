@@ -545,15 +545,17 @@ $(()=>{
 
       try {
         // Fetch songlist data from API
+        console.log('[setlistSongSelect2Editor] Fetching songlist from API...')
         const songlist = await apiRequest('GET', API_CONFIG.ENDPOINTS.songlist)
+        console.log(`[setlistSongSelect2Editor] Loaded ${songlist.length} songs`)
 
-        // Format: {id: songID, text: "songName - artist"}
+        // Format: {id: songID, text: "songName - artist", with bilingual data}
         const dataOptions = songlist.map(s => ({
           id: s.songID,
-          text: `${s.songName} - ${s.artist}`,
+          text: `${s.songName} - ${s.artist}`,  // 選中後顯示的格式
           songName: s.songName,
-          artist: s.artist,
           songNameEn: s.songNameEn,
+          artist: s.artist,
           artistEn: s.artistEn
         })).sort((a, b) => a.text.localeCompare(b.text))
 
@@ -562,14 +564,17 @@ $(()=>{
           data: dataOptions,
           width: '100%',
           dropdownAutoWidth: true,
-          placeholder: 'Select song...',
+          placeholder: 'Select song / 選擇歌曲...',
           allowClear: true,
-          dropdownParent: $('body'),  // Avoid z-index issues
+          tags: false,  // 明確禁止自由輸入
+          dropdownParent: $('body')  // Avoid z-index issues
+          // 使用預設的 Select2 顯示格式：「歌名 - 歌手」單行格式
         })
 
         // Set current value from songID
         const currentSongID = cell.getRow().getData().songID
         if (currentSongID) {
+          console.log(`[setlistSongSelect2Editor] Setting current value: ${currentSongID}`)
           $editor.val(currentSongID).trigger('change.select2')
         }
 
@@ -579,6 +584,12 @@ $(()=>{
 
           const selectedId = $editor.val()
           const selectedData = $editor.select2('data')[0]
+
+          console.log('[setlistSongSelect2Editor] Selection changed:', {
+            songID: selectedId,
+            songName: selectedData?.songName,
+            artist: selectedData?.artist
+          })
 
           // Update row data
           const row = cell.getRow()
@@ -609,6 +620,7 @@ $(()=>{
             const id = `${rowData.streamID}/${rowData.trackNo}`
             const updateData = { songID: selectedId || null }
 
+            console.log(`[setlistSongSelect2Editor] Syncing to API: PUT ${endpoint}/${id}`, updateData)
             await apiRequest('PUT', `${endpoint}/${id}`, updateData)
 
             // Show success indicator
@@ -617,10 +629,10 @@ $(()=>{
               cell.getElement().style.backgroundColor = ''
             }, 1000)
 
-            console.log(`Song updated: ${selectedData ? selectedData.songName : '(cleared)'} (songID: ${selectedId || null})`)
+            console.log(`[setlistSongSelect2Editor] ✅ Song updated successfully`)
           } catch (error) {
-            console.error('Error syncing song selection:', error)
-            alert(`儲存失敗：${error.message}`)
+            console.error('[setlistSongSelect2Editor] ❌ Error syncing to API:', error)
+            alert(`儲存失敗 / Save failed：${error.message}`)
             // Revert on error
             cancel()
             return
@@ -633,16 +645,18 @@ $(()=>{
         // Handle close without selection
         $editor.on('select2:close', function() {
           if (!hasSucceeded) {
+            console.log('[setlistSongSelect2Editor] Closed without selection, canceling')
             cancel()
           }
         })
 
         // Auto-open dropdown after initialization
+        console.log('[setlistSongSelect2Editor] Opening dropdown...')
         setTimeout(() => $editor.select2('open'), 50)
 
       } catch (error) {
-        console.error('Failed to load songlist:', error)
-        alert('載入歌曲清單失敗：' + error.message)
+        console.error('[setlistSongSelect2Editor] ❌ Failed to initialize:', error)
+        alert('載入歌曲清單失敗 / Failed to load songlist：' + error.message)
         if (!hasSucceeded) {
           hasSucceeded = true
           cancel()
@@ -1932,9 +1946,13 @@ $(()=>{
           }
         }
 
-        // Setlist: Song 欄位已有 Select2 editor，直接啟用
-        if (col.field === 'songName' && col.editor) {
-          return { ...col, editable: true }
+        // Setlist: Song 欄位使用 Select2 editor
+        if (getProcess() === 'setlist' && col.field === 'songName') {
+          return {
+            ...col,
+            editor: setlistSongSelect2Editor,
+            editable: true
+          }
         }
         // Artist 欄位在 setlist 保持唯讀（由 Select2 自動填入）
         // 在 streamlist 添加 editor（允許手動編輯）
