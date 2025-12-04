@@ -1,0 +1,290 @@
+<div id="analyticsPage">
+  <!-- 頁面標題 -->
+  <div class="text-center mb-4">
+    <h1>Analytics / 資料分析</h1>
+    <p class="text-muted">查詢歌單資料、分析演唱趨勢</p>
+  </div>
+
+  <!-- 查詢面板 -->
+  <div class="mb-4">
+    <h5 class="mb-3">Query Panel / 查詢面板</h5>
+    <div class="border rounded p-3 bg-body-tertiary">
+      <!-- 模式切換 -->
+      <div class="mb-3">
+        <div class="btn-group w-100" role="group">
+          <input type="radio" class="btn-check" name="queryMode" id="modeSimple" value="simple" checked>
+          <label class="btn btn-outline-primary" for="modeSimple">
+            <i class="bi bi-lightning-fill"></i> Simple Mode / 簡易模式
+          </label>
+
+          <input type="radio" class="btn-check" name="queryMode" id="modeAdvanced" value="advanced">
+          <label class="btn btn-outline-primary" for="modeAdvanced">
+            <i class="bi bi-code-slash"></i> Advanced SQL / 進階 SQL
+          </label>
+        </div>
+      </div>
+
+      <!-- 簡易模式面板 -->
+      <div id="simpleModePanel">
+        <!-- 查詢類型選擇 -->
+        <div class="mb-3">
+          <label for="queryType" class="form-label">Query Type / 查詢類型</label>
+          <select id="queryType" class="form-select">
+            <option value="">-- Select Query Type / 選擇查詢類型 --</option>
+            <option value="song-frequency">Song Performance Frequency / 歌曲演唱次數</option>
+            <option value="top-songs">Top Songs by Days / 熱門歌曲排行</option>
+          </select>
+        </div>
+
+        <!-- 錯誤提示區域 -->
+        <div id="queryErrorAlert" class="alert alert-danger alert-dismissible fade" role="alert" style="display: none;">
+          <i class="bi bi-exclamation-triangle-fill me-2"></i>
+          <span id="queryErrorMessage"></span>
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+
+        <!-- 查詢參數區域（動態顯示） -->
+        <div id="queryParams"></div>
+
+        <!-- 執行按鈕 -->
+        <div class="d-grid gap-2">
+          <button id="btnRunQuery" class="btn btn-primary btn-lg" disabled>
+            <i class="bi bi-play-circle-fill"></i> Run Query / 執行查詢
+          </button>
+        </div>
+      </div>
+
+      <!-- 進階模式面板（初始隱藏） -->
+      <div id="advancedModePanel" style="display: none;">
+        <div class="mb-3">
+          <label for="sqlEditor" class="form-label">
+            SQL Query / SQL 查詢
+            <a href="https://duckdb.org/docs/stable/sql/introduction" target="_blank" rel="noopener noreferrer" class="ms-2 text-decoration-none small" title="DuckDB SQL 語法文檔">
+              (SQL 可用語法 <i class="bi bi-box-arrow-up-right"></i>)
+            </a>
+          </label>
+          <textarea id="sqlEditor" class="form-control font-monospace" rows="10"
+                    placeholder="SELECT * FROM berry_data WHERE ..."></textarea>
+          <div class="form-text mb-2">
+            Table: <code>berry_data</code>
+            <button class="btn btn-sm btn-link p-0 ms-2" type="button" data-bs-toggle="collapse" data-bs-target="#columnReference">
+              <i class="bi bi-info-circle"></i> Show Available Columns / 顯示可用欄位
+            </button>
+          </div>
+          <div class="collapse" id="columnReference">
+            <div class="border rounded p-3 bg-body-secondary mt-2">
+              <h6 class="mb-2">Available Columns / 可用欄位：</h6>
+              <div class="row">
+                <div class="col-md-6">
+                  <ul class="list-unstyled mb-0">
+                    <li>
+                      <button type="button" class="btn btn-link p-0 text-start column-insert" data-column="streamID">
+                        <code>streamID</code>
+                      </button> - 直播 ID (VARCHAR)
+                    </li>
+                    <li>
+                      <button type="button" class="btn btn-link p-0 text-start column-insert" data-column="streamTitle">
+                        <code>streamTitle</code>
+                      </button> - 直播標題 (VARCHAR)
+                    </li>
+                    <li>
+                      <button type="button" class="btn btn-link p-0 text-start column-insert" data-column="time">
+                        <code>time</code>
+                      </button> - 歌曲時間 (TIMESTAMP)
+                      <br><small class="text-muted">範例查詢：<code>time >= '2025-11-03'</code> 或 <code>time >= '2025-11-03 12:00:00'</code></small>
+                    </li>
+                    <li>
+                      <button type="button" class="btn btn-link p-0 text-start column-insert" data-column="songID">
+                        <code>songID</code>
+                      </button> - 歌曲 ID (INT)
+                    </li>
+                    <li>
+                      <button type="button" class="btn btn-link p-0 text-start column-insert" data-column="songName">
+                        <code>songName</code>
+                      </button> - 歌名（日文） (VARCHAR)
+                    </li>
+                    <li>
+                      <button type="button" class="btn btn-link p-0 text-start column-insert" data-column="songNameEn">
+                        <code>songNameEn</code>
+                      </button> - 歌名（英文） (VARCHAR)
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-md-6">
+                  <ul class="list-unstyled mb-0">
+                    <li>
+                      <button type="button" class="btn btn-link p-0 text-start column-insert" data-column="artist">
+                        <code>artist</code>
+                      </button> - 歌手（日文） (VARCHAR)
+                    </li>
+                    <li>
+                      <button type="button" class="btn btn-link p-0 text-start column-insert" data-column="artistEn">
+                        <code>artistEn</code>
+                      </button> - 歌手（英文） (VARCHAR)
+                    </li>
+                    <li>
+                      <button type="button" class="btn btn-link p-0 text-start column-insert" data-column="genre">
+                        <code>genre</code>
+                      </button> - 類型 (VARCHAR)
+                    </li>
+                    <li>
+                      <button type="button" class="btn btn-link p-0 text-start column-insert" data-column="tieup">
+                        <code>tieup</code>
+                      </button> - 作品綁定 (TEXT)
+                    </li>
+                    <li>
+                      <button type="button" class="btn btn-link p-0 text-start column-insert" data-column="songNote">
+                        <code>songNote</code>
+                      </button> - 歌曲備註 (TEXT)
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 時間轉換工具（預設展開） -->
+        <div class="mb-3">
+          <div class="border rounded p-3 bg-body-secondary">
+            <div class="d-flex align-items-center mb-2">
+              <i class="bi bi-clock-history text-primary me-2"></i>
+              <strong>時間轉換工具 / Timezone Converter</strong>
+            </div>
+            <div class="alert alert-warning py-2 mb-3">
+              <small>
+                <i class="bi bi-info-circle"></i>
+                <strong>資料庫時間儲存為 UTC</strong>，顯示時會自動轉換為您的本地時區。
+                查詢時請使用此工具將本地時間轉換為 UTC 時間並插入。
+                <br>
+                您的時區：<strong id="userTimezone">載入中...</strong> (<code id="userTimezoneOffset">載入中...</code>)
+              </small>
+            </div>
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label for="startDateInput" class="form-label">開始日期 / Start Date</label>
+                <input type="date" id="startDateInput" class="form-control">
+                <small class="form-text text-muted">選擇開始日期（本地時間）</small>
+              </div>
+              <div class="col-md-6">
+                <label for="endDateInput" class="form-label">結束日期 / End Date</label>
+                <input type="date" id="endDateInput" class="form-control">
+                <small class="form-text text-muted">選擇結束日期（本地時間，不含當日）</small>
+              </div>
+            </div>
+            <div class="row g-3 mt-2">
+              <div class="col-12">
+                <label class="form-label">UTC 時間範圍 / UTC Time Range</label>
+                <div class="input-group">
+                  <input type="text" id="utcRangeOutput" class="form-control font-monospace" readonly
+                         placeholder="將自動顯示 UTC 時間範圍">
+                  <button class="btn btn-primary" id="btnInsertRange" title="插入到 SQL 編輯器" disabled>
+                    <i class="bi bi-plus-circle"></i> 插入
+                  </button>
+                </div>
+                <small class="form-text text-muted">
+                  格式：<code>time >= '2025-11-03 00:00:00' AND time < '2025-11-04 00:00:00'</code>
+                </small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 範例查詢 -->
+        <div class="mb-3">
+          <label class="form-label">Example Queries / 範例查詢</label>
+          <div class="btn-group-vertical w-100" role="group">
+            <button type="button" class="btn btn-sm btn-outline-secondary text-start example-query"
+                    data-query="SELECT songName, artist, COUNT(*) as count FROM berry_data GROUP BY songID, songName, artist ORDER BY count DESC LIMIT 20">
+              Top 20 Most Sung Songs / 演唱次數前 20 名
+            </button>
+            <button type="button" class="btn btn-sm btn-outline-secondary text-start example-query"
+                    data-query="SELECT artist, COUNT(DISTINCT songID) as songCount, COUNT(*) as perfCount FROM berry_data GROUP BY artist ORDER BY perfCount DESC LIMIT 20">
+              Top Artists / 熱門歌手
+            </button>
+            <button type="button" class="btn btn-sm btn-outline-secondary text-start example-query"
+                    data-query="SELECT genre, COUNT(*) as count FROM berry_data WHERE genre IS NOT NULL AND genre != '' GROUP BY genre ORDER BY count DESC">
+              Songs by Genre / 依類型分類
+            </button>
+          </div>
+        </div>
+
+        <!-- 執行與儲存按鈕 -->
+        <div class="d-grid gap-2 mb-3">
+          <button id="btnRunSQL" class="btn btn-primary btn-lg">
+            <i class="bi bi-play-circle-fill"></i> Execute SQL / 執行 SQL
+          </button>
+          <button id="btnSaveQuery" class="btn btn-outline-secondary">
+            <i class="bi bi-bookmark"></i> Save Query / 儲存查詢
+          </button>
+        </div>
+
+        <!-- Saved Queries Panel -->
+        <div id="savedQueriesPanel" style="display: none;">
+          <div class="border rounded p-3 bg-body-secondary mb-3">
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <h6 class="mb-0">Saved Queries / 收藏的查詢</h6>
+              <small class="text-muted">點擊載入並執行 / Click to load & execute</small>
+            </div>
+            <div id="savedQueriesList" class="list-group"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 結果顯示區域 -->
+  <div class="mb-4">
+    <div class="d-flex justify-content-between align-items-center mb-3">
+      <h5 class="mb-0">Query Results / 查詢結果</h5>
+      <div>
+        <button id="btnExportXLSX" class="btn btn-sm btn-outline-secondary" disabled>
+          <i class="bi bi-file-earmark-excel"></i> Export XLSX
+        </button>
+      </div>
+    </div>
+
+    <!-- 通用訊息提示區域 -->
+    <div id="messageAlert" class="alert alert-dismissible fade" role="alert" style="display: none;">
+      <i id="messageIcon" class="me-2"></i>
+      <span id="messageText"></span>
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+
+    <div class="border rounded p-3 bg-body-tertiary">
+      <!-- 載入狀態 -->
+      <div id="loadingIndicator" class="text-center py-5" style="display: none;">
+        <div class="spinner-border text-primary" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+        <p class="mt-3 text-muted">Loading data and executing query...</p>
+      </div>
+
+      <!-- 錯誤訊息 -->
+      <div id="errorMessage" class="alert alert-danger" role="alert" style="display: none;"></div>
+
+      <!-- 結果資訊 -->
+      <div id="resultInfo" class="mb-3" style="display: none;">
+        <small class="text-muted">
+          Returned <span id="resultCount">0</span> rows in <span id="queryTime">0</span>ms
+        </small>
+      </div>
+
+      <!-- Tabulator 表格 -->
+      <div id="resultsTable"></div>
+
+      <!-- 空狀態提示 -->
+      <div id="emptyState" class="text-center py-5 text-muted">
+        <i class="bi bi-search" style="font-size: 3rem;"></i>
+        <p class="mt-3">Select a query type and run a query to see results</p>
+        <p>選擇查詢類型並執行查詢以查看結果</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SheetJS for XLSX export -->
+<script src="https://cdn.sheetjs.com/xlsx-0.20.3/package/dist/xlsx.full.min.js"></script>
+
+<!-- Analytics Module (DuckDB will be imported inside) -->
+<script type="module" src="/assets/js/analytics.js"></script>

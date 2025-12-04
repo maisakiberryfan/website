@@ -84,6 +84,8 @@ let nav = `
             <li><a class="dropdown-item setContent" href='/streamlist' data-ext='.json'>Stream List</a></li>
             <li><a class="dropdown-item setContent" href='/setlist' data-ext='.json'>Set List</a></li>
             <li><a class="dropdown-item setContent" href='/aliases' data-ext=''>Aliases</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item setContent" href='/analytics' data-ext='.htm'>Analytics</a></li>
           </ul>
         </li>
         <li class="nav-item dropdown">
