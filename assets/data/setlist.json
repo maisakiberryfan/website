@@ -1,5 +1,85 @@
 [
 	{
+		"date": "2025-12-22T12:00:00Z",
+		"track": 1,
+		"song": "キミのせいだよ",
+		"singer": "苺咲べりぃ",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=m6-SrBYJJpo"
+	},
+	{
+		"date": "2025-12-22T12:00:00Z",
+		"track": 2,
+		"song": "クリスマスイブ",
+		"singer": "優里",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=m6-SrBYJJpo"
+	},
+	{
+		"date": "2025-12-22T12:00:00Z",
+		"track": 3,
+		"song": "空も飛べるはず",
+		"singer": "スピッツ",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=m6-SrBYJJpo"
+	},
+	{
+		"date": "2025-12-22T12:00:00Z",
+		"track": 4,
+		"song": "Hello Alone -Yui Ballade-",
+		"singer": "由比ヶ浜結衣(東山奈央)",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=m6-SrBYJJpo"
+	},
+	{
+		"date": "2025-12-22T12:00:00Z",
+		"track": 5,
+		"song": "アイモ",
+		"singer": "ランカ・リー(中島愛)",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=m6-SrBYJJpo"
+	},
+	{
+		"date": "2025-12-22T12:00:00Z",
+		"track": 6,
+		"song": "歩いていこう！",
+		"singer": "東山奈央",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=m6-SrBYJJpo"
+	},
+	{
+		"date": "2025-12-22T12:00:00Z",
+		"track": 7,
+		"song": "U&I",
+		"singer": "放課後ティータイム",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=m6-SrBYJJpo"
+	},
+	{
+		"date": "2025-12-22T12:00:00Z",
+		"track": 8,
+		"song": "天使にふれたよ！",
+		"singer": "放課後ティータイム",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=m6-SrBYJJpo"
+	},
+	{
+		"date": "2025-12-22T12:00:00Z",
+		"track": 9,
+		"song": "夜に駆ける",
+		"singer": "YOASOBI",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=m6-SrBYJJpo"
+	},
+	{
+		"date": "2025-12-22T12:00:00Z",
+		"track": 10,
+		"song": "クリスマスソング",
+		"singer": "back number",
+		"note": "",
+		"YTLink": "https://www.youtube.com/watch?v=m6-SrBYJJpo"
+	},
+	{
 		"date": "2025-12-15T12:00:00Z",
 		"track": 1,
 		"song": "しらないうた",
