@@ -1112,24 +1112,22 @@ $(()=>{
     }},
     {title:"categories", field:"categories",
       headerFilter:select2,
-      headerFilterParams:{field:'categories', multiple: true},
+      headerFilterParams:{field:'categories', multiple: false},
       headerFilterFunc: function(headerValue, rowValue, rowData, filterParams) {
-        // No filter applied
-        if (!headerValue || headerValue.length === 0) return true;
+        // No filter applied (single select returns string or empty)
+        if (!headerValue || headerValue === '') return true;
 
         // Ensure rowValue is an array
         if (!Array.isArray(rowValue)) return false;
 
-        // Check if any selected filter value matches any category in the row (OR logic)
-        return headerValue.some(filterVal =>
-          rowValue.some(rowCat =>
-            rowCat.toLowerCase().includes(filterVal.toLowerCase())
-          )
+        // Check if selected filter value matches any category in the row
+        return rowValue.some(rowCat =>
+          rowCat.toLowerCase().includes(headerValue.toLowerCase())
         );
       },
       headerSort:false,
       editor:select2,
-      editorParams:{field:'categories', multiple: true},
+      editorParams:{field:'categories', multiple: true, tags: true},
       formatter:(cell=>{
         const categories = cell.getValue();
         if (!Array.isArray(categories)) return '';
@@ -2267,6 +2265,15 @@ $(()=>{
             return col  // No editor in setlist, auto-updated by song selection
           }
           // For streamlist, fall through to add default editor
+        }
+        // Streamlist: categories 欄位使用 Select2 editor（多選）
+        if (getProcess() === 'streamlist' && col.field === 'categories') {
+          return {
+            ...col,
+            editor: select2,
+            editorParams: {field:'categories', multiple: true, tags: true},
+            editable: true
+          }
         }
         // songID 隱藏欄位不需要編輯
         if (col.field === 'songID') {
