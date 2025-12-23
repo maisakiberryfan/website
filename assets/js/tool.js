@@ -147,7 +147,66 @@ let nav = `
 `
 
 $(()=>{
-  
+
+  // ============================================
+  // localStorage 快取工具函數
+  // ============================================
+  const CACHE_PREFIX = 'tableCache_'
+  const CACHE_VERSION = 'v1'
+
+  function getCacheKey(tableType) {
+    return `${CACHE_PREFIX}${tableType}_${CACHE_VERSION}`
+  }
+
+  function getCache(tableType) {
+    try {
+      const key = getCacheKey(tableType)
+      const cached = localStorage.getItem(key)
+      if (!cached) return null
+      const parsed = JSON.parse(cached)
+      console.log(`[Cache] 讀取 ${tableType} 快取，${parsed.data?.length || 0} 筆資料`)
+      return parsed
+    } catch (e) {
+      console.error('[Cache] 讀取快取失敗:', e)
+      return null
+    }
+  }
+
+  function setCache(tableType, data, etag = null) {
+    try {
+      const key = getCacheKey(tableType)
+      const cacheData = {
+        data: data,
+        etag: etag,
+        timestamp: Date.now()
+      }
+      localStorage.setItem(key, JSON.stringify(cacheData))
+      console.log(`[Cache] 儲存 ${tableType} 快取，${data?.length || 0} 筆資料`)
+    } catch (e) {
+      console.error('[Cache] 儲存快取失敗:', e)
+      // localStorage 可能已滿，嘗試清除舊快取
+      clearOldCaches()
+    }
+  }
+
+  function clearOldCaches() {
+    // 清除所有表格快取
+    for (let i = localStorage.length - 1; i >= 0; i--) {
+      const key = localStorage.key(i)
+      if (key && key.startsWith(CACHE_PREFIX)) {
+        localStorage.removeItem(key)
+      }
+    }
+    console.log('[Cache] 已清除舊快取')
+  }
+
+  // 比較資料是否相同（使用 JSON 字串比較）
+  function isDataEqual(data1, data2) {
+    if (!data1 || !data2) return false
+    if (data1.length !== data2.length) return false
+    return JSON.stringify(data1) === JSON.stringify(data2)
+  }
+
   // Set marked options
   marked.use()
 
@@ -1708,13 +1767,21 @@ $(()=>{
       return newCol
     })
 
-    jsonTable = new Tabulator("#tb", {
+    // ============================================
+    // localStorage 快取優先載入機制
+    // ============================================
+    const cached = getCache(p)
+    const hasCachedData = cached && cached.data && cached.data.length > 0
+
+    // Tabulator 配置（總是設定 ajaxURL 供後續 setData() 使用）
+    const tabulatorConfig = {
       ajaxURL: u,
-      ajaxConfig: {
-        cache: 'no-store'  // 禁用瀏覽器快取，確保每次都從伺服器獲取最新資料
-      },
+      ajaxConfig: { cache: 'no-store' },
       ajaxResponse: function(url, params, response) {
-        return response.data || response; // 解包 {data: [...]} 格式
+        const data = response.data || response
+        // 儲存到快取
+        setCache(p, data)
+        return data
       },
       height:700,
       columnDefaults:{
@@ -1726,7 +1793,51 @@ $(()=>{
       clipboard:true,
       addRowPos:"top",
       downloadRowRange:'all'
-    })
+    }
+
+    // 如果有快取，使用快取資料初始化（秒開）
+    // Tabulator 會優先使用 data 選項，ajaxURL 會被保留供後續 setData() 使用
+    if (hasCachedData) {
+      console.log(`[Cache] 使用快取資料初始化 ${p}，共 ${cached.data.length} 筆`)
+      tabulatorConfig.data = cached.data
+    } else {
+      console.log(`[Cache] 無快取，從 API 載入 ${p}`)
+    }
+
+    jsonTable = new Tabulator("#tb", tabulatorConfig)
+
+    // 如果使用快取載入，背景更新 API 資料
+    if (hasCachedData) {
+      backgroundFetchAndUpdate(u, p)
+    }
+
+    // 背景 fetch API 並更新表格
+    async function backgroundFetchAndUpdate(apiUrl, tableType) {
+      try {
+        console.log(`[Cache] 背景更新 ${tableType}...`)
+        const response = await fetch(apiUrl, { cache: 'no-store' })
+        if (!response.ok) {
+          throw new Error(`HTTP ${response.status}`)
+        }
+        const result = await response.json()
+        const freshData = result.data || result
+
+        // 比較資料是否有變化
+        const cachedData = getCache(tableType)?.data || []
+        if (!isDataEqual(cachedData, freshData)) {
+          console.log(`[Cache] ${tableType} 資料已更新，重新載入表格`)
+          // 更新快取
+          setCache(tableType, freshData)
+          // 更新表格
+          jsonTable.setData(freshData)
+        } else {
+          console.log(`[Cache] ${tableType} 資料無變化`)
+        }
+      } catch (error) {
+        console.error(`[Cache] 背景更新 ${tableType} 失敗:`, error)
+        // 快取載入成功但背景更新失敗時，不影響用戶體驗
+      }
+    }
 
     // Listen for data processing events - data is ready for access via getData()
     jsonTable.on("dataProcessed", function(){
@@ -1904,6 +2015,11 @@ $(()=>{
         // PUT update to API
         const updateData = { [apiField]: finalValue }
         await apiRequest('PUT', `${endpoint}/${id}`, updateData)
+
+        // 更新 localStorage 快取
+        const currentData = jsonTable.getData()
+        setCache(p, currentData)
+        console.log(`[Cache] 已更新 ${p} 快取`)
 
         // Show brief success indicator
         cell.getElement().style.backgroundColor = '#d4edda'
@@ -2303,6 +2419,10 @@ $(()=>{
       const currentPath = window.location.pathname.split('/').pop()
       if (currentPath === 'songlist' && jsonTable) {
         jsonTable.addRow(newSong, true)
+        // 更新 localStorage 快取
+        const currentData = jsonTable.getData()
+        setCache('songlist', currentData)
+        console.log('[Cache] 已更新 songlist 快取（新增後）')
       }
 
       // Close modal and reset form
@@ -2425,6 +2545,13 @@ $(()=>{
       }
     })
     jsonTable.restoreRedraw()
+
+    // 更新 localStorage 快取（刪除成功的資料後）
+    if (results.some(r => r.success)) {
+      const currentData = jsonTable.getData()
+      setCache(p, currentData)
+      console.log(`[Cache] 已更新 ${p} 快取（刪除後）`)
+    }
 
     // 5. 顯示結果
     const successCount = results.filter(r => r.success).length
@@ -2662,6 +2789,11 @@ $(()=>{
           categories: categories,
           note: note
         }, true)
+
+        // 更新 localStorage 快取
+        const currentData = jsonTable.getData()
+        setCache('streamlist', currentData)
+        console.log('[Cache] 已更新 streamlist 快取（新增後）')
 
         // 關閉 Modal（✅ 成功時才關閉）
         addStreamRowModal.hide()
