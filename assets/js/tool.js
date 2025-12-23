@@ -250,7 +250,41 @@ $(()=>{
                 ➕ 新增初回歌曲 (Add New Song)
               </button>
             </div>`:'') +
-            `<div id='setTableMsg' class='p-3'>&emsp;</div>
+            `<!-- 進階搜尋區塊 -->
+            <div id="advancedSearch" class="card bg-dark mb-3">
+              <div class="card-header d-flex justify-content-between align-items-center" style="cursor: pointer;" data-bs-toggle="collapse" data-bs-target="#searchBody">
+                <span><i class="bi bi-search me-2"></i>進階搜尋</span>
+                <i class="bi bi-chevron-down"></i>
+              </div>
+              <div id="searchBody" class="collapse">
+                <div class="card-body">
+                  <div class="d-flex align-items-center mb-3">
+                    <span class="me-3">條件邏輯：</span>
+                    <div class="btn-group" role="group">
+                      <input type="radio" class="btn-check" name="searchLogic" id="logicAnd" value="and" checked>
+                      <label class="btn btn-outline-primary btn-sm" for="logicAnd">AND (全部符合)</label>
+                      <input type="radio" class="btn-check" name="searchLogic" id="logicOr" value="or">
+                      <label class="btn btn-outline-primary btn-sm" for="logicOr">OR (任一符合)</label>
+                    </div>
+                  </div>
+                  <div id="searchConditions">
+                    <!-- 動態新增的搜尋條件 -->
+                  </div>
+                  <div class="d-flex gap-2 mt-3">
+                    <button id="addCondition" class="btn btn-outline-secondary btn-sm">
+                      <i class="bi bi-plus-lg me-1"></i>新增條件
+                    </button>
+                    <button id="applySearch" class="btn btn-primary btn-sm">
+                      <i class="bi bi-search me-1"></i>搜尋
+                    </button>
+                    <button id="clearSearch" class="btn btn-outline-danger btn-sm">
+                      <i class="bi bi-x-lg me-1"></i>清除
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id='setTableMsg' class='p-3'>&emsp;</div>
             <div id='tb' class='table-dark table-striped table-bordered'>progressing...</div>
               `
       $("#content").empty().append(c)
@@ -1697,6 +1731,9 @@ $(()=>{
       // Store reference to processed data for getDynamicFieldData
       window.tableDataLoaded = true;
 
+      // 初始化進階搜尋區塊
+      initAdvancedSearch();
+
       // Re-initialize header filters after data is processed for dynamic field data
       if (p === 'streamlist' || p === 'setlist') {
         // Clear existing header filter
@@ -1895,10 +1932,146 @@ $(()=>{
 
   //--- jsonTable button block ---
 
+  // === 進階搜尋功能 ===
+
+  // 取得可搜尋的欄位列表（從 Tabulator 動態取得）
+  function getSearchableFields() {
+    if (!jsonTable) return []
+    const cols = jsonTable.getColumnDefinitions()
+    return cols
+      .filter(col => col.field && col.title && !['thumbnail', 'YTLink'].includes(col.field))
+      .map(col => ({ field: col.field, title: col.title }))
+  }
+
+  // 建立搜尋條件 HTML
+  function createConditionRow() {
+    const fields = getSearchableFields()
+    const fieldOptions = fields.map(f =>
+      `<option value="${f.field}">${f.title}</option>`
+    ).join('')
+
+    return `
+      <div class="condition-row d-flex gap-2 mb-2 align-items-center">
+        <select class="form-select form-select-sm field-select" style="width: 150px;">
+          ${fieldOptions}
+        </select>
+        <select class="form-select form-select-sm operator-select" style="width: 120px;">
+          <option value="contains">包含</option>
+          <option value="equals">等於</option>
+          <option value="startsWith">開頭是</option>
+          <option value="endsWith">結尾是</option>
+          <option value="notContains">不包含</option>
+        </select>
+        <input type="text" class="form-control form-control-sm search-value" placeholder="輸入搜尋值" style="width: 200px;">
+        <button class="btn btn-outline-danger btn-sm remove-condition">
+          <i class="bi bi-x-lg"></i>
+        </button>
+      </div>
+    `
+  }
+
+  // 初始化進階搜尋（表格載入後呼叫）
+  function initAdvancedSearch() {
+    const container = $('#searchConditions')
+    if (container.length && container.children().length === 0) {
+      container.append(createConditionRow())
+    }
+  }
+
+  // 套用搜尋條件
+  function applyAdvancedSearch() {
+    const conditions = []
+    const logic = $('input[name="searchLogic"]:checked').val() // 'and' or 'or'
+
+    $('.condition-row').each(function() {
+      const field = $(this).find('.field-select').val()
+      const operator = $(this).find('.operator-select').val()
+      const value = $(this).find('.search-value').val().trim()
+
+      if (value) {
+        conditions.push({ field, operator, value })
+      }
+    })
+
+    if (conditions.length === 0) {
+      jsonTable.clearFilter(true)
+      return
+    }
+
+    // 建立自訂篩選函數
+    const customFilter = (data) => {
+      const results = conditions.map(cond => {
+        const cellValue = String(data[cond.field] || '').toLowerCase()
+        const searchValue = cond.value.toLowerCase()
+
+        switch (cond.operator) {
+          case 'contains':
+            return cellValue.includes(searchValue)
+          case 'equals':
+            return cellValue === searchValue
+          case 'startsWith':
+            return cellValue.startsWith(searchValue)
+          case 'endsWith':
+            return cellValue.endsWith(searchValue)
+          case 'notContains':
+            return !cellValue.includes(searchValue)
+          default:
+            return true
+        }
+      })
+
+      // AND: 全部條件都要符合，OR: 任一條件符合即可
+      return logic === 'and'
+        ? results.every(r => r)
+        : results.some(r => r)
+    }
+
+    jsonTable.setFilter(customFilter)
+
+    // 顯示搜尋結果數量
+    const count = jsonTable.getDataCount('active')
+    $('#setTableMsg').text(`搜尋結果：${count} 筆`).addClass('text-bg-info')
+  }
+
+  // 新增條件按鈕
+  $('#content').on('click', '#addCondition', () => {
+    $('#searchConditions').append(createConditionRow())
+  })
+
+  // 移除條件按鈕
+  $('#content').on('click', '.remove-condition', function() {
+    const container = $('#searchConditions')
+    if (container.children().length > 1) {
+      $(this).closest('.condition-row').remove()
+    }
+  })
+
+  // 套用搜尋按鈕
+  $('#content').on('click', '#applySearch', () => {
+    applyAdvancedSearch()
+  })
+
+  // 清除搜尋按鈕
+  $('#content').on('click', '#clearSearch', () => {
+    jsonTable.clearFilter(true)
+    $('.search-value').val('')
+    $('#setTableMsg').html('&emsp;').removeClass('text-bg-info')
+  })
+
+  // Enter 鍵觸發搜尋
+  $('#content').on('keypress', '.search-value', (e) => {
+    if (e.key === 'Enter') {
+      applyAdvancedSearch()
+    }
+  })
+
   $('#content').on('click', '#reloadBtn', ()=>{
     jsonTable.setData()
     jsonTable.clearFilter(true)
     jsonTable.deselectRow()
+    // 清除進階搜尋的輸入值
+    $('.search-value').val('')
+    $('#setTableMsg').html('&emsp;').removeClass('text-bg-info')
   })
 
   $('#content').on('click', '#edit', ()=>{
