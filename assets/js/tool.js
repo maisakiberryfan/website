@@ -3082,7 +3082,11 @@ $(()=>{
     // Auto-hide success messages after 5 seconds
     if (type === 'success') {
       setTimeout(() => {
-        alertContainer.find('.alert').alert('close')
+        const alertEl = alertContainer.find('.alert')[0]
+        if (alertEl) {
+          const bsAlert = bootstrap.Alert.getOrCreateInstance(alertEl)
+          bsAlert.close()
+        }
         alertContainer.hide()
       }, 5000)
     }
