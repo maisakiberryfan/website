@@ -250,7 +250,8 @@ $(()=>{
                 ➕ 新增初回歌曲 (Add New Song)
               </button>
             </div>`:'') +
-            `<!-- 進階搜尋區塊 -->
+            `<div id='setTableMsg' class='p-3'>&emsp;</div>
+            <!-- 進階搜尋區塊 -->
             <div id="advancedSearch" class="card bg-dark mb-3">
               <div class="card-header d-flex justify-content-between align-items-center" style="cursor: pointer;" data-bs-toggle="collapse" data-bs-target="#searchBody">
                 <span><i class="bi bi-search me-2"></i>進階搜尋</span>
@@ -284,7 +285,6 @@ $(()=>{
                 </div>
               </div>
             </div>
-            <div id='setTableMsg' class='p-3'>&emsp;</div>
             <div id='tb' class='table-dark table-striped table-bordered'>progressing...</div>
               `
       $("#content").empty().append(c)
@@ -1710,6 +1710,9 @@ $(()=>{
 
     jsonTable = new Tabulator("#tb", {
       ajaxURL: u,
+      ajaxConfig: {
+        cache: 'no-store'  // 禁用瀏覽器快取，確保每次都從伺服器獲取最新資料
+      },
       ajaxResponse: function(url, params, response) {
         return response.data || response; // 解包 {data: [...]} 格式
       },
@@ -1934,12 +1937,12 @@ $(()=>{
 
   // === 進階搜尋功能 ===
 
-  // 取得可搜尋的欄位列表（從 Tabulator 動態取得）
+  // 取得可搜尋的欄位列表（從 Tabulator 動態取得，只顯示 visible 欄位）
   function getSearchableFields() {
     if (!jsonTable) return []
     const cols = jsonTable.getColumnDefinitions()
     return cols
-      .filter(col => col.field && col.title && !['thumbnail', 'YTLink'].includes(col.field))
+      .filter(col => col.field && col.title && col.visible !== false && !['thumbnail', 'YTLink'].includes(col.field))
       .map(col => ({ field: col.field, title: col.title }))
   }
 
@@ -1955,12 +1958,16 @@ $(()=>{
         <select class="form-select form-select-sm field-select" style="width: 150px;">
           ${fieldOptions}
         </select>
-        <select class="form-select form-select-sm operator-select" style="width: 120px;">
+        <select class="form-select form-select-sm operator-select" style="width: 130px;">
           <option value="contains">包含</option>
           <option value="equals">等於</option>
           <option value="startsWith">開頭是</option>
           <option value="endsWith">結尾是</option>
           <option value="notContains">不包含</option>
+          <option value="like">Like (%萬用)</option>
+          <option value="keywords">關鍵字群</option>
+          <option value="inArray">多值匹配</option>
+          <option value="regex">正規表達式</option>
         </select>
         <input type="text" class="form-control form-control-sm search-value" placeholder="輸入搜尋值" style="width: 200px;">
         <button class="btn btn-outline-danger btn-sm remove-condition">
@@ -2015,6 +2022,25 @@ $(()=>{
             return cellValue.endsWith(searchValue)
           case 'notContains':
             return !cellValue.includes(searchValue)
+          case 'like':
+            // SQL LIKE 風格：% 匹配任意字元
+            const likePattern = cond.value.replace(/%/g, '.*').replace(/_/g, '.')
+            try {
+              return new RegExp(`^${likePattern}$`, 'i').test(cellValue)
+            } catch { return false }
+          case 'keywords':
+            // 空格分隔的關鍵字，全部必須匹配
+            const keywords = cond.value.toLowerCase().split(/\s+/).filter(k => k)
+            return keywords.every(kw => cellValue.includes(kw))
+          case 'inArray':
+            // 逗號分隔的值，任一匹配即可
+            const values = cond.value.toLowerCase().split(',').map(v => v.trim()).filter(v => v)
+            return values.some(v => cellValue === v || cellValue.includes(v))
+          case 'regex':
+            // 正規表達式
+            try {
+              return new RegExp(cond.value, 'i').test(cellValue)
+            } catch { return false }
           default:
             return true
         }
