@@ -2096,7 +2096,6 @@ $(()=>{
           <option value="regex">正規表達式</option>
         </select>
         <input type="text" class="form-control form-control-sm search-value" placeholder="例: HAPPY" style="width: 200px;">
-        <span class="operator-hint text-muted small ms-2" style="min-width: 180px;">例: HAPPY</span>
         <button class="btn btn-outline-danger btn-sm remove-condition">
           <i class="bi bi-x-lg"></i>
         </button>
@@ -2185,12 +2184,10 @@ $(()=>{
   // 新增條件按鈕
   $('#content').on('click', '#addCondition', () => {
     $('#searchConditions').append(createConditionRow())
-    // 更新新增條件的 hint
-    updateOperatorHint($('#searchConditions .condition-row:last-child'))
   })
 
-  // 運算子變更時更新提示
-  const operatorHints = {
+  // 運算子變更時更新 placeholder
+  const operatorPlaceholders = {
     contains: '例: HAPPY',
     equals: '完全符合的值',
     notContains: '排除含此文字的結果',
@@ -2200,15 +2197,10 @@ $(()=>{
     regex: '例: ^H.*Y$'
   }
 
-  function updateOperatorHint($row) {
-    const operator = $row.find('.operator-select').val()
-    const hint = operatorHints[operator] || ''
-    $row.find('.operator-hint').text(hint)
-    $row.find('.search-value').attr('placeholder', hint || '輸入搜尋值')
-  }
-
   $('#content').on('change', '.operator-select', function() {
-    updateOperatorHint($(this).closest('.condition-row'))
+    const operator = $(this).val()
+    const placeholder = operatorPlaceholders[operator] || '輸入搜尋值'
+    $(this).closest('.condition-row').find('.search-value').attr('placeholder', placeholder)
   })
 
   // 移除條件按鈕
