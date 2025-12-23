@@ -189,7 +189,7 @@ Please report this to https://github.com/markedjs/marked.`,a){let i="<p>An error
               </button>
             </div>`:"")+`<div id='setTableMsg' class='p-3'>&emsp;</div>
             <!-- \u9032\u968E\u641C\u5C0B\u5340\u584A -->
-            <div id="advancedSearch" class="card bg-dark mb-3">
+            <div id="advancedSearch" class="card bg-dark mb-3 w-100">
               <div class="card-header d-flex justify-content-between align-items-center" style="cursor: pointer;" data-bs-toggle="collapse" data-bs-target="#searchBody">
                 <span><i class="bi bi-search me-2"></i>\u9032\u968E\u641C\u5C0B</span>
                 <i class="bi bi-chevron-down"></i>
@@ -277,7 +277,7 @@ Please report this to https://github.com/markedjs/marked.`,a){let i="<p>An error
           <option value="inArray">\u591A\u503C\u5339\u914D</option>
           <option value="regex">\u6B63\u898F\u8868\u9054\u5F0F</option>
         </select>
-        <input type="text" class="form-control form-control-sm search-value" placeholder="\u4F8B: HAPPY" style="width: 200px;">
+        <input type="text" class="form-control form-control-sm search-value flex-grow-1" placeholder="\u4F8B: HAPPY" style="min-width: 200px;">
         <button class="btn btn-outline-danger btn-sm remove-condition">
           <i class="bi bi-x-lg"></i>
         </button>

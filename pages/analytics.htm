@@ -90,8 +90,23 @@
                     <li>
                       <button type="button" class="btn btn-link p-0 text-start column-insert" data-column="time">
                         <code>time</code>
-                      </button> - 歌曲時間 (TIMESTAMP)
-                      <br><small class="text-muted">範例查詢：<code>time >= '2025-11-03'</code> 或 <code>time >= '2025-11-03 12:00:00'</code></small>
+                      </button> - 直播時間 (TIMESTAMP)
+                      <br><small class="text-muted">範例：<code>time >= '2025-11-03'</code></small>
+                    </li>
+                    <li>
+                      <button type="button" class="btn btn-link p-0 text-start column-insert" data-column="categories">
+                        <code>categories</code>
+                      </button> - 直播分類 (VARCHAR)
+                    </li>
+                    <li>
+                      <button type="button" class="btn btn-link p-0 text-start column-insert" data-column="segmentNo">
+                        <code>segmentNo</code>
+                      </button> - 場次編號 (INT)
+                    </li>
+                    <li>
+                      <button type="button" class="btn btn-link p-0 text-start column-insert" data-column="trackNo">
+                        <code>trackNo</code>
+                      </button> - 曲目編號 (INT)
                     </li>
                     <li>
                       <button type="button" class="btn btn-link p-0 text-start column-insert" data-column="songID">
@@ -103,15 +118,15 @@
                         <code>songName</code>
                       </button> - 歌名（日文） (VARCHAR)
                     </li>
+                  </ul>
+                </div>
+                <div class="col-md-6">
+                  <ul class="list-unstyled mb-0">
                     <li>
                       <button type="button" class="btn btn-link p-0 text-start column-insert" data-column="songNameEn">
                         <code>songNameEn</code>
                       </button> - 歌名（英文） (VARCHAR)
                     </li>
-                  </ul>
-                </div>
-                <div class="col-md-6">
-                  <ul class="list-unstyled mb-0">
                     <li>
                       <button type="button" class="btn btn-link p-0 text-start column-insert" data-column="artist">
                         <code>artist</code>
@@ -131,6 +146,11 @@
                       <button type="button" class="btn btn-link p-0 text-start column-insert" data-column="tieup">
                         <code>tieup</code>
                       </button> - 作品綁定 (TEXT)
+                    </li>
+                    <li>
+                      <button type="button" class="btn btn-link p-0 text-start column-insert" data-column="setlistNote">
+                        <code>setlistNote</code>
+                      </button> - 歌單備註 (TEXT)
                     </li>
                     <li>
                       <button type="button" class="btn btn-link p-0 text-start column-insert" data-column="songNote">
@@ -162,14 +182,14 @@
             </div>
             <div class="row g-3">
               <div class="col-md-6">
-                <label for="startDateInput" class="form-label">開始日期 / Start Date</label>
-                <input type="date" id="startDateInput" class="form-control">
-                <small class="form-text text-muted">選擇開始日期（本地時間）</small>
+                <label for="startDateInput" class="form-label">開始時間 / Start Time</label>
+                <input type="datetime-local" id="startDateInput" class="form-control">
+                <small class="form-text text-muted">選擇開始時間（本地時間）</small>
               </div>
               <div class="col-md-6">
-                <label for="endDateInput" class="form-label">結束日期 / End Date</label>
-                <input type="date" id="endDateInput" class="form-control">
-                <small class="form-text text-muted">選擇結束日期（本地時間，不含當日）</small>
+                <label for="endDateInput" class="form-label">結束時間 / End Time</label>
+                <input type="datetime-local" id="endDateInput" class="form-control">
+                <small class="form-text text-muted">選擇結束時間（本地時間）</small>
               </div>
             </div>
             <div class="row g-3 mt-2">

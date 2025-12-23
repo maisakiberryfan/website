@@ -311,7 +311,7 @@ $(()=>{
             </div>`:'') +
             `<div id='setTableMsg' class='p-3'>&emsp;</div>
             <!-- 進階搜尋區塊 -->
-            <div id="advancedSearch" class="card bg-dark mb-3">
+            <div id="advancedSearch" class="card bg-dark mb-3 w-100">
               <div class="card-header d-flex justify-content-between align-items-center" style="cursor: pointer;" data-bs-toggle="collapse" data-bs-target="#searchBody">
                 <span><i class="bi bi-search me-2"></i>進階搜尋</span>
                 <i class="bi bi-chevron-down"></i>
@@ -2095,7 +2095,7 @@ $(()=>{
           <option value="inArray">多值匹配</option>
           <option value="regex">正規表達式</option>
         </select>
-        <input type="text" class="form-control form-control-sm search-value" placeholder="例: HAPPY" style="width: 200px;">
+        <input type="text" class="form-control form-control-sm search-value flex-grow-1" placeholder="例: HAPPY" style="min-width: 200px;">
         <button class="btn btn-outline-danger btn-sm remove-condition">
           <i class="bi bi-x-lg"></i>
         </button>

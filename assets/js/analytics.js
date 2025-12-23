@@ -411,25 +411,17 @@ async function loadParquetData() {
     // We need to treat it as UTC and let JavaScript handle local timezone conversion
     await conn.query(`
       CREATE OR REPLACE TABLE berry_data AS
-      SELECT
-        streamID,
-        streamTitle,
-        time AS time,
-        songID,
-        songName,
-        songNameEn,
-        artist,
-        artistEn,
-        genre,
-        tieup,
-        songNote
-      FROM read_parquet('berry-data.parquet')
+      SELECT * FROM read_parquet('berry-data.parquet')
     `);
 
     // Verify data loaded (async query)
     const result = await conn.query('SELECT COUNT(*) as count FROM berry_data');
     const count = result.toArray()[0].count;
     console.log(`[Data] Loaded ${count} records`);
+
+    // Log column names for debugging
+    const schema = await conn.query('DESCRIBE berry_data');
+    console.log('[Data] Columns:', schema.toArray().map(r => r.column_name));
 
     showLoading(false);
   } catch (error) {
@@ -1145,9 +1137,9 @@ function handleDateRangeChange() {
   }
 
   try {
-    // Convert local dates to UTC (start of day for both dates)
-    const startUTC = dayjs(startDate).startOf('day').utc().format('YYYY-MM-DD HH:mm:ss');
-    const endUTC = dayjs(endDate).startOf('day').utc().format('YYYY-MM-DD HH:mm:ss');
+    // Convert local datetime to UTC (preserve time if datetime-local, otherwise start of day)
+    const startUTC = dayjs(startDate).utc().format('YYYY-MM-DD HH:mm:ss');
+    const endUTC = dayjs(endDate).utc().format('YYYY-MM-DD HH:mm:ss');
 
     UI.utcRangeOutput.value = `time >= '${startUTC}' AND time < '${endUTC}'`;
     UI.btnInsertRange.disabled = false;
