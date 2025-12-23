@@ -341,6 +341,20 @@ $(()=>{
                       <i class="bi bi-x-lg me-1"></i>清除
                     </button>
                   </div>
+                  <div class="mt-3 small text-muted">
+                    <details>
+                      <summary style="cursor: pointer;"><i class="bi bi-question-circle me-1"></i>搜尋運算子說明</summary>
+                      <ul class="mt-2 mb-0 ps-3">
+                        <li><strong>包含</strong>：欄位內含此文字 (例: "HAPPY" 找到 "happy girl")</li>
+                        <li><strong>等於</strong>：欄位完全符合此值</li>
+                        <li><strong>不包含</strong>：欄位不含此文字</li>
+                        <li><strong>Like (%萬用)</strong>：% 代表任意字元 (例: "H%Y" 找到 "HAPPY", "HEY")</li>
+                        <li><strong>關鍵字群</strong>：空格分隔，全部必須匹配 (例: "happy train" 找到含兩詞的歌)</li>
+                        <li><strong>多值匹配</strong>：逗號分隔，任一匹配即可 (例: "berry,莓" 找到含任一的)</li>
+                        <li><strong>正規表達式</strong>：進階模式 (例: "^H.*Y$" 開頭H結尾Y)</li>
+                      </ul>
+                    </details>
+                  </div>
                 </div>
               </div>
             </div>
@@ -2075,15 +2089,14 @@ $(()=>{
         <select class="form-select form-select-sm operator-select" style="width: 130px;">
           <option value="contains">包含</option>
           <option value="equals">等於</option>
-          <option value="startsWith">開頭是</option>
-          <option value="endsWith">結尾是</option>
           <option value="notContains">不包含</option>
           <option value="like">Like (%萬用)</option>
           <option value="keywords">關鍵字群</option>
           <option value="inArray">多值匹配</option>
           <option value="regex">正規表達式</option>
         </select>
-        <input type="text" class="form-control form-control-sm search-value" placeholder="輸入搜尋值" style="width: 200px;">
+        <input type="text" class="form-control form-control-sm search-value" placeholder="例: HAPPY" style="width: 200px;">
+        <span class="operator-hint text-muted small ms-2" style="min-width: 180px;">例: HAPPY</span>
         <button class="btn btn-outline-danger btn-sm remove-condition">
           <i class="bi bi-x-lg"></i>
         </button>
@@ -2130,10 +2143,6 @@ $(()=>{
             return cellValue.includes(searchValue)
           case 'equals':
             return cellValue === searchValue
-          case 'startsWith':
-            return cellValue.startsWith(searchValue)
-          case 'endsWith':
-            return cellValue.endsWith(searchValue)
           case 'notContains':
             return !cellValue.includes(searchValue)
           case 'like':
@@ -2176,6 +2185,30 @@ $(()=>{
   // 新增條件按鈕
   $('#content').on('click', '#addCondition', () => {
     $('#searchConditions').append(createConditionRow())
+    // 更新新增條件的 hint
+    updateOperatorHint($('#searchConditions .condition-row:last-child'))
+  })
+
+  // 運算子變更時更新提示
+  const operatorHints = {
+    contains: '例: HAPPY',
+    equals: '完全符合的值',
+    notContains: '排除含此文字的結果',
+    like: '例: H%Y (%=任意)',
+    keywords: '空格分隔 (例: happy train)',
+    inArray: '逗號分隔 (例: berry,莓)',
+    regex: '例: ^H.*Y$'
+  }
+
+  function updateOperatorHint($row) {
+    const operator = $row.find('.operator-select').val()
+    const hint = operatorHints[operator] || ''
+    $row.find('.operator-hint').text(hint)
+    $row.find('.search-value').attr('placeholder', hint || '輸入搜尋值')
+  }
+
+  $('#content').on('change', '.operator-select', function() {
+    updateOperatorHint($(this).closest('.condition-row'))
   })
 
   // 移除條件按鈕
