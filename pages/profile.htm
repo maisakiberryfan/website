@@ -67,7 +67,7 @@
         </div>
         
         <div class="mt-4">
-            <video-js class="video-js" controls></video-js>
+            <audio id="bgmPlayer" class="w-100" style="max-width:500px;" controls preload="none"></audio>
         </div>
     </div>
 
@@ -78,13 +78,12 @@
         const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
         const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
 
-        //set videojs
-        const player = videojs((document.querySelector('.video-js')), {
-            audioOnlyMode: true,
-            width:'500px'})
+        const player = document.getElementById('bgmPlayer')
 
         $('input[name="bgm"]').on('change', ()=>{
-            player.src(`img/profile/bgm/${$('input[name="bgm"]:checked').val()}.mp3`)
+            const val = $('input[name="bgm"]:checked').val()
+            if(!val) return
+            player.src = `img/profile/bgm/${val}.mp3`
             player.play()
         })
     })

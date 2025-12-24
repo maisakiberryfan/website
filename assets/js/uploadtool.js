@@ -1,8 +1,10 @@
-//from cdn
-import 'https://unpkg.com/jquery@3.7.1/dist/jquery.min.js'
-import 'https://unpkg.com/@popperjs/core@2.11.8/dist/umd/popper.min.js'
-import 'https://unpkg.com/bootstrap@5.3.3/dist/js/bootstrap.min.js'
-import { Octokit, RequestError } from "https://esm.sh/octokit"
+// Local dependencies (bundled)
+import $ from 'jquery'
+import * as bootstrap from 'bootstrap'
+import 'bootstrap/dist/css/bootstrap.min.css'
+
+window.$ = window.jQuery = $
+window.bootstrap = bootstrap
 
 $(async()=> {
 

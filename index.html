@@ -4,56 +4,87 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title></title>
-	<link rel="stylesheet" href="https://unpkg.com/bootstrap@5.3.3/dist/css/bootstrap.min.css">
-        <link rel="stylesheet" href="assets/css/tabulator-bootstrap5-custom.css">
-	<link rel="stylesheet" href="https://unpkg.com/select2@4.0.13/dist/css/select2.min.css">
-	<link rel="stylesheet" href="https://unpkg.com/@fancyapps/ui@5.0.36/dist/fancybox/fancybox.css">
-	<link rel="stylesheet" href="https://unpkg.com/video.js@8.21.1/dist/video-js.min.css">
-	<link rel="icon" type="image/x-icon" href="favicon.ico">
-	<script defer src="https://unpkg.com/@fancyapps/ui@5.0.36/dist/fancybox/fancybox.umd.js"></script>
-	<script type="module" src="assets/js/tool.js"></script>
+	<link rel="stylesheet" href="/assets/dist/tool.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+	<link rel="icon" type="image/x-icon" href="/favicon.ico">
+	<script type="module" defer src="/assets/dist/tool.js"></script>
 	<base target="_blank">
 	<meta name="description" content="An Unofficial fansite about 苺咲べりぃ(Maisaki Berry).Main content are singing data.">
 	<style>
-    .select2-results__option,
-    .select2-selection__choice,
-    .select2-selection__clear {
-        color: black;
-    }
+		/* Select2 dark theme fixes */
+		.select2-results__option, .select2-selection__choice, .select2-selection__clear {
+			color: black !important;
+		}
 
-    .select2-container .select2-search--inline .select2-search__field,
-    .tabulator .tabulator-header .tabulator-col .tabulator-header-filter .select2-container .select2-search--inline .select2-search__field {
-        border: 0 !important;
-        padding: 0 !important;
-        margin: 0 !important;
-        background: transparent !important;
-        box-shadow: none !important;
-        outline: 0 !important;
-        min-width: 0.75em;
-        line-height: inherit;
-    }
+		.select2-dropdown {
+			background-color: white !important;
+			border: 1px solid #ced4da !important;
+		}
 
-    .select2-container .select2-selection--multiple .select2-selection__rendered {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        gap: 0.25rem;
-    }
+		.select2-results__options {
+			background-color: white !important;
+			color: black !important;
+		}
 
-    .select2-container .select2-selection--multiple .select2-search--inline {
-        float: none;
-    }
+		.select2-results__option--highlighted {
+			background-color: #0d6efd !important;
+			color: white !important;
+		}
 
-    .figure-cloth {
-        width: 324px;
-        height: 726px;
-        margin: 3px;
-    }
+		.select2-search__field {
+			background-color: white !important;
+			color: black !important;
+		}
 
-    .card {
-        width: 480px;
-    }
-</style>
+		.select2-selection {
+			background-color: white !important;
+			border: 1px solid #ced4da !important;
+		}
+
+		.select2-selection__rendered {
+			color: black !important;
+		}
+
+		.figure-cloth {
+			width: 324px;
+			height: 726px;
+			margin: 3px
+		}
+		.card {
+			width: 480px;
+		}
+
+		/* Context Menu Styles */
+		.context-menu {
+			position: fixed;
+			background: var(--bs-dark);
+			border: 1px solid var(--bs-border-color);
+			border-radius: 4px;
+			box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+			z-index: 9999;
+			min-width: 250px;
+			padding: 4px 0;
+		}
+
+		.context-menu-item {
+			padding: 10px 16px;
+			cursor: pointer;
+			color: var(--bs-light);
+			display: flex;
+			align-items: center;
+			gap: 8px;
+		}
+
+		.context-menu-item:hover {
+			background: var(--bs-primary);
+		}
+
+		.context-menu-divider {
+			height: 1px;
+			background: var(--bs-border-color);
+			margin: 4px 0;
+		}
+	</style>
 </head>
 
 <body>
@@ -77,7 +108,7 @@
 	</div>
 
 	<!-- Modal for add setlist row -->
-	<div class="modal fade" id="modalAddRow" data-bs-keyboard="false" tabindex="-1" aria-labelledby="modalTitleAddRow" aria-hidden="true">
+	<div class="modal fade" id="modalAddRow" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="modalTitleAddRow" aria-hidden="true">
 		<div class="modal-dialog modal-lg">
 			<div class="modal-content">
 				<div class="modal-header">
@@ -117,7 +148,7 @@
 	</div>
 
 	<!-- Modal for add streamlist row -->
-	<div class="modal fade" id="modalAddStreamRow" data-bs-keyboard="false" tabindex="-1" aria-labelledby="modalTitleAddStreamRow" aria-hidden="true">
+	<div class="modal fade" id="modalAddStreamRow" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="modalTitleAddStreamRow" aria-hidden="true">
 		<div class="modal-dialog modal-lg">
 			<div class="modal-content">
 				<div class="modal-header">
@@ -125,6 +156,13 @@
 					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 				</div>
 				<div class="modal-body" id='addStreamRowInfo'>
+					<!-- 錯誤訊息區域 -->
+					<div id="addStreamRowError" class="alert alert-danger alert-dismissible fade show" role="alert" style="display: none;">
+						<strong>❌ 新增失敗</strong>
+						<div id="addStreamRowErrorMsg"></div>
+						<button type="button" class="btn-close" onclick="document.getElementById('addStreamRowError').style.display='none'"></button>
+					</div>
+
 					<form>
 						<div class="form-group row my-2">
 							<label for="YTID" class="col-sm-3 col-form-label">YTLink</label>
@@ -166,18 +204,407 @@
 					</form>
 				</div>
 				<div class="modal-footer">
-					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="addStreamRowData">Add</button>
+					<button type="button" class="btn btn-secondary" id="addStreamRowData">Add</button>
 				</div>
 			</div>
 		</div>
 	</div>
 
-	
+	<!-- Modal for add songlist row -->
+	<div class="modal fade" id="modalAddSong" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="modalTitleAddSong" aria-hidden="true">
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h1 class="modal-title fs-5" id="modalTitleAddSong">Add Song</h1>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body" id='addSongInfo'>
+					<form>
+						<div class="form-group row my-2">
+							<label for="songName" class="col-sm-3 col-form-label">Song Name *</label>
+							<div class="col-sm-9">
+								<input type="text" class="form-control" id="songName" required>
+							</div>
+						</div>
+						<div class="form-group row my-2">
+							<label for="songNameEn" class="col-sm-3 col-form-label">Song Name (EN)</label>
+							<div class="col-sm-9">
+								<input type="text" class="form-control" id="songNameEn">
+							</div>
+						</div>
+						<div class="form-group row my-2">
+							<label for="artistName" class="col-sm-3 col-form-label">Artist *</label>
+							<div class="col-sm-9">
+								<select class="form-control" id="artistName" required>
+									<option value="">Select or type artist name...</option>
+								</select>
+							</div>
+						</div>
+						<div class="form-group row my-2">
+							<label for="artistNameEn" class="col-sm-3 col-form-label">Artist (EN)</label>
+							<div class="col-sm-9">
+								<input type="text" class="form-control" id="artistNameEn">
+								<small class="form-text text-muted">Auto-filled when selecting existing artist, but can be manually edited</small>
+							</div>
+						</div>
+						<div class="form-group row my-2">
+							<label for="genreName" class="col-sm-3 col-form-label">Genre</label>
+							<div class="col-sm-9">
+								<input type="text" class="form-control" id="genreName">
+							</div>
+						</div>
+						<div class="form-group row my-2">
+							<label for="tieupName" class="col-sm-3 col-form-label">Tie-up</label>
+							<div class="col-sm-9">
+								<input type="text" class="form-control" id="tieupName">
+							</div>
+						</div>
+						<div class="form-group row my-2">
+							<label for="songNoteText" class="col-sm-3 col-form-label">Note</label>
+							<div class="col-sm-9">
+								<textarea class="form-control" id="songNoteText" rows="2"></textarea>
+							</div>
+						</div>
+						<div class="form-group row my-2">
+							<div class="col-sm-3"></div>
+							<div class="col-sm-9">
+								<span class="text-muted">* Required fields</span>
+							</div>
+						</div>
+					</form>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+					<button type="button" class="btn btn-primary" id="addSongData">Add Song</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Modal for batch setlist editing -->
+	<div class="modal fade" id="modalBatchEdit" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="modalTitleBatchEdit" aria-hidden="true">
+		<div class="modal-dialog modal-xl modal-dialog-scrollable">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h1 class="modal-title fs-5" id="modalTitleBatchEdit">📝 批次編輯歌單 - Batch Edit Setlist</h1>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<div class="mb-3">
+						<h6>Stream Information</h6>
+						<p class="mb-1"><strong>ID:</strong> <span id="batchStreamID"></span></p>
+						<p class="mb-1"><strong>Title:</strong> <span id="batchStreamTitle"></span></p>
+						<div id="batchLoadStatus" class="alert alert-info mt-2" style="display: none;"></div>
+					</div>
+
+					<div class="row mb-3">
+						<div class="col-md-4">
+							<label for="batchStartTrack" class="form-label">起始 Track 編號 (Start Track)</label>
+							<input type="number" class="form-control" id="batchStartTrack" value="1" min="1">
+						</div>
+						<div class="col-md-4">
+							<label for="batchTotalSongs" class="form-label">總曲數 (Total Songs)</label>
+							<input type="number" class="form-control" id="batchTotalSongs" value="20" min="1" max="100">
+						</div>
+						<div class="col-md-4">
+							<label for="batchSegment" class="form-label">歌回編號 (Segment)</label>
+							<input type="number" class="form-control" id="batchSegment" value="1" min="1">
+							<small class="form-text text-muted">當天第幾次歌回（整場共用）</small>
+						</div>
+					</div>
+
+					<div class="mb-2 d-flex gap-2">
+						<button type="button" class="btn btn-primary btn-sm" id="generateBatchTable">產生表格 (Generate Table)</button>
+						<button type="button" class="btn btn-success btn-sm" id="batchAddNewSong">➕ 新增歌曲 (Add New Song)</button>
+					</div>
+
+					<div id="batchTableContainer">
+						<!-- Tabulator table will be rendered here -->
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+					<button type="button" class="btn btn-primary" id="saveBatchSetlist">Save All</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Modal for quick add setlist (live streaming) -->
+	<div class="modal fade" id="modalQuickAdd" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="modalTitleQuickAdd" aria-hidden="true">
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h1 class="modal-title fs-5" id="modalTitleQuickAdd">⚡ 快速新增歌單 - Quick Add (Live)</h1>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body" style="position: relative; min-height: 300px;">
+
+				<!-- 載入遮罩層 -->
+				<div id="quickAddLoadingOverlay" style="display: none; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0, 0, 0, 0.7); z-index: 1050; border-radius: 0.375rem;">
+					<div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; color: white;">
+						<div class="spinner-border mb-3" role="status" style="width: 3rem; height: 3rem;">
+							<span class="visually-hidden">載入中...</span>
+						</div>
+						<div style="font-size: 1.1rem; font-weight: 500;">正在檢測現有歌單...</div>
+					</div>
+				</div>
+
+				<!-- 錯誤訊息區域 -->
+				<div id="quickAddError" class="alert alert-danger alert-dismissible fade show" role="alert" style="display: none;">
+					<strong>❌ 操作失敗</strong>
+						<div id="quickAddErrorMsg"></div>
+						<button type="button" class="btn-close" onclick="document.getElementById('quickAddError').style.display='none'; document.getElementById('quickAddErrorMsg').innerHTML=''"></button>
+					</div>
+					
+					<div class="mb-3">
+						<h6>Stream Information</h6>
+						<p class="mb-1"><strong>ID:</strong> <span id="quickStreamID"></span></p>
+						<p class="mb-1"><strong>Title:</strong> <span id="quickStreamTitle"></span></p>
+					</div>
+
+					<div class="alert alert-info">
+						<small>💡 此模式適合直播中快速記錄歌曲。按 Enter 連續新增，按 Esc 關閉視窗。</small>
+					</div>
+
+					<div class="row mb-3">
+						<div class="col-md-6">
+							<label for="quickStartTrack" class="form-label">起始 Track 編號 (Start Track) *</label>
+							<input type="number" class="form-control" id="quickStartTrack" placeholder="首次需填寫" min="1" required>
+							<small class="form-text text-muted">第一次填寫後會自動遞增</small>
+						</div>
+						<div class="col-md-6">
+							<label for="quickSegment" class="form-label">歌回編號 (Segment)</label>
+							<input type="number" class="form-control" id="quickSegment" value="1" min="1">
+							<small class="form-text text-muted">當天第幾次歌回</small>
+						</div>
+					</div>
+
+					<hr>
+
+					<div class="mb-3" id="quickAddFormSection" style="display: none;">
+						<div class="alert alert-success">
+							<strong>下一首 Track:</strong> <span id="quickNextTrack">-</span>
+						</div>
+
+						<div class="mb-3">
+							<div class="d-flex justify-content-between align-items-center mb-2">
+								<label for="quickSongSelect" class="form-label mb-0">歌曲 (Song) *</label>
+								<button type="button" class="btn btn-success btn-sm" id="quickAddNewSong">
+									➕ 新增初回歌曲
+								</button>
+							</div>
+							<select class="form-control" id="quickSongSelect" required>
+								<option value="">搜尋歌曲...</option>
+							</select>
+						</div>
+
+						<div class="mb-3">
+							<label for="quickNote" class="form-label">備註 (Note)</label>
+							<input type="text" class="form-control" id="quickNote" placeholder="選填">
+						</div>
+
+						<div class="d-grid gap-2">
+							<button type="button" class="btn btn-primary" id="quickAddSongBtn">
+								<strong>Enter</strong> 新增歌曲
+							</button>
+						</div>
+					</div>
+
+					<div class="mb-3" id="quickStartSection">
+						<div class="d-grid gap-2">
+							<button type="button" class="btn btn-success btn-lg" id="quickStartBtn">
+								開始記錄 (Start)
+							</button>
+						</div>
+					</div>
+
+					<hr>
+
+					<div class="mb-3">
+						<h6>已新增清單 (Added Songs)</h6>
+						<div id="quickAddedList" class="border rounded p-2" style="max-height: 200px; overflow-y: auto; min-height: 50px;">
+							<small class="text-muted">尚未新增任何歌曲</small>
+						</div>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">關閉 (Close)</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Modal for bilingual field editing -->
+	<div class="modal fade" id="modalBilingualEdit" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="modalTitleBilingualEdit" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h1 class="modal-title fs-5" id="modalTitleBilingualEdit">編輯 / Edit</h1>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<div class="mb-3">
+						<label for="bilingualJA" class="form-label">
+							<span id="bilingualFieldLabel">日文</span> (Japanese)
+						</label>
+						<input type="text" class="form-control" id="bilingualJA" placeholder="日本語で入力">
+					</div>
+					<div class="mb-3">
+						<label for="bilingualEN" class="form-label">
+							英文 (English)
+						</label>
+						<input type="text" class="form-control" id="bilingualEN" placeholder="Enter in English">
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+					<button type="button" class="btn btn-primary" id="saveBilingual">Save</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Modal: Batch Add Aliases -->
+	<div class="modal fade" id="modalBatchAddAliases" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="modalTitleBatchAddAliases" aria-hidden="true">
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h1 class="modal-title fs-5" id="modalTitleBatchAddAliases">📦 批次新增別名 - Batch Add Aliases</h1>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<div class="mb-3">
+						<label for="batchAliasType" class="form-label">類型 (Type)</label>
+						<select class="form-select" id="batchAliasType">
+							<option value="artist">歌手 (Artist)</option>
+							<option value="title">歌名 (Title)</option>
+						</select>
+					</div>
+					<div class="mb-3">
+						<label for="batchAliasJSON" class="form-label">JSON 格式 (批次匯入)</label>
+						<textarea class="form-control font-monospace" id="batchAliasJSON" rows="10" placeholder='{"釘宮理恵": ["kugimiya rie", "釘宮"], "μ\'s": ["ミューズ", "muse"]}'></textarea>
+						<div class="form-text">
+							格式：{"標準名稱": ["別名1", "別名2"], ...}
+						</div>
+					</div>
+					<div class="mb-3">
+						<div class="alert alert-info" role="alert">
+							<strong>說明：</strong>
+							<ul class="mb-0">
+								<li>JSON 格式：物件的 key 為標準名稱，value 為別名陣列</li>
+								<li>範例：{"釘宮理恵": ["kugimiya rie", "釘宮"]}</li>
+								<li>每個別名將建立為獨立的資料列</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+					<button type="button" class="btn btn-primary" id="saveBatchAliases">
+						<i class="bi bi-upload"></i> Upload
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Modal: Quick Add Alias -->
+	<div class="modal fade" id="modalQuickAddAlias" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="modalTitleQuickAddAlias" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h1 class="modal-title fs-5" id="modalTitleQuickAddAlias">⚡ 快速新增別名 - Quick Add Alias</h1>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<!-- Alert container for success/error messages -->
+					<div id="quickAliasAlert" class="alert-container mb-3" style="display: none;"></div>
+
+					<div class="mb-3">
+						<label for="quickAliasType" class="form-label">類型 (Type)</label>
+						<select class="form-select" id="quickAliasType">
+							<option value="artist">歌手 (Artist)</option>
+							<option value="title">歌名 (Title)</option>
+						</select>
+					</div>
+					<div class="mb-3">
+						<label for="quickCanonicalName" class="form-label">標準名稱 (Canonical Name)</label>
+						<select class="form-select" id="quickCanonicalName">
+							<option value="">請選擇...</option>
+						</select>
+						<div class="form-text">
+							請從清單中選擇資料庫中已存在的歌曲或歌手
+						</div>
+					</div>
+					<div class="mb-3">
+						<label for="quickAliasValue" class="form-label">別名 (Alias)</label>
+						<input type="text" class="form-control" id="quickAliasValue" placeholder="例：kugimiya rie">
+						<div class="form-text">
+							輸入這首歌/歌手的另一種寫法
+						</div>
+					</div>
+					<div class="mb-3">
+						<label for="quickAliasNote" class="form-label">備註 (Note) <span class="text-muted">(可選)</span></label>
+						<input type="text" class="form-control" id="quickAliasNote" placeholder="例：Romaji name">
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+					<button type="button" class="btn btn-primary" id="saveQuickAlias">
+						<i class="bi bi-plus-circle"></i> Add
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Modal: Test Alias -->
+	<div class="modal fade" id="modalTestAlias" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="modalTitleTestAlias" aria-hidden="true">
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h1 class="modal-title fs-5" id="modalTitleTestAlias">🧪 測試別名匹配 - Test Alias Matching</h1>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<div class="mb-3">
+						<label for="testAliasType" class="form-label">類型 (Type)</label>
+						<select class="form-select" id="testAliasType">
+							<option value="artist">歌手 (Artist)</option>
+							<option value="title">歌名 (Title)</option>
+						</select>
+					</div>
+					<div class="mb-3">
+						<label for="testAliasInput" class="form-label">測試輸入 (Input Text)</label>
+						<input type="text" class="form-control" id="testAliasInput" placeholder="輸入要測試的文字">
+					</div>
+					<div class="mb-3">
+						<button type="button" class="btn btn-primary" id="runTestAlias">
+							<i class="bi bi-search"></i> Test
+						</button>
+					</div>
+					<div id="testAliasResults" class="mt-3" style="display: none;">
+						<h6>匹配結果 (Matching Results):</h6>
+						<div id="testAliasResultsContent"></div>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Connection Error Alert (fixed position at top) -->
+	<div id="connectionErrorAlert" class="alert alert-danger alert-dismissible fade" role="alert" style="display: none; position: fixed; top: 20px; left: 50%; transform: translateX(-50%); z-index: 9999; min-width: 400px; max-width: 600px; box-shadow: 0 4px 12px rgba(0,0,0,0.3);">
+		<h5 class="alert-heading">
+			<i class="bi bi-exclamation-triangle-fill me-2"></i>
+			無法連線到資料庫
+		</h5>
+		<p class="mb-2" id="connectionErrorMessage">請檢查 Hyperdrive 服務是否啟動（<code>http://localhost:8785</code>），或稍後再試。</p>
+		<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+	</div>
+
 </body>
 </html>
-
-
-
-
-
-
