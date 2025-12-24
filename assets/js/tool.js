@@ -1035,12 +1035,7 @@ $(()=>{
         const row = cell.getRow().getData();
         const ja = row.songName || '';
         const en = row.songNameEn || '';
-        return `
-          <div style="line-height: 1.5;">
-            <div style="font-weight: 500;">${ja}</div>
-            ${en ? `<div style="font-size: 0.85em; color: #999; margin-top: 2px;">${en}</div>` : ''}
-          </div>
-        `;
+        return `<div style="line-height: 1.5;"><div style="font-weight: 500;">${ja}</div>${en ? `<div style="font-size: 0.85em; color: #999; margin-top: 2px;">${en}</div>` : ''}</div>`;
       }
     },
     {
@@ -1065,12 +1060,7 @@ $(()=>{
         const row = cell.getRow().getData();
         const ja = row.artist || '';
         const en = row.artistEn || '';
-        return `
-          <div style="line-height: 1.5;">
-            <div>${ja}</div>
-            ${en ? `<div style="font-size: 0.85em; color: #999; margin-top: 2px;">${en}</div>` : ''}
-          </div>
-        `;
+        return `<div style="line-height: 1.5;"><div>${ja}</div>${en ? `<div style="font-size: 0.85em; color: #999; margin-top: 2px;">${en}</div>` : ''}</div>`;
       }
     },
     {
@@ -1234,12 +1224,7 @@ $(()=>{
         const row = cell.getRow().getData();
         const ja = row.songName || '';
         const en = row.songNameEn || '';
-        return `
-          <div style="line-height: 1.5;">
-            <div style="font-weight: 500;">${ja}</div>
-            ${en ? `<div style="font-size: 0.85em; color: #999; margin-top: 2px;">${en}</div>` : ''}
-          </div>
-        `;
+        return `<div style="line-height: 1.5;"><div style="font-weight: 500;">${ja}</div>${en ? `<div style="font-size: 0.85em; color: #999; margin-top: 2px;">${en}</div>` : ''}</div>`;
       }
     },
     {
@@ -1259,12 +1244,7 @@ $(()=>{
         const row = cell.getRow().getData();
         const ja = row.artist || '';
         const en = row.artistEn || '';
-        return `
-          <div style="line-height: 1.5;">
-            <div>${ja}</div>
-            ${en ? `<div style="font-size: 0.85em; color: #999; margin-top: 2px;">${en}</div>` : ''}
-          </div>
-        `;
+        return `<div style="line-height: 1.5;"><div>${ja}</div>${en ? `<div style="font-size: 0.85em; color: #999; margin-top: 2px;">${en}</div>` : ''}</div>`;
       }
     },
     {title:"Genre", field:"genre", headerFilter:"input"},
