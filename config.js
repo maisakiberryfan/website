@@ -4,7 +4,7 @@ function getApiUrl() {
       window.location.hostname === '127.0.0.1') {
     return 'http://localhost:8785'  // Local development
   }
-  return 'https://hyperdrive-v2.katani.workers.dev'  // Production
+  return 'https://hyperdrive.katani.workers.dev'  // Production
 }
 
 // Berry Fansite API Configuration
