@@ -115,12 +115,6 @@ let nav = `
             <span><svg class='w' xmlns="http://www.w3.org/2000/svg" height="1.5em" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg></span>
           </a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link dropdown-item" href='fileUpload.html'>fileUpload</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link dropdown-item setContent" href='/howTo' data-ext='.md'>How To Edit</a>
-        </li>
       </ul>
 
       <!--右邊放官方連結-->
@@ -296,8 +290,7 @@ $(()=>{
               Reload Data
             </button>
             <button id='edit' class='btn btn-outline-light' data-bs-toggle="button">Edit mode</button>
-            <button id='`+ (process=='streamlist'?'addStreamRow':(process=='aliases'?'addAlias':'addRow')) + `' class='btn btn-outline-light addRow' disabled>Add Row</button>`
-            + (process=='streamlist'?`<button id='addFromList' class='btn btn-outline-light addRow' disabled>Add from list(Beta)</button>`:'') +
+            <button id='`+ (process=='streamlist'?'addStreamRow':(process=='aliases'?'addAlias':'addRow')) + `' class='btn btn-outline-light addRow' disabled>Add Row</button>` +
             (process=='aliases'?`<button id='batchAddAliases' class='btn btn-outline-light addRow' disabled>📦 Batch Add</button>
             <button id='testAlias' class='btn btn-outline-light'>🧪 Test Alias</button>`:'') +
             `<button id='deleteRow' class='btn btn-outline-light'>Delete Row</button>
@@ -2884,65 +2877,6 @@ $(()=>{
     // 清除暫存資料
     $('#YTID').removeData('tempVideoInfo')
   })
-
-  // Add from list button click handler
-  $('#content').on('click', '#addFromList', () => {
-    addFromLatestList()
-  })
-
-  // Add from latest list function for streamlist
-  function addFromLatestList() {
-    $.ajax({
-      url: 'https://getytvideoinfo.katani.workers.dev/newvideos'
-    })
-    .done((data) => {
-      if (!data.items || data.items.length === 0) {
-        $('#setTableMsg').text('No new data available').addClass('text-bg-warning')
-        setTimeout(() => {
-          $('#setTableMsg').html('&emsp;').removeClass('text-bg-warning')
-        }, 3000)
-        return
-      }
-
-      // Get existing IDs from current table data
-      const existingIds = jsonTable.getData().map(row => row.id)
-      
-      // Filter out duplicates and convert format
-      const newData = data.items
-        .filter(item => !existingIds.includes(item.id))
-        .map(item => ({
-          id: item.id,
-          title: item.snippet.title,
-          time: item.time,
-          category: item.category || preCategory(item.snippet.title)
-        }))
-        .sort((a, b) => new Date(b.time) - new Date(a.time)) // Sort by date desc
-
-      if (newData.length === 0) {
-        $('#setTableMsg').text('No new videos found (all videos already exist)').addClass('text-bg-info')
-        setTimeout(() => {
-          $('#setTableMsg').html('&emsp;').removeClass('text-bg-info')
-        }, 3000)
-        return
-      }
-
-      // Add data to table at top
-      jsonTable.addData(newData, true)
-      
-      $('#setTableMsg').text(`Successfully added ${newData.length} new video(s)`).addClass('text-bg-success')
-      setTimeout(() => {
-        $('#setTableMsg').html('&emsp;').removeClass('text-bg-success')
-      }, 3000)
-    })
-    .fail((error) => {
-      console.error('Error fetching latest videos:', error)
-      $('#setTableMsg').text('Failed to fetch latest videos').addClass('text-bg-danger')
-      setTimeout(() => {
-        $('#setTableMsg').html('&emsp;').removeClass('text-bg-danger')
-      }, 3000)
-    })
-  }
-
   //--- Aliases Page Handlers ---
 
   // Add Alias button - open quick add modal

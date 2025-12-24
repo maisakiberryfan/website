@@ -23,6 +23,7 @@ dayjs.extend(utc);
 
 // ============ Configuration ============
 const PARQUET_FILE_URL = 'https://raw.githubusercontent.com/maisakiberryfan/sqlBackUp/main/berry-data.parquet';
+const GITHUB_COMMITS_API = 'https://api.github.com/repos/maisakiberryfan/sqlBackUp/commits?path=berry-data.parquet&per_page=1';
 
 // ============ Global State ============
 let db = null;           // AsyncDuckDB instance
@@ -250,6 +251,8 @@ export async function initAnalytics() {
 
     dataLoaded = true;
     showMessage('Data loaded successfully!', 'success');
+    // Fetch data update time from GitHub
+    fetchDataUpdateTime();
   } catch (error) {
     console.error('[Analytics] Initialization failed:', error);
     showError(`Failed to initialize: ${error.message}`);
@@ -304,6 +307,8 @@ function initUIElements() {
   UI.endDateInput = document.getElementById('endDateInput');
   UI.utcRangeOutput = document.getElementById('utcRangeOutput');
   UI.btnInsertRange = document.getElementById('btnInsertRange');
+  // Data Update Time
+  UI.dataUpdateTime = document.getElementById('dataUpdateTime');
 
   // Initialize timezone display
   initTimezoneDisplay();
@@ -1103,6 +1108,30 @@ function deleteSavedQuery(index) {
     showMessage(`刪除失敗 / Delete failed<br><small>${error.message}</small>`, 'error');
   }
 }
+
+// ============ Data Update Time ============
+
+async function fetchDataUpdateTime() {
+  try {
+    const response = await fetch(GITHUB_COMMITS_API);
+    if (!response.ok) {
+      throw new Error(`GitHub API error: ${response.status}`);
+    }
+    const commits = await response.json();
+    if (commits.length > 0) {
+      const commitDate = commits[0].commit.committer.date;
+      const localDate = dayjs(commitDate).format('YYYY-MM-DD HH:mm');
+      UI.dataUpdateTime.textContent = localDate;
+      console.log('[Analytics] Data last updated:', localDate);
+    } else {
+      UI.dataUpdateTime.textContent = '無資料';
+    }
+  } catch (error) {
+    console.warn('[Analytics] Failed to fetch data update time:', error);
+    UI.dataUpdateTime.textContent = '載入失敗';
+  }
+}
+
 
 // ============ Timezone Converter ============
 
