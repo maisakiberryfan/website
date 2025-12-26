@@ -1681,7 +1681,7 @@ $(()=>{
 
         // Force complete redraw of this row to recalculate height
         setTimeout(() => {
-          jsonTable.redrawRows([row])
+          row.reformat()
 
           // Success visual feedback after redraw
           setTimeout(() => {
@@ -3305,12 +3305,48 @@ function preCategory(t){
 
 async function getLatest(){
   try {
-    const [ytLatest, gitCommitMsg] = await Promise.all([getYTlatest(), getGitCommitMsg()])
-    return ytLatest + gitCommitMsg
+    const [ytLatest, dataUpdates, gitCommitMsg] = await Promise.all([
+      getYTlatest(),
+      getDataUpdates(),
+      getGitCommitMsg()
+    ])
+    return ytLatest + dataUpdates + gitCommitMsg
   }
   catch (error) {
     console.error('Error fetching data:', error)
   }
+}
+
+// Get database last updated times
+function getDataUpdates(){
+  return new Promise((resolve, reject)=>{
+    $.ajax({
+      url: API_CONFIG.BASE_URL + '/stats/last-updated',
+    })
+    .done((response)=>{
+      if (!response.success || !response.data) {
+        resolve('')
+        return
+      }
+      const d = response.data
+      const formatDate = (dateStr) => dateStr ? dayjs(dateStr).format('YYYY/MM/DD HH:mmZ') : '-'
+      let html = `
+      <div class="container mt-3">
+        <h6>Data Updates</h6>
+        <div class="small" style="display: grid; grid-template-columns: auto 1fr; gap: 0 0.5rem;">
+          <span>streamlist:</span><span>${formatDate(d.streamlist)}</span>
+          <span>setlist:</span><span>${formatDate(d.setlist)}</span>
+          <span>songlist:</span><span>${formatDate(d.songlist)}</span>
+        </div>
+      </div>
+      `
+      resolve(html)
+    })
+    .fail((err)=>{
+      console.error('Failed to fetch data updates:', err)
+      resolve('')
+    });
+  })
 }
 
 //get berry latest public video
@@ -3765,7 +3801,7 @@ function getYTlatest(){
     })
   })
 
-//get github latest commit
+// Get github latest commit
 function getGitCommitMsg(){
   return new Promise((resolve, reject)=>{
     $.ajax({
@@ -3774,14 +3810,15 @@ function getGitCommitMsg(){
     .done((d)=>{
       let html = `
       <div class="container mt-3">
-        <p>Last update：${dayjs(d[0].commit.committer.date).format('YYYY/MM/DD HH:mmZ')}</p>
-        <p>Update content：${marked.parse(d[0].commit.message)}</p>
+        <h6>Latest Commit</h6>
+        <p class="small mb-1">${dayjs(d[0].commit.committer.date).format('YYYY/MM/DD HH:mmZ')}</p>
+        <p class="small">${marked.parse(d[0].commit.message)}</p>
       </div>
       `
       resolve(html)
     })
     .fail((err)=>{reject(err)});
-  })  
+  })
 }
 
 })//end ready
