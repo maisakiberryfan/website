@@ -53,94 +53,179 @@ window.loadFancybox = async () => {
 dayjs.extend(utc)
 
 //------  coding by hand  ------
-let nav = `
+// ============================================
+// Navigation Configuration System
+// ============================================
+let navConfig = null
+let currentLang = localStorage.getItem('lang') || 'zh'
+
+// Get label based on current language
+function getLabel(item) {
+  if (currentLang === 'ja' && item.labelJa) {
+    return item.labelJa
+  }
+  if (currentLang === 'en' && item.labelEn) {
+    return item.labelEn
+  }
+  return item.label || ''
+}
+
+// Load nav configuration from JSON
+async function loadNavConfig() {
+  if (navConfig) return navConfig
+  const response = await fetch('/assets/data/nav.json')
+  navConfig = await response.json()
+  return navConfig
+}
+
+// Build dropdown menu
+function buildDropdown(item) {
+  const icon = item.icon ? ` <i class="${item.icon}"></i>` : ''
+  const label = getLabel(item)
+  const menuItems = item.items.map(sub => {
+    if (sub.divider) return '<li><hr class="dropdown-divider"></li>'
+    const subLabel = getLabel(sub)
+    const classes = sub.external ? 'dropdown-item' : 'dropdown-item setContent'
+    const ext = sub.ext !== undefined ? `data-ext="${sub.ext}"` : ''
+    const target = sub.external ? 'target="_blank"' : ''
+    return `<li><a class="${classes}" href="${sub.href}" ${ext} ${target}>${subLabel}</a></li>`
+  }).join('')
+
+  return `
+    <li class="nav-item dropdown">
+      <button class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">${label}${icon}</button>
+      <ul class="dropdown-menu">${menuItems}</ul>
+    </li>`
+}
+
+// Build single nav item
+function buildNavItem(item) {
+  const icon = item.icon ? ` <i class="${item.icon}"></i>` : ''
+  const label = getLabel(item)
+  const target = item.external ? 'target="_blank"' : ''
+  const classes = item.external ? 'nav-link px-2' : 'nav-link px-2 setContent'
+  const ext = item.ext !== undefined ? `data-ext="${item.ext}"` : ''
+
+  return `
+    <li class="nav-item">
+      <a class="${classes}" href="${item.href}" ${ext} ${target}>${label ? `<span>${label}</span>` : ''}${icon}</a>
+    </li>`
+}
+
+// Build language switch
+function buildLangSwitch() {
+  const checked = currentLang === 'en' ? 'checked' : ''
+  return `
+    <div class="d-flex align-items-center ms-3">
+      <span class="me-2">🇹🇼</span>
+      <label class="lang-switch">
+        <input type="checkbox" id="lang-toggle" ${checked} aria-label="語言切換: 中文 / English">
+        <span class="lang-slider"></span>
+      </label>
+      <span class="ms-2">🇺🇸</span>
+    </div>`
+}
+
+// Update page content language (for elements with data-lang attribute)
+function updatePageLang() {
+  $('[data-lang]').each(function() {
+    const lang = $(this).attr('data-lang')
+    if (lang === currentLang) {
+      $(this).removeClass('d-none')
+    } else {
+      $(this).addClass('d-none')
+    }
+  })
+}
+
+// Translation helper function - supports multiple calling patterns
+// 1. Object: t({ zh: '中文', en: 'English', ja: '日本語' })
+// 2. Three params: t('中文', 'English', '日本語')
+// 3. Two params: t('中文', 'English') - generates bilingual spans
+function t(arg1, arg2 = null, arg3 = null) {
+  // Object form - return text directly
+  if (typeof arg1 === 'object') {
+    return arg1[currentLang] || arg1.zh || ''
+  }
+
+  // Three-parameter form (zh, en, ja) - return text directly
+  if (arg3 !== null) {
+    if (currentLang === 'ja') return arg3
+    if (currentLang === 'en') return arg2
+    return arg1
+  }
+
+  // Two-parameter form (zh, en) - generate spans for dynamic switching
+  if (arg2 !== null) {
+    const zhClass = currentLang === 'zh' ? '' : 'd-none'
+    const enClass = currentLang === 'en' ? '' : 'd-none'
+    return `<span data-lang="zh" class="${zhClass}">${arg1}</span><span data-lang="en" class="${enClass}">${arg2}</span>`
+  }
+
+  // Single parameter fallback
+  return arg1
+}
+
+// Build complete nav from config
+function buildNavFromConfig(config) {
+  const brandLabel = getLabel(config.brand)
+  const brand = `<a class="navbar-brand" href="${config.brand.href}" target="_self">${brandLabel}</a>`
+
+  const leftItems = config.left.map(item => {
+    if (item.items) {
+      return buildDropdown(item)
+    } else {
+      return buildNavItem(item)
+    }
+  }).join('')
+
+  const rightItems = config.right.map(item => buildNavItem(item)).join('')
+
+  return `
 <nav class="navbar fixed-top navbar-expand-lg bg-body-tertiary px-5">
   <div class="container-fluid">
-    <a class="navbar-brand" href='/' target='_self'>苺咲べりぃ非公式倉庫</a>
+    ${brand}
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarContent">
-      <ul class="navbar-nav">
-		<li class="nav-item dropdown">
-          <button class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Berry's
-          </button>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item setContent" href='/profile' data-ext='.htm'>Profile</a></li>
-            <li><a class="dropdown-item setContent" href='/history' data-ext='.md'>History</a></li>
-            <li><a class="dropdown-item setContent" href='/clothes' data-ext='.htm'>Clothes</a></li>
-          </ul>
-        </li>
-        <!--<li class="nav-item">
-          <a class="nav-link dropdown-item setContent" href='/history' data-ext='.md'>History</a>
-        </li>-->
-        <li class="nav-item dropdown">
-          <button class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            List&nbsp;&nbsp;&nbsp;
-          </button>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item setContent" href='/songlist' data-ext=''>Song List</a></li>
-            <li><a class="dropdown-item setContent" href='/streamlist' data-ext='.json'>Stream List</a></li>
-            <li><a class="dropdown-item setContent" href='/setlist' data-ext='.json'>Set List</a></li>
-            <li><a class="dropdown-item setContent" href='/aliases' data-ext=''>Aliases</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item setContent" href='/analytics' data-ext='.htm'>Analytics</a></li>
-          </ul>
-        </li>
-        <li class="nav-item dropdown">
-          <button class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Other wiki
-          </button>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="https://seesaawiki.jp/maisakiberry/">seesaawiki</a></li>
-            <li><a class="dropdown-item" href="https://hackmd.io/@MaisakiBerry">HackMD</a></li>
-            <li><a class="dropdown-item" href="https://virtualyoutuber.fandom.com/wiki/Maisaki_Berry">Fandom</a></li>
-          </ul>
-        </li>
-        <li class="nav-item dropdown">
-          <button class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            <span>Fan </span><svg class='w' xmlns="http://www.w3.org/2000/svg" height="1.25em" viewBox="0 0 640 512"><path d="M524.531,69.836a1.5,1.5,0,0,0-.764-.7A485.065,485.065,0,0,0,404.081,32.03a1.816,1.816,0,0,0-1.923.91,337.461,337.461,0,0,0-14.9,30.6,447.848,447.848,0,0,0-134.426,0,309.541,309.541,0,0,0-15.135-30.6,1.89,1.89,0,0,0-1.924-.91A483.689,483.689,0,0,0,116.085,69.137a1.712,1.712,0,0,0-.788.676C39.068,183.651,18.186,294.69,28.43,404.354a2.016,2.016,0,0,0,.765,1.375A487.666,487.666,0,0,0,176.02,479.918a1.9,1.9,0,0,0,2.063-.676A348.2,348.2,0,0,0,208.12,430.4a1.86,1.86,0,0,0-1.019-2.588,321.173,321.173,0,0,1-45.868-21.853,1.885,1.885,0,0,1-.185-3.126c3.082-2.309,6.166-4.711,9.109-7.137a1.819,1.819,0,0,1,1.9-.256c96.229,43.917,200.41,43.917,295.5,0a1.812,1.812,0,0,1,1.924.233c2.944,2.426,6.027,4.851,9.132,7.16a1.884,1.884,0,0,1-.162,3.126,301.407,301.407,0,0,1-45.89,21.83,1.875,1.875,0,0,0-1,2.611,391.055,391.055,0,0,0,30.014,48.815,1.864,1.864,0,0,0,2.063.7A486.048,486.048,0,0,0,610.7,405.729a1.882,1.882,0,0,0,.765-1.352C623.729,277.594,590.933,167.465,524.531,69.836ZM222.491,337.58c-28.972,0-52.844-26.587-52.844-59.239S193.056,219.1,222.491,219.1c29.665,0,53.306,26.82,52.843,59.239C275.334,310.993,251.924,337.58,222.491,337.58Zm195.38,0c-28.971,0-52.843-26.587-52.843-59.239S388.437,219.1,417.871,219.1c29.667,0,53.307,26.82,52.844,59.239C470.715,310.993,447.538,337.58,417.871,337.58Z"/></svg>
-          </button>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="https://discord.gg/sXdaXB7">中文</a></li>
-            <li><a class="dropdown-item" href="https://discord.gg/csQ77FEyTA">English</a></li>
-          </ul>
-        </li>
-        <li class='nav-item py-2 py-lg-1 col-12 col-lg-auto'>
-          <div class='vr d-none d-lg-flex h-100 mx-lg-2 text-white'></div>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link dropdown-item" href='https://github.com/maisakiberryfan/website'>
-            <span><svg class='w' xmlns="http://www.w3.org/2000/svg" height="1.5em" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg></span>
-          </a>
-        </li>
+      <ul class="navbar-nav">${leftItems}</ul>
+      <ul class="navbar-nav flex-row flex-wrap ms-md-auto">
+        ${rightItems}
+        <li class="nav-item d-flex align-items-center">${buildLangSwitch()}</li>
       </ul>
-
-      <!--右邊放官方連結-->
-      <ui class="navbar-nav flex-row flex-wrap ms-md-auto">
-        <li class="nav-item">
-          <a class="nav-link px-2" href="https://www.maisakiberry.com/">
-            <span>公式&emsp;</span><svg class='w' xmlns="http://www.w3.org/2000/svg" height="1.25em" viewBox="0 0 576 512"><style>.w{fill:#fff}</style><path d="M575.8 255.5c0 18-15 32.1-32 32.1h-32l.7 160.2c0 2.7-.2 5.4-.5 8.1V472c0 22.1-17.9 40-40 40H456c-1.1 0-2.2 0-3.3-.1c-1.4 .1-2.8 .1-4.2 .1H416 392c-22.1 0-40-17.9-40-40V448 384c0-17.7-14.3-32-32-32H256c-17.7 0-32 14.3-32 32v64 24c0 22.1-17.9 40-40 40H160 128.1c-1.5 0-3-.1-4.5-.2c-1.2 .1-2.4 .2-3.6 .2H104c-22.1 0-40-17.9-40-40V360c0-.9 0-1.9 .1-2.8V287.6H32c-18 0-32-14-32-32.1c0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7L564.8 231.5c8 7 12 15 11 24z"/></svg>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link px-2" href="https://twitter.com/MaisakiBerry">
-            <svg class='b' xmlns="http://www.w3.org/2000/svg" height="1.25em" viewBox="0 0 512 512"><style>.b{fill:#1DA1F2}</style><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link px-2" href="https://www.youtube.com/channel/UC7A7bGRVdIwo93nqnA3x-OQ">
-            <svg class='r' xmlns="http://www.w3.org/2000/svg" height="1.25em" viewBox="0 0 576 512"><style>.r{fill:#ff0000}</style><path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"/></svg>
-          </a>
-        </li>
-      </ui>
     </div>
   </div>
-</nav>
-`
+</nav>`
+}
 
 $(()=>{
+
+  // Global Modal shown event - update language for all modals
+  document.addEventListener('shown.bs.modal', () => {
+    updatePageLang()
+  })
+
+  // Render nav and attach events (must be inside jQuery ready to access setContent)
+  async function renderNav() {
+    const config = await loadNavConfig()
+    const navHtml = buildNavFromConfig(config)
+    $('#nav').html(navHtml)
+
+    // Attach setContent click handlers
+    $('.setContent').on('click', (e) => {
+      e.preventDefault()
+      setContent(e.target.pathname, true)
+    })
+
+    // Attach language toggle handler
+    $('#lang-toggle').on('change', function() {
+      currentLang = this.checked ? 'en' : 'zh'
+      localStorage.setItem('lang', currentLang)
+      renderNav()
+      updatePageLang()
+    })
+  }
 
   // ============================================
   // localStorage 快取工具函數
@@ -207,12 +292,8 @@ $(()=>{
   //message modal 
   var msgModal = new bootstrap.Modal(document.getElementById('modal'))
 
-  $('#nav').html(nav)
-
-  $('.setContent').click((e)=>{
-    e.preventDefault()
-    setContent(e.target.pathname, true)
-  })
+  // Initialize navigation from config
+  renderNav()
 
   function setContent(path, clk=false){
     //clk: by click
@@ -287,37 +368,37 @@ $(()=>{
       let c = `
             <button id='reloadBtn' class='btn btn-outline-light' data-disable-on-loading="true">
               <span class="loading-indicator spinner-border spinner-border-sm me-2" style="display: none;"></span>
-              Reload Data
+              ${t('重新載入', 'Reload Data')}
             </button>
-            <button id='edit' class='btn btn-outline-light' data-bs-toggle="button">Edit mode</button>
-            <button id='`+ (process=='streamlist'?'addStreamRow':(process=='aliases'?'addAlias':'addRow')) + `' class='btn btn-outline-light addRow' disabled>Add Row</button>` +
-            (process=='aliases'?`<button id='batchAddAliases' class='btn btn-outline-light addRow' disabled>📦 Batch Add</button>
-            <button id='testAlias' class='btn btn-outline-light'>🧪 Test Alias</button>`:'') +
-            `<button id='deleteRow' class='btn btn-outline-light'>Delete Row</button>
-            <button id='dlcsv' class='btn btn-outline-light'>Get CSV</button>
-            <button id='dljson' class='btn btn-outline-light'>Get JSON</button>`
+            <button id='edit' class='btn btn-outline-light' data-bs-toggle="button">${t('編輯模式', 'Edit Mode')}</button>
+            <button id='`+ (process=='streamlist'?'addStreamRow':(process=='aliases'?'addAlias':'addRow')) + `' class='btn btn-outline-light addRow' disabled>${t('新增列', 'Add Row')}</button>` +
+            (process=='aliases'?`<button id='batchAddAliases' class='btn btn-outline-light addRow' disabled>📦 ${t('批次新增', 'Batch Add')}</button>
+            <button id='testAlias' class='btn btn-outline-light'>🧪 ${t('測試別名', 'Test Alias')}</button>`:'') +
+            `<button id='deleteRow' class='btn btn-outline-light'>${t('刪除列', 'Delete Row')}</button>
+            <button id='dlcsv' class='btn btn-outline-light'>${t('下載 CSV', 'Get CSV')}</button>
+            <button id='dljson' class='btn btn-outline-light'>${t('下載 JSON', 'Get JSON')}</button>`
             + (process=='setlist'?`
             <div class="my-2">
               <button id='addNewSongInSetlist' class='btn btn-success' style="display: none;">
-                ➕ 新增初回歌曲 (Add New Song)
+                ➕ ${t('新增初回歌曲', 'Add New Song')}
               </button>
             </div>`:'') +
             `<div id='setTableMsg' class='p-3'>&emsp;</div>
             <!-- 進階搜尋區塊 -->
             <div id="advancedSearch" class="card bg-dark mb-3 w-100">
               <div class="card-header d-flex justify-content-between align-items-center" style="cursor: pointer;" data-bs-toggle="collapse" data-bs-target="#searchBody">
-                <span><i class="bi bi-search me-2"></i>進階搜尋</span>
+                <span><i class="bi bi-search me-2"></i>${t('進階搜尋', 'Advanced Search')}</span>
                 <i class="bi bi-chevron-down"></i>
               </div>
               <div id="searchBody" class="collapse">
                 <div class="card-body">
                   <div class="d-flex align-items-center mb-3">
-                    <span class="me-3">條件邏輯：</span>
+                    <span class="me-3">${t('條件邏輯：', 'Logic:')}</span>
                     <div class="btn-group" role="group">
                       <input type="radio" class="btn-check" name="searchLogic" id="logicAnd" value="and" checked>
-                      <label class="btn btn-outline-primary btn-sm" for="logicAnd">AND (全部符合)</label>
+                      <label class="btn btn-outline-primary btn-sm" for="logicAnd">${t('AND (全部符合)', 'AND (Match All)')}</label>
                       <input type="radio" class="btn-check" name="searchLogic" id="logicOr" value="or">
-                      <label class="btn btn-outline-primary btn-sm" for="logicOr">OR (任一符合)</label>
+                      <label class="btn btn-outline-primary btn-sm" for="logicOr">${t('OR (任一符合)', 'OR (Match Any)')}</label>
                     </div>
                   </div>
                   <div id="searchConditions">
@@ -325,19 +406,19 @@ $(()=>{
                   </div>
                   <div class="d-flex gap-2 mt-3">
                     <button id="addCondition" class="btn btn-outline-secondary btn-sm">
-                      <i class="bi bi-plus-lg me-1"></i>新增條件
+                      <i class="bi bi-plus-lg me-1"></i>${t('新增條件', 'Add Condition')}
                     </button>
                     <button id="applySearch" class="btn btn-primary btn-sm">
-                      <i class="bi bi-search me-1"></i>搜尋
+                      <i class="bi bi-search me-1"></i>${t('搜尋', 'Search')}
                     </button>
                     <button id="clearSearch" class="btn btn-outline-danger btn-sm">
-                      <i class="bi bi-x-lg me-1"></i>清除
+                      <i class="bi bi-x-lg me-1"></i>${t('清除', 'Clear')}
                     </button>
                   </div>
                   <div class="mt-3 small text-muted">
                     <details>
-                      <summary style="cursor: pointer;"><i class="bi bi-question-circle me-1"></i>搜尋運算子說明</summary>
-                      <ul class="mt-2 mb-0 ps-3">
+                      <summary style="cursor: pointer;"><i class="bi bi-question-circle me-1"></i>${t('搜尋運算子說明', 'Operator Reference')}</summary>
+                      <ul class="mt-2 mb-0 ps-3" data-lang="zh">
                         <li><strong>包含</strong>：欄位內含此文字 (例: "HAPPY" 找到 "happy girl")</li>
                         <li><strong>等於</strong>：欄位完全符合此值</li>
                         <li><strong>不包含</strong>：欄位不含此文字</li>
@@ -346,12 +427,21 @@ $(()=>{
                         <li><strong>多值匹配</strong>：逗號分隔，任一匹配即可 (例: "berry,莓" 找到含任一的)</li>
                         <li><strong>正規表達式</strong>：進階模式 (例: "^H.*Y$" 開頭H結尾Y)</li>
                       </ul>
+                      <ul class="mt-2 mb-0 ps-3 d-none" data-lang="en">
+                        <li><strong>Contains</strong>: Field contains this text (e.g., "HAPPY" finds "happy girl")</li>
+                        <li><strong>Equals</strong>: Field exactly matches this value</li>
+                        <li><strong>Not Contains</strong>: Field does not contain this text</li>
+                        <li><strong>Like (% wildcard)</strong>: % represents any characters (e.g., "H%Y" finds "HAPPY", "HEY")</li>
+                        <li><strong>Keywords</strong>: Space-separated, all must match (e.g., "happy train")</li>
+                        <li><strong>Multi-value</strong>: Comma-separated, any matches (e.g., "berry,莓")</li>
+                        <li><strong>Regex</strong>: Advanced mode (e.g., "^H.*Y$" starts with H, ends with Y)</li>
+                      </ul>
                     </details>
                   </div>
                 </div>
               </div>
             </div>
-            <div id='tb' class='table-dark table-striped table-bordered'>progressing...</div>
+            <div id='tb' class='table-dark table-striped table-bordered'>${t('載入中...', 'Loading...')}</div>
               `
       $("#content").empty().append(c)
       configJsonTable(url, process)
@@ -366,6 +456,7 @@ $(()=>{
 
         if(ext[1] == 'htm'){
           $("#content").empty().append(d)
+          updatePageLang()  // Update language for page content
         }
         else{
           var c ="<div id='md'>"+marked.parse(d)+"</div>"
@@ -807,8 +898,8 @@ $(()=>{
 
         // Show status message
         $('#batchLoadStatus').html(`
-          ✅ 已載入現有歌單資料（${existingEntries.length} 首）<br>
-          <small>可直接編輯或點擊「產生表格」重新建立</small>
+          ✅ ${t({ zh: `已載入現有歌單資料（${existingEntries.length} 首）`, en: `Loaded existing setlist (${existingEntries.length} songs)` })}<br>
+          <small>${t({ zh: '可直接編輯或點擊「產生表格」重新建立', en: 'Edit directly or click "Generate Table" to recreate' })}</small>
         `).removeClass('alert-warning').addClass('alert-success').show()
 
         // Auto-generate table with existing data (no setTimeout needed)
@@ -823,8 +914,8 @@ $(()=>{
 
         // Show status message
         $('#batchLoadStatus').html(`
-          📋 此直播尚無歌單資料<br>
-          <small>請設定參數後點擊「產生表格」開始建立</small>
+          📋 ${t({ zh: '此直播尚無歌單資料', en: 'No setlist data for this stream' })}<br>
+          <small>${t({ zh: '請設定參數後點擊「產生表格」開始建立', en: 'Set parameters and click "Generate Table" to start' })}</small>
         `).removeClass('alert-success').addClass('alert-warning').show()
       }
     } catch (error) {
@@ -2027,7 +2118,7 @@ $(()=>{
       console.log('Row deleted from table:', rowData)
 
       // Show brief notification
-      $('#setTableMsg').text('資料已從表格移除').addClass('text-bg-info')
+      $('#setTableMsg').text(t({ zh: '資料已從表格移除', en: 'Data removed from table' })).addClass('text-bg-info')
       setTimeout(() => {
         $('#setTableMsg').html('&emsp;').removeClass('text-bg-info')
       }, 2000)
@@ -2054,12 +2145,16 @@ $(()=>{
       `<option value="${f.field}">${f.title}</option>`
     ).join('')
 
-    return `
-      <div class="condition-row d-flex gap-2 mb-2 align-items-center">
-        <select class="form-select form-select-sm field-select" style="width: 150px;">
-          ${fieldOptions}
-        </select>
-        <select class="form-select form-select-sm operator-select" style="width: 130px;">
+    // Bilingual operator options
+    const operatorOptions = currentLang === 'en' ? `
+          <option value="contains">Contains</option>
+          <option value="equals">Equals</option>
+          <option value="notContains">Not Contains</option>
+          <option value="like">Like (% wildcard)</option>
+          <option value="keywords">Keywords</option>
+          <option value="inArray">Multi-value</option>
+          <option value="regex">Regex</option>
+    ` : `
           <option value="contains">包含</option>
           <option value="equals">等於</option>
           <option value="notContains">不包含</option>
@@ -2067,8 +2162,19 @@ $(()=>{
           <option value="keywords">關鍵字群</option>
           <option value="inArray">多值匹配</option>
           <option value="regex">正規表達式</option>
+    `
+
+    const placeholder = currentLang === 'en' ? 'e.g., HAPPY' : '例: HAPPY'
+
+    return `
+      <div class="condition-row d-flex gap-2 mb-2 align-items-center">
+        <select class="form-select form-select-sm field-select" style="width: 150px;">
+          ${fieldOptions}
         </select>
-        <input type="text" class="form-control form-control-sm search-value flex-grow-1" placeholder="例: HAPPY" style="min-width: 200px;">
+        <select class="form-select form-select-sm operator-select" style="width: 130px;">
+          ${operatorOptions}
+        </select>
+        <input type="text" class="form-control form-control-sm search-value flex-grow-1" placeholder="${placeholder}" style="min-width: 200px;">
         <button class="btn btn-outline-danger btn-sm remove-condition">
           <i class="bi bi-x-lg"></i>
         </button>
@@ -2151,7 +2257,8 @@ $(()=>{
 
     // 顯示搜尋結果數量
     const count = jsonTable.getDataCount('active')
-    $('#setTableMsg').text(`搜尋結果：${count} 筆`).addClass('text-bg-info')
+    const resultText = currentLang === 'en' ? `Search results: ${count} rows` : `搜尋結果：${count} 筆`
+    $('#setTableMsg').text(resultText).addClass('text-bg-info')
   }
 
   // 新增條件按鈕
@@ -2160,19 +2267,31 @@ $(()=>{
   })
 
   // 運算子變更時更新 placeholder
-  const operatorPlaceholders = {
-    contains: '例: HAPPY',
-    equals: '完全符合的值',
-    notContains: '排除含此文字的結果',
-    like: '例: H%Y (%=任意)',
-    keywords: '空格分隔 (例: happy train)',
-    inArray: '逗號分隔 (例: berry,莓)',
-    regex: '例: ^H.*Y$'
+  function getOperatorPlaceholders() {
+    return currentLang === 'en' ? {
+      contains: 'e.g., HAPPY',
+      equals: 'Exact match value',
+      notContains: 'Exclude results with this text',
+      like: 'e.g., H%Y (%=any)',
+      keywords: 'Space-separated (e.g., happy train)',
+      inArray: 'Comma-separated (e.g., berry,莓)',
+      regex: 'e.g., ^H.*Y$'
+    } : {
+      contains: '例: HAPPY',
+      equals: '完全符合的值',
+      notContains: '排除含此文字的結果',
+      like: '例: H%Y (%=任意)',
+      keywords: '空格分隔 (例: happy train)',
+      inArray: '逗號分隔 (例: berry,莓)',
+      regex: '例: ^H.*Y$'
+    }
   }
 
   $('#content').on('change', '.operator-select', function() {
     const operator = $(this).val()
-    const placeholder = operatorPlaceholders[operator] || '輸入搜尋值'
+    const placeholders = getOperatorPlaceholders()
+    const defaultPlaceholder = currentLang === 'en' ? 'Enter search value' : '輸入搜尋值'
+    const placeholder = placeholders[operator] || defaultPlaceholder
     $(this).closest('.condition-row').find('.search-value').attr('placeholder', placeholder)
   })
 
@@ -2293,7 +2412,7 @@ $(()=>{
         $('#addNewSongInSetlist').show()
       }
 
-      $('#setTableMsg').text('You can edit data by clicing cell , or using Excel edit , click the table, and paste to it.').addClass('text-bg-info')
+      $('#setTableMsg').text(t({ zh: '點擊儲存格即可編輯', en: 'Click cell to edit' })).addClass('text-bg-info')
     }
     else{
       // 離開編輯模式：恢復原始欄位定義（移除特定 editor 避免攔截點擊）
@@ -2336,7 +2455,7 @@ $(()=>{
       // Hide add new song button
       $('#addNewSongInSetlist').hide()
       //tell user editing completed
-      $('#setTableMsg').text('編輯完成').addClass('text-bg-info')
+      $('#setTableMsg').text(t({ zh: '編輯完成', en: 'Edit complete' })).addClass('text-bg-info')
       setTimeout(()=>{
         $('#setTableMsg').html('&emsp;').removeClass('text-bg-info')
       },5000)
@@ -2436,7 +2555,7 @@ $(()=>{
 
       // Show success message only if on songlist page
       if (currentPath === 'songlist') {
-        $('#setTableMsg').text('Song added successfully').addClass('text-bg-success')
+        $('#setTableMsg').text(t({ zh: '歌曲新增成功', en: 'Song added successfully' })).addClass('text-bg-success')
         setTimeout(() => {
           $('#setTableMsg').html('&emsp;').removeClass('text-bg-success')
         }, 3000)
