@@ -292,8 +292,8 @@ $(()=>{
   //message modal 
   var msgModal = new bootstrap.Modal(document.getElementById('modal'))
 
-  // Initialize navigation from config
-  renderNav()
+  // Initialize navigation from config (async, store promise)
+  let navReadyPromise = renderNav()
 
   function setContent(path, clk=false){
     //clk: by click
@@ -1338,8 +1338,8 @@ $(()=>{
 
   // Initialize content after all colDef are defined
   // (Must be after Line 1047 to ensure setlistColDef, streamlistColDef, songlistColDef are initialized)
-  //if direct url
-  setContent(location.pathname)
+  //if direct url - wait for nav to be ready
+  navReadyPromise.then(() => setContent(location.pathname))
 
   // Handle hash navigation after content is loaded
   if (location.hash) {
