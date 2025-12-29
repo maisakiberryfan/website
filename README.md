@@ -67,8 +67,6 @@ Static site, deployable to:
 - Cloudflare Pages
 - Any static host
 
-## Related Projects
+## License
 
-- [Hyperdrive API](https://github.com/katy50306/berry_hyperdrive) - Database REST API
-- [Setlist Parser](https://github.com/katy50306/m-b-setlist-parser) - Auto setlist parsing
-- [YTID Proxy](https://github.com/katy50306/getyoutubevideoid) - YouTube API proxy
+This is an unofficial fan project. All rights to the original content belong to their respective owners.
