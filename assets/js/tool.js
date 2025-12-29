@@ -57,7 +57,23 @@ dayjs.extend(utc)
 // Navigation Configuration System
 // ============================================
 let navConfig = null
-let currentLang = localStorage.getItem('lang') || 'zh'
+let currentLang = (() => {
+  // 如果使用者已選擇語言，使用儲存的設定
+  const stored = localStorage.getItem('lang')
+  if (stored) return stored
+
+  // 偵測瀏覽器語言
+  const browserLang = navigator.language || navigator.userLanguage || ''
+
+  // 中文（zh-TW, zh-CN, zh-HK 等）→ zh
+  if (browserLang.startsWith('zh')) return 'zh'
+
+  // 日文（ja, ja-JP）→ ja
+  if (browserLang.startsWith('ja')) return 'ja'
+
+  // 其他語言 → 英文
+  return 'en'
+})()
 
 // Get label based on current language
 function getLabel(item) {
