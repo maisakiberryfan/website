@@ -67,6 +67,8 @@ Static site, deployable to:
 - Cloudflare Pages
 - Any static host
 
-## Documentation
+## Related Projects
 
-See main project [CLAUDE.md](../CLAUDE.md) for full technical details.
+- [Hyperdrive API](https://github.com/katy50306/berry_hyperdrive) - Database REST API
+- [Setlist Parser](https://github.com/katy50306/m-b-setlist-parser) - Auto setlist parsing
+- [YTID Proxy](https://github.com/katy50306/getyoutubevideoid) - YouTube API proxy
