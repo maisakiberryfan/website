@@ -7,10 +7,22 @@ function getApiUrl() {
   return 'https://hyperdrive.katani.workers.dev'  // Production
 }
 
+// Worker API URL (for GitHub proxy, setlist parsing, etc.)
+function getWorkerUrl() {
+  if (window.location.hostname === 'localhost' ||
+      window.location.hostname === '127.0.0.1') {
+    return 'http://localhost:8787'  // Local development
+  }
+  return 'https://m-b-setlist-parser.katani.workers.dev'  // Production
+}
+
 // Berry Fansite API Configuration
 export const API_CONFIG = {
   // Hyperdrive API base URL - automatically detects environment
   BASE_URL: getApiUrl(),
+
+  // Worker API URL (for GitHub proxy, setlist parsing, etc.)
+  WORKER_URL: getWorkerUrl(),
 
   // API endpoints
   ENDPOINTS: {

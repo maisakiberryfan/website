@@ -4034,18 +4034,18 @@ function getYTlatest(){
     })
   })
 
-// Get github latest commit
+// Get github latest commit (via Worker proxy)
 function getGitCommitMsg(){
   return new Promise((resolve, reject)=>{
     $.ajax({
-      url:'https://api.github.com/repos/maisakiberryfan/website/commits?per_page=1',
+      url: API_CONFIG.WORKER_URL + '/github/latest-commit',
     })
     .done((d)=>{
       let html = `
       <div>
         <h6>Latest Commit</h6>
-        <p class="small mb-1">${dayjs(d[0].commit.committer.date).format('YYYY/MM/DD HH:mmZ')}</p>
-        <p class="small">${marked.parse(d[0].commit.message)}</p>
+        <p class="small mb-1">${dayjs(d.date).format('YYYY/MM/DD HH:mmZ')}</p>
+        <p class="small">${marked.parse(d.message || '')}</p>
       </div>
       `
       resolve(html)
