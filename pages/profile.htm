@@ -4,13 +4,13 @@
         <img src="img/profile/profile.webp" width="395px" height="527px">
       </div>
       <div class="col-sm">
-        <div class="row">誕生日／Birthday：08/15</div>
-        <div class="row" id="debutRow"></div>
-        <div class="row">身長／Height：153cm</div>
-        <div class="row">年齢／Age：(10)15</div>
-        <div class="row">血液型／Blood Type：Ｂ</div>
-        <div class="row">出身地／Nationality：いちごの国</div>
-        <div class="row py-2">ハッシュタグ／hashtag<br>
+        <div>誕生日／Birthday：08/15</div>
+        <div id="debutRow" data-debut="2020-09-05"></div>
+        <div>身長／Height：153cm</div>
+        <div>年齢／Age：(10)15</div>
+        <div>血液型／Blood Type：Ｂ</div>
+        <div>出身地／Nationality：いちごの国</div>
+        <div class="py-2">ハッシュタグ／hashtag<br>
             &nbsp;一般／General：<a href="https://x.com/search?q=%23%E8%8B%BA%E5%92%B2%E3%81%B9%E3%82%8A%E3%81%83">#苺咲べりぃ</a><br>
             &nbsp;生放送／Live stream：<a href="https://x.com/search?q=%23%E3%81%B9%E3%82%8A%E3%81%AA%E3%81%BE">#べりなま</a><br>
             &nbsp;ファンネーム／Fan：<a href="https://x.com/search?q=%23%E3%81%B9%E3%82%8A%E3%83%9E%E3%83%8D">#べりマネ</a><br>
@@ -43,7 +43,7 @@
         </div>
     </div>
 
-    <div id="logo" class="mt-4"></div>
+    <div id="logo" class="mt-4">
         <H1 class="text-center">Logo</H1>
         <div class="row">
             <figure class="figure col text-center">
@@ -104,12 +104,13 @@
         })
 
         // 計算出道時間（年月日）
-        const debut = dayjs('2020-09-05')
+        const debutDate = $('#debutRow').data('debut')
+        const debut = dayjs(debutDate)
         const today = dayjs()
         const years = today.diff(debut, 'year')
         const months = today.diff(debut.add(years, 'year'), 'month')
         const days = today.diff(debut.add(years, 'year').add(months, 'month'), 'day')
-        $('#debutRow').text(`活動開始／Debut：2020/09/05（${years}年${months}月${days}日）`)
+        $('#debutRow').text(`活動開始／Debut：${debutDate}（${years}年${months}月${days}日）`)
     })
 
 </script>
