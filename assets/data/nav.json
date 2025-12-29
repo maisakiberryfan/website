@@ -52,7 +52,8 @@
     {
       "href": "https://github.com/maisakiberryfan/website",
       "icon": "bi-github",
-      "external": true
+      "external": true,
+      "borderStart": true
     }
   ],
   "right": [

@@ -105,9 +105,10 @@ function buildNavItem(item) {
   const target = item.external ? 'target="_blank"' : ''
   const classes = item.external ? 'nav-link px-2' : 'nav-link px-2 setContent'
   const ext = item.ext !== undefined ? `data-ext="${item.ext}"` : ''
+  const borderClass = item.borderStart ? ' border-start ps-2 ms-2' : ''
 
   return `
-    <li class="nav-item">
+    <li class="nav-item${borderClass}">
       <a class="${classes}" href="${item.href}" ${ext} ${target}>${label ? `<span>${label}</span>` : ''}${icon}</a>
     </li>`
 }
@@ -3511,7 +3512,18 @@ async function getLatest(){
       getDataUpdates(),
       getGitCommitMsg()
     ])
-    return ytLatest + dataUpdates + gitCommitMsg
+    // Two-column layout: video on left, updates on right
+    return `
+    <div class="row mt-3">
+      <div class="col-lg-6 col-md-12 mb-3">
+        ${ytLatest}
+      </div>
+      <div class="col-lg-6 col-md-12">
+        ${dataUpdates}
+        ${gitCommitMsg}
+      </div>
+    </div>
+    `
   }
   catch (error) {
     console.error('Error fetching data:', error)
@@ -3532,9 +3544,9 @@ function getDataUpdates(){
       const d = response.data
       const formatDate = (dateStr) => dateStr ? dayjs(dateStr).format('YYYY/MM/DD HH:mmZ') : '-'
       let html = `
-      <div class="container mt-3">
+      <div class="mb-3 pb-3 border-bottom">
         <h6>Data Updates</h6>
-        <div class="small" style="display: grid; grid-template-columns: auto 1fr; gap: 0 0.5rem;">
+        <div style="display: grid; grid-template-columns: auto 1fr; gap: 0.25rem 0.5rem;">
           <span>streamlist:</span><span>${formatDate(d.streamlist)}</span>
           <span>setlist:</span><span>${formatDate(d.setlist)}</span>
           <span>songlist:</span><span>${formatDate(d.songlist)}</span>
@@ -4014,7 +4026,7 @@ function getGitCommitMsg(){
     })
     .done((d)=>{
       let html = `
-      <div class="container mt-3">
+      <div>
         <h6>Latest Commit</h6>
         <p class="small mb-1">${dayjs(d[0].commit.committer.date).format('YYYY/MM/DD HH:mmZ')}</p>
         <p class="small">${marked.parse(d[0].commit.message)}</p>
