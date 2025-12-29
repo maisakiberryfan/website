@@ -110,7 +110,16 @@
         const years = today.diff(debut, 'year')
         const months = today.diff(debut.add(years, 'year'), 'month')
         const days = today.diff(debut.add(years, 'year').add(months, 'month'), 'day')
-        $('#debutRow').text(`活動開始／Debut：${debutDate}（${years}年${months}月${days}日）`)
+        const currentLang = localStorage.getItem('lang') || 'zh'
+        let durationText
+        if (currentLang === 'ja') {
+            durationText = `${years}年${months}ヶ月${days}日`
+        } else if (currentLang === 'en') {
+            durationText = `${years}y ${months}m ${days}d`
+        } else {
+            durationText = `${years}年${months}個月${days}天`
+        }
+        $('#debutRow').text(`活動開始／Debut：${debutDate}（${durationText}）`)
     })
 
 </script>

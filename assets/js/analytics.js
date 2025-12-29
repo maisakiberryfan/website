@@ -1304,18 +1304,6 @@ function hideError() {
   UI.errorMessage.style.display = 'none';
 }
 
-// ============ Auto-initialize when page loads ============
-
-if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', () => {
-    // Check if we're on the analytics page
-    if (document.getElementById('analyticsPage')) {
-      initAnalytics();
-    }
-  });
-} else {
-  // DOM already loaded
-  if (document.getElementById('analyticsPage')) {
-    initAnalytics();
-  }
-}
+// ============ Module Export ============
+// Note: initAnalytics is exported and called by tool.js when analytics.htm is loaded
+// This is because jQuery doesn't execute <script type="module"> tags in dynamic content

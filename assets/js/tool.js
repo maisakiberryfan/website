@@ -112,17 +112,26 @@ function buildNavItem(item) {
     </li>`
 }
 
-// Build language switch
+// Build language switch dropdown
 function buildLangSwitch() {
-  const checked = currentLang === 'en' ? 'checked' : ''
+  const langs = [
+    { code: 'zh', label: '中文', flag: '🇹🇼' },
+    { code: 'en', label: 'EN', flag: '🇺🇸' },
+    { code: 'ja', label: '日本語', flag: '🇯🇵' }
+  ]
+  const current = langs.find(l => l.code === currentLang) || langs[0]
+  const options = langs.map(l =>
+    `<li><a class="dropdown-item lang-option${l.code === currentLang ? ' active' : ''}" href="#" data-lang-code="${l.code}">${l.flag} ${l.label}</a></li>`
+  ).join('')
+
   return `
-    <div class="d-flex align-items-center ms-3">
-      <span class="me-2">🇹🇼</span>
-      <label class="lang-switch">
-        <input type="checkbox" id="lang-toggle" ${checked} aria-label="語言切換: 中文 / English">
-        <span class="lang-slider"></span>
-      </label>
-      <span class="ms-2">🇺🇸</span>
+    <div class="dropdown ms-3">
+      <button class="btn btn-outline-secondary btn-sm dropdown-toggle" type="button" id="langDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+        ${current.flag} ${current.label}
+      </button>
+      <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="langDropdown">
+        ${options}
+      </ul>
     </div>`
 }
 
@@ -135,6 +144,18 @@ function updatePageLang() {
     } else {
       $(this).addClass('d-none')
     }
+  })
+  // Update select options with data-zh/data-en/data-ja attributes
+  $('option[data-zh], option[data-en], option[data-ja]').each(function() {
+    const $opt = $(this)
+    const text = $opt.attr(`data-${currentLang}`) || $opt.attr('data-zh') || $opt.text()
+    $opt.text(text)
+  })
+  // Update input placeholders with data-placeholder-zh/en/ja attributes
+  $('input[data-placeholder-zh], input[data-placeholder-en], input[data-placeholder-ja], textarea[data-placeholder-zh], textarea[data-placeholder-en], textarea[data-placeholder-ja]').each(function() {
+    const $input = $(this)
+    const placeholder = $input.attr(`data-placeholder-${currentLang}`) || $input.attr('data-placeholder-zh') || $input.attr('placeholder')
+    $input.attr('placeholder', placeholder)
   })
 }
 
@@ -218,12 +239,18 @@ $(()=>{
       setContent(e.target.pathname, true)
     })
 
-    // Attach language toggle handler
-    $('#lang-toggle').on('change', function() {
-      currentLang = this.checked ? 'en' : 'zh'
-      localStorage.setItem('lang', currentLang)
-      renderNav()
-      updatePageLang()
+    // Attach language dropdown handler
+    $(document).on('click', '.lang-option', function(e) {
+      e.preventDefault()
+      const newLang = $(this).data('lang-code')
+      if (newLang && newLang !== currentLang) {
+        currentLang = newLang
+        localStorage.setItem('lang', currentLang)
+        renderNav()
+        updatePageLang()
+        // Reload current page content to update dynamically generated text (buttons, etc.)
+        setContent(location.pathname, false)
+      }
     })
   }
 
@@ -368,37 +395,37 @@ $(()=>{
       let c = `
             <button id='reloadBtn' class='btn btn-outline-light' data-disable-on-loading="true">
               <span class="loading-indicator spinner-border spinner-border-sm me-2" style="display: none;"></span>
-              ${t('重新載入', 'Reload Data')}
+              ${t('重新載入', 'Reload Data', 'リロード')}
             </button>
-            <button id='edit' class='btn btn-outline-light' data-bs-toggle="button">${t('編輯模式', 'Edit Mode')}</button>
-            <button id='`+ (process=='streamlist'?'addStreamRow':(process=='aliases'?'addAlias':'addRow')) + `' class='btn btn-outline-light addRow' disabled>${t('新增列', 'Add Row')}</button>` +
-            (process=='aliases'?`<button id='batchAddAliases' class='btn btn-outline-light addRow' disabled>📦 ${t('批次新增', 'Batch Add')}</button>
-            <button id='testAlias' class='btn btn-outline-light'>🧪 ${t('測試別名', 'Test Alias')}</button>`:'') +
-            `<button id='deleteRow' class='btn btn-outline-light'>${t('刪除列', 'Delete Row')}</button>
-            <button id='dlcsv' class='btn btn-outline-light'>${t('下載 CSV', 'Get CSV')}</button>
-            <button id='dljson' class='btn btn-outline-light'>${t('下載 JSON', 'Get JSON')}</button>`
+            <button id='edit' class='btn btn-outline-light' data-bs-toggle="button">${t('編輯模式', 'Edit Mode', '編集モード')}</button>
+            <button id='`+ (process=='streamlist'?'addStreamRow':(process=='aliases'?'addAlias':'addRow')) + `' class='btn btn-outline-light addRow' disabled>${t('新增列', 'Add Row', '行追加')}</button>` +
+            (process=='aliases'?`<button id='batchAddAliases' class='btn btn-outline-light addRow' disabled>📦 ${t('批次新增', 'Batch Add', '一括追加')}</button>
+            <button id='testAlias' class='btn btn-outline-light'>🧪 ${t('測試別名', 'Test Alias', 'エイリアステスト')}</button>`:'') +
+            `<button id='deleteRow' class='btn btn-outline-light'>${t('刪除列', 'Delete Row', '行削除')}</button>
+            <button id='dlcsv' class='btn btn-outline-light'>${t('下載 CSV', 'Get CSV', 'CSV取得')}</button>
+            <button id='dljson' class='btn btn-outline-light'>${t('下載 JSON', 'Get JSON', 'JSON取得')}</button>`
             + (process=='setlist'?`
             <div class="my-2">
               <button id='addNewSongInSetlist' class='btn btn-success' style="display: none;">
-                ➕ ${t('新增初回歌曲', 'Add New Song')}
+                ➕ ${t('新增初回歌曲', 'Add New Song', '新規楽曲追加')}
               </button>
             </div>`:'') +
             `<div id='setTableMsg' class='p-3'>&emsp;</div>
             <!-- 進階搜尋區塊 -->
             <div id="advancedSearch" class="card bg-dark mb-3 w-100">
               <div class="card-header d-flex justify-content-between align-items-center" style="cursor: pointer;" data-bs-toggle="collapse" data-bs-target="#searchBody">
-                <span><i class="bi bi-search me-2"></i>${t('進階搜尋', 'Advanced Search')}</span>
+                <span><i class="bi bi-search me-2"></i>${t('進階搜尋', 'Advanced Search', '詳細検索')}</span>
                 <i class="bi bi-chevron-down"></i>
               </div>
               <div id="searchBody" class="collapse">
                 <div class="card-body">
                   <div class="d-flex align-items-center mb-3">
-                    <span class="me-3">${t('條件邏輯：', 'Logic:')}</span>
+                    <span class="me-3">${t('條件邏輯：', 'Logic:', 'ロジック：')}</span>
                     <div class="btn-group" role="group">
                       <input type="radio" class="btn-check" name="searchLogic" id="logicAnd" value="and" checked>
-                      <label class="btn btn-outline-primary btn-sm" for="logicAnd">${t('AND (全部符合)', 'AND (Match All)')}</label>
+                      <label class="btn btn-outline-primary btn-sm" for="logicAnd">${t('AND (全部符合)', 'AND (Match All)', 'AND (すべて一致)')}</label>
                       <input type="radio" class="btn-check" name="searchLogic" id="logicOr" value="or">
-                      <label class="btn btn-outline-primary btn-sm" for="logicOr">${t('OR (任一符合)', 'OR (Match Any)')}</label>
+                      <label class="btn btn-outline-primary btn-sm" for="logicOr">${t('OR (任一符合)', 'OR (Match Any)', 'OR (いずれか一致)')}</label>
                     </div>
                   </div>
                   <div id="searchConditions">
@@ -406,18 +433,18 @@ $(()=>{
                   </div>
                   <div class="d-flex gap-2 mt-3">
                     <button id="addCondition" class="btn btn-outline-secondary btn-sm">
-                      <i class="bi bi-plus-lg me-1"></i>${t('新增條件', 'Add Condition')}
+                      <i class="bi bi-plus-lg me-1"></i>${t('新增條件', 'Add Condition', '条件追加')}
                     </button>
                     <button id="applySearch" class="btn btn-primary btn-sm">
-                      <i class="bi bi-search me-1"></i>${t('搜尋', 'Search')}
+                      <i class="bi bi-search me-1"></i>${t('搜尋', 'Search', '検索')}
                     </button>
                     <button id="clearSearch" class="btn btn-outline-danger btn-sm">
-                      <i class="bi bi-x-lg me-1"></i>${t('清除', 'Clear')}
+                      <i class="bi bi-x-lg me-1"></i>${t('清除', 'Clear', 'クリア')}
                     </button>
                   </div>
                   <div class="mt-3 small text-muted">
                     <details>
-                      <summary style="cursor: pointer;"><i class="bi bi-question-circle me-1"></i>${t('搜尋運算子說明', 'Operator Reference')}</summary>
+                      <summary style="cursor: pointer;"><i class="bi bi-question-circle me-1"></i>${t('搜尋運算子說明', 'Operator Reference', '演算子の説明')}</summary>
                       <ul class="mt-2 mb-0 ps-3" data-lang="zh">
                         <li><strong>包含</strong>：欄位內含此文字 (例: "HAPPY" 找到 "happy girl")</li>
                         <li><strong>等於</strong>：欄位完全符合此值</li>
@@ -436,14 +463,24 @@ $(()=>{
                         <li><strong>Multi-value</strong>: Comma-separated, any matches (e.g., "berry,莓")</li>
                         <li><strong>Regex</strong>: Advanced mode (e.g., "^H.*Y$" starts with H, ends with Y)</li>
                       </ul>
+                      <ul class="mt-2 mb-0 ps-3 d-none" data-lang="ja">
+                        <li><strong>含む</strong>：フィールドにこのテキストを含む (例: "HAPPY" で "happy girl" を検索)</li>
+                        <li><strong>等しい</strong>：フィールドが完全に一致する</li>
+                        <li><strong>含まない</strong>：フィールドにこのテキストを含まない</li>
+                        <li><strong>Like (%ワイルドカード)</strong>：% は任意の文字を表す (例: "H%Y" で "HAPPY", "HEY" を検索)</li>
+                        <li><strong>キーワード</strong>：スペース区切り、すべて一致する必要がある (例: "happy train")</li>
+                        <li><strong>複数値</strong>：カンマ区切り、いずれかに一致 (例: "berry,莓")</li>
+                        <li><strong>正規表現</strong>：上級モード (例: "^H.*Y$" Hで始まりYで終わる)</li>
+                      </ul>
                     </details>
                   </div>
                 </div>
               </div>
             </div>
-            <div id='tb' class='table-dark table-striped table-bordered'>${t('載入中...', 'Loading...')}</div>
+            <div id='tb' class='table-dark table-striped table-bordered'>${t('載入中...', 'Loading...', '読み込み中...')}</div>
               `
       $("#content").empty().append(c)
+      updatePageLang()  // Update language for dynamically generated content
       configJsonTable(url, process)
     }
     // For other content (markdown, HTML), use $.ajax() to fetch content
@@ -457,6 +494,16 @@ $(()=>{
         if(ext[1] == 'htm'){
           $("#content").empty().append(d)
           updatePageLang()  // Update language for page content
+
+          // Dynamically load analytics module when analytics.htm is loaded
+          // (jQuery doesn't execute <script type="module"> tags in dynamic content)
+          if(url.includes('analytics.htm')) {
+            import('/assets/js/analytics.js').then(module => {
+              module.initAnalytics()
+            }).catch(err => {
+              console.error('[Analytics] Failed to load module:', err)
+            })
+          }
         }
         else{
           var c ="<div id='md'>"+marked.parse(d)+"</div>"
@@ -478,6 +525,7 @@ $(()=>{
 
           // Only apply setContentMDTable to Markdown tables (not database-driven tables)
           setContentMDTable()
+          updatePageLang()  // Update language for markdown content
         }
       }).fail((jqXHR, textStatus)=>{
         $('#modalFooter').empty()
@@ -645,7 +693,7 @@ $(()=>{
           data: dataOptions,
           width: '100%',
           dropdownAutoWidth: true,
-          placeholder: 'Select song...',
+          placeholder: t('選擇歌曲...', 'Select song...', '曲を選択...'),
           allowClear: true,
           multiple: false,
           dropdownParent: $('#modalBatchEdit')
@@ -757,7 +805,7 @@ $(()=>{
           data: dataOptions,
           width: '100%',
           dropdownAutoWidth: true,
-          placeholder: 'Select song / 選擇歌曲...',
+          placeholder: t('選擇歌曲...', 'Select song...', '曲を選択...'),
           allowClear: true,
           tags: false,  // 明確禁止自由輸入
           dropdownParent: $('body')  // Avoid z-index issues
@@ -1017,7 +1065,7 @@ $(()=>{
     $('#quickStartTrack').val('')
     $('#quickSegment').val(1)
     $('#quickNote').val('')
-    $('#quickAddedList').html('<small class="text-muted">尚未新增任何歌曲</small>')
+    $('#quickAddedList').html(`<small class="text-muted">${t('尚未新增任何歌曲', 'No songs added yet', 'まだ楽曲が追加されていません')}</small>`)
 
     // 清空並隱藏錯誤訊息
     $('#quickAddErrorMsg').html('')
@@ -1032,7 +1080,7 @@ $(()=>{
     if ($('#quickSongSelect').hasClass('select2-hidden-accessible')) {
       $('#quickSongSelect').select2('destroy')
     }
-    $('#quickSongSelect').empty().html('<option value="">搜尋歌曲...</option>')
+    $('#quickSongSelect').empty().html(`<option value="">${t('搜尋歌曲...', 'Search song...', '曲を検索...')}</option>`)
 
     // === 3. Try to auto-detect next track ===
     try {
@@ -1084,23 +1132,24 @@ $(()=>{
   //use a global variable to easy access the table and colDef
   var jsonTable, colDef
 
-  //column definition
-  var setlistColDef = [
+  //column definition (as functions to support dynamic language switching)
+  function getSetlistColDef() {
+    return [
     {title:"streamID", field:"streamID", visible: false, download:true},
-    {title:`local time(${dayjs().format('Z')})`, field:"time", mutator: (cell) => dayjs(cell).format('YYYY/MM/DD HH:mm'), accessor: (value) => {
+    {title:t('本地時間', 'local time', '現地時間')+`(${dayjs().format('Z')})`, field:"time", mutator: (cell) => dayjs(cell).format('YYYY/MM/DD HH:mm'), accessor: (value) => {
       const date = dayjs(value);
       return date.isValid() ? date.toISOString() : value;
     }, width:'150', formatter:dateWithYTLink},
-    {title:"Seg", field:"segmentNo", sorter:'number', width:60},
-    {title:"Track", field:"trackNo", sorter:'number', width:80},
+    {title:t('段落', 'Seg', 'セグ'), field:"segmentNo", sorter:'number', width:60},
+    {title:t('曲序', 'Track', 'トラック'), field:"trackNo", sorter:'number', width:80},
     {
-      title:"Song",
+      title:t('曲名', 'Song', '曲名'),
       field:"songName",
       editor: setlistSongSelect2Editor,
       editable: false,
       width: 300,
       topCalc:'count',
-      topCalcFormatter:(c=>'subtotal/小計：'+c.getValue()),
+      topCalcFormatter:(c=>t('小計：', 'subtotal: ', '小計：')+c.getValue()),
       headerFilter: select2,
       headerFilterParams: {
         field: "songName",
@@ -1123,7 +1172,7 @@ $(()=>{
       }
     },
     {
-      title:"Artist",
+      title:t('歌手', 'Artist', 'アーティスト'),
       field:"artist",
       width: 250,
       headerFilter: select2,
@@ -1148,7 +1197,7 @@ $(()=>{
       }
     },
     {
-      title:"Note",
+      title:t('備註', 'Note', 'メモ'),
       field:"note",
       headerFilter:select2,
       headerFilterParams:{field:"note"},
@@ -1164,20 +1213,21 @@ $(()=>{
     {title:"songID", field:"songID", visible: false, download:true},  // Hidden field for database ID
     {title:"songNameEn", field:"songNameEn", visible: false, download:true},  // Hidden field for English name
     {title:"artistEn", field:"artistEn", visible: false, download:true}  // Hidden field for English artist
-  ]
+  ]}
 
-  var streamlistColDef = [
-    {title:"thumbnail", formatter:imageLink, headerFilter:false},
+  function getStreamlistColDef() {
+    return [
+    {title:t('縮圖', 'thumbnail', 'サムネイル'), formatter:imageLink, headerFilter:false},
     {title:"streamID", field:"streamID", visible: false, download:true},
     {
-      title:"title",
+      title:t('標題', 'title', 'タイトル'),
       field:"title",
       width:300,
       topCalc:'count',
-      topCalcFormatter:(c=>'subtotal/小計：'+c.getValue()),
+      topCalcFormatter:(c=>t('小計：', 'subtotal: ', '小計：')+c.getValue()),
       formatter:multiLineLinkFormat,
       headerFilter:"input",
-      headerFilterPlaceholder:"搜尋標題或影片 ID",
+      headerFilterPlaceholder:t('搜尋標題或影片 ID', 'Search title or video ID', 'タイトルまたは動画IDで検索'),
       headerFilterFunc: function(headerValue, rowValue, rowData, filterParams) {
         // No filter applied
         if (!headerValue) return true;
@@ -1194,11 +1244,11 @@ $(()=>{
         return titleMatch || idMatch;
       }
     },
-    {title:`local time(${dayjs().format('Z')})`, field:"time", mutator: (cell) => dayjs(cell).format('YYYY/MM/DD HH:mm'), accessor: (value) => {
+    {title:t('本地時間', 'local time', '現地時間')+`(${dayjs().format('Z')})`, field:"time", mutator: (cell) => dayjs(cell).format('YYYY/MM/DD HH:mm'), accessor: (value) => {
       const date = dayjs(value);
       return date.isValid() ? date.toISOString() : value;
     }},
-    {title:"categories", field:"categories",
+    {title:t('分類', 'categories', 'カテゴリ'), field:"categories",
       headerFilter:select2,
       headerFilterParams:{field:'categories', multiple: false},
       headerFilterFunc: function(headerValue, rowValue, rowData, filterParams) {
@@ -1224,8 +1274,8 @@ $(()=>{
         return categories.map(cat => cat).join('<br>');
       })
     },
-    {title:"note", field:"note"},
-  ]
+    {title:t('備註', 'note', 'メモ'), field:"note"},
+  ]}
 
   // Tabulator 自動完成設定常數
   const AUTOCOMPLETE_PARAMS = {
@@ -1234,10 +1284,11 @@ $(()=>{
   }
 
   // Aliases column definition
-  var aliasesColDef = [
+  function getAliasesColDef() {
+    return [
     {title:"aliasID", field:"aliasID", visible: false, download:true},
     {
-      title:"Type / 類型",
+      title:t('類型', 'Type', 'タイプ'),
       field:"aliasType",
       width:120,
       editor:"list",
@@ -1251,52 +1302,53 @@ $(()=>{
       }
     },
     {
-      title:"Canonical Name / 標準名稱",
+      title:t('標準名稱', 'Canonical Name', '標準名'),
       field:"canonicalName",
       width:250,
       editor:"input",
       headerFilter:"input",
-      headerFilterPlaceholder:"搜尋標準名稱"
+      headerFilterPlaceholder:t('搜尋標準名稱', 'Search canonical name', '標準名を検索')
     },
     {
-      title:"Alias Value / 別名",
+      title:t('別名', 'Alias Value', 'エイリアス'),
       field:"aliasValue",
       width:250,
       editor:"input",
       headerFilter:"input",
-      headerFilterPlaceholder:"搜尋別名"
+      headerFilterPlaceholder:t('搜尋別名', 'Search alias', 'エイリアスを検索')
     },
     {
-      title:"Note / 備註",
+      title:t('備註', 'Note', 'メモ'),
       field:"note",
       editor:"input",
       headerFilter:"input"
     },
     {
-      title:"Created At / 建立時間",
+      title:t('建立時間', 'Created At', '作成日時'),
       field:"createdAt",
       visible: false,
       download: true
     },
     {
-      title:"Updated At / 更新時間",
+      title:t('更新時間', 'Updated At', '更新日時'),
       field:"updatedAt",
       visible: false,
       download: true
     }
-  ]
+  ]}
 
   // Bilingual version (Japanese + English in one view)
-  var songlistColDef = [
+  function getSonglistColDef() {
+    return [
     {title:"songID", field:"songID", visible: false, download:true},
     {
-      title:"Song Name / 歌名",
+      title:t('曲名', 'Song Name', '曲名'),
       field:"songName",
       width:300,
       topCalc:'count',
-      topCalcFormatter:(c=>'subtotal/小計：'+c.getValue()),
+      topCalcFormatter:(c=>t('小計：', 'subtotal: ', '小計：')+c.getValue()),
       headerFilter:"input",
-      headerFilterPlaceholder:"搜尋日文或英文歌名",
+      headerFilterPlaceholder:t('搜尋日文或英文歌名', 'Search song name (JA/EN)', '曲名を検索（日/英）'),
       headerFilterFunc: function(headerValue, rowValue, rowData, filterParams) {
         if (!headerValue) return true;
         const searchTerm = headerValue.toLowerCase();
@@ -1312,11 +1364,11 @@ $(()=>{
       }
     },
     {
-      title:"Artist / 歌手",
+      title:t('歌手', 'Artist', 'アーティスト'),
       field:"artist",
       width:250,
       headerFilter:"input",
-      headerFilterPlaceholder:"搜尋日文或英文歌手",
+      headerFilterPlaceholder:t('搜尋日文或英文歌手', 'Search artist (JA/EN)', 'アーティストを検索（日/英）'),
       headerFilterFunc: function(headerValue, rowValue, rowData, filterParams) {
         if (!headerValue) return true;
         const searchTerm = headerValue.toLowerCase();
@@ -1331,13 +1383,13 @@ $(()=>{
         return `<div style="line-height: 1.5;"><div>${ja}</div>${en ? `<div style="font-size: 0.85em; color: #999; margin-top: 2px;">${en}</div>` : ''}</div>`;
       }
     },
-    {title:"Genre", field:"genre", headerFilter:"input"},
-    {title:"Tie-up", field:"tieup", headerFilter:"input"},
-    {title:"Note", field:"songNote", headerFilter:"input"},
-  ]
+    {title:t('曲風', 'Genre', 'ジャンル'), field:"genre", headerFilter:"input"},
+    {title:t('連動作品', 'Tie-up', 'タイアップ'), field:"tieup", headerFilter:"input"},
+    {title:t('備註', 'Note', 'メモ'), field:"songNote", headerFilter:"input"},
+  ]}
 
-  // Initialize content after all colDef are defined
-  // (Must be after Line 1047 to ensure setlistColDef, streamlistColDef, songlistColDef are initialized)
+  // Initialize content after all colDef functions are defined
+  // (Must be after column definition functions to ensure getSetlistColDef, getStreamlistColDef, getSonglistColDef are available)
   //if direct url - wait for nav to be ready
   navReadyPromise.then(() => setContent(location.pathname))
 
@@ -1381,7 +1433,7 @@ $(()=>{
     $('#artistName').select2({
       allowClear: true,
       tags: true,
-      placeholder: 'Select or type artist name...',
+      placeholder: t('選擇或輸入歌手名稱...', 'Select or type artist name...', 'アーティスト名を選択または入力...'),
       width: '100%',
       minimumInputLength: 0, // Show all results immediately
       dropdownParent: $('#modalAddSong'), // Fix positioning in modal
@@ -1739,8 +1791,9 @@ $(()=>{
     // Setup Modal
     const modal = new bootstrap.Modal(document.getElementById('modalBilingualEdit'))
 
-    // Set field label
+    // Set field label (both JA and EN fields use the same label)
     $('#bilingualFieldLabel').text(fieldLabel)
+    $('#bilingualFieldLabel2').text(fieldLabel)
 
     // Set current values
     $('#bilingualJA').val(jaValue)
@@ -1812,16 +1865,16 @@ $(()=>{
     var colDef
 
     if(p == 'setlist'){
-      colDef=setlistColDef
+      colDef=getSetlistColDef()
     }
     if(p == 'streamlist'){
-      colDef=streamlistColDef
+      colDef=getStreamlistColDef()
     }
     if(p == 'songlist'){
-      colDef=songlistColDef
+      colDef=getSonglistColDef()
     }
     if(p == 'aliases'){
-      colDef=aliasesColDef
+      colDef=getAliasesColDef()
     }
 
     // Error handling: if colDef is still undefined, show error message
@@ -1953,16 +2006,16 @@ $(()=>{
 
         showContextMenu(e.pageX, e.pageY, [
           {
-            label: '📝 補檔用 - 批次編輯歌單',
+            label: '📝 ' + t('補檔用 - 批次編輯歌單', 'Archive - Batch Edit Setlist', '補完用 - セットリスト一括編集'),
             action: () => openBatchEditor(data)
           },
           {
-            label: '⚡ 直播用 - 快速新增歌單',
+            label: '⚡ ' + t('直播用 - 快速新增歌單', 'Live - Quick Add Setlist', 'ライブ用 - クイック追加'),
             action: () => openQuickAdd(data)
           },
           { type: 'divider' },
           {
-            label: '📋 複製網址',
+            label: '📋 ' + t('複製網址', 'Copy URL', 'URLをコピー'),
             action: async () => {
               const url = `https://youtube.com/watch?v=${data.streamID}`;
               try {
@@ -1982,7 +2035,7 @@ $(()=>{
             }
           },
           {
-            label: '🎥 查看 YouTube 影片',
+            label: '🎥 ' + t('查看 YouTube 影片', 'View YouTube Video', 'YouTube動画を見る'),
             action: () => window.open(`https://youtube.com/watch?v=${data.streamID}`, '_blank')
           }
         ]);
@@ -1998,7 +2051,7 @@ $(()=>{
 
         showContextMenu(e.pageX, e.pageY, [
           {
-            label: '➕ 新增別名 (Add Alias)',
+            label: '➕ ' + t('新增別名', 'Add Alias', 'エイリアス追加'),
             action: () => {
               // Pre-fill Quick Add modal with song data
               $('#quickAliasType').val('artist')  // Default to artist
@@ -2118,7 +2171,7 @@ $(()=>{
       console.log('Row deleted from table:', rowData)
 
       // Show brief notification
-      $('#setTableMsg').text(t({ zh: '資料已從表格移除', en: 'Data removed from table' })).addClass('text-bg-info')
+      $('#setTableMsg').text(t({ zh: '資料已從表格移除', en: 'Data removed from table', ja: 'データがテーブルから削除されました' })).addClass('text-bg-info')
       setTimeout(() => {
         $('#setTableMsg').html('&emsp;').removeClass('text-bg-info')
       }, 2000)
@@ -2145,8 +2198,20 @@ $(()=>{
       `<option value="${f.field}">${f.title}</option>`
     ).join('')
 
-    // Bilingual operator options
-    const operatorOptions = currentLang === 'en' ? `
+    // Trilingual operator options
+    let operatorOptions
+    if (currentLang === 'ja') {
+      operatorOptions = `
+          <option value="contains">含む</option>
+          <option value="equals">等しい</option>
+          <option value="notContains">含まない</option>
+          <option value="like">Like (%ワイルドカード)</option>
+          <option value="keywords">キーワード</option>
+          <option value="inArray">複数値</option>
+          <option value="regex">正規表現</option>
+      `
+    } else if (currentLang === 'en') {
+      operatorOptions = `
           <option value="contains">Contains</option>
           <option value="equals">Equals</option>
           <option value="notContains">Not Contains</option>
@@ -2154,7 +2219,9 @@ $(()=>{
           <option value="keywords">Keywords</option>
           <option value="inArray">Multi-value</option>
           <option value="regex">Regex</option>
-    ` : `
+      `
+    } else {
+      operatorOptions = `
           <option value="contains">包含</option>
           <option value="equals">等於</option>
           <option value="notContains">不包含</option>
@@ -2162,9 +2229,10 @@ $(()=>{
           <option value="keywords">關鍵字群</option>
           <option value="inArray">多值匹配</option>
           <option value="regex">正規表達式</option>
-    `
+      `
+    }
 
-    const placeholder = currentLang === 'en' ? 'e.g., HAPPY' : '例: HAPPY'
+    const placeholder = t('例: HAPPY', 'e.g., HAPPY', '例: HAPPY')
 
     return `
       <div class="condition-row d-flex gap-2 mb-2 align-items-center">
@@ -2257,7 +2325,7 @@ $(()=>{
 
     // 顯示搜尋結果數量
     const count = jsonTable.getDataCount('active')
-    const resultText = currentLang === 'en' ? `Search results: ${count} rows` : `搜尋結果：${count} 筆`
+    const resultText = t(`搜尋結果：${count} 筆`, `Search results: ${count} rows`, `検索結果：${count} 件`)
     $('#setTableMsg').text(resultText).addClass('text-bg-info')
   }
 
@@ -2268,29 +2336,43 @@ $(()=>{
 
   // 運算子變更時更新 placeholder
   function getOperatorPlaceholders() {
-    return currentLang === 'en' ? {
-      contains: 'e.g., HAPPY',
-      equals: 'Exact match value',
-      notContains: 'Exclude results with this text',
-      like: 'e.g., H%Y (%=any)',
-      keywords: 'Space-separated (e.g., happy train)',
-      inArray: 'Comma-separated (e.g., berry,莓)',
-      regex: 'e.g., ^H.*Y$'
-    } : {
-      contains: '例: HAPPY',
-      equals: '完全符合的值',
-      notContains: '排除含此文字的結果',
-      like: '例: H%Y (%=任意)',
-      keywords: '空格分隔 (例: happy train)',
-      inArray: '逗號分隔 (例: berry,莓)',
-      regex: '例: ^H.*Y$'
+    if (currentLang === 'ja') {
+      return {
+        contains: '例: HAPPY',
+        equals: '完全一致する値',
+        notContains: 'このテキストを含む結果を除外',
+        like: '例: H%Y (%=任意)',
+        keywords: 'スペース区切り (例: happy train)',
+        inArray: 'カンマ区切り (例: berry,莓)',
+        regex: '例: ^H.*Y$'
+      }
+    } else if (currentLang === 'en') {
+      return {
+        contains: 'e.g., HAPPY',
+        equals: 'Exact match value',
+        notContains: 'Exclude results with this text',
+        like: 'e.g., H%Y (%=any)',
+        keywords: 'Space-separated (e.g., happy train)',
+        inArray: 'Comma-separated (e.g., berry,莓)',
+        regex: 'e.g., ^H.*Y$'
+      }
+    } else {
+      return {
+        contains: '例: HAPPY',
+        equals: '完全符合的值',
+        notContains: '排除含此文字的結果',
+        like: '例: H%Y (%=任意)',
+        keywords: '空格分隔 (例: happy train)',
+        inArray: '逗號分隔 (例: berry,莓)',
+        regex: '例: ^H.*Y$'
+      }
     }
   }
 
   $('#content').on('change', '.operator-select', function() {
     const operator = $(this).val()
     const placeholders = getOperatorPlaceholders()
-    const defaultPlaceholder = currentLang === 'en' ? 'Enter search value' : '輸入搜尋值'
+    const defaultPlaceholder = t('輸入搜尋值', 'Enter search value', '検索値を入力')
     const placeholder = placeholders[operator] || defaultPlaceholder
     $(this).closest('.condition-row').find('.search-value').attr('placeholder', placeholder)
   })
@@ -2353,7 +2435,7 @@ $(()=>{
             return {
               ...col,
               editor: bilingualEditor,
-              editorParams: { field: 'songName', fieldLabel: 'Song Name / 歌名' },
+              editorParams: { field: 'songName', fieldLabel: t('歌名', 'Song Name', '曲名') },
               editable: true
             }
           }
@@ -2361,7 +2443,7 @@ $(()=>{
             return {
               ...col,
               editor: bilingualEditor,
-              editorParams: { field: 'artist', fieldLabel: 'Artist / 歌手' },
+              editorParams: { field: 'artist', fieldLabel: t('歌手', 'Artist', 'アーティスト') },
               editable: true
             }
           }
@@ -2412,7 +2494,7 @@ $(()=>{
         $('#addNewSongInSetlist').show()
       }
 
-      $('#setTableMsg').text(t({ zh: '點擊儲存格即可編輯', en: 'Click cell to edit' })).addClass('text-bg-info')
+      $('#setTableMsg').text(t({ zh: '點擊儲存格即可編輯', en: 'Click cell to edit', ja: 'セルをクリックして編集' })).addClass('text-bg-info')
     }
     else{
       // 離開編輯模式：恢復原始欄位定義（移除特定 editor 避免攔截點擊）
@@ -2455,7 +2537,7 @@ $(()=>{
       // Hide add new song button
       $('#addNewSongInSetlist').hide()
       //tell user editing completed
-      $('#setTableMsg').text(t({ zh: '編輯完成', en: 'Edit complete' })).addClass('text-bg-info')
+      $('#setTableMsg').text(t({ zh: '編輯完成', en: 'Edit complete', ja: '編集完了' })).addClass('text-bg-info')
       setTimeout(()=>{
         $('#setTableMsg').html('&emsp;').removeClass('text-bg-info')
       },5000)
@@ -2555,7 +2637,7 @@ $(()=>{
 
       // Show success message only if on songlist page
       if (currentPath === 'songlist') {
-        $('#setTableMsg').text(t({ zh: '歌曲新增成功', en: 'Song added successfully' })).addClass('text-bg-success')
+        $('#setTableMsg').text(t({ zh: '歌曲新增成功', en: 'Song added successfully', ja: '曲の追加に成功しました' })).addClass('text-bg-success')
         setTimeout(() => {
           $('#setTableMsg').html('&emsp;').removeClass('text-bg-success')
         }, 3000)
@@ -2793,7 +2875,7 @@ $(()=>{
       multiple: true,  // Restored: Allow multiple selection
       width: '100%',
       dropdownParent: $('#modalAddStreamRow'),
-      placeholder: categoryData.length === 0 ? 'Type to add categories...' : 'Select or type categories...'
+      placeholder: categoryData.length === 0 ? t('輸入分類...', 'Type to add categories...', 'カテゴリを入力...') : t('選擇或輸入分類...', 'Select or type categories...', 'カテゴリを選択または入力...')
     })
 
     // Set default category (Stage B-2: array for multiple mode)
@@ -3030,7 +3112,7 @@ $(()=>{
       $('#quickCanonicalName').select2({
         dropdownParent: $('#modalQuickAddAlias'),
         width: '100%',
-        placeholder: '請選擇...',
+        placeholder: t('請選擇...', 'Select...', '選択してください...'),
         allowClear: true
       })
     }
@@ -3086,7 +3168,7 @@ $(()=>{
       // Update select options
       const $select = $('#quickCanonicalName')
       $select.empty()
-      $select.append('<option value="">請選擇...</option>')
+      $select.append(`<option value="">${t('請選擇...', 'Select...', '選択してください...')}</option>`)
       options.forEach(option => {
         $select.append(`<option value="${option}">${option}</option>`)
       })
@@ -3652,7 +3734,7 @@ function getYTlatest(){
         data: songOptions,
         width: '100%',
         dropdownParent: $('#modalQuickAdd'),
-        placeholder: '搜尋歌曲...',
+        placeholder: t('搜尋歌曲...', 'Search song...', '曲を検索...'),
         allowClear: true
       })
 
@@ -3729,7 +3811,11 @@ function getYTlatest(){
     const segment = parseInt($('#quickSegment').val()) || 1
 
     if (!songID) {
-      $('#quickAddErrorMsg').html('請選擇歌曲<br><small>從下拉選單選擇歌曲，或點擊「新增初回歌曲」按鈕</small>')
+      $('#quickAddErrorMsg').html(t(
+        '請選擇歌曲<br><small>從下拉選單選擇歌曲，或點擊「新增初回歌曲」按鈕</small>',
+        'Please select a song<br><small>Select from dropdown, or click "Add New Song"</small>',
+        '曲を選択してください<br><small>ドロップダウンから選択、または「新規楽曲追加」をクリック</small>'
+      ))
       $('#quickAddError').show()
       $('#quickAddError')[0].scrollIntoView({ behavior: 'smooth', block: 'nearest' })
       setTimeout(() => $('#quickSongSelect').select2('open'), 300)
@@ -3875,7 +3961,7 @@ function getYTlatest(){
           data: songOptions,
           width: '100%',
           dropdownParent: $('#modalQuickAdd'),
-          placeholder: '搜尋歌曲...',
+          placeholder: t('搜尋歌曲...', 'Search song...', '曲を検索...'),
           allowClear: true
         })
 

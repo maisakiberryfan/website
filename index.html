@@ -85,44 +85,6 @@
 			margin: 4px 0;
 		}
 
-		/* Language Switch Styles */
-		.lang-switch {
-			position: relative;
-			display: inline-block;
-			width: 50px;
-			height: 24px;
-		}
-		.lang-switch input {
-			opacity: 0;
-			width: 0;
-			height: 0;
-		}
-		.lang-slider {
-			position: absolute;
-			cursor: pointer;
-			top: 0; left: 0; right: 0; bottom: 0;
-			background-color: #6c757d;
-			transition: .3s;
-			border-radius: 24px;
-		}
-		.lang-slider:before {
-			position: absolute;
-			content: "";
-			height: 18px;
-			width: 18px;
-			left: 3px;
-			bottom: 3px;
-			background-color: white;
-			transition: .3s;
-			border-radius: 50%;
-		}
-		.lang-switch input:checked + .lang-slider {
-			background-color: #0d6efd;
-		}
-		.lang-switch input:checked + .lang-slider:before {
-			transform: translateX(26px);
-		}
-
 		/* Navbar icon and text styles */
 		.navbar .nav-link,
 		.navbar .dropdown-toggle {
@@ -147,7 +109,7 @@
 		<div class="modal-dialog modal-lg">
 			<div class="modal-content">
 				<div class="modal-header">
-					<h1 class="modal-title fs-5" id="modalTitle"><span data-lang="zh">通知</span><span data-lang="en" class="d-none">Notice</span></h1>
+					<h1 class="modal-title fs-5" id="modalTitle"><span data-lang="zh">通知</span><span data-lang="en" class="d-none">Notice</span><span data-lang="ja" class="d-none">通知</span></h1>
 				</div>
 				<div class="modal-body" id='modalMsg'></div>
 				<div class="modal-footer" id="modalFooter">
@@ -162,19 +124,19 @@
 		<div class="modal-dialog modal-lg">
 			<div class="modal-content">
 				<div class="modal-header">
-					<h1 class="modal-title fs-5" id="modalTitleAddRow"><span data-lang="zh">新增歌單列</span><span data-lang="en" class="d-none">Add Setlist Row</span></h1>
+					<h1 class="modal-title fs-5" id="modalTitleAddRow"><span data-lang="zh">新增歌單列</span><span data-lang="en" class="d-none">Add Setlist Row</span><span data-lang="ja" class="d-none">セットリスト行追加</span></h1>
 					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 				</div>
 				<div class="modal-body" id='addRowInfo'>
 					<form>
 						<div class="form-group row my-2">
-							<label for="YTLink" class="col-sm-3 col-form-label"><span data-lang="zh">YouTube 連結</span><span data-lang="en" class="d-none">YT Link</span></label>
+							<label for="YTLink" class="col-sm-3 col-form-label"><span data-lang="zh">YouTube 連結</span><span data-lang="en" class="d-none">YT Link</span><span data-lang="ja" class="d-none">YouTubeリンク</span></label>
 							<div class="col-sm-8">
 							  <input type="text" class="form-control YTInfoQ" id="YTLink" placeholder="https://www.youtube.com/watch?v=OOO">
 							</div>
 						</div>
 						<div class="form-group row my-2">
-						  <label for="setlistDate" class="col-sm-3 col-form-label"><span data-lang="zh">日期</span><span data-lang="en" class="d-none">Date</span></label>
+						  <label for="setlistDate" class="col-sm-3 col-form-label"><span data-lang="zh">日期</span><span data-lang="en" class="d-none">Date</span><span data-lang="ja" class="d-none">日付</span></label>
 						  <div class="col-sm-5">
 						  	<input type="input" class="form-control" id="setlistDate" placeholder="YYYY/MM/DD">
 						  </div>
@@ -183,7 +145,7 @@
 						  </div>
 						</div>
 						<div class="form-group row my-2">
-						  <label for="songs" class="col-sm-3 col-form-label"><span data-lang="zh">歌曲數量</span><span data-lang="en" class="d-none">How many songs</span></label>
+						  <label for="songs" class="col-sm-3 col-form-label"><span data-lang="zh">歌曲數量</span><span data-lang="en" class="d-none">How many songs</span><span data-lang="ja" class="d-none">曲数</span></label>
 						  <div class="col-sm-8">
 							<input type="text" class="form-control" id="songs" value="20">
 						  </div>
@@ -191,7 +153,7 @@
 					</form>
 				</div>
 				<div class="modal-footer">
-					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="addRowData"><span data-lang="zh">新增</span><span data-lang="en" class="d-none">Add</span></button>
+					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="addRowData"><span data-lang="zh">新增</span><span data-lang="en" class="d-none">Add</span><span data-lang="ja" class="d-none">追加</span></button>
 				</div>
 			</div>
 		</div>
@@ -202,7 +164,7 @@
 		<div class="modal-dialog modal-lg">
 			<div class="modal-content">
 				<div class="modal-header">
-					<h1 class="modal-title fs-5" id="modalTitleAddStreamRow"><span data-lang="zh">新增直播</span><span data-lang="en" class="d-none">Add Stream</span></h1>
+					<h1 class="modal-title fs-5" id="modalTitleAddStreamRow"><span data-lang="zh">新增直播</span><span data-lang="en" class="d-none">Add Stream</span><span data-lang="ja" class="d-none">配信追加</span></h1>
 					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 				</div>
 				<div class="modal-body" id='addStreamRowInfo'>
@@ -215,7 +177,7 @@
 
 					<form>
 						<div class="form-group row my-2">
-							<label for="YTID" class="col-sm-3 col-form-label"><span data-lang="zh">YouTube 連結</span><span data-lang="en" class="d-none">YT Link</span></label>
+							<label for="YTID" class="col-sm-3 col-form-label"><span data-lang="zh">YouTube 連結</span><span data-lang="en" class="d-none">YT Link</span><span data-lang="ja" class="d-none">YouTubeリンク</span></label>
 							<div class="col-sm-8">
 							  <input type="text" class="form-control" id="YTID" placeholder="https://www.youtube.com/watch?v=OOO">
 							</div>
@@ -228,19 +190,19 @@
 							</div>
 						</div>
 						<div class="form-group row my-2">
-							<label for="streamTitle" class="col-sm-3 col-form-label"><span data-lang="zh">標題</span><span data-lang="en" class="d-none">Title</span></label>
+							<label for="streamTitle" class="col-sm-3 col-form-label"><span data-lang="zh">標題</span><span data-lang="en" class="d-none">Title</span><span data-lang="ja" class="d-none">タイトル</span></label>
 							<div class="col-sm-8">
 							  <input type="text" class="form-control" id="streamTitle" disabled>
 							</div>
 						</div>
 						<div class="form-group row my-2">
-							<label for="streamTime" class="col-sm-3 col-form-label"><span data-lang="zh">本地時間</span><span data-lang="en" class="d-none">Local Time</span></label>
+							<label for="streamTime" class="col-sm-3 col-form-label"><span data-lang="zh">本地時間</span><span data-lang="en" class="d-none">Local Time</span><span data-lang="ja" class="d-none">現地時間</span></label>
 							<div class="col-sm-5">
 							  <input type="text" class="form-control" id="streamTime" placeholder="YYYY/MM/DD HH:mm"  disabled>
 							</div>
 						</div>
 						<div class="form-group row my-2">
-							<label for="category" class="col-sm-3 col-form-label"><span data-lang="zh">分類</span><span data-lang="en" class="d-none">Category</span></label>
+							<label for="category" class="col-sm-3 col-form-label"><span data-lang="zh">分類</span><span data-lang="en" class="d-none">Category</span><span data-lang="ja" class="d-none">カテゴリ</span></label>
 							<div class="col-sm-5">
 								<select name="category" id="category" multiple></select>
 							</div>
@@ -248,13 +210,13 @@
 						<div class="form-group row my-2">
 							<div class="col-sm-3"></div>
 							<div class="col-sm-8">
-								<span data-lang="zh">可複選分類或輸入新增</span><span data-lang="en" class="d-none">Select multiple categories or type to add new ones</span>
+								<span data-lang="zh">可複選分類或輸入新增</span><span data-lang="en" class="d-none">Select multiple categories or type to add new ones</span><span data-lang="ja" class="d-none">複数選択またはカテゴリを入力して追加</span>
 							</div>
 						</div>
 					</form>
 				</div>
 				<div class="modal-footer">
-					<button type="button" class="btn btn-secondary" id="addStreamRowData"><span data-lang="zh">新增</span><span data-lang="en" class="d-none">Add</span></button>
+					<button type="button" class="btn btn-secondary" id="addStreamRowData"><span data-lang="zh">新增</span><span data-lang="en" class="d-none">Add</span><span data-lang="ja" class="d-none">追加</span></button>
 				</div>
 			</div>
 		</div>
@@ -265,25 +227,25 @@
 		<div class="modal-dialog modal-lg">
 			<div class="modal-content">
 				<div class="modal-header">
-					<h1 class="modal-title fs-5" id="modalTitleAddSong"><span data-lang="zh">新增歌曲</span><span data-lang="en" class="d-none">Add Song</span></h1>
+					<h1 class="modal-title fs-5" id="modalTitleAddSong"><span data-lang="zh">新增歌曲</span><span data-lang="en" class="d-none">Add Song</span><span data-lang="ja" class="d-none">楽曲追加</span></h1>
 					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 				</div>
 				<div class="modal-body" id='addSongInfo'>
 					<form>
 						<div class="form-group row my-2">
-							<label for="songName" class="col-sm-3 col-form-label"><span data-lang="zh">歌名 *</span><span data-lang="en" class="d-none">Song Name *</span></label>
+							<label for="songName" class="col-sm-3 col-form-label"><span data-lang="zh">歌名 *</span><span data-lang="en" class="d-none">Song Name *</span><span data-lang="ja" class="d-none">曲名 *</span></label>
 							<div class="col-sm-9">
 								<input type="text" class="form-control" id="songName" required>
 							</div>
 						</div>
 						<div class="form-group row my-2">
-							<label for="songNameEn" class="col-sm-3 col-form-label"><span data-lang="zh">歌名 (英)</span><span data-lang="en" class="d-none">Song Name (EN)</span></label>
+							<label for="songNameEn" class="col-sm-3 col-form-label"><span data-lang="zh">歌名 (英)</span><span data-lang="en" class="d-none">Song Name (EN)</span><span data-lang="ja" class="d-none">曲名 (英)</span></label>
 							<div class="col-sm-9">
 								<input type="text" class="form-control" id="songNameEn">
 							</div>
 						</div>
 						<div class="form-group row my-2">
-							<label for="artistName" class="col-sm-3 col-form-label"><span data-lang="zh">歌手 *</span><span data-lang="en" class="d-none">Artist *</span></label>
+							<label for="artistName" class="col-sm-3 col-form-label"><span data-lang="zh">歌手 *</span><span data-lang="en" class="d-none">Artist *</span><span data-lang="ja" class="d-none">アーティスト *</span></label>
 							<div class="col-sm-9">
 								<select class="form-control" id="artistName" required>
 									<option value="">Select or type artist name...</option>
@@ -291,26 +253,26 @@
 							</div>
 						</div>
 						<div class="form-group row my-2">
-							<label for="artistNameEn" class="col-sm-3 col-form-label"><span data-lang="zh">歌手 (英)</span><span data-lang="en" class="d-none">Artist (EN)</span></label>
+							<label for="artistNameEn" class="col-sm-3 col-form-label"><span data-lang="zh">歌手 (英)</span><span data-lang="en" class="d-none">Artist (EN)</span><span data-lang="ja" class="d-none">アーティスト (英)</span></label>
 							<div class="col-sm-9">
 								<input type="text" class="form-control" id="artistNameEn">
-								<small class="form-text text-muted"><span data-lang="zh">選擇現有歌手時自動填入，可手動編輯</span><span data-lang="en" class="d-none">Auto-filled when selecting existing artist, but can be manually edited</span></small>
+								<small class="form-text text-muted"><span data-lang="zh">選擇現有歌手時自動填入，可手動編輯</span><span data-lang="en" class="d-none">Auto-filled when selecting existing artist, but can be manually edited</span><span data-lang="ja" class="d-none">既存のアーティストを選択すると自動入力、手動編集可</span></small>
 							</div>
 						</div>
 						<div class="form-group row my-2">
-							<label for="genreName" class="col-sm-3 col-form-label"><span data-lang="zh">類型</span><span data-lang="en" class="d-none">Genre</span></label>
+							<label for="genreName" class="col-sm-3 col-form-label"><span data-lang="zh">類型</span><span data-lang="en" class="d-none">Genre</span><span data-lang="ja" class="d-none">ジャンル</span></label>
 							<div class="col-sm-9">
 								<input type="text" class="form-control" id="genreName">
 							</div>
 						</div>
 						<div class="form-group row my-2">
-							<label for="tieupName" class="col-sm-3 col-form-label"><span data-lang="zh">Tie-up</span><span data-lang="en" class="d-none">Tie-up</span></label>
+							<label for="tieupName" class="col-sm-3 col-form-label"><span data-lang="zh">Tie-up</span><span data-lang="en" class="d-none">Tie-up</span><span data-lang="ja" class="d-none">タイアップ</span></label>
 							<div class="col-sm-9">
 								<input type="text" class="form-control" id="tieupName">
 							</div>
 						</div>
 						<div class="form-group row my-2">
-							<label for="songNoteText" class="col-sm-3 col-form-label"><span data-lang="zh">備註</span><span data-lang="en" class="d-none">Note</span></label>
+							<label for="songNoteText" class="col-sm-3 col-form-label"><span data-lang="zh">備註</span><span data-lang="en" class="d-none">Note</span><span data-lang="ja" class="d-none">備考</span></label>
 							<div class="col-sm-9">
 								<textarea class="form-control" id="songNoteText" rows="2"></textarea>
 							</div>
@@ -318,14 +280,14 @@
 						<div class="form-group row my-2">
 							<div class="col-sm-3"></div>
 							<div class="col-sm-9">
-								<span class="text-muted"><span data-lang="zh">* 必填欄位</span><span data-lang="en" class="d-none">* Required fields</span></span>
+								<span class="text-muted"><span data-lang="zh">* 必填欄位</span><span data-lang="en" class="d-none">* Required fields</span><span data-lang="ja" class="d-none">* 必須項目</span></span>
 							</div>
 						</div>
 					</form>
 				</div>
 				<div class="modal-footer">
-					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal"><span data-lang="zh">取消</span><span data-lang="en" class="d-none">Cancel</span></button>
-					<button type="button" class="btn btn-primary" id="addSongData"><span data-lang="zh">新增歌曲</span><span data-lang="en" class="d-none">Add Song</span></button>
+					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal"><span data-lang="zh">取消</span><span data-lang="en" class="d-none">Cancel</span><span data-lang="ja" class="d-none">キャンセル</span></button>
+					<button type="button" class="btn btn-primary" id="addSongData"><span data-lang="zh">新增歌曲</span><span data-lang="en" class="d-none">Add Song</span><span data-lang="ja" class="d-none">楽曲追加</span></button>
 				</div>
 			</div>
 		</div>
@@ -336,36 +298,36 @@
 		<div class="modal-dialog modal-xl modal-dialog-scrollable">
 			<div class="modal-content">
 				<div class="modal-header">
-					<h1 class="modal-title fs-5" id="modalTitleBatchEdit">📝 <span data-lang="zh">批次編輯歌單</span><span data-lang="en" class="d-none">Batch Edit Setlist</span></h1>
+					<h1 class="modal-title fs-5" id="modalTitleBatchEdit">📝 <span data-lang="zh">批次編輯歌單</span><span data-lang="en" class="d-none">Batch Edit Setlist</span><span data-lang="ja" class="d-none">セットリスト一括編集</span></h1>
 					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 				</div>
 				<div class="modal-body">
 					<div class="mb-3">
-						<h6><span data-lang="zh">直播資訊</span><span data-lang="en" class="d-none">Stream Information</span></h6>
+						<h6><span data-lang="zh">直播資訊</span><span data-lang="en" class="d-none">Stream Information</span><span data-lang="ja" class="d-none">配信情報</span></h6>
 						<p class="mb-1"><strong>ID:</strong> <span id="batchStreamID"></span></p>
-						<p class="mb-1"><strong><span data-lang="zh">標題</span><span data-lang="en" class="d-none">Title</span>:</strong> <span id="batchStreamTitle"></span></p>
+						<p class="mb-1"><strong><span data-lang="zh">標題</span><span data-lang="en" class="d-none">Title</span><span data-lang="ja" class="d-none">タイトル</span>:</strong> <span id="batchStreamTitle"></span></p>
 						<div id="batchLoadStatus" class="alert alert-info mt-2" style="display: none;"></div>
 					</div>
 
 					<div class="row mb-3">
 						<div class="col-md-4">
-							<label for="batchStartTrack" class="form-label"><span data-lang="zh">起始 Track 編號</span><span data-lang="en" class="d-none">Start Track</span></label>
+							<label for="batchStartTrack" class="form-label"><span data-lang="zh">起始 Track 編號</span><span data-lang="en" class="d-none">Start Track</span><span data-lang="ja" class="d-none">開始トラック番号</span></label>
 							<input type="number" class="form-control" id="batchStartTrack" value="1" min="1">
 						</div>
 						<div class="col-md-4">
-							<label for="batchTotalSongs" class="form-label"><span data-lang="zh">總曲數</span><span data-lang="en" class="d-none">Total Songs</span></label>
+							<label for="batchTotalSongs" class="form-label"><span data-lang="zh">總曲數</span><span data-lang="en" class="d-none">Total Songs</span><span data-lang="ja" class="d-none">総曲数</span></label>
 							<input type="number" class="form-control" id="batchTotalSongs" value="20" min="1" max="100">
 						</div>
 						<div class="col-md-4">
-							<label for="batchSegment" class="form-label"><span data-lang="zh">歌回編號</span><span data-lang="en" class="d-none">Segment</span></label>
+							<label for="batchSegment" class="form-label"><span data-lang="zh">歌回編號</span><span data-lang="en" class="d-none">Segment</span><span data-lang="ja" class="d-none">歌枠番号</span></label>
 							<input type="number" class="form-control" id="batchSegment" value="1" min="1">
-							<small class="form-text text-muted"><span data-lang="zh">當天第幾次歌回（整場共用）</span><span data-lang="en" class="d-none">Which singing session (shared for entire stream)</span></small>
+							<small class="form-text text-muted"><span data-lang="zh">當天第幾次歌回（整場共用）</span><span data-lang="en" class="d-none">Which singing session (shared for entire stream)</span><span data-lang="ja" class="d-none">当日何回目の歌枠（配信全体で共通）</span></small>
 						</div>
 					</div>
 
 					<div class="mb-2 d-flex gap-2">
-						<button type="button" class="btn btn-primary btn-sm" id="generateBatchTable"><span data-lang="zh">產生表格</span><span data-lang="en" class="d-none">Generate Table</span></button>
-						<button type="button" class="btn btn-success btn-sm" id="batchAddNewSong">➕ <span data-lang="zh">新增歌曲</span><span data-lang="en" class="d-none">Add New Song</span></button>
+						<button type="button" class="btn btn-primary btn-sm" id="generateBatchTable"><span data-lang="zh">產生表格</span><span data-lang="en" class="d-none">Generate Table</span><span data-lang="ja" class="d-none">テーブル生成</span></button>
+						<button type="button" class="btn btn-success btn-sm" id="batchAddNewSong">➕ <span data-lang="zh">新增歌曲</span><span data-lang="en" class="d-none">Add New Song</span><span data-lang="ja" class="d-none">楽曲追加</span></button>
 					</div>
 
 					<div id="batchTableContainer">
@@ -373,8 +335,8 @@
 					</div>
 				</div>
 				<div class="modal-footer">
-					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal"><span data-lang="zh">取消</span><span data-lang="en" class="d-none">Cancel</span></button>
-					<button type="button" class="btn btn-primary" id="saveBatchSetlist"><span data-lang="zh">全部儲存</span><span data-lang="en" class="d-none">Save All</span></button>
+					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal"><span data-lang="zh">取消</span><span data-lang="en" class="d-none">Cancel</span><span data-lang="ja" class="d-none">キャンセル</span></button>
+					<button type="button" class="btn btn-primary" id="saveBatchSetlist"><span data-lang="zh">全部儲存</span><span data-lang="en" class="d-none">Save All</span><span data-lang="ja" class="d-none">すべて保存</span></button>
 				</div>
 			</div>
 		</div>
@@ -385,7 +347,7 @@
 		<div class="modal-dialog modal-lg">
 			<div class="modal-content">
 				<div class="modal-header">
-					<h1 class="modal-title fs-5" id="modalTitleQuickAdd">⚡ <span data-lang="zh">快速新增歌單</span><span data-lang="en" class="d-none">Quick Add (Live)</span></h1>
+					<h1 class="modal-title fs-5" id="modalTitleQuickAdd">⚡ <span data-lang="zh">快速新增歌單</span><span data-lang="en" class="d-none">Quick Add (Live)</span><span data-lang="ja" class="d-none">クイック追加（ライブ）</span></h1>
 					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 				</div>
 				<div class="modal-body" style="position: relative; min-height: 300px;">
@@ -402,31 +364,31 @@
 
 				<!-- 錯誤訊息區域 -->
 				<div id="quickAddError" class="alert alert-danger alert-dismissible fade show" role="alert" style="display: none;">
-					<strong>❌ <span data-lang="zh">操作失敗</span><span data-lang="en" class="d-none">Operation Failed</span></strong>
+					<strong>❌ <span data-lang="zh">操作失敗</span><span data-lang="en" class="d-none">Operation Failed</span><span data-lang="ja" class="d-none">操作失敗</span></strong>
 						<div id="quickAddErrorMsg"></div>
 						<button type="button" class="btn-close" onclick="document.getElementById('quickAddError').style.display='none'; document.getElementById('quickAddErrorMsg').innerHTML=''"></button>
 					</div>
 
 					<div class="mb-3">
-						<h6><span data-lang="zh">直播資訊</span><span data-lang="en" class="d-none">Stream Information</span></h6>
+						<h6><span data-lang="zh">直播資訊</span><span data-lang="en" class="d-none">Stream Information</span><span data-lang="ja" class="d-none">配信情報</span></h6>
 						<p class="mb-1"><strong>ID:</strong> <span id="quickStreamID"></span></p>
-						<p class="mb-1"><strong><span data-lang="zh">標題</span><span data-lang="en" class="d-none">Title</span>:</strong> <span id="quickStreamTitle"></span></p>
+						<p class="mb-1"><strong><span data-lang="zh">標題</span><span data-lang="en" class="d-none">Title</span><span data-lang="ja" class="d-none">タイトル</span>:</strong> <span id="quickStreamTitle"></span></p>
 					</div>
 
 					<div class="alert alert-info">
-						<small>💡 <span data-lang="zh">此模式適合直播中快速記錄歌曲。按 Enter 連續新增，按 Esc 關閉視窗。</span><span data-lang="en" class="d-none">Quick mode for live streaming. Press Enter to add continuously, Esc to close.</span></small>
+						<small>💡 <span data-lang="zh">此模式適合直播中快速記錄歌曲。按 Enter 連續新增，按 Esc 關閉視窗。</span><span data-lang="en" class="d-none">Quick mode for live streaming. Press Enter to add continuously, Esc to close.</span><span data-lang="ja" class="d-none">ライブ配信中に素早く記録するモード。Enterで連続追加、Escで閉じる。</span></small>
 					</div>
 
 					<div class="row mb-3">
 						<div class="col-md-6">
-							<label for="quickStartTrack" class="form-label"><span data-lang="zh">起始 Track 編號 *</span><span data-lang="en" class="d-none">Start Track *</span></label>
+							<label for="quickStartTrack" class="form-label"><span data-lang="zh">起始 Track 編號 *</span><span data-lang="en" class="d-none">Start Track *</span><span data-lang="ja" class="d-none">開始トラック番号 *</span></label>
 							<input type="number" class="form-control" id="quickStartTrack" placeholder="首次需填寫" min="1" required>
-							<small class="form-text text-muted"><span data-lang="zh">第一次填寫後會自動遞增</span><span data-lang="en" class="d-none">Auto-increments after first entry</span></small>
+							<small class="form-text text-muted"><span data-lang="zh">第一次填寫後會自動遞增</span><span data-lang="en" class="d-none">Auto-increments after first entry</span><span data-lang="ja" class="d-none">初回入力後は自動で増加</span></small>
 						</div>
 						<div class="col-md-6">
-							<label for="quickSegment" class="form-label"><span data-lang="zh">歌回編號</span><span data-lang="en" class="d-none">Segment</span></label>
+							<label for="quickSegment" class="form-label"><span data-lang="zh">歌回編號</span><span data-lang="en" class="d-none">Segment</span><span data-lang="ja" class="d-none">歌枠番号</span></label>
 							<input type="number" class="form-control" id="quickSegment" value="1" min="1">
-							<small class="form-text text-muted"><span data-lang="zh">當天第幾次歌回</span><span data-lang="en" class="d-none">Which singing session of the day</span></small>
+							<small class="form-text text-muted"><span data-lang="zh">當天第幾次歌回</span><span data-lang="en" class="d-none">Which singing session of the day</span><span data-lang="ja" class="d-none">当日何回目の歌枠</span></small>
 						</div>
 					</div>
 
@@ -434,14 +396,14 @@
 
 					<div class="mb-3" id="quickAddFormSection" style="display: none;">
 						<div class="alert alert-success">
-							<strong><span data-lang="zh">下一首 Track:</span><span data-lang="en" class="d-none">Next Track:</span></strong> <span id="quickNextTrack">-</span>
+							<strong><span data-lang="zh">下一首 Track:</span><span data-lang="en" class="d-none">Next Track:</span><span data-lang="ja" class="d-none">次のトラック:</span></strong> <span id="quickNextTrack">-</span>
 						</div>
 
 						<div class="mb-3">
 							<div class="d-flex justify-content-between align-items-center mb-2">
-								<label for="quickSongSelect" class="form-label mb-0"><span data-lang="zh">歌曲 *</span><span data-lang="en" class="d-none">Song *</span></label>
+								<label for="quickSongSelect" class="form-label mb-0"><span data-lang="zh">歌曲 *</span><span data-lang="en" class="d-none">Song *</span><span data-lang="ja" class="d-none">楽曲 *</span></label>
 								<button type="button" class="btn btn-success btn-sm" id="quickAddNewSong">
-									➕ <span data-lang="zh">新增初回歌曲</span><span data-lang="en" class="d-none">Add New Song</span>
+									➕ <span data-lang="zh">新增初回歌曲</span><span data-lang="en" class="d-none">Add New Song</span><span data-lang="ja" class="d-none">新曲追加</span>
 								</button>
 							</div>
 							<select class="form-control" id="quickSongSelect" required>
@@ -450,13 +412,13 @@
 						</div>
 
 						<div class="mb-3">
-							<label for="quickNote" class="form-label"><span data-lang="zh">備註</span><span data-lang="en" class="d-none">Note</span></label>
+							<label for="quickNote" class="form-label"><span data-lang="zh">備註</span><span data-lang="en" class="d-none">Note</span><span data-lang="ja" class="d-none">備考</span></label>
 							<input type="text" class="form-control" id="quickNote" placeholder="Optional">
 						</div>
 
 						<div class="d-grid gap-2">
 							<button type="button" class="btn btn-primary" id="quickAddSongBtn">
-								<strong>Enter</strong> <span data-lang="zh">新增歌曲</span><span data-lang="en" class="d-none">Add Song</span>
+								<strong>Enter</strong> <span data-lang="zh">新增歌曲</span><span data-lang="en" class="d-none">Add Song</span><span data-lang="ja" class="d-none">楽曲追加</span>
 							</button>
 						</div>
 					</div>
@@ -464,7 +426,7 @@
 					<div class="mb-3" id="quickStartSection">
 						<div class="d-grid gap-2">
 							<button type="button" class="btn btn-success btn-lg" id="quickStartBtn">
-								<span data-lang="zh">開始記錄</span><span data-lang="en" class="d-none">Start</span>
+								<span data-lang="zh">開始記錄</span><span data-lang="en" class="d-none">Start</span><span data-lang="ja" class="d-none">記録開始</span>
 							</button>
 						</div>
 					</div>
@@ -472,14 +434,14 @@
 					<hr>
 
 					<div class="mb-3">
-						<h6><span data-lang="zh">已新增清單</span><span data-lang="en" class="d-none">Added Songs</span></h6>
+						<h6><span data-lang="zh">已新增清單</span><span data-lang="en" class="d-none">Added Songs</span><span data-lang="ja" class="d-none">追加済みリスト</span></h6>
 						<div id="quickAddedList" class="border rounded p-2" style="max-height: 200px; overflow-y: auto; min-height: 50px;">
-							<small class="text-muted"><span data-lang="zh">尚未新增任何歌曲</span><span data-lang="en" class="d-none">No songs added yet</span></small>
+							<small class="text-muted"><span data-lang="zh">尚未新增任何歌曲</span><span data-lang="en" class="d-none">No songs added yet</span><span data-lang="ja" class="d-none">まだ楽曲が追加されていません</span></small>
 						</div>
 					</div>
 				</div>
 				<div class="modal-footer">
-					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal"><span data-lang="zh">關閉</span><span data-lang="en" class="d-none">Close</span></button>
+					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal"><span data-lang="zh">關閉</span><span data-lang="en" class="d-none">Close</span><span data-lang="ja" class="d-none">閉じる</span></button>
 				</div>
 			</div>
 		</div>
@@ -490,26 +452,26 @@
 		<div class="modal-dialog">
 			<div class="modal-content">
 				<div class="modal-header">
-					<h1 class="modal-title fs-5" id="modalTitleBilingualEdit"><span data-lang="zh">編輯</span><span data-lang="en" class="d-none">Edit</span></h1>
+					<h1 class="modal-title fs-5" id="modalTitleBilingualEdit"><span data-lang="zh">編輯</span><span data-lang="en" class="d-none">Edit</span><span data-lang="ja" class="d-none">編集</span></h1>
 					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 				</div>
 				<div class="modal-body">
 					<div class="mb-3">
 						<label for="bilingualJA" class="form-label">
-							<span id="bilingualFieldLabel">日文</span> (Japanese)
+							<span id="bilingualFieldLabel"></span> (<span data-lang="zh">日文</span><span data-lang="en" class="d-none">Japanese</span><span data-lang="ja" class="d-none">日本語</span>)
 						</label>
-						<input type="text" class="form-control" id="bilingualJA" placeholder="日本語で入力">
+						<input type="text" class="form-control" id="bilingualJA" placeholder="輸入日文" data-placeholder-zh="輸入日文" data-placeholder-en="Enter Japanese" data-placeholder-ja="日本語を入力">
 					</div>
 					<div class="mb-3">
 						<label for="bilingualEN" class="form-label">
-							英文 (English)
+							<span id="bilingualFieldLabel2"></span> (<span data-lang="zh">英文</span><span data-lang="en" class="d-none">English</span><span data-lang="ja" class="d-none">英語</span>)
 						</label>
-						<input type="text" class="form-control" id="bilingualEN" placeholder="Enter in English">
+						<input type="text" class="form-control" id="bilingualEN" placeholder="輸入英文" data-placeholder-zh="輸入英文" data-placeholder-en="Enter English" data-placeholder-ja="英語を入力">
 					</div>
 				</div>
 				<div class="modal-footer">
-					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal"><span data-lang="zh">取消</span><span data-lang="en" class="d-none">Cancel</span></button>
-					<button type="button" class="btn btn-primary" id="saveBilingual"><span data-lang="zh">儲存</span><span data-lang="en" class="d-none">Save</span></button>
+					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal"><span data-lang="zh">取消</span><span data-lang="en" class="d-none">Cancel</span><span data-lang="ja" class="d-none">キャンセル</span></button>
+					<button type="button" class="btn btn-primary" id="saveBilingual"><span data-lang="zh">儲存</span><span data-lang="en" class="d-none">Save</span><span data-lang="ja" class="d-none">保存</span></button>
 				</div>
 			</div>
 		</div>
@@ -520,39 +482,39 @@
 		<div class="modal-dialog modal-lg">
 			<div class="modal-content">
 				<div class="modal-header">
-					<h1 class="modal-title fs-5" id="modalTitleBatchAddAliases">📦 <span data-lang="zh">批次新增別名</span><span data-lang="en" class="d-none">Batch Add Aliases</span></h1>
+					<h1 class="modal-title fs-5" id="modalTitleBatchAddAliases">📦 <span data-lang="zh">批次新增別名</span><span data-lang="en" class="d-none">Batch Add Aliases</span><span data-lang="ja" class="d-none">エイリアス一括追加</span></h1>
 					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 				</div>
 				<div class="modal-body">
 					<div class="mb-3">
-						<label for="batchAliasType" class="form-label"><span data-lang="zh">類型</span><span data-lang="en" class="d-none">Type</span></label>
+						<label for="batchAliasType" class="form-label"><span data-lang="zh">類型</span><span data-lang="en" class="d-none">Type</span><span data-lang="ja" class="d-none">タイプ</span></label>
 						<select class="form-select" id="batchAliasType">
-							<option value="artist"><span data-lang="zh">歌手</span><span data-lang="en" class="d-none">Artist</span></option>
-							<option value="title"><span data-lang="zh">歌名</span><span data-lang="en" class="d-none">Title</span></option>
+							<option value="artist"><span data-lang="zh">歌手</span><span data-lang="en" class="d-none">Artist</span><span data-lang="ja" class="d-none">アーティスト</span></option>
+							<option value="title"><span data-lang="zh">歌名</span><span data-lang="en" class="d-none">Title</span><span data-lang="ja" class="d-none">曲名</span></option>
 						</select>
 					</div>
 					<div class="mb-3">
-						<label for="batchAliasJSON" class="form-label"><span data-lang="zh">JSON 格式 (批次匯入)</span><span data-lang="en" class="d-none">JSON Format (Batch Import)</span></label>
+						<label for="batchAliasJSON" class="form-label"><span data-lang="zh">JSON 格式 (批次匯入)</span><span data-lang="en" class="d-none">JSON Format (Batch Import)</span><span data-lang="ja" class="d-none">JSON形式（一括インポート）</span></label>
 						<textarea class="form-control font-monospace" id="batchAliasJSON" rows="10" placeholder='{"釘宮理恵": ["kugimiya rie", "釘宮"], "μ\'s": ["ミューズ", "muse"]}'></textarea>
 						<div class="form-text">
-							<span data-lang="zh">格式：{"標準名稱": ["別名1", "別名2"], ...}</span><span data-lang="en" class="d-none">Format: {"Canonical": ["alias1", "alias2"], ...}</span>
+							<span data-lang="zh">格式：{"標準名稱": ["別名1", "別名2"], ...}</span><span data-lang="en" class="d-none">Format: {"Canonical": ["alias1", "alias2"], ...}</span><span data-lang="ja" class="d-none">形式：{"正式名": ["別名1", "別名2"], ...}</span>
 						</div>
 					</div>
 					<div class="mb-3">
 						<div class="alert alert-info" role="alert">
-							<strong><span data-lang="zh">說明：</span><span data-lang="en" class="d-none">Instructions:</span></strong>
+							<strong><span data-lang="zh">說明：</span><span data-lang="en" class="d-none">Instructions:</span><span data-lang="ja" class="d-none">説明：</span></strong>
 							<ul class="mb-0">
-								<li><span data-lang="zh">JSON 格式：物件的 key 為標準名稱，value 為別名陣列</span><span data-lang="en" class="d-none">JSON format: object key = canonical name, value = alias array</span></li>
-								<li><span data-lang="zh">範例：</span><span data-lang="en" class="d-none">Example: </span>{"釘宮理恵": ["kugimiya rie", "釘宮"]}</li>
-								<li><span data-lang="zh">每個別名將建立為獨立的資料列</span><span data-lang="en" class="d-none">Each alias will be created as a separate row</span></li>
+								<li><span data-lang="zh">JSON 格式：物件的 key 為標準名稱，value 為別名陣列</span><span data-lang="en" class="d-none">JSON format: object key = canonical name, value = alias array</span><span data-lang="ja" class="d-none">JSON形式：keyが正式名、valueが別名配列</span></li>
+								<li><span data-lang="zh">範例：</span><span data-lang="en" class="d-none">Example: </span><span data-lang="ja" class="d-none">例：</span>{"釘宮理恵": ["kugimiya rie", "釘宮"]}</li>
+								<li><span data-lang="zh">每個別名將建立為獨立的資料列</span><span data-lang="en" class="d-none">Each alias will be created as a separate row</span><span data-lang="ja" class="d-none">各別名は個別のデータ行として作成されます</span></li>
 							</ul>
 						</div>
 					</div>
 				</div>
 				<div class="modal-footer">
-					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal"><span data-lang="zh">取消</span><span data-lang="en" class="d-none">Cancel</span></button>
+					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal"><span data-lang="zh">取消</span><span data-lang="en" class="d-none">Cancel</span><span data-lang="ja" class="d-none">キャンセル</span></button>
 					<button type="button" class="btn btn-primary" id="saveBatchAliases">
-						<i class="bi bi-upload"></i> <span data-lang="zh">上傳</span><span data-lang="en" class="d-none">Upload</span>
+						<i class="bi bi-upload"></i> <span data-lang="zh">上傳</span><span data-lang="en" class="d-none">Upload</span><span data-lang="ja" class="d-none">アップロード</span>
 					</button>
 				</div>
 			</div>
@@ -564,7 +526,7 @@
 		<div class="modal-dialog">
 			<div class="modal-content">
 				<div class="modal-header">
-					<h1 class="modal-title fs-5" id="modalTitleQuickAddAlias">⚡ <span data-lang="zh">快速新增別名</span><span data-lang="en" class="d-none">Quick Add Alias</span></h1>
+					<h1 class="modal-title fs-5" id="modalTitleQuickAddAlias">⚡ <span data-lang="zh">快速新增別名</span><span data-lang="en" class="d-none">Quick Add Alias</span><span data-lang="ja" class="d-none">クイック別名追加</span></h1>
 					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 				</div>
 				<div class="modal-body">
@@ -572,37 +534,41 @@
 					<div id="quickAliasAlert" class="alert-container mb-3" style="display: none;"></div>
 
 					<div class="mb-3">
-						<label for="quickAliasType" class="form-label">類型 (Type)</label>
+						<label for="quickAliasType" class="form-label"><span data-lang="zh">類型</span><span data-lang="en" class="d-none">Type</span><span data-lang="ja" class="d-none">タイプ</span></label>
 						<select class="form-select" id="quickAliasType">
-							<option value="artist">歌手 (Artist)</option>
-							<option value="title">歌名 (Title)</option>
+							<option value="artist" data-zh="歌手" data-en="Artist" data-ja="アーティスト">歌手</option>
+							<option value="title" data-zh="歌名" data-en="Title" data-ja="曲名">歌名</option>
 						</select>
 					</div>
 					<div class="mb-3">
-						<label for="quickCanonicalName" class="form-label">標準名稱 (Canonical Name)</label>
+						<label for="quickCanonicalName" class="form-label"><span data-lang="zh">標準名稱</span><span data-lang="en" class="d-none">Canonical Name</span><span data-lang="ja" class="d-none">標準名</span></label>
 						<select class="form-select" id="quickCanonicalName">
-							<option value="">請選擇...</option>
+							<option value="" data-zh="請選擇..." data-en="Please select..." data-ja="選択してください...">請選擇...</option>
 						</select>
 						<div class="form-text">
-							請從清單中選擇資料庫中已存在的歌曲或歌手
+							<span data-lang="zh">請從清單中選擇資料庫中已存在的歌曲或歌手</span>
+							<span data-lang="en" class="d-none">Select an existing song or artist from the database</span>
+							<span data-lang="ja" class="d-none">データベースに存在する曲またはアーティストを選択してください</span>
 						</div>
 					</div>
 					<div class="mb-3">
-						<label for="quickAliasValue" class="form-label">別名 (Alias)</label>
+						<label for="quickAliasValue" class="form-label"><span data-lang="zh">別名</span><span data-lang="en" class="d-none">Alias</span><span data-lang="ja" class="d-none">エイリアス</span></label>
 						<input type="text" class="form-control" id="quickAliasValue" placeholder="例：kugimiya rie">
 						<div class="form-text">
-							輸入這首歌/歌手的另一種寫法
+							<span data-lang="zh">輸入這首歌/歌手的另一種寫法</span>
+							<span data-lang="en" class="d-none">Enter another way to write this song/artist name</span>
+							<span data-lang="ja" class="d-none">この曲/アーティスト名の別の書き方を入力してください</span>
 						</div>
 					</div>
 					<div class="mb-3">
-						<label for="quickAliasNote" class="form-label">備註 (Note) <span class="text-muted">(可選)</span></label>
+						<label for="quickAliasNote" class="form-label"><span data-lang="zh">備註</span><span data-lang="en" class="d-none">Note</span><span data-lang="ja" class="d-none">メモ</span> <span class="text-muted">(<span data-lang="zh">可選</span><span data-lang="en" class="d-none">Optional</span><span data-lang="ja" class="d-none">任意</span>)</span></label>
 						<input type="text" class="form-control" id="quickAliasNote" placeholder="例：Romaji name">
 					</div>
 				</div>
 				<div class="modal-footer">
-					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal"><span data-lang="zh">取消</span><span data-lang="en" class="d-none">Cancel</span></button>
+					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal"><span data-lang="zh">取消</span><span data-lang="en" class="d-none">Cancel</span><span data-lang="ja" class="d-none">キャンセル</span></button>
 					<button type="button" class="btn btn-primary" id="saveQuickAlias">
-						<i class="bi bi-plus-circle"></i> <span data-lang="zh">新增</span><span data-lang="en" class="d-none">Add</span>
+						<i class="bi bi-plus-circle"></i> <span data-lang="zh">新增</span><span data-lang="en" class="d-none">Add</span><span data-lang="ja" class="d-none">追加</span>
 					</button>
 				</div>
 			</div>
@@ -614,33 +580,33 @@
 		<div class="modal-dialog modal-lg">
 			<div class="modal-content">
 				<div class="modal-header">
-					<h1 class="modal-title fs-5" id="modalTitleTestAlias">🧪 <span data-lang="zh">測試別名匹配</span><span data-lang="en" class="d-none">Test Alias Matching</span></h1>
+					<h1 class="modal-title fs-5" id="modalTitleTestAlias">🧪 <span data-lang="zh">測試別名匹配</span><span data-lang="en" class="d-none">Test Alias Matching</span><span data-lang="ja" class="d-none">別名マッチングテスト</span></h1>
 					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 				</div>
 				<div class="modal-body">
 					<div class="mb-3">
-						<label for="testAliasType" class="form-label">類型 (Type)</label>
+						<label for="testAliasType" class="form-label"><span data-lang="zh">類型</span><span data-lang="en" class="d-none">Type</span><span data-lang="ja" class="d-none">タイプ</span></label>
 						<select class="form-select" id="testAliasType">
-							<option value="artist">歌手 (Artist)</option>
-							<option value="title">歌名 (Title)</option>
+							<option value="artist" data-zh="歌手" data-en="Artist" data-ja="アーティスト">歌手</option>
+							<option value="title" data-zh="歌名" data-en="Title" data-ja="曲名">歌名</option>
 						</select>
 					</div>
 					<div class="mb-3">
-						<label for="testAliasInput" class="form-label">測試輸入 (Input Text)</label>
-						<input type="text" class="form-control" id="testAliasInput" placeholder="輸入要測試的文字">
+						<label for="testAliasInput" class="form-label"><span data-lang="zh">測試輸入</span><span data-lang="en" class="d-none">Input Text</span><span data-lang="ja" class="d-none">テスト入力</span></label>
+						<input type="text" class="form-control" id="testAliasInput" placeholder="輸入要測試的文字" data-placeholder-zh="輸入要測試的文字" data-placeholder-en="Enter text to test" data-placeholder-ja="テストするテキストを入力">
 					</div>
 					<div class="mb-3">
 						<button type="button" class="btn btn-primary" id="runTestAlias">
-							<i class="bi bi-search"></i> Test
+							<i class="bi bi-search"></i> <span data-lang="zh">測試</span><span data-lang="en" class="d-none">Test</span><span data-lang="ja" class="d-none">テスト</span>
 						</button>
 					</div>
 					<div id="testAliasResults" class="mt-3" style="display: none;">
-						<h6>匹配結果 (Matching Results):</h6>
+						<h6><span data-lang="zh">匹配結果</span><span data-lang="en" class="d-none">Matching Results</span><span data-lang="ja" class="d-none">マッチング結果</span>:</h6>
 						<div id="testAliasResultsContent"></div>
 					</div>
 				</div>
 				<div class="modal-footer">
-					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal"><span data-lang="zh">關閉</span><span data-lang="en" class="d-none">Close</span></button>
+					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal"><span data-lang="zh">關閉</span><span data-lang="en" class="d-none">Close</span><span data-lang="ja" class="d-none">閉じる</span></button>
 				</div>
 			</div>
 		</div>
