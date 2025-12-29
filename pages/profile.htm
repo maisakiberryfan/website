@@ -5,6 +5,7 @@
       </div>
       <div class="col-sm">
         <div class="row">誕生日／Birthday：08/15</div>
+        <div class="row" id="debutRow"></div>
         <div class="row">身長／Height：153cm</div>
         <div class="row">年齢／Age：(10)15</div>
         <div class="row">血液型／Blood Type：Ｂ</div>
@@ -59,7 +60,7 @@
 
     <div id="BGM" class="text-center mt-4">
         <H1>BGM</H1>
-        
+
         <div class="form-check form-check-inline">
             <input class="form-check-input" type="radio" name="bgm" id="bgm1" value="1">
             <label class="form-check-label" for="bgm1" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="作曲 / ねぎとろ。">BGM1</label>
@@ -80,7 +81,7 @@
             <input class="form-check-input" type="radio" name="bgm" id="bgm5" value="5">
             <label class="form-check-label" for="bgm5" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="作曲 / 司/19G">BGM5</label>
         </div>
-        
+
         <div class="mt-4">
             <audio id="bgmPlayer" class="w-100" style="max-width:500px;" controls preload="none"></audio>
         </div>
@@ -101,6 +102,14 @@
             player.src = `img/profile/bgm/${val}.mp3`
             player.play()
         })
+
+        // 計算出道時間（年月日）
+        const debut = dayjs('2020-09-05')
+        const today = dayjs()
+        const years = today.diff(debut, 'year')
+        const months = today.diff(debut.add(years, 'year'), 'month')
+        const days = today.diff(debut.add(years, 'year').add(months, 'month'), 'day')
+        $('#debutRow').text(`活動開始／Debut：2020/09/05（${years}年${months}月${days}日）`)
     })
-    
+
 </script>
