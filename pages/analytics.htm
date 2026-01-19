@@ -123,8 +123,6 @@
               <span data-lang="en" class="d-none">Timezone</span>
               <span data-lang="ja" class="d-none">時間変換</span>
             </button>
-            <i class="bi bi-question-circle text-muted" data-bs-toggle="tooltip" data-bs-placement="top"
-               data-bs-title="資料庫時間為 UTC，此工具可將本地時間轉換後插入查詢"></i>
             <span class="text-muted small ms-1">(<span id="userTimezone">...</span> <code id="userTimezoneOffset">...</code>)</span>
           </div>
           <div class="collapse" id="columnReference">
@@ -292,6 +290,11 @@
         <!-- 時間轉換工具（折疊內容） -->
         <div class="collapse" id="timezoneConverter">
           <div class="border rounded p-3 bg-body-secondary mb-3">
+            <p class="text-muted small mb-2">
+              <span data-lang="zh">資料庫時間為 UTC，此工具可將本地時間轉換後插入查詢</span>
+              <span data-lang="en" class="d-none">Database uses UTC time. This tool converts local time for queries.</span>
+              <span data-lang="ja" class="d-none">DBはUTC時間です。このツールでローカル時間を変換できます。</span>
+            </p>
             <div class="row g-2">
               <div class="col-md-5">
                 <label for="startDateInput" class="form-label small mb-1">
