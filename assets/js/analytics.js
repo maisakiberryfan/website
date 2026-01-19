@@ -22,8 +22,7 @@ import utc from 'https://cdn.jsdelivr.net/npm/dayjs@1.11.10/plugin/utc.js/+esm';
 dayjs.extend(utc);
 
 // ============ Configuration ============
-const PARQUET_FILE_URL = 'https://raw.githubusercontent.com/maisakiberryfan/sqlBackUp/main/berry-data.parquet';
-const GITHUB_COMMITS_API = 'https://api.github.com/repos/maisakiberryfan/sqlBackUp/commits?path=berry-data.parquet&per_page=1';
+const PARQUET_FILE_URL = 'https://sqldata.m-b.win/berry-data.parquet';
 
 // ============ Global State ============
 let db = null;           // AsyncDuckDB instance
@@ -1113,14 +1112,14 @@ function deleteSavedQuery(index) {
 
 async function fetchDataUpdateTime() {
   try {
-    const response = await fetch(GITHUB_COMMITS_API);
+    // Use HEAD request to get Last-Modified from R2
+    const response = await fetch(PARQUET_FILE_URL, { method: 'HEAD' });
     if (!response.ok) {
-      throw new Error(`GitHub API error: ${response.status}`);
+      throw new Error(`HTTP error: ${response.status}`);
     }
-    const commits = await response.json();
-    if (commits.length > 0) {
-      const commitDate = commits[0].commit.committer.date;
-      const localDate = dayjs(commitDate).format('YYYY-MM-DD HH:mm');
+    const lastModified = response.headers.get('Last-Modified');
+    if (lastModified) {
+      const localDate = dayjs(lastModified).format('YYYY-MM-DD HH:mm');
       UI.dataUpdateTime.textContent = localDate;
       console.log('[Analytics] Data last updated:', localDate);
     } else {
