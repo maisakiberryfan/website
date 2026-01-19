@@ -384,8 +384,9 @@ function setupEventListeners() {
   });
 
   // Initialize Bootstrap tooltips (use window.bootstrap for ES module scope)
+  // container: 'body' ensures proper positioning
   const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
-  tooltipTriggerList.forEach(el => new window.bootstrap.Tooltip(el));
+  tooltipTriggerList.forEach(el => new window.bootstrap.Tooltip(el, { container: 'body' }));
 }
 
 // ============ DuckDB-WASM Initialization ============
