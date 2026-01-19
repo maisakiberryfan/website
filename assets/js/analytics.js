@@ -383,9 +383,9 @@ function setupEventListeners() {
     });
   });
 
-  // Initialize Bootstrap tooltips
+  // Initialize Bootstrap tooltips (use window.bootstrap for ES module scope)
   const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
-  tooltipTriggerList.forEach(el => new bootstrap.Tooltip(el));
+  tooltipTriggerList.forEach(el => new window.bootstrap.Tooltip(el));
 }
 
 // ============ DuckDB-WASM Initialization ============
@@ -677,7 +677,7 @@ async function handleAiQuery() {
       // Fill SQL editor with generated SQL
       UI.sqlEditor.value = data.sql;
       // Close modal
-      const modal = bootstrap.Modal.getInstance(UI.aiHelperModal);
+      const modal = window.bootstrap.Modal.getInstance(UI.aiHelperModal);
       modal?.hide();
       // Show success message
       showMessage('SQL 已生成！點擊「執行 SQL」查看結果', 'success');
