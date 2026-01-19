@@ -18,6 +18,9 @@ import * as duckdb from 'https://cdn.jsdelivr.net/npm/@duckdb/duckdb-wasm@1.28.0
 import dayjs from 'https://cdn.jsdelivr.net/npm/dayjs@1.11.10/+esm';
 import utc from 'https://cdn.jsdelivr.net/npm/dayjs@1.11.10/plugin/utc.js/+esm';
 
+// Import API config for Worker URL
+import { API_CONFIG } from '../../config.js';
+
 // Extend dayjs with UTC plugin (required for timezone conversion)
 dayjs.extend(utc);
 
@@ -72,6 +75,13 @@ const UI = {
   // Saved Queries
   savedQueriesPanel: null,
   savedQueriesList: null,
+
+  // AI Helper
+  aiHelperModal: null,
+  aiQueryInput: null,
+  btnSubmitAiQuery: null,
+  aiHelperError: null,
+  aiHelperLoading: null,
 };
 
 // ============ Query Definitions ============
@@ -299,6 +309,13 @@ function initUIElements() {
   UI.savedQueriesPanel = document.getElementById('savedQueriesPanel');
   UI.savedQueriesList = document.getElementById('savedQueriesList');
 
+  // AI Helper
+  UI.aiHelperModal = document.getElementById('aiHelperModal');
+  UI.aiQueryInput = document.getElementById('aiQueryInput');
+  UI.btnSubmitAiQuery = document.getElementById('btnSubmitAiQuery');
+  UI.aiHelperError = document.getElementById('aiHelperError');
+  UI.aiHelperLoading = document.getElementById('aiHelperLoading');
+
   // Timezone Converter
   UI.userTimezone = document.getElementById('userTimezone');
   UI.userTimezoneOffset = document.getElementById('userTimezoneOffset');
@@ -329,7 +346,7 @@ function setupEventListeners() {
   UI.btnRunSQL.addEventListener('click', handleRunSQL);
   UI.exampleQueries.forEach(btn => {
     btn.addEventListener('click', (e) => {
-      const query = e.target.dataset.query;
+      const query = e.currentTarget.dataset.query;
       UI.sqlEditor.value = query;
     });
   });
@@ -337,6 +354,20 @@ function setupEventListeners() {
   // Export
   UI.btnExportXLSX.addEventListener('click', handleExportXLSX);
   UI.btnSaveQuery.addEventListener('click', handleSaveQuery);
+
+  // AI Helper
+  if (UI.btnSubmitAiQuery) {
+    UI.btnSubmitAiQuery.addEventListener('click', handleAiQuery);
+    UI.aiQueryInput.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') handleAiQuery();
+    });
+    // Clear error when modal is shown
+    UI.aiHelperModal?.addEventListener('shown.bs.modal', () => {
+      UI.aiHelperError.classList.add('d-none');
+      UI.aiQueryInput.value = '';
+      UI.aiQueryInput.focus();
+    });
+  }
 
   // Timezone Converter (Date Range)
   UI.startDateInput.addEventListener('input', handleDateRangeChange);
@@ -351,6 +382,10 @@ function setupEventListeners() {
       console.log('[Column] Inserted column name:', columnName);
     });
   });
+
+  // Initialize Bootstrap tooltips
+  const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+  tooltipTriggerList.forEach(el => new bootstrap.Tooltip(el));
 }
 
 // ============ DuckDB-WASM Initialization ============
@@ -618,6 +653,48 @@ async function handleRunQuery() {
 
   // Execute query
   await executeQuery(sql, queryDef.columns);
+}
+
+async function handleAiQuery() {
+  const query = UI.aiQueryInput.value.trim();
+  if (!query) return;
+
+  // Show loading, hide error
+  UI.aiHelperLoading.classList.remove('d-none');
+  UI.aiHelperError.classList.add('d-none');
+  UI.btnSubmitAiQuery.disabled = true;
+
+  try {
+    const response = await fetch(`${API_CONFIG.WORKER_URL}/api/text-to-sql`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ query })
+    });
+
+    const data = await response.json();
+
+    if (data.success) {
+      // Fill SQL editor with generated SQL
+      UI.sqlEditor.value = data.sql;
+      // Close modal
+      const modal = bootstrap.Modal.getInstance(UI.aiHelperModal);
+      modal?.hide();
+      // Show success message
+      showMessage('SQL 已生成！點擊「執行 SQL」查看結果', 'success');
+      console.log('[AI] Generated SQL:', data.sql, 'Usage:', data.usage);
+    } else {
+      // Show error in modal
+      UI.aiHelperError.textContent = data.error || '生成失敗';
+      UI.aiHelperError.classList.remove('d-none');
+    }
+  } catch (error) {
+    console.error('[AI] Error:', error);
+    UI.aiHelperError.textContent = '連線失敗，請稍後再試';
+    UI.aiHelperError.classList.remove('d-none');
+  } finally {
+    UI.aiHelperLoading.classList.add('d-none');
+    UI.btnSubmitAiQuery.disabled = false;
+  }
 }
 
 async function handleRunSQL() {
